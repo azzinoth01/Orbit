@@ -100,7 +100,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 0.65
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 1580844076}
-  force: 2
-  maxSpeed: 5
+  force: 15
+  maxSpeed: 12
   pause_handler: {fileID: 5415509755280923560}
 --- !u!1 &813140885548403216
 GameObject:
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9033d284a1874459236412a53a2ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  rotationSpeed: 125
 --- !u!1 &813140886165283647
 GameObject:
   m_ObjectHideFlags: 0
