@@ -132,15 +132,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1580844076, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: m_LinearDrag
-      value: 0.75
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: force
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: maxSpeed
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 813140885334128461, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: m_Name
