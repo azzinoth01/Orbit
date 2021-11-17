@@ -5,16 +5,16 @@ using UnityEngine.InputSystem;
 
 public class Weaponholder : MonoBehaviour
 {
-    public Camera cam;
+    private Camera cam;
     // Start is called before the first frame update
     void Start() {
-
+        cam = Globals.currentCamera;
     }
 
     // Update is called once per frame
     void Update() {
         if (Globals.pause == true) {
-
+            return;
         }
         else {
             Vector3 pos = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());

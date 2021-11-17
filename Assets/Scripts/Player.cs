@@ -81,11 +81,17 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     // Update is called once per frame
     void Update() {
         if (Globals.pause == true) {
-
+            return;
         }
         else {
+            //Debug.Log(impulse);
+
+            //Debug.Log(impulse.normalized * force);
             body.AddForce(impulse.normalized * force, ForceMode2D.Impulse);
             Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
+            normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
+
             body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
         }
 
