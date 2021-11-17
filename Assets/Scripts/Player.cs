@@ -87,7 +87,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             //Debug.Log(impulse);
 
             //Debug.Log(impulse.normalized * force);
-            body.AddForce(impulse.normalized * force, ForceMode2D.Impulse);
+            body.AddForce(impulse.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
             Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
