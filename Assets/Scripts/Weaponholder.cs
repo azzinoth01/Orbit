@@ -7,12 +7,12 @@ public class Weaponholder : MonoBehaviour
 {
     private Camera cam;
     public float rotationSpeed;
-    public int direction;
-    public float currentAngle;
+
 
     // Start is called before the first frame update
     void Start() {
         cam = Globals.currentCamera;
+
     }
 
     // Update is called once per frame
@@ -26,12 +26,11 @@ public class Weaponholder : MonoBehaviour
             Vector2 dir = pos - transform.position;
             float angle = Vector2.SignedAngle(Vector2.right, dir);
 
-            if (angle < currentAngle) {
-                direction = -1;
-            }
 
 
-            transform.eulerAngles = new Vector3(0, 0, angle);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, angle), rotationSpeed * Time.deltaTime);
+
+
         }
     }
 }
