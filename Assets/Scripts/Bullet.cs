@@ -110,6 +110,32 @@ public class Bullet : MonoBehaviour
             Debug.Log("no Waypoint collision");
             Debug.Log(collision);
         }
+
+        try {
+
+            Debug.Log(collision);
+            Enemy g = collision.GetComponent<Enemy>();
+            g.takeDmg(1);
+            Destroy(gameObject.transform.parent.gameObject);
+
+        }
+        catch {
+            Debug.Log("no enemy hit");
+            Debug.Log(collision);
+        }
+
+        try {
+
+            Debug.Log(collision);
+            Player g = collision.GetComponent<Player>();
+            g.takeDmg(1);
+            Destroy(gameObject.transform.parent.gameObject);
+
+        }
+        catch {
+            Debug.Log("no player hit");
+            Debug.Log(collision);
+        }
     }
 
 
