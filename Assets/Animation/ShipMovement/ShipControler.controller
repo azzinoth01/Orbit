@@ -169,7 +169,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlammeD
+  m_Name: IdleD
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -187,7 +187,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 66fdc77189f52ae488270213d8925327, type: 2}
+  m_Motion: {fileID: 7400000, guid: b0a02fc7466ca494d8c1e166c4f3be12, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -414,25 +414,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1107 &-6471426456828175582
-AnimatorStateMachine:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: AntriebBoost
-  m_ChildStates: []
-  m_ChildStateMachines: []
-  m_AnyStateTransitions: []
-  m_EntryTransitions: []
-  m_StateMachineTransitions: {}
-  m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
-  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 0}
 --- !u!1101 &-6316655073816094170
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -804,7 +785,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlammeA
+  m_Name: IdleA
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -822,7 +803,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3e3ea445cd1167c4a902bd132eb55374, type: 2}
+  m_Motion: {fileID: 7400000, guid: e0e1b99ac7eb06542a257f6803defbcf, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1124,7 +1105,7 @@ AnimatorController:
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
-    m_BlendingMode: 1
+    m_BlendingMode: 0
     m_SyncedLayerIndex: -1
     m_DefaultWeight: 0
     m_IKPass: 0
@@ -1136,20 +1117,8 @@ AnimatorController:
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
-    m_BlendingMode: 1
-    m_SyncedLayerIndex: -1
-    m_DefaultWeight: 1
-    m_IKPass: 0
-    m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 9100000}
-  - serializedVersion: 5
-    m_Name: AntriebBoost
-    m_StateMachine: {fileID: -6471426456828175582}
-    m_Mask: {fileID: 0}
-    m_Motions: []
-    m_Behaviours: []
     m_BlendingMode: 0
-    m_SyncedLayerIndex: 1
+    m_SyncedLayerIndex: -1
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
@@ -1273,7 +1242,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlammeDS
+  m_Name: IdleDS
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1288,7 +1257,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cff702b66e0cb044c96059d0f3ca9321, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7a32ff41165e797419c3dc358775226e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1634,7 +1603,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlammeAW
+  m_Name: IdleAW
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1649,7 +1618,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b006776739fc56c47ab8e4c8c178af27, type: 2}
+  m_Motion: {fileID: 7400000, guid: 58243342d4bc8ba408c27bec4cc24ffb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1827,7 +1796,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlammeS
+  m_Name: IdleS
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1845,7 +1814,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 06c75eda4e219cc4591da2ec795a4e7b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 065a91bc33ffa8e4192c23e3c81468f3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1923,7 +1892,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6b2ed85105928c14c809762c7e86b968, type: 2}
+  m_Motion: {fileID: 7400000, guid: fa414dd403ddf354d869c4990616fed4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2060,7 +2029,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlammeSA
+  m_Name: IdleSA
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2075,7 +2044,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b109d6ac61c28ad46996db2f1de1935e, type: 2}
+  m_Motion: {fileID: 7400000, guid: b447b2359de1fa14abe9fa821b0843d9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
