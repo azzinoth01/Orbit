@@ -10,7 +10,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     public float force;
     public float maxSpeed;
-    public Pause_handler pause_handler;
+
     public List<GameObject> weapons;
     public GameObject bullet;
     public float reloadTime;
@@ -19,6 +19,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     private Controlls controll;
     private bool shooting;
+
+    private void Awake() {
+        Globals.player = gameObject;
+    }
 
     public void OnCharge(InputAction.CallbackContext context) {
         //throw new System.NotImplementedException();
@@ -74,16 +78,21 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             shooting = false;
         }
     }
+    public void OnPause_menu(InputAction.CallbackContext context) {
+        //  Debug.Log("pause called" + context);
 
-    void Controlls.IBullet_hellActions.OnPause(InputAction.CallbackContext context) {
-        if (Globals.pause == true) {
-            pause_handler.setResume();
+        if (context.started) {
+            //    Debug.Log(Globals.pause);
+            if (Globals.pause == true) {
+                Globals.pauseHandler.setResume();
+            }
+            else {
+                Globals.pauseHandler.setPause();
+            }
         }
-        else {
-            pause_handler.setPause();
-        }
-
     }
+
+
 
     // Start is called before the first frame update
     void Start() {
@@ -135,6 +144,14 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (health <= 0) {
             Destroy(gameObject);
+            Globals.gameoverHandler.gameOver();
         }
     }
+
+    private void OnDestroy() {
+        //controll.Disable();
+        controll.Dispose();
+
+    }
+
 }

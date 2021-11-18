@@ -38,7 +38,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "pause",
+                    "name": "pause_menu",
                     "type": "Button",
                     "id": "82f0b198-e0a7-4278-8de2-262b4a9d0639",
                     "expectedControlType": "Button",
@@ -158,7 +158,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "pause",
+                    "action": "pause_menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -51,7 +51,7 @@ public class @Controlls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""pause"",
+                    ""name"": ""pause_menu"",
                     ""type"": ""Button"",
                     ""id"": ""82f0b198-e0a7-4278-8de2-262b4a9d0639"",
                     ""expectedControlType"": ""Button"",
@@ -171,7 +171,7 @@ public class @Controlls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""pause"",
+                    ""action"": ""pause_menu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -208,7 +208,7 @@ public class @Controlls : IInputActionCollection, IDisposable
         m_bullet_hell_move_left = m_bullet_hell.FindAction("move_left", throwIfNotFound: true);
         m_bullet_hell_move_up = m_bullet_hell.FindAction("move_up", throwIfNotFound: true);
         m_bullet_hell_move_down = m_bullet_hell.FindAction("move_down", throwIfNotFound: true);
-        m_bullet_hell_pause = m_bullet_hell.FindAction("pause", throwIfNotFound: true);
+        m_bullet_hell_pause_menu = m_bullet_hell.FindAction("pause_menu", throwIfNotFound: true);
         m_bullet_hell_shoot = m_bullet_hell.FindAction("shoot", throwIfNotFound: true);
         m_bullet_hell_charge = m_bullet_hell.FindAction("charge", throwIfNotFound: true);
     }
@@ -264,7 +264,7 @@ public class @Controlls : IInputActionCollection, IDisposable
     private readonly InputAction m_bullet_hell_move_left;
     private readonly InputAction m_bullet_hell_move_up;
     private readonly InputAction m_bullet_hell_move_down;
-    private readonly InputAction m_bullet_hell_pause;
+    private readonly InputAction m_bullet_hell_pause_menu;
     private readonly InputAction m_bullet_hell_shoot;
     private readonly InputAction m_bullet_hell_charge;
     public struct Bullet_hellActions
@@ -275,7 +275,7 @@ public class @Controlls : IInputActionCollection, IDisposable
         public InputAction @move_left => m_Wrapper.m_bullet_hell_move_left;
         public InputAction @move_up => m_Wrapper.m_bullet_hell_move_up;
         public InputAction @move_down => m_Wrapper.m_bullet_hell_move_down;
-        public InputAction @pause => m_Wrapper.m_bullet_hell_pause;
+        public InputAction @pause_menu => m_Wrapper.m_bullet_hell_pause_menu;
         public InputAction @shoot => m_Wrapper.m_bullet_hell_shoot;
         public InputAction @charge => m_Wrapper.m_bullet_hell_charge;
         public InputActionMap Get() { return m_Wrapper.m_bullet_hell; }
@@ -299,9 +299,9 @@ public class @Controlls : IInputActionCollection, IDisposable
                 @move_down.started -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnMove_down;
                 @move_down.performed -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnMove_down;
                 @move_down.canceled -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnMove_down;
-                @pause.started -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnPause;
-                @pause.performed -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnPause;
-                @pause.canceled -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnPause;
+                @pause_menu.started -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnPause_menu;
+                @pause_menu.performed -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnPause_menu;
+                @pause_menu.canceled -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnPause_menu;
                 @shoot.started -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnShoot;
                 @shoot.performed -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnShoot;
                 @shoot.canceled -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnShoot;
@@ -324,9 +324,9 @@ public class @Controlls : IInputActionCollection, IDisposable
                 @move_down.started += instance.OnMove_down;
                 @move_down.performed += instance.OnMove_down;
                 @move_down.canceled += instance.OnMove_down;
-                @pause.started += instance.OnPause;
-                @pause.performed += instance.OnPause;
-                @pause.canceled += instance.OnPause;
+                @pause_menu.started += instance.OnPause_menu;
+                @pause_menu.performed += instance.OnPause_menu;
+                @pause_menu.canceled += instance.OnPause_menu;
                 @shoot.started += instance.OnShoot;
                 @shoot.performed += instance.OnShoot;
                 @shoot.canceled += instance.OnShoot;
@@ -343,7 +343,7 @@ public class @Controlls : IInputActionCollection, IDisposable
         void OnMove_left(InputAction.CallbackContext context);
         void OnMove_up(InputAction.CallbackContext context);
         void OnMove_down(InputAction.CallbackContext context);
-        void OnPause(InputAction.CallbackContext context);
+        void OnPause_menu(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnCharge(InputAction.CallbackContext context);
     }

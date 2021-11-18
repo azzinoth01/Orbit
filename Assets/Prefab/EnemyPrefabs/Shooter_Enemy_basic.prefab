@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01e5d44815e64f4a8b42b7695868efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   shootingPoints:
   - {fileID: 674389398628408582}
   bullet: {fileID: 7109026622726797419, guid: b222825a7413fbe48b9fc2b4c0a02f4a, type: 3}
@@ -190,7 +191,7 @@ MonoBehaviour:
   speed: 10
   slowdownProzent: 0.95
   loop: 1
-  waypointPrefab: {fileID: 259123342564615513, guid: 98e4f9b33c4943a4e8a7d57a1714f751, type: 3}
+  waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
   maxDuration: 0
   delayToNextWaypoint: 2
 --- !u!1 &674389398608704267
