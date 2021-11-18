@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 131960502467708968}
   - component: {fileID: 2348903414317952636}
   - component: {fileID: 1900567939230119281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,3 +149,4 @@ MonoBehaviour:
   speed: 10
   body: {fileID: 2348903414317952636}
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
+  maxDuration: 5

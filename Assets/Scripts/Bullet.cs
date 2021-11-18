@@ -12,16 +12,20 @@ public class Bullet : MonoBehaviour
     private Waypoint_Designer designer;
     public Rigidbody2D body;
     public GameObject waypointPrefab;
+    public float maxDuration;
     private List<GameObject> waypointObject;
     private int waypointIndex;
     private bool waypointDirectionSet;
     private bool loop;
     private float restartAfter;
+    private float restartTime;
     private float time;
+
 
 
     // Start is called before the first frame update
     void Start() {
+        restartTime = 0;
         time = 0;
         waypointObject = new List<GameObject>();
         try {
@@ -62,15 +66,22 @@ public class Bullet : MonoBehaviour
                     waypointIndex = -1;
                     return;
                 }
-                time = time + Time.deltaTime;
-                if (restartAfter <= time) {
-                    time = 0;
+                restartTime = restartTime + Time.deltaTime;
+                if (restartAfter <= restartTime) {
+                    restartTime = 0;
                     transform.position = new Vector3(0, 0, transform.position.z);
                     waypointIndex = 0;
                     waypointDirectionSet = false;
 
                 }
             }
+
+
+            if (maxDuration != 0 && time >= maxDuration) {
+                Destroy(gameObject.transform.parent.gameObject);
+                Destroy(gameObject);
+            }
+            time = time + Time.deltaTime;
         }
     }
 
@@ -78,7 +89,7 @@ public class Bullet : MonoBehaviour
     private void createNextWaypoint(Vector2 v2) {
         GameObject g = Instantiate(waypointPrefab, transform.parent);
         g.transform.localPosition = v2;
-        g.layer = gameObject.layer;
+        // g.layer = gameObject.layer;
         waypointObject.Add(g);
 
     }

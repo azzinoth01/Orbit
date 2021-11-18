@@ -11,10 +11,18 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public float force;
     public float maxSpeed;
     public Pause_handler pause_handler;
+    public List<GameObject> weapons;
+    public GameObject bullet;
+    public float reloadTime;
+    private float time;
     private Vector2 impulse;
 
     private Controlls controll;
+    private bool shooting;
 
+    public void OnCharge(InputAction.CallbackContext context) {
+        //throw new System.NotImplementedException();
+    }
 
     public void OnMove_down(InputAction.CallbackContext context) {
 
@@ -57,6 +65,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
 
+    public void OnShoot(InputAction.CallbackContext context) {
+
+        if (context.started) {
+            shooting = true;
+        }
+        else if (context.canceled) {
+            shooting = false;
+        }
+    }
+
     void Controlls.IBullet_hellActions.OnPause(InputAction.CallbackContext context) {
         if (Globals.pause == true) {
             pause_handler.setResume();
@@ -75,7 +93,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             controll.bullet_hell.SetCallbacks(this);
         }
         impulse = new Vector2(0, 0);
-
+        shooting = false;
+        time = 0;
     }
 
     // Update is called once per frame
@@ -84,6 +103,19 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             return;
         }
         else {
+            time = time + Time.deltaTime;
+            if (shooting == true && weapons.Count != 0) {
+                if (time >= reloadTime) {
+                    time = 0;
+                    foreach (GameObject w in weapons) {
+                        GameObject shootholder = new GameObject(w.name + " shoot");
+                        shootholder.transform.position = w.transform.position;
+                        shootholder.transform.eulerAngles = w.transform.eulerAngles;
+                        GameObject g = Instantiate(bullet, shootholder.transform);
+                    }
+
+                }
+            }
             //Debug.Log(impulse);
 
             //Debug.Log(impulse.normalized * force);
