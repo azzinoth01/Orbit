@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int health;
     public List<GameObject> shootingPoints;
     public GameObject bullet;
     public float reloadTime;
@@ -78,7 +79,7 @@ public class Enemy : MonoBehaviour
     private void movement() {
 
 
-        resetTime();
+
         if (waypoints.Count > waypointIndex && waypointDirectionSet == false) {
             createNextWaypoint(waypoints[waypointIndex]);
             waypointDirectionSet = true;
@@ -118,6 +119,14 @@ public class Enemy : MonoBehaviour
 
     }
 
+    public void takeDmg(int dmg) {
+        health = health - dmg;
+
+        if (health <= 0) {
+            Destroy(gameObject.transform.parent.gameObject);
+        }
+    }
+
     private void resetTime() {
         if (maxDuration != 0) {
             maxDuration = maxDuration + time;
@@ -149,6 +158,7 @@ public class Enemy : MonoBehaviour
                 waypointDirectionSet = false;
                 Destroy(collision.gameObject);
                 waypointObject.RemoveAt(0);
+                resetTime();
                 //body.velocity = Vector2.zero;
             }
         }

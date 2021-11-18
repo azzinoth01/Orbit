@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 {
-
+    public int health;
     public Rigidbody2D body;
 
     public float force;
@@ -127,5 +127,14 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
         }
 
+    }
+
+
+    public void takeDmg(int dmg) {
+        health = health - dmg;
+
+        if (health <= 0) {
+            Destroy(gameObject);
+        }
     }
 }
