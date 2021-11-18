@@ -153,6 +153,9 @@ MonoBehaviour:
   force: 15
   maxSpeed: 12
   pause_handler: {fileID: 5415509755280923560}
+  weapons: []
+  bullet: {fileID: 0}
+  reloadTime: 0.5
 --- !u!95 &1431146546
 Animator:
   serializedVersion: 3
