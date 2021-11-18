@@ -5,7 +5,7 @@ using UnityEngine;
 public static class Globals
 {
     public static bool pause;
-
+    public static Camera currentCamera;
 
 
 }
