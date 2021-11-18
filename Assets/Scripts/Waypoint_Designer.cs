@@ -10,6 +10,7 @@ public class Waypoint_Designer : MonoBehaviour
     public float speed;
     public float restartAfter;
     public bool loop;
+    public float enemyDelayToNextWaypoint;
     public LineRenderer line;
     public GameObject waypointPrefab;
     // public GameObject movementCheckPrefab;
