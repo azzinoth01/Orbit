@@ -57,6 +57,22 @@ public class @Controlls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""0b8c52fa-a532-48cc-add5-d8fcf69b0865"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""charge"",
+                    ""type"": ""Button"",
+                    ""id"": ""7502b748-3d25-49d0-80e5-e54c60aa5ce0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -158,6 +174,28 @@ public class @Controlls : IInputActionCollection, IDisposable
                     ""action"": ""pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2c7ea018-fa91-40ff-a075-2ff90d8355de"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f9b42444-200d-413e-8c62-d8d2374f5cac"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""charge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -171,6 +209,8 @@ public class @Controlls : IInputActionCollection, IDisposable
         m_bullet_hell_move_up = m_bullet_hell.FindAction("move_up", throwIfNotFound: true);
         m_bullet_hell_move_down = m_bullet_hell.FindAction("move_down", throwIfNotFound: true);
         m_bullet_hell_pause = m_bullet_hell.FindAction("pause", throwIfNotFound: true);
+        m_bullet_hell_shoot = m_bullet_hell.FindAction("shoot", throwIfNotFound: true);
+        m_bullet_hell_charge = m_bullet_hell.FindAction("charge", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -225,6 +265,8 @@ public class @Controlls : IInputActionCollection, IDisposable
     private readonly InputAction m_bullet_hell_move_up;
     private readonly InputAction m_bullet_hell_move_down;
     private readonly InputAction m_bullet_hell_pause;
+    private readonly InputAction m_bullet_hell_shoot;
+    private readonly InputAction m_bullet_hell_charge;
     public struct Bullet_hellActions
     {
         private @Controlls m_Wrapper;
@@ -234,6 +276,8 @@ public class @Controlls : IInputActionCollection, IDisposable
         public InputAction @move_up => m_Wrapper.m_bullet_hell_move_up;
         public InputAction @move_down => m_Wrapper.m_bullet_hell_move_down;
         public InputAction @pause => m_Wrapper.m_bullet_hell_pause;
+        public InputAction @shoot => m_Wrapper.m_bullet_hell_shoot;
+        public InputAction @charge => m_Wrapper.m_bullet_hell_charge;
         public InputActionMap Get() { return m_Wrapper.m_bullet_hell; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -258,6 +302,12 @@ public class @Controlls : IInputActionCollection, IDisposable
                 @pause.started -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnPause;
                 @pause.performed -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnPause;
                 @pause.canceled -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnPause;
+                @shoot.started -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnShoot;
+                @shoot.performed -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnShoot;
+                @shoot.canceled -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnShoot;
+                @charge.started -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnCharge;
+                @charge.performed -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnCharge;
+                @charge.canceled -= m_Wrapper.m_Bullet_hellActionsCallbackInterface.OnCharge;
             }
             m_Wrapper.m_Bullet_hellActionsCallbackInterface = instance;
             if (instance != null)
@@ -277,6 +327,12 @@ public class @Controlls : IInputActionCollection, IDisposable
                 @pause.started += instance.OnPause;
                 @pause.performed += instance.OnPause;
                 @pause.canceled += instance.OnPause;
+                @shoot.started += instance.OnShoot;
+                @shoot.performed += instance.OnShoot;
+                @shoot.canceled += instance.OnShoot;
+                @charge.started += instance.OnCharge;
+                @charge.performed += instance.OnCharge;
+                @charge.canceled += instance.OnCharge;
             }
         }
     }
@@ -288,5 +344,7 @@ public class @Controlls : IInputActionCollection, IDisposable
         void OnMove_up(InputAction.CallbackContext context);
         void OnMove_down(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+        void OnCharge(InputAction.CallbackContext context);
     }
 }
