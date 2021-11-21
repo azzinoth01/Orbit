@@ -5,9 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health;
-    public List<GameObject> shootingPoints;
-    public GameObject bullet;
-    public float reloadTime;
+
+
+
     public Rigidbody2D body;
     private Waypoint_Designer designer;
     public List<Vector2> waypoints;
@@ -24,15 +24,27 @@ public class Enemy : MonoBehaviour
     public float maxDuration;
     public float delayToNextWaypoint;
 
-    private float reloadTimer;
 
+    public int shootsToCreate;
 
+    public List<Skillsequenze> skillsequenze;
+    private GameObject nextSkill;
+    private float nextSkillTime;
+    private float nextSkillTimer;
+    private int skillIndex;
+
+    private void Awake() {
+        nextSkill = skillsequenze[0].Skill;
+        nextSkillTime = skillsequenze[0].Delay;
+        skillIndex = 0;
+        preCreateSkill();
+    }
     // Start is called before the first frame update
     void Start() {
         maxDuration = 0;
         restartTime = 0;
         time = 0;
-        reloadTimer = 0;
+
         waypointObject = new List<GameObject>();
         try {
             designer = GetComponentInParent<Waypoint_Designer>();
@@ -48,6 +60,11 @@ public class Enemy : MonoBehaviour
             //       Debug.Log("no designer mode");
         }
         waypointIndex = 0;
+
+        nextSkill = skillsequenze[0].Skill;
+        nextSkillTime = skillsequenze[0].Delay;
+        skillIndex = 0;
+
     }
 
     // Update is called once per frame
@@ -59,9 +76,12 @@ public class Enemy : MonoBehaviour
             if (delayToNextWaypoint <= time) {
                 movement();
             }
-            if (reloadTime <= reloadTimer) {
-                shoot();
-                reloadTimer = 0;
+
+
+            if (nextSkillTime <= nextSkillTimer) {
+
+                activateSkill(false);
+                nextSkillTimer = 0;
             }
 
             if (waypointDirectionSet == false) {
@@ -69,13 +89,64 @@ public class Enemy : MonoBehaviour
             }
             if (maxDuration != 0 && time >= maxDuration) {
                 Destroy(gameObject.transform.parent.gameObject);
-                Destroy(gameObject);
-            }
 
+            }
+            nextSkillTimer = nextSkillTimer + Time.deltaTime;
             time = time + Time.deltaTime;
-            reloadTimer = reloadTimer + Time.deltaTime;
+
         }
     }
+    private void preCreateSkill() {
+        for (int i = 0; i < shootsToCreate;) {
+
+            GameObject skill = activateSkill(true);
+            skill.SetActive(false);
+
+
+            i = i + 1;
+        }
+    }
+
+    private GameObject activateSkill(bool preCreation) {
+        GameObject skill;
+        if (preCreation == false) {
+            skill = Globals.bulletPool.Find(x => x.name == nextSkill.name && x.activeSelf == false);
+            if (skill == null) {
+                skill = Instantiate(nextSkill, transform.position, Quaternion.identity);
+                skill.name = nextSkill.name;
+                skill.layer = gameObject.layer - 1; // enemy bullet layer ist immer enemy layer -1
+                skill.GetComponent<Skill>().layerChange();
+                Debug.Log("additional skill created");
+            }
+            else {
+                Globals.bulletPool.Remove(skill);
+                skill.transform.position = transform.position;
+                skill.transform.rotation = Quaternion.identity;
+                skill.layer = gameObject.layer - 1;
+                skill.SetActive(true);
+
+
+            }
+
+        }
+        else {
+            skill = Instantiate(nextSkill);
+            skill.name = nextSkill.name;
+            skill.layer = gameObject.layer - 1;
+
+        }
+        skillIndex = skillIndex + 1;
+
+        if (skillIndex == skillsequenze.Count) {
+            skillIndex = 0;
+        }
+
+        nextSkill = skillsequenze[skillIndex].Skill;
+        nextSkillTime = skillsequenze[skillIndex].Delay;
+
+        return skill;
+    }
+
     private void movement() {
 
 
@@ -135,14 +206,8 @@ public class Enemy : MonoBehaviour
         time = 0;
     }
 
-    private void shoot() {
-        foreach (GameObject w in shootingPoints) {
-            GameObject shootholder = new GameObject(w.name + " Enemy shoot");
-            shootholder.transform.position = w.transform.position;
-            shootholder.transform.eulerAngles = w.transform.eulerAngles;
-            GameObject g = Instantiate(bullet, shootholder.transform);
-        }
-    }
+
+
 
     private void createNextWaypoint(Vector2 v2) {
         GameObject g = Instantiate(waypointPrefab, transform.parent);
@@ -164,8 +229,8 @@ public class Enemy : MonoBehaviour
             }
         }
         catch {
-            Debug.Log("no Waypoint collision");
-            Debug.Log(collision);
+            //Debug.Log("no Waypoint collision");
+            //Debug.Log(collision);
         }
     }
 }

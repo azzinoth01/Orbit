@@ -31,6 +31,8 @@ public class Weaponholder : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, angle), rotationSpeed * Time.deltaTime);
 
 
+
+
         }
     }
 }

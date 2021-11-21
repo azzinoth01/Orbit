@@ -12,21 +12,33 @@ public class Bullet : MonoBehaviour
     private Waypoint_Designer designer;
     public Rigidbody2D body;
     public GameObject waypointPrefab;
-    public int maxDuration;
+
     private List<GameObject> waypointObject;
     private int waypointIndex;
     private bool waypointDirectionSet;
     private bool loop;
     private float restartAfter;
     private float restartTime;
-    private float time;
+
+
+
+    private float bulletDmg;
+
+    public float BulletDmg {
+
+        set {
+            bulletDmg = value;
+        }
+    }
 
 
 
     // Start is called before the first frame update
     void Start() {
-        restartTime = 0;
-        time = 0;
+        //Debug.Log("start");
+        //restartTime = 0;
+        //time = 0;
+        //waypointIndex = 0;
         waypointObject = new List<GameObject>();
         try {
             designer = GetComponentInParent<Waypoint_Designer>();
@@ -40,7 +52,16 @@ public class Bullet : MonoBehaviour
         catch {
             //       Debug.Log("no designer mode");
         }
-        waypointIndex = 0;
+        if (waypoints[0] != Vector2.zero) {
+            waypoints.Insert(0, Vector2.zero);
+        }
+
+
+
+        for (int i = 0; i < waypoints.Count;) {
+            createNextWaypoint(waypoints[i]);
+            i = i + 1;
+        }
 
     }
 
@@ -55,25 +76,28 @@ public class Bullet : MonoBehaviour
     }
     private void movement() {
         if (waypoints.Count > waypointIndex && waypointDirectionSet == false) {
-            createNextWaypoint(waypoints[waypointIndex]);
+            //createNextWaypoint(waypoints[waypointIndex]);
+            activeNextWaypoint();
             waypointDirectionSet = true;
-            Vector2 direction = waypointObject[0].transform.position - transform.position;
+            Vector2 direction = waypointObject[waypointIndex].transform.position - transform.position;
             body.velocity = direction.normalized * speed;
         }
         else if (designer != null && waypoints.Count == waypointIndex) {
 
             if (loop == true) {
-                createNextWaypoint(new Vector2(0, 0));
+                //createNextWaypoint(new Vector2(0, 0));
+                waypointIndex = 0;
+                activeNextWaypoint();
                 waypointDirectionSet = true;
-                Vector2 direction = waypointObject[0].transform.position - transform.position;
+                Vector2 direction = waypointObject[waypointIndex].transform.position - transform.position;
                 body.velocity = direction.normalized * speed;
-                waypointIndex = -1;
+
                 return;
             }
             restartTime = restartTime + Time.deltaTime;
             if (restartAfter <= restartTime) {
                 restartTime = 0;
-                transform.position = new Vector3(0, 0, transform.position.z);
+                transform.position = waypointObject[0].transform.position;
                 waypointIndex = 0;
                 waypointDirectionSet = false;
 
@@ -81,17 +105,18 @@ public class Bullet : MonoBehaviour
         }
 
 
-        if (maxDuration != 0 && time >= maxDuration) {
-            Destroy(gameObject.transform.parent.gameObject);
-            Destroy(gameObject);
-        }
-        time = time + Time.deltaTime;
+
+
     }
 
+    private void activeNextWaypoint() {
+        waypointObject[waypointIndex].SetActive(true);
+    }
 
     private void createNextWaypoint(Vector2 v2) {
         GameObject g = Instantiate(waypointPrefab, transform.parent);
         g.transform.localPosition = v2;
+        g.SetActive(false);
         // g.layer = gameObject.layer;
         waypointObject.Add(g);
 
@@ -99,45 +124,94 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         try {
 
-            if (collision.gameObject == waypointObject[0]) {
+            if (collision.gameObject == waypointObject[waypointIndex]) {
                 waypointIndex = waypointIndex + 1;
                 waypointDirectionSet = false;
-                Destroy(collision.gameObject);
-                waypointObject.RemoveAt(0);
+                collision.gameObject.SetActive(false);
+                //Destroy(collision.gameObject);
+                //waypointObject.RemoveAt(0);
             }
         }
         catch {
-            Debug.Log("no Waypoint collision");
-            Debug.Log(collision);
+            //Debug.Log("no Waypoint collision");
+            //Debug.Log(collision);
         }
 
         try {
 
-            Debug.Log(collision);
+            //Debug.Log(collision);
             Enemy g = collision.GetComponent<Enemy>();
             g.takeDmg(1);
-            Destroy(gameObject.transform.parent.gameObject);
+            //Destroy(gameObject.transform.parent.gameObject);
+            setInactive();
 
         }
         catch {
-            Debug.Log("no enemy hit");
-            Debug.Log(collision);
+            //Debug.Log("no enemy hit");
+            //Debug.Log(collision);
         }
 
         try {
 
-            Debug.Log(collision);
+            //Debug.Log(collision);
             Player g = collision.GetComponent<Player>();
             g.takeDmg(1);
-            Destroy(gameObject.transform.parent.gameObject);
+            //Destroy(gameObject.transform.parent.gameObject);
+            setInactive();
 
         }
         catch {
-            Debug.Log("no player hit");
-            Debug.Log(collision);
+            //Debug.Log("no player hit");
+            //Debug.Log(collision);
         }
     }
 
+    //private void OnDisable() {
+    //    //Debug.Log("bullet got disabled");
 
+    //    if (gameObject.layer == 8) { // layer 8 enemy_bullets
+
+    //        Globals.bulletPool.Add(gameObject.transform.parent.gameObject);
+
+    //    }
+    //    else {
+    //        Globals.bulletPool.Add(gameObject.transform.parent.gameObject);
+    //    }
+
+    //}
+    // called vor start
+    private void OnEnable() {
+        //Debug.Log("bullet got enabled");
+        restartTime = 0;
+
+        waypointIndex = 0;
+        if (waypointObject != null) {
+            transform.position = waypointObject[0].transform.position;
+        }
+
+        waypointDirectionSet = false;
+    }
+
+    private void setInactive() {
+
+        gameObject.transform.parent.gameObject.SetActive(false);
+
+        //check ob alle anderen bullet container ebenfalls inactive sind
+        int i = gameObject.transform.parent.gameObject.transform.parent.transform.childCount;
+        int counter = 0;
+
+        foreach (Transform t in gameObject.transform.parent.gameObject.transform.parent.transform) {
+            if (t.gameObject.activeSelf == false) {
+                counter = counter + 1;
+            }
+            else if (t.gameObject == gameObject.transform.parent.gameObject) {
+                // falls beim durchloopen das momentane object noch nicht als inactive angesehen wird
+                counter = counter + 1;
+            }
+        }
+        if (i == counter) {
+            gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
+        }
+    }
 
 }

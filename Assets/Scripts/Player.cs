@@ -11,17 +11,20 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public float force;
     public float maxSpeed;
 
-    public List<GameObject> weapons;
-    public GameObject bullet;
-    public float reloadTime;
-    private float time;
+    public List<Weapon> weapons;
+
+
     private Vector2 impulse;
 
     private Controlls controll;
     private bool shooting;
 
+    private new Animator animation;
+    public Animator antrieb;
+
     private void Awake() {
         Globals.player = gameObject;
+
     }
 
     public void OnCharge(InputAction.CallbackContext context) {
@@ -32,9 +35,13 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.down * force);
+            animation.SetInteger("IntY", animation.GetInteger("IntY") - 1);
+            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.down * force);
+            animation.SetInteger("IntY", animation.GetInteger("IntY") + 1);
+            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
         }
 
     }
@@ -43,9 +50,13 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.left * force);
+            animation.SetInteger("IntX", animation.GetInteger("IntX") - 1);
+            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.left * force);
+            animation.SetInteger("IntX", animation.GetInteger("IntX") + 1);
+            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
         }
     }
 
@@ -53,9 +64,13 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.right * force);
+            animation.SetInteger("IntX", animation.GetInteger("IntX") + 1);
+            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.right * force);
+            animation.SetInteger("IntX", animation.GetInteger("IntX") - 1);
+            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
         }
     }
 
@@ -63,9 +78,14 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.up * force);
+            animation.SetInteger("IntY", animation.GetInteger("IntY") + 1);
+            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
+
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.up * force);
+            animation.SetInteger("IntY", animation.GetInteger("IntY") - 1);
+            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
         }
     }
 
@@ -103,7 +123,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         impulse = new Vector2(0, 0);
         shooting = false;
-        time = 0;
+        animation = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -112,17 +133,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             return;
         }
         else {
-            time = time + Time.deltaTime;
-            if (shooting == true && weapons.Count != 0) {
-                if (time >= reloadTime) {
-                    time = 0;
-                    foreach (GameObject w in weapons) {
-                        GameObject shootholder = new GameObject(w.name + " shoot");
-                        shootholder.transform.position = w.transform.position;
-                        shootholder.transform.eulerAngles = w.transform.eulerAngles;
-                        GameObject g = Instantiate(bullet, shootholder.transform);
-                    }
 
+            if (shooting == true && weapons.Count != 0) {
+                foreach (Weapon w in weapons) {
+                    w.shoot();
                 }
             }
             //Debug.Log(impulse);
@@ -137,6 +151,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
 
     }
+
 
 
     public void takeDmg(int dmg) {

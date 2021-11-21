@@ -153,13 +153,12 @@ MonoBehaviour:
   body: {fileID: 1580844076}
   force: 15
   maxSpeed: 12
-  pause_handler: {fileID: 0}
   weapons:
-  - {fileID: 813140886303943400}
-  - {fileID: 813140886281530516}
-  - {fileID: 813140886165283647}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bullet: {fileID: 7109026622726797419, guid: 72b1d03baf9d2604bbe70f3ee99cea25, type: 3}
-  reloadTime: 1
+  shootsToCreate: 0
 --- !u!95 &1431146546
 Animator:
   serializedVersion: 3

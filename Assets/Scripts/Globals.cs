@@ -9,6 +9,8 @@ public static class Globals
     public static Game_over_handler gameoverHandler;
     public static Pause_handler pauseHandler;
     public static GameObject player;
+    public static List<GameObject> bulletPool;
+
 
 
 }
