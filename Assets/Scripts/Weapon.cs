@@ -71,7 +71,7 @@ public class Weapon : MonoBehaviour
             if (g == null) {
                 g = Instantiate(skill, transform.position, transform.rotation);
                 g.name = skill.name;
-                g.layer = gameObject.layer - 1; // player bullet layer ist immer player layer -1
+                g.layer = 6; // player bullet layer ist layer 6
                 g.GetComponent<Skill>().layerChange();
                 Debug.Log("additional skill created");
             }
@@ -79,7 +79,7 @@ public class Weapon : MonoBehaviour
                 Globals.bulletPool.Remove(g);
                 g.transform.position = transform.position;
                 g.transform.rotation = transform.rotation;
-                g.layer = gameObject.layer - 1;
+                g.layer = 6;
                 g.SetActive(true);
             }
 
@@ -87,7 +87,7 @@ public class Weapon : MonoBehaviour
         else {
             g = Instantiate(skill);
             g.name = skill.name;
-            g.layer = gameObject.layer - 1;
+            g.layer = 6;
 
 
 

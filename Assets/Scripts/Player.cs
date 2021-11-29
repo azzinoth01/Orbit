@@ -35,6 +35,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public float maxDogeDuration;
     public float dogeCooldown;
     public float globalCooldown;
+
+
     private bool onGlobalCooldown;
     private bool isDoging;
 
@@ -43,6 +45,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public GameObject waypointPrefab;
     private GameObject waypoint;
     private Coroutine timer;
+    private Coroutine immunityTimer;
+
+    private bool isImmun;
 
 
     private void Awake() {
@@ -172,6 +177,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         onGlobalCooldown = false;
         shooting = false;
         isDoging = false;
+        isImmun = false;
         StartCoroutine(shootingHandler());
         StartCoroutine(moveHandler());
 
@@ -209,12 +215,18 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
     public void takeDmg(int dmg) {
+        if (isImmun == true) {
+            return;
+        }
         health = health - dmg;
 
         if (health <= 0) {
             Destroy(gameObject);
             //Globals.gameoverHandler.gameOver();
         }
+        isImmun = true;
+        gameObject.layer = 13; // immunity layer
+        immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterHit));
     }
 
     private void OnDestroy() {
@@ -237,6 +249,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private void doge() {
         if (dogeCharges > 0 && onGlobalCooldown == false && isDoging == false) {
             isDoging = true;
+            isImmun = true;
+            gameObject.layer = 13; // immunity layer
+
+            // falls immunity durch hit wird diese vom doge überschrieben
+            if (immunityTimer != null) {
+                StopCoroutine(immunityTimer);
+            }
+
+
+
             //transform.position = transform.position + (Vector3)(impulse.normalized * dogeRange);
 
             Vector3 point;
@@ -249,7 +271,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 //Debug.Log("doge outside view");
 
                 fixedDogeRange = fixedDogeRange - 1;
-                if (fixedDogeRange == 0) {
+                if (fixedDogeRange <= 0) {
                     //Debug.Log("doge nicht möglich");
                     isDoging = false;
                     return;
@@ -266,12 +288,21 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             dogeVisual(true);
             onGlobalCooldown = true;
             timer = StartCoroutine(maxDogeTimer(maxDogeDuration));
+
             StartCoroutine(chargeFill(dogeCooldown));
             StartCoroutine(globalCooldownTimer(globalCooldown));
 
 
         }
     }
+
+
+    private IEnumerator immunityTime(float time) {
+        yield return new WaitForSeconds(time);
+        isImmun = false;
+        gameObject.layer = 7; //player layer
+    }
+
 
     private IEnumerator maxDogeTimer(float duration) {
         yield return new WaitForSeconds(duration);
@@ -283,6 +314,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
 
         Destroy(waypoint);
+        immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterDoge));
+
     }
 
     private void dogeVisual(bool used) {
@@ -306,6 +339,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
 
             Destroy(waypoint);
+            immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterDoge));
         }
     }
 }
