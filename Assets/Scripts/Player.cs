@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 {
@@ -26,8 +27,20 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public float dmgModifier;
 
     public float immunityTimeAfterHit;
-    public float immunityTimeAfterCharge;
+    public float immunityTimeAfterDoge;
 
+    public int dogeCharges;
+    public float dogeRange;
+    public float dogeSpeed;
+    public float dogeCooldown;
+    public float globalCooldown;
+    private bool onGlobalCooldown;
+    private bool isDoging;
+
+    public List<GameObject> chargeBalls;
+
+    public GameObject waypointPrefab;
+    private GameObject waypoint;
 
 
     private void Awake() {
@@ -37,6 +50,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     public void OnCharge(InputAction.CallbackContext context) {
         //throw new System.NotImplementedException();
+
+        if (context.started) {
+            doge();
+        }
     }
 
     public void OnMove_down(InputAction.CallbackContext context) {
@@ -130,7 +147,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             controll.bullet_hell.SetCallbacks(this);
         }
         impulse = new Vector2(0, 0);
-        shooting = false;
+
         anim = GetComponent<Animator>();
 
 
@@ -150,13 +167,17 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
     private void OnEnable() {
+        onGlobalCooldown = false;
+        shooting = false;
+        isDoging = false;
         StartCoroutine(shootingHandler());
         StartCoroutine(moveHandler());
+
     }
 
     private IEnumerator moveHandler() {
         while (true) {
-            if (Globals.pause == false) {
+            if (Globals.pause == false && isDoging == false) {
                 body.AddForce(impulse.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
                 Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
                 normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
@@ -200,6 +221,53 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
 
+    private IEnumerator chargeFill(float cooldown) {
+        yield return new WaitForSeconds(cooldown);
+        dogeVisual(false);
+        dogeCharges = dogeCharges + 1;
+    }
 
+    private IEnumerator globalCooldownTimer(float cooldown) {
+        yield return new WaitForSeconds(cooldown);
+        onGlobalCooldown = false;
+    }
 
+    private void doge() {
+        if (dogeCharges > 0 && onGlobalCooldown == false) {
+            isDoging = true;
+            //transform.position = transform.position + (Vector3)(impulse.normalized * dogeRange);
+
+            waypoint = Instantiate(waypointPrefab, transform.position + (Vector3)(impulse.normalized * dogeRange), Quaternion.identity, transform.parent);
+
+            body.velocity = (waypoint.transform.position - transform.position).normalized * dogeSpeed;
+            dogeCharges = dogeCharges - 1;
+            dogeVisual(true);
+            onGlobalCooldown = true;
+            StartCoroutine(chargeFill(dogeCooldown));
+            StartCoroutine(globalCooldownTimer(globalCooldown));
+        }
+    }
+
+    private void dogeVisual(bool used) {
+        if (used == true) {
+            chargeBalls[dogeCharges].GetComponent<Image>().color = Color.red;
+        }
+        else {
+            chargeBalls[dogeCharges].GetComponent<Image>().color = Color.green;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject == waypoint) {
+            Debug.Log("doge complete");
+            isDoging = false;
+            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
+            normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
+
+            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+
+            Destroy(waypoint);
+        }
+    }
 }

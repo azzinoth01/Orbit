@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 20bb47f26df66aa4da471b7fb37d8102, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -110,7 +110,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1580844075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -154,12 +154,24 @@ MonoBehaviour:
   force: 15
   maxSpeed: 12
   weapons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  antrieb: {fileID: 0}
+  - {fileID: 2130335326530031776}
+  - {fileID: 1669964601415427312}
+  - {fileID: 2582215759017007434}
+  antrieb: {fileID: 1385949119}
   additionalDmg: 0
   dmgModifier: 1
+  immunityTimeAfterHit: 0
+  immunityTimeAfterDoge: 0
+  dogeCharges: 3
+  dogeRange: 10
+  dogeSpeed: 36
+  dogeCooldown: 5
+  globalCooldown: 1
+  chargeBalls:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
 --- !u!95 &1431146546
 Animator:
   serializedVersion: 3
@@ -168,7 +180,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813140885334128461}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0b72280de5b1d49469afb06c256cfbba, type: 2}
   m_CullingMode: 0
