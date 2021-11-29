@@ -164,7 +164,8 @@ MonoBehaviour:
   immunityTimeAfterDoge: 0
   dogeCharges: 3
   dogeRange: 10
-  dogeSpeed: 36
+  dogeSpeed: 24
+  maxDogeDuration: 0.5
   dogeCooldown: 5
   globalCooldown: 1
   chargeBalls:

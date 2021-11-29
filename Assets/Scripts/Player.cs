@@ -32,6 +32,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public int dogeCharges;
     public float dogeRange;
     public float dogeSpeed;
+    public float maxDogeDuration;
     public float dogeCooldown;
     public float globalCooldown;
     private bool onGlobalCooldown;
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     public GameObject waypointPrefab;
     private GameObject waypoint;
+    private Coroutine timer;
 
 
     private void Awake() {
@@ -233,19 +235,54 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     private void doge() {
-        if (dogeCharges > 0 && onGlobalCooldown == false) {
+        if (dogeCharges > 0 && onGlobalCooldown == false && isDoging == false) {
             isDoging = true;
             //transform.position = transform.position + (Vector3)(impulse.normalized * dogeRange);
 
-            waypoint = Instantiate(waypointPrefab, transform.position + (Vector3)(impulse.normalized * dogeRange), Quaternion.identity, transform.parent);
+            Vector3 point;
+
+            point = transform.position + (Vector3)(impulse.normalized * dogeRange);
+            Vector3 cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
+            float fixedDogeRange = dogeRange;
+            // check if charge punkt is outside of field
+            while (cameraPoint.x < 0 || cameraPoint.x > 1 || cameraPoint.y < 0 || cameraPoint.y > 1) {
+                //Debug.Log("doge outside view");
+
+                fixedDogeRange = fixedDogeRange - 1;
+                if (fixedDogeRange == 0) {
+                    //Debug.Log("doge nicht möglich");
+                    isDoging = false;
+                    return;
+                }
+                point = transform.position + (Vector3)(impulse.normalized * fixedDogeRange);
+                cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
+
+            }
+
+            waypoint = Instantiate(waypointPrefab, point, Quaternion.identity, transform.parent);
 
             body.velocity = (waypoint.transform.position - transform.position).normalized * dogeSpeed;
             dogeCharges = dogeCharges - 1;
             dogeVisual(true);
             onGlobalCooldown = true;
+            timer = StartCoroutine(maxDogeTimer(maxDogeDuration));
             StartCoroutine(chargeFill(dogeCooldown));
             StartCoroutine(globalCooldownTimer(globalCooldown));
+
+
         }
+    }
+
+    private IEnumerator maxDogeTimer(float duration) {
+        yield return new WaitForSeconds(duration);
+        isDoging = false;
+        Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+        normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
+        normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
+
+        body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+
+        Destroy(waypoint);
     }
 
     private void dogeVisual(bool used) {
@@ -259,7 +296,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject == waypoint) {
-            Debug.Log("doge complete");
+            //Debug.Log("doge complete");
+            StopCoroutine(timer);
             isDoging = false;
             Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
