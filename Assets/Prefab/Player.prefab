@@ -157,8 +157,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  bullet: {fileID: 7109026622726797419, guid: 72b1d03baf9d2604bbe70f3ee99cea25, type: 3}
-  shootsToCreate: 0
+  antrieb: {fileID: 0}
+  additionalDmg: 0
+  dmgModifier: 1
 --- !u!95 &1431146546
 Animator:
   serializedVersion: 3
@@ -287,6 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 813140886165283646}
   - component: {fileID: 813140886165283645}
+  - component: {fileID: 2582215759017007434}
   m_Layer: 7
   m_Name: weapon2
   m_TagString: Untagged
@@ -359,6 +361,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2582215759017007434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813140886165283647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f69603878b85142a3c6d519f45a613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 8303773862655550137, guid: cbb80be532d74874aae8fb7ea76a62da, type: 3}
+  reloadTime: 0.5
+  shootsToCreate: 10
+  anim: {fileID: 0}
+  additionalDmg: 0
+  dmgModifier: 1
 --- !u!1 &813140886281530516
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 813140886281530523}
   - component: {fileID: 813140886281530522}
+  - component: {fileID: 1669964601415427312}
   m_Layer: 7
   m_Name: weapon1
   m_TagString: Untagged
@@ -441,6 +462,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1669964601415427312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813140886281530516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f69603878b85142a3c6d519f45a613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 8303773862655550137, guid: cbb80be532d74874aae8fb7ea76a62da, type: 3}
+  reloadTime: 0.5
+  shootsToCreate: 10
+  anim: {fileID: 0}
+  additionalDmg: 0
+  dmgModifier: 1
 --- !u!1 &813140886303943400
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 813140886303943407}
   - component: {fileID: 813140886303943406}
+  - component: {fileID: 2130335326530031776}
   m_Layer: 7
   m_Name: weapon0
   m_TagString: Untagged
@@ -523,6 +563,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2130335326530031776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813140886303943400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f69603878b85142a3c6d519f45a613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 8303773862655550137, guid: fe72fd5383023a84fb9d42aae6e419ac, type: 3}
+  reloadTime: 0.1
+  shootsToCreate: 20
+  anim: {fileID: 0}
+  additionalDmg: 0
+  dmgModifier: 1
 --- !u!1 &3373796351641024434
 GameObject:
   m_ObjectHideFlags: 0

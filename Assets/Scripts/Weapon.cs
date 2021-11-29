@@ -7,13 +7,20 @@ public class Weapon : MonoBehaviour
     public GameObject skill;
     public float reloadTime;
     private bool canShoot;
-    private float time;
+
     public int shootsToCreate;
     public Animator anim;
+
+    public int additionalDmg;
+    public float dmgModifier;
     // Start is called before the first frame update
     void Start() {
-        time = 0;
+
     }
+    private void OnEnable() {
+        canShoot = true;
+    }
+
     private void Awake() {
         for (int i = 0; i < shootsToCreate;) {
             GameObject g = activateSkill(true);
@@ -28,13 +35,7 @@ public class Weapon : MonoBehaviour
             return;
         }
         else {
-            if (time >= reloadTime) {
-                canShoot = true;
-                time = 0;
-            }
-            else if (canShoot == false) {
-                time = time + Time.deltaTime;
-            }
+
             // damit ich momentan keine Fehlermeldungen kriege
             try {
                 anim.SetFloat("Angle", transform.eulerAngles.z);
@@ -46,10 +47,20 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void shoot() {
+    private IEnumerator shootTimer(float wait) {
+
+        yield return new WaitForSeconds(wait);
+        canShoot = true;
+    }
+
+    public void shoot(int additionalDmg, float dmgModifier) {
         if (canShoot == true) {
             canShoot = false;
-            activateSkill(false);
+
+            GameObject g = activateSkill(false);
+            g.GetComponent<Skill>().setDmgModifiers(additionalDmg + this.additionalDmg, dmgModifier * this.dmgModifier);
+
+            StartCoroutine(shootTimer(reloadTime));
         }
     }
 

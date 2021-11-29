@@ -19,8 +19,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private Controlls controll;
     private bool shooting;
 
-    private new Animator animation;
+    private Animator anim;
     public Animator antrieb;
+
+    public int additionalDmg;
+    public float dmgModifier;
+
+    public float immunityTimeAfterHit;
+    public float immunityTimeAfterCharge;
+
+
 
     private void Awake() {
         Globals.player = gameObject;
@@ -35,12 +43,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.down * force);
-            animation.SetInteger("IntY", animation.GetInteger("IntY") - 1);
+            anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
             antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.down * force);
-            animation.SetInteger("IntY", animation.GetInteger("IntY") + 1);
+            anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
             antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
         }
 
@@ -50,12 +58,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.left * force);
-            animation.SetInteger("IntX", animation.GetInteger("IntX") - 1);
+            anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
             antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.left * force);
-            animation.SetInteger("IntX", animation.GetInteger("IntX") + 1);
+            anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
             antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
         }
     }
@@ -64,12 +72,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.right * force);
-            animation.SetInteger("IntX", animation.GetInteger("IntX") + 1);
+            anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
             antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.right * force);
-            animation.SetInteger("IntX", animation.GetInteger("IntX") - 1);
+            anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
             antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
         }
     }
@@ -78,13 +86,13 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.up * force);
-            animation.SetInteger("IntY", animation.GetInteger("IntY") + 1);
+            anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
             antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
 
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.up * force);
-            animation.SetInteger("IntY", animation.GetInteger("IntY") - 1);
+            anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
             antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
         }
     }
@@ -123,7 +131,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         impulse = new Vector2(0, 0);
         shooting = false;
-        animation = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+
+
 
     }
 
@@ -134,22 +144,43 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         else {
 
-            if (shooting == true && weapons.Count != 0) {
-                foreach (Weapon w in weapons) {
-                    w.shoot();
-                }
-            }
-            //Debug.Log(impulse);
 
-            //Debug.Log(impulse.normalized * force);
-            body.AddForce(impulse.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
-            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
-            normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
-            normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
         }
 
+    }
+    private void OnEnable() {
+        StartCoroutine(shootingHandler());
+        StartCoroutine(moveHandler());
+    }
+
+    private IEnumerator moveHandler() {
+        while (true) {
+            if (Globals.pause == false) {
+                body.AddForce(impulse.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+                Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+                normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
+                normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
+
+                body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+            }
+
+            yield return null;
+        }
+
+    }
+
+    private IEnumerator shootingHandler() {
+
+
+        while (true) {
+            if (shooting == true && weapons.Count != 0 && Globals.pause == false) {
+                foreach (Weapon w in weapons) {
+                    w.shoot(additionalDmg, dmgModifier);
+                }
+            }
+            yield return null;
+        }
     }
 
 
@@ -159,7 +190,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (health <= 0) {
             Destroy(gameObject);
-            Globals.gameoverHandler.gameOver();
+            //Globals.gameoverHandler.gameOver();
         }
     }
 
@@ -168,5 +199,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         controll.Dispose();
 
     }
+
+
 
 }

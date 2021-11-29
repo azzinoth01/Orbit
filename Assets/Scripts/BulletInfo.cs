@@ -46,7 +46,11 @@ public class BulletInfo
         }
     }
 
-
+    public void resetModifiers() {
+        addBaseDmg = 0;
+        dmgModifier = 1;
+        setBulletDmg();
+    }
 
 
     public GameObject Bullet {
@@ -61,10 +65,36 @@ public class BulletInfo
 
     public Bullet BulletScript {
 
-
         set {
             bulletScript = value;
+            setBulletDmg();
+
         }
+    }
+
+    public int AddBaseDmg {
+
+
+        set {
+            addBaseDmg = value;
+            setBulletDmg();
+        }
+    }
+
+    public float DmgModifier {
+
+
+        set {
+            dmgModifier = value;
+            setBulletDmg();
+        }
+    }
+
+    public void setBulletDmg() {
+        if (bulletScript != null) {
+            bulletScript.BulletDmg = (bulletBaseDmg + addBaseDmg) * dmgModifier;
+        }
+
     }
 
     public void setLayer(int layer) {

@@ -121,6 +121,15 @@ public class Bullet : MonoBehaviour
         waypointObject.Add(g);
 
     }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+
+        if (collision.tag == Tag_enum.bullet_border.ToString()) {
+            setInactive();
+        }
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision) {
         try {
 
@@ -128,6 +137,7 @@ public class Bullet : MonoBehaviour
                 waypointIndex = waypointIndex + 1;
                 waypointDirectionSet = false;
                 collision.gameObject.SetActive(false);
+                return;
                 //Destroy(collision.gameObject);
                 //waypointObject.RemoveAt(0);
             }
@@ -141,9 +151,14 @@ public class Bullet : MonoBehaviour
 
             //Debug.Log(collision);
             Enemy g = collision.GetComponent<Enemy>();
-            g.takeDmg(1);
-            //Destroy(gameObject.transform.parent.gameObject);
-            setInactive();
+            if (g != null) {
+                //Debug.Log(collision);
+                g.takeDmg((int)bulletDmg);
+                //Destroy(gameObject.transform.parent.gameObject);
+                setInactive();
+                return;
+            }
+
 
         }
         catch {
@@ -155,15 +170,21 @@ public class Bullet : MonoBehaviour
 
             //Debug.Log(collision);
             Player g = collision.GetComponent<Player>();
-            g.takeDmg(1);
-            //Destroy(gameObject.transform.parent.gameObject);
-            setInactive();
+            if (g != null) {
+                g.takeDmg((int)bulletDmg);
+                //Destroy(gameObject.transform.parent.gameObject);
+                setInactive();
+                return;
+            }
+
 
         }
         catch {
             //Debug.Log("no player hit");
             //Debug.Log(collision);
         }
+
+
     }
 
     //private void OnDisable() {
@@ -190,28 +211,18 @@ public class Bullet : MonoBehaviour
         }
 
         waypointDirectionSet = false;
+
     }
 
     private void setInactive() {
 
         gameObject.transform.parent.gameObject.SetActive(false);
 
-        //check ob alle anderen bullet container ebenfalls inactive sind
-        int i = gameObject.transform.parent.gameObject.transform.parent.transform.childCount;
-        int counter = 0;
-
-        foreach (Transform t in gameObject.transform.parent.gameObject.transform.parent.transform) {
-            if (t.gameObject.activeSelf == false) {
-                counter = counter + 1;
-            }
-            else if (t.gameObject == gameObject.transform.parent.gameObject) {
-                // falls beim durchloopen das momentane object noch nicht als inactive angesehen wird
-                counter = counter + 1;
-            }
-        }
-        if (i == counter) {
-            gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
-        }
+        //Debug.Log("set inactive");
+        gameObject.transform.parent.transform.parent.GetComponent<Skill>().checkDisabled();
     }
+
+
+
 
 }

@@ -11,59 +11,78 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D body;
     private Waypoint_Designer designer;
     public List<Vector2> waypoints;
-    public float speed;
-    public float slowdownProzent;
+    public bool moveToRandomWaypoints;
+    public bool moveToPlayer;
+    public bool followPlayerMovementX;
+    public bool followPlayerMovementY;
+    public float playerfollowRange;
+    public float force;
+    public float maxSpeed;
+
     public bool loop;
     private float restartAfter;
     public GameObject waypointPrefab;
     private float restartTime;
-    private float time;
     private List<GameObject> waypointObject;
     private int waypointIndex;
-    private bool waypointDirectionSet;
     public float maxDuration;
     public float delayToNextWaypoint;
 
 
-    public int shootsToCreate;
 
-    public List<Skillsequenze> skillsequenze;
-    private GameObject nextSkill;
-    private float nextSkillTime;
-    private float nextSkillTimer;
-    private int skillIndex;
 
-    private void Awake() {
-        nextSkill = skillsequenze[0].Skill;
-        nextSkillTime = skillsequenze[0].Delay;
-        skillIndex = 0;
-        preCreateSkill();
-    }
+
+    public int collisionDmg;
+    public bool destoryAfterCollison;
+
+
+    private Vector2 savedDirection;
+    private bool stopMove;
+    private bool maxDurationReached;
+
+
+
+
+
     // Start is called before the first frame update
     void Start() {
-        maxDuration = 0;
+
         restartTime = 0;
-        time = 0;
+
+
+        stopMove = false;
 
         waypointObject = new List<GameObject>();
         try {
             designer = GetComponentInParent<Waypoint_Designer>();
 
             waypoints = new List<Vector2>(designer.waypoints);
-            speed = designer.speed;
+            force = designer.force;
+            maxSpeed = designer.speed;
             loop = designer.loop;
             restartAfter = designer.restartAfter;
             waypointPrefab = designer.waypointPrefab;
             delayToNextWaypoint = designer.enemyDelayToNextWaypoint;
+            maxDuration = 0;
         }
         catch {
             //       Debug.Log("no designer mode");
         }
         waypointIndex = 0;
 
-        nextSkill = skillsequenze[0].Skill;
-        nextSkillTime = skillsequenze[0].Delay;
-        skillIndex = 0;
+
+
+
+
+        for (int i = 0; i < waypoints.Count;) {
+            createNextWaypoint(waypoints[i]);
+            i = i + 1;
+        }
+        savedDirection = Vector2.zero;
+
+        if (maxDuration != 0) {
+            StartCoroutine(startMaxDurationTimer(maxDuration));
+        }
 
     }
 
@@ -73,114 +92,171 @@ public class Enemy : MonoBehaviour
             return;
         }
         else {
-            if (delayToNextWaypoint <= time) {
+            if (stopMove == false) {
                 movement();
             }
 
+            if (maxDurationReached == true) {
+                if (moveToPlayer == true || followPlayerMovementX == true || followPlayerMovementY == true) {
+                    startMovingOut();
+                }
 
-            if (nextSkillTime <= nextSkillTimer) {
-
-                activateSkill(false);
-                nextSkillTimer = 0;
-            }
-
-            if (waypointDirectionSet == false) {
-                body.velocity = body.velocity * slowdownProzent;
-            }
-            if (maxDuration != 0 && time >= maxDuration) {
-                Destroy(gameObject.transform.parent.gameObject);
 
             }
-            nextSkillTimer = nextSkillTimer + Time.deltaTime;
-            time = time + Time.deltaTime;
-
-        }
-    }
-    private void preCreateSkill() {
-        for (int i = 0; i < shootsToCreate;) {
-
-            GameObject skill = activateSkill(true);
-            skill.SetActive(false);
-
-
-            i = i + 1;
         }
     }
 
-    private GameObject activateSkill(bool preCreation) {
-        GameObject skill;
-        if (preCreation == false) {
-            skill = Globals.bulletPool.Find(x => x.name == nextSkill.name && x.activeSelf == false);
-            if (skill == null) {
-                skill = Instantiate(nextSkill, transform.position, Quaternion.identity);
-                skill.name = nextSkill.name;
-                skill.layer = gameObject.layer - 1; // enemy bullet layer ist immer enemy layer -1
-                skill.GetComponent<Skill>().layerChange();
-                Debug.Log("additional skill created");
-            }
-            else {
-                Globals.bulletPool.Remove(skill);
-                skill.transform.position = transform.position;
-                skill.transform.rotation = Quaternion.identity;
-                skill.layer = gameObject.layer - 1;
-                skill.SetActive(true);
+    private IEnumerator startMoveDelay(float wait) {
+        yield return new WaitForSeconds(wait);
 
+        stopMove = false;
 
-            }
+    }
 
-        }
-        else {
-            skill = Instantiate(nextSkill);
-            skill.name = nextSkill.name;
-            skill.layer = gameObject.layer - 1;
+    private IEnumerator startMaxDurationTimer(float wait) {
+        yield return new WaitForSeconds(wait);
 
-        }
-        skillIndex = skillIndex + 1;
+        maxDurationReached = true;
+    }
 
-        if (skillIndex == skillsequenze.Count) {
-            skillIndex = 0;
-        }
+    public void startMovingOut() {
+        Move_in_out_Scene m = GetComponentInParent<Move_in_out_Scene>();
+        // speed auf anderen rigidbody übergbene 
+        m.body.bodyType = RigidbodyType2D.Dynamic;
+        m.body.velocity = body.velocity;
 
-        nextSkill = skillsequenze[skillIndex].Skill;
-        nextSkillTime = skillsequenze[skillIndex].Delay;
+        // weil sich sonst das schiff nicht mitbewegt
+        //body.bodyType = RigidbodyType2D.Kinematic;
+        //Debug.Log("versuch zu rausbewegung zu starten");
+        m.startMoveOut();
+        enabled = false;
 
-        return skill;
     }
 
     private void movement() {
 
+        if (moveToPlayer == true) {
 
+            Vector2 direction;
+            if (savedDirection == Vector2.zero) {
+                direction = Globals.player.transform.position - transform.position;
+                savedDirection = direction;
+            }
+            else {
+                direction = savedDirection;
+            }
 
-        if (waypoints.Count > waypointIndex && waypointDirectionSet == false) {
-            createNextWaypoint(waypoints[waypointIndex]);
-            waypointDirectionSet = true;
-            Vector2 direction = waypointObject[0].transform.position - transform.position;
-            body.velocity = direction.normalized * speed;
+            if (followPlayerMovementX == true && followPlayerMovementY == true && Globals.player != null) {
+                //waypointDirectionSet = false;
+
+                direction = Globals.player.transform.position - transform.position;
+
+            }
+            else if (followPlayerMovementX == true && Globals.player != null) {
+                //waypointDirectionSet = false;
+
+                if (Globals.player.transform.position.x - transform.position.x >= -playerfollowRange && Globals.player.transform.position.x - transform.position.x <= playerfollowRange) {
+                    //return;
+                }
+                else {
+                    direction = new Vector2(Globals.player.transform.position.x - transform.position.x, direction.y);
+
+                }
+
+            }
+            else if (followPlayerMovementY == true && Globals.player != null) {
+                //waypointDirectionSet = false;
+                if (Globals.player.transform.position.y - transform.position.y >= -playerfollowRange && Globals.player.transform.position.y - transform.position.y <= playerfollowRange) {
+                    //return;
+                }
+                else {
+                    direction = new Vector2(direction.x, Globals.player.transform.position.y - transform.position.y);
+                }
+            }
+
+            body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+
+            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
+            normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
+
+            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+
         }
-        else if (waypoints.Count == waypointIndex && loop == true) {
-            createNextWaypoint(new Vector2(0, 0));
-            waypointDirectionSet = true;
-            Vector2 direction = waypointObject[0].transform.position - transform.position;
-            body.velocity = direction.normalized * speed;
-            waypointIndex = -1;
+        else if (followPlayerMovementX == true && Globals.player != null) {
+            Vector2 direction;
+            if (Globals.player.transform.position.x - transform.position.x >= -playerfollowRange && Globals.player.transform.position.x - transform.position.x <= playerfollowRange) {
+                return;
+            }
+            else {
+                direction = new Vector2(Globals.player.transform.position.x - transform.position.x, 0);
+            }
+            body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+
+            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
+            normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
+
+            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+        }
+        else if (followPlayerMovementY == true && Globals.player != null) {
+
+            Vector2 direction;
+            if (Globals.player.transform.position.y - transform.position.y >= -playerfollowRange && Globals.player.transform.position.y - transform.position.y <= playerfollowRange) {
+                return;
+            }
+            else {
+                direction = new Vector2(0, Globals.player.transform.position.y - transform.position.y);
+            }
+            body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+
+            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
+            normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
+
+            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+        }
+        else if (waypoints.Count > waypointIndex) {
+            //createNextWaypoint(waypoints[waypointIndex]);
+            //waypointDirectionSet = true;
+            Vector2 direction = waypointObject[waypointIndex].transform.position - transform.position;
+            body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+
+            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
+            normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
+
+            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+            waypointObject[waypointIndex].SetActive(true);
+        }
+        else if (waypoints.Count == waypointIndex && loop == true && waypoints.Count != 0) {
+            //createNextWaypoint(new Vector2(0, 0));
+            //waypointDirectionSet = true;
+            waypointIndex = 0;
+            Vector2 direction = waypointObject[waypointIndex].transform.position - transform.position;
+
+            body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+
+            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
+            normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
+
+            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+
+            waypointObject[waypointIndex].SetActive(true);
+
 
         }
         else if (designer != null && waypoints.Count == waypointIndex) {
 
-            //if (loop == true) {
-            //    createNextWaypoint(new Vector2(0, 0));
-            //    waypointDirectionSet = true;
-            //    Vector2 direction = waypointObject[0].transform.position - transform.position;
-            //    body.velocity = direction.normalized * speed;
-            //    waypointIndex = -1;
-            //    return;
-            //}
+
             restartTime = restartTime + Time.deltaTime;
             if (restartAfter <= restartTime) {
                 restartTime = 0;
-                transform.position = new Vector3(0, 0, transform.position.z);
                 waypointIndex = 0;
-                waypointDirectionSet = false;
+                transform.position = waypointObject[waypointIndex].transform.position;
+                waypointObject[waypointIndex].SetActive(true);
+
 
             }
         }
@@ -195,16 +271,10 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0) {
             Destroy(gameObject.transform.parent.gameObject);
-            Globals.gameoverHandler.gameOver();
+            //  Globals.gameoverHandler.gameOver();
         }
     }
 
-    private void resetTime() {
-        if (maxDuration != 0) {
-            maxDuration = maxDuration + time;
-        }
-        time = 0;
-    }
 
 
 
@@ -214,23 +284,73 @@ public class Enemy : MonoBehaviour
         g.transform.localPosition = v2;
         // g.layer = gameObject.layer;
         waypointObject.Add(g);
+        g.SetActive(false);
 
     }
     private void OnTriggerEnter2D(Collider2D collision) {
         try {
 
-            if (collision.gameObject == waypointObject[0]) {
-                waypointIndex = waypointIndex + 1;
-                waypointDirectionSet = false;
-                Destroy(collision.gameObject);
-                waypointObject.RemoveAt(0);
-                resetTime();
-                //body.velocity = Vector2.zero;
+            if (collision.gameObject == waypointObject[waypointIndex]) {
+                if (moveToRandomWaypoints == true) {
+                    int i = -1;
+                    //Debug.Log("random Roll start");
+                    while (i == -1 || waypointObject.Count == i || i == waypointIndex) {
+                        // grenzen um 1 Zahl erweiter da eck zaheln nur selten ausgewürfelt werden
+                        // wenn unmögliche Zahl kommt wird zahl neu ermittelt
+                        i = Random.Range(-1, waypointObject.Count + 1);
+                        //Debug.Log("random roll");
+                    }
+                    waypointIndex = i;
+
+
+                }
+                else {
+                    waypointIndex = waypointIndex + 1;
+                }
+
+
+                collision.gameObject.SetActive(false);
+                stopMove = true;
+                // nachdem
+                if (maxDurationReached == true) {
+
+                    startMovingOut();
+
+                }
+                else {
+
+                    StartCoroutine(startMoveDelay(delayToNextWaypoint));
+                }
             }
         }
         catch {
             //Debug.Log("no Waypoint collision");
             //Debug.Log(collision);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        try {
+            if (collision.gameObject == Globals.player) {
+                Player p = Globals.player.GetComponent<Player>();
+
+
+                p.takeDmg(collisionDmg);
+
+                if (destoryAfterCollison == true) {
+                    Destroy(transform.parent.gameObject);
+                }
+            }
+        }
+        catch {
+            //Debug.Log(collision);
+        }
+
+    }
+
+    private void OnDestroy() {
+        foreach (GameObject g in waypointObject) {
+            Destroy(g);
         }
     }
 }

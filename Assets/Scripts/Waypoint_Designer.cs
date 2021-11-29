@@ -8,6 +8,7 @@ public class Waypoint_Designer : MonoBehaviour
 
     public List<Vector2> waypoints;
     public float speed;
+    public float force;
     public float restartAfter;
     public bool loop;
     public float enemyDelayToNextWaypoint;
