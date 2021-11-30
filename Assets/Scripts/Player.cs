@@ -53,6 +53,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private void Awake() {
         Globals.player = gameObject;
 
+
     }
 
     public void OnCharge(InputAction.CallbackContext context) {
@@ -264,26 +265,31 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             Vector3 point;
 
             point = transform.position + (Vector3)(impulse.normalized * dogeRange);
-            Vector3 cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
-            float fixedDogeRange = dogeRange;
-            // check if charge punkt is outside of field
-            while (cameraPoint.x < 0 || cameraPoint.x > 1 || cameraPoint.y < 0 || cameraPoint.y > 1) {
-                //Debug.Log("doge outside view");
+            //Vector3 cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
+            //float fixedDogeRange = dogeRange;
+            //// check if charge punkt is outside of field
+            //while (cameraPoint.x < 0 || cameraPoint.x > 1 || cameraPoint.y < 0 || cameraPoint.y > 1) {
+            //    //Debug.Log("doge outside view");
 
-                fixedDogeRange = fixedDogeRange - 1;
-                if (fixedDogeRange <= 0) {
-                    //Debug.Log("doge nicht möglich");
-                    isDoging = false;
-                    return;
-                }
-                point = transform.position + (Vector3)(impulse.normalized * fixedDogeRange);
-                cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
+            //    fixedDogeRange = fixedDogeRange - 1;
+            //    if (fixedDogeRange <= 0) {
+            //        //Debug.Log("doge nicht möglich");
+            //        isDoging = false;
+            //        return;
+            //    }
+            //    point = transform.position + (Vector3)(impulse.normalized * fixedDogeRange);
+            //    cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
 
-            }
-
+            //}
+            Debug.Log("current pos " + transform.position.ToString());
+            Debug.Log("ziel pos " + point.ToString());
             waypoint = Instantiate(waypointPrefab, point, Quaternion.identity, transform.parent);
 
-            body.velocity = (waypoint.transform.position - transform.position).normalized * dogeSpeed;
+            Vector3 direction = (waypoint.transform.position - transform.position);
+            Debug.Log(direction);
+            Debug.Log(direction.normalized);
+            body.velocity = direction.normalized * dogeSpeed;
+            Debug.Log(body.velocity);
             dogeCharges = dogeCharges - 1;
             dogeVisual(true);
             onGlobalCooldown = true;
@@ -328,6 +334,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+
         if (collision.gameObject == waypoint) {
             //Debug.Log("doge complete");
             StopCoroutine(timer);
@@ -342,4 +349,5 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterDoge));
         }
     }
+
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 351253989031591618}
   - component: {fileID: 818915693945391276}
   m_Layer: 0
-  m_Name: Bullet_border
+  m_Name: border_bullet
   m_TagString: bullet_border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,11 +47,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 35, y: -20}
-  - {x: -35, y: -20}
-  - {x: -35, y: 20}
-  - {x: 35, y: 20}
-  - {x: 35, y: -20}
+  - {x: -12, y: 10}
+  - {x: -12, y: -10}
+  - {x: 12, y: -10}
+  - {x: 12, y: 10}
+  - {x: -12, y: 10}
   m_AdjacentStartPoint: {x: 40, y: 25}
   m_AdjacentEndPoint: {x: 40, y: 25}
   m_UseAdjacentStartPoint: 0
