@@ -65,7 +65,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 13.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe51d8a3e2e19a408fdba9ad76b8e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetSpeed: 0
 --- !u!114 &5738150791844898346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,9 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 16
-  m_RefResolutionX: 320
-  m_RefResolutionY: 240
+  m_AssetsPPU: 10
+  m_RefResolutionX: 480
+  m_RefResolutionY: 270
   m_UpscaleRT: 1
   m_PixelSnapping: 1
   m_CropFrameX: 1
@@ -203,11 +204,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -10, y: 7.5}
-  - {x: 10, y: 7.5}
-  - {x: 10, y: -7.5}
-  - {x: -10, y: -7.5}
-  - {x: -10, y: 7.5}
+  - {x: -24, y: 13.5}
+  - {x: 24, y: 13.5}
+  - {x: 24, y: -13.5}
+  - {x: -24, y: -13.5}
+  - {x: -24, y: 13.5}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0

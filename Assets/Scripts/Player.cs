@@ -26,6 +26,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public int additionalDmg;
     public float dmgModifier;
 
+    public float immunityFlickerRate;
+    [Range(0, 1)] public float maxFlickerRange;
+    private int flickerDirection;
+
     public float immunityTimeAfterHit;
     public float immunityTimeAfterDoge;
 
@@ -36,6 +40,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public float dogeCooldown;
     public float globalCooldown;
 
+    private int maxDogeCharges;
 
     private bool onGlobalCooldown;
     private bool isDoging;
@@ -46,9 +51,22 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private GameObject waypoint;
     private Coroutine timer;
     private Coroutine immunityTimer;
+    private Coroutine chargeFillCo;
+    private Coroutine flickerCo;
+
 
     private bool isImmun;
+    private SpriteRenderer sp;
 
+
+
+    public Vector2 Impulse {
+        get {
+            return impulse;
+        }
+
+
+    }
 
     private void Awake() {
         Globals.player = gameObject;
@@ -170,7 +188,6 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         else {
 
 
-
         }
 
     }
@@ -181,6 +198,23 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         isImmun = false;
         StartCoroutine(shootingHandler());
         StartCoroutine(moveHandler());
+        maxDogeCharges = dogeCharges;
+        flickerDirection = -1;
+        sp = GetComponent<SpriteRenderer>();
+    }
+
+
+    private void flicker() {
+
+        sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + (flickerDirection * immunityFlickerRate * Time.deltaTime));
+
+        if (sp.color.a <= maxFlickerRange) {
+            flickerDirection = 1;
+
+        }
+        else if (sp.color.a >= 1) {
+            flickerDirection = -1;
+        }
 
     }
 
@@ -240,6 +274,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         yield return new WaitForSeconds(cooldown);
         dogeVisual(false);
         dogeCharges = dogeCharges + 1;
+        if (dogeCharges != maxDogeCharges) {
+            chargeFillCo = StartCoroutine(chargeFill(cooldown));
+        }
+        else {
+            chargeFillCo = null;
+        }
     }
 
     private IEnumerator globalCooldownTimer(float cooldown) {
@@ -253,6 +293,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             isImmun = true;
             gameObject.layer = 13; // immunity layer
 
+
+
             // falls immunity durch hit wird diese vom doge überschrieben
             if (immunityTimer != null) {
                 StopCoroutine(immunityTimer);
@@ -265,22 +307,22 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             Vector3 point;
 
             point = transform.position + (Vector3)(impulse.normalized * dogeRange);
-            //Vector3 cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
-            //float fixedDogeRange = dogeRange;
-            //// check if charge punkt is outside of field
-            //while (cameraPoint.x < 0 || cameraPoint.x > 1 || cameraPoint.y < 0 || cameraPoint.y > 1) {
-            //    //Debug.Log("doge outside view");
+            Vector3 cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
+            float fixedDogeRange = dogeRange;
+            // check if charge punkt is outside of field
+            while (cameraPoint.x < 0 || cameraPoint.x > 1 || cameraPoint.y < 0 || cameraPoint.y > 1) {
+                //Debug.Log("doge outside view");
 
-            //    fixedDogeRange = fixedDogeRange - 1;
-            //    if (fixedDogeRange <= 0) {
-            //        //Debug.Log("doge nicht möglich");
-            //        isDoging = false;
-            //        return;
-            //    }
-            //    point = transform.position + (Vector3)(impulse.normalized * fixedDogeRange);
-            //    cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
+                fixedDogeRange = fixedDogeRange - 1;
+                if (fixedDogeRange <= 0) {
+                    //Debug.Log("doge nicht möglich");
+                    isDoging = false;
+                    return;
+                }
+                point = transform.position + (Vector3)(impulse.normalized * fixedDogeRange);
+                cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
 
-            //}
+            }
             Debug.Log("current pos " + transform.position.ToString());
             Debug.Log("ziel pos " + point.ToString());
             waypoint = Instantiate(waypointPrefab, point, Quaternion.identity, transform.parent);
@@ -295,19 +337,37 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             onGlobalCooldown = true;
             timer = StartCoroutine(maxDogeTimer(maxDogeDuration));
 
-            StartCoroutine(chargeFill(dogeCooldown));
+            if (chargeFillCo == null) {
+                chargeFillCo = StartCoroutine(chargeFill(dogeCooldown));
+            }
+
             StartCoroutine(globalCooldownTimer(globalCooldown));
 
 
         }
     }
 
+    private IEnumerator immunityFlickerHandler() {
+
+
+        while (isImmun == true) {
+            flicker();
+            yield return null;
+        }
+        sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 1);
+
+        flickerCo = null;
+    }
 
     private IEnumerator immunityTime(float time) {
+        if (flickerCo == null) {
+            flickerCo = StartCoroutine(immunityFlickerHandler());
+        }
         yield return new WaitForSeconds(time);
         isImmun = false;
         gameObject.layer = 7; //player layer
     }
+
 
 
     private IEnumerator maxDogeTimer(float duration) {
