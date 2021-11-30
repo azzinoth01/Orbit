@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletInfoList:
-  - startRotation: 0
+  - startRotation: -180
     bulletBaseDmg: 1
     bullet: {fileID: 7109026622726797419, guid: 72b1d03baf9d2604bbe70f3ee99cea25, type: 3}
-  maxDuration: 6
+  maxDuration: 1
