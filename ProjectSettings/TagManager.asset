@@ -44,6 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Level_Collisions
+    uniqueID: 3562250511
+    locked: 0
   - name: UI_Overlay
     uniqueID: 3501905213
     locked: 0
