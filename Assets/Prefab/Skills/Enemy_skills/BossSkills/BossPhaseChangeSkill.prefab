@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7092385119582226550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 862650582969476630}
+  - component: {fileID: 2454700168987939357}
+  m_Layer: 0
+  m_Name: BossPhaseChangeSkill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &862650582969476630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092385119582226550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2454700168987939357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092385119582226550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18782ab28ec9edb498e390c575e9a9c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletInfoList:
+  - startRotation: 0
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: -10
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: -20
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: -30
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: -40
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: -50
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: -60
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: -70
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: -80
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: -90
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: -100
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: 10
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: 20
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: 30
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: 40
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: 50
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: 60
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: 70
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: 80
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: 90
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  - startRotation: 100
+    bulletBaseDmg: 1
+    bullet: {fileID: 6113155763512068803, guid: 2eff34e07f3516f4a924b4991eb3b31d, type: 3}
+  maxDuration: 8
