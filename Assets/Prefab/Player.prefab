@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f69603878b85142a3c6d519f45a613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill: {fileID: 8303773862655550137, guid: fe72fd5383023a84fb9d42aae6e419ac, type: 3}
+  skill: {fileID: 1251532575909873981, guid: fcaefcfb34390a541b9d5732bbfbb336, type: 3}
   reloadTime: 0.1
   shootsToCreate: 20
   anim: {fileID: 0}

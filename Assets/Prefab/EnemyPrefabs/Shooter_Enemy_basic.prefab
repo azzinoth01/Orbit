@@ -163,6 +163,7 @@ MonoBehaviour:
   maxDuration: 10
   delayToNextWaypoint: 2
   collisionDmg: 3
+  destoryAfterCollison: 0
 --- !u!114 &4852810512288785067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,9 +179,9 @@ MonoBehaviour:
   shootsToCreate: 300
   skillsequenze:
   - delay: 0
-    skill: {fileID: 8303773862655550137, guid: 5bbc9d8f3f2fbea4db5f1352ac0d7fcd, type: 3}
+    skill: {fileID: 7109026622726797419, guid: 3667c437ddd13064485fda7b6df20e9d, type: 3}
   - delay: 0
-    skill: {fileID: 1979848854470992781, guid: 5574049b073ce584893b98943226ec05, type: 3}
+    skill: {fileID: 7109026622726797419, guid: 3667c437ddd13064485fda7b6df20e9d, type: 3}
   additionalDmg: 0
   dmgModifier: 0
 --- !u!1 &674389398985417921
