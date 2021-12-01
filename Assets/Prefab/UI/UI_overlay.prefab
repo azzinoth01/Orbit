@@ -632,7 +632,7 @@ RectTransform:
   m_GameObject: {fileID: 4433845980132732524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
   m_Children:
   - {fileID: 4433845979614326887}
   - {fileID: 6849030914093944081}
@@ -680,10 +680,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 16
+  m_ReferencePixelsPerUnit: 10
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 480, y: 270}
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -793,6 +793,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4433845980132732520}
     m_Modifications:
+    - target: {fileID: 8454140774447175246, guid: aae74accd2826a846818b05118b2b776, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454140774447175246, guid: aae74accd2826a846818b05118b2b776, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8454140775124420928, guid: aae74accd2826a846818b05118b2b776, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

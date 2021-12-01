@@ -45,7 +45,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private bool onGlobalCooldown;
     private bool isDoging;
 
-    public List<GameObject> chargeBalls;
+    // public List<GameObject> chargeBalls;
+    public List<Sprite> chargeSprites;
+    public Image chargeUI;
 
     public GameObject waypointPrefab;
     private GameObject waypoint;
@@ -272,8 +274,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     private IEnumerator chargeFill(float cooldown) {
         yield return new WaitForSeconds(cooldown);
-        dogeVisual(false);
+
         dogeCharges = dogeCharges + 1;
+        dogeVisual(false);
         if (dogeCharges != maxDogeCharges) {
             chargeFillCo = StartCoroutine(chargeFill(cooldown));
         }
@@ -323,15 +326,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
 
             }
-            Debug.Log("current pos " + transform.position.ToString());
-            Debug.Log("ziel pos " + point.ToString());
+            //Debug.Log("current pos " + transform.position.ToString());
+            //Debug.Log("ziel pos " + point.ToString());
             waypoint = Instantiate(waypointPrefab, point, Quaternion.identity, transform.parent);
 
             Vector3 direction = (waypoint.transform.position - transform.position);
-            Debug.Log(direction);
-            Debug.Log(direction.normalized);
+            //Debug.Log(direction);
+            //Debug.Log(direction.normalized);
             body.velocity = direction.normalized * dogeSpeed;
-            Debug.Log(body.velocity);
+            //Debug.Log(body.velocity);
+
             dogeCharges = dogeCharges - 1;
             dogeVisual(true);
             onGlobalCooldown = true;
@@ -386,10 +390,25 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     private void dogeVisual(bool used) {
         if (used == true) {
-            chargeBalls[dogeCharges].GetComponent<Image>().color = Color.red;
+
+            chargeUI.sprite = chargeSprites[dogeCharges];
+            if (dogeCharges == 0) {
+                chargeUI.color = new Color(chargeUI.color.r, chargeUI.color.g, chargeUI.color.b, 0);
+            }
+            else {
+                chargeUI.color = new Color(chargeUI.color.r, chargeUI.color.g, chargeUI.color.b, 1);
+            }
+            //chargeBalls[dogeCharges].GetComponent<Image>().color = Color.red;
         }
         else {
-            chargeBalls[dogeCharges].GetComponent<Image>().color = Color.green;
+            chargeUI.sprite = chargeSprites[dogeCharges];
+            if (dogeCharges == 0) {
+                chargeUI.color = new Color(chargeUI.color.r, chargeUI.color.g, chargeUI.color.b, 0);
+            }
+            else {
+                chargeUI.color = new Color(chargeUI.color.r, chargeUI.color.g, chargeUI.color.b, 1);
+            }
+            //chargeBalls[dogeCharges].GetComponent<Image>().color = Color.green;
         }
     }
 

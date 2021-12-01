@@ -170,10 +170,12 @@ MonoBehaviour:
   maxDogeDuration: 0.5
   dogeCooldown: 5
   globalCooldown: 1
-  chargeBalls:
+  chargeSprites:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -3555027508187961589, guid: 9f18e07f03ec8fb478b415b8541284ef, type: 3}
+  - {fileID: -4011386316925036106, guid: b59daa022fad6c348a89e39c49142fc7, type: 3}
+  - {fileID: -6364959523216148980, guid: 29c670128f438c246968f3e987e9076d, type: 3}
+  chargeUI: {fileID: 0}
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
 --- !u!95 &1431146546
 Animator:
