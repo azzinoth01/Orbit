@@ -160,8 +160,10 @@ MonoBehaviour:
   antrieb: {fileID: 1385949119}
   additionalDmg: 0
   dmgModifier: 1
-  immunityTimeAfterHit: 0
-  immunityTimeAfterDoge: 0
+  immunityFlickerRate: 4
+  maxFlickerRange: 0
+  immunityTimeAfterHit: 3
+  immunityTimeAfterDoge: 2
   dogeCharges: 3
   dogeRange: 5
   dogeSpeed: 50
