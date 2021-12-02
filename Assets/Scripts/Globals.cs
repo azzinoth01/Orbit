@@ -10,7 +10,7 @@ public static class Globals
     public static Pause_handler pauseHandler;
     public static GameObject player;
     public static List<GameObject> bulletPool;
-
+    public static Menu_handler menuHandler;
 
 
 }
