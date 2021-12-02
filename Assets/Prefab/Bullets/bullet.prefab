@@ -146,6 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints:
   - {x: 10, y: 0}
-  speed: 10
+  speed: 15
   body: {fileID: 2348903414317952636}
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
