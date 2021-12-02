@@ -159,10 +159,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         if (context.started) {
             //    Debug.Log(Globals.pause);
             if (Globals.pause == true) {
-                Globals.pauseHandler.setResume();
+                Globals.menuHandler.setResume();
             }
             else {
-                Globals.pauseHandler.setPause();
+                Globals.menuHandler.setPause();
             }
         }
     }
@@ -261,6 +261,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (health <= 0) {
             Destroy(gameObject);
+            Globals.menuHandler.setGameOver();
             //Globals.gameoverHandler.gameOver();
         }
         isImmun = true;
@@ -272,6 +273,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         //controll.Disable();
         controll.Dispose();
 
+    }
+
+    public void clearControlls() {
+        controll.Dispose();
     }
 
     private IEnumerator chargeFill(float cooldown) {
@@ -293,7 +298,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     private void doge() {
-        if (dogeCharges > 0 && onGlobalCooldown == false && isDoging == false) {
+        if (dogeCharges > 0 && onGlobalCooldown == false && isDoging == false && impulse != Vector2.zero) {
             isDoging = true;
             isImmun = true;
             gameObject.layer = 13; // immunity layer
