@@ -7,6 +7,13 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 {
     public int health;
+    public int currentHealth;
+    public Image healthbar;
+
+    public Color healthbarAbove60;
+    public Color healthbarAbove30;
+    public Color healthbarBelow30;
+
     public Rigidbody2D body;
 
     public float force;
@@ -200,11 +207,15 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         shooting = false;
         isDoging = false;
         isImmun = false;
+        currentHealth = health;
         StartCoroutine(shootingHandler());
         StartCoroutine(moveHandler());
+        StartCoroutine(smoothHealthDrop());
         maxDogeCharges = dogeCharges;
         flickerDirection = -1;
         sp = GetComponent<SpriteRenderer>();
+
+
     }
 
 
@@ -251,15 +262,51 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
 
+    public IEnumerator smoothHealthDrop() {
 
+        while (true) {
+            float prozentValue = (float)currentHealth / (float)health;
+            float currentFillProzent = healthbar.fillAmount;
+
+            //Debug.Log("% Value " + prozentValue.ToString());
+            //Debug.Log("Fill Value " + currentFillProzent.ToString());
+            if (prozentValue <= currentFillProzent) {
+
+                float toSet = currentFillProzent - 0.01f;
+                if (toSet < prozentValue) {
+                    toSet = prozentValue;
+                }
+                healthbar.fillAmount = toSet;
+            }
+            else if (prozentValue >= currentFillProzent) {
+                float toSet = currentFillProzent + 0.01f;
+                if (toSet > prozentValue) {
+                    toSet = prozentValue;
+                }
+                healthbar.fillAmount = toSet;
+            }
+
+            if (healthbar.fillAmount >= 0.6f) {
+                healthbar.color = healthbarAbove60;
+            }
+            else if (healthbar.fillAmount >= 0.3f) {
+                healthbar.color = healthbarAbove30;
+            }
+            else {
+                healthbar.color = healthbarBelow30;
+            }
+
+            yield return null;
+        }
+    }
 
     public void takeDmg(int dmg) {
         if (isImmun == true) {
             return;
         }
-        health = health - dmg;
+        currentHealth = currentHealth - dmg;
 
-        if (health <= 0) {
+        if (currentHealth <= 0) {
             Destroy(gameObject);
             Globals.menuHandler.setGameOver();
             //Globals.gameoverHandler.gameOver();

@@ -140,6 +140,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  currentHealth: 0
+  healthbar: {fileID: 0}
+  healthbarAbove60: {r: 0.27450982, g: 0.5647059, b: 0.05882353, a: 1}
+  healthbarAbove30: {r: 0.9254902, g: 0.78039217, b: 0.20392157, a: 1}
+  healthbarBelow30: {r: 0.3647059, g: 0.08235294, b: 0, a: 1}
   body: {fileID: 1580844076}
   force: 15
   maxSpeed: 12
@@ -863,7 +868,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 72987e4bc577c4641bca3401db7bc946, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cda487b460449574daebe46188fca890, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
