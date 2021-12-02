@@ -124,6 +124,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             impulse = impulse - (Vector2.right * force);
             anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
             antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
+
+
         }
     }
 
