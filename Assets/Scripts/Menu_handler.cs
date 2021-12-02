@@ -22,6 +22,7 @@ public class Menu_handler : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject pauseUI;
 
+
     private void Awake() {
         Globals.menuHandler = this;
     }
