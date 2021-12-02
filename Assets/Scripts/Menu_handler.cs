@@ -20,8 +20,9 @@ public class Menu_handler : MonoBehaviour
     public GameObject shipMenuUI;
     public GameObject levelFinishedUI;
     public GameObject gameOverUI;
+    public GameObject pauseUI;
 
-    private void Start() {
+    private void Awake() {
         Globals.menuHandler = this;
     }
     public void onClickShipEditor() {
@@ -49,6 +50,7 @@ public class Menu_handler : MonoBehaviour
 
 
     public void onClickNextLeve(int backupSeneIndex) {
+
         int nextLevelIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
         if (SceneManager.sceneCountInBuildSettings <= nextLevelIndex) {
@@ -61,9 +63,51 @@ public class Menu_handler : MonoBehaviour
 
     }
     public void onClickShipMenu(int sceneIndex) {
+
         SceneManager.LoadScene(sceneIndex);
 
     }
+    public void onClickTryAgain() {
 
 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
+    private void levelChanges() {
+        if (Globals.pause == true) {
+            Debug.Log("pause stopped");
+            setResume();
+        }
+        Globals.bulletPool.Clear();
+        try {
+            Globals.player.GetComponent<Player>().clearControlls();
+        }
+        catch {
+
+        }
+    }
+
+    public void setPause() {
+        Globals.pause = true;
+        Time.timeScale = 0;
+        pauseUI.SetActive(true);
+    }
+
+    public void setResume() {
+        Globals.pause = false;
+        Time.timeScale = 1;
+        pauseUI.SetActive(false);
+    }
+
+    public void setGameOver() {
+        Globals.pause = false;
+        Time.timeScale = 1;
+        gameOverUI.SetActive(true);
+        levelChanges();
+    }
+    public void setLevelFinish() {
+        levelFinishedUI.SetActive(true);
+        levelChanges();
+    }
 }

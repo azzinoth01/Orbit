@@ -352,5 +352,6 @@ public class Enemy : MonoBehaviour
         foreach (GameObject g in waypointObject) {
             Destroy(g);
         }
+        Globals.currentWinCondition.enemyKilled();
     }
 }
