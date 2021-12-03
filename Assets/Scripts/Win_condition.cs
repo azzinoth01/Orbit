@@ -30,9 +30,12 @@ public class Win_condition : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+
         if (Globals.player == collision.gameObject) {
-            Globals.menuHandler.levelFinishedUI.SetActive(true);
-            Destroy(gameObject);
+            Globals.menuHandler.setLevelFinish();
+            // Destroy(gameObject);
+            // Globals.player.GetComponent<Player>().disableControlls = true;
         }
     }
+
 }

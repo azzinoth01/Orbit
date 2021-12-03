@@ -77,6 +77,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
 
+
     private void Awake() {
         Globals.player = gameObject;
 
@@ -93,6 +94,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     public void OnMove_down(InputAction.CallbackContext context) {
 
+
+
         if (context.started) {
             impulse = impulse + (Vector2.down * force);
             anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
@@ -103,7 +106,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
             antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
         }
-
+        Debug.Log("move down");
     }
 
     public void OnMove_left(InputAction.CallbackContext context) {
@@ -180,8 +183,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     void Start() {
         if (controll == null) {
             controll = new Controlls();
-            controll.Enable();
+            controll.bullet_hell.Enable();
             controll.bullet_hell.SetCallbacks(this);
+
+
         }
         impulse = new Vector2(0, 0);
 
@@ -318,12 +323,20 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     private void OnDestroy() {
         //controll.Disable();
-        controll.Dispose();
 
+        //  controll.Dispose();
+        //controll.Dispose();
+        controll.Dispose();
     }
 
+
     public void clearControlls() {
+
+        // controll.Dispose();
+        //ontroll.Dispose();
+        //Destroy(GetComponent<Player>());
         controll.Dispose();
+        // controll.Disable();
     }
 
     private IEnumerator chargeFill(float cooldown) {

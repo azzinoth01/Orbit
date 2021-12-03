@@ -23,6 +23,10 @@ public class Menu_handler : MonoBehaviour
     public GameObject pauseUI;
 
 
+
+
+
+
     private void Awake() {
         Globals.menuHandler = this;
     }
@@ -81,12 +85,14 @@ public class Menu_handler : MonoBehaviour
             setResume();
         }
         Globals.bulletPool.Clear();
-        try {
-            Globals.player.GetComponent<Player>().clearControlls();
-        }
-        catch {
+        //try {
 
-        }
+        Player p = Globals.player.GetComponent<Player>();
+        p.clearControlls();
+        //}
+        //catch {
+
+        //}
     }
 
     public void setPause() {
@@ -108,7 +114,8 @@ public class Menu_handler : MonoBehaviour
         levelChanges();
     }
     public void setLevelFinish() {
-        levelFinishedUI.SetActive(true);
         levelChanges();
+        levelFinishedUI.SetActive(true);
+
     }
 }

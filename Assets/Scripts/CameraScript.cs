@@ -6,7 +6,7 @@ public class CameraScript : MonoBehaviour
 {
 
     private Rigidbody2D body;
-    private Player player;
+    public Player player;
     private float playerMaxSpeed;
     private Vector2 offset;
     public float offsetSpeed;

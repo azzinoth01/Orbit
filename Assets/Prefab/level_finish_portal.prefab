@@ -123,5 +123,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemysToKill: 10
-  boxcollider: {fileID: 0}
-  sp: {fileID: 0}
+  boxcollider: {fileID: 3274754410959085493}
+  sp: {fileID: 3274754410959085495}
