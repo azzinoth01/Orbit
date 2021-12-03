@@ -198,6 +198,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             controll.bullet_hell.SetCallbacks(this);
 
 
+
         }
         impulse = new Vector2(0, 0);
 
