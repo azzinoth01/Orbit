@@ -6,13 +6,22 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 {
-    public int health;
-    public int currentHealth;
+    public float health;
+    private float currentHealth;
     public Image healthbar;
 
     public Color healthbarAbove60;
     public Color healthbarAbove30;
     public Color healthbarBelow30;
+
+    public float maxschield;
+    public float currentschield;
+    public Image schieldbar;
+    public float schieldbarStepValue;
+
+    public float schieldRefreshRate;
+    public float schieldRefreshValue;
+
 
     public Rigidbody2D body;
 
@@ -69,6 +78,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
 
+
+
     public Vector2 Impulse {
         get {
             return impulse;
@@ -106,7 +117,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
             antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
         }
-        Debug.Log("move down");
+        //Debug.Log("move down");
     }
 
     public void OnMove_left(InputAction.CallbackContext context) {
@@ -213,9 +224,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         isDoging = false;
         isImmun = false;
         currentHealth = health;
+        //currentschield = maxschield;
         StartCoroutine(shootingHandler());
         StartCoroutine(moveHandler());
         StartCoroutine(smoothHealthDrop());
+        StartCoroutine(smoothSchieldDrop());
+        StartCoroutine(schieldRefresh(schieldRefreshRate));
         maxDogeCharges = dogeCharges;
         flickerDirection = -1;
         sp = GetComponent<SpriteRenderer>();
@@ -270,7 +284,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public IEnumerator smoothHealthDrop() {
 
         while (true) {
-            float prozentValue = (float)currentHealth / (float)health;
+            float prozentValue = currentHealth / health;
             float currentFillProzent = healthbar.fillAmount;
 
             //Debug.Log("% Value " + prozentValue.ToString());
@@ -305,11 +319,70 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
 
+    public IEnumerator smoothSchieldDrop() {
+
+        while (true) {
+
+            float prozentValue = currentschield / maxschield;
+            float currentFillProzent = schieldbar.fillAmount;
+
+            if (prozentValue <= currentFillProzent) {
+                float toSet = currentFillProzent - schieldbarStepValue;
+                if (toSet < prozentValue) {
+                    toSet = prozentValue;
+                }
+                schieldbar.fillAmount = toSet;
+            }
+            else if (prozentValue >= currentFillProzent) {
+                float toSet = currentFillProzent + schieldbarStepValue;
+                if (toSet > prozentValue) {
+                    toSet = prozentValue;
+                }
+                schieldbar.fillAmount = toSet;
+            }
+
+            if (schieldbar.fillAmount <= 0) {
+                StartCoroutine(schieldRefresh(schieldRefreshRate));
+            }
+
+            yield return null;
+        }
+    }
+
+    public IEnumerator schieldRefresh(float wait) {
+
+
+
+        yield return new WaitForSeconds(wait);
+
+        currentschield = currentschield + schieldRefreshValue;
+
+        if (currentschield >= maxschield) {
+            currentschield = maxschield;
+        }
+        else {
+            StartCoroutine(schieldRefresh(wait));
+        }
+
+
+    }
+
     public void takeDmg(int dmg) {
         if (isImmun == true) {
             return;
         }
-        currentHealth = currentHealth - dmg;
+
+        if (schieldbar.fillAmount >= 1) {
+            currentschield = 0;
+
+            // verschoben damit erst startet sobald anzeige wirklich auf 0 gedroped ist
+            //StartCoroutine(schieldRefresh(schieldRefreshRate));
+
+        }
+        else {
+            currentHealth = currentHealth - dmg;
+        }
+
 
         if (currentHealth <= 0) {
             Destroy(gameObject);
@@ -322,21 +395,15 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     private void OnDestroy() {
-        //controll.Disable();
 
-        //  controll.Dispose();
-        //controll.Dispose();
         controll.Dispose();
     }
 
 
     public void clearControlls() {
 
-        // controll.Dispose();
-        //ontroll.Dispose();
-        //Destroy(GetComponent<Player>());
         controll.Dispose();
-        // controll.Disable();
+
     }
 
     private IEnumerator chargeFill(float cooldown) {
