@@ -341,6 +341,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 schieldbar.fillAmount = toSet;
             }
 
+            if (schieldbar.fillAmount <= 0) {
+                StartCoroutine(schieldRefresh(schieldRefreshRate));
+            }
 
             yield return null;
         }
@@ -369,9 +372,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             return;
         }
 
-        if (currentschield == maxschield) {
+        if (schieldbar.fillAmount >= 1) {
             currentschield = 0;
-            StartCoroutine(schieldRefresh(schieldRefreshRate));
+
+            // verschoben damit erst startet sobald anzeige wirklich auf 0 gedroped ist
+            //StartCoroutine(schieldRefresh(schieldRefreshRate));
 
         }
         else {
