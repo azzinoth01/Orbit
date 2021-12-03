@@ -140,11 +140,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  currentHealth: 0
   healthbar: {fileID: 0}
   healthbarAbove60: {r: 0.27450982, g: 0.5647059, b: 0.05882353, a: 1}
   healthbarAbove30: {r: 0.9254902, g: 0.78039217, b: 0.20392157, a: 1}
   healthbarBelow30: {r: 0.3647059, g: 0.08235294, b: 0, a: 1}
+  maxschield: 100
+  currentschield: 0
+  schieldbar: {fileID: 0}
+  schieldbarStepValue: 0.01
+  schieldRefreshRate: 0.1
+  schieldRefreshValue: 10
   body: {fileID: 1580844076}
   force: 15
   maxSpeed: 12
