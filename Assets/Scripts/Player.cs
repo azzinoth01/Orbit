@@ -357,9 +357,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         if (currentschield >= maxschield) {
             currentschield = maxschield;
         }
+        else {
+            StartCoroutine(schieldRefresh(wait));
+        }
 
 
-        StartCoroutine(schieldRefresh(wait));
     }
 
     public void takeDmg(int dmg) {
@@ -367,15 +369,15 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             return;
         }
 
-
-        currentschield = currentschield - dmg;
-
-        if (currentschield < 0) {
-            currentHealth = currentHealth - currentschield;
+        if (currentschield == maxschield) {
             currentschield = 0;
+            StartCoroutine(schieldRefresh(schieldRefreshRate));
+
+        }
+        else {
+            currentHealth = currentHealth - dmg;
         }
 
-        //currentHealth = currentHealth - dmg;
 
         if (currentHealth <= 0) {
             Destroy(gameObject);
