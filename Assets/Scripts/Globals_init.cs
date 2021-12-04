@@ -11,6 +11,9 @@ public class Globals_init : MonoBehaviour
         if (Globals.bulletPool == null) {
             Globals.bulletPool = new List<GameObject>();
         }
+        if (Globals.spawnerListe == null) {
+            Globals.spawnerListe = new List<Enemy_Spawner>();
+        }
 
     }
 
