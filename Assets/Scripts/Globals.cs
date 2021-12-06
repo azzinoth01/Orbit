@@ -7,7 +7,7 @@ public static class Globals
     public static bool pause;
     public static Camera currentCamera;
     public static GameObject player;
-    public static List<GameObject> bulletPool;
+    public static List<Skill> bulletPool;
     public static Menu_handler menuHandler;
     public static Win_condition currentWinCondition;
     public static List<Enemy_Spawner> spawnerListe;

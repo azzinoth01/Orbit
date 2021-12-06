@@ -11,6 +11,18 @@ public class Skill : MonoBehaviour
     private bool isRunning;
     private Coroutine timer;
 
+    private float timestamp;
+
+    public float Timestamp {
+        get {
+            return timestamp;
+        }
+
+        set {
+            timestamp = value;
+        }
+    }
+
     private void Awake() {
         int i = 0;
 
@@ -24,6 +36,8 @@ public class Skill : MonoBehaviour
 
             b.BulletScript = bullet.GetComponent<Bullet>();
             i = i + 1;
+
+
         }
     }
 
@@ -55,14 +69,14 @@ public class Skill : MonoBehaviour
     }
 
     private void OnDisable() {
-        Globals.bulletPool.Add(gameObject);
+        Globals.bulletPool.Add(this);
         foreach (BulletInfo b in bulletInfoList) {
             b.resetModifiers();
         }
         if (timer != null) {
             StopCoroutine(timer);
         }
-
+        timestamp = Time.time;
     }
 
     private void OnEnable() {

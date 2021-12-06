@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 674389398441108949}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 674389398985417920}
   m_RootOrder: 0
@@ -124,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 4, y: 4}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   maxSpeed: 10
   loop: 1
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
-  maxDuration: 10
+  maxDuration: 0
   delayToNextWaypoint: 2
   collisionDmg: 3
   destoryAfterCollison: 0
@@ -176,12 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a5d0bd192e47543b44d049c049f146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootsToCreate: 300
+  shootsToCreate: 20
   skillsequenze:
-  - delay: 0
-    skill: {fileID: 7109026622726797419, guid: 3667c437ddd13064485fda7b6df20e9d, type: 3}
-  - delay: 0
-    skill: {fileID: 7109026622726797419, guid: 3667c437ddd13064485fda7b6df20e9d, type: 3}
+  - delay: 0.5
+    skill: {fileID: 8983357819854496339, guid: c28783ab10096734d914c2845e37f3fc, type: 3}
   additionalDmg: 0
   dmgModifier: 0
 --- !u!1 &674389398985417921
@@ -211,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674389398985417921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 674389398441108936}

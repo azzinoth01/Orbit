@@ -9,7 +9,7 @@ public class Globals_init : MonoBehaviour
         Globals.pause = false;
 
         if (Globals.bulletPool == null) {
-            Globals.bulletPool = new List<GameObject>();
+            Globals.bulletPool = new List<Skill>();
         }
         if (Globals.spawnerListe == null) {
             Globals.spawnerListe = new List<Enemy_Spawner>();

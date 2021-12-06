@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Enemy_skills : MonoBehaviour
@@ -59,44 +60,58 @@ public class Enemy_skills : MonoBehaviour
 
 
     private void preCreateSkill() {
-        for (int i = 0; i < shootsToCreate;) {
-
-            GameObject skill = activateSkill(true);
-            skill.SetActive(false);
-
-
-            i = i + 1;
+        bool needToCreate = false;
+        foreach (Skillsequenze s in skillsequenze) {
+            if (Globals.bulletPool.Count(x => x.gameObject.name == s.Skill.name && x.gameObject.activeSelf == false) < (shootsToCreate / skillsequenze.Count)) {
+                needToCreate = true;
+                break;
+            }
         }
+
+
+        if (needToCreate == true) {
+            for (int i = 0; i < shootsToCreate;) {
+
+                GameObject skill = activateSkill(true);
+                skill.SetActive(false);
+
+
+                i = i + 1;
+            }
+        }
+
     }
 
     private GameObject activateSkill(bool preCreation) {
-        GameObject skill;
+        Skill skill;
+        GameObject skillGameObject;
         if (preCreation == false) {
-            skill = Globals.bulletPool.Find(x => x.name == nextSkill.name && x.activeSelf == false);
+            skill = Globals.bulletPool.Find(x => x.gameObject.name == nextSkill.name && x.gameObject.activeSelf == false);
             if (skill == null) {
-                skill = Instantiate(nextSkill, transform.position, Quaternion.identity);
-                skill.name = nextSkill.name;
-                skill.layer = gameObject.layer - 1; // enemy bullet layer ist immer enemy layer -1
-                skill.GetComponent<Skill>().layerChange();
-                skill.GetComponent<Skill>().setDmgModifiers(additionalDmg, dmgModifier);
+                skillGameObject = Instantiate(nextSkill, transform.position, Quaternion.identity);
+                skillGameObject.name = nextSkill.name;
+                skillGameObject.layer = (int)Layer_enum.enemy_bullets; // enemy bullet layer ist immer enemy layer -1
+
+                skillGameObject.GetComponent<Skill>().layerChange();
+                skillGameObject.GetComponent<Skill>().setDmgModifiers(additionalDmg, dmgModifier);
                 Debug.Log("additional skill created");
             }
             else {
                 Globals.bulletPool.Remove(skill);
                 skill.transform.position = transform.position;
                 skill.transform.rotation = Quaternion.identity;
-                skill.layer = gameObject.layer - 1;
-                skill.GetComponent<Skill>().setDmgModifiers(additionalDmg, dmgModifier);
-                skill.SetActive(true);
-
+                skill.gameObject.layer = (int)Layer_enum.enemy_bullets;
+                skill.setDmgModifiers(additionalDmg, dmgModifier);
+                skill.gameObject.SetActive(true);
+                skillGameObject = skill.gameObject;
 
             }
 
         }
         else {
-            skill = Instantiate(nextSkill);
-            skill.name = nextSkill.name;
-            skill.layer = gameObject.layer - 1;
+            skillGameObject = Instantiate(nextSkill);
+            skillGameObject.name = nextSkill.name;
+            skillGameObject.layer = (int)Layer_enum.enemy_bullets;
 
         }
         skillIndex = skillIndex + 1;
@@ -108,7 +123,7 @@ public class Enemy_skills : MonoBehaviour
         nextSkill = skillsequenze[skillIndex].Skill;
         nextSkillDelay = skillsequenze[skillIndex].Delay;
 
-        return skill;
+        return skillGameObject;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -130,6 +145,10 @@ public class Enemy_skills : MonoBehaviour
         allwoDisable = false;
 
         StartCoroutine(canDisableTimer(1));
+    }
+
+    private void OnDisable() {
+
     }
 
     private IEnumerator canDisableTimer(float wait) {

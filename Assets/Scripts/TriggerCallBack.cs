@@ -16,6 +16,7 @@ public class TriggerCallBack : MonoBehaviour
                 foreach (Enemy_Spawner e in Globals.spawnerListe) {
                     e.checkSpawnTrigger(gameObject);
                 }
+                Destroy(gameObject);
             }
         }
     }

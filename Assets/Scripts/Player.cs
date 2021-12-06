@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour, Controlls.IBullet_hellActions
@@ -77,9 +78,6 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private SpriteRenderer sp;
 
 
-
-
-
     public Vector2 Impulse {
         get {
             return impulse;
@@ -95,7 +93,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
 
-    public void OnCharge(InputAction.CallbackContext context) {
+    public void OnDoge(InputAction.CallbackContext context) {
         //throw new System.NotImplementedException();
 
         if (context.started) {
@@ -189,11 +187,15 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
 
-
     // Start is called before the first frame update
     void Start() {
+
         if (controll == null) {
             controll = new Controlls();
+
+            Rebinding_menu rebind = new Rebinding_menu();
+            controll = rebind.loadRebinding(controll);
+
             controll.bullet_hell.Enable();
             controll.bullet_hell.SetCallbacks(this);
 
@@ -219,11 +221,17 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
 
     }
+
+
+
+
+
     private void OnEnable() {
         onGlobalCooldown = false;
         shooting = false;
         isDoging = false;
         isImmun = false;
+
         currentHealth = health;
         //currentschield = maxschield;
         StartCoroutine(shootingHandler());
@@ -231,6 +239,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         StartCoroutine(smoothHealthDrop());
         StartCoroutine(smoothSchieldDrop());
         StartCoroutine(schieldRefresh(schieldRefreshRate));
+
         maxDogeCharges = dogeCharges;
         flickerDirection = -1;
         sp = GetComponent<SpriteRenderer>();
@@ -252,6 +261,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
 
     }
+
+
 
     private IEnumerator moveHandler() {
         while (true) {
@@ -391,7 +402,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             //Globals.gameoverHandler.gameOver();
         }
         isImmun = true;
-        gameObject.layer = 13; // immunity layer
+        gameObject.layer = (int)Layer_enum.player_immunity; // immunity layer
         immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterHit));
     }
 
@@ -429,7 +440,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         if (dogeCharges > 0 && onGlobalCooldown == false && isDoging == false && impulse != Vector2.zero) {
             isDoging = true;
             isImmun = true;
-            gameObject.layer = 13; // immunity layer
+            gameObject.layer = (int)Layer_enum.player_immunity; // immunity layer
 
 
 
@@ -504,7 +515,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         yield return new WaitForSeconds(time);
         isImmun = false;
-        gameObject.layer = 7; //player layer
+        gameObject.layer = (int)Layer_enum.player; //player layer
     }
 
 
@@ -563,5 +574,6 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterDoge));
         }
     }
+
 
 }

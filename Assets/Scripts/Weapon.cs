@@ -66,28 +66,30 @@ public class Weapon : MonoBehaviour
 
     public GameObject activateSkill(bool preCreation) {
         GameObject g;
+        Skill skillObject;
         if (preCreation == false) {
-            g = Globals.bulletPool.Find(x => x.name == skill.name && x.activeSelf == false);
-            if (g == null) {
+            skillObject = Globals.bulletPool.Find(x => x.gameObject.name == skill.name && x.gameObject.activeSelf == false);
+            if (skillObject == null) {
                 g = Instantiate(skill, transform.position, transform.rotation);
                 g.name = skill.name;
-                g.layer = 6; // player bullet layer ist layer 6
+                g.layer = (int)Layer_enum.player_bullets;
                 g.GetComponent<Skill>().layerChange();
                 Debug.Log("additional skill created");
             }
             else {
-                Globals.bulletPool.Remove(g);
-                g.transform.position = transform.position;
-                g.transform.rotation = transform.rotation;
-                g.layer = 6;
-                g.SetActive(true);
+                Globals.bulletPool.Remove(skillObject);
+                skillObject.transform.position = transform.position;
+                skillObject.transform.rotation = transform.rotation;
+                skillObject.gameObject.layer = (int)Layer_enum.player_bullets;
+                skillObject.gameObject.SetActive(true);
+                g = skillObject.gameObject;
             }
 
         }
         else {
             g = Instantiate(skill);
             g.name = skill.name;
-            g.layer = 6;
+            g.layer = (int)Layer_enum.player_bullets;
 
 
 

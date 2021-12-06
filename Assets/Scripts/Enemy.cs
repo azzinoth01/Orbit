@@ -41,7 +41,17 @@ public class Enemy : MonoBehaviour
     private bool maxDurationReached;
 
 
+    private Enemy_Spawner spawnerCallback;
 
+    public Enemy_Spawner SpawnerCallback {
+        get {
+            return spawnerCallback;
+        }
+
+        set {
+            spawnerCallback = value;
+        }
+    }
 
 
     // Start is called before the first frame update
@@ -349,9 +359,21 @@ public class Enemy : MonoBehaviour
     }
 
     private void OnDestroy() {
-        foreach (GameObject g in waypointObject) {
-            Destroy(g);
+        try {
+            foreach (GameObject g in waypointObject) {
+                Destroy(g);
+            }
         }
-        Globals.currentWinCondition.enemyKilled();
+        catch {
+
+        }
+
+        if (Globals.currentWinCondition != null) {
+            Globals.currentWinCondition.enemyKilled();
+        }
+
+        if (spawnerCallback != null) {
+            spawnerCallback.spawnKilled();
+        }
     }
 }
