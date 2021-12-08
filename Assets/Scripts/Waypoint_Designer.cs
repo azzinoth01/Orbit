@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+/// <summary>
+/// classe die hilf den Gamedesigner Wegpunktliste zu erzeugen
+/// </summary>
 public class Waypoint_Designer : MonoBehaviour
 {
 
@@ -21,7 +25,11 @@ public class Waypoint_Designer : MonoBehaviour
 
     public List<GameObject> waypointList;
 
-    // Start is called before the first frame update
+
+
+    /// <summary>
+    /// setzt die Vectoren in den Line Render um die Wegpunkt verbindung visuell anzuzeigen
+    /// </summary>
     void Start() {
         line.positionCount = waypoints.Count + 1;
 
@@ -38,7 +46,10 @@ public class Waypoint_Designer : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// plaziert die Wegpunkte auf den Screen, wenn linker Mousebutton gelickt wird
+    /// beim rechten Mousbutton klick wird das setzen der Wegpunkte deaktiviert werden
+    /// </summary>
     void Update() {
         if (Globals.pause == true) {
             return;
@@ -65,6 +76,9 @@ public class Waypoint_Designer : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// aktiviert die Wegpunkt setzung
+    /// </summary>
     [ContextMenu("Set Waypoints on Screen")]
     public void paintWayoints() {
 

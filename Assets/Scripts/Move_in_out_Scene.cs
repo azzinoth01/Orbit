@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// classe die sich drum kümmert, dass enemys aus den Spielfeld rein und raus bewegt
+/// </summary>
 public class Move_in_out_Scene : MonoBehaviour
 {
     public List<Vector2> moveInWaypoints;
@@ -23,7 +27,10 @@ public class Move_in_out_Scene : MonoBehaviour
     private int waypointIndex;
     private bool moveIn;
 
-    // Start is called before the first frame update
+
+    /// <summary>
+    /// erzeugt Wegpunkte um Gegner in die Scene rein und raus moven zu lassen
+    /// </summary>
     void Start() {
         waypointInObjects = new List<GameObject>();
         waypointOutObjects = new List<GameObject>();
@@ -45,7 +52,9 @@ public class Move_in_out_Scene : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// führt das move in und auch das move out aus
+    /// </summary>
     void Update() {
 
         if (Globals.pause == true) {
@@ -57,6 +66,11 @@ public class Move_in_out_Scene : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// beschreibt wie der enemy in die scene sich reinbewegt anhand der Wegpunkten und rausbewegt
+    /// und startet das zersören des enemys, wenn der letzte move out punkt getroffen wurde
+    /// </summary>
     private void move() {
 
         if (moveIn == true) {
@@ -102,6 +116,9 @@ public class Move_in_out_Scene : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// startet das move out
+    /// </summary>
     public void startMoveOut() {
         //Debug.Log("startet Move out");
         waypointIndex = 0;
@@ -110,8 +127,11 @@ public class Move_in_out_Scene : MonoBehaviour
 
 
     }
-
-    // destory in corutine um rechenleistung beim destroyen zu sparen
+    /// <summary>
+    /// corutine um die enemys zu zerstören
+    /// destory in corutine um rechenleistung beim destroyen zu sparen
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator startDestroy() {
 
         foreach (GameObject g in waypointInObjects) {
@@ -126,6 +146,11 @@ public class Move_in_out_Scene : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// erzeugt die Wegpunkte an der sich der enemy bewegt
+    /// </summary>
+    /// <param name="v2"> position der Wegpunkte</param>
+    /// <returns> Wegpunkt der erzeugt wurde</returns>
     private GameObject createNextWaypoint(Vector2 v2) {
         GameObject g = Instantiate(waypointPrefab, transform.parent);
         g.transform.localPosition = v2;
@@ -135,6 +160,11 @@ public class Move_in_out_Scene : MonoBehaviour
         return g;
     }
 
+
+    /// <summary>
+    /// prüft ob ein Wegpunkt getroffen wurde
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision) {
         try {
 
@@ -180,6 +210,9 @@ public class Move_in_out_Scene : MonoBehaviour
 
         }
     }
+    /// <summary>
+    /// zerstört beim zersören des enemys auch die Wegpunkte mit
+    /// </summary>
     private void OnDestroy() {
         foreach (GameObject g in waypointInObjects) {
             Destroy(g);

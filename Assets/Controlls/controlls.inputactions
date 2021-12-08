@@ -11,7 +11,8 @@
                     "id": "bf91b95c-d35e-41fb-ba7b-fea2274f20a4",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "move_left",
@@ -19,7 +20,8 @@
                     "id": "d3695ff6-bb93-4396-89d7-566f19a688fc",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "move_up",
@@ -27,7 +29,8 @@
                     "id": "7669a425-2159-41cf-8e20-4f2179b25804",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "move_down",
@@ -35,7 +38,8 @@
                     "id": "05c8a075-2460-4b8e-a3cf-105675779aa6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "pause_menu",
@@ -43,7 +47,8 @@
                     "id": "82f0b198-e0a7-4278-8de2-262b4a9d0639",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "shoot",
@@ -51,15 +56,17 @@
                     "id": "0b8c52fa-a532-48cc-add5-d8fcf69b0865",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
-                    "name": "charge",
+                    "name": "doge",
                     "type": "Button",
                     "id": "7502b748-3d25-49d0-80e5-e54c60aa5ce0",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -109,8 +116,8 @@
                 },
                 {
                     "name": "",
-                    "id": "e6eb4bb6-d44d-4af7-982e-446ffa64739a",
-                    "path": "<Keyboard>/upArrow",
+                    "id": "75bcca6f-cb44-4c75-8b0c-69c626407f9c",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -120,8 +127,8 @@
                 },
                 {
                     "name": "",
-                    "id": "75bcca6f-cb44-4c75-8b0c-69c626407f9c",
-                    "path": "<Keyboard>/w",
+                    "id": "e6eb4bb6-d44d-4af7-982e-446ffa64739a",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -180,7 +187,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "charge",
+                    "action": "doge",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -191,7 +198,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "charge",
+                    "action": "doge",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

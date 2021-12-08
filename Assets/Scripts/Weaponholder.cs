@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+/// <summary>
+/// classe um die Waffen nach Mouseposition ausrichtet
+/// </summary>
 public class Weaponholder : MonoBehaviour
 {
     private Camera cam;
@@ -15,7 +19,9 @@ public class Weaponholder : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// richtet die Waffen nach Mouseposition aus
+    /// </summary>
     void Update() {
         if (Globals.pause == true) {
             return;
@@ -29,7 +35,6 @@ public class Weaponholder : MonoBehaviour
 
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, angle), rotationSpeed * Time.deltaTime);
-
 
 
 
