@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// container classe die Bullets beschreibt
+/// </summary>
 [Serializable]
 public class BulletInfo
 {
@@ -16,7 +20,9 @@ public class BulletInfo
     private Bullet bulletScript;
     // Start is called before the first frame update
 
-
+    /// <summary>
+    /// standardconstruktor setzt basiswerte
+    /// </summary>
     public BulletInfo() {
         //  Debug.Log("construktor called1");
         //bulletScript = bullet.GetComponent<Bullet>();
@@ -25,6 +31,12 @@ public class BulletInfo
 
 
     }
+    /// <summary>
+    /// construktor um werte zu setzten
+    /// </summary>
+    /// <param name="startRotation"> bestimmt die flugrichtung vom basisobject</param>
+    /// <param name="bulletBaseDmg"> bestimmt bullet base dmg</param>
+    /// <param name="bullet"> bestimmt bullet prefab</param>
     public BulletInfo(float startRotation, int bulletBaseDmg, GameObject bullet) {
         Debug.Log("construktor called");
         this.startRotation = startRotation;
@@ -46,6 +58,9 @@ public class BulletInfo
         }
     }
 
+    /// <summary>
+    /// resetet die Dmg modifier
+    /// </summary>
     public void resetModifiers() {
         addBaseDmg = 0;
         dmgModifier = 1;
@@ -90,6 +105,9 @@ public class BulletInfo
         }
     }
 
+    /// <summary>
+    /// sets den bullet dmg auf der Bullet
+    /// </summary>
     public void setBulletDmg() {
         if (bulletScript != null) {
             bulletScript.BulletDmg = (bulletBaseDmg + addBaseDmg) * dmgModifier;
@@ -97,6 +115,10 @@ public class BulletInfo
 
     }
 
+    /// <summary>
+    /// sets den layer der Bullet
+    /// </summary>
+    /// <param name="layer"> layer in integer</param>
     public void setLayer(int layer) {
         bulletScript.gameObject.layer = layer;
     }

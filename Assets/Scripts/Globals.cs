@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// classe um Globale Variablen zu verwalten
+/// </summary>
 public static class Globals
 {
     public static bool pause;

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// beschreibt die Waffen des Players
+/// </summary>
 public class Weapon : MonoBehaviour
 {
     public GameObject skill;
@@ -17,10 +20,16 @@ public class Weapon : MonoBehaviour
     void Start() {
 
     }
+    /// <summary>
+    /// waffe kann standardmäßig von anfang an schon schießen
+    /// </summary>
     private void OnEnable() {
         canShoot = true;
     }
 
+    /// <summary>
+    /// erzeugt im voraus Skill Objecte damit diese nicht zur laufzeit erzeugt werden müssen
+    /// </summary>
     private void Awake() {
         for (int i = 0; i < shootsToCreate;) {
             GameObject g = activateSkill(true);
@@ -47,12 +56,22 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// delay Timer zwischen den schüssen
+    /// </summary>
+    /// <param name="wait"> zeit zwischen den schüssen in sekunden</param>
+    /// <returns></returns>
     private IEnumerator shootTimer(float wait) {
 
         yield return new WaitForSeconds(wait);
         canShoot = true;
     }
 
+    /// <summary>
+    /// Erzeugung der Skill objecten mit dmg Modifiern, wenn die Waffe schießen kann
+    /// </summary>
+    /// <param name="additionalDmg">erhöhten den schaden der bullet direkt über diesen Wert</param>
+    /// <param name="dmgModifier">nach hinzufügen des additionalDmg modifiers wir der dmg mit diesem Wert multipliziert</param>
     public void shoot(int additionalDmg, float dmgModifier) {
         if (canShoot == true) {
             canShoot = false;
@@ -64,6 +83,13 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    /// <summary>
+    ///  erzeugt Skills und setzt diese auf die Richtige position und activiert diese
+    /// prüft vor erzeugung neuer Skills ob diese im bulletpool sind
+    /// kann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt
+    /// </summary>
+    /// <param name="preCreation">wenn dieser wert True ist, dann werden Skills im voraus erzeugt</param>
+    /// <returns>Gameobject vom Skill</returns>
     public GameObject activateSkill(bool preCreation) {
         GameObject g;
         Skill skillObject;

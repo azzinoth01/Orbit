@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// container classe für Spawner variablen
+/// </summary>
 [Serializable]
 public class Enemy_Spawner_Info
 {
