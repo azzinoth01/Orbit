@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// überprüft die bulletpooling liste
+/// </summary>
 public class Bullet_pooling_watcher : MonoBehaviour
 {
 
@@ -13,6 +16,11 @@ public class Bullet_pooling_watcher : MonoBehaviour
         StartCoroutine(cleanUpBullets(checkTime));
     }
 
+    /// <summary>
+    /// überprüft die bulletpooling liste ob ein Skill länger als cleanUpTime inactive war
+    /// </summary>
+    /// <param name="wait">der intervall in Sekunden bis zum nächsten check</param>
+    /// <returns></returns>
     private IEnumerator cleanUpBullets(float wait) {
         yield return new WaitForSeconds(wait);
 

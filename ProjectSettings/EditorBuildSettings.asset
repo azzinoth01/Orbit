@@ -11,14 +11,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/GameScenes/ship_menu.unity
     guid: 4d6aa1149c2f8884f98be9ef8ae4b5e5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/GameScenes/Tutorial_Scene_V1.unity
     guid: ef0a92fd36e3c10419b67989f8fec2af
-  - enabled: 0
-    path: Assets/Scene/Markus_working_scene.unity
-    guid: db09f6e9c5507ba4ea4430756893368f
   - enabled: 1
     path: Assets/Scene/TestScenes/BossTest.unity
     guid: 3e91a27f9ffff674d85209ef61b0712c
+  - enabled: 1
+    path: Assets/Scene/Markus_working_scene.unity
+    guid: db09f6e9c5507ba4ea4430756893368f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 512a8450645740f4cb524a6ad568279a, type: 2}

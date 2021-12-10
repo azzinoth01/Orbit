@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// verwaltet die skills von enemys
+/// </summary>
 public class Enemy_skills : MonoBehaviour
 {
 
@@ -19,7 +22,9 @@ public class Enemy_skills : MonoBehaviour
     private bool isRunning;
     private bool allwoDisable;
 
-
+    /// <summary>
+    /// skill gameObjecte im voraus erstellen
+    /// </summary>
     private void Awake() {
         nextSkill = skillsequenze[0].Skill;
         nextSkillDelay = skillsequenze[0].Delay;
@@ -51,6 +56,11 @@ public class Enemy_skills : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Timer für die activierung der Skills
+    /// </summary>
+    /// <param name="waitSeconds">delay zeit des Skills in sekunden</param>
+    /// <returns></returns>
     private IEnumerator startSkillTimer(float waitSeconds) {
 
         yield return new WaitForSeconds(waitSeconds);
@@ -59,8 +69,12 @@ public class Enemy_skills : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// erzeugt in voraus schon Skill Objecte damit diese nicht zur Laufzeit erstellt werden müssen
+    /// </summary>
     private void preCreateSkill() {
         bool needToCreate = false;
+        // Debug.Log(Globals.bulletPool.Count);
         foreach (Skillsequenze s in skillsequenze) {
             if (Globals.bulletPool.Count(x => x.gameObject.name == s.Skill.name && x.gameObject.activeSelf == false) < (shootsToCreate / skillsequenze.Count)) {
                 needToCreate = true;
@@ -82,6 +96,13 @@ public class Enemy_skills : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// erzeugt Skills und setzt diese auf die Richtige position und activiert diese
+    /// prüft vor erzeugung neuer Skills ob diese im bulletpool sind
+    /// kann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt
+    /// </summary>
+    /// <param name="preCreation">wenn dieser wert True ist, dann werden Skills im voraus erzeugt</param>
+    /// <returns> Gameobject vom Skill</returns>
     private GameObject activateSkill(bool preCreation) {
         Skill skill;
         GameObject skillGameObject;
@@ -126,6 +147,10 @@ public class Enemy_skills : MonoBehaviour
         return skillGameObject;
     }
 
+    /// <summary>
+    /// checkt ob der enemy über die enemy line gelaufen ist, um die Skills zu aktivieren
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision) {
         //Debug.Log(collision);
         try {
@@ -140,6 +165,10 @@ public class Enemy_skills : MonoBehaviour
 
         }
     }
+
+    /// <summary>
+    /// funktion die ein disable lock aktiviert, damit die funktion nicht sofort deactiviert wird
+    /// </summary>
     private void OnEnable() {
         //Debug.Log("enable");
         allwoDisable = false;
@@ -151,6 +180,11 @@ public class Enemy_skills : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// disable allow timer
+    /// </summary>
+    /// <param name="wait"> delaytimer in Sekunden</param>
+    /// <returns></returns>
     private IEnumerator canDisableTimer(float wait) {
         yield return new WaitForSeconds(wait);
         allwoDisable = true;

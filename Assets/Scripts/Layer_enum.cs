@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// enum für Layer
+/// </summary>
 public enum Layer_enum
 {
     @default = 0,

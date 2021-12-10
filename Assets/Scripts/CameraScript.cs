@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// camera Movement script
+/// </summary>
 public class CameraScript : MonoBehaviour
 {
 
@@ -11,11 +14,15 @@ public class CameraScript : MonoBehaviour
     private Vector2 offset;
     public float offsetSpeed;
 
-
+    /// <summary>
+    /// setzt die momentane main camera in den Globalen variablen
+    /// </summary>
     private void Awake() {
         Globals.currentCamera = gameObject.GetComponent<Camera>();
     }
-
+    /// <summary>
+    /// setzt basis variablen
+    /// </summary>
     private void OnEnable() {
         body = GetComponent<Rigidbody2D>();
         player = Globals.player.GetComponent<Player>();
@@ -23,12 +30,17 @@ public class CameraScript : MonoBehaviour
         offset = Vector2.zero;
     }
 
-
+    /// <summary>
+    /// bewegt die camaera in bewegungsrichtung mit kleinem offset, damit man mehr in der Bewegungsrichtung sieht
+    /// </summary>
     private void Update() {
         if (Globals.pause == true) {
             return;
         }
         else {
+            if (player == null) {
+                return;
+            }
             //Debug.Log((Globals.player.transform.position - transform.position));
             offset = new Vector2((6 * (player.Impulse.x / player.force) * Time.deltaTime) + offset.x, (5 * (player.Impulse.y / player.force) * Time.deltaTime) + offset.y);
 

@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// classe um Globale variablen zu initzalisieren
+/// </summary>
 public class Globals_init : MonoBehaviour
 {
-    //public bool pause;
+    /// <summary>
+    /// initzalisiert die Gloablen variablen
+    /// </summary>
     private void Awake() {
         Globals.pause = false;
 

@@ -5,6 +5,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// classe die das Rebinden von controls verwaltet
+/// </summary>
 public class Rebinding_menu : MonoBehaviour
 {
     private Controlls controll;
@@ -25,7 +29,12 @@ public class Rebinding_menu : MonoBehaviour
     private List<Button> buttonList;
 
 
-
+    /// <summary>
+    /// setzt das Rebinding auf den Default Wert zurück
+    /// </summary>
+    /// <param name="action"> die action die gerebindet werden soll </param>
+    /// <param name="index"> der Index des Bindings das gerebindet werden soll</param>
+    /// <param name="displayKeybind"> die Text Anzeige für das Keybind</param>
     private void defaultButtonFunction(InputAction action, int index, Text displayKeybind) {
         //int index = action.GetBindingIndex(binding);
         action.RemoveBindingOverride(index);
@@ -34,6 +43,13 @@ public class Rebinding_menu : MonoBehaviour
         checkKeybinds();
     }
 
+    /// <summary>
+    /// ändert das Rebinding auf den input vom Player nach klicken des Buttons
+    /// mit esc wird das rebidning abgebrochen
+    /// </summary>
+    /// <param name="action">die action die gerebindet werden soll</param>
+    /// <param name="index">der Index des Bindings das gerebindet werden soll</param>
+    /// <param name="displayKeybind">die Text Anzeige für das Keybind</param>
     private void remapButtonFunction(InputAction action, int index, Text displayKeybind) {
         //Debug.Log("test");
         ////int index = action.GetBindingIndex(binding);
@@ -66,7 +82,10 @@ public class Rebinding_menu : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// speichert das Rebinding in einer json datei Userspezifisch auf dem PC
+    /// es darf auch nur gespeichert werden, wenn alle rebinds eindeutig sind
+    /// </summary>
     public void saveRebinding() {
 
         if (checkKeybinds() == true) {
@@ -94,7 +113,11 @@ public class Rebinding_menu : MonoBehaviour
         }
 
     }
-
+    /// <summary>
+    /// ladet die Rebinds in den controller rein
+    /// </summary>
+    /// <param name="cont">der controlls auf den die Rebinds gesetzt werden sollen</param>
+    /// <returns> gibt den controller zurück auf den die Rebinds gesetzt wurden </returns>
     public Controlls loadRebinding(Controlls cont) {
 
         if (System.IO.File.Exists(Application.persistentDataPath + "/controllsSave.json")) {
@@ -111,7 +134,9 @@ public class Rebinding_menu : MonoBehaviour
         return cont;
     }
 
-
+    /// <summary>
+    /// schließt das Alert Fenster, wenn das Speichern nicht erfolgreich war
+    /// </summary>
     public void onClickAlertButton() {
         saveAlert.SetActive(false);
         buttonBack.GetComponent<Button>().interactable = true;
@@ -121,7 +146,10 @@ public class Rebinding_menu : MonoBehaviour
         }
 
     }
-
+    /// <summary>
+    /// überprüft die keybinds und markiert diese Rot, wenn sie doppelt vorkommen
+    /// </summary>
+    /// <returns></returns>
     private bool checkKeybinds() {
         bool check = true;
         foreach (Text t1 in checkKeybindList) {
@@ -135,6 +163,9 @@ public class Rebinding_menu : MonoBehaviour
         return check;
     }
 
+    /// <summary>
+    /// Rebinding liste wird erstellt
+    /// </summary>
     private void OnEnable() {
         if (controll == null) {
             checkKeybindList = new List<Text>();
@@ -232,6 +263,10 @@ public class Rebinding_menu : MonoBehaviour
 
         }
     }
+
+    /// <summary>
+    /// cleart die rebindingliste aus dem Scrollview
+    /// </summary>
     private void OnDisable() {
         foreach (Transform t in transform) {
             Destroy(t.gameObject);
