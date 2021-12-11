@@ -685,6 +685,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2684358080705295104, guid: 8606ea0a17dbde542bcd007076eb211d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a997554b025d4d542b0d405ac7eb6c12, type: 3}
     - target: {fileID: 2684358081606911408, guid: 8606ea0a17dbde542bcd007076eb211d, type: 3}
       propertyPath: m_Name
       value: Ui_background
