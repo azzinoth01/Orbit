@@ -13,6 +13,9 @@ public class BulletInfo
     [SerializeField] private float startRotation;
     [SerializeField] private int bulletBaseDmg;
     [SerializeField] private GameObject bullet;
+    [SerializeField] private GameObject startEffect;
+
+    private GameObject instantStartEffect;
 
     private int addBaseDmg;
     private float dmgModifier;
@@ -37,11 +40,13 @@ public class BulletInfo
     /// <param name="startRotation"> bestimmt die flugrichtung vom basisobject</param>
     /// <param name="bulletBaseDmg"> bestimmt bullet base dmg</param>
     /// <param name="bullet"> bestimmt bullet prefab</param>
-    public BulletInfo(float startRotation, int bulletBaseDmg, GameObject bullet) {
+    /// <param name="startEffect"> bestimmt particel system start prefab</param>
+    public BulletInfo(float startRotation, int bulletBaseDmg, GameObject bullet, GameObject startEffect) {
         Debug.Log("construktor called");
         this.startRotation = startRotation;
         this.bulletBaseDmg = bulletBaseDmg;
         this.bullet = bullet;
+        this.startEffect = startEffect;
         //bulletScript = bullet.GetComponent<Bullet>();
         addBaseDmg = 0;
         dmgModifier = 1;
@@ -105,6 +110,26 @@ public class BulletInfo
         }
     }
 
+    public GameObject StartEffect {
+        get {
+            return startEffect;
+        }
+
+        set {
+            startEffect = value;
+        }
+    }
+
+    public GameObject InstantStartEffect {
+        get {
+            return instantStartEffect;
+        }
+
+        set {
+            instantStartEffect = value;
+        }
+    }
+
     /// <summary>
     /// sets den bullet dmg auf der Bullet
     /// </summary>
@@ -123,6 +148,16 @@ public class BulletInfo
         bulletScript.gameObject.layer = layer;
     }
 
+
+    /// <summary>
+    /// enables the bullet particle effect
+    /// </summary>
+    public void enableEffects() {
+        if (instantStartEffect != null) {
+            instantStartEffect.SetActive(true);
+        }
+
+    }
 
     //private void OnEnable() {
     //    bullet.GetComponent<Bullet>().BulletDmg = bulletBaseDmg; // + modifier 

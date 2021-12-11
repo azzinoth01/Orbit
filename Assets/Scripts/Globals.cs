@@ -14,6 +14,6 @@ public static class Globals
     public static Menu_handler menuHandler;
     public static Win_condition currentWinCondition;
     public static List<Enemy_Spawner> spawnerListe;
-
+    public static List<ParticleSystem> effectPool;
 
 }

@@ -21,6 +21,7 @@ public class Globals_init : MonoBehaviour
             Globals.spawnerListe = new List<Enemy_Spawner>();
         }
 
+
     }
 
 }

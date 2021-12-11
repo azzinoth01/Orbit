@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 
@@ -41,6 +42,8 @@ public class Enemy : MonoBehaviour
     public int collisionDmg;
     public bool destoryAfterCollison;
 
+    public GameObject deathParticelSystem;
+
 
     private Vector2 savedDirection;
     private bool stopMove;
@@ -48,6 +51,9 @@ public class Enemy : MonoBehaviour
 
 
     private Enemy_Spawner spawnerCallback;
+
+
+
 
     public Enemy_Spawner SpawnerCallback {
         get {
@@ -103,6 +109,15 @@ public class Enemy : MonoBehaviour
         if (maxDuration != 0) {
             StartCoroutine(startMaxDurationTimer(maxDuration));
         }
+
+
+
+
+
+
+
+
+
 
     }
     /// <summary>
@@ -318,6 +333,9 @@ public class Enemy : MonoBehaviour
         health = health - dmg;
 
         if (health <= 0) {
+
+            Instantiate(deathParticelSystem, transform.position, transform.rotation);
+
             Destroy(gameObject.transform.parent.gameObject);
             //  Globals.gameoverHandler.gameOver();
         }
