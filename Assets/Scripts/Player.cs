@@ -35,14 +35,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     public List<Weapon> weapons;
 
+    public GameObject ship;
+
 
     private Vector2 impulse;
 
     private Controlls controll;
     private bool shooting;
 
-    private Animator anim;
-    public Animator antrieb;
+    // private Animator anim;
+    //   public Animator antrieb;
 
     public int additionalDmg;
     public float dmgModifier;
@@ -122,13 +124,13 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.down * force);
-            anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
-            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
+            //    anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
+            // antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.down * force);
-            anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
-            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
+            //  anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
+            //antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
         }
         //Debug.Log("move down");
     }
@@ -140,13 +142,13 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.left * force);
-            anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
-            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
+            //       anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
+            //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.left * force);
-            anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
-            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
+            //    anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
+            // antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
         }
     }
     /// <summary>
@@ -157,13 +159,13 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.right * force);
-            anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
-            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
+            //      anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
+            //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.right * force);
-            anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
-            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
+            //    anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
+            //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
 
 
         }
@@ -176,14 +178,14 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             impulse = impulse + (Vector2.up * force);
-            anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
-            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
+            //     anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
+            //  antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
 
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.up * force);
-            anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
-            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
+            //   anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
+            //  antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
         }
     }
 
@@ -238,7 +240,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         impulse = new Vector2(0, 0);
 
-        anim = GetComponent<Animator>();
+        //  anim = GetComponent<Animator>();
 
 
 
@@ -313,6 +315,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
                 body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+                float angle;
+                if (body.velocity.magnitude == 0) {
+                    angle = 90;
+                }
+                else {
+                    angle = Vector2.SignedAngle(Vector2.right, body.velocity);
+                }
+
+
+                ship.transform.eulerAngles = new Vector3(0, 0, angle - 90);
             }
 
             yield return null;
