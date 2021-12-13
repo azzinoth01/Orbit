@@ -512,6 +512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background Music Battle
       objectReference: {fileID: 0}
+    - target: {fileID: 5487263979617634877, guid: a0233a9c37d3cb54180b317d2ab2e28b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0233a9c37d3cb54180b317d2ab2e28b, type: 3}
 --- !u!1001 &1432032716
