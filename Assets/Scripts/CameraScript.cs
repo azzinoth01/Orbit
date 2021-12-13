@@ -79,6 +79,11 @@ public class CameraScript : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// startet den screen Shake
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator startScreenShake() {
         float wait = Random.Range(screenShakeMinDuration, screenShakeMaxDuration);
 
@@ -96,6 +101,10 @@ public class CameraScript : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// führt den screen Shake durch
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator screenShake() {
 
 
