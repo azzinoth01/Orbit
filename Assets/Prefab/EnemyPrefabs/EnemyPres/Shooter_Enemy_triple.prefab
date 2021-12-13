@@ -262,6 +262,7 @@ MonoBehaviour:
   delayToNextWaypoint: 2
   collisionDmg: 3
   destoryAfterCollison: 0
+  deathParticelSystem: {fileID: 0}
 --- !u!114 &1532134948940045544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +278,6 @@ MonoBehaviour:
   shootsToCreate: 4
   skillsequenze:
   - delay: 1.5
-    skill: {fileID: 1251532575909873981, guid: fcaefcfb34390a541b9d5732bbfbb336, type: 3}
+    skill: {fileID: 7396633332625948144, guid: 82d2feef455dee742b7cb5dd7cff6005, type: 3}
   additionalDmg: 0
   dmgModifier: 1

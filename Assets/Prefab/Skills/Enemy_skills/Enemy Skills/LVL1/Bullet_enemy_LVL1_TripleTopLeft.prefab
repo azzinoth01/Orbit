@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7396633332625948144
+--- !u!1 &812123783518443330
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1095474502954996624}
-  - component: {fileID: 2800096230042150811}
+  - component: {fileID: 7120411828757838114}
+  - component: {fileID: 5420311103398366505}
   m_Layer: 0
-  m_Name: Bullet_enemy_Triple
+  m_Name: Bullet_enemy_LVL1_TripleTopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1095474502954996624
+--- !u!4 &7120411828757838114
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7396633332625948144}
+  m_GameObject: {fileID: 812123783518443330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,28 +31,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2800096230042150811
+--- !u!114 &5420311103398366505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7396633332625948144}
+  m_GameObject: {fileID: 812123783518443330}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18782ab28ec9edb498e390c575e9a9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletInfoList:
-  - startRotation: 0
+  - startRotation: 45
     bulletBaseDmg: 1
     bullet: {fileID: 6289848151660166018, guid: 4df2c2f662a554444ab4a75114e64232, type: 3}
     startEffect: {fileID: 0}
-  - startRotation: -15
+  - startRotation: 60
     bulletBaseDmg: 1
     bullet: {fileID: 6289848151660166018, guid: 4df2c2f662a554444ab4a75114e64232, type: 3}
     startEffect: {fileID: 0}
-  - startRotation: 15
+  - startRotation: 30
     bulletBaseDmg: 1
     bullet: {fileID: 6289848151660166018, guid: 4df2c2f662a554444ab4a75114e64232, type: 3}
     startEffect: {fileID: 0}

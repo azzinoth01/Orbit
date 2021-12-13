@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &674389398441108949
+--- !u!1 &8426655646871696032
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 674389398441108936}
-  - component: {fileID: 674389398441108937}
-  - component: {fileID: 674389398441108938}
-  - component: {fileID: 674389398441108939}
-  - component: {fileID: 674389398441108948}
-  - component: {fileID: 4852810512288785067}
+  - component: {fileID: 8426655646871696061}
+  - component: {fileID: 8426655646871696060}
+  - component: {fileID: 8426655646871696063}
+  - component: {fileID: 8426655646871696062}
+  - component: {fileID: 8426655646871696033}
+  - component: {fileID: 4535743079689074142}
   m_Layer: 9
   m_Name: Enemy_body
   m_TagString: Untagged
@@ -21,27 +21,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &674389398441108936
+--- !u!4 &8426655646871696061
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674389398441108949}
+  m_GameObject: {fileID: 8426655646871696032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 674389398985417920}
+  m_Father: {fileID: 8426655648491254709}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &674389398441108937
+--- !u!212 &8426655646871696060
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674389398441108949}
+  m_GameObject: {fileID: 8426655646871696032}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b62ae453c44c0254e8b50a3ac4a969fc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.033018887, g: 1, b: 0.10110773, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
@@ -86,14 +86,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &674389398441108938
+--- !u!50 &8426655646871696063
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674389398441108949}
+  m_GameObject: {fileID: 8426655646871696032}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
@@ -107,13 +107,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &674389398441108939
+--- !u!61 &8426655646871696062
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674389398441108949}
+  m_GameObject: {fileID: 8426655646871696032}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -133,24 +133,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.91045004, y: 0.6338978}
   m_EdgeRadius: 0
---- !u!114 &674389398441108948
+--- !u!114 &8426655646871696033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674389398441108949}
+  m_GameObject: {fileID: 8426655646871696032}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f01e5d44815e64f4a8b42b7695868efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  body: {fileID: 674389398441108938}
-  waypoints:
-  - {x: 10, y: 0}
-  - {x: 0, y: -5}
-  - {x: -10, y: 0}
+  body: {fileID: 8426655646871696063}
+  waypoints: []
   moveToRandomWaypoints: 0
   moveToPlayer: 0
   followPlayerMovementX: 0
@@ -160,30 +157,30 @@ MonoBehaviour:
   maxSpeed: 10
   loop: 1
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
-  maxDuration: 0
+  maxDuration: 10
   delayToNextWaypoint: 2
   collisionDmg: 3
   destoryAfterCollison: 0
   deathParticelSystem: {fileID: 0}
---- !u!114 &4852810512288785067
+--- !u!114 &4535743079689074142
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674389398441108949}
+  m_GameObject: {fileID: 8426655646871696032}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a5d0bd192e47543b44d049c049f146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootsToCreate: 20
+  shootsToCreate: 4
   skillsequenze:
-  - delay: 0.5
-    skill: {fileID: 8983357819854496339, guid: c28783ab10096734d914c2845e37f3fc, type: 3}
+  - delay: 1.5
+    skill: {fileID: 7396633332625948144, guid: 82d2feef455dee742b7cb5dd7cff6005, type: 3}
   additionalDmg: 0
-  dmgModifier: 0
---- !u!1 &674389398985417921
+  dmgModifier: 1
+--- !u!1 &8426655648491254708
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,40 +188,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 674389398985417920}
-  - component: {fileID: 2292637484996567805}
-  - component: {fileID: 6675263848952661966}
-  - component: {fileID: 8220805231296708889}
+  - component: {fileID: 8426655648491254709}
+  - component: {fileID: 7096409239580292488}
+  - component: {fileID: 2380673731175911611}
+  - component: {fileID: 1133990057314719340}
   m_Layer: 0
-  m_Name: Shooter_Enemy_basic
+  m_Name: Shooter_Enemy_triple_LVL1_untenLinks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &674389398985417920
+--- !u!4 &8426655648491254709
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674389398985417921}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 8426655648491254708}
+  m_LocalRotation: {x: -0, y: 0, z: -0.9238796, w: -0.38268328}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 674389398441108936}
+  - {fileID: 8426655646871696061}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &2292637484996567805
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -225}
+--- !u!50 &7096409239580292488
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674389398985417921}
+  m_GameObject: {fileID: 8426655648491254708}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -238,13 +235,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6675263848952661966
+--- !u!61 &2380673731175911611
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674389398985417921}
+  m_GameObject: {fileID: 8426655648491254708}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -264,23 +261,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.6525517, y: 2.550331}
   m_EdgeRadius: 0
---- !u!114 &8220805231296708889
+--- !u!114 &1133990057314719340
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674389398985417921}
+  m_GameObject: {fileID: 8426655648491254708}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2491d9184165414db8fb6afa6db2f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveInWaypoints:
-  - {x: 0, y: -15}
+  - {x: 27.05, y: 14.61}
   moveOutWaypoints:
   - {x: 0, y: 15}
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
   force: 9
   maxSpeed: 10
-  body: {fileID: 2292637484996567805}
+  body: {fileID: 7096409239580292488}
