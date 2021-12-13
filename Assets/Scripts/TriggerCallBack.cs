@@ -9,6 +9,9 @@ public class TriggerCallBack : MonoBehaviour
 {
 
     public bool spawnTrigger;
+    public bool spawnerActivationTrigger;
+
+    private bool canDestory;
 
 
     /// <summary>
@@ -17,12 +20,32 @@ public class TriggerCallBack : MonoBehaviour
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision) {
         if (Globals.player == collision.gameObject) {
+            canDestory = true;
             if (spawnTrigger == true) {
 
+
                 foreach (Enemy_Spawner e in Globals.spawnerListe) {
-                    e.checkSpawnTrigger(gameObject);
+
+                    if (e.checkSpawnTrigger(gameObject) == false) {
+                        canDestory = false;
+                    }
                 }
-                Destroy(gameObject);
+                if (canDestory == true) {
+                    Destroy(gameObject);
+                }
+
+            }
+            if (spawnerActivationTrigger == true) {
+                foreach (Enemy_Spawner e in Globals.spawnerListe) {
+
+                    if (e.checkSpawnerActivationTrigger(gameObject) == false) {
+                        canDestory = false;
+                    }
+
+                    if (canDestory == true) {
+                        Destroy(gameObject);
+                    }
+                }
             }
         }
     }

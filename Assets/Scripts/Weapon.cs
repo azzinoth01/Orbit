@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
     private bool canShoot;
 
     public int shootsToCreate;
-    public Animator anim;
+    // public Animator anim;
 
     public int additionalDmg;
     public float dmgModifier;
@@ -45,13 +45,7 @@ public class Weapon : MonoBehaviour
         }
         else {
 
-            // damit ich momentan keine Fehlermeldungen kriege
-            try {
-                anim.SetFloat("Angle", transform.eulerAngles.z);
-            }
-            catch {
 
-            }
 
         }
     }

@@ -38,6 +38,12 @@ public class Skill : MonoBehaviour
             g.transform.localEulerAngles = new Vector3(0, 0, b.StartRotation);
 
             GameObject bullet = Instantiate(b.Bullet, g.transform);
+            if (b.StartEffect != null) {
+                GameObject effect = Instantiate(b.StartEffect, g.transform);
+
+
+                b.InstantStartEffect = effect;
+            }
 
             b.BulletScript = bullet.GetComponent<Bullet>();
             i = i + 1;
@@ -122,7 +128,16 @@ public class Skill : MonoBehaviour
         layerChange();
         time = 0;
         isRunning = false;
+        effectEnable();
+    }
 
+    /// <summary>
+    /// enables the particle Effect object
+    /// </summary>
+    private void effectEnable() {
+        foreach (BulletInfo b in bulletInfoList) {
+            b.enableEffects();
+        }
     }
 
 
