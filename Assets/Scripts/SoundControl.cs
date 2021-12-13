@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class SoundControl : MonoBehaviour
 {
@@ -17,22 +18,30 @@ public class SoundControl : MonoBehaviour
 
     private SaveSettings saveSetting;
 
+    public Image muteButton;
+    public Slider backgroundSlider;
+    public Slider sfxSlider;
+
+    public Sprite muteSp;
+    public Sprite unMuteSp;
 
 
     private void Start() {
-        saveSetting = saveSetting.loadSettings();
+
+        saveSetting = SaveSettings.loadSettings();
         if (saveSetting == null) {
 
             saveSetting = new SaveSettings(false, 1, 1);
-        }
-        else {
-
-            isMute = saveSetting.IsMute;
-            backgroundVolume = saveSetting.BackgroundVolume;
-            sfxVolume = saveSetting.SfxVolume;
-
+            saveSetting.savingSetting();
 
         }
+
+        isMute = saveSetting.IsMute;
+        backgroundVolume = saveSetting.BackgroundVolume;
+        sfxVolume = saveSetting.SfxVolume;
+
+
+        setStartSettings();
     }
 
 
@@ -58,10 +67,12 @@ public class SoundControl : MonoBehaviour
     public void setStartSettings() {
         if (isMute == true) {
             mute.TransitionTo(0);
+            muteButton.sprite = muteSp;
 
         }
         else {
             normal.TransitionTo(0);
+            muteButton.sprite = unMuteSp;
 
         }
 
@@ -75,6 +86,8 @@ public class SoundControl : MonoBehaviour
         }
         background.audioMixer.SetFloat("backgroundVolume", volume);
 
+        backgroundSlider.value = backgroundVolume;
+
         if (sfxVolume == 0) {
             volume = -80;
         }
@@ -83,6 +96,7 @@ public class SoundControl : MonoBehaviour
         }
         sfx.audioMixer.SetFloat("sfxVolume", volume);
 
+        sfxSlider.value = sfxVolume;
 
     }
 
@@ -90,16 +104,20 @@ public class SoundControl : MonoBehaviour
 
         if (isMute == false) {
             mute.TransitionTo(0);
+            muteButton.sprite = muteSp;
             isMute = true;
         }
         else {
             normal.TransitionTo(0);
+            muteButton.sprite = unMuteSp;
             isMute = false;
         }
         saveSettingChanges();
     }
 
     public void sfxChanged() {
+        sfxVolume = sfxSlider.value;
+
         float volume;
 
         if (sfxVolume == 0) {
@@ -114,6 +132,9 @@ public class SoundControl : MonoBehaviour
 
     public void backgroundSoundChange() {
 
+        backgroundVolume = backgroundSlider.value;
+
+        Debug.Log("changed");
         float volume;
 
         if (backgroundVolume == 0) {

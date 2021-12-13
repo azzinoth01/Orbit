@@ -41,6 +41,7 @@ public class SaveSettings
         }
     }
 
+
     public SaveSettings(bool isMute, float backgroundVolume, float sfxVolume) {
 
         this.isMute = isMute;
@@ -61,9 +62,10 @@ public class SaveSettings
 
     }
 
-    public SaveSettings loadSettings() {
+    public static SaveSettings loadSettings() {
 
-        SaveSettings s;
+        SaveSettings s = new SaveSettings(false, 1, 1);
+
 
         if (System.IO.File.Exists(Application.persistentDataPath + "/saveSettings.json")) {
             string json = File.ReadAllText(Application.persistentDataPath + "/saveSettings.json");
@@ -71,6 +73,7 @@ public class SaveSettings
             if (json == null || json == "") {
                 return null;
             }
+
             s = JsonUtility.FromJson<SaveSettings>(json);
             return s;
 
