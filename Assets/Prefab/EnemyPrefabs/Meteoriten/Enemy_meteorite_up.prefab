@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01e5d44815e64f4a8b42b7695868efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 3
   body: {fileID: 8965983104705252603}
   waypoints:
   - {x: 0, y: 125}
@@ -241,3 +241,4 @@ MonoBehaviour:
   delayToNextWaypoint: 2
   collisionDmg: 3
   destoryAfterCollison: 1
+  deathParticelSystem: {fileID: 0}
