@@ -84,6 +84,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private SpriteRenderer sp;
 
 
+
+
     public Vector2 Impulse {
         get {
             return impulse;
@@ -459,6 +461,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             return;
         }
 
+        StartCoroutine(Globals.currentCamera.GetComponent<CameraScript>().startScreenShake());
+
         if (schieldbar.fillAmount >= 1) {
             currentschield = 0;
 
@@ -667,6 +671,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             //chargeBalls[dogeCharges].GetComponent<Image>().color = Color.green;
         }
     }
+
+
+
+
+
 
     /// <summary>
     /// check ob der doge zielpunkt erreich wurde

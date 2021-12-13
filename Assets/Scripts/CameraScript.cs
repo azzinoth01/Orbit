@@ -14,6 +14,16 @@ public class CameraScript : MonoBehaviour
     private Vector2 offset;
     public float offsetSpeed;
 
+
+
+    public float screenShakeMaxDuration;
+    public float screenShakeMinDuration;
+
+    public float screenShakeMaxMagnitude;
+
+    private Vector2 screenShakeOffset;
+    private bool screenShakeRunning;
+
     /// <summary>
     /// setzt die momentane main camera in den Globalen variablen
     /// </summary>
@@ -28,6 +38,8 @@ public class CameraScript : MonoBehaviour
         player = Globals.player.GetComponent<Player>();
         playerMaxSpeed = player.maxSpeed;
         offset = Vector2.zero;
+
+        screenShakeRunning = false;
     }
 
     /// <summary>
@@ -41,6 +53,10 @@ public class CameraScript : MonoBehaviour
             if (player == null) {
                 return;
             }
+            if (screenShakeRunning == true) {
+                return;
+            }
+
             //Debug.Log((Globals.player.transform.position - transform.position));
             offset = new Vector2((6 * (player.Impulse.x / player.force) * Time.deltaTime) + offset.x, (5 * (player.Impulse.y / player.force) * Time.deltaTime) + offset.y);
 
@@ -61,6 +77,42 @@ public class CameraScript : MonoBehaviour
             //body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -playerMaxSpeed, playerMaxSpeed), Mathf.Clamp(body.velocity.y, -playerMaxSpeed, playerMaxSpeed));
 
         }
+    }
+
+    public IEnumerator startScreenShake() {
+        float wait = Random.Range(screenShakeMinDuration, screenShakeMaxDuration);
+
+        screenShakeRunning = true;
+
+
+        StartCoroutine(screenShake());
+
+
+        yield return new WaitForSeconds(wait);
+
+
+        screenShakeRunning = false;
+
+    }
+
+
+    private IEnumerator screenShake() {
+
+
+        while (screenShakeRunning == true) {
+
+
+            Vector2 shake = Random.insideUnitCircle * screenShakeMaxMagnitude * Time.deltaTime;
+
+            screenShakeOffset = screenShakeOffset + shake;
+
+            transform.position = transform.position + (Vector3)shake;
+
+
+            yield return null;
+        }
+
+        //transform.position = transform.position - (Vector3)screenShakeOffset;
     }
 
 }

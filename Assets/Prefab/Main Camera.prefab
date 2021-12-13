@@ -246,6 +246,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   offsetSpeed: 0
+  screenShakeMaxDuration: 0.5
+  screenShakeMinDuration: 0.4
+  screenShakeMaxMagnitude: 10
 --- !u!114 &5738150791844898346
 MonoBehaviour:
   m_ObjectHideFlags: 0
