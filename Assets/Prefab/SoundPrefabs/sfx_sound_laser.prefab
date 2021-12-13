@@ -12,10 +12,6 @@ PrefabInstance:
       value: sfx_sound_laser
       objectReference: {fileID: 0}
     - target: {fileID: 4914559466225251947, guid: 20d01275838543f459d15747b77b8728, type: 3}
-      propertyPath: DopplerLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4914559466225251947, guid: 20d01275838543f459d15747b77b8728, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -90,10 +86,6 @@ PrefabInstance:
     - target: {fileID: 4914559466225251948, guid: 20d01275838543f459d15747b77b8728, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4914559466225251948, guid: 20d01275838543f459d15747b77b8728, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4914559466225251948, guid: 20d01275838543f459d15747b77b8728, type: 3}
       propertyPath: m_LocalPosition.x
