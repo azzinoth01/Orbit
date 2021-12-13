@@ -14,6 +14,16 @@ public class CameraScript : MonoBehaviour
     private Vector2 offset;
     public float offsetSpeed;
 
+
+
+    public float screenShakeMaxDuration;
+    public float screenShakeMinDuration;
+
+    public float screenShakeMaxMagnitude;
+
+    private Vector2 screenShakeOffset;
+    private bool screenShakeRunning;
+
     /// <summary>
     /// setzt die momentane main camera in den Globalen variablen
     /// </summary>
@@ -61,6 +71,24 @@ public class CameraScript : MonoBehaviour
             //body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -playerMaxSpeed, playerMaxSpeed), Mathf.Clamp(body.velocity.y, -playerMaxSpeed, playerMaxSpeed));
 
         }
+    }
+
+
+    private IEnumerator screenShake() {
+
+
+        while (screenShakeRunning == true) {
+
+
+            Vector2 shake = Random.insideUnitCircle * screenShakeMaxMagnitude;
+
+
+
+
+            yield return null;
+        }
+
+        transform.position = transform.position - (Vector3)screenShakeOffset;
     }
 
 }
