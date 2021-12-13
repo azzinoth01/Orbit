@@ -542,17 +542,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71d2f6233ad304f458db88082d31eee4, type: 3}
---- !u!114 &1690261042 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2582215759017007434, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
-  m_PrefabInstance: {fileID: 813140884623539651}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7f69603878b85142a3c6d519f45a613, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1705213380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,7 +1168,8 @@ PrefabInstance:
       propertyPath: collider
       value: 
       objectReference: {fileID: 1392041694}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5710485564277270538, guid: 12a441485df25f74e98b51d6a68b433d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12a441485df25f74e98b51d6a68b433d, type: 3}
 --- !u!1001 &351253988597169365
 PrefabInstance:
@@ -1407,6 +1397,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
+      propertyPath: weapons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: immunityFlickerRate
       value: 4
       objectReference: {fileID: 0}
@@ -1421,15 +1415,15 @@ PrefabInstance:
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: weapons.Array.data[3]
       value: 
-      objectReference: {fileID: 1690261042}
+      objectReference: {fileID: 0}
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: weapons.Array.data[4]
       value: 
-      objectReference: {fileID: 1690261042}
+      objectReference: {fileID: 0}
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: weapons.Array.data[5]
       value: 
-      objectReference: {fileID: 1690261042}
+      objectReference: {fileID: 0}
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: chargeBalls.Array.data[0]
       value: 
@@ -1533,6 +1527,10 @@ PrefabInstance:
     - target: {fileID: 2130335326530031776, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: shootsToCreate
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289768484162360849, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2378899786943637613, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: m_Enabled

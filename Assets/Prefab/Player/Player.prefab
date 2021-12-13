@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3036281223492942621}
   - component: {fileID: 1580844076}
   - component: {fileID: 1580844077}
+  - component: {fileID: 4524067518927202921}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -176,6 +177,14 @@ MonoBehaviour:
   - {fileID: -6364959523216148980, guid: 29c670128f438c246968f3e987e9076d, type: 3}
   chargeUI: {fileID: 0}
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
+--- !u!81 &4524067518927202921
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813140885334128461}
+  m_Enabled: 1
 --- !u!1 &813140885548403216
 GameObject:
   m_ObjectHideFlags: 0

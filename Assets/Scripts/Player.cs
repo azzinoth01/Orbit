@@ -278,7 +278,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         maxDogeCharges = dogeCharges;
         flickerDirection = -1;
-        sp = GetComponent<SpriteRenderer>();
+        sp = ship.GetComponent<SpriteRenderer>();
 
 
     }
