@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// verwaltet die skills von enemys
+/// </summary>
 public class Enemy_skills : MonoBehaviour
 {
 
@@ -18,7 +22,9 @@ public class Enemy_skills : MonoBehaviour
     private bool isRunning;
     private bool allwoDisable;
 
-
+    /// <summary>
+    /// skill gameObjecte im voraus erstellen
+    /// </summary>
     private void Awake() {
         nextSkill = skillsequenze[0].Skill;
         nextSkillDelay = skillsequenze[0].Delay;
@@ -50,6 +56,11 @@ public class Enemy_skills : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Timer für die activierung der Skills
+    /// </summary>
+    /// <param name="waitSeconds">delay zeit des Skills in sekunden</param>
+    /// <returns></returns>
     private IEnumerator startSkillTimer(float waitSeconds) {
 
         yield return new WaitForSeconds(waitSeconds);
@@ -58,45 +69,70 @@ public class Enemy_skills : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// erzeugt in voraus schon Skill Objecte damit diese nicht zur Laufzeit erstellt werden müssen
+    /// </summary>
     private void preCreateSkill() {
-        for (int i = 0; i < shootsToCreate;) {
-
-            GameObject skill = activateSkill(true);
-            skill.SetActive(false);
-
-
-            i = i + 1;
+        bool needToCreate = false;
+        // Debug.Log(Globals.bulletPool.Count);
+        foreach (Skillsequenze s in skillsequenze) {
+            if (Globals.bulletPool.Count(x => x.gameObject.name == s.Skill.name && x.gameObject.activeSelf == false) < (shootsToCreate / skillsequenze.Count)) {
+                needToCreate = true;
+                break;
+            }
         }
+
+
+        if (needToCreate == true) {
+            for (int i = 0; i < shootsToCreate;) {
+
+                GameObject skill = activateSkill(true);
+                skill.SetActive(false);
+
+
+                i = i + 1;
+            }
+        }
+
     }
 
+    /// <summary>
+    /// erzeugt Skills und setzt diese auf die Richtige position und activiert diese
+    /// prüft vor erzeugung neuer Skills ob diese im bulletpool sind
+    /// kann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt
+    /// </summary>
+    /// <param name="preCreation">wenn dieser wert True ist, dann werden Skills im voraus erzeugt</param>
+    /// <returns> Gameobject vom Skill</returns>
     private GameObject activateSkill(bool preCreation) {
-        GameObject skill;
+        Skill skill;
+        GameObject skillGameObject;
         if (preCreation == false) {
-            skill = Globals.bulletPool.Find(x => x.name == nextSkill.name && x.activeSelf == false);
+            skill = Globals.bulletPool.Find(x => x.gameObject.name == nextSkill.name && x.gameObject.activeSelf == false);
             if (skill == null) {
-                skill = Instantiate(nextSkill, transform.position, Quaternion.identity);
-                skill.name = nextSkill.name;
-                skill.layer = gameObject.layer - 1; // enemy bullet layer ist immer enemy layer -1
-                skill.GetComponent<Skill>().layerChange();
-                skill.GetComponent<Skill>().setDmgModifiers(additionalDmg, dmgModifier);
+                skillGameObject = Instantiate(nextSkill, transform.position, Quaternion.identity);
+                skillGameObject.name = nextSkill.name;
+                skillGameObject.layer = (int)Layer_enum.enemy_bullets; // enemy bullet layer ist immer enemy layer -1
+
+                skillGameObject.GetComponent<Skill>().layerChange();
+                skillGameObject.GetComponent<Skill>().setDmgModifiers(additionalDmg, dmgModifier);
                 Debug.Log("additional skill created");
             }
             else {
                 Globals.bulletPool.Remove(skill);
                 skill.transform.position = transform.position;
                 skill.transform.rotation = Quaternion.identity;
-                skill.layer = gameObject.layer - 1;
-                skill.GetComponent<Skill>().setDmgModifiers(additionalDmg, dmgModifier);
-                skill.SetActive(true);
-
+                skill.gameObject.layer = (int)Layer_enum.enemy_bullets;
+                skill.setDmgModifiers(additionalDmg, dmgModifier);
+                skill.gameObject.SetActive(true);
+                skillGameObject = skill.gameObject;
 
             }
 
         }
         else {
-            skill = Instantiate(nextSkill);
-            skill.name = nextSkill.name;
-            skill.layer = gameObject.layer - 1;
+            skillGameObject = Instantiate(nextSkill);
+            skillGameObject.name = nextSkill.name;
+            skillGameObject.layer = (int)Layer_enum.enemy_bullets;
 
         }
         skillIndex = skillIndex + 1;
@@ -108,9 +144,13 @@ public class Enemy_skills : MonoBehaviour
         nextSkill = skillsequenze[skillIndex].Skill;
         nextSkillDelay = skillsequenze[skillIndex].Delay;
 
-        return skill;
+        return skillGameObject;
     }
 
+    /// <summary>
+    /// checkt ob der enemy über die enemy line gelaufen ist, um die Skills zu aktivieren
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision) {
         //Debug.Log(collision);
         try {
@@ -125,6 +165,10 @@ public class Enemy_skills : MonoBehaviour
 
         }
     }
+
+    /// <summary>
+    /// funktion die ein disable lock aktiviert, damit die funktion nicht sofort deactiviert wird
+    /// </summary>
     private void OnEnable() {
         //Debug.Log("enable");
         allwoDisable = false;
@@ -132,6 +176,15 @@ public class Enemy_skills : MonoBehaviour
         StartCoroutine(canDisableTimer(1));
     }
 
+    private void OnDisable() {
+
+    }
+
+    /// <summary>
+    /// disable allow timer
+    /// </summary>
+    /// <param name="wait"> delaytimer in Sekunden</param>
+    /// <returns></returns>
     private IEnumerator canDisableTimer(float wait) {
         yield return new WaitForSeconds(wait);
         allwoDisable = true;

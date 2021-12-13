@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// container classe für Spawner variablen
+/// </summary>
 [Serializable]
 public class Enemy_Spawner_Info
 {
@@ -14,11 +18,13 @@ public class Enemy_Spawner_Info
     public GameObject enemyPrefab;
     private bool spawnStartet;
     private int currentEnemysSpawned;
+    private bool spawnConditonFulfilled;
 
 
     public Enemy_Spawner_Info() {
         spawnStartet = false;
         currentEnemysSpawned = 0;
+        spawnConditonFulfilled = false;
     }
 
     public bool SpawnStartet {
@@ -27,6 +33,9 @@ public class Enemy_Spawner_Info
         }
 
         set {
+            if (value == true) {
+                spawnConditonFulfilled = true;
+            }
             spawnStartet = value;
         }
     }
@@ -38,6 +47,15 @@ public class Enemy_Spawner_Info
 
         set {
             currentEnemysSpawned = value;
+        }
+    }
+
+    public bool SpawnConditonFulfilled {
+        get {
+            return spawnConditonFulfilled;
+        }
+        set {
+            spawnConditonFulfilled = value;
         }
     }
 }

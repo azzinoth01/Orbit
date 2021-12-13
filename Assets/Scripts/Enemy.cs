@@ -1,7 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
+
+/// <summary>
+/// class die enemys beschreibt und deren movement
+/// </summary>
 public class Enemy : MonoBehaviour
 {
     public int health;
@@ -25,6 +30,8 @@ public class Enemy : MonoBehaviour
     private float restartTime;
     private List<GameObject> waypointObject;
     private int waypointIndex;
+
+
     public float maxDuration;
     public float delayToNextWaypoint;
 
@@ -35,16 +42,35 @@ public class Enemy : MonoBehaviour
     public int collisionDmg;
     public bool destoryAfterCollison;
 
+    public GameObject deathParticelSystem;
+
 
     private Vector2 savedDirection;
     private bool stopMove;
     private bool maxDurationReached;
 
 
+    private Enemy_Spawner spawnerCallback;
 
 
 
-    // Start is called before the first frame update
+
+    public Enemy_Spawner SpawnerCallback {
+        get {
+            return spawnerCallback;
+        }
+
+        set {
+            spawnerCallback = value;
+        }
+    }
+
+
+    /// <summary>
+    /// erstellt alle gegner wegpunkte aus Vectoren Liste
+    /// startet die max Duration Corutine
+    /// und setzt values anhand des wegpunkt designers, wenn am überobject vorhanden ist ( nur für wegpunkt design zwecken)
+    /// </summary>
     void Start() {
 
         restartTime = 0;
@@ -84,9 +110,19 @@ public class Enemy : MonoBehaviour
             StartCoroutine(startMaxDurationTimer(maxDuration));
         }
 
-    }
 
-    // Update is called once per frame
+
+
+
+
+
+
+
+
+    }
+    /// <summary>
+    /// movement control
+    /// </summary>
     void Update() {
         if (Globals.pause == true) {
             return;
@@ -98,6 +134,7 @@ public class Enemy : MonoBehaviour
 
             if (maxDurationReached == true) {
                 if (moveToPlayer == true || followPlayerMovementX == true || followPlayerMovementY == true) {
+                    // sofort rausbewegen bei den anderen wird es erst am wegpunkt gemacht
                     startMovingOut();
                 }
 
@@ -106,19 +143,32 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// timer für delay zwischen den einzelen wegpunkt bewegungen
+    /// </summary>
+    /// <param name="wait"> delay zeit in sekunden</param>
+    /// <returns></returns>
     private IEnumerator startMoveDelay(float wait) {
         yield return new WaitForSeconds(wait);
 
         stopMove = false;
 
     }
-
+    /// <summary>
+    /// timer der die maximale duration des gegner beschreibt
+    /// </summary>
+    /// <param name="wait">maximale duration in Sekunden</param>
+    /// <returns></returns>
     private IEnumerator startMaxDurationTimer(float wait) {
         yield return new WaitForSeconds(wait);
 
         maxDurationReached = true;
     }
 
+    /// <summary>
+    /// startet das rausmoven des gegners, wenn der enemy seine max Duration erreicht hat
+    /// deactiviert das enemy script
+    /// </summary>
     public void startMovingOut() {
         Move_in_out_Scene m = GetComponentInParent<Move_in_out_Scene>();
         // speed auf anderen rigidbody übergbene 
@@ -133,6 +183,15 @@ public class Enemy : MonoBehaviour
 
     }
 
+
+    /// <summary>
+    /// führt das bewegungsverhalten des enemys durch anhand der gesetzten Variablen
+    /// Priorität der Variablen
+    /// moveToPlayer
+    /// followPlayerMovementX und followPlayerMovementY
+    /// Waypoint Liste
+    /// moveToRandom Waypoint
+    /// </summary>
     private void movement() {
 
         if (moveToPlayer == true) {
@@ -266,10 +325,17 @@ public class Enemy : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// take dmg funktion
+    /// </summary>
+    /// <param name="dmg"> den dmg den der player nehmen soll</param>
     public void takeDmg(int dmg) {
         health = health - dmg;
 
         if (health <= 0) {
+
+            Instantiate(deathParticelSystem, transform.position, transform.rotation);
+
             Destroy(gameObject.transform.parent.gameObject);
             //  Globals.gameoverHandler.gameOver();
         }
@@ -278,7 +344,10 @@ public class Enemy : MonoBehaviour
 
 
 
-
+    /// <summary>
+    /// erzeugt wegpunkte anhand der übergebenen Vectoren
+    /// </summary>
+    /// <param name="v2"> position für den zu erstellenden Wegpunkt </param>
     private void createNextWaypoint(Vector2 v2) {
         GameObject g = Instantiate(waypointPrefab, transform.parent);
         g.transform.localPosition = v2;
@@ -287,6 +356,11 @@ public class Enemy : MonoBehaviour
         g.SetActive(false);
 
     }
+
+    /// <summary>
+    /// check ob ein wegpunkt erreicht wurde und starte bewegung zum nächsten wegpunkt mit delay, wenn vorhanden
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision) {
         try {
 
@@ -329,6 +403,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// bei collison dmg den player geben
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision) {
         try {
             if (collision.gameObject == Globals.player) {
@@ -348,10 +426,28 @@ public class Enemy : MonoBehaviour
 
     }
 
+
+    /// <summary>
+    /// beim zerstören wegpunkte zerstören
+    /// win condition enemy kill hinzufügen
+    /// callback zum spawner machen, damit dieser neue gegner spawner können
+    /// </summary>
     private void OnDestroy() {
-        foreach (GameObject g in waypointObject) {
-            Destroy(g);
+        try {
+            foreach (GameObject g in waypointObject) {
+                Destroy(g);
+            }
         }
-        Globals.currentWinCondition.enemyKilled();
+        catch {
+
+        }
+
+        if (Globals.currentWinCondition != null) {
+            Globals.currentWinCondition.enemyKilled();
+        }
+
+        if (spawnerCallback != null) {
+            spawnerCallback.spawnKilled();
+        }
     }
 }

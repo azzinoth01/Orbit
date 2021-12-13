@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 
+/// <summary>
+/// classe des Spielers
+/// implementiert das Controler Interface
+/// </summary>
 public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 {
     public float health;
@@ -30,14 +35,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     public List<Weapon> weapons;
 
+    public GameObject ship;
+
 
     private Vector2 impulse;
 
     private Controlls controll;
     private bool shooting;
 
-    private Animator anim;
-    public Animator antrieb;
+    // private Animator anim;
+    //   public Animator antrieb;
 
     public int additionalDmg;
     public float dmgModifier;
@@ -77,9 +84,6 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private SpriteRenderer sp;
 
 
-
-
-
     public Vector2 Impulse {
         get {
             return impulse;
@@ -89,13 +93,20 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
 
+    /// <summary>
+    /// setzt den Player in die Globalen variablen
+    /// </summary>
     private void Awake() {
         Globals.player = gameObject;
 
 
     }
 
-    public void OnCharge(InputAction.CallbackContext context) {
+    /// <summary>
+    /// controler action für den doge befehl
+    /// </summary>
+    /// <param name="context"></param>
+    public void OnDoge(InputAction.CallbackContext context) {
         //throw new System.NotImplementedException();
 
         if (context.started) {
@@ -103,68 +114,85 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
 
+    /// <summary>
+    /// controler action für den move down befehl
+    /// </summary>
+    /// <param name="context"></param>
     public void OnMove_down(InputAction.CallbackContext context) {
 
 
 
         if (context.started) {
             impulse = impulse + (Vector2.down * force);
-            anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
-            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
+            //    anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
+            // antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.down * force);
-            anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
-            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
+            //  anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
+            //antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
         }
         //Debug.Log("move down");
     }
-
+    /// <summary>
+    /// controler action für den move left befehl
+    /// </summary>
+    /// <param name="context"></param>
     public void OnMove_left(InputAction.CallbackContext context) {
 
         if (context.started) {
             impulse = impulse + (Vector2.left * force);
-            anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
-            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
+            //       anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
+            //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.left * force);
-            anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
-            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
+            //    anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
+            // antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
         }
     }
-
+    /// <summary>
+    /// controler action für den move right befehl
+    /// </summary>
+    /// <param name="context"></param>
     public void OnMove_rigth(InputAction.CallbackContext context) {
 
         if (context.started) {
             impulse = impulse + (Vector2.right * force);
-            anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
-            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
+            //      anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
+            //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.right * force);
-            anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
-            antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
+            //    anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
+            //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
 
 
         }
     }
-
+    /// <summary>
+    /// controler action für den move up befehl
+    /// </summary>
+    /// <param name="context"></param>
     public void OnMove_up(InputAction.CallbackContext context) {
 
         if (context.started) {
             impulse = impulse + (Vector2.up * force);
-            anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
-            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
+            //     anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
+            //  antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
 
         }
         else if (context.canceled) {
             impulse = impulse - (Vector2.up * force);
-            anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
-            antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
+            //   anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
+            //  antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
         }
     }
 
+    /// <summary>
+    /// controler action für den shoot befehl
+    /// </summary>
+    /// <param name="context"></param>
     public void OnShoot(InputAction.CallbackContext context) {
 
         if (context.started) {
@@ -174,6 +202,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             shooting = false;
         }
     }
+    /// <summary>
+    /// controler action für das Pause Menu
+    /// </summary>
+    /// <param name="context"></param>
     public void OnPause_menu(InputAction.CallbackContext context) {
         //  Debug.Log("pause called" + context);
 
@@ -189,11 +221,17 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
 
-
-    // Start is called before the first frame update
+    /// <summary>
+    /// erzeugt das Controler Object und lädt alle rebinds
+    /// </summary>
     void Start() {
+
         if (controll == null) {
             controll = new Controlls();
+
+            Rebinding_menu rebind = new Rebinding_menu();
+            controll = rebind.loadRebinding(controll);
+
             controll.bullet_hell.Enable();
             controll.bullet_hell.SetCallbacks(this);
 
@@ -202,7 +240,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         impulse = new Vector2(0, 0);
 
-        anim = GetComponent<Animator>();
+        //  anim = GetComponent<Animator>();
 
 
 
@@ -219,11 +257,15 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
 
     }
+    /// <summary>
+    /// startet jegliche benötigte corutine
+    /// </summary>
     private void OnEnable() {
         onGlobalCooldown = false;
         shooting = false;
         isDoging = false;
         isImmun = false;
+
         currentHealth = health;
         //currentschield = maxschield;
         StartCoroutine(shootingHandler());
@@ -231,6 +273,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         StartCoroutine(smoothHealthDrop());
         StartCoroutine(smoothSchieldDrop());
         StartCoroutine(schieldRefresh(schieldRefreshRate));
+
         maxDogeCharges = dogeCharges;
         flickerDirection = -1;
         sp = GetComponent<SpriteRenderer>();
@@ -239,6 +282,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
 
+    /// <summary>
+    /// funktion die einen flickering effekt erzeugt
+    /// </summary>
     private void flicker() {
 
         sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + (flickerDirection * immunityFlickerRate * Time.deltaTime));
@@ -253,6 +299,13 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
 
+
+    /// <summary>
+    /// corutine die das bewegen handelt
+    /// speed wird normalized damit die maximale geschwindingkeit einen Perfecten Kreis bildet, 
+    /// damit eine schräge bewegung nicht schneller ist als eine hoch/runter/links/rechts bewegung
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator moveHandler() {
         while (true) {
             if (Globals.pause == false && isDoging == false) {
@@ -262,6 +315,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
                 body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+                float angle;
+                if (body.velocity.magnitude == 0) {
+                    angle = 90;
+                }
+                else {
+                    angle = Vector2.SignedAngle(Vector2.right, body.velocity);
+                }
+
+
+                ship.transform.eulerAngles = new Vector3(0, 0, angle - 90);
             }
 
             yield return null;
@@ -269,6 +332,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
 
+    /// <summary>
+    /// corutine die dauerhaft prüft ob der Shoot button gedrückt wird und schüsse der Waffe abfeuert
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator shootingHandler() {
 
 
@@ -282,6 +349,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
 
+    /// <summary>
+    /// corutine die langsam das leben dropt, wenn man schaden genommen hat, damit das leben flüssig nach unten geht
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator smoothHealthDrop() {
 
         while (true) {
@@ -320,6 +391,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
 
+
+    /// <summary>
+    /// gleich wie beim healthdrop nur fürs schild
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator smoothSchieldDrop() {
 
         while (true) {
@@ -343,6 +419,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             }
 
             if (schieldbar.fillAmount <= 0) {
+                // startet das Schildauffüllen nur nachdem das schild leer ist
                 StartCoroutine(schieldRefresh(schieldRefreshRate));
             }
 
@@ -350,6 +427,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
 
+    /// <summary>
+    /// corutine die das Schild aufläd
+    /// </summary>
+    /// <param name="wait">Zeit zwischen den Schild wert erhöhungen</param>
+    /// <returns></returns>
     public IEnumerator schieldRefresh(float wait) {
 
 
@@ -368,6 +450,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
 
+    /// <summary>
+    /// take dmg funktion
+    /// </summary>
+    /// <param name="dmg"> den dmg den der player nehmen soll</param>
     public void takeDmg(int dmg) {
         if (isImmun == true) {
             return;
@@ -391,22 +477,33 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             //Globals.gameoverHandler.gameOver();
         }
         isImmun = true;
-        gameObject.layer = 13; // immunity layer
+        gameObject.layer = (int)Layer_enum.player_immunity; // immunity layer
         immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterHit));
     }
 
+    /// <summary>
+    /// destroys den controller input, weil sonst würde der bestehen bleiben nachdem der Spieler zerstört wurde
+    /// </summary>
     private void OnDestroy() {
 
         controll.Dispose();
+
     }
 
-
+    /// <summary>
+    /// destroys den controller input
+    /// </summary>
     public void clearControlls() {
 
         controll.Dispose();
 
     }
 
+    /// <summary>
+    /// charge refill timer
+    /// </summary>
+    /// <param name="cooldown">cooldwon des charges in sekunden </param>
+    /// <returns></returns>
     private IEnumerator chargeFill(float cooldown) {
         yield return new WaitForSeconds(cooldown);
 
@@ -420,16 +517,24 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
 
+    /// <summary>
+    /// cooldown Timer zwischen spezailfähigkeiten damit diese nicht gespammt werden können
+    /// </summary>
+    /// <param name="cooldown"> zeit zwischen spezialfähigkeiten in sekunden</param>
+    /// <returns></returns>
     private IEnumerator globalCooldownTimer(float cooldown) {
         yield return new WaitForSeconds(cooldown);
         onGlobalCooldown = false;
     }
 
+    /// <summary>
+    /// doge spezialfähigkeit, welche den spieler für kurze zeit in eine gewise richtung beschleunigt
+    /// </summary>
     private void doge() {
         if (dogeCharges > 0 && onGlobalCooldown == false && isDoging == false && impulse != Vector2.zero) {
             isDoging = true;
             isImmun = true;
-            gameObject.layer = 13; // immunity layer
+            gameObject.layer = (int)Layer_enum.player_immunity; // immunity layer
 
 
 
@@ -485,7 +590,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         }
     }
-
+    /// <summary>
+    /// corutine die das flickern vom spieler darstellt wenn er schadens immun ist
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator immunityFlickerHandler() {
 
 
@@ -498,17 +606,26 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         flickerCo = null;
     }
 
+    /// <summary>
+    /// timer für das immun sein des Spielers
+    /// </summary>
+    /// <param name="time"> dauer der immunity des spielers in sekunden</param>
+    /// <returns></returns>
     private IEnumerator immunityTime(float time) {
         if (flickerCo == null) {
             flickerCo = StartCoroutine(immunityFlickerHandler());
         }
         yield return new WaitForSeconds(time);
         isImmun = false;
-        gameObject.layer = 7; //player layer
+        gameObject.layer = (int)Layer_enum.player; //player layer
     }
 
 
-
+    /// <summary>
+    /// timer der das dogen abbricht, wenn der Zielpunkt nicht erreicht wird
+    /// </summary>
+    /// <param name="duration">die dauer in sekunden</param>
+    /// <returns></returns>
     private IEnumerator maxDogeTimer(float duration) {
         yield return new WaitForSeconds(duration);
         isDoging = false;
@@ -523,6 +640,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
 
+    /// <summary>
+    /// visualisiert die charge anzeige für das dogen
+    /// </summary>
+    /// <param name="used">variable die beschreibt ob ein charge benutzt wurde oder nicht</param>
     private void dogeVisual(bool used) {
         if (used == true) {
 
@@ -547,6 +668,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
 
+    /// <summary>
+    /// check ob der doge zielpunkt erreich wurde
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.gameObject == waypoint) {
@@ -563,5 +688,6 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterDoge));
         }
     }
+
 
 }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
+/// <summary>
+/// enum für Tags
+/// </summary>
 public enum Tag_enum
 {
     bullet_border,
