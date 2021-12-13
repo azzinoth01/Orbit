@@ -461,6 +461,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             return;
         }
 
+        StartCoroutine(Globals.currentCamera.GetComponent<CameraScript>().startScreenShake());
+
         if (schieldbar.fillAmount >= 1) {
             currentschield = 0;
 
