@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 3233747972065368505}
   - component: {fileID: 8039712697005849738}
   - component: {fileID: 4694910037019245149}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shooter_Enemy_basic (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

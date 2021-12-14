@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8388893154004824649}
   - component: {fileID: 3970219249754593146}
   - component: {fileID: 1849970681568285101}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shooter_Enemy_triple_unten
   m_TagString: Untagged
   m_Icon: {fileID: 0}

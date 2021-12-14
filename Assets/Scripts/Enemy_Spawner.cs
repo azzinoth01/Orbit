@@ -103,6 +103,7 @@ public class Enemy_Spawner : MonoBehaviour
 
             currentSpawnCount = currentSpawnCount + 1;
             GameObject g = Instantiate(enemySpawnInfo.enemyPrefab, transform);
+            g.layer = (int)Layer_enum.enemy;
             // callback setzten, um spawncounter zu verringern
             g.GetComponentInChildren<Enemy>(true).SpawnerCallback = this;
             if (enemySpawnInfo.enemysToSpawn == 0 || enemySpawnInfo.enemysToSpawn > enemySpawnInfo.CurrentEnemysSpawned + 1) {

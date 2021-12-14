@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6368142809608827983}
   - component: {fileID: 1950736603342344572}
   - component: {fileID: 3866075629268703147}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shooter_Enemy_triple_oben
   m_TagString: Untagged
   m_Icon: {fileID: 0}
