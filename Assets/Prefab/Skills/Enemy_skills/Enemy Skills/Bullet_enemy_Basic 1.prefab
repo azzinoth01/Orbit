@@ -47,4 +47,6 @@ MonoBehaviour:
   - startRotation: 0
     bulletBaseDmg: 1
     bullet: {fileID: 6289848151660166018, guid: 4df2c2f662a554444ab4a75114e64232, type: 3}
+    startEffect: {fileID: 0}
+    sfxSound: {fileID: 2127123000781025630, guid: 1eebad3b84860e34d9f59c38e6d279a3, type: 3}
   maxDuration: 4
