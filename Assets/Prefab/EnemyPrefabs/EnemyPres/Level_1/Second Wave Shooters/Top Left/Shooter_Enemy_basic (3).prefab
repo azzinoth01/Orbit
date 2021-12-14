@@ -248,11 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   body: {fileID: 351557362495402811}
-  waypoints:
-  - {x: 0, y: 0}
-  - {x: 5, y: 0}
-  - {x: 0, y: 0}
-  - {x: -5, y: 0}
+  waypoints: []
   moveToRandomWaypoints: 0
   moveToPlayer: 0
   followPlayerMovementX: 0
@@ -262,7 +258,7 @@ MonoBehaviour:
   maxSpeed: 10
   loop: 1
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
-  maxDuration: 0
+  maxDuration: 4
   delayToNextWaypoint: 2
   collisionDmg: 3
   destoryAfterCollison: 0

@@ -147,7 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   body: {fileID: 8426655646871696063}
-  waypoints: []
+  waypoints:
+  - {x: 0, y: 0}
   moveToRandomWaypoints: 0
   moveToPlayer: 0
   followPlayerMovementX: 0
@@ -177,7 +178,7 @@ MonoBehaviour:
   shootsToCreate: 4
   skillsequenze:
   - delay: 1.5
-    skill: {fileID: 7396633332625948144, guid: 82d2feef455dee742b7cb5dd7cff6005, type: 3}
+    skill: {fileID: 5043835134772999081, guid: 826dc7bc27419c04696d99e3b7bee778, type: 3}
   additionalDmg: 0
   dmgModifier: 1
 --- !u!1 &8426655648491254708
