@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// controliert die Particel system effecte
+/// </summary>
 public class ParticleControl : MonoBehaviour
 {
     public ParticleSystem particle;
     public bool destroyAfterPlay;
 
     /// <summary>
-    /// starts the particle system playing
+    /// startet das particle system 
     /// </summary>
     private void OnEnable() {
         particle.Play();
@@ -18,7 +21,7 @@ public class ParticleControl : MonoBehaviour
 
 
     /// <summary>
-    /// deactivates or destorys the gameobject after playing
+    /// deactivates or destorys the gameobject nach dem spielen
     /// </summary>
     private void Update() {
         if (Globals.pause == true) {
