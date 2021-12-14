@@ -139,7 +139,7 @@ public class Enemy : MonoBehaviour
             }
 
             if (maxDurationReached == true) {
-                if (moveToPlayer == true || followPlayerMovementX == true || followPlayerMovementY == true) {
+                if (moveToPlayer == true || followPlayerMovementX == true || followPlayerMovementY == true || (waypoints.Count == waypointIndex && loop == false && waypoints.Count != 0)) {
                     // sofort rausbewegen bei den anderen wird es erst am wegpunkt gemacht
                     startMovingOut();
                 }
@@ -320,6 +320,7 @@ public class Enemy : MonoBehaviour
 
 
         }
+
         else if (designer != null && waypoints.Count == waypointIndex) {
 
 
