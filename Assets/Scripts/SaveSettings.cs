@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+
+/// <summary>
+/// container classe zum speichern von Settings
+/// </summary>
 [Serializable]
 public class SaveSettings
 {
@@ -41,7 +45,12 @@ public class SaveSettings
         }
     }
 
-
+    /// <summary>
+    /// standard consturktor
+    /// </summary>
+    /// <param name="isMute"> setzt mute button</param>
+    /// <param name="backgroundVolume"> setzt background Volume 0-1</param>
+    /// <param name="sfxVolume"> setzt sfx Volume 0-1</param>
     public SaveSettings(bool isMute, float backgroundVolume, float sfxVolume) {
 
         this.isMute = isMute;
@@ -49,7 +58,9 @@ public class SaveSettings
         this.sfxVolume = sfxVolume;
     }
 
-
+    /// <summary>
+    /// speichert die Settings
+    /// </summary>
     public void savingSetting() {
 
         string json = JsonUtility.ToJson(this);
@@ -62,6 +73,10 @@ public class SaveSettings
 
     }
 
+    /// <summary>
+    /// ladet die Settings aus einer gespeicherten Datei, wenn vorhanden
+    /// </summary>
+    /// <returns> gibt die gespeicherten Settings zurück</returns>
     public static SaveSettings loadSettings() {
 
         SaveSettings s = new SaveSettings(false, 1, 1);

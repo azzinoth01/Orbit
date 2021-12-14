@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
+/// <summary>
+/// controlliert die Soundeffecte
+/// </summary>
 public class SoundControl : MonoBehaviour
 {
     public AudioMixerGroup masterGroup;
@@ -26,6 +29,9 @@ public class SoundControl : MonoBehaviour
     public Sprite unMuteSp;
 
 
+    /// <summary>
+    /// ladet die start Soundsettings, wenn welche vorhanden sind, ansonsten werden die Standardsettings verwendet
+    /// </summary>
     private void Start() {
 
         saveSetting = SaveSettings.loadSettings();
@@ -46,24 +52,10 @@ public class SoundControl : MonoBehaviour
 
 
 
-    private void Update() {
-        //float volume;
 
-        //if (slider == 0) {
-        //    volume = -80;
-        //}
-        //else {
-        //    volume = Mathf.Log10(slider) * 20;
-        //}
-
-
-
-        // Debug.Log(volume);
-
-        //master.audioMixer.SetFloat("masterVolume", volume);
-
-    }
-
+    /// <summary>
+    /// setzt die geladen Settings auf die UI und stellt die Soundgroups ein
+    /// </summary>
     public void setStartSettings() {
         if (isMute == true) {
             mute.TransitionTo(0);
@@ -100,6 +92,10 @@ public class SoundControl : MonoBehaviour
 
     }
 
+
+    /// <summary>
+    /// toggelt den Mute button
+    /// </summary>
     public void toggleMute() {
 
         if (isMute == false) {
@@ -115,6 +111,9 @@ public class SoundControl : MonoBehaviour
         saveSettingChanges();
     }
 
+    /// <summary>
+    /// setzt den sfx Sound nach ändern des Sliders
+    /// </summary>
     public void sfxChanged() {
         sfxVolume = sfxSlider.value;
 
@@ -130,6 +129,9 @@ public class SoundControl : MonoBehaviour
         saveSettingChanges();
     }
 
+    /// <summary>
+    /// setzt den backgroundsound nach ändern des Sliders
+    /// </summary>
     public void backgroundSoundChange() {
 
         backgroundVolume = backgroundSlider.value;
@@ -148,6 +150,9 @@ public class SoundControl : MonoBehaviour
         saveSettingChanges();
     }
 
+    /// <summary>
+    /// speichert die Soundsettings
+    /// </summary>
     public void saveSettingChanges() {
         saveSetting.IsMute = isMute;
         saveSetting.BackgroundVolume = backgroundVolume;
