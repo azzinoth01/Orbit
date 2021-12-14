@@ -9,7 +9,7 @@ using UnityEngine;
 /// </summary>
 public class Enemy : MonoBehaviour
 {
-    public int health;
+    public float health;
 
 
 
@@ -111,7 +111,13 @@ public class Enemy : MonoBehaviour
         }
 
 
+        try {
+            BoxCollider2D collider = GetComponent<BoxCollider2D>();
+            collider.isTrigger = false;
+        }
+        catch {
 
+        }
 
 
 
@@ -170,16 +176,24 @@ public class Enemy : MonoBehaviour
     /// deactiviert das enemy script
     /// </summary>
     public void startMovingOut() {
-        Move_in_out_Scene m = GetComponentInParent<Move_in_out_Scene>();
-        // speed auf anderen rigidbody übergbene 
-        m.body.bodyType = RigidbodyType2D.Dynamic;
-        m.body.velocity = body.velocity;
+        //Debug.Log(transform.parent.gameObject.name);
 
-        // weil sich sonst das schiff nicht mitbewegt
-        //body.bodyType = RigidbodyType2D.Kinematic;
-        //Debug.Log("versuch zu rausbewegung zu starten");
-        m.startMoveOut();
-        enabled = false;
+        try {
+            Move_in_out_Scene m = GetComponentInParent<Move_in_out_Scene>();
+            // speed auf anderen rigidbody übergbene 
+            m.body.bodyType = RigidbodyType2D.Dynamic;
+            m.body.velocity = body.velocity;
+
+            // weil sich sonst das schiff nicht mitbewegt
+            //body.bodyType = RigidbodyType2D.Kinematic;
+            //Debug.Log("versuch zu rausbewegung zu starten");
+            m.startMoveOut();
+            enabled = false;
+        }
+        catch {
+            //kein moveout script vorhanden zerstöre enemy an dieser Stelle
+            Destroy(transform.parent.gameObject);
+        }
 
     }
 
@@ -194,7 +208,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private void movement() {
 
-        if (moveToPlayer == true) {
+        if (moveToPlayer == true && Globals.player != null) {
 
             Vector2 direction;
             if (savedDirection == Vector2.zero) {
@@ -328,15 +342,17 @@ public class Enemy : MonoBehaviour
     /// <summary>
     /// take dmg funktion
     /// </summary>
-    /// <param name="dmg"> den dmg den der player nehmen soll</param>
-    public void takeDmg(int dmg) {
+    /// <param name="dmg"> den dmg den der enemy nehmen soll</param>
+    public void takeDmg(float dmg) {
+        //Debug.Log(dmg);
+        //  Debug.Log(health);
         health = health - dmg;
-
+        //  Debug.Log(health);
         if (health <= 0) {
-
+            Destroy(gameObject.transform.parent.gameObject);
             Instantiate(deathParticelSystem, transform.position, transform.rotation);
 
-            Destroy(gameObject.transform.parent.gameObject);
+
             //  Globals.gameoverHandler.gameOver();
         }
     }

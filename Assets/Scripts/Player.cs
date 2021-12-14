@@ -83,7 +83,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private bool isImmun;
     private SpriteRenderer sp;
 
-
+    public GameObject deathEffect;
 
 
     public Vector2 Impulse {
@@ -388,6 +388,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             else {
                 healthbar.color = healthbarBelow30;
             }
+            if (healthbar.fillAmount <= 0) {
+                Destroy(gameObject);
+                Instantiate(deathEffect, transform.position, transform.rotation);
+                Globals.menuHandler.setGameOver();
+            }
+
 
             yield return null;
         }
@@ -456,12 +462,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// take dmg funktion
     /// </summary>
     /// <param name="dmg"> den dmg den der player nehmen soll</param>
-    public void takeDmg(int dmg) {
+    public void takeDmg(float dmg) {
         if (isImmun == true) {
             return;
         }
 
-        StartCoroutine(Globals.currentCamera.GetComponent<CameraScript>().startScreenShake());
+
 
         if (schieldbar.fillAmount >= 1) {
             currentschield = 0;
@@ -472,12 +478,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         else {
             currentHealth = currentHealth - dmg;
+            if (currentHealth > 0) {
+                StartCoroutine(Globals.currentCamera.GetComponent<CameraScript>().startScreenShake());
+            }
+
         }
 
 
         if (currentHealth <= 0) {
-            Destroy(gameObject);
-            Globals.menuHandler.setGameOver();
+            return;
+
             //Globals.gameoverHandler.gameOver();
         }
         isImmun = true;
