@@ -262,7 +262,7 @@ MonoBehaviour:
   delayToNextWaypoint: 2
   collisionDmg: 3
   destoryAfterCollison: 0
-  deathParticelSystem: {fileID: 0}
+  deathParticelSystem: {fileID: 712244961376336435, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
 --- !u!114 &1658405960773671685
 MonoBehaviour:
   m_ObjectHideFlags: 0
