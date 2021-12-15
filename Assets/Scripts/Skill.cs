@@ -45,7 +45,7 @@ public class Skill : MonoBehaviour
                 b.InstantStartEffect = effect;
             }
             if (b.SfxSound != null) {
-                GameObject sound = Instantiate(b.SfxSound, g.transform);
+                GameObject sound = Instantiate(b.SfxSound, g.transform.parent.transform);
             }
 
 
