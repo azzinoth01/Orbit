@@ -115,6 +115,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             doge();
+
         }
     }
 
