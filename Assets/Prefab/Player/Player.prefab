@@ -144,7 +144,7 @@ MonoBehaviour:
   healthbarAbove60: {r: 0.27450982, g: 0.5647059, b: 0.05882353, a: 1}
   healthbarAbove30: {r: 0.9254902, g: 0.78039217, b: 0.20392157, a: 1}
   healthbarBelow30: {r: 0.3647059, g: 0.08235294, b: 0, a: 1}
-  maxschield: 100
+  maxschield: 200
   currentschield: 0
   schieldbar: {fileID: 0}
   schieldbarStepValue: 0.01
@@ -160,10 +160,10 @@ MonoBehaviour:
   ship: {fileID: 2928281826912314589}
   additionalDmg: 0
   dmgModifier: 1
-  immunityFlickerRate: 4
+  immunityFlickerRate: 2
   maxFlickerRange: 0
-  immunityTimeAfterHit: 3
-  immunityTimeAfterDoge: 2
+  immunityTimeAfterHit: 2
+  immunityTimeAfterDoge: 1
   dogeCharges: 3
   dogeRange: 5
   dogeSpeed: 50
@@ -177,6 +177,7 @@ MonoBehaviour:
   - {fileID: -6364959523216148980, guid: 29c670128f438c246968f3e987e9076d, type: 3}
   chargeUI: {fileID: 0}
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
+  deathEffect: {fileID: 712244961376336435, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
 --- !u!81 &4524067518927202921
 AudioListener:
   m_ObjectHideFlags: 0
@@ -230,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9033d284a1874459236412a53a2ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 125
+  rotationSpeed: 250
 --- !u!212 &1428071612
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -378,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skill: {fileID: 184400747927865093, guid: 2b25e87c9742d32479897e74d46f7f07, type: 3}
-  reloadTime: 0.1
+  reloadTime: 0.2
   shootsToCreate: 20
   additionalDmg: 0
   dmgModifier: 1
