@@ -731,6 +731,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 1720257024093458877, guid: b45d34be243a8254b9511e8083a4593c, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1720257024524044648, guid: b45d34be243a8254b9511e8083a4593c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -831,6 +835,26 @@ PrefabInstance:
       propertyPath: rebidningMenu
       value: 
       objectReference: {fileID: 4367926770878384808}
+    - target: {fileID: 1720257025269634758, guid: b45d34be243a8254b9511e8083a4593c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fded29de54e057640adf0cc98309052d, type: 3}
+    - target: {fileID: 1720257025269634759, guid: b45d34be243a8254b9511e8083a4593c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720257025269634759, guid: b45d34be243a8254b9511e8083a4593c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720257025269634759, guid: b45d34be243a8254b9511e8083a4593c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720257025269634759, guid: b45d34be243a8254b9511e8083a4593c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 38.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45d34be243a8254b9511e8083a4593c, type: 3}
 --- !u!114 &1720257024745722054 stripped
