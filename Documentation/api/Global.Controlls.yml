@@ -1,0 +1,1004 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Controlls
+  commentId: T:Global.Controlls
+  id: Controlls
+  parent: Global
+  children:
+  - Global.Controlls.#ctor
+  - Global.Controlls.asset
+  - Global.Controlls.bindingMask
+  - Global.Controlls.bindings
+  - Global.Controlls.bullet_hell
+  - Global.Controlls.Contains(InputAction)
+  - Global.Controlls.controlSchemes
+  - Global.Controlls.devices
+  - Global.Controlls.Disable
+  - Global.Controlls.Dispose
+  - Global.Controlls.Enable
+  - Global.Controlls.FindAction(System.String,System.Boolean)
+  - Global.Controlls.FindBinding(InputBinding,InputAction@)
+  - Global.Controlls.GetEnumerator
+  langs:
+  - csharp
+  - vb
+  name: Controlls
+  nameWithType: Controlls
+  fullName: Controlls
+  type: Class
+  source:
+    id: Controlls
+    path: ''
+    startLine: 17
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class Controlls : IInputActionCollection2, IDisposable'
+    content.vb: >-
+      Public Class Controlls
+          Inherits IInputActionCollection2
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Controlls.asset
+  commentId: P:Global.Controlls.asset
+  id: asset
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: asset
+  nameWithType: Controlls.asset
+  fullName: Controlls.asset
+  type: Property
+  source:
+    id: asset
+    path: ''
+    startLine: 19
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public InputActionAsset asset { get; }
+    parameters: []
+    return:
+      type: Global.InputActionAsset
+    content.vb: Public ReadOnly Property asset As InputActionAsset
+  overload: Global.Controlls.asset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.#ctor
+  commentId: M:Global.Controlls.#ctor
+  id: '#ctor'
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: Controlls()
+  nameWithType: Controlls.Controlls()
+  fullName: Controlls.Controlls()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 20
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Controlls()
+    content.vb: Public Sub New
+  overload: Global.Controlls.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.Dispose
+  commentId: M:Global.Controlls.Dispose
+  id: Dispose
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Controlls.Dispose()
+  fullName: Controlls.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: ''
+    startLine: 242
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: Global.Controlls.Dispose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.bindingMask
+  commentId: P:Global.Controlls.bindingMask
+  id: bindingMask
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: bindingMask
+  nameWithType: Controlls.bindingMask
+  fullName: Controlls.bindingMask
+  type: Property
+  source:
+    id: bindingMask
+    path: ''
+    startLine: 247
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public InputBinding? bindingMask { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{InputBinding}
+    content.vb: Public Property bindingMask As InputBinding?
+  overload: Global.Controlls.bindingMask*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.devices
+  commentId: P:Global.Controlls.devices
+  id: devices
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: devices
+  nameWithType: Controlls.devices
+  fullName: Controlls.devices
+  type: Property
+  source:
+    id: devices
+    path: ''
+    startLine: 253
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public ReadOnlyArray<InputDevice>? devices { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{ReadOnlyArray{InputDevice}}
+    content.vb: Public Property devices As ReadOnlyArray(Of InputDevice)?
+  overload: Global.Controlls.devices*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.controlSchemes
+  commentId: P:Global.Controlls.controlSchemes
+  id: controlSchemes
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: controlSchemes
+  nameWithType: Controlls.controlSchemes
+  fullName: Controlls.controlSchemes
+  type: Property
+  source:
+    id: controlSchemes
+    path: ''
+    startLine: 259
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public ReadOnlyArray<InputControlScheme> controlSchemes { get; }
+    parameters: []
+    return:
+      type: Global.ReadOnlyArray{InputControlScheme}
+    content.vb: Public ReadOnly Property controlSchemes As ReadOnlyArray(Of InputControlScheme)
+  overload: Global.Controlls.controlSchemes*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.Contains(InputAction)
+  commentId: M:Global.Controlls.Contains(InputAction)
+  id: Contains(InputAction)
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: Contains(InputAction)
+  nameWithType: Controlls.Contains(InputAction)
+  fullName: Controlls.Contains(InputAction)
+  type: Method
+  source:
+    id: Contains
+    path: ''
+    startLine: 261
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool Contains(InputAction action)
+    parameters:
+    - id: action
+      type: Global.InputAction
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(action As InputAction) As Boolean
+  overload: Global.Controlls.Contains*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.GetEnumerator
+  commentId: M:Global.Controlls.GetEnumerator
+  id: GetEnumerator
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: Controlls.GetEnumerator()
+  fullName: Controlls.GetEnumerator()
+  type: Method
+  source:
+    id: GetEnumerator
+    path: ''
+    startLine: 266
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public IEnumerator<InputAction> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{InputAction}
+    content.vb: Public Function GetEnumerator As IEnumerator(Of InputAction)
+  overload: Global.Controlls.GetEnumerator*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.Enable
+  commentId: M:Global.Controlls.Enable
+  id: Enable
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: Controlls.Enable()
+  fullName: Controlls.Enable()
+  type: Method
+  source:
+    id: Enable
+    path: ''
+    startLine: 276
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Enable()
+    content.vb: Public Sub Enable
+  overload: Global.Controlls.Enable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.Disable
+  commentId: M:Global.Controlls.Disable
+  id: Disable
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: Disable()
+  nameWithType: Controlls.Disable()
+  fullName: Controlls.Disable()
+  type: Method
+  source:
+    id: Disable
+    path: ''
+    startLine: 281
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Disable()
+    content.vb: Public Sub Disable
+  overload: Global.Controlls.Disable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.bindings
+  commentId: P:Global.Controlls.bindings
+  id: bindings
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: bindings
+  nameWithType: Controlls.bindings
+  fullName: Controlls.bindings
+  type: Property
+  source:
+    id: bindings
+    path: ''
+    startLine: 285
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public IEnumerable<InputBinding> bindings { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{InputBinding}
+    content.vb: Public ReadOnly Property bindings As IEnumerable(Of InputBinding)
+  overload: Global.Controlls.bindings*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.FindAction(System.String,System.Boolean)
+  commentId: M:Global.Controlls.FindAction(System.String,System.Boolean)
+  id: FindAction(System.String,System.Boolean)
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: FindAction(String, Boolean)
+  nameWithType: Controlls.FindAction(String, Boolean)
+  fullName: Controlls.FindAction(System.String, System.Boolean)
+  type: Method
+  source:
+    id: FindAction
+    path: ''
+    startLine: 287
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false)
+    parameters:
+    - id: actionNameOrId
+      type: System.String
+    - id: throwIfNotFound
+      type: System.Boolean
+    return:
+      type: Global.InputAction
+    content.vb: Public Function FindAction(actionNameOrId As String, throwIfNotFound As Boolean = False) As InputAction
+  overload: Global.Controlls.FindAction*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.FindBinding(InputBinding,InputAction@)
+  commentId: M:Global.Controlls.FindBinding(InputBinding,InputAction@)
+  id: FindBinding(InputBinding,InputAction@)
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: FindBinding(InputBinding, out InputAction)
+  nameWithType: Controlls.FindBinding(InputBinding, out InputAction)
+  fullName: Controlls.FindBinding(InputBinding, out InputAction)
+  type: Method
+  source:
+    id: FindBinding
+    path: ''
+    startLine: 291
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int FindBinding(InputBinding bindingMask, out InputAction action)
+    parameters:
+    - id: bindingMask
+      type: Global.InputBinding
+    - id: action
+      type: Global.InputAction
+    return:
+      type: System.Int32
+    content.vb: Public Function FindBinding(bindingMask As InputBinding, ByRef action As InputAction) As Integer
+  overload: Global.Controlls.FindBinding*
+  nameWithType.vb: Controlls.FindBinding(InputBinding, ByRef InputAction)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Controlls.FindBinding(InputBinding, ByRef InputAction)
+  name.vb: FindBinding(InputBinding, ByRef InputAction)
+- uid: Global.Controlls.bullet_hell
+  commentId: P:Global.Controlls.bullet_hell
+  id: bullet_hell
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: bullet_hell
+  nameWithType: Controlls.bullet_hell
+  fullName: Controlls.bullet_hell
+  type: Property
+  source:
+    id: bullet_hell
+    path: ''
+    startLine: 375
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Controlls.Bullet_hellActions bullet_hell { get; }
+    parameters: []
+    return:
+      type: Global.Controlls.Bullet_hellActions
+    content.vb: Public ReadOnly Property bullet_hell As Controlls.Bullet_hellActions
+  overload: Global.Controlls.bullet_hell*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Controlls.asset*
+  commentId: Overload:Global.Controlls.asset
+  name: asset
+  nameWithType: Controlls.asset
+  fullName: Controlls.asset
+- uid: Global.InputActionAsset
+  commentId: '!:Global.InputActionAsset'
+  isExternal: true
+  name: InputActionAsset
+  nameWithType: InputActionAsset
+  fullName: InputActionAsset
+- uid: Global.Controlls.#ctor*
+  commentId: Overload:Global.Controlls.#ctor
+  name: Controlls
+  nameWithType: Controlls.Controlls
+  fullName: Controlls.Controlls
+- uid: Global.Controlls.Dispose*
+  commentId: Overload:Global.Controlls.Dispose
+  name: Dispose
+  nameWithType: Controlls.Dispose
+  fullName: Controlls.Dispose
+- uid: Global.Controlls.bindingMask*
+  commentId: Overload:Global.Controlls.bindingMask
+  name: bindingMask
+  nameWithType: Controlls.bindingMask
+  fullName: Controlls.bindingMask
+- uid: System.Nullable{InputBinding}
+  commentId: T:System.Nullable{InputBinding}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<InputBinding>
+  nameWithType: Nullable<InputBinding>
+  fullName: System.Nullable<InputBinding>
+  nameWithType.vb: Nullable(Of InputBinding)
+  fullName.vb: System.Nullable(Of InputBinding)
+  name.vb: Nullable(Of InputBinding)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.InputBinding
+    name: InputBinding
+    nameWithType: InputBinding
+    fullName: InputBinding
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.InputBinding
+    name: InputBinding
+    nameWithType: InputBinding
+    fullName: InputBinding
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Controlls.devices*
+  commentId: Overload:Global.Controlls.devices
+  name: devices
+  nameWithType: Controlls.devices
+  fullName: Controlls.devices
+- uid: System.Nullable{ReadOnlyArray{InputDevice}}
+  commentId: T:System.Nullable{ReadOnlyArray{InputDevice}}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<ReadOnlyArray<InputDevice>>
+  nameWithType: Nullable<ReadOnlyArray<InputDevice>>
+  fullName: System.Nullable<ReadOnlyArray<InputDevice>>
+  nameWithType.vb: Nullable(Of ReadOnlyArray(Of InputDevice))
+  fullName.vb: System.Nullable(Of ReadOnlyArray(Of InputDevice))
+  name.vb: Nullable(Of ReadOnlyArray(Of InputDevice))
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.ReadOnlyArray`1
+    name: ReadOnlyArray
+    nameWithType: ReadOnlyArray
+    fullName: ReadOnlyArray
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.InputDevice
+    name: InputDevice
+    nameWithType: InputDevice
+    fullName: InputDevice
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.ReadOnlyArray`1
+    name: ReadOnlyArray
+    nameWithType: ReadOnlyArray
+    fullName: ReadOnlyArray
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.InputDevice
+    name: InputDevice
+    nameWithType: InputDevice
+    fullName: InputDevice
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Controlls.controlSchemes*
+  commentId: Overload:Global.Controlls.controlSchemes
+  name: controlSchemes
+  nameWithType: Controlls.controlSchemes
+  fullName: Controlls.controlSchemes
+- uid: Global.ReadOnlyArray{InputControlScheme}
+  commentId: '!:Global.ReadOnlyArray{InputControlScheme}'
+  definition: Global.ReadOnlyArray`1
+  name: ReadOnlyArray<InputControlScheme>
+  nameWithType: ReadOnlyArray<InputControlScheme>
+  fullName: ReadOnlyArray<InputControlScheme>
+  nameWithType.vb: ReadOnlyArray(Of InputControlScheme)
+  fullName.vb: ReadOnlyArray(Of InputControlScheme)
+  name.vb: ReadOnlyArray(Of InputControlScheme)
+  spec.csharp:
+  - uid: Global.ReadOnlyArray`1
+    name: ReadOnlyArray
+    nameWithType: ReadOnlyArray
+    fullName: ReadOnlyArray
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.InputControlScheme
+    name: InputControlScheme
+    nameWithType: InputControlScheme
+    fullName: InputControlScheme
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.ReadOnlyArray`1
+    name: ReadOnlyArray
+    nameWithType: ReadOnlyArray
+    fullName: ReadOnlyArray
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.InputControlScheme
+    name: InputControlScheme
+    nameWithType: InputControlScheme
+    fullName: InputControlScheme
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.ReadOnlyArray`1
+  commentId: '!:Global.ReadOnlyArray`1'
+  isExternal: true
+  name: ReadOnlyArray<>
+  nameWithType: ReadOnlyArray<>
+  fullName: ReadOnlyArray<>
+  nameWithType.vb: ReadOnlyArray(Of )
+  fullName.vb: ReadOnlyArray(Of )
+  name.vb: ReadOnlyArray(Of )
+  spec.csharp:
+  - uid: Global.ReadOnlyArray`1
+    name: ReadOnlyArray
+    nameWithType: ReadOnlyArray
+    fullName: ReadOnlyArray
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.ReadOnlyArray`1
+    name: ReadOnlyArray
+    nameWithType: ReadOnlyArray
+    fullName: ReadOnlyArray
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Controlls.Contains*
+  commentId: Overload:Global.Controlls.Contains
+  name: Contains
+  nameWithType: Controlls.Contains
+  fullName: Controlls.Contains
+- uid: Global.InputAction
+  isExternal: true
+  name: InputAction
+  nameWithType: InputAction
+  fullName: InputAction
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Global.Controlls.GetEnumerator*
+  commentId: Overload:Global.Controlls.GetEnumerator
+  name: GetEnumerator
+  nameWithType: Controlls.GetEnumerator
+  fullName: Controlls.GetEnumerator
+- uid: System.Collections.Generic.IEnumerator{InputAction}
+  commentId: T:System.Collections.Generic.IEnumerator{InputAction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  name: IEnumerator<InputAction>
+  nameWithType: IEnumerator<InputAction>
+  fullName: System.Collections.Generic.IEnumerator<InputAction>
+  nameWithType.vb: IEnumerator(Of InputAction)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of InputAction)
+  name.vb: IEnumerator(Of InputAction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.InputAction
+    name: InputAction
+    nameWithType: InputAction
+    fullName: InputAction
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.InputAction
+    name: InputAction
+    nameWithType: InputAction
+    fullName: InputAction
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Global.Controlls.Enable*
+  commentId: Overload:Global.Controlls.Enable
+  name: Enable
+  nameWithType: Controlls.Enable
+  fullName: Controlls.Enable
+- uid: Global.Controlls.Disable*
+  commentId: Overload:Global.Controlls.Disable
+  name: Disable
+  nameWithType: Controlls.Disable
+  fullName: Controlls.Disable
+- uid: Global.Controlls.bindings*
+  commentId: Overload:Global.Controlls.bindings
+  name: bindings
+  nameWithType: Controlls.bindings
+  fullName: Controlls.bindings
+- uid: System.Collections.Generic.IEnumerable{InputBinding}
+  commentId: T:System.Collections.Generic.IEnumerable{InputBinding}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<InputBinding>
+  nameWithType: IEnumerable<InputBinding>
+  fullName: System.Collections.Generic.IEnumerable<InputBinding>
+  nameWithType.vb: IEnumerable(Of InputBinding)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of InputBinding)
+  name.vb: IEnumerable(Of InputBinding)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.InputBinding
+    name: InputBinding
+    nameWithType: InputBinding
+    fullName: InputBinding
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.InputBinding
+    name: InputBinding
+    nameWithType: InputBinding
+    fullName: InputBinding
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Controlls.FindAction*
+  commentId: Overload:Global.Controlls.FindAction
+  name: FindAction
+  nameWithType: Controlls.FindAction
+  fullName: Controlls.FindAction
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.Controlls.FindBinding*
+  commentId: Overload:Global.Controlls.FindBinding
+  name: FindBinding
+  nameWithType: Controlls.FindBinding
+  fullName: Controlls.FindBinding
+- uid: Global.InputBinding
+  commentId: '!:Global.InputBinding'
+  isExternal: true
+  name: InputBinding
+  nameWithType: InputBinding
+  fullName: InputBinding
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.Controlls.bullet_hell*
+  commentId: Overload:Global.Controlls.bullet_hell
+  name: bullet_hell
+  nameWithType: Controlls.bullet_hell
+  fullName: Controlls.bullet_hell
+- uid: Global.Controlls.Bullet_hellActions
+  commentId: T:Global.Controlls.Bullet_hellActions
+  name: Controlls.Bullet_hellActions
+  nameWithType: Controlls.Bullet_hellActions
+  fullName: Controlls.Bullet_hellActions

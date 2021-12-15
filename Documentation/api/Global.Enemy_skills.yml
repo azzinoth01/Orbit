@@ -1,0 +1,270 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Enemy_skills
+  commentId: T:Global.Enemy_skills
+  id: Enemy_skills
+  parent: Global
+  children:
+  - Global.Enemy_skills.additionalDmg
+  - Global.Enemy_skills.dmgModifier
+  - Global.Enemy_skills.shootsToCreate
+  - Global.Enemy_skills.skillsequenze
+  langs:
+  - csharp
+  - vb
+  name: Enemy_skills
+  nameWithType: Enemy_skills
+  fullName: Enemy_skills
+  type: Class
+  source:
+    id: Enemy_skills
+    path: ''
+    startLine: 1487
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nverwaltet die skills von enemys\n"
+  example: []
+  syntax:
+    content: 'public class Enemy_skills : MonoBehaviour'
+    content.vb: >-
+      Public Class Enemy_skills
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Enemy_skills.shootsToCreate
+  commentId: F:Global.Enemy_skills.shootsToCreate
+  id: shootsToCreate
+  parent: Global.Enemy_skills
+  langs:
+  - csharp
+  - vb
+  name: shootsToCreate
+  nameWithType: Enemy_skills.shootsToCreate
+  fullName: Enemy_skills.shootsToCreate
+  type: Field
+  source:
+    id: shootsToCreate
+    path: ''
+    startLine: 1490
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int shootsToCreate
+    return:
+      type: System.Int32
+    content.vb: Public shootsToCreate As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_skills.skillsequenze
+  commentId: F:Global.Enemy_skills.skillsequenze
+  id: skillsequenze
+  parent: Global.Enemy_skills
+  langs:
+  - csharp
+  - vb
+  name: skillsequenze
+  nameWithType: Enemy_skills.skillsequenze
+  fullName: Enemy_skills.skillsequenze
+  type: Field
+  source:
+    id: skillsequenze
+    path: ''
+    startLine: 1492
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Skillsequenze> skillsequenze
+    return:
+      type: System.Collections.Generic.List{Skillsequenze}
+    content.vb: Public skillsequenze As List(Of Skillsequenze)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_skills.additionalDmg
+  commentId: F:Global.Enemy_skills.additionalDmg
+  id: additionalDmg
+  parent: Global.Enemy_skills
+  langs:
+  - csharp
+  - vb
+  name: additionalDmg
+  nameWithType: Enemy_skills.additionalDmg
+  fullName: Enemy_skills.additionalDmg
+  type: Field
+  source:
+    id: additionalDmg
+    path: ''
+    startLine: 1497
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int additionalDmg
+    return:
+      type: System.Int32
+    content.vb: Public additionalDmg As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_skills.dmgModifier
+  commentId: F:Global.Enemy_skills.dmgModifier
+  id: dmgModifier
+  parent: Global.Enemy_skills
+  langs:
+  - csharp
+  - vb
+  name: dmgModifier
+  nameWithType: Enemy_skills.dmgModifier
+  fullName: Enemy_skills.dmgModifier
+  type: Field
+  source:
+    id: dmgModifier
+    path: ''
+    startLine: 1498
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float dmgModifier
+    return:
+      type: System.Single
+    content.vb: Public dmgModifier As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.List{Skillsequenze}
+  commentId: T:System.Collections.Generic.List{Skillsequenze}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Skillsequenze>
+  nameWithType: List<Skillsequenze>
+  fullName: System.Collections.Generic.List<Skillsequenze>
+  nameWithType.vb: List(Of Skillsequenze)
+  fullName.vb: System.Collections.Generic.List(Of Skillsequenze)
+  name.vb: List(Of Skillsequenze)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Skillsequenze
+    name: Skillsequenze
+    nameWithType: Skillsequenze
+    fullName: Skillsequenze
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Skillsequenze
+    name: Skillsequenze
+    nameWithType: Skillsequenze
+    fullName: Skillsequenze
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

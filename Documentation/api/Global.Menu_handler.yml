@@ -1,0 +1,633 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Menu_handler
+  commentId: T:Global.Menu_handler
+  id: Menu_handler
+  parent: Global
+  children:
+  - Global.Menu_handler.gameOverUI
+  - Global.Menu_handler.levelFinishedUI
+  - Global.Menu_handler.levelSelectUI
+  - Global.Menu_handler.onClickBack
+  - Global.Menu_handler.onClickLevelSelect(System.Int32)
+  - Global.Menu_handler.onClickMainMenu(System.Int32)
+  - Global.Menu_handler.onClickNextLeve(System.Int32)
+  - Global.Menu_handler.onClickShipEditor
+  - Global.Menu_handler.onClickShipMenu(System.Int32)
+  - Global.Menu_handler.onClickTryAgain
+  - Global.Menu_handler.onClickWorldSelect
+  - Global.Menu_handler.pauseUI
+  - Global.Menu_handler.setGameOver
+  - Global.Menu_handler.setLevelFinish
+  - Global.Menu_handler.setPause
+  - Global.Menu_handler.setResume
+  - Global.Menu_handler.shipMenuUI
+  langs:
+  - csharp
+  - vb
+  name: Menu_handler
+  nameWithType: Menu_handler
+  fullName: Menu_handler
+  type: Class
+  source:
+    id: Menu_handler
+    path: ''
+    startLine: 2068
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nmenu classe um jegliches menu au�er main menu zu verwalten\n"
+  example: []
+  syntax:
+    content: 'public class Menu_handler : MonoBehaviour'
+    content.vb: >-
+      Public Class Menu_handler
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Menu_handler.levelSelectUI
+  commentId: F:Global.Menu_handler.levelSelectUI
+  id: levelSelectUI
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: levelSelectUI
+  nameWithType: Menu_handler.levelSelectUI
+  fullName: Menu_handler.levelSelectUI
+  type: Field
+  source:
+    id: levelSelectUI
+    path: ''
+    startLine: 2071
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject levelSelectUI
+    return:
+      type: Global.GameObject
+    content.vb: Public levelSelectUI As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.shipMenuUI
+  commentId: F:Global.Menu_handler.shipMenuUI
+  id: shipMenuUI
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: shipMenuUI
+  nameWithType: Menu_handler.shipMenuUI
+  fullName: Menu_handler.shipMenuUI
+  type: Field
+  source:
+    id: shipMenuUI
+    path: ''
+    startLine: 2072
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject shipMenuUI
+    return:
+      type: Global.GameObject
+    content.vb: Public shipMenuUI As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.levelFinishedUI
+  commentId: F:Global.Menu_handler.levelFinishedUI
+  id: levelFinishedUI
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: levelFinishedUI
+  nameWithType: Menu_handler.levelFinishedUI
+  fullName: Menu_handler.levelFinishedUI
+  type: Field
+  source:
+    id: levelFinishedUI
+    path: ''
+    startLine: 2073
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject levelFinishedUI
+    return:
+      type: Global.GameObject
+    content.vb: Public levelFinishedUI As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.gameOverUI
+  commentId: F:Global.Menu_handler.gameOverUI
+  id: gameOverUI
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: gameOverUI
+  nameWithType: Menu_handler.gameOverUI
+  fullName: Menu_handler.gameOverUI
+  type: Field
+  source:
+    id: gameOverUI
+    path: ''
+    startLine: 2074
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject gameOverUI
+    return:
+      type: Global.GameObject
+    content.vb: Public gameOverUI As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.pauseUI
+  commentId: F:Global.Menu_handler.pauseUI
+  id: pauseUI
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: pauseUI
+  nameWithType: Menu_handler.pauseUI
+  fullName: Menu_handler.pauseUI
+  type: Field
+  source:
+    id: pauseUI
+    path: ''
+    startLine: 2075
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject pauseUI
+    return:
+      type: Global.GameObject
+    content.vb: Public pauseUI As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickShipEditor
+  commentId: M:Global.Menu_handler.onClickShipEditor
+  id: onClickShipEditor
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickShipEditor()
+  nameWithType: Menu_handler.onClickShipEditor()
+  fullName: Menu_handler.onClickShipEditor()
+  type: Method
+  source:
+    id: onClickShipEditor
+    path: ''
+    startLine: 2091
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nship Editor button gelickt\n"
+  example: []
+  syntax:
+    content: public void onClickShipEditor()
+    content.vb: Public Sub onClickShipEditor
+  overload: Global.Menu_handler.onClickShipEditor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickWorldSelect
+  commentId: M:Global.Menu_handler.onClickWorldSelect
+  id: onClickWorldSelect
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickWorldSelect()
+  nameWithType: Menu_handler.onClickWorldSelect()
+  fullName: Menu_handler.onClickWorldSelect()
+  type: Method
+  source:
+    id: onClickWorldSelect
+    path: ''
+    startLine: 2098
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nship menu zu level select\n"
+  example: []
+  syntax:
+    content: public void onClickWorldSelect()
+    content.vb: Public Sub onClickWorldSelect
+  overload: Global.Menu_handler.onClickWorldSelect*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickBack
+  commentId: M:Global.Menu_handler.onClickBack
+  id: onClickBack
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickBack()
+  nameWithType: Menu_handler.onClickBack()
+  fullName: Menu_handler.onClickBack()
+  type: Method
+  source:
+    id: onClickBack
+    path: ''
+    startLine: 2105
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nlevel select zu ship menu\n"
+  example: []
+  syntax:
+    content: public void onClickBack()
+    content.vb: Public Sub onClickBack
+  overload: Global.Menu_handler.onClickBack*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickMainMenu(System.Int32)
+  commentId: M:Global.Menu_handler.onClickMainMenu(System.Int32)
+  id: onClickMainMenu(System.Int32)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickMainMenu(Int32)
+  nameWithType: Menu_handler.onClickMainMenu(Int32)
+  fullName: Menu_handler.onClickMainMenu(System.Int32)
+  type: Method
+  source:
+    id: onClickMainMenu
+    path: ''
+    startLine: 2114
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nzu main menu scene\n"
+  example: []
+  syntax:
+    content: public void onClickMainMenu(int sceneIndex)
+    parameters:
+    - id: sceneIndex
+      type: System.Int32
+      description: main menu scene index
+    content.vb: Public Sub onClickMainMenu(sceneIndex As Integer)
+  overload: Global.Menu_handler.onClickMainMenu*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickLevelSelect(System.Int32)
+  commentId: M:Global.Menu_handler.onClickLevelSelect(System.Int32)
+  id: onClickLevelSelect(System.Int32)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickLevelSelect(Int32)
+  nameWithType: Menu_handler.onClickLevelSelect(Int32)
+  fullName: Menu_handler.onClickLevelSelect(System.Int32)
+  type: Method
+  source:
+    id: onClickLevelSelect
+    path: ''
+    startLine: 2123
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nlevel auswahlt\n"
+  example: []
+  syntax:
+    content: public void onClickLevelSelect(int levelSceneIndex)
+    parameters:
+    - id: levelSceneIndex
+      type: System.Int32
+      description: level scene index
+    content.vb: Public Sub onClickLevelSelect(levelSceneIndex As Integer)
+  overload: Global.Menu_handler.onClickLevelSelect*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickNextLeve(System.Int32)
+  commentId: M:Global.Menu_handler.onClickNextLeve(System.Int32)
+  id: onClickNextLeve(System.Int32)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickNextLeve(Int32)
+  nameWithType: Menu_handler.onClickNextLeve(Int32)
+  fullName: Menu_handler.onClickNextLeve(System.Int32)
+  type: Method
+  source:
+    id: onClickNextLeve
+    path: ''
+    startLine: 2131
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nnext level auswahl\n"
+  example: []
+  syntax:
+    content: public void onClickNextLeve(int backupSeneIndex)
+    parameters:
+    - id: backupSeneIndex
+      type: System.Int32
+      description: backup scene index falls das next level nicht gibt
+    content.vb: Public Sub onClickNextLeve(backupSeneIndex As Integer)
+  overload: Global.Menu_handler.onClickNextLeve*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickShipMenu(System.Int32)
+  commentId: M:Global.Menu_handler.onClickShipMenu(System.Int32)
+  id: onClickShipMenu(System.Int32)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickShipMenu(Int32)
+  nameWithType: Menu_handler.onClickShipMenu(Int32)
+  fullName: Menu_handler.onClickShipMenu(System.Int32)
+  type: Method
+  source:
+    id: onClickShipMenu
+    path: ''
+    startLine: 2153
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nzu ship menu\n"
+  example: []
+  syntax:
+    content: public void onClickShipMenu(int sceneIndex)
+    parameters:
+    - id: sceneIndex
+      type: System.Int32
+      description: ship menu scene index
+    content.vb: Public Sub onClickShipMenu(sceneIndex As Integer)
+  overload: Global.Menu_handler.onClickShipMenu*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickTryAgain
+  commentId: M:Global.Menu_handler.onClickTryAgain
+  id: onClickTryAgain
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickTryAgain()
+  nameWithType: Menu_handler.onClickTryAgain()
+  fullName: Menu_handler.onClickTryAgain()
+  type: Method
+  source:
+    id: onClickTryAgain
+    path: ''
+    startLine: 2162
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nscene neu laden\n"
+  example: []
+  syntax:
+    content: public void onClickTryAgain()
+    content.vb: Public Sub onClickTryAgain
+  overload: Global.Menu_handler.onClickTryAgain*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.setPause
+  commentId: M:Global.Menu_handler.setPause
+  id: setPause
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: setPause()
+  nameWithType: Menu_handler.setPause()
+  fullName: Menu_handler.setPause()
+  type: Method
+  source:
+    id: setPause
+    path: ''
+    startLine: 2196
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\naktiviert das Pause Menu\n"
+  example: []
+  syntax:
+    content: public void setPause()
+    content.vb: Public Sub setPause
+  overload: Global.Menu_handler.setPause*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.setResume
+  commentId: M:Global.Menu_handler.setResume
+  id: setResume
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: setResume()
+  nameWithType: Menu_handler.setResume()
+  fullName: Menu_handler.setResume()
+  type: Method
+  source:
+    id: setResume
+    path: ''
+    startLine: 2204
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ndeaktiviert das Pause Menu\n"
+  example: []
+  syntax:
+    content: public void setResume()
+    content.vb: Public Sub setResume
+  overload: Global.Menu_handler.setResume*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.setGameOver
+  commentId: M:Global.Menu_handler.setGameOver
+  id: setGameOver
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: setGameOver()
+  nameWithType: Menu_handler.setGameOver()
+  fullName: Menu_handler.setGameOver()
+  type: Method
+  source:
+    id: setGameOver
+    path: ''
+    startLine: 2213
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\naktiviert das Game Over Menu\n"
+  example: []
+  syntax:
+    content: public void setGameOver()
+    content.vb: Public Sub setGameOver
+  overload: Global.Menu_handler.setGameOver*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.setLevelFinish
+  commentId: M:Global.Menu_handler.setLevelFinish
+  id: setLevelFinish
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: setLevelFinish()
+  nameWithType: Menu_handler.setLevelFinish()
+  fullName: Menu_handler.setLevelFinish()
+  type: Method
+  source:
+    id: setLevelFinish
+    path: ''
+    startLine: 2223
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\naktiviert das Level Finished Menu\n"
+  example: []
+  syntax:
+    content: public void setLevelFinish()
+    content.vb: Public Sub setLevelFinish
+  overload: Global.Menu_handler.setLevelFinish*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.Menu_handler.onClickShipEditor*
+  commentId: Overload:Global.Menu_handler.onClickShipEditor
+  name: onClickShipEditor
+  nameWithType: Menu_handler.onClickShipEditor
+  fullName: Menu_handler.onClickShipEditor
+- uid: Global.Menu_handler.onClickWorldSelect*
+  commentId: Overload:Global.Menu_handler.onClickWorldSelect
+  name: onClickWorldSelect
+  nameWithType: Menu_handler.onClickWorldSelect
+  fullName: Menu_handler.onClickWorldSelect
+- uid: Global.Menu_handler.onClickBack*
+  commentId: Overload:Global.Menu_handler.onClickBack
+  name: onClickBack
+  nameWithType: Menu_handler.onClickBack
+  fullName: Menu_handler.onClickBack
+- uid: Global.Menu_handler.onClickMainMenu*
+  commentId: Overload:Global.Menu_handler.onClickMainMenu
+  name: onClickMainMenu
+  nameWithType: Menu_handler.onClickMainMenu
+  fullName: Menu_handler.onClickMainMenu
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.Menu_handler.onClickLevelSelect*
+  commentId: Overload:Global.Menu_handler.onClickLevelSelect
+  name: onClickLevelSelect
+  nameWithType: Menu_handler.onClickLevelSelect
+  fullName: Menu_handler.onClickLevelSelect
+- uid: Global.Menu_handler.onClickNextLeve*
+  commentId: Overload:Global.Menu_handler.onClickNextLeve
+  name: onClickNextLeve
+  nameWithType: Menu_handler.onClickNextLeve
+  fullName: Menu_handler.onClickNextLeve
+- uid: Global.Menu_handler.onClickShipMenu*
+  commentId: Overload:Global.Menu_handler.onClickShipMenu
+  name: onClickShipMenu
+  nameWithType: Menu_handler.onClickShipMenu
+  fullName: Menu_handler.onClickShipMenu
+- uid: Global.Menu_handler.onClickTryAgain*
+  commentId: Overload:Global.Menu_handler.onClickTryAgain
+  name: onClickTryAgain
+  nameWithType: Menu_handler.onClickTryAgain
+  fullName: Menu_handler.onClickTryAgain
+- uid: Global.Menu_handler.setPause*
+  commentId: Overload:Global.Menu_handler.setPause
+  name: setPause
+  nameWithType: Menu_handler.setPause
+  fullName: Menu_handler.setPause
+- uid: Global.Menu_handler.setResume*
+  commentId: Overload:Global.Menu_handler.setResume
+  name: setResume
+  nameWithType: Menu_handler.setResume
+  fullName: Menu_handler.setResume
+- uid: Global.Menu_handler.setGameOver*
+  commentId: Overload:Global.Menu_handler.setGameOver
+  name: setGameOver
+  nameWithType: Menu_handler.setGameOver
+  fullName: Menu_handler.setGameOver
+- uid: Global.Menu_handler.setLevelFinish*
+  commentId: Overload:Global.Menu_handler.setLevelFinish
+  name: setLevelFinish
+  nameWithType: Menu_handler.setLevelFinish
+  fullName: Menu_handler.setLevelFinish

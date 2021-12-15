@@ -1,0 +1,92 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Weaponholder
+  commentId: T:Global.Weaponholder
+  id: Weaponholder
+  parent: Global
+  children:
+  - Global.Weaponholder.rotationSpeed
+  langs:
+  - csharp
+  - vb
+  name: Weaponholder
+  nameWithType: Weaponholder
+  fullName: Weaponholder
+  type: Class
+  source:
+    id: Weaponholder
+    path: ''
+    startLine: 4285
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclasse um die Waffen nach Mouseposition ausrichtet\n"
+  example: []
+  syntax:
+    content: 'public class Weaponholder : MonoBehaviour'
+    content.vb: >-
+      Public Class Weaponholder
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Weaponholder.rotationSpeed
+  commentId: F:Global.Weaponholder.rotationSpeed
+  id: rotationSpeed
+  parent: Global.Weaponholder
+  langs:
+  - csharp
+  - vb
+  name: rotationSpeed
+  nameWithType: Weaponholder.rotationSpeed
+  fullName: Weaponholder.rotationSpeed
+  type: Field
+  source:
+    id: rotationSpeed
+    path: ''
+    startLine: 4288
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float rotationSpeed
+    return:
+      type: System.Single
+    content.vb: Public rotationSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

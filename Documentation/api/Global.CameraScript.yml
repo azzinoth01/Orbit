@@ -1,0 +1,259 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.CameraScript
+  commentId: T:Global.CameraScript
+  id: CameraScript
+  parent: Global
+  children:
+  - Global.CameraScript.offsetSpeed
+  - Global.CameraScript.player
+  - Global.CameraScript.screenShakeMaxDuration
+  - Global.CameraScript.screenShakeMaxMagnitude
+  - Global.CameraScript.screenShakeMinDuration
+  - Global.CameraScript.startScreenShake
+  langs:
+  - csharp
+  - vb
+  name: CameraScript
+  nameWithType: CameraScript
+  fullName: CameraScript
+  type: Class
+  source:
+    id: CameraScript
+    path: ''
+    startLine: 886
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncamera Movement script\n"
+  example: []
+  syntax:
+    content: 'public class CameraScript : MonoBehaviour'
+    content.vb: >-
+      Public Class CameraScript
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.CameraScript.player
+  commentId: F:Global.CameraScript.player
+  id: player
+  parent: Global.CameraScript
+  langs:
+  - csharp
+  - vb
+  name: player
+  nameWithType: CameraScript.player
+  fullName: CameraScript.player
+  type: Field
+  source:
+    id: player
+    path: ''
+    startLine: 890
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Player player
+    return:
+      type: Global.Player
+    content.vb: Public player As Player
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.CameraScript.offsetSpeed
+  commentId: F:Global.CameraScript.offsetSpeed
+  id: offsetSpeed
+  parent: Global.CameraScript
+  langs:
+  - csharp
+  - vb
+  name: offsetSpeed
+  nameWithType: CameraScript.offsetSpeed
+  fullName: CameraScript.offsetSpeed
+  type: Field
+  source:
+    id: offsetSpeed
+    path: ''
+    startLine: 893
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float offsetSpeed
+    return:
+      type: System.Single
+    content.vb: Public offsetSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.CameraScript.screenShakeMaxDuration
+  commentId: F:Global.CameraScript.screenShakeMaxDuration
+  id: screenShakeMaxDuration
+  parent: Global.CameraScript
+  langs:
+  - csharp
+  - vb
+  name: screenShakeMaxDuration
+  nameWithType: CameraScript.screenShakeMaxDuration
+  fullName: CameraScript.screenShakeMaxDuration
+  type: Field
+  source:
+    id: screenShakeMaxDuration
+    path: ''
+    startLine: 897
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float screenShakeMaxDuration
+    return:
+      type: System.Single
+    content.vb: Public screenShakeMaxDuration As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.CameraScript.screenShakeMinDuration
+  commentId: F:Global.CameraScript.screenShakeMinDuration
+  id: screenShakeMinDuration
+  parent: Global.CameraScript
+  langs:
+  - csharp
+  - vb
+  name: screenShakeMinDuration
+  nameWithType: CameraScript.screenShakeMinDuration
+  fullName: CameraScript.screenShakeMinDuration
+  type: Field
+  source:
+    id: screenShakeMinDuration
+    path: ''
+    startLine: 898
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float screenShakeMinDuration
+    return:
+      type: System.Single
+    content.vb: Public screenShakeMinDuration As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.CameraScript.screenShakeMaxMagnitude
+  commentId: F:Global.CameraScript.screenShakeMaxMagnitude
+  id: screenShakeMaxMagnitude
+  parent: Global.CameraScript
+  langs:
+  - csharp
+  - vb
+  name: screenShakeMaxMagnitude
+  nameWithType: CameraScript.screenShakeMaxMagnitude
+  fullName: CameraScript.screenShakeMaxMagnitude
+  type: Field
+  source:
+    id: screenShakeMaxMagnitude
+    path: ''
+    startLine: 900
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float screenShakeMaxMagnitude
+    return:
+      type: System.Single
+    content.vb: Public screenShakeMaxMagnitude As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.CameraScript.startScreenShake
+  commentId: M:Global.CameraScript.startScreenShake
+  id: startScreenShake
+  parent: Global.CameraScript
+  langs:
+  - csharp
+  - vb
+  name: startScreenShake()
+  nameWithType: CameraScript.startScreenShake()
+  fullName: CameraScript.startScreenShake()
+  type: Method
+  source:
+    id: startScreenShake
+    path: ''
+    startLine: 966
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nstartet den screen Shake\n"
+  example: []
+  syntax:
+    content: public IEnumerator startScreenShake()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public Function startScreenShake As IEnumerator
+  overload: Global.CameraScript.startScreenShake*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Player
+  commentId: T:Global.Player
+  name: Player
+  nameWithType: Player
+  fullName: Player
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.CameraScript.startScreenShake*
+  commentId: Overload:Global.CameraScript.startScreenShake
+  name: startScreenShake
+  nameWithType: CameraScript.startScreenShake
+  fullName: CameraScript.startScreenShake
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
