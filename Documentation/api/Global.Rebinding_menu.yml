@@ -1,0 +1,428 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Rebinding_menu
+  commentId: T:Global.Rebinding_menu
+  id: Rebinding_menu
+  parent: Global
+  children:
+  - Global.Rebinding_menu.actionKeybind
+  - Global.Rebinding_menu.actionName
+  - Global.Rebinding_menu.buttonBack
+  - Global.Rebinding_menu.buttonDefault
+  - Global.Rebinding_menu.buttonRebind
+  - Global.Rebinding_menu.buttonSave
+  - Global.Rebinding_menu.itemHolder
+  - Global.Rebinding_menu.loadRebinding(Controlls)
+  - Global.Rebinding_menu.onClickAlertButton
+  - Global.Rebinding_menu.saveAlert
+  - Global.Rebinding_menu.saveRebinding
+  - Global.Rebinding_menu.ScrollView
+  langs:
+  - csharp
+  - vb
+  name: Rebinding_menu
+  nameWithType: Rebinding_menu
+  fullName: Rebinding_menu
+  type: Class
+  source:
+    id: Rebinding_menu
+    path: ''
+    startLine: 3236
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclasse die das Rebinden von controls verwaltet\n"
+  example: []
+  syntax:
+    content: 'public class Rebinding_menu : MonoBehaviour'
+    content.vb: >-
+      Public Class Rebinding_menu
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Rebinding_menu.ScrollView
+  commentId: F:Global.Rebinding_menu.ScrollView
+  id: ScrollView
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: ScrollView
+  nameWithType: Rebinding_menu.ScrollView
+  fullName: Rebinding_menu.ScrollView
+  type: Field
+  source:
+    id: ScrollView
+    path: ''
+    startLine: 3240
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject ScrollView
+    return:
+      type: Global.GameObject
+    content.vb: Public ScrollView As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.itemHolder
+  commentId: F:Global.Rebinding_menu.itemHolder
+  id: itemHolder
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: itemHolder
+  nameWithType: Rebinding_menu.itemHolder
+  fullName: Rebinding_menu.itemHolder
+  type: Field
+  source:
+    id: itemHolder
+    path: ''
+    startLine: 3241
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject itemHolder
+    return:
+      type: Global.GameObject
+    content.vb: Public itemHolder As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.actionName
+  commentId: F:Global.Rebinding_menu.actionName
+  id: actionName
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: actionName
+  nameWithType: Rebinding_menu.actionName
+  fullName: Rebinding_menu.actionName
+  type: Field
+  source:
+    id: actionName
+    path: ''
+    startLine: 3242
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject actionName
+    return:
+      type: Global.GameObject
+    content.vb: Public actionName As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.actionKeybind
+  commentId: F:Global.Rebinding_menu.actionKeybind
+  id: actionKeybind
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: actionKeybind
+  nameWithType: Rebinding_menu.actionKeybind
+  fullName: Rebinding_menu.actionKeybind
+  type: Field
+  source:
+    id: actionKeybind
+    path: ''
+    startLine: 3243
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject actionKeybind
+    return:
+      type: Global.GameObject
+    content.vb: Public actionKeybind As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.buttonRebind
+  commentId: F:Global.Rebinding_menu.buttonRebind
+  id: buttonRebind
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: buttonRebind
+  nameWithType: Rebinding_menu.buttonRebind
+  fullName: Rebinding_menu.buttonRebind
+  type: Field
+  source:
+    id: buttonRebind
+    path: ''
+    startLine: 3244
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject buttonRebind
+    return:
+      type: Global.GameObject
+    content.vb: Public buttonRebind As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.buttonDefault
+  commentId: F:Global.Rebinding_menu.buttonDefault
+  id: buttonDefault
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: buttonDefault
+  nameWithType: Rebinding_menu.buttonDefault
+  fullName: Rebinding_menu.buttonDefault
+  type: Field
+  source:
+    id: buttonDefault
+    path: ''
+    startLine: 3245
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject buttonDefault
+    return:
+      type: Global.GameObject
+    content.vb: Public buttonDefault As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.saveAlert
+  commentId: F:Global.Rebinding_menu.saveAlert
+  id: saveAlert
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: saveAlert
+  nameWithType: Rebinding_menu.saveAlert
+  fullName: Rebinding_menu.saveAlert
+  type: Field
+  source:
+    id: saveAlert
+    path: ''
+    startLine: 3246
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject saveAlert
+    return:
+      type: Global.GameObject
+    content.vb: Public saveAlert As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.buttonBack
+  commentId: F:Global.Rebinding_menu.buttonBack
+  id: buttonBack
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: buttonBack
+  nameWithType: Rebinding_menu.buttonBack
+  fullName: Rebinding_menu.buttonBack
+  type: Field
+  source:
+    id: buttonBack
+    path: ''
+    startLine: 3247
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject buttonBack
+    return:
+      type: Global.GameObject
+    content.vb: Public buttonBack As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.buttonSave
+  commentId: F:Global.Rebinding_menu.buttonSave
+  id: buttonSave
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: buttonSave
+  nameWithType: Rebinding_menu.buttonSave
+  fullName: Rebinding_menu.buttonSave
+  type: Field
+  source:
+    id: buttonSave
+    path: ''
+    startLine: 3248
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject buttonSave
+    return:
+      type: Global.GameObject
+    content.vb: Public buttonSave As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.saveRebinding
+  commentId: M:Global.Rebinding_menu.saveRebinding
+  id: saveRebinding
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: saveRebinding()
+  nameWithType: Rebinding_menu.saveRebinding()
+  fullName: Rebinding_menu.saveRebinding()
+  type: Method
+  source:
+    id: saveRebinding
+    path: ''
+    startLine: 3313
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nspeichert das Rebinding in einer json datei Userspezifisch auf dem PC\nes darf auch nur gespeichert werden, wenn alle rebinds eindeutig sind\n"
+  example: []
+  syntax:
+    content: public void saveRebinding()
+    content.vb: Public Sub saveRebinding
+  overload: Global.Rebinding_menu.saveRebinding*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.loadRebinding(Controlls)
+  commentId: M:Global.Rebinding_menu.loadRebinding(Controlls)
+  id: loadRebinding(Controlls)
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: loadRebinding(Controlls)
+  nameWithType: Rebinding_menu.loadRebinding(Controlls)
+  fullName: Rebinding_menu.loadRebinding(Controlls)
+  type: Method
+  source:
+    id: loadRebinding
+    path: ''
+    startLine: 3345
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nladet die Rebinds in den controller rein\n"
+  example: []
+  syntax:
+    content: public Controlls loadRebinding(Controlls cont)
+    parameters:
+    - id: cont
+      type: Global.Controlls
+      description: der controlls auf den die Rebinds gesetzt werden sollen
+    return:
+      type: Global.Controlls
+      description: 'gibt den controller zur�ck auf den die Rebinds gesetzt wurden '
+    content.vb: Public Function loadRebinding(cont As Controlls) As Controlls
+  overload: Global.Rebinding_menu.loadRebinding*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.onClickAlertButton
+  commentId: M:Global.Rebinding_menu.onClickAlertButton
+  id: onClickAlertButton
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: onClickAlertButton()
+  nameWithType: Rebinding_menu.onClickAlertButton()
+  fullName: Rebinding_menu.onClickAlertButton()
+  type: Method
+  source:
+    id: onClickAlertButton
+    path: ''
+    startLine: 3364
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nschlie�t das Alert Fenster, wenn das Speichern nicht erfolgreich war\n"
+  example: []
+  syntax:
+    content: public void onClickAlertButton()
+    content.vb: Public Sub onClickAlertButton
+  overload: Global.Rebinding_menu.onClickAlertButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.Rebinding_menu.saveRebinding*
+  commentId: Overload:Global.Rebinding_menu.saveRebinding
+  name: saveRebinding
+  nameWithType: Rebinding_menu.saveRebinding
+  fullName: Rebinding_menu.saveRebinding
+- uid: Global.Rebinding_menu.loadRebinding*
+  commentId: Overload:Global.Rebinding_menu.loadRebinding
+  name: loadRebinding
+  nameWithType: Rebinding_menu.loadRebinding
+  fullName: Rebinding_menu.loadRebinding
+- uid: Global.Controlls
+  commentId: T:Global.Controlls
+  name: Controlls
+  nameWithType: Controlls
+  fullName: Controlls
+- uid: Global.Rebinding_menu.onClickAlertButton*
+  commentId: Overload:Global.Rebinding_menu.onClickAlertButton
+  name: onClickAlertButton
+  nameWithType: Rebinding_menu.onClickAlertButton
+  fullName: Rebinding_menu.onClickAlertButton
