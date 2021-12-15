@@ -146,14 +146,14 @@ MonoBehaviour:
   healthbarAbove60: {r: 0.27450982, g: 0.5647059, b: 0.05882353, a: 1}
   healthbarAbove30: {r: 0.9254902, g: 0.78039217, b: 0.20392157, a: 1}
   healthbarBelow30: {r: 0.3647059, g: 0.08235294, b: 0, a: 1}
-  maxschield: 200
+  maxschield: 100
   currentschield: 0
   schieldbar: {fileID: 0}
-  schieldbarStepValue: 0.01
-  schieldRefreshRate: 0.1
-  schieldRefreshValue: 10
+  schieldbarStepValue: 1
+  schieldRefreshRate: 3
+  schieldRefreshValue: 1
   body: {fileID: 1580844076}
-  force: 15
+  force: 30
   maxSpeed: 12
   weapons:
   - {fileID: 2130335326530031776}
@@ -171,7 +171,7 @@ MonoBehaviour:
   dogeSpeed: 50
   maxDogeDuration: 0.5
   dogeCooldown: 5
-  globalCooldown: 1
+  globalCooldown: 2
   chargeSprites:
   - {fileID: 0}
   - {fileID: -3555027508187961589, guid: 9f18e07f03ec8fb478b415b8541284ef, type: 3}
