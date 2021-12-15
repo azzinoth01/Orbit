@@ -44,7 +44,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4888,6 +4888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 712244961376336433}
   destroyAfterPlay: 1
+  particleAudio: {fileID: 0}
 --- !u!114 &1810406405298614537
 MonoBehaviour:
   m_ObjectHideFlags: 0

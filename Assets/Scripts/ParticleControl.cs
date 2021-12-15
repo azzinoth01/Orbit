@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// controliert die Particel system effecte
+/// controliert die Particle system effecte und Particle Sounds
 /// </summary>
 public class ParticleControl : MonoBehaviour
 {
     public ParticleSystem particle;
     public bool destroyAfterPlay;
+    public AudioSource particleAudio;
 
     /// <summary>
     /// startet das particle system 
     /// </summary>
     private void OnEnable() {
         particle.Play();
+        if (particleAudio != null) {
+            particleAudio.Play();
+        }
+
         //Debug.Log("start playing");
     }
 
@@ -28,11 +33,13 @@ public class ParticleControl : MonoBehaviour
             return;
         }
         else {
-            if (particle.isPlaying == false) {
+            if (isPlayingCheck() == false) {
                 if (destroyAfterPlay == true) {
+                    Debug.Log("test");
                     Destroy(gameObject);
                 }
                 else {
+                    Debug.Log("test");
                     gameObject.SetActive(false);
                 }
 
@@ -40,5 +47,33 @@ public class ParticleControl : MonoBehaviour
 
         }
 
+    }
+
+    /// <summary>
+    /// checks if audio or particle system is still playing
+    /// </summary>
+    /// <returns>returns true if it is still playing</returns>
+    private bool isPlayingCheck() {
+
+        bool check = true;
+        if (particleAudio != null) {
+            if (particleAudio.isPlaying == false) {
+                check = false;
+            }
+            else {
+                return true;
+            }
+        }
+        if (particle != null) {
+            if (particle.isPlaying == false) {
+                check = false;
+            }
+            else {
+                return true;
+            }
+        }
+
+
+        return check;
     }
 }

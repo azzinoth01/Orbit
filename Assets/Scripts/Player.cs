@@ -86,6 +86,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public GameObject deathEffect;
 
     public AudioSource chargeAudio;
+    public AudioSource hitAudio;
 
 
     public Vector2 Impulse {
@@ -475,7 +476,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             return;
         }
 
-
+        hitAudio.Play();
 
         if (schieldbar.fillAmount >= 1) {
             currentschield = 0;
