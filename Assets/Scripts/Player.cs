@@ -360,6 +360,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public IEnumerator smoothHealthDrop() {
 
         while (true) {
+            if (Globals.pause == true) {
+                yield return null;
+            }
             float prozentValue = currentHealth / health;
             float currentFillProzent = healthbar.fillAmount;
 
@@ -409,7 +412,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public IEnumerator smoothSchieldDrop() {
 
         while (true) {
-
+            if (Globals.pause == true) {
+                yield return null;
+            }
             float prozentValue = currentschield / maxschield;
             float currentFillProzent = schieldbar.fillAmount;
 
