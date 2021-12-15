@@ -110,8 +110,9 @@ public class Move_in_out_Scene : MonoBehaviour
                 waypointOutObjects[waypointIndex].SetActive(true);
             }
             else {
-                StartCoroutine(startDestroy());
-                enabled = false;
+                Destroy(gameObject);
+                //StartCoroutine(startDestroy());
+                //enabled = false;
             }
         }
     }
@@ -127,24 +128,24 @@ public class Move_in_out_Scene : MonoBehaviour
 
 
     }
-    /// <summary>
-    /// corutine um die enemys zu zerstören
-    /// destory in corutine um rechenleistung beim destroyen zu sparen
-    /// </summary>
-    /// <returns></returns>
-    private IEnumerator startDestroy() {
+    ///// <summary>
+    ///// corutine um die enemys zu zerstören
+    ///// destory in corutine um rechenleistung beim destroyen zu sparen
+    ///// </summary>
+    ///// <returns></returns>
+    //private IEnumerator startDestroy() {
 
-        foreach (GameObject g in waypointInObjects) {
-            Destroy(g);
-            yield return null;
-        }
-        foreach (GameObject g in waypointOutObjects) {
-            Destroy(g);
-            yield return null;
-        }
-        Destroy(gameObject);
+    //    foreach (GameObject g in waypointInObjects) {
+    //        Destroy(g);
+    //        yield return null;
+    //    }
+    //    foreach (GameObject g in waypointOutObjects) {
+    //        Destroy(g);
+    //        yield return null;
+    //    }
+    //    Destroy(gameObject);
 
-    }
+    //}
 
     /// <summary>
     /// erzeugt die Wegpunkte an der sich der enemy bewegt

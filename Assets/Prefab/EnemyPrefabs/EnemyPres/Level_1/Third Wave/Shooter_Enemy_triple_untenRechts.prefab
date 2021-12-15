@@ -158,11 +158,11 @@ MonoBehaviour:
   maxSpeed: 10
   loop: 1
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
-  maxDuration: 10
+  maxDuration: 2
   delayToNextWaypoint: 2
   collisionDmg: 3
   destoryAfterCollison: 0
-  deathParticelSystem: {fileID: 0}
+  deathParticelSystem: {fileID: 712244961376336435, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
 --- !u!114 &3734761586571933664
 MonoBehaviour:
   m_ObjectHideFlags: 0

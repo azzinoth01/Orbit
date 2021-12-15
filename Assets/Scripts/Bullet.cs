@@ -161,6 +161,8 @@ public class Bullet : MonoBehaviour
     /// </summary>
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision) {
+
+
         try {
 
             if (collision.gameObject == waypointObject[waypointIndex]) {
@@ -178,12 +180,13 @@ public class Bullet : MonoBehaviour
         }
 
         try {
-
+            // Debug.Log("bullet hit enemy");
             //Debug.Log(collision);
             Enemy g = collision.GetComponent<Enemy>();
             if (g != null) {
+                //  Debug.Log("bullet hit enemy2");
                 //Debug.Log(collision);
-                g.takeDmg((int)bulletDmg);
+                g.takeDmg(bulletDmg);
                 //Destroy(gameObject.transform.parent.gameObject);
                 setInactive();
                 return;
@@ -201,7 +204,7 @@ public class Bullet : MonoBehaviour
             //Debug.Log(collision);
             Player g = collision.GetComponent<Player>();
             if (g != null) {
-                g.takeDmg((int)bulletDmg);
+                g.takeDmg(bulletDmg);
                 //Destroy(gameObject.transform.parent.gameObject);
                 setInactive();
                 return;

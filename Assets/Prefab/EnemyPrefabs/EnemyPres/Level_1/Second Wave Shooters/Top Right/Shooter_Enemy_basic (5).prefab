@@ -161,7 +161,7 @@ MonoBehaviour:
   delayToNextWaypoint: 2
   collisionDmg: 3
   destoryAfterCollison: 0
-  deathParticelSystem: {fileID: 0}
+  deathParticelSystem: {fileID: 712244961376336435, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
 --- !u!114 &4641556494111775386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 2081700813356833484}
   - component: {fileID: 6886557312180633599}
   - component: {fileID: 8152800329628170536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shooter_Enemy_basic (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

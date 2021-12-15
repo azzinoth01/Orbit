@@ -51,6 +51,7 @@ public class CameraScript : MonoBehaviour
         }
         else {
             if (player == null) {
+                body.velocity = Vector2.zero;
                 return;
             }
             if (screenShakeRunning == true) {
@@ -109,7 +110,7 @@ public class CameraScript : MonoBehaviour
 
 
         while (screenShakeRunning == true) {
-
+            Debug.Log("shaking");
 
             Vector2 shake = Random.insideUnitCircle * screenShakeMaxMagnitude * Time.deltaTime;
 
