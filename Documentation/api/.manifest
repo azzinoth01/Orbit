@@ -1,5 +1,7 @@
 {
   "Global": "Global.yml",
+  "Global.AttachGameObjectsToParticles": "Global.AttachGameObjectsToParticles.yml",
+  "Global.AttachGameObjectsToParticles.m_Prefab": "Global.AttachGameObjectsToParticles.yml",
   "Global.Bullet": "Global.Bullet.yml",
   "Global.Bullet.body": "Global.Bullet.yml",
   "Global.Bullet.BulletDmg": "Global.Bullet.yml",

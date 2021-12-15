@@ -22,7 +22,7 @@ items:
   source:
     id: Move_in_out_Scene
     path: ''
-    startLine: 2238
+    startLine: 2284
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -32,6 +32,7 @@ items:
     content: 'public class Move_in_out_Scene : MonoBehaviour'
     content.vb: >-
       Public Class Move_in_out_Scene
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -55,7 +56,7 @@ items:
   source:
     id: moveInWaypoints
     path: ''
-    startLine: 2240
+    startLine: 2286
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -82,7 +83,7 @@ items:
   source:
     id: moveOutWaypoints
     path: ''
-    startLine: 2241
+    startLine: 2287
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -109,7 +110,7 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 2242
+    startLine: 2288
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -136,7 +137,7 @@ items:
   source:
     id: force
     path: ''
-    startLine: 2247
+    startLine: 2293
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -163,7 +164,7 @@ items:
   source:
     id: maxSpeed
     path: ''
-    startLine: 2248
+    startLine: 2294
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -190,7 +191,7 @@ items:
   source:
     id: body
     path: ''
-    startLine: 2250
+    startLine: 2296
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -217,7 +218,7 @@ items:
   source:
     id: startMoveOut
     path: ''
-    startLine: 2352
+    startLine: 2398
   assemblies:
   - cs.temp.dll
   namespace: Global

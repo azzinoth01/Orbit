@@ -20,7 +20,7 @@ items:
   source:
     id: Bullet
     path: ''
-    startLine: 398
+    startLine: 444
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -30,6 +30,7 @@ items:
     content: 'public class Bullet : MonoBehaviour'
     content.vb: >-
       Public Class Bullet
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -53,7 +54,7 @@ items:
   source:
     id: waypoints
     path: ''
-    startLine: 401
+    startLine: 447
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -80,7 +81,7 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 402
+    startLine: 448
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -107,7 +108,7 @@ items:
   source:
     id: body
     path: ''
-    startLine: 404
+    startLine: 450
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -134,7 +135,7 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 405
+    startLine: 451
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -161,7 +162,7 @@ items:
   source:
     id: BulletDmg
     path: ''
-    startLine: 418
+    startLine: 464
   assemblies:
   - cs.temp.dll
   namespace: Global

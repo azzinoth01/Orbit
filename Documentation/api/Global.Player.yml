@@ -61,7 +61,7 @@ items:
   source:
     id: Player
     path: ''
-    startLine: 2512
+    startLine: 2558
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -71,7 +71,9 @@ items:
     content: 'public class Player : MonoBehaviour, Controlls.IBullet_hellActions'
     content.vb: >-
       Public Class Player
+
           Inherits MonoBehaviour
+
           Implements Controlls.IBullet_hellActions
   inheritance:
   - System.Object
@@ -97,7 +99,7 @@ items:
   source:
     id: health
     path: ''
-    startLine: 2514
+    startLine: 2560
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -124,7 +126,7 @@ items:
   source:
     id: healthbar
     path: ''
-    startLine: 2516
+    startLine: 2562
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -151,7 +153,7 @@ items:
   source:
     id: healthbarAbove60
     path: ''
-    startLine: 2518
+    startLine: 2564
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -178,7 +180,7 @@ items:
   source:
     id: healthbarAbove30
     path: ''
-    startLine: 2519
+    startLine: 2565
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -205,7 +207,7 @@ items:
   source:
     id: healthbarBelow30
     path: ''
-    startLine: 2520
+    startLine: 2566
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -232,7 +234,7 @@ items:
   source:
     id: maxschield
     path: ''
-    startLine: 2522
+    startLine: 2568
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -259,7 +261,7 @@ items:
   source:
     id: currentschield
     path: ''
-    startLine: 2523
+    startLine: 2569
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -286,7 +288,7 @@ items:
   source:
     id: schieldbar
     path: ''
-    startLine: 2524
+    startLine: 2570
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -313,7 +315,7 @@ items:
   source:
     id: schieldbarStepValue
     path: ''
-    startLine: 2525
+    startLine: 2571
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -340,7 +342,7 @@ items:
   source:
     id: schieldRefreshRate
     path: ''
-    startLine: 2527
+    startLine: 2573
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -367,7 +369,7 @@ items:
   source:
     id: schieldRefreshValue
     path: ''
-    startLine: 2528
+    startLine: 2574
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -394,7 +396,7 @@ items:
   source:
     id: body
     path: ''
-    startLine: 2531
+    startLine: 2577
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -421,7 +423,7 @@ items:
   source:
     id: force
     path: ''
-    startLine: 2533
+    startLine: 2579
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -448,7 +450,7 @@ items:
   source:
     id: maxSpeed
     path: ''
-    startLine: 2534
+    startLine: 2580
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -475,7 +477,7 @@ items:
   source:
     id: weapons
     path: ''
-    startLine: 2536
+    startLine: 2582
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -502,7 +504,7 @@ items:
   source:
     id: ship
     path: ''
-    startLine: 2538
+    startLine: 2584
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -529,7 +531,7 @@ items:
   source:
     id: additionalDmg
     path: ''
-    startLine: 2549
+    startLine: 2595
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -556,7 +558,7 @@ items:
   source:
     id: dmgModifier
     path: ''
-    startLine: 2550
+    startLine: 2596
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -583,7 +585,7 @@ items:
   source:
     id: immunityFlickerRate
     path: ''
-    startLine: 2552
+    startLine: 2598
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -610,7 +612,7 @@ items:
   source:
     id: maxFlickerRange
     path: ''
-    startLine: 2553
+    startLine: 2599
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -637,7 +639,7 @@ items:
   source:
     id: immunityTimeAfterHit
     path: ''
-    startLine: 2556
+    startLine: 2602
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -664,7 +666,7 @@ items:
   source:
     id: immunityTimeAfterDoge
     path: ''
-    startLine: 2557
+    startLine: 2603
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -691,7 +693,7 @@ items:
   source:
     id: dogeCharges
     path: ''
-    startLine: 2559
+    startLine: 2605
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -718,7 +720,7 @@ items:
   source:
     id: dogeRange
     path: ''
-    startLine: 2560
+    startLine: 2606
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -745,7 +747,7 @@ items:
   source:
     id: dogeSpeed
     path: ''
-    startLine: 2561
+    startLine: 2607
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -772,7 +774,7 @@ items:
   source:
     id: maxDogeDuration
     path: ''
-    startLine: 2562
+    startLine: 2608
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -799,7 +801,7 @@ items:
   source:
     id: dogeCooldown
     path: ''
-    startLine: 2563
+    startLine: 2609
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -826,7 +828,7 @@ items:
   source:
     id: globalCooldown
     path: ''
-    startLine: 2564
+    startLine: 2610
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -853,7 +855,7 @@ items:
   source:
     id: chargeSprites
     path: ''
-    startLine: 2572
+    startLine: 2618
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -880,7 +882,7 @@ items:
   source:
     id: chargeUI
     path: ''
-    startLine: 2573
+    startLine: 2619
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -907,7 +909,7 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 2575
+    startLine: 2621
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -934,7 +936,7 @@ items:
   source:
     id: deathEffect
     path: ''
-    startLine: 2586
+    startLine: 2632
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -961,7 +963,7 @@ items:
   source:
     id: chargeAudio
     path: ''
-    startLine: 2588
+    startLine: 2634
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -988,7 +990,7 @@ items:
   source:
     id: Impulse
     path: ''
-    startLine: 2591
+    startLine: 2637
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1019,7 +1021,7 @@ items:
   source:
     id: OnDoge
     path: ''
-    startLine: 2613
+    startLine: 2659
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1053,7 +1055,7 @@ items:
   source:
     id: OnMove_down
     path: ''
-    startLine: 2626
+    startLine: 2672
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1087,7 +1089,7 @@ items:
   source:
     id: OnMove_left
     path: ''
-    startLine: 2646
+    startLine: 2692
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1121,7 +1123,7 @@ items:
   source:
     id: OnMove_rigth
     path: ''
-    startLine: 2663
+    startLine: 2709
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1155,7 +1157,7 @@ items:
   source:
     id: OnMove_up
     path: ''
-    startLine: 2682
+    startLine: 2728
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1189,7 +1191,7 @@ items:
   source:
     id: OnShoot
     path: ''
-    startLine: 2701
+    startLine: 2747
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1223,7 +1225,7 @@ items:
   source:
     id: OnPause_menu
     path: ''
-    startLine: 2714
+    startLine: 2760
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1257,7 +1259,7 @@ items:
   source:
     id: smoothHealthDrop
     path: ''
-    startLine: 2861
+    startLine: 2907
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1288,7 +1290,7 @@ items:
   source:
     id: smoothSchieldDrop
     path: ''
-    startLine: 2913
+    startLine: 2959
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1319,7 +1321,7 @@ items:
   source:
     id: schieldRefresh
     path: ''
-    startLine: 2951
+    startLine: 2997
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1354,7 +1356,7 @@ items:
   source:
     id: takeDmg
     path: ''
-    startLine: 2973
+    startLine: 3019
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1386,7 +1388,7 @@ items:
   source:
     id: clearControlls
     path: ''
-    startLine: 3018
+    startLine: 3064
   assemblies:
   - cs.temp.dll
   namespace: Global

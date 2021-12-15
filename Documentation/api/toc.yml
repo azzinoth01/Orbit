@@ -2,6 +2,8 @@
 - uid: Global
   name: Global
   items:
+  - uid: Global.AttachGameObjectsToParticles
+    name: AttachGameObjectsToParticles
   - uid: Global.Bullet
     name: Bullet
   - uid: Global.Bullet_pooling_watcher

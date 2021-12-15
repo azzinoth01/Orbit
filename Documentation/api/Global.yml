@@ -3,6 +3,7 @@ items:
 - uid: Global
   id: Global
   children:
+  - Global.AttachGameObjectsToParticles
   - Global.Bullet
   - Global.Bullet_pooling_watcher
   - Global.BulletInfo
@@ -62,6 +63,11 @@ references:
   name: Controlls.IBullet_hellActions
   nameWithType: Controlls.IBullet_hellActions
   fullName: Controlls.IBullet_hellActions
+- uid: Global.AttachGameObjectsToParticles
+  commentId: T:Global.AttachGameObjectsToParticles
+  name: AttachGameObjectsToParticles
+  nameWithType: AttachGameObjectsToParticles
+  fullName: AttachGameObjectsToParticles
 - uid: Global.Bullet
   commentId: T:Global.Bullet
   name: Bullet

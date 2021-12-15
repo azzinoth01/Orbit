@@ -21,7 +21,7 @@ items:
   source:
     id: Main_menu
     path: ''
-    startLine: 2023
+    startLine: 2069
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -31,6 +31,7 @@ items:
     content: 'public class Main_menu : MonoBehaviour'
     content.vb: >-
       Public Class Main_menu
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -54,7 +55,7 @@ items:
   source:
     id: mainMenu
     path: ''
-    startLine: 2025
+    startLine: 2071
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -81,7 +82,7 @@ items:
   source:
     id: rebidningMenu
     path: ''
-    startLine: 2026
+    startLine: 2072
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -108,7 +109,7 @@ items:
   source:
     id: playGame
     path: ''
-    startLine: 2031
+    startLine: 2077
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -136,7 +137,7 @@ items:
   source:
     id: quitGame
     path: ''
-    startLine: 2038
+    startLine: 2084
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -164,7 +165,7 @@ items:
   source:
     id: onClickBackToMainMenu
     path: ''
-    startLine: 2045
+    startLine: 2091
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -192,7 +193,7 @@ items:
   source:
     id: onClickControls
     path: ''
-    startLine: 2053
+    startLine: 2099
   assemblies:
   - cs.temp.dll
   namespace: Global

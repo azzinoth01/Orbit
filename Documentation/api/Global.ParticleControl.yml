@@ -17,7 +17,7 @@ items:
   source:
     id: ParticleControl
     path: ''
-    startLine: 2463
+    startLine: 2509
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -27,6 +27,7 @@ items:
     content: 'public class ParticleControl : MonoBehaviour'
     content.vb: >-
       Public Class ParticleControl
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -50,7 +51,7 @@ items:
   source:
     id: particle
     path: ''
-    startLine: 2465
+    startLine: 2511
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -77,7 +78,7 @@ items:
   source:
     id: destroyAfterPlay
     path: ''
-    startLine: 2466
+    startLine: 2512
   assemblies:
   - cs.temp.dll
   namespace: Global

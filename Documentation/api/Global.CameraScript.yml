@@ -21,7 +21,7 @@ items:
   source:
     id: CameraScript
     path: ''
-    startLine: 886
+    startLine: 932
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -31,6 +31,7 @@ items:
     content: 'public class CameraScript : MonoBehaviour'
     content.vb: >-
       Public Class CameraScript
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -54,7 +55,7 @@ items:
   source:
     id: player
     path: ''
-    startLine: 890
+    startLine: 936
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -81,7 +82,7 @@ items:
   source:
     id: offsetSpeed
     path: ''
-    startLine: 893
+    startLine: 939
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -108,7 +109,7 @@ items:
   source:
     id: screenShakeMaxDuration
     path: ''
-    startLine: 897
+    startLine: 943
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -135,7 +136,7 @@ items:
   source:
     id: screenShakeMinDuration
     path: ''
-    startLine: 898
+    startLine: 944
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -162,7 +163,7 @@ items:
   source:
     id: screenShakeMaxMagnitude
     path: ''
-    startLine: 900
+    startLine: 946
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -189,7 +190,7 @@ items:
   source:
     id: startScreenShake
     path: ''
-    startLine: 966
+    startLine: 1012
   assemblies:
   - cs.temp.dll
   namespace: Global

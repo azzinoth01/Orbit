@@ -21,7 +21,7 @@ items:
   source:
     id: Skill
     path: ''
-    startLine: 3613
+    startLine: 3659
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -31,6 +31,7 @@ items:
     content: 'public class Skill : MonoBehaviour'
     content.vb: >-
       Public Class Skill
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -54,7 +55,7 @@ items:
   source:
     id: bulletInfoList
     path: ''
-    startLine: 3615
+    startLine: 3661
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -81,7 +82,7 @@ items:
   source:
     id: maxDuration
     path: ''
-    startLine: 3616
+    startLine: 3662
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -108,7 +109,7 @@ items:
   source:
     id: Timestamp
     path: ''
-    startLine: 3623
+    startLine: 3669
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -139,7 +140,7 @@ items:
   source:
     id: layerChange
     path: ''
-    startLine: 3696
+    startLine: 3742
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -167,7 +168,7 @@ items:
   source:
     id: setDmgModifiers
     path: ''
-    startLine: 3758
+    startLine: 3804
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -202,7 +203,7 @@ items:
   source:
     id: checkDisabled
     path: ''
-    startLine: 3770
+    startLine: 3816
   assemblies:
   - cs.temp.dll
   namespace: Global

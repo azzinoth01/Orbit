@@ -15,7 +15,7 @@ items:
   source:
     id: Globals_init
     path: ''
-    startLine: 1949
+    startLine: 1995
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -25,6 +25,7 @@ items:
     content: 'public class Globals_init : MonoBehaviour'
     content.vb: >-
       Public Class Globals_init
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object

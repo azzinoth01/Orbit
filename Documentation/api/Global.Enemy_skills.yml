@@ -19,7 +19,7 @@ items:
   source:
     id: Enemy_skills
     path: ''
-    startLine: 1487
+    startLine: 1533
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -29,6 +29,7 @@ items:
     content: 'public class Enemy_skills : MonoBehaviour'
     content.vb: >-
       Public Class Enemy_skills
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -52,7 +53,7 @@ items:
   source:
     id: shootsToCreate
     path: ''
-    startLine: 1490
+    startLine: 1536
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -79,7 +80,7 @@ items:
   source:
     id: skillsequenze
     path: ''
-    startLine: 1492
+    startLine: 1538
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -106,7 +107,7 @@ items:
   source:
     id: additionalDmg
     path: ''
-    startLine: 1497
+    startLine: 1543
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -133,7 +134,7 @@ items:
   source:
     id: dmgModifier
     path: ''
-    startLine: 1498
+    startLine: 1544
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -37,7 +37,9 @@ items:
     content: 'public class Controlls : IInputActionCollection2, IDisposable'
     content.vb: >-
       Public Class Controlls
+
           Inherits IInputActionCollection2
+
           Implements IDisposable
   inheritance:
   - System.Object

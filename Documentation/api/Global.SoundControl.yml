@@ -30,7 +30,7 @@ items:
   source:
     id: SoundControl
     path: ''
-    startLine: 3839
+    startLine: 3885
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -40,6 +40,7 @@ items:
     content: 'public class SoundControl : MonoBehaviour'
     content.vb: >-
       Public Class SoundControl
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -63,7 +64,7 @@ items:
   source:
     id: masterGroup
     path: ''
-    startLine: 3841
+    startLine: 3887
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -90,7 +91,7 @@ items:
   source:
     id: background
     path: ''
-    startLine: 3842
+    startLine: 3888
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -117,7 +118,7 @@ items:
   source:
     id: sfx
     path: ''
-    startLine: 3843
+    startLine: 3889
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -144,7 +145,7 @@ items:
   source:
     id: normal
     path: ''
-    startLine: 3844
+    startLine: 3890
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -171,7 +172,7 @@ items:
   source:
     id: mute
     path: ''
-    startLine: 3845
+    startLine: 3891
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -198,7 +199,7 @@ items:
   source:
     id: muteButton
     path: ''
-    startLine: 3853
+    startLine: 3899
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -225,7 +226,7 @@ items:
   source:
     id: backgroundSlider
     path: ''
-    startLine: 3854
+    startLine: 3900
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -252,7 +253,7 @@ items:
   source:
     id: sfxSlider
     path: ''
-    startLine: 3855
+    startLine: 3901
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -279,7 +280,7 @@ items:
   source:
     id: muteSp
     path: ''
-    startLine: 3857
+    startLine: 3903
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -306,7 +307,7 @@ items:
   source:
     id: unMuteSp
     path: ''
-    startLine: 3858
+    startLine: 3904
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -333,7 +334,7 @@ items:
   source:
     id: setStartSettings
     path: ''
-    startLine: 3888
+    startLine: 3934
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -361,7 +362,7 @@ items:
   source:
     id: toggleMute
     path: ''
-    startLine: 3928
+    startLine: 3974
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -389,7 +390,7 @@ items:
   source:
     id: sfxChanged
     path: ''
-    startLine: 3946
+    startLine: 3992
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -417,7 +418,7 @@ items:
   source:
     id: backgroundSoundChange
     path: ''
-    startLine: 3964
+    startLine: 4010
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -445,7 +446,7 @@ items:
   source:
     id: saveSettingChanges
     path: ''
-    startLine: 3985
+    startLine: 4031
   assemblies:
   - cs.temp.dll
   namespace: Global
