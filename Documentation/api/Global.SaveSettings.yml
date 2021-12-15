@@ -1,0 +1,312 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.SaveSettings
+  commentId: T:Global.SaveSettings
+  id: SaveSettings
+  parent: Global
+  children:
+  - Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single)
+  - Global.SaveSettings.BackgroundVolume
+  - Global.SaveSettings.IsMute
+  - Global.SaveSettings.loadSettings
+  - Global.SaveSettings.savingSetting
+  - Global.SaveSettings.SfxVolume
+  langs:
+  - csharp
+  - vb
+  name: SaveSettings
+  nameWithType: SaveSettings
+  fullName: SaveSettings
+  type: Class
+  source:
+    id: SaveSettings
+    path: ''
+    startLine: 3516
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontainer classe zum speichern von Settings\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class SaveSettings
+    content.vb: >-
+      <Serializable>
+
+      Public Class SaveSettings
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.SaveSettings.IsMute
+  commentId: P:Global.SaveSettings.IsMute
+  id: IsMute
+  parent: Global.SaveSettings
+  langs:
+  - csharp
+  - vb
+  name: IsMute
+  nameWithType: SaveSettings.IsMute
+  fullName: SaveSettings.IsMute
+  type: Property
+  source:
+    id: IsMute
+    path: ''
+    startLine: 3523
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool IsMute { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsMute As Boolean
+  overload: Global.SaveSettings.IsMute*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.SaveSettings.BackgroundVolume
+  commentId: P:Global.SaveSettings.BackgroundVolume
+  id: BackgroundVolume
+  parent: Global.SaveSettings
+  langs:
+  - csharp
+  - vb
+  name: BackgroundVolume
+  nameWithType: SaveSettings.BackgroundVolume
+  fullName: SaveSettings.BackgroundVolume
+  type: Property
+  source:
+    id: BackgroundVolume
+    path: ''
+    startLine: 3533
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float BackgroundVolume { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property BackgroundVolume As Single
+  overload: Global.SaveSettings.BackgroundVolume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.SaveSettings.SfxVolume
+  commentId: P:Global.SaveSettings.SfxVolume
+  id: SfxVolume
+  parent: Global.SaveSettings
+  langs:
+  - csharp
+  - vb
+  name: SfxVolume
+  nameWithType: SaveSettings.SfxVolume
+  fullName: SaveSettings.SfxVolume
+  type: Property
+  source:
+    id: SfxVolume
+    path: ''
+    startLine: 3543
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float SfxVolume { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property SfxVolume As Single
+  overload: Global.SaveSettings.SfxVolume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single)
+  commentId: M:Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single)
+  id: '#ctor(System.Boolean,System.Single,System.Single)'
+  parent: Global.SaveSettings
+  langs:
+  - csharp
+  - vb
+  name: SaveSettings(Boolean, Single, Single)
+  nameWithType: SaveSettings.SaveSettings(Boolean, Single, Single)
+  fullName: SaveSettings.SaveSettings(System.Boolean, System.Single, System.Single)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 3559
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nstandard consturktor\n"
+  example: []
+  syntax:
+    content: public SaveSettings(bool isMute, float backgroundVolume, float sfxVolume)
+    parameters:
+    - id: isMute
+      type: System.Boolean
+      description: setzt mute button
+    - id: backgroundVolume
+      type: System.Single
+      description: setzt background Volume 0-1
+    - id: sfxVolume
+      type: System.Single
+      description: setzt sfx Volume 0-1
+    content.vb: Public Sub New(isMute As Boolean, backgroundVolume As Single, sfxVolume As Single)
+  overload: Global.SaveSettings.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SaveSettings.savingSetting
+  commentId: M:Global.SaveSettings.savingSetting
+  id: savingSetting
+  parent: Global.SaveSettings
+  langs:
+  - csharp
+  - vb
+  name: savingSetting()
+  nameWithType: SaveSettings.savingSetting()
+  fullName: SaveSettings.savingSetting()
+  type: Method
+  source:
+    id: savingSetting
+    path: ''
+    startLine: 3569
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nspeichert die Settings\n"
+  example: []
+  syntax:
+    content: public void savingSetting()
+    content.vb: Public Sub savingSetting
+  overload: Global.SaveSettings.savingSetting*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SaveSettings.loadSettings
+  commentId: M:Global.SaveSettings.loadSettings
+  id: loadSettings
+  parent: Global.SaveSettings
+  langs:
+  - csharp
+  - vb
+  name: loadSettings()
+  nameWithType: SaveSettings.loadSettings()
+  fullName: SaveSettings.loadSettings()
+  type: Method
+  source:
+    id: loadSettings
+    path: ''
+    startLine: 3585
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nladet die Settings aus einer gespeicherten Datei, wenn vorhanden\n"
+  example: []
+  syntax:
+    content: public static SaveSettings loadSettings()
+    return:
+      type: Global.SaveSettings
+      description: gibt die gespeicherten Settings zur�ck
+    content.vb: Public Shared Function loadSettings As SaveSettings
+  overload: Global.SaveSettings.loadSettings*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.SaveSettings.IsMute*
+  commentId: Overload:Global.SaveSettings.IsMute
+  name: IsMute
+  nameWithType: SaveSettings.IsMute
+  fullName: SaveSettings.IsMute
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Global.SaveSettings.BackgroundVolume*
+  commentId: Overload:Global.SaveSettings.BackgroundVolume
+  name: BackgroundVolume
+  nameWithType: SaveSettings.BackgroundVolume
+  fullName: SaveSettings.BackgroundVolume
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.SaveSettings.SfxVolume*
+  commentId: Overload:Global.SaveSettings.SfxVolume
+  name: SfxVolume
+  nameWithType: SaveSettings.SfxVolume
+  fullName: SaveSettings.SfxVolume
+- uid: Global.SaveSettings.#ctor*
+  commentId: Overload:Global.SaveSettings.#ctor
+  name: SaveSettings
+  nameWithType: SaveSettings.SaveSettings
+  fullName: SaveSettings.SaveSettings
+- uid: Global.SaveSettings.savingSetting*
+  commentId: Overload:Global.SaveSettings.savingSetting
+  name: savingSetting
+  nameWithType: SaveSettings.savingSetting
+  fullName: SaveSettings.savingSetting
+- uid: Global.SaveSettings.loadSettings*
+  commentId: Overload:Global.SaveSettings.loadSettings
+  name: loadSettings
+  nameWithType: SaveSettings.loadSettings
+  fullName: SaveSettings.loadSettings
+- uid: Global.SaveSettings
+  commentId: T:Global.SaveSettings
+  name: SaveSettings
+  nameWithType: SaveSettings
+  fullName: SaveSettings

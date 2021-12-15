@@ -1,0 +1,312 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Bullet
+  commentId: T:Global.Bullet
+  id: Bullet
+  parent: Global
+  children:
+  - Global.Bullet.body
+  - Global.Bullet.BulletDmg
+  - Global.Bullet.speed
+  - Global.Bullet.waypointPrefab
+  - Global.Bullet.waypoints
+  langs:
+  - csharp
+  - vb
+  name: Bullet
+  nameWithType: Bullet
+  fullName: Bullet
+  type: Class
+  source:
+    id: Bullet
+    path: ''
+    startLine: 398
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclasse die beschreibt wie die Bullet fliegt\n"
+  example: []
+  syntax:
+    content: 'public class Bullet : MonoBehaviour'
+    content.vb: >-
+      Public Class Bullet
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Bullet.waypoints
+  commentId: F:Global.Bullet.waypoints
+  id: waypoints
+  parent: Global.Bullet
+  langs:
+  - csharp
+  - vb
+  name: waypoints
+  nameWithType: Bullet.waypoints
+  fullName: Bullet.waypoints
+  type: Field
+  source:
+    id: waypoints
+    path: ''
+    startLine: 401
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Vector2> waypoints
+    return:
+      type: System.Collections.Generic.List{Vector2}
+    content.vb: Public waypoints As List(Of Vector2)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Bullet.speed
+  commentId: F:Global.Bullet.speed
+  id: speed
+  parent: Global.Bullet
+  langs:
+  - csharp
+  - vb
+  name: speed
+  nameWithType: Bullet.speed
+  fullName: Bullet.speed
+  type: Field
+  source:
+    id: speed
+    path: ''
+    startLine: 402
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float speed
+    return:
+      type: System.Single
+    content.vb: Public speed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Bullet.body
+  commentId: F:Global.Bullet.body
+  id: body
+  parent: Global.Bullet
+  langs:
+  - csharp
+  - vb
+  name: body
+  nameWithType: Bullet.body
+  fullName: Bullet.body
+  type: Field
+  source:
+    id: body
+    path: ''
+    startLine: 404
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Rigidbody2D body
+    return:
+      type: Global.Rigidbody2D
+    content.vb: Public body As Rigidbody2D
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Bullet.waypointPrefab
+  commentId: F:Global.Bullet.waypointPrefab
+  id: waypointPrefab
+  parent: Global.Bullet
+  langs:
+  - csharp
+  - vb
+  name: waypointPrefab
+  nameWithType: Bullet.waypointPrefab
+  fullName: Bullet.waypointPrefab
+  type: Field
+  source:
+    id: waypointPrefab
+    path: ''
+    startLine: 405
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject waypointPrefab
+    return:
+      type: Global.GameObject
+    content.vb: Public waypointPrefab As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Bullet.BulletDmg
+  commentId: P:Global.Bullet.BulletDmg
+  id: BulletDmg
+  parent: Global.Bullet
+  langs:
+  - csharp
+  - vb
+  name: BulletDmg
+  nameWithType: Bullet.BulletDmg
+  fullName: Bullet.BulletDmg
+  type: Property
+  source:
+    id: BulletDmg
+    path: ''
+    startLine: 418
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float BulletDmg { set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public WriteOnly Property BulletDmg As Single
+  overload: Global.Bullet.BulletDmg*
+  modifiers.csharp:
+  - public
+  - set
+  modifiers.vb:
+  - Public
+  - WriteOnly
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{Vector2}
+  commentId: T:System.Collections.Generic.List{Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Vector2>
+  nameWithType: List<Vector2>
+  fullName: System.Collections.Generic.List<Vector2>
+  nameWithType.vb: List(Of Vector2)
+  fullName.vb: System.Collections.Generic.List(Of Vector2)
+  name.vb: List(Of Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.Rigidbody2D
+  isExternal: true
+  name: Rigidbody2D
+  nameWithType: Rigidbody2D
+  fullName: Rigidbody2D
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.Bullet.BulletDmg*
+  commentId: Overload:Global.Bullet.BulletDmg
+  name: BulletDmg
+  nameWithType: Bullet.BulletDmg
+  fullName: Bullet.BulletDmg

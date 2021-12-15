@@ -1,0 +1,593 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Controlls.Bullet_hellActions
+  commentId: T:Global.Controlls.Bullet_hellActions
+  id: Controlls.Bullet_hellActions
+  parent: Global
+  children:
+  - Global.Controlls.Bullet_hellActions.#ctor(Controlls)
+  - Global.Controlls.Bullet_hellActions.Disable
+  - Global.Controlls.Bullet_hellActions.doge
+  - Global.Controlls.Bullet_hellActions.Enable
+  - Global.Controlls.Bullet_hellActions.enabled
+  - Global.Controlls.Bullet_hellActions.Get
+  - Global.Controlls.Bullet_hellActions.move_down
+  - Global.Controlls.Bullet_hellActions.move_left
+  - Global.Controlls.Bullet_hellActions.move_rigth
+  - Global.Controlls.Bullet_hellActions.move_up
+  - Global.Controlls.Bullet_hellActions.op_Implicit(Controlls.Bullet_hellActions)~InputActionMap
+  - Global.Controlls.Bullet_hellActions.pause_menu
+  - Global.Controlls.Bullet_hellActions.SetCallbacks(Controlls.IBullet_hellActions)
+  - Global.Controlls.Bullet_hellActions.shoot
+  langs:
+  - csharp
+  - vb
+  name: Controlls.Bullet_hellActions
+  nameWithType: Controlls.Bullet_hellActions
+  fullName: Controlls.Bullet_hellActions
+  type: Struct
+  source:
+    id: Bullet_hellActions
+    path: ''
+    startLine: 306
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public struct Bullet_hellActions
+    content.vb: Public Structure Bullet_hellActions
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Global.Controlls.Bullet_hellActions.#ctor(Controlls)
+  commentId: M:Global.Controlls.Bullet_hellActions.#ctor(Controlls)
+  id: '#ctor(Controlls)'
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: Bullet_hellActions(Controlls)
+  nameWithType: Controlls.Bullet_hellActions.Bullet_hellActions(Controlls)
+  fullName: Controlls.Bullet_hellActions.Bullet_hellActions(Controlls)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 309
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Bullet_hellActions(Controlls wrapper)
+    parameters:
+    - id: wrapper
+      type: Global.Controlls
+    content.vb: Public Sub New(wrapper As Controlls)
+  overload: Global.Controlls.Bullet_hellActions.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.Bullet_hellActions.move_rigth
+  commentId: P:Global.Controlls.Bullet_hellActions.move_rigth
+  id: move_rigth
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: move_rigth
+  nameWithType: Controlls.Bullet_hellActions.move_rigth
+  fullName: Controlls.Bullet_hellActions.move_rigth
+  type: Property
+  source:
+    id: move_rigth
+    path: ''
+    startLine: 310
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction move_rigth { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property move_rigth As InputAction
+  overload: Global.Controlls.Bullet_hellActions.move_rigth*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.Bullet_hellActions.move_left
+  commentId: P:Global.Controlls.Bullet_hellActions.move_left
+  id: move_left
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: move_left
+  nameWithType: Controlls.Bullet_hellActions.move_left
+  fullName: Controlls.Bullet_hellActions.move_left
+  type: Property
+  source:
+    id: move_left
+    path: ''
+    startLine: 311
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction move_left { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property move_left As InputAction
+  overload: Global.Controlls.Bullet_hellActions.move_left*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.Bullet_hellActions.move_up
+  commentId: P:Global.Controlls.Bullet_hellActions.move_up
+  id: move_up
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: move_up
+  nameWithType: Controlls.Bullet_hellActions.move_up
+  fullName: Controlls.Bullet_hellActions.move_up
+  type: Property
+  source:
+    id: move_up
+    path: ''
+    startLine: 312
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction move_up { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property move_up As InputAction
+  overload: Global.Controlls.Bullet_hellActions.move_up*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.Bullet_hellActions.move_down
+  commentId: P:Global.Controlls.Bullet_hellActions.move_down
+  id: move_down
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: move_down
+  nameWithType: Controlls.Bullet_hellActions.move_down
+  fullName: Controlls.Bullet_hellActions.move_down
+  type: Property
+  source:
+    id: move_down
+    path: ''
+    startLine: 313
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction move_down { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property move_down As InputAction
+  overload: Global.Controlls.Bullet_hellActions.move_down*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.Bullet_hellActions.pause_menu
+  commentId: P:Global.Controlls.Bullet_hellActions.pause_menu
+  id: pause_menu
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: pause_menu
+  nameWithType: Controlls.Bullet_hellActions.pause_menu
+  fullName: Controlls.Bullet_hellActions.pause_menu
+  type: Property
+  source:
+    id: pause_menu
+    path: ''
+    startLine: 314
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction pause_menu { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property pause_menu As InputAction
+  overload: Global.Controlls.Bullet_hellActions.pause_menu*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.Bullet_hellActions.shoot
+  commentId: P:Global.Controlls.Bullet_hellActions.shoot
+  id: shoot
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: shoot
+  nameWithType: Controlls.Bullet_hellActions.shoot
+  fullName: Controlls.Bullet_hellActions.shoot
+  type: Property
+  source:
+    id: shoot
+    path: ''
+    startLine: 315
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction shoot { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property shoot As InputAction
+  overload: Global.Controlls.Bullet_hellActions.shoot*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.Bullet_hellActions.doge
+  commentId: P:Global.Controlls.Bullet_hellActions.doge
+  id: doge
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: doge
+  nameWithType: Controlls.Bullet_hellActions.doge
+  fullName: Controlls.Bullet_hellActions.doge
+  type: Property
+  source:
+    id: doge
+    path: ''
+    startLine: 316
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction doge { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property doge As InputAction
+  overload: Global.Controlls.Bullet_hellActions.doge*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.Bullet_hellActions.Get
+  commentId: M:Global.Controlls.Bullet_hellActions.Get
+  id: Get
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: Get()
+  nameWithType: Controlls.Bullet_hellActions.Get()
+  fullName: Controlls.Bullet_hellActions.Get()
+  type: Method
+  source:
+    id: Get
+    path: ''
+    startLine: 317
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public InputActionMap Get()
+    return:
+      type: Global.InputActionMap
+    content.vb: Public Function Get As InputActionMap
+  overload: Global.Controlls.Bullet_hellActions.Get*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.Bullet_hellActions.Enable
+  commentId: M:Global.Controlls.Bullet_hellActions.Enable
+  id: Enable
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: Controlls.Bullet_hellActions.Enable()
+  fullName: Controlls.Bullet_hellActions.Enable()
+  type: Method
+  source:
+    id: Enable
+    path: ''
+    startLine: 318
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Enable()
+    content.vb: Public Sub Enable
+  overload: Global.Controlls.Bullet_hellActions.Enable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.Bullet_hellActions.Disable
+  commentId: M:Global.Controlls.Bullet_hellActions.Disable
+  id: Disable
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: Disable()
+  nameWithType: Controlls.Bullet_hellActions.Disable()
+  fullName: Controlls.Bullet_hellActions.Disable()
+  type: Method
+  source:
+    id: Disable
+    path: ''
+    startLine: 319
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Disable()
+    content.vb: Public Sub Disable
+  overload: Global.Controlls.Bullet_hellActions.Disable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.Bullet_hellActions.enabled
+  commentId: P:Global.Controlls.Bullet_hellActions.enabled
+  id: enabled
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: enabled
+  nameWithType: Controlls.Bullet_hellActions.enabled
+  fullName: Controlls.Bullet_hellActions.enabled
+  type: Property
+  source:
+    id: enabled
+    path: ''
+    startLine: 320
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly bool enabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property enabled As Boolean
+  overload: Global.Controlls.Bullet_hellActions.enabled*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.Bullet_hellActions.op_Implicit(Controlls.Bullet_hellActions)~InputActionMap
+  commentId: M:Global.Controlls.Bullet_hellActions.op_Implicit(Controlls.Bullet_hellActions)~InputActionMap
+  id: op_Implicit(Controlls.Bullet_hellActions)~InputActionMap
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: Implicit(Controlls.Bullet_hellActions to InputActionMap)
+  nameWithType: Controlls.Bullet_hellActions.Implicit(Controlls.Bullet_hellActions to InputActionMap)
+  fullName: Controlls.Bullet_hellActions.Implicit(Controlls.Bullet_hellActions to InputActionMap)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: ''
+    startLine: 321
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static implicit operator InputActionMap(Controlls.Bullet_hellActions set)
+    parameters:
+    - id: set
+      type: Global.Controlls.Bullet_hellActions
+    return:
+      type: Global.InputActionMap
+    content.vb: Public Shared Widening Operator CType(set As Controlls.Bullet_hellActions) As InputActionMap
+  overload: Global.Controlls.Bullet_hellActions.op_Implicit*
+  nameWithType.vb: Controlls.Bullet_hellActions.Widening(Controlls.Bullet_hellActions to InputActionMap)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Controlls.Bullet_hellActions.Widening(Controlls.Bullet_hellActions to InputActionMap)
+  name.vb: Widening(Controlls.Bullet_hellActions to InputActionMap)
+- uid: Global.Controlls.Bullet_hellActions.SetCallbacks(Controlls.IBullet_hellActions)
+  commentId: M:Global.Controlls.Bullet_hellActions.SetCallbacks(Controlls.IBullet_hellActions)
+  id: SetCallbacks(Controlls.IBullet_hellActions)
+  parent: Global.Controlls.Bullet_hellActions
+  langs:
+  - csharp
+  - vb
+  name: SetCallbacks(Controlls.IBullet_hellActions)
+  nameWithType: Controlls.Bullet_hellActions.SetCallbacks(Controlls.IBullet_hellActions)
+  fullName: Controlls.Bullet_hellActions.SetCallbacks(Controlls.IBullet_hellActions)
+  type: Method
+  source:
+    id: SetCallbacks
+    path: ''
+    startLine: 322
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void SetCallbacks(Controlls.IBullet_hellActions instance)
+    parameters:
+    - id: instance
+      type: Global.Controlls.IBullet_hellActions
+    content.vb: Public Sub SetCallbacks(instance As Controlls.IBullet_hellActions)
+  overload: Global.Controlls.Bullet_hellActions.SetCallbacks*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.Controlls.Bullet_hellActions.#ctor*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.#ctor
+  name: Bullet_hellActions
+  nameWithType: Controlls.Bullet_hellActions.Bullet_hellActions
+  fullName: Controlls.Bullet_hellActions.Bullet_hellActions
+- uid: Global.Controlls
+  commentId: T:Global.Controlls
+  name: Controlls
+  nameWithType: Controlls
+  fullName: Controlls
+- uid: Global.Controlls.Bullet_hellActions.move_rigth*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.move_rigth
+  name: move_rigth
+  nameWithType: Controlls.Bullet_hellActions.move_rigth
+  fullName: Controlls.Bullet_hellActions.move_rigth
+- uid: Global.InputAction
+  isExternal: true
+  name: InputAction
+  nameWithType: InputAction
+  fullName: InputAction
+- uid: Global.Controlls.Bullet_hellActions.move_left*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.move_left
+  name: move_left
+  nameWithType: Controlls.Bullet_hellActions.move_left
+  fullName: Controlls.Bullet_hellActions.move_left
+- uid: Global.Controlls.Bullet_hellActions.move_up*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.move_up
+  name: move_up
+  nameWithType: Controlls.Bullet_hellActions.move_up
+  fullName: Controlls.Bullet_hellActions.move_up
+- uid: Global.Controlls.Bullet_hellActions.move_down*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.move_down
+  name: move_down
+  nameWithType: Controlls.Bullet_hellActions.move_down
+  fullName: Controlls.Bullet_hellActions.move_down
+- uid: Global.Controlls.Bullet_hellActions.pause_menu*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.pause_menu
+  name: pause_menu
+  nameWithType: Controlls.Bullet_hellActions.pause_menu
+  fullName: Controlls.Bullet_hellActions.pause_menu
+- uid: Global.Controlls.Bullet_hellActions.shoot*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.shoot
+  name: shoot
+  nameWithType: Controlls.Bullet_hellActions.shoot
+  fullName: Controlls.Bullet_hellActions.shoot
+- uid: Global.Controlls.Bullet_hellActions.doge*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.doge
+  name: doge
+  nameWithType: Controlls.Bullet_hellActions.doge
+  fullName: Controlls.Bullet_hellActions.doge
+- uid: Global.Controlls.Bullet_hellActions.Get*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.Get
+  name: Get
+  nameWithType: Controlls.Bullet_hellActions.Get
+  fullName: Controlls.Bullet_hellActions.Get
+- uid: Global.InputActionMap
+  isExternal: true
+  name: InputActionMap
+  nameWithType: InputActionMap
+  fullName: InputActionMap
+- uid: Global.Controlls.Bullet_hellActions.Enable*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.Enable
+  name: Enable
+  nameWithType: Controlls.Bullet_hellActions.Enable
+  fullName: Controlls.Bullet_hellActions.Enable
+- uid: Global.Controlls.Bullet_hellActions.Disable*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.Disable
+  name: Disable
+  nameWithType: Controlls.Bullet_hellActions.Disable
+  fullName: Controlls.Bullet_hellActions.Disable
+- uid: Global.Controlls.Bullet_hellActions.enabled*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.enabled
+  name: enabled
+  nameWithType: Controlls.Bullet_hellActions.enabled
+  fullName: Controlls.Bullet_hellActions.enabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Controlls.Bullet_hellActions.op_Implicit*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.op_Implicit
+  name: Implicit
+  nameWithType: Controlls.Bullet_hellActions.Implicit
+  fullName: Controlls.Bullet_hellActions.Implicit
+  nameWithType.vb: Controlls.Bullet_hellActions.Widening
+  fullName.vb: Controlls.Bullet_hellActions.Widening
+  name.vb: Widening
+- uid: Global.Controlls.Bullet_hellActions
+  commentId: T:Global.Controlls.Bullet_hellActions
+  name: Controlls.Bullet_hellActions
+  nameWithType: Controlls.Bullet_hellActions
+  fullName: Controlls.Bullet_hellActions
+- uid: Global.Controlls.Bullet_hellActions.SetCallbacks*
+  commentId: Overload:Global.Controlls.Bullet_hellActions.SetCallbacks
+  name: SetCallbacks
+  nameWithType: Controlls.Bullet_hellActions.SetCallbacks
+  fullName: Controlls.Bullet_hellActions.SetCallbacks
+- uid: Global.Controlls.IBullet_hellActions
+  commentId: T:Global.Controlls.IBullet_hellActions
+  name: Controlls.IBullet_hellActions
+  nameWithType: Controlls.IBullet_hellActions
+  fullName: Controlls.IBullet_hellActions

@@ -1,0 +1,451 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Layer_enum
+  commentId: T:Global.Layer_enum
+  id: Layer_enum
+  parent: Global
+  children:
+  - Global.Layer_enum.default
+  - Global.Layer_enum.empty
+  - Global.Layer_enum.enemy
+  - Global.Layer_enum.enemy_border
+  - Global.Layer_enum.enemy_bullets
+  - Global.Layer_enum.Ignore_Raycast
+  - Global.Layer_enum.player
+  - Global.Layer_enum.player_border
+  - Global.Layer_enum.player_bullets
+  - Global.Layer_enum.player_immunity
+  - Global.Layer_enum.TransparentFX
+  - Global.Layer_enum.ui
+  - Global.Layer_enum.UI_Overlay
+  - Global.Layer_enum.water
+  langs:
+  - csharp
+  - vb
+  name: Layer_enum
+  nameWithType: Layer_enum
+  fullName: Layer_enum
+  type: Enum
+  source:
+    id: Layer_enum
+    path: ''
+    startLine: 1976
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nenum f�r Layer\n"
+  example: []
+  syntax:
+    content: public enum Layer_enum
+    content.vb: Public Enum Layer_enum
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Global.Layer_enum.default
+  commentId: F:Global.Layer_enum.default
+  id: default
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: default
+  nameWithType: Layer_enum.default
+  fullName: Layer_enum.default
+  type: Field
+  source:
+    id: default
+    path: ''
+    startLine: 1978
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: default = 0
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.TransparentFX
+  commentId: F:Global.Layer_enum.TransparentFX
+  id: TransparentFX
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: TransparentFX
+  nameWithType: Layer_enum.TransparentFX
+  fullName: Layer_enum.TransparentFX
+  type: Field
+  source:
+    id: TransparentFX
+    path: ''
+    startLine: 1979
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: TransparentFX = 1
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.Ignore_Raycast
+  commentId: F:Global.Layer_enum.Ignore_Raycast
+  id: Ignore_Raycast
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: Ignore_Raycast
+  nameWithType: Layer_enum.Ignore_Raycast
+  fullName: Layer_enum.Ignore_Raycast
+  type: Field
+  source:
+    id: Ignore_Raycast
+    path: ''
+    startLine: 1980
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: Ignore_Raycast = 2
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.empty
+  commentId: F:Global.Layer_enum.empty
+  id: empty
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: empty
+  nameWithType: Layer_enum.empty
+  fullName: Layer_enum.empty
+  type: Field
+  source:
+    id: empty
+    path: ''
+    startLine: 1981
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: empty = 3
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.water
+  commentId: F:Global.Layer_enum.water
+  id: water
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: water
+  nameWithType: Layer_enum.water
+  fullName: Layer_enum.water
+  type: Field
+  source:
+    id: water
+    path: ''
+    startLine: 1982
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: water = 4
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.ui
+  commentId: F:Global.Layer_enum.ui
+  id: ui
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: ui
+  nameWithType: Layer_enum.ui
+  fullName: Layer_enum.ui
+  type: Field
+  source:
+    id: ui
+    path: ''
+    startLine: 1983
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: ui = 5
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.player_bullets
+  commentId: F:Global.Layer_enum.player_bullets
+  id: player_bullets
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: player_bullets
+  nameWithType: Layer_enum.player_bullets
+  fullName: Layer_enum.player_bullets
+  type: Field
+  source:
+    id: player_bullets
+    path: ''
+    startLine: 1984
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: player_bullets = 6
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.player
+  commentId: F:Global.Layer_enum.player
+  id: player
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: player
+  nameWithType: Layer_enum.player
+  fullName: Layer_enum.player
+  type: Field
+  source:
+    id: player
+    path: ''
+    startLine: 1985
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: player = 7
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.enemy_bullets
+  commentId: F:Global.Layer_enum.enemy_bullets
+  id: enemy_bullets
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: enemy_bullets
+  nameWithType: Layer_enum.enemy_bullets
+  fullName: Layer_enum.enemy_bullets
+  type: Field
+  source:
+    id: enemy_bullets
+    path: ''
+    startLine: 1986
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: enemy_bullets = 8
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.enemy
+  commentId: F:Global.Layer_enum.enemy
+  id: enemy
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: enemy
+  nameWithType: Layer_enum.enemy
+  fullName: Layer_enum.enemy
+  type: Field
+  source:
+    id: enemy
+    path: ''
+    startLine: 1987
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: enemy = 9
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.UI_Overlay
+  commentId: F:Global.Layer_enum.UI_Overlay
+  id: UI_Overlay
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: UI_Overlay
+  nameWithType: Layer_enum.UI_Overlay
+  fullName: Layer_enum.UI_Overlay
+  type: Field
+  source:
+    id: UI_Overlay
+    path: ''
+    startLine: 1988
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: UI_Overlay = 10
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.player_border
+  commentId: F:Global.Layer_enum.player_border
+  id: player_border
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: player_border
+  nameWithType: Layer_enum.player_border
+  fullName: Layer_enum.player_border
+  type: Field
+  source:
+    id: player_border
+    path: ''
+    startLine: 1989
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: player_border = 11
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.enemy_border
+  commentId: F:Global.Layer_enum.enemy_border
+  id: enemy_border
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: enemy_border
+  nameWithType: Layer_enum.enemy_border
+  fullName: Layer_enum.enemy_border
+  type: Field
+  source:
+    id: enemy_border
+    path: ''
+    startLine: 1990
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: enemy_border = 12
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Layer_enum.player_immunity
+  commentId: F:Global.Layer_enum.player_immunity
+  id: player_immunity
+  parent: Global.Layer_enum
+  langs:
+  - csharp
+  - vb
+  name: player_immunity
+  nameWithType: Layer_enum.player_immunity
+  fullName: Layer_enum.player_immunity
+  type: Field
+  source:
+    id: player_immunity
+    path: ''
+    startLine: 1991
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: player_immunity = 13
+    return:
+      type: Global.Layer_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.Layer_enum
+  commentId: T:Global.Layer_enum
+  name: Layer_enum
+  nameWithType: Layer_enum
+  fullName: Layer_enum
