@@ -3313,12 +3313,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 741778937}
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
+      propertyPath: maxschield
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: schieldbar
       value: 
       objectReference: {fileID: 741778936}
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 712244961376336435, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+    - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: weapons.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
+      propertyPath: immunityTimeAfterHit
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 621101414313199868, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: m_SortingOrder
