@@ -25,7 +25,7 @@ items:
   source:
     id: Waypoint_Designer
     path: ''
-    startLine: 4071
+    startLine: 4117
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -58,7 +58,7 @@ items:
   source:
     id: waypoints
     path: ''
-    startLine: 4074
+    startLine: 4120
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -85,7 +85,7 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 4075
+    startLine: 4121
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -112,7 +112,7 @@ items:
   source:
     id: force
     path: ''
-    startLine: 4076
+    startLine: 4122
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -139,7 +139,7 @@ items:
   source:
     id: restartAfter
     path: ''
-    startLine: 4077
+    startLine: 4123
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -166,7 +166,7 @@ items:
   source:
     id: loop
     path: ''
-    startLine: 4078
+    startLine: 4124
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -193,7 +193,7 @@ items:
   source:
     id: enemyDelayToNextWaypoint
     path: ''
-    startLine: 4079
+    startLine: 4125
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -220,7 +220,7 @@ items:
   source:
     id: line
     path: ''
-    startLine: 4080
+    startLine: 4126
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -247,7 +247,7 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 4081
+    startLine: 4127
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -274,7 +274,7 @@ items:
   source:
     id: waypointList
     path: ''
-    startLine: 4087
+    startLine: 4133
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -301,7 +301,7 @@ items:
   source:
     id: paintWayoints
     path: ''
-    startLine: 4143
+    startLine: 4189
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -9,6 +9,18 @@ references:
   fullName.vb: ''
   nameWithType: Global
   nameWithType.vb: ''
+- uid: Global.AttachGameObjectsToParticles
+  name: AttachGameObjectsToParticles
+  href: api/Global.AttachGameObjectsToParticles.html
+  commentId: T:Global.AttachGameObjectsToParticles
+  fullName: AttachGameObjectsToParticles
+  nameWithType: AttachGameObjectsToParticles
+- uid: Global.AttachGameObjectsToParticles.m_Prefab
+  name: m_Prefab
+  href: api/Global.AttachGameObjectsToParticles.html#Global_AttachGameObjectsToParticles_m_Prefab
+  commentId: F:Global.AttachGameObjectsToParticles.m_Prefab
+  fullName: AttachGameObjectsToParticles.m_Prefab
+  nameWithType: AttachGameObjectsToParticles.m_Prefab
 - uid: Global.Bullet
   name: Bullet
   href: api/Global.Bullet.html

@@ -22,7 +22,7 @@ items:
   source:
     id: Globals
     path: ''
-    startLine: 1928
+    startLine: 1974
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -54,7 +54,7 @@ items:
   source:
     id: pause
     path: ''
-    startLine: 1930
+    startLine: 1976
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -83,7 +83,7 @@ items:
   source:
     id: currentCamera
     path: ''
-    startLine: 1931
+    startLine: 1977
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -112,7 +112,7 @@ items:
   source:
     id: player
     path: ''
-    startLine: 1932
+    startLine: 1978
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -141,7 +141,7 @@ items:
   source:
     id: bulletPool
     path: ''
-    startLine: 1933
+    startLine: 1979
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -170,7 +170,7 @@ items:
   source:
     id: menuHandler
     path: ''
-    startLine: 1934
+    startLine: 1980
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -199,7 +199,7 @@ items:
   source:
     id: currentWinCondition
     path: ''
-    startLine: 1935
+    startLine: 1981
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -228,7 +228,7 @@ items:
   source:
     id: spawnerListe
     path: ''
-    startLine: 1936
+    startLine: 1982
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -23,7 +23,7 @@ items:
   source:
     id: Enemy_Spawner
     path: ''
-    startLine: 1680
+    startLine: 1726
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -56,7 +56,7 @@ items:
   source:
     id: enemysToSpawn
     path: ''
-    startLine: 1684
+    startLine: 1730
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -83,7 +83,7 @@ items:
   source:
     id: spawnLimit
     path: ''
-    startLine: 1685
+    startLine: 1731
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -110,7 +110,7 @@ items:
   source:
     id: delay
     path: ''
-    startLine: 1688
+    startLine: 1734
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -137,7 +137,7 @@ items:
   source:
     id: triggerArea
     path: ''
-    startLine: 1689
+    startLine: 1735
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -164,7 +164,7 @@ items:
   source:
     id: useTriggerArea
     path: ''
-    startLine: 1690
+    startLine: 1736
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -191,7 +191,7 @@ items:
   source:
     id: checkSpawnTrigger
     path: ''
-    startLine: 1820
+    startLine: 1866
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -226,7 +226,7 @@ items:
   source:
     id: checkSpawnerActivationTrigger
     path: ''
-    startLine: 1841
+    startLine: 1887
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -261,7 +261,7 @@ items:
   source:
     id: spawnKilled
     path: ''
-    startLine: 1854
+    startLine: 1900
   assemblies:
   - cs.temp.dll
   namespace: Global

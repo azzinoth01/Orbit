@@ -37,14 +37,7 @@
                 ],
                 "dest": "api"
             },
-            {
-                "src": "manual",
-                "files": [
-                    "toc.yml",
-                    "*.md"
-                ],
-                "dest": "manual"
-            }
+            
         ],
         "overwrite": [
             {
@@ -57,7 +50,8 @@
         "resource": [
             {
                 "files": [
-                    "resources/**/*"
+                    "logo.png",
+		    "logo.svg"
                 ]
             }
         ],

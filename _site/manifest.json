@@ -23,6 +23,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.AttachGameObjectsToParticles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.AttachGameObjectsToParticles.html",
+          "hash": "Z8qGdB5Qvp3xvhPRC3TWIMxtGIcxCc1kQM/4iaBNHE0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.Bullet.yml",
       "output": {
         ".html": {
@@ -399,7 +411,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "c36OcGJp1w7W1BesZC0sJDsFLXC0fVaABQ64bgdugnw="
+          "hash": "pKZHRvz2xh1drucIfLukNsFPTWf4KA2NiTKTgdFdJ6w="
         }
       },
       "is_incremental": false,
@@ -411,43 +423,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "p4LZ3KGLh1JO2h7GzFHvV6NQSQyFq8Puyw9hLWzWPFE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/coniunctis.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/coniunctis.html",
-          "hash": "/H1Hn/k1dv8e10sJDcSyqF/He9NwSacVs9yfeiubc8I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/etiam.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/etiam.html",
-          "hash": "SQ5w3HmJxgmZScipsIdNTCbR9hwjjS2zV62KJCDeCEE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "manual/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "manual/toc.html",
-          "hash": "rP+c9KPLMLO+q5u7rC7ci/iMYXqbmZC8g5PeGCEXGU4="
+          "hash": "deZemgdHi+ydOXEDAVQQnj4tX4g8tBPDw/bp/GF3qkQ="
         }
       },
       "is_incremental": false,
@@ -455,10 +431,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/ExampleManual.png",
+      "source_relative_path": "logo.png",
       "output": {
         "resource": {
-          "relative_path": "resources/ExampleManual.png"
+          "relative_path": "logo.png"
         }
       },
       "is_incremental": false,
@@ -466,10 +442,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "resources/ExampleScriptingApi.png",
+      "source_relative_path": "logo.svg",
       "output": {
         "resource": {
-          "relative_path": "resources/ExampleScriptingApi.png"
+          "relative_path": "logo.svg"
         }
       },
       "is_incremental": false,
@@ -481,7 +457,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "yJmrE3yX1pNdaVuwjza5/7HGejso5LoAwSufMStobAY="
+          "hash": "rrR0eC1eu3goU4dd7WAIKO6q6rkPOhow6WVtYX2krXI="
         }
       },
       "is_incremental": false,
@@ -491,25 +467,17 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 32,
-          "skipped_file_count": 0
+          "total_file_count": 33,
+          "skipped_file_count": 33
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

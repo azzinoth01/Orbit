@@ -20,7 +20,7 @@ items:
   source:
     id: Win_condition
     path: ''
-    startLine: 4328
+    startLine: 4374
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -53,7 +53,7 @@ items:
   source:
     id: enemysToKill
     path: ''
-    startLine: 4331
+    startLine: 4377
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -80,7 +80,7 @@ items:
   source:
     id: boxcollider
     path: ''
-    startLine: 4332
+    startLine: 4378
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -107,7 +107,7 @@ items:
   source:
     id: sp
     path: ''
-    startLine: 4333
+    startLine: 4379
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -134,7 +134,7 @@ items:
   source:
     id: activateLevelFinishPortal
     path: ''
-    startLine: 4345
+    startLine: 4391
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -162,7 +162,7 @@ items:
   source:
     id: enemyKilled
     path: ''
-    startLine: 4353
+    startLine: 4399
   assemblies:
   - cs.temp.dll
   namespace: Global

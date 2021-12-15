@@ -27,7 +27,7 @@ items:
   source:
     id: Rebinding_menu
     path: ''
-    startLine: 3236
+    startLine: 3282
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -60,7 +60,7 @@ items:
   source:
     id: ScrollView
     path: ''
-    startLine: 3240
+    startLine: 3286
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -87,7 +87,7 @@ items:
   source:
     id: itemHolder
     path: ''
-    startLine: 3241
+    startLine: 3287
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -114,7 +114,7 @@ items:
   source:
     id: actionName
     path: ''
-    startLine: 3242
+    startLine: 3288
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -141,7 +141,7 @@ items:
   source:
     id: actionKeybind
     path: ''
-    startLine: 3243
+    startLine: 3289
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -168,7 +168,7 @@ items:
   source:
     id: buttonRebind
     path: ''
-    startLine: 3244
+    startLine: 3290
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -195,7 +195,7 @@ items:
   source:
     id: buttonDefault
     path: ''
-    startLine: 3245
+    startLine: 3291
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -222,7 +222,7 @@ items:
   source:
     id: saveAlert
     path: ''
-    startLine: 3246
+    startLine: 3292
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -249,7 +249,7 @@ items:
   source:
     id: buttonBack
     path: ''
-    startLine: 3247
+    startLine: 3293
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -276,7 +276,7 @@ items:
   source:
     id: buttonSave
     path: ''
-    startLine: 3248
+    startLine: 3294
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -303,7 +303,7 @@ items:
   source:
     id: saveRebinding
     path: ''
-    startLine: 3313
+    startLine: 3359
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -331,7 +331,7 @@ items:
   source:
     id: loadRebinding
     path: ''
-    startLine: 3345
+    startLine: 3391
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -366,7 +366,7 @@ items:
   source:
     id: onClickAlertButton
     path: ''
-    startLine: 3364
+    startLine: 3410
   assemblies:
   - cs.temp.dll
   namespace: Global

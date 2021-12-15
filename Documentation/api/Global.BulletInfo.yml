@@ -29,7 +29,7 @@ items:
   source:
     id: BulletInfo
     path: ''
-    startLine: 666
+    startLine: 712
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -70,7 +70,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 686
+    startLine: 732
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -98,7 +98,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 702
+    startLine: 748
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -142,7 +142,7 @@ items:
   source:
     id: StartRotation
     path: ''
-    startLine: 715
+    startLine: 761
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -173,7 +173,7 @@ items:
   source:
     id: resetModifiers
     path: ''
-    startLine: 728
+    startLine: 774
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -201,7 +201,7 @@ items:
   source:
     id: Bullet
     path: ''
-    startLine: 735
+    startLine: 781
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -232,7 +232,7 @@ items:
   source:
     id: BulletScript
     path: ''
-    startLine: 745
+    startLine: 791
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -263,7 +263,7 @@ items:
   source:
     id: AddBaseDmg
     path: ''
-    startLine: 754
+    startLine: 800
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -294,7 +294,7 @@ items:
   source:
     id: DmgModifier
     path: ''
-    startLine: 763
+    startLine: 809
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -325,7 +325,7 @@ items:
   source:
     id: StartEffect
     path: ''
-    startLine: 772
+    startLine: 818
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -356,7 +356,7 @@ items:
   source:
     id: InstantStartEffect
     path: ''
-    startLine: 782
+    startLine: 828
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -387,7 +387,7 @@ items:
   source:
     id: SfxSound
     path: ''
-    startLine: 792
+    startLine: 838
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -418,7 +418,7 @@ items:
   source:
     id: setBulletDmg
     path: ''
-    startLine: 805
+    startLine: 851
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -446,7 +446,7 @@ items:
   source:
     id: setLayer
     path: ''
-    startLine: 816
+    startLine: 862
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -478,7 +478,7 @@ items:
   source:
     id: enableEffects
     path: ''
-    startLine: 824
+    startLine: 870
   assemblies:
   - cs.temp.dll
   namespace: Global

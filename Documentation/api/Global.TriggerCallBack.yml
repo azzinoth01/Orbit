@@ -17,7 +17,7 @@ items:
   source:
     id: TriggerCallBack
     path: ''
-    startLine: 4016
+    startLine: 4062
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -50,7 +50,7 @@ items:
   source:
     id: spawnTrigger
     path: ''
-    startLine: 4019
+    startLine: 4065
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -77,7 +77,7 @@ items:
   source:
     id: spawnerActivationTrigger
     path: ''
-    startLine: 4020
+    startLine: 4066
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -32,7 +32,7 @@ items:
   source:
     id: Menu_handler
     path: ''
-    startLine: 2068
+    startLine: 2114
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -65,7 +65,7 @@ items:
   source:
     id: levelSelectUI
     path: ''
-    startLine: 2071
+    startLine: 2117
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -92,7 +92,7 @@ items:
   source:
     id: shipMenuUI
     path: ''
-    startLine: 2072
+    startLine: 2118
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -119,7 +119,7 @@ items:
   source:
     id: levelFinishedUI
     path: ''
-    startLine: 2073
+    startLine: 2119
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -146,7 +146,7 @@ items:
   source:
     id: gameOverUI
     path: ''
-    startLine: 2074
+    startLine: 2120
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -173,7 +173,7 @@ items:
   source:
     id: pauseUI
     path: ''
-    startLine: 2075
+    startLine: 2121
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -200,7 +200,7 @@ items:
   source:
     id: onClickShipEditor
     path: ''
-    startLine: 2091
+    startLine: 2137
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -228,7 +228,7 @@ items:
   source:
     id: onClickWorldSelect
     path: ''
-    startLine: 2098
+    startLine: 2144
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -256,7 +256,7 @@ items:
   source:
     id: onClickBack
     path: ''
-    startLine: 2105
+    startLine: 2151
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -284,7 +284,7 @@ items:
   source:
     id: onClickMainMenu
     path: ''
-    startLine: 2114
+    startLine: 2160
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -316,7 +316,7 @@ items:
   source:
     id: onClickLevelSelect
     path: ''
-    startLine: 2123
+    startLine: 2169
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -348,7 +348,7 @@ items:
   source:
     id: onClickNextLeve
     path: ''
-    startLine: 2131
+    startLine: 2177
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -380,7 +380,7 @@ items:
   source:
     id: onClickShipMenu
     path: ''
-    startLine: 2153
+    startLine: 2199
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -412,7 +412,7 @@ items:
   source:
     id: onClickTryAgain
     path: ''
-    startLine: 2162
+    startLine: 2208
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -440,7 +440,7 @@ items:
   source:
     id: setPause
     path: ''
-    startLine: 2196
+    startLine: 2242
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -468,7 +468,7 @@ items:
   source:
     id: setResume
     path: ''
-    startLine: 2204
+    startLine: 2250
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -496,7 +496,7 @@ items:
   source:
     id: setGameOver
     path: ''
-    startLine: 2213
+    startLine: 2259
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -524,7 +524,7 @@ items:
   source:
     id: setLevelFinish
     path: ''
-    startLine: 2223
+    startLine: 2269
   assemblies:
   - cs.temp.dll
   namespace: Global
