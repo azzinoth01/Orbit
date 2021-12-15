@@ -85,6 +85,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     public GameObject deathEffect;
 
+    public AudioSource chargeAudio;
+
 
     public Vector2 Impulse {
         get {
@@ -487,7 +489,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (currentHealth <= 0) {
             return;
-
+            // destroy moved to smooth health drop
             //Globals.gameoverHandler.gameOver();
         }
         isImmun = true;
@@ -672,6 +674,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         else {
             chargeUI.sprite = chargeSprites[dogeCharges];
+            chargeAudio.Play();
             if (dogeCharges == 0) {
                 chargeUI.color = new Color(chargeUI.color.r, chargeUI.color.g, chargeUI.color.b, 0);
             }
@@ -692,6 +695,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// </summary>
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision) {
+
+
 
         if (collision.gameObject == waypoint) {
             //Debug.Log("doge complete");
