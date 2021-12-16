@@ -35,11 +35,11 @@ public class ParticleControl : MonoBehaviour
         else {
             if (isPlayingCheck() == false) {
                 if (destroyAfterPlay == true) {
-                    Debug.Log("test");
+                    //Debug.Log("test");
                     Destroy(gameObject);
                 }
                 else {
-                    Debug.Log("test");
+                    //Debug.Log("test");
                     gameObject.SetActive(false);
                 }
 

@@ -110,7 +110,7 @@ public class CameraScript : MonoBehaviour
 
 
         while (screenShakeRunning == true) {
-            Debug.Log("shaking");
+            //Debug.Log("shaking");
 
             Vector2 shake = Random.insideUnitCircle * screenShakeMaxMagnitude * Time.deltaTime;
 
