@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// classe um Globale Variablen zu verwalten
@@ -14,6 +15,8 @@ public static class Globals
     public static Menu_handler menuHandler;
     public static Win_condition currentWinCondition;
     public static List<Enemy_Spawner> spawnerListe;
+    public static GameObject bossUI;
+    public static Image bossHpBar;
 
 
 }

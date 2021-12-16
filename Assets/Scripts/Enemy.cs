@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 /// <summary>
 /// class die enemys beschreibt und deren movement
@@ -10,6 +10,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float health;
+    private float maxHealth;
 
 
 
@@ -52,6 +53,13 @@ public class Enemy : MonoBehaviour
 
     private Enemy_Spawner spawnerCallback;
 
+    public bool showBossHp;
+    public Image bossHp;
+    public GameObject bossUI;
+
+    //public bool rotateTowardsPlayer;
+    //public bool rotateSpeed;
+
 
 
 
@@ -73,6 +81,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     void Start() {
 
+        maxHealth = health;
         restartTime = 0;
 
 
@@ -120,7 +129,15 @@ public class Enemy : MonoBehaviour
         }
 
 
+        if (showBossHp == true) {
 
+            bossUI = Globals.bossUI;
+
+            bossHp = Globals.bossHpBar;
+
+            bossUI.SetActive(true);
+            StartCoroutine(smoothHealthDrop());
+        }
 
 
 
@@ -148,6 +165,49 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+    private IEnumerator smoothHealthDrop() {
+        while (true) {
+            if (Globals.pause == true) {
+                yield return null;
+            }
+            float prozentValue = health / maxHealth;
+            float currentFillProzent = bossHp.fillAmount;
+
+            //Debug.Log("% Value " + prozentValue.ToString());
+            //Debug.Log("Fill Value " + currentFillProzent.ToString());
+            if (prozentValue <= currentFillProzent) {
+
+                float toSet = currentFillProzent - 0.01f;
+                if (toSet < prozentValue) {
+                    toSet = prozentValue;
+                }
+                bossHp.fillAmount = toSet;
+            }
+            else if (prozentValue >= currentFillProzent) {
+                float toSet = currentFillProzent + 0.01f;
+                if (toSet > prozentValue) {
+                    toSet = prozentValue;
+                }
+                bossHp.fillAmount = toSet;
+            }
+
+
+            if (bossHp.fillAmount <= 0) {
+                Destroy(gameObject.transform.parent.gameObject);
+                Instantiate(deathParticelSystem, transform.position, transform.rotation);
+            }
+
+
+
+
+            yield return null;
+        }
+
+    }
+
+
+
 
     /// <summary>
     /// timer für delay zwischen den einzelen wegpunkt bewegungen
@@ -349,13 +409,17 @@ public class Enemy : MonoBehaviour
         //  Debug.Log(health);
         health = health - dmg;
         //  Debug.Log(health);
-        if (health <= 0) {
-            Destroy(gameObject.transform.parent.gameObject);
-            Instantiate(deathParticelSystem, transform.position, transform.rotation);
+
+        if (showBossHp == false) {
+            if (health <= 0) {
+                Destroy(gameObject.transform.parent.gameObject);
+                Instantiate(deathParticelSystem, transform.position, transform.rotation);
 
 
-            //  Globals.gameoverHandler.gameOver();
+                //  Globals.gameoverHandler.gameOver();
+            }
         }
+
     }
 
 
