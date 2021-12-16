@@ -510,6 +510,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private void OnDestroy() {
 
         controll.Dispose();
+        body.velocity = Vector2.zero;
 
     }
 
@@ -519,6 +520,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public void clearControlls() {
 
         controll.Dispose();
+        body.velocity = Vector2.zero;
 
     }
 
