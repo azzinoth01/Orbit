@@ -124,6 +124,8 @@ MonoBehaviour:
   levelFinishedUI: {fileID: 3671740615051118993}
   gameOverUI: {fileID: 2238325568566176315}
   pauseUI: {fileID: 4433845979614326884}
+  bossHpBar: {fileID: 4694275583846221199}
+  bossUI: {fileID: 3023661878862599951}
 --- !u!114 &1915954027498614106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +330,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1912709551325652917, guid: aae74accd2826a846818b05118b2b776, type: 3}
+      propertyPath: m_Name
+      value: hpbar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903770748626840580, guid: aae74accd2826a846818b05118b2b776, type: 3}
+      propertyPath: m_Name
+      value: hpbarFrame
+      objectReference: {fileID: 0}
     - target: {fileID: 8454140774447175241, guid: aae74accd2826a846818b05118b2b776, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -435,6 +445,22 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8454140775124420928, guid: aae74accd2826a846818b05118b2b776, type: 3}
   m_PrefabInstance: {fileID: 3053301364987970641}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3023661878862599951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 263941199640662878, guid: aae74accd2826a846818b05118b2b776, type: 3}
+  m_PrefabInstance: {fileID: 3053301364987970641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4694275583846221199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7744761649166500318, guid: aae74accd2826a846818b05118b2b776, type: 3}
+  m_PrefabInstance: {fileID: 3053301364987970641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3239186956747420314
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 /// <summary>
 /// menu classe um jegliches menu auﬂer main menu zu verwalten
@@ -16,6 +16,9 @@ public class Menu_handler : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject pauseUI;
 
+    public Image bossHpBar;
+    public GameObject bossUI;
+
 
 
 
@@ -25,6 +28,8 @@ public class Menu_handler : MonoBehaviour
     /// </summary>
     private void Awake() {
         Globals.menuHandler = this;
+        Globals.bossHpBar = bossHpBar;
+        Globals.bossUI = bossUI;
     }
 
     /// <summary>
