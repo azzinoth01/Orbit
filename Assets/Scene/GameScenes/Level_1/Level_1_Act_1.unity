@@ -2448,6 +2448,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: level_finish_portal
       objectReference: {fileID: 0}
+    - target: {fileID: 3274754410959085488, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274754410959085493, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
+      propertyPath: m_Size.x
+      value: 5.081159
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274754410959085493, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
+      propertyPath: m_Size.y
+      value: 5.7405796
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274754410959085493, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.023186684
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274754410959085493, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.09275401
+      objectReference: {fileID: 0}
+    - target: {fileID: 3274754410959085493, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3274754410959085493, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0
@@ -2498,7 +2522,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 10afd11a5f1cc174ba867fe2f0aa4664, type: 3}
     - target: {fileID: 3274754410959085495, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3274754410959085495, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
       propertyPath: m_DrawMode
