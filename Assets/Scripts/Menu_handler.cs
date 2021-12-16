@@ -19,8 +19,20 @@ public class Menu_handler : MonoBehaviour
     public Image bossHpBar;
     public GameObject bossUI;
 
+    public Text score;
+
+    private int currentScore;
 
 
+
+    public void addScore(int points) {
+        currentScore = currentScore + points;
+        onChangedScore();
+    }
+
+    private void onChangedScore() {
+        score.text = "Score: " + currentScore.ToString();
+    }
 
 
     /// <summary>
@@ -30,6 +42,7 @@ public class Menu_handler : MonoBehaviour
         Globals.menuHandler = this;
         Globals.bossHpBar = bossHpBar;
         Globals.bossUI = bossUI;
+        currentScore = 0;
     }
 
     /// <summary>

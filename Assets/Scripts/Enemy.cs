@@ -57,6 +57,8 @@ public class Enemy : MonoBehaviour
     public Image bossHp;
     public GameObject bossUI;
 
+    private int points;
+
     //public bool rotateTowardsPlayer;
     //public bool rotateSpeed;
 
@@ -128,8 +130,10 @@ public class Enemy : MonoBehaviour
 
         }
 
+        points = 100;
 
         if (showBossHp == true) {
+            points = 1000;
 
             bossUI = Globals.bossUI;
 
@@ -194,6 +198,7 @@ public class Enemy : MonoBehaviour
 
 
             if (bossHp.fillAmount <= 0) {
+                Globals.menuHandler.addScore(points);
                 Destroy(gameObject.transform.parent.gameObject);
                 Instantiate(deathParticelSystem, transform.position, transform.rotation);
             }
@@ -412,6 +417,7 @@ public class Enemy : MonoBehaviour
 
         if (showBossHp == false) {
             if (health <= 0) {
+                Globals.menuHandler.addScore(points);
                 Destroy(gameObject.transform.parent.gameObject);
                 Instantiate(deathParticelSystem, transform.position, transform.rotation);
 
