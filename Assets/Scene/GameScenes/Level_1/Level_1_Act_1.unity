@@ -2493,6 +2493,10 @@ PrefabInstance:
       value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3274754410959085495, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 10afd11a5f1cc174ba867fe2f0aa4664, type: 3}
+    - target: {fileID: 3274754410959085495, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -2507,6 +2511,10 @@ PrefabInstance:
     - target: {fileID: 3274754410959085495, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
       propertyPath: m_AdaptiveModeThreshold
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7163646348835071836, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
+      propertyPath: rotate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7163646348835071836, guid: 86568dd8a1a15a145a21509f199bb25f, type: 3}
       propertyPath: enemysToKill
