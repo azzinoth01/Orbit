@@ -17,6 +17,7 @@ public static class Globals
     public static List<Enemy_Spawner> spawnerListe;
     public static GameObject bossUI;
     public static Image bossHpBar;
+    public static VirtualMouse virtualMouse;
 
 
 }

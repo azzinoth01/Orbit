@@ -89,12 +89,24 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public AudioSource hitAudio;
 
 
+    private float timestamp;
+
     public Vector2 Impulse {
         get {
             return impulse;
         }
 
 
+    }
+
+    public float Timestamp {
+        get {
+            return timestamp;
+        }
+
+        set {
+            timestamp = value;
+        }
     }
 
 
@@ -248,7 +260,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         //  anim = GetComponent<Animator>();
 
-
+        timestamp = Time.time;
 
     }
 
@@ -398,6 +410,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             if (healthbar.fillAmount <= 0) {
                 Destroy(gameObject);
                 Instantiate(deathEffect, transform.position, transform.rotation);
+                Globals.menuHandler.Playtime = Time.time - timestamp;
+
                 Globals.menuHandler.setGameOver();
             }
 

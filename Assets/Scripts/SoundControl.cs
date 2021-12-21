@@ -136,7 +136,7 @@ public class SoundControl : MonoBehaviour
 
         backgroundVolume = backgroundSlider.value;
 
-        Debug.Log("changed");
+        //Debug.Log("changed");
         float volume;
 
         if (backgroundVolume == 0) {
