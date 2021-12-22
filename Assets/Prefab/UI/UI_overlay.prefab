@@ -220,6 +220,8 @@ MonoBehaviour:
   pauseUI: {fileID: 4433845979614326884}
   bossHpBar: {fileID: 4694275583846221199}
   bossUI: {fileID: 3023661878862599951}
+  playtimeText: []
+  enemyKilledCounterText: []
   score: {fileID: 2401273936146198241}
 --- !u!114 &1915954027498614106
 MonoBehaviour:
