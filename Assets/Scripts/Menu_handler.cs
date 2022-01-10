@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 /// <summary>
 /// menu classe um jegliches menu auﬂer main menu zu verwalten
@@ -16,8 +16,36 @@ public class Menu_handler : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject pauseUI;
 
+    public Image bossHpBar;
+    public GameObject bossUI;
 
+    public List<Text> playtimeText;
+    public List<Text> enemyKilledCounterText;
 
+    public Text score;
+
+    private int currentScore;
+
+    private float playtime;
+
+    public float Playtime {
+        get {
+            return playtime;
+        }
+
+        set {
+            playtime = value;
+        }
+    }
+
+    public void addScore(int points) {
+        currentScore = currentScore + points;
+        onChangedScore();
+    }
+
+    private void onChangedScore() {
+        score.text = "Score: " + currentScore.ToString();
+    }
 
 
     /// <summary>
@@ -25,6 +53,9 @@ public class Menu_handler : MonoBehaviour
     /// </summary>
     private void Awake() {
         Globals.menuHandler = this;
+        Globals.bossHpBar = bossHpBar;
+        Globals.bossUI = bossUI;
+        currentScore = 0;
     }
 
     /// <summary>
@@ -119,8 +150,8 @@ public class Menu_handler : MonoBehaviour
         }
 
         Globals.bulletPool.Clear();
-        Debug.Log("clear");
-        Debug.Log(Globals.bulletPool.Count);
+        //Debug.Log("clear");
+        //Debug.Log(Globals.bulletPool.Count);
         //try {
         try {
             Player p = Globals.player.GetComponent<Player>();
@@ -156,6 +187,13 @@ public class Menu_handler : MonoBehaviour
         Globals.pause = false;
         Time.timeScale = 1;
         gameOverUI.SetActive(true);
+
+        foreach (Text t in playtimeText) {
+            t.text = "Playtime: " + playtime.ToString() + " Seconds";
+        }
+        foreach (Text t in enemyKilledCounterText) {
+            t.text = "Enemies killed: " + (currentScore / 100).ToString();
+        }
         levelChanges();
     }
 
@@ -163,8 +201,19 @@ public class Menu_handler : MonoBehaviour
     /// aktiviert das Level Finished Menu
     /// </summary>
     public void setLevelFinish() {
+
+
         levelChanges();
         levelFinishedUI.SetActive(true);
+
+        foreach (Text t in playtimeText) {
+            t.text = "Playtime: " + playtime.ToString() + " Seconds";
+        }
+        foreach (Text t in enemyKilledCounterText) {
+            int i = currentScore - 1000;
+
+            t.text = "Enemies killed: " + (i / 100).ToString() + " und Bosse killed: 1";
+        }
 
     }
 }

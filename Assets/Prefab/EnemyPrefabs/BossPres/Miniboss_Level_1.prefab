@@ -166,6 +166,7 @@ MonoBehaviour:
   collisionDmg: 10
   destoryAfterCollison: 0
   deathParticelSystem: {fileID: 2647696785655316569, guid: 5d1048e97ea73cc45bcd1b9a3d0a768b, type: 3}
+  showBossHp: 1
 --- !u!114 &8516347313760071242
 MonoBehaviour:
   m_ObjectHideFlags: 0
