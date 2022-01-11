@@ -11,7 +11,7 @@ using UnityEngine.UI;
 /// </summary>
 public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 {
-    public float health;
+    public float maxBaseHealth;
     private float currentHealth;
     public Image healthbar;
 
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public float schieldbarStepValue;
 
     public float schieldRefreshRate;
-    public float schieldRefreshValue;
+    public float schieldRefreshBaseValue;
 
 
     public Rigidbody2D body;
@@ -284,7 +284,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         isDoging = false;
         isImmun = false;
 
-        currentHealth = health;
+        currentHealth = maxBaseHealth;
         //currentschield = maxschield;
         StartCoroutine(shootingHandler());
         StartCoroutine(moveHandler());
@@ -377,7 +377,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             if (Globals.pause == true) {
                 yield return null;
             }
-            float prozentValue = currentHealth / health;
+            float prozentValue = currentHealth / maxBaseHealth;
             float currentFillProzent = healthbar.fillAmount;
 
             //Debug.Log("% Value " + prozentValue.ToString());
@@ -469,7 +469,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         yield return new WaitForSeconds(wait);
 
-        currentschield = currentschield + schieldRefreshValue;
+        currentschield = currentschield + schieldRefreshBaseValue;
 
         if (currentschield >= maxschield) {
             currentschield = maxschield;

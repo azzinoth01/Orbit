@@ -64,6 +64,9 @@ public class Enemy : MonoBehaviour
 
 
 
+    public int minMoneyValue;
+    public int maxMonyeValue;
+
 
     public Enemy_Spawner SpawnerCallback {
         get {
@@ -143,7 +146,10 @@ public class Enemy : MonoBehaviour
             StartCoroutine(smoothHealthDrop());
         }
 
-
+        if (minMoneyValue == 0 && maxMonyeValue == 0) {
+            minMoneyValue = 1;
+            maxMonyeValue = 100;
+        }
 
 
     }
@@ -199,6 +205,12 @@ public class Enemy : MonoBehaviour
 
             if (bossHp.fillAmount <= 0) {
                 Globals.menuHandler.addScore(points);
+
+                GameObject g = Instantiate(Globals.moneyDrop, transform.position, transform.rotation);
+
+                TriggerCallBack moneyDrop = g.GetComponent<TriggerCallBack>();
+                moneyDrop.MoneyValue = Random.Range(minMoneyValue, maxMonyeValue);
+
                 Destroy(gameObject.transform.parent.gameObject);
                 Instantiate(deathParticelSystem, transform.position, transform.rotation);
             }
@@ -418,6 +430,13 @@ public class Enemy : MonoBehaviour
         if (showBossHp == false) {
             if (health <= 0) {
                 Globals.menuHandler.addScore(points);
+
+                GameObject g = Instantiate(Globals.moneyDrop, transform.position, transform.rotation);
+
+                TriggerCallBack moneyDrop = g.GetComponent<TriggerCallBack>();
+                moneyDrop.MoneyValue = Random.Range(minMoneyValue, maxMonyeValue);
+
+
                 Destroy(gameObject.transform.parent.gameObject);
                 Instantiate(deathParticelSystem, transform.position, transform.rotation);
 

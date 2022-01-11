@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0732801771085147b2f27c0bb4bee74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  maxBaseHealth: 5
   healthbar: {fileID: 0}
   healthbarAbove60: {r: 0.27450982, g: 0.5647059, b: 0.05882353, a: 1}
   healthbarAbove30: {r: 0.9254902, g: 0.78039217, b: 0.20392157, a: 1}
@@ -152,7 +152,7 @@ MonoBehaviour:
   schieldbar: {fileID: 0}
   schieldbarStepValue: 1
   schieldRefreshRate: 3
-  schieldRefreshValue: 1
+  schieldRefreshBaseValue: 0
   body: {fileID: 1580844076}
   force: 30
   maxSpeed: 12

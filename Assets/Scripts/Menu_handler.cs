@@ -188,6 +188,13 @@ public class Menu_handler : MonoBehaviour
         Time.timeScale = 1;
         gameOverUI.SetActive(true);
 
+        PlayerSave save = PlayerSave.loadSettings();
+        if (save == null) {
+            save = new PlayerSave();
+        }
+        Globals.money = save.Money;
+        //Debug.Log(Globals.money);
+
         foreach (Text t in playtimeText) {
             t.text = "Playtime: " + playtime.ToString() + " Seconds";
         }
@@ -205,6 +212,12 @@ public class Menu_handler : MonoBehaviour
 
         levelChanges();
         levelFinishedUI.SetActive(true);
+
+        PlayerSave s = new PlayerSave();
+
+        s.Money = Globals.money;
+        //Debug.Log(s.Money);
+        s.savingSetting();
 
         foreach (Text t in playtimeText) {
             t.text = "Playtime: " + playtime.ToString() + " Seconds";

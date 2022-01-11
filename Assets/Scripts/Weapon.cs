@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class Weapon : MonoBehaviour
     public float reloadTime;
     private bool canShoot;
 
-    public int shootsToCreate;
+    [SerializeField] public int shootsToCreate;
     // public Animator anim;
 
     public int additionalDmg;

@@ -18,6 +18,8 @@ public static class Globals
     public static GameObject bossUI;
     public static Image bossHpBar;
     public static VirtualMouse virtualMouse;
-
-
+    public static int money;
+    public static List<Inventar_Object> inventory;
+    public static Sprite moneyIcon;
+    public static GameObject moneyDrop;
 }
