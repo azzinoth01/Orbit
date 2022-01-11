@@ -1075,12 +1075,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Laser:
   - {fileID: 2089359013}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   Trigger: 0
 --- !u!1 &2089359010
 GameObject:
