@@ -14,10 +14,12 @@ public class ItemCreator : MonoBehaviour
     public string weaponName;
     public int value;
     public Sprite icon;
+    public Sprite patternIcon;
     public Sprite sprite;
     public bool weapon;
     public int healthBoost;
     public float shildRefreshBoost;
+    public bool mainWeapon;
     public GameObject skill;
     public float reloadTime;
     public int shootsToCreate;
@@ -82,7 +84,7 @@ public class ItemCreator : MonoBehaviour
         if (cat == null) {
             cat = new ItemCatalog();
         }
-        Debug.Log(iD);
+        //Debug.Log(iD);
         Item i = cat.ItemList.Find(x => x.ID == iD);
 
         if (i != null) {
@@ -97,14 +99,16 @@ public class ItemCreator : MonoBehaviour
             wap.Name = weaponName;
             wap.Value = value;
             wap.Icon = AssetDatabase.GetAssetPath(icon);
+            wap.PatternIcon = AssetDatabase.GetAssetPath(patternIcon);
             wap.Sprite = AssetDatabase.GetAssetPath(sprite);
             wap.skill = AssetDatabase.GetAssetPath(skill);
             wap.reloadTime = reloadTime;
             wap.shootsToCreate = shootsToCreate;
             wap.additionalDmg = additionalDmg;
             wap.dmgModifier = dmgModifier;
-            Debug.Log(wap);
-            Debug.Log(wap.ID);
+            wap.mainWeapon = mainWeapon;
+            //Debug.Log(wap);
+            //Debug.Log(wap.ID);
             cat.ItemList.Add(wap);
         }
         else {
@@ -114,6 +118,7 @@ public class ItemCreator : MonoBehaviour
             part.Name = weaponName;
             part.Value = value;
             part.Icon = AssetDatabase.GetAssetPath(icon);
+            part.PatternIcon = AssetDatabase.GetAssetPath(patternIcon);
             part.Sprite = AssetDatabase.GetAssetPath(sprite);
             part.HealthBoost = healthBoost;
             part.ShieldRefreshValueBoost = shildRefreshBoost;
@@ -121,7 +126,7 @@ public class ItemCreator : MonoBehaviour
             cat.ItemList.Add(part);
 
         }
-        Debug.Log(cat.ItemList);
+        //Debug.Log(cat.ItemList);
 
         cat.savingSetting();
     }

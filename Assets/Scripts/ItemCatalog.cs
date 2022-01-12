@@ -50,7 +50,7 @@ public class ItemCatalog
 
         if (File.Exists("Assets/Catalog/itemCatalog.json")) {
             string json = File.ReadAllText("Assets/Catalog/itemCatalog.json");
-            Debug.Log(json);
+            //Debug.Log(json);
             if (json == null || json == "") {
                 return null;
             }
