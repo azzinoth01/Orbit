@@ -8,25 +8,21 @@ public class SpeechBubbles : MonoBehaviour
     public GameObject UiObject;
     public GameObject Trigger;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         UiObject.SetActive(false);
 
     }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        { UiObject.SetActive(true);
-        };
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Player") {
+            UiObject.SetActive(true);
+        }
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+
     }
-    void OnTriggerExit2D(Collider2D other)
-    {
+    void OnTriggerExit2D(Collider2D other) {
         UiObject.SetActive(false);
         Destroy(Trigger);
     }
