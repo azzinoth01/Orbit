@@ -188,11 +188,11 @@ public class Menu_handler : MonoBehaviour
         Time.timeScale = 1;
         gameOverUI.SetActive(true);
 
-        PlayerSave save = PlayerSave.loadSettings();
-        if (save == null) {
-            save = new PlayerSave();
-        }
-        Globals.money = save.Money;
+        PlayerSave s = new PlayerSave();
+
+        s.Money = Globals.money;
+        //Debug.Log(s.Money);
+        s.savingSetting();
         //Debug.Log(Globals.money);
 
         foreach (Text t in playtimeText) {
