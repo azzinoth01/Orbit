@@ -325,12 +325,14 @@ MonoBehaviour:
   - {fileID: 2090168476}
   viewObject: {fileID: 5198303520570217569}
   weaponName: Basic Weapon
-  value: 500
+  value: 0
   icon: {fileID: 21300000, guid: a25e597ad36e66f4b8c10282957e664b, type: 3}
+  patternIcon: {fileID: 0}
   sprite: {fileID: 21300000, guid: a25e597ad36e66f4b8c10282957e664b, type: 3}
   weapon: 1
   healthBoost: 0
   shildRefreshBoost: 0
+  mainWeapon: 1
   skill: {fileID: 184400747927865093, guid: 2b25e87c9742d32479897e74d46f7f07, type: 3}
   reloadTime: 0.2
   shootsToCreate: 20

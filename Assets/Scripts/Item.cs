@@ -10,6 +10,7 @@ public class Item
     [SerializeField] private string ItemName;
     [SerializeField] private int value;
     [SerializeField] private string icon;
+    [SerializeField] private string patternIcon;
     [SerializeField] private string sprite;
 
     public string ID {
@@ -59,6 +60,16 @@ public class Item
 
         set {
             sprite = value;
+        }
+    }
+
+    public string PatternIcon {
+        get {
+            return patternIcon;
+        }
+
+        set {
+            patternIcon = value;
         }
     }
 }
