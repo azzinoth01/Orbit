@@ -33,6 +33,10 @@ MonoBehaviour:
     m_Address: Assets/Catalog
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6eebd01efa4bdd14e85f9567a577e0ef
+    m_Address: "Assets/Sprites/Ship UI/Main/MaskeLinkswei\xDF.png"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6436f9d8691e47840968eb523d4bb068, type: 2}
   m_SchemaSet:
