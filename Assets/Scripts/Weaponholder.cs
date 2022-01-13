@@ -10,13 +10,15 @@ using UnityEngine.InputSystem;
 public class Weaponholder : MonoBehaviour
 {
     private Camera cam;
+    private Mouse mouse;
     public float rotationSpeed;
 
 
     // Start is called before the first frame update
     void Start() {
-        cam = Globals.currentCamera;
 
+        mouse = Globals.virtualMouse.VirtualMouseProperty;
+        cam = Globals.virtualMouse.canvas.worldCamera;
     }
 
     /// <summary>
@@ -27,7 +29,14 @@ public class Weaponholder : MonoBehaviour
             return;
         }
         else {
-            Vector3 pos = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+
+
+            Vector3 pos = cam.ScreenToWorldPoint(mouse.position.ReadValue());
+
+            pos = cam.WorldToViewportPoint(pos);
+
+            pos = Globals.currentCamera.ViewportToWorldPoint(pos);
+
             pos.z = 0;
             Vector2 dir = pos - transform.position;
             float angle = Vector2.SignedAngle(Vector2.right, dir);

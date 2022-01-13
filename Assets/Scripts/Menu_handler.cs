@@ -19,11 +19,24 @@ public class Menu_handler : MonoBehaviour
     public Image bossHpBar;
     public GameObject bossUI;
 
+    public List<Text> playtimeText;
+    public List<Text> enemyKilledCounterText;
+
     public Text score;
 
     private int currentScore;
 
+    private float playtime;
 
+    public float Playtime {
+        get {
+            return playtime;
+        }
+
+        set {
+            playtime = value;
+        }
+    }
 
     public void addScore(int points) {
         currentScore = currentScore + points;
@@ -137,8 +150,8 @@ public class Menu_handler : MonoBehaviour
         }
 
         Globals.bulletPool.Clear();
-        Debug.Log("clear");
-        Debug.Log(Globals.bulletPool.Count);
+        //Debug.Log("clear");
+        //Debug.Log(Globals.bulletPool.Count);
         //try {
         try {
             Player p = Globals.player.GetComponent<Player>();
@@ -174,6 +187,20 @@ public class Menu_handler : MonoBehaviour
         Globals.pause = false;
         Time.timeScale = 1;
         gameOverUI.SetActive(true);
+
+        PlayerSave s = new PlayerSave();
+
+        s.Money = Globals.money;
+        //Debug.Log(s.Money);
+        s.savingSetting();
+        //Debug.Log(Globals.money);
+
+        foreach (Text t in playtimeText) {
+            t.text = "Playtime: " + playtime.ToString() + " Seconds";
+        }
+        foreach (Text t in enemyKilledCounterText) {
+            t.text = "Enemies killed: " + (currentScore / 100).ToString();
+        }
         levelChanges();
     }
 
@@ -181,8 +208,25 @@ public class Menu_handler : MonoBehaviour
     /// aktiviert das Level Finished Menu
     /// </summary>
     public void setLevelFinish() {
+
+
         levelChanges();
         levelFinishedUI.SetActive(true);
+
+        PlayerSave s = new PlayerSave();
+
+        s.Money = Globals.money;
+        //Debug.Log(s.Money);
+        s.savingSetting();
+
+        foreach (Text t in playtimeText) {
+            t.text = "Playtime: " + playtime.ToString() + " Seconds";
+        }
+        foreach (Text t in enemyKilledCounterText) {
+            int i = currentScore - 1000;
+
+            t.text = "Enemies killed: " + (i / 100).ToString() + " und Bosse killed: 1";
+        }
 
     }
 }

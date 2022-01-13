@@ -10,9 +10,16 @@ public class TriggerCallBack : MonoBehaviour
 
     public bool spawnTrigger;
     public bool spawnerActivationTrigger;
+    public bool moneyDrop;
 
     private bool canDestory;
+    private int moneyValue;
 
+    public int MoneyValue {
+        set {
+            moneyValue = value;
+        }
+    }
 
     /// <summary>
     /// trigger check
@@ -47,6 +54,12 @@ public class TriggerCallBack : MonoBehaviour
                     }
                 }
             }
+            if (moneyDrop == true) {
+                Globals.money = Globals.money + moneyValue;
+                //Debug.Log("Current Money: " + Globals.money.ToString());
+                Destroy(gameObject);
+            }
+
         }
     }
 }

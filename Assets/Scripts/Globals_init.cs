@@ -8,6 +8,9 @@ using UnityEngine;
 /// </summary>
 public class Globals_init : MonoBehaviour
 {
+    public Sprite moneyIcon;
+    public GameObject moneyDropPrefrab;
+
     /// <summary>
     /// initzalisiert die Gloablen variablen
     /// </summary>
@@ -21,6 +24,17 @@ public class Globals_init : MonoBehaviour
             Globals.spawnerListe = new List<Enemy_Spawner>();
         }
 
+
+        Globals.moneyIcon = moneyIcon;
+        Globals.moneyDrop = moneyDropPrefrab;
+
+        PlayerSave save = PlayerSave.loadSettings();
+        if (save == null) {
+            save = new PlayerSave();
+        }
+        Globals.money = save.Money;
+
+        Globals.catalog = ItemCatalog.loadSettings();
 
     }
 
