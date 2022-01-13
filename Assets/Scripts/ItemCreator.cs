@@ -82,6 +82,7 @@ public class ItemCreator : MonoBehaviour
     }
 
     public void saveWeapon() {
+        AssetDatabase.Refresh();
         ItemCatalog cat = ItemCatalog.loadSettings();
         if (cat == null) {
             cat = new ItemCatalog();
@@ -132,10 +133,14 @@ public class ItemCreator : MonoBehaviour
 
         Info.text = "saving";
         cat.savingSetting();
+        AssetDatabase.Refresh();
+        Debug.Log("saved");
+
         Info.text = "saved";
     }
 
     public void deleteWeapon() {
+        AssetDatabase.Refresh();
         ItemCatalog cat = ItemCatalog.loadSettings();
         if (cat == null) {
             cat = new ItemCatalog();
@@ -146,11 +151,13 @@ public class ItemCreator : MonoBehaviour
         cat.ItemList.Remove(i);
         Info.text = "deleting";
         cat.savingSetting();
+        AssetDatabase.Refresh();
         Info.text = "deleted";
     }
 
     public void loadWeapon() {
         Info.text = "loading";
+        AssetDatabase.Refresh();
         ItemCatalog cat = ItemCatalog.loadSettings();
 
         if (cat == null) {
@@ -173,7 +180,7 @@ public class ItemCreator : MonoBehaviour
             dmgModifier = wap.dmgModifier;
 
         }
-        else {
+        else if (i is Parts) {
             Parts part = (Parts)i;
 
             iD = part.ID;
@@ -185,7 +192,7 @@ public class ItemCreator : MonoBehaviour
             shildRefreshBoost = part.ShieldRefreshValueBoost;
         }
 
-
+        AssetDatabase.Refresh();
         Info.text = "loaded";
     }
 }
