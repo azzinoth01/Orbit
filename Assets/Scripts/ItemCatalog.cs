@@ -28,12 +28,12 @@ public class ItemCatalog
     /// saves the itemCatalog
     /// </summary>
     public void savingSetting() {
-        Debug.Log("save");
+
         string json = JsonUtility.ToJson(this);
         using (FileStream file = File.Create("Assets/Catalog/itemCatalog.json")) {
             using (StreamWriter writer = new StreamWriter(file)) {
                 writer.Write(json);
-                Debug.Log("saveing");
+
             }
         }
 
