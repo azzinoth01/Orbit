@@ -3481,6 +3481,18 @@ PrefabInstance:
       propertyPath: skill
       value: 
       objectReference: {fileID: 184400747927865093, guid: 2b25e87c9742d32479897e74d46f7f07, type: 3}
+    - target: {fileID: 2289768484162360849, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289768484162360849, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289768484162360849, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2726185366547594367, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: m_SortingOrder
       value: 2
