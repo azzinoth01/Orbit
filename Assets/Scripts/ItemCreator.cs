@@ -10,6 +10,8 @@ public class ItemCreator : MonoBehaviour
     public List<Button> buttons;
     public GameObject viewObject;
 
+    public Text Info;
+
 
     public string weaponName;
     public int value;
@@ -128,7 +130,9 @@ public class ItemCreator : MonoBehaviour
         }
         //Debug.Log(cat.ItemList);
 
+        Info.text = "saving";
         cat.savingSetting();
+        Info.text = "saved";
     }
 
     public void deleteWeapon() {
@@ -140,11 +144,13 @@ public class ItemCreator : MonoBehaviour
         Item i = cat.ItemList.Find(x => x.ID == iD);
 
         cat.ItemList.Remove(i);
+        Info.text = "deleting";
         cat.savingSetting();
+        Info.text = "deleted";
     }
 
     public void loadWeapon() {
-
+        Info.text = "loading";
         ItemCatalog cat = ItemCatalog.loadSettings();
 
         if (cat == null) {
@@ -178,5 +184,8 @@ public class ItemCreator : MonoBehaviour
             healthBoost = part.HealthBoost;
             shildRefreshBoost = part.ShieldRefreshValueBoost;
         }
+
+
+        Info.text = "loaded";
     }
 }
