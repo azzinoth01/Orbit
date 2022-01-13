@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Tag_enum
+  commentId: T:Global.Tag_enum
+  id: Tag_enum
+  parent: Global
+  children:
+  - Global.Tag_enum.bullet_border
+  - Global.Tag_enum.enemy_border
+  - Global.Tag_enum.player_border
+  langs:
+  - csharp
+  - vb
+  name: Tag_enum
+  nameWithType: Tag_enum
+  fullName: Tag_enum
+  type: Enum
+  source:
+    id: Tag_enum
+    path: ''
+    startLine: 4048
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nenum f�r Tags\n"
+  example: []
+  syntax:
+    content: public enum Tag_enum
+    content.vb: Public Enum Tag_enum
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Global.Tag_enum.bullet_border
+  commentId: F:Global.Tag_enum.bullet_border
+  id: bullet_border
+  parent: Global.Tag_enum
+  langs:
+  - csharp
+  - vb
+  name: bullet_border
+  nameWithType: Tag_enum.bullet_border
+  fullName: Tag_enum.bullet_border
+  type: Field
+  source:
+    id: bullet_border
+    path: ''
+    startLine: 4050
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: bullet_border = 0
+    return:
+      type: Global.Tag_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Tag_enum.player_border
+  commentId: F:Global.Tag_enum.player_border
+  id: player_border
+  parent: Global.Tag_enum
+  langs:
+  - csharp
+  - vb
+  name: player_border
+  nameWithType: Tag_enum.player_border
+  fullName: Tag_enum.player_border
+  type: Field
+  source:
+    id: player_border
+    path: ''
+    startLine: 4051
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: player_border = 1
+    return:
+      type: Global.Tag_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Tag_enum.enemy_border
+  commentId: F:Global.Tag_enum.enemy_border
+  id: enemy_border
+  parent: Global.Tag_enum
+  langs:
+  - csharp
+  - vb
+  name: enemy_border
+  nameWithType: Tag_enum.enemy_border
+  fullName: Tag_enum.enemy_border
+  type: Field
+  source:
+    id: enemy_border
+    path: ''
+    startLine: 4052
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: enemy_border = 2
+    return:
+      type: Global.Tag_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.Tag_enum
+  commentId: T:Global.Tag_enum
+  name: Tag_enum
+  nameWithType: Tag_enum
+  fullName: Tag_enum

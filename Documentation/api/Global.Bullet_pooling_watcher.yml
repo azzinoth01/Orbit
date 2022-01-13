@@ -1,0 +1,121 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Bullet_pooling_watcher
+  commentId: T:Global.Bullet_pooling_watcher
+  id: Bullet_pooling_watcher
+  parent: Global
+  children:
+  - Global.Bullet_pooling_watcher.checkTime
+  - Global.Bullet_pooling_watcher.cleanUpTime
+  langs:
+  - csharp
+  - vb
+  name: Bullet_pooling_watcher
+  nameWithType: Bullet_pooling_watcher
+  fullName: Bullet_pooling_watcher
+  type: Class
+  source:
+    id: Bullet_pooling_watcher
+    path: ''
+    startLine: 889
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\n�berpr�ft die bulletpooling liste\n"
+  example: []
+  syntax:
+    content: 'public class Bullet_pooling_watcher : MonoBehaviour'
+    content.vb: >-
+      Public Class Bullet_pooling_watcher
+
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Bullet_pooling_watcher.cleanUpTime
+  commentId: F:Global.Bullet_pooling_watcher.cleanUpTime
+  id: cleanUpTime
+  parent: Global.Bullet_pooling_watcher
+  langs:
+  - csharp
+  - vb
+  name: cleanUpTime
+  nameWithType: Bullet_pooling_watcher.cleanUpTime
+  fullName: Bullet_pooling_watcher.cleanUpTime
+  type: Field
+  source:
+    id: cleanUpTime
+    path: ''
+    startLine: 892
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float cleanUpTime
+    return:
+      type: System.Single
+    content.vb: Public cleanUpTime As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Bullet_pooling_watcher.checkTime
+  commentId: F:Global.Bullet_pooling_watcher.checkTime
+  id: checkTime
+  parent: Global.Bullet_pooling_watcher
+  langs:
+  - csharp
+  - vb
+  name: checkTime
+  nameWithType: Bullet_pooling_watcher.checkTime
+  fullName: Bullet_pooling_watcher.checkTime
+  type: Field
+  source:
+    id: checkTime
+    path: ''
+    startLine: 893
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float checkTime
+    return:
+      type: System.Single
+    content.vb: Public checkTime As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

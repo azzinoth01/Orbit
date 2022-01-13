@@ -14,6 +14,7 @@ public class BulletInfo
     [SerializeField] private int bulletBaseDmg;
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject startEffect;
+    [SerializeField] private GameObject sfxSound;
 
     private GameObject instantStartEffect;
 
@@ -41,12 +42,14 @@ public class BulletInfo
     /// <param name="bulletBaseDmg"> bestimmt bullet base dmg</param>
     /// <param name="bullet"> bestimmt bullet prefab</param>
     /// <param name="startEffect"> bestimmt particel system start prefab</param>
-    public BulletInfo(float startRotation, int bulletBaseDmg, GameObject bullet, GameObject startEffect) {
+    /// <param name="sfxSound"> bestimmt Sound Effect prefab</param>
+    public BulletInfo(float startRotation, int bulletBaseDmg, GameObject bullet, GameObject startEffect, GameObject sfxSound) {
         Debug.Log("construktor called");
         this.startRotation = startRotation;
         this.bulletBaseDmg = bulletBaseDmg;
         this.bullet = bullet;
         this.startEffect = startEffect;
+        this.sfxSound = sfxSound;
         //bulletScript = bullet.GetComponent<Bullet>();
         addBaseDmg = 0;
         dmgModifier = 1;
@@ -127,6 +130,16 @@ public class BulletInfo
 
         set {
             instantStartEffect = value;
+        }
+    }
+
+    public GameObject SfxSound {
+        get {
+            return sfxSound;
+        }
+
+        set {
+            sfxSound = value;
         }
     }
 

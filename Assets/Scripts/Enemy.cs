@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 /// <summary>
 /// class die enemys beschreibt und deren movement
 /// </summary>
 public class Enemy : MonoBehaviour
 {
-    public int health;
+    public float health;
+    private float maxHealth;
 
 
 
@@ -52,6 +53,15 @@ public class Enemy : MonoBehaviour
 
     private Enemy_Spawner spawnerCallback;
 
+    public bool showBossHp;
+    public Image bossHp;
+    public GameObject bossUI;
+
+    private int points;
+
+    //public bool rotateTowardsPlayer;
+    //public bool rotateSpeed;
+
 
 
 
@@ -73,6 +83,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     void Start() {
 
+        maxHealth = health;
         restartTime = 0;
 
 
@@ -111,10 +122,26 @@ public class Enemy : MonoBehaviour
         }
 
 
+        try {
+            BoxCollider2D collider = GetComponent<BoxCollider2D>();
+            collider.isTrigger = false;
+        }
+        catch {
 
+        }
 
+        points = 100;
 
+        if (showBossHp == true) {
+            points = 1000;
 
+            bossUI = Globals.bossUI;
+
+            bossHp = Globals.bossHpBar;
+
+            bossUI.SetActive(true);
+            StartCoroutine(smoothHealthDrop());
+        }
 
 
 
@@ -133,7 +160,7 @@ public class Enemy : MonoBehaviour
             }
 
             if (maxDurationReached == true) {
-                if (moveToPlayer == true || followPlayerMovementX == true || followPlayerMovementY == true) {
+                if (moveToPlayer == true || followPlayerMovementX == true || followPlayerMovementY == true || (waypoints.Count == waypointIndex && loop == false && waypoints.Count != 0)) {
                     // sofort rausbewegen bei den anderen wird es erst am wegpunkt gemacht
                     startMovingOut();
                 }
@@ -142,6 +169,50 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+    private IEnumerator smoothHealthDrop() {
+        while (true) {
+            if (Globals.pause == true) {
+                yield return null;
+            }
+            float prozentValue = health / maxHealth;
+            float currentFillProzent = bossHp.fillAmount;
+
+            //Debug.Log("% Value " + prozentValue.ToString());
+            //Debug.Log("Fill Value " + currentFillProzent.ToString());
+            if (prozentValue <= currentFillProzent) {
+
+                float toSet = currentFillProzent - 0.01f;
+                if (toSet < prozentValue) {
+                    toSet = prozentValue;
+                }
+                bossHp.fillAmount = toSet;
+            }
+            else if (prozentValue >= currentFillProzent) {
+                float toSet = currentFillProzent + 0.01f;
+                if (toSet > prozentValue) {
+                    toSet = prozentValue;
+                }
+                bossHp.fillAmount = toSet;
+            }
+
+
+            if (bossHp.fillAmount <= 0) {
+                Globals.menuHandler.addScore(points);
+                Destroy(gameObject.transform.parent.gameObject);
+                Instantiate(deathParticelSystem, transform.position, transform.rotation);
+            }
+
+
+
+
+            yield return null;
+        }
+
+    }
+
+
+
 
     /// <summary>
     /// timer für delay zwischen den einzelen wegpunkt bewegungen
@@ -170,16 +241,24 @@ public class Enemy : MonoBehaviour
     /// deactiviert das enemy script
     /// </summary>
     public void startMovingOut() {
-        Move_in_out_Scene m = GetComponentInParent<Move_in_out_Scene>();
-        // speed auf anderen rigidbody übergbene 
-        m.body.bodyType = RigidbodyType2D.Dynamic;
-        m.body.velocity = body.velocity;
+        //Debug.Log(transform.parent.gameObject.name);
 
-        // weil sich sonst das schiff nicht mitbewegt
-        //body.bodyType = RigidbodyType2D.Kinematic;
-        //Debug.Log("versuch zu rausbewegung zu starten");
-        m.startMoveOut();
-        enabled = false;
+        try {
+            Move_in_out_Scene m = GetComponentInParent<Move_in_out_Scene>();
+            // speed auf anderen rigidbody übergbene 
+            m.body.bodyType = RigidbodyType2D.Dynamic;
+            m.body.velocity = body.velocity;
+
+            // weil sich sonst das schiff nicht mitbewegt
+            //body.bodyType = RigidbodyType2D.Kinematic;
+            //Debug.Log("versuch zu rausbewegung zu starten");
+            m.startMoveOut();
+            enabled = false;
+        }
+        catch {
+            //kein moveout script vorhanden zerstöre enemy an dieser Stelle
+            Destroy(transform.parent.gameObject);
+        }
 
     }
 
@@ -194,7 +273,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private void movement() {
 
-        if (moveToPlayer == true) {
+        if (moveToPlayer == true && Globals.player != null) {
 
             Vector2 direction;
             if (savedDirection == Vector2.zero) {
@@ -306,6 +385,7 @@ public class Enemy : MonoBehaviour
 
 
         }
+
         else if (designer != null && waypoints.Count == waypointIndex) {
 
 
@@ -328,17 +408,24 @@ public class Enemy : MonoBehaviour
     /// <summary>
     /// take dmg funktion
     /// </summary>
-    /// <param name="dmg"> den dmg den der player nehmen soll</param>
-    public void takeDmg(int dmg) {
+    /// <param name="dmg"> den dmg den der enemy nehmen soll</param>
+    public void takeDmg(float dmg) {
+        //Debug.Log(dmg);
+        //  Debug.Log(health);
         health = health - dmg;
+        //  Debug.Log(health);
 
-        if (health <= 0) {
+        if (showBossHp == false) {
+            if (health <= 0) {
+                Globals.menuHandler.addScore(points);
+                Destroy(gameObject.transform.parent.gameObject);
+                Instantiate(deathParticelSystem, transform.position, transform.rotation);
 
-            Instantiate(deathParticelSystem, transform.position, transform.rotation);
 
-            Destroy(gameObject.transform.parent.gameObject);
-            //  Globals.gameoverHandler.gameOver();
+                //  Globals.gameoverHandler.gameOver();
+            }
         }
+
     }
 
 

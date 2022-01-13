@@ -1,0 +1,229 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Win_condition
+  commentId: T:Global.Win_condition
+  id: Win_condition
+  parent: Global
+  children:
+  - Global.Win_condition.activateLevelFinishPortal
+  - Global.Win_condition.boxcollider
+  - Global.Win_condition.enemyKilled
+  - Global.Win_condition.enemysToKill
+  - Global.Win_condition.sp
+  langs:
+  - csharp
+  - vb
+  name: Win_condition
+  nameWithType: Win_condition
+  fullName: Win_condition
+  type: Class
+  source:
+    id: Win_condition
+    path: ''
+    startLine: 4374
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nwin condition handler classe\n"
+  example: []
+  syntax:
+    content: 'public class Win_condition : MonoBehaviour'
+    content.vb: >-
+      Public Class Win_condition
+
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Win_condition.enemysToKill
+  commentId: F:Global.Win_condition.enemysToKill
+  id: enemysToKill
+  parent: Global.Win_condition
+  langs:
+  - csharp
+  - vb
+  name: enemysToKill
+  nameWithType: Win_condition.enemysToKill
+  fullName: Win_condition.enemysToKill
+  type: Field
+  source:
+    id: enemysToKill
+    path: ''
+    startLine: 4377
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int enemysToKill
+    return:
+      type: System.Int32
+    content.vb: Public enemysToKill As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Win_condition.boxcollider
+  commentId: F:Global.Win_condition.boxcollider
+  id: boxcollider
+  parent: Global.Win_condition
+  langs:
+  - csharp
+  - vb
+  name: boxcollider
+  nameWithType: Win_condition.boxcollider
+  fullName: Win_condition.boxcollider
+  type: Field
+  source:
+    id: boxcollider
+    path: ''
+    startLine: 4378
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public BoxCollider2D boxcollider
+    return:
+      type: Global.BoxCollider2D
+    content.vb: Public boxcollider As BoxCollider2D
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Win_condition.sp
+  commentId: F:Global.Win_condition.sp
+  id: sp
+  parent: Global.Win_condition
+  langs:
+  - csharp
+  - vb
+  name: sp
+  nameWithType: Win_condition.sp
+  fullName: Win_condition.sp
+  type: Field
+  source:
+    id: sp
+    path: ''
+    startLine: 4379
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public SpriteRenderer sp
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Public sp As SpriteRenderer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Win_condition.activateLevelFinishPortal
+  commentId: M:Global.Win_condition.activateLevelFinishPortal
+  id: activateLevelFinishPortal
+  parent: Global.Win_condition
+  langs:
+  - csharp
+  - vb
+  name: activateLevelFinishPortal()
+  nameWithType: Win_condition.activateLevelFinishPortal()
+  fullName: Win_condition.activateLevelFinishPortal()
+  type: Method
+  source:
+    id: activateLevelFinishPortal
+    path: ''
+    startLine: 4391
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nactiviert das level end portal\n"
+  example: []
+  syntax:
+    content: public void activateLevelFinishPortal()
+    content.vb: Public Sub activateLevelFinishPortal
+  overload: Global.Win_condition.activateLevelFinishPortal*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Win_condition.enemyKilled
+  commentId: M:Global.Win_condition.enemyKilled
+  id: enemyKilled
+  parent: Global.Win_condition
+  langs:
+  - csharp
+  - vb
+  name: enemyKilled()
+  nameWithType: Win_condition.enemyKilled()
+  fullName: Win_condition.enemyKilled()
+  type: Method
+  source:
+    id: enemyKilled
+    path: ''
+    startLine: 4399
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nerh�ht der enemy kill counter um 1\n"
+  example: []
+  syntax:
+    content: public void enemyKilled()
+    content.vb: Public Sub enemyKilled
+  overload: Global.Win_condition.enemyKilled*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.BoxCollider2D
+  commentId: '!:Global.BoxCollider2D'
+  isExternal: true
+  name: BoxCollider2D
+  nameWithType: BoxCollider2D
+  fullName: BoxCollider2D
+- uid: Global.SpriteRenderer
+  commentId: '!:Global.SpriteRenderer'
+  isExternal: true
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer
+  fullName: SpriteRenderer
+- uid: Global.Win_condition.activateLevelFinishPortal*
+  commentId: Overload:Global.Win_condition.activateLevelFinishPortal
+  name: activateLevelFinishPortal
+  nameWithType: Win_condition.activateLevelFinishPortal
+  fullName: Win_condition.activateLevelFinishPortal
+- uid: Global.Win_condition.enemyKilled*
+  commentId: Overload:Global.Win_condition.enemyKilled
+  name: enemyKilled
+  nameWithType: Win_condition.enemyKilled
+  fullName: Win_condition.enemyKilled

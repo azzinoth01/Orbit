@@ -1,0 +1,1963 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Player
+  commentId: T:Global.Player
+  id: Player
+  parent: Global
+  children:
+  - Global.Player.additionalDmg
+  - Global.Player.body
+  - Global.Player.chargeAudio
+  - Global.Player.chargeSprites
+  - Global.Player.chargeUI
+  - Global.Player.clearControlls
+  - Global.Player.currentschield
+  - Global.Player.deathEffect
+  - Global.Player.dmgModifier
+  - Global.Player.dogeCharges
+  - Global.Player.dogeCooldown
+  - Global.Player.dogeRange
+  - Global.Player.dogeSpeed
+  - Global.Player.force
+  - Global.Player.globalCooldown
+  - Global.Player.health
+  - Global.Player.healthbar
+  - Global.Player.healthbarAbove30
+  - Global.Player.healthbarAbove60
+  - Global.Player.healthbarBelow30
+  - Global.Player.immunityFlickerRate
+  - Global.Player.immunityTimeAfterDoge
+  - Global.Player.immunityTimeAfterHit
+  - Global.Player.Impulse
+  - Global.Player.maxDogeDuration
+  - Global.Player.maxFlickerRange
+  - Global.Player.maxschield
+  - Global.Player.maxSpeed
+  - Global.Player.OnDoge(InputAction.CallbackContext)
+  - Global.Player.OnMove_down(InputAction.CallbackContext)
+  - Global.Player.OnMove_left(InputAction.CallbackContext)
+  - Global.Player.OnMove_rigth(InputAction.CallbackContext)
+  - Global.Player.OnMove_up(InputAction.CallbackContext)
+  - Global.Player.OnPause_menu(InputAction.CallbackContext)
+  - Global.Player.OnShoot(InputAction.CallbackContext)
+  - Global.Player.schieldbar
+  - Global.Player.schieldbarStepValue
+  - Global.Player.schieldRefresh(System.Single)
+  - Global.Player.schieldRefreshRate
+  - Global.Player.schieldRefreshValue
+  - Global.Player.ship
+  - Global.Player.smoothHealthDrop
+  - Global.Player.smoothSchieldDrop
+  - Global.Player.takeDmg(System.Single)
+  - Global.Player.waypointPrefab
+  - Global.Player.weapons
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: Player
+  fullName: Player
+  type: Class
+  source:
+    id: Player
+    path: ''
+    startLine: 2558
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclasse des Spielers\nimplementiert das Controler Interface\n"
+  example: []
+  syntax:
+    content: 'public class Player : MonoBehaviour, Controlls.IBullet_hellActions'
+    content.vb: >-
+      Public Class Player
+
+          Inherits MonoBehaviour
+
+          Implements Controlls.IBullet_hellActions
+  inheritance:
+  - System.Object
+  implements:
+  - Global.Controlls.IBullet_hellActions
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Player.health
+  commentId: F:Global.Player.health
+  id: health
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: health
+  nameWithType: Player.health
+  fullName: Player.health
+  type: Field
+  source:
+    id: health
+    path: ''
+    startLine: 2560
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float health
+    return:
+      type: System.Single
+    content.vb: Public health As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.healthbar
+  commentId: F:Global.Player.healthbar
+  id: healthbar
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: healthbar
+  nameWithType: Player.healthbar
+  fullName: Player.healthbar
+  type: Field
+  source:
+    id: healthbar
+    path: ''
+    startLine: 2562
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image healthbar
+    return:
+      type: Global.Image
+    content.vb: Public healthbar As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.healthbarAbove60
+  commentId: F:Global.Player.healthbarAbove60
+  id: healthbarAbove60
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: healthbarAbove60
+  nameWithType: Player.healthbarAbove60
+  fullName: Player.healthbarAbove60
+  type: Field
+  source:
+    id: healthbarAbove60
+    path: ''
+    startLine: 2564
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Color healthbarAbove60
+    return:
+      type: Global.Color
+    content.vb: Public healthbarAbove60 As Color
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.healthbarAbove30
+  commentId: F:Global.Player.healthbarAbove30
+  id: healthbarAbove30
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: healthbarAbove30
+  nameWithType: Player.healthbarAbove30
+  fullName: Player.healthbarAbove30
+  type: Field
+  source:
+    id: healthbarAbove30
+    path: ''
+    startLine: 2565
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Color healthbarAbove30
+    return:
+      type: Global.Color
+    content.vb: Public healthbarAbove30 As Color
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.healthbarBelow30
+  commentId: F:Global.Player.healthbarBelow30
+  id: healthbarBelow30
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: healthbarBelow30
+  nameWithType: Player.healthbarBelow30
+  fullName: Player.healthbarBelow30
+  type: Field
+  source:
+    id: healthbarBelow30
+    path: ''
+    startLine: 2566
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Color healthbarBelow30
+    return:
+      type: Global.Color
+    content.vb: Public healthbarBelow30 As Color
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.maxschield
+  commentId: F:Global.Player.maxschield
+  id: maxschield
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: maxschield
+  nameWithType: Player.maxschield
+  fullName: Player.maxschield
+  type: Field
+  source:
+    id: maxschield
+    path: ''
+    startLine: 2568
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float maxschield
+    return:
+      type: System.Single
+    content.vb: Public maxschield As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.currentschield
+  commentId: F:Global.Player.currentschield
+  id: currentschield
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: currentschield
+  nameWithType: Player.currentschield
+  fullName: Player.currentschield
+  type: Field
+  source:
+    id: currentschield
+    path: ''
+    startLine: 2569
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float currentschield
+    return:
+      type: System.Single
+    content.vb: Public currentschield As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.schieldbar
+  commentId: F:Global.Player.schieldbar
+  id: schieldbar
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: schieldbar
+  nameWithType: Player.schieldbar
+  fullName: Player.schieldbar
+  type: Field
+  source:
+    id: schieldbar
+    path: ''
+    startLine: 2570
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image schieldbar
+    return:
+      type: Global.Image
+    content.vb: Public schieldbar As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.schieldbarStepValue
+  commentId: F:Global.Player.schieldbarStepValue
+  id: schieldbarStepValue
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: schieldbarStepValue
+  nameWithType: Player.schieldbarStepValue
+  fullName: Player.schieldbarStepValue
+  type: Field
+  source:
+    id: schieldbarStepValue
+    path: ''
+    startLine: 2571
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float schieldbarStepValue
+    return:
+      type: System.Single
+    content.vb: Public schieldbarStepValue As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.schieldRefreshRate
+  commentId: F:Global.Player.schieldRefreshRate
+  id: schieldRefreshRate
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: schieldRefreshRate
+  nameWithType: Player.schieldRefreshRate
+  fullName: Player.schieldRefreshRate
+  type: Field
+  source:
+    id: schieldRefreshRate
+    path: ''
+    startLine: 2573
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float schieldRefreshRate
+    return:
+      type: System.Single
+    content.vb: Public schieldRefreshRate As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.schieldRefreshValue
+  commentId: F:Global.Player.schieldRefreshValue
+  id: schieldRefreshValue
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: schieldRefreshValue
+  nameWithType: Player.schieldRefreshValue
+  fullName: Player.schieldRefreshValue
+  type: Field
+  source:
+    id: schieldRefreshValue
+    path: ''
+    startLine: 2574
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float schieldRefreshValue
+    return:
+      type: System.Single
+    content.vb: Public schieldRefreshValue As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.body
+  commentId: F:Global.Player.body
+  id: body
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: body
+  nameWithType: Player.body
+  fullName: Player.body
+  type: Field
+  source:
+    id: body
+    path: ''
+    startLine: 2577
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Rigidbody2D body
+    return:
+      type: Global.Rigidbody2D
+    content.vb: Public body As Rigidbody2D
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.force
+  commentId: F:Global.Player.force
+  id: force
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: force
+  nameWithType: Player.force
+  fullName: Player.force
+  type: Field
+  source:
+    id: force
+    path: ''
+    startLine: 2579
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float force
+    return:
+      type: System.Single
+    content.vb: Public force As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.maxSpeed
+  commentId: F:Global.Player.maxSpeed
+  id: maxSpeed
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: maxSpeed
+  nameWithType: Player.maxSpeed
+  fullName: Player.maxSpeed
+  type: Field
+  source:
+    id: maxSpeed
+    path: ''
+    startLine: 2580
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float maxSpeed
+    return:
+      type: System.Single
+    content.vb: Public maxSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.weapons
+  commentId: F:Global.Player.weapons
+  id: weapons
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: weapons
+  nameWithType: Player.weapons
+  fullName: Player.weapons
+  type: Field
+  source:
+    id: weapons
+    path: ''
+    startLine: 2582
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Weapon> weapons
+    return:
+      type: System.Collections.Generic.List{Weapon}
+    content.vb: Public weapons As List(Of Weapon)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.ship
+  commentId: F:Global.Player.ship
+  id: ship
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: ship
+  nameWithType: Player.ship
+  fullName: Player.ship
+  type: Field
+  source:
+    id: ship
+    path: ''
+    startLine: 2584
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject ship
+    return:
+      type: Global.GameObject
+    content.vb: Public ship As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.additionalDmg
+  commentId: F:Global.Player.additionalDmg
+  id: additionalDmg
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: additionalDmg
+  nameWithType: Player.additionalDmg
+  fullName: Player.additionalDmg
+  type: Field
+  source:
+    id: additionalDmg
+    path: ''
+    startLine: 2595
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int additionalDmg
+    return:
+      type: System.Int32
+    content.vb: Public additionalDmg As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.dmgModifier
+  commentId: F:Global.Player.dmgModifier
+  id: dmgModifier
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: dmgModifier
+  nameWithType: Player.dmgModifier
+  fullName: Player.dmgModifier
+  type: Field
+  source:
+    id: dmgModifier
+    path: ''
+    startLine: 2596
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float dmgModifier
+    return:
+      type: System.Single
+    content.vb: Public dmgModifier As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.immunityFlickerRate
+  commentId: F:Global.Player.immunityFlickerRate
+  id: immunityFlickerRate
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: immunityFlickerRate
+  nameWithType: Player.immunityFlickerRate
+  fullName: Player.immunityFlickerRate
+  type: Field
+  source:
+    id: immunityFlickerRate
+    path: ''
+    startLine: 2598
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float immunityFlickerRate
+    return:
+      type: System.Single
+    content.vb: Public immunityFlickerRate As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.maxFlickerRange
+  commentId: F:Global.Player.maxFlickerRange
+  id: maxFlickerRange
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: maxFlickerRange
+  nameWithType: Player.maxFlickerRange
+  fullName: Player.maxFlickerRange
+  type: Field
+  source:
+    id: maxFlickerRange
+    path: ''
+    startLine: 2599
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float maxFlickerRange
+    return:
+      type: System.Single
+    content.vb: Public maxFlickerRange As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.immunityTimeAfterHit
+  commentId: F:Global.Player.immunityTimeAfterHit
+  id: immunityTimeAfterHit
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: immunityTimeAfterHit
+  nameWithType: Player.immunityTimeAfterHit
+  fullName: Player.immunityTimeAfterHit
+  type: Field
+  source:
+    id: immunityTimeAfterHit
+    path: ''
+    startLine: 2602
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float immunityTimeAfterHit
+    return:
+      type: System.Single
+    content.vb: Public immunityTimeAfterHit As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.immunityTimeAfterDoge
+  commentId: F:Global.Player.immunityTimeAfterDoge
+  id: immunityTimeAfterDoge
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: immunityTimeAfterDoge
+  nameWithType: Player.immunityTimeAfterDoge
+  fullName: Player.immunityTimeAfterDoge
+  type: Field
+  source:
+    id: immunityTimeAfterDoge
+    path: ''
+    startLine: 2603
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float immunityTimeAfterDoge
+    return:
+      type: System.Single
+    content.vb: Public immunityTimeAfterDoge As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.dogeCharges
+  commentId: F:Global.Player.dogeCharges
+  id: dogeCharges
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: dogeCharges
+  nameWithType: Player.dogeCharges
+  fullName: Player.dogeCharges
+  type: Field
+  source:
+    id: dogeCharges
+    path: ''
+    startLine: 2605
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int dogeCharges
+    return:
+      type: System.Int32
+    content.vb: Public dogeCharges As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.dogeRange
+  commentId: F:Global.Player.dogeRange
+  id: dogeRange
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: dogeRange
+  nameWithType: Player.dogeRange
+  fullName: Player.dogeRange
+  type: Field
+  source:
+    id: dogeRange
+    path: ''
+    startLine: 2606
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float dogeRange
+    return:
+      type: System.Single
+    content.vb: Public dogeRange As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.dogeSpeed
+  commentId: F:Global.Player.dogeSpeed
+  id: dogeSpeed
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: dogeSpeed
+  nameWithType: Player.dogeSpeed
+  fullName: Player.dogeSpeed
+  type: Field
+  source:
+    id: dogeSpeed
+    path: ''
+    startLine: 2607
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float dogeSpeed
+    return:
+      type: System.Single
+    content.vb: Public dogeSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.maxDogeDuration
+  commentId: F:Global.Player.maxDogeDuration
+  id: maxDogeDuration
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: maxDogeDuration
+  nameWithType: Player.maxDogeDuration
+  fullName: Player.maxDogeDuration
+  type: Field
+  source:
+    id: maxDogeDuration
+    path: ''
+    startLine: 2608
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float maxDogeDuration
+    return:
+      type: System.Single
+    content.vb: Public maxDogeDuration As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.dogeCooldown
+  commentId: F:Global.Player.dogeCooldown
+  id: dogeCooldown
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: dogeCooldown
+  nameWithType: Player.dogeCooldown
+  fullName: Player.dogeCooldown
+  type: Field
+  source:
+    id: dogeCooldown
+    path: ''
+    startLine: 2609
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float dogeCooldown
+    return:
+      type: System.Single
+    content.vb: Public dogeCooldown As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.globalCooldown
+  commentId: F:Global.Player.globalCooldown
+  id: globalCooldown
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: globalCooldown
+  nameWithType: Player.globalCooldown
+  fullName: Player.globalCooldown
+  type: Field
+  source:
+    id: globalCooldown
+    path: ''
+    startLine: 2610
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float globalCooldown
+    return:
+      type: System.Single
+    content.vb: Public globalCooldown As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.chargeSprites
+  commentId: F:Global.Player.chargeSprites
+  id: chargeSprites
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: chargeSprites
+  nameWithType: Player.chargeSprites
+  fullName: Player.chargeSprites
+  type: Field
+  source:
+    id: chargeSprites
+    path: ''
+    startLine: 2618
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Sprite> chargeSprites
+    return:
+      type: System.Collections.Generic.List{Sprite}
+    content.vb: Public chargeSprites As List(Of Sprite)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.chargeUI
+  commentId: F:Global.Player.chargeUI
+  id: chargeUI
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: chargeUI
+  nameWithType: Player.chargeUI
+  fullName: Player.chargeUI
+  type: Field
+  source:
+    id: chargeUI
+    path: ''
+    startLine: 2619
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image chargeUI
+    return:
+      type: Global.Image
+    content.vb: Public chargeUI As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.waypointPrefab
+  commentId: F:Global.Player.waypointPrefab
+  id: waypointPrefab
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: waypointPrefab
+  nameWithType: Player.waypointPrefab
+  fullName: Player.waypointPrefab
+  type: Field
+  source:
+    id: waypointPrefab
+    path: ''
+    startLine: 2621
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject waypointPrefab
+    return:
+      type: Global.GameObject
+    content.vb: Public waypointPrefab As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.deathEffect
+  commentId: F:Global.Player.deathEffect
+  id: deathEffect
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: deathEffect
+  nameWithType: Player.deathEffect
+  fullName: Player.deathEffect
+  type: Field
+  source:
+    id: deathEffect
+    path: ''
+    startLine: 2632
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject deathEffect
+    return:
+      type: Global.GameObject
+    content.vb: Public deathEffect As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.chargeAudio
+  commentId: F:Global.Player.chargeAudio
+  id: chargeAudio
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: chargeAudio
+  nameWithType: Player.chargeAudio
+  fullName: Player.chargeAudio
+  type: Field
+  source:
+    id: chargeAudio
+    path: ''
+    startLine: 2634
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource chargeAudio
+    return:
+      type: Global.AudioSource
+    content.vb: Public chargeAudio As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.Impulse
+  commentId: P:Global.Player.Impulse
+  id: Impulse
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: Impulse
+  nameWithType: Player.Impulse
+  fullName: Player.Impulse
+  type: Property
+  source:
+    id: Impulse
+    path: ''
+    startLine: 2637
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Vector2 Impulse { get; }
+    parameters: []
+    return:
+      type: Global.Vector2
+    content.vb: Public ReadOnly Property Impulse As Vector2
+  overload: Global.Player.Impulse*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Player.OnDoge(InputAction.CallbackContext)
+  commentId: M:Global.Player.OnDoge(InputAction.CallbackContext)
+  id: OnDoge(InputAction.CallbackContext)
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: OnDoge(InputAction.CallbackContext)
+  nameWithType: Player.OnDoge(InputAction.CallbackContext)
+  fullName: Player.OnDoge(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnDoge
+    path: ''
+    startLine: 2659
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontroler action f�r den doge befehl\n"
+  example: []
+  syntax:
+    content: public void OnDoge(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnDoge(context As InputAction.CallbackContext)
+  overload: Global.Player.OnDoge*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.OnMove_down(InputAction.CallbackContext)
+  commentId: M:Global.Player.OnMove_down(InputAction.CallbackContext)
+  id: OnMove_down(InputAction.CallbackContext)
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: OnMove_down(InputAction.CallbackContext)
+  nameWithType: Player.OnMove_down(InputAction.CallbackContext)
+  fullName: Player.OnMove_down(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMove_down
+    path: ''
+    startLine: 2672
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontroler action f�r den move down befehl\n"
+  example: []
+  syntax:
+    content: public void OnMove_down(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnMove_down(context As InputAction.CallbackContext)
+  overload: Global.Player.OnMove_down*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.OnMove_left(InputAction.CallbackContext)
+  commentId: M:Global.Player.OnMove_left(InputAction.CallbackContext)
+  id: OnMove_left(InputAction.CallbackContext)
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: OnMove_left(InputAction.CallbackContext)
+  nameWithType: Player.OnMove_left(InputAction.CallbackContext)
+  fullName: Player.OnMove_left(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMove_left
+    path: ''
+    startLine: 2692
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontroler action f�r den move left befehl\n"
+  example: []
+  syntax:
+    content: public void OnMove_left(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnMove_left(context As InputAction.CallbackContext)
+  overload: Global.Player.OnMove_left*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.OnMove_rigth(InputAction.CallbackContext)
+  commentId: M:Global.Player.OnMove_rigth(InputAction.CallbackContext)
+  id: OnMove_rigth(InputAction.CallbackContext)
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: OnMove_rigth(InputAction.CallbackContext)
+  nameWithType: Player.OnMove_rigth(InputAction.CallbackContext)
+  fullName: Player.OnMove_rigth(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMove_rigth
+    path: ''
+    startLine: 2709
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontroler action f�r den move right befehl\n"
+  example: []
+  syntax:
+    content: public void OnMove_rigth(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnMove_rigth(context As InputAction.CallbackContext)
+  overload: Global.Player.OnMove_rigth*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.OnMove_up(InputAction.CallbackContext)
+  commentId: M:Global.Player.OnMove_up(InputAction.CallbackContext)
+  id: OnMove_up(InputAction.CallbackContext)
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: OnMove_up(InputAction.CallbackContext)
+  nameWithType: Player.OnMove_up(InputAction.CallbackContext)
+  fullName: Player.OnMove_up(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMove_up
+    path: ''
+    startLine: 2728
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontroler action f�r den move up befehl\n"
+  example: []
+  syntax:
+    content: public void OnMove_up(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnMove_up(context As InputAction.CallbackContext)
+  overload: Global.Player.OnMove_up*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.OnShoot(InputAction.CallbackContext)
+  commentId: M:Global.Player.OnShoot(InputAction.CallbackContext)
+  id: OnShoot(InputAction.CallbackContext)
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: OnShoot(InputAction.CallbackContext)
+  nameWithType: Player.OnShoot(InputAction.CallbackContext)
+  fullName: Player.OnShoot(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnShoot
+    path: ''
+    startLine: 2747
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontroler action f�r den shoot befehl\n"
+  example: []
+  syntax:
+    content: public void OnShoot(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnShoot(context As InputAction.CallbackContext)
+  overload: Global.Player.OnShoot*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.OnPause_menu(InputAction.CallbackContext)
+  commentId: M:Global.Player.OnPause_menu(InputAction.CallbackContext)
+  id: OnPause_menu(InputAction.CallbackContext)
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: OnPause_menu(InputAction.CallbackContext)
+  nameWithType: Player.OnPause_menu(InputAction.CallbackContext)
+  fullName: Player.OnPause_menu(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnPause_menu
+    path: ''
+    startLine: 2760
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontroler action f�r das Pause Menu\n"
+  example: []
+  syntax:
+    content: public void OnPause_menu(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnPause_menu(context As InputAction.CallbackContext)
+  overload: Global.Player.OnPause_menu*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.smoothHealthDrop
+  commentId: M:Global.Player.smoothHealthDrop
+  id: smoothHealthDrop
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: smoothHealthDrop()
+  nameWithType: Player.smoothHealthDrop()
+  fullName: Player.smoothHealthDrop()
+  type: Method
+  source:
+    id: smoothHealthDrop
+    path: ''
+    startLine: 2907
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncorutine die langsam das leben dropt, wenn man schaden genommen hat, damit das leben fl�ssig nach unten geht\n"
+  example: []
+  syntax:
+    content: public IEnumerator smoothHealthDrop()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public Function smoothHealthDrop As IEnumerator
+  overload: Global.Player.smoothHealthDrop*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.smoothSchieldDrop
+  commentId: M:Global.Player.smoothSchieldDrop
+  id: smoothSchieldDrop
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: smoothSchieldDrop()
+  nameWithType: Player.smoothSchieldDrop()
+  fullName: Player.smoothSchieldDrop()
+  type: Method
+  source:
+    id: smoothSchieldDrop
+    path: ''
+    startLine: 2959
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ngleich wie beim healthdrop nur f�rs schild\n"
+  example: []
+  syntax:
+    content: public IEnumerator smoothSchieldDrop()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public Function smoothSchieldDrop As IEnumerator
+  overload: Global.Player.smoothSchieldDrop*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.schieldRefresh(System.Single)
+  commentId: M:Global.Player.schieldRefresh(System.Single)
+  id: schieldRefresh(System.Single)
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: schieldRefresh(Single)
+  nameWithType: Player.schieldRefresh(Single)
+  fullName: Player.schieldRefresh(System.Single)
+  type: Method
+  source:
+    id: schieldRefresh
+    path: ''
+    startLine: 2997
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncorutine die das Schild aufl�d\n"
+  example: []
+  syntax:
+    content: public IEnumerator schieldRefresh(float wait)
+    parameters:
+    - id: wait
+      type: System.Single
+      description: Zeit zwischen den Schild wert erh�hungen
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public Function schieldRefresh(wait As Single) As IEnumerator
+  overload: Global.Player.schieldRefresh*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.takeDmg(System.Single)
+  commentId: M:Global.Player.takeDmg(System.Single)
+  id: takeDmg(System.Single)
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: takeDmg(Single)
+  nameWithType: Player.takeDmg(Single)
+  fullName: Player.takeDmg(System.Single)
+  type: Method
+  source:
+    id: takeDmg
+    path: ''
+    startLine: 3019
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ntake dmg funktion\n"
+  example: []
+  syntax:
+    content: public void takeDmg(float dmg)
+    parameters:
+    - id: dmg
+      type: System.Single
+      description: den dmg den der player nehmen soll
+    content.vb: Public Sub takeDmg(dmg As Single)
+  overload: Global.Player.takeDmg*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.clearControlls
+  commentId: M:Global.Player.clearControlls
+  id: clearControlls
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: clearControlls()
+  nameWithType: Player.clearControlls()
+  fullName: Player.clearControlls()
+  type: Method
+  source:
+    id: clearControlls
+    path: ''
+    startLine: 3064
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ndestroys den controller input\n"
+  example: []
+  syntax:
+    content: public void clearControlls()
+    content.vb: Public Sub clearControlls
+  overload: Global.Player.clearControlls*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.Controlls.IBullet_hellActions
+  commentId: T:Global.Controlls.IBullet_hellActions
+  name: Controlls.IBullet_hellActions
+  nameWithType: Controlls.IBullet_hellActions
+  fullName: Controlls.IBullet_hellActions
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: Global.Color
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Color
+- uid: Global.Rigidbody2D
+  isExternal: true
+  name: Rigidbody2D
+  nameWithType: Rigidbody2D
+  fullName: Rigidbody2D
+- uid: System.Collections.Generic.List{Weapon}
+  commentId: T:System.Collections.Generic.List{Weapon}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Weapon>
+  nameWithType: List<Weapon>
+  fullName: System.Collections.Generic.List<Weapon>
+  nameWithType.vb: List(Of Weapon)
+  fullName.vb: System.Collections.Generic.List(Of Weapon)
+  name.vb: List(Of Weapon)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Weapon
+    name: Weapon
+    nameWithType: Weapon
+    fullName: Weapon
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Weapon
+    name: Weapon
+    nameWithType: Weapon
+    fullName: Weapon
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.List{Sprite}
+  commentId: T:System.Collections.Generic.List{Sprite}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Sprite>
+  nameWithType: List<Sprite>
+  fullName: System.Collections.Generic.List<Sprite>
+  nameWithType.vb: List(Of Sprite)
+  fullName.vb: System.Collections.Generic.List(Of Sprite)
+  name.vb: List(Of Sprite)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Sprite
+    name: Sprite
+    nameWithType: Sprite
+    fullName: Sprite
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Sprite
+    name: Sprite
+    nameWithType: Sprite
+    fullName: Sprite
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.AudioSource
+  commentId: '!:Global.AudioSource'
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: Global.Player.Impulse*
+  commentId: Overload:Global.Player.Impulse
+  name: Impulse
+  nameWithType: Player.Impulse
+  fullName: Player.Impulse
+- uid: Global.Vector2
+  commentId: '!:Global.Vector2'
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Vector2
+- uid: Global.Player.OnDoge*
+  commentId: Overload:Global.Player.OnDoge
+  name: OnDoge
+  nameWithType: Player.OnDoge
+  fullName: Player.OnDoge
+- uid: Global.Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnDoge(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+    name: OnDoge
+    nameWithType: Controlls.IBullet_hellActions.OnDoge
+    fullName: Controlls.IBullet_hellActions.OnDoge
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+    name: OnDoge
+    nameWithType: Controlls.IBullet_hellActions.OnDoge
+    fullName: Controlls.IBullet_hellActions.OnDoge
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.InputAction.CallbackContext
+  isExternal: true
+  name: InputAction.CallbackContext
+  nameWithType: InputAction.CallbackContext
+  fullName: InputAction.CallbackContext
+- uid: Global.Player.OnMove_down*
+  commentId: Overload:Global.Player.OnMove_down
+  name: OnMove_down
+  nameWithType: Player.OnMove_down
+  fullName: Player.OnMove_down
+- uid: Global.Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnMove_down(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+    name: OnMove_down
+    nameWithType: Controlls.IBullet_hellActions.OnMove_down
+    fullName: Controlls.IBullet_hellActions.OnMove_down
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+    name: OnMove_down
+    nameWithType: Controlls.IBullet_hellActions.OnMove_down
+    fullName: Controlls.IBullet_hellActions.OnMove_down
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Player.OnMove_left*
+  commentId: Overload:Global.Player.OnMove_left
+  name: OnMove_left
+  nameWithType: Player.OnMove_left
+  fullName: Player.OnMove_left
+- uid: Global.Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnMove_left(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+    name: OnMove_left
+    nameWithType: Controlls.IBullet_hellActions.OnMove_left
+    fullName: Controlls.IBullet_hellActions.OnMove_left
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+    name: OnMove_left
+    nameWithType: Controlls.IBullet_hellActions.OnMove_left
+    fullName: Controlls.IBullet_hellActions.OnMove_left
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Player.OnMove_rigth*
+  commentId: Overload:Global.Player.OnMove_rigth
+  name: OnMove_rigth
+  nameWithType: Player.OnMove_rigth
+  fullName: Player.OnMove_rigth
+- uid: Global.Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnMove_rigth(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+    name: OnMove_rigth
+    nameWithType: Controlls.IBullet_hellActions.OnMove_rigth
+    fullName: Controlls.IBullet_hellActions.OnMove_rigth
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+    name: OnMove_rigth
+    nameWithType: Controlls.IBullet_hellActions.OnMove_rigth
+    fullName: Controlls.IBullet_hellActions.OnMove_rigth
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Player.OnMove_up*
+  commentId: Overload:Global.Player.OnMove_up
+  name: OnMove_up
+  nameWithType: Player.OnMove_up
+  fullName: Player.OnMove_up
+- uid: Global.Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnMove_up(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+    name: OnMove_up
+    nameWithType: Controlls.IBullet_hellActions.OnMove_up
+    fullName: Controlls.IBullet_hellActions.OnMove_up
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+    name: OnMove_up
+    nameWithType: Controlls.IBullet_hellActions.OnMove_up
+    fullName: Controlls.IBullet_hellActions.OnMove_up
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Player.OnShoot*
+  commentId: Overload:Global.Player.OnShoot
+  name: OnShoot
+  nameWithType: Player.OnShoot
+  fullName: Player.OnShoot
+- uid: Global.Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnShoot(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+    name: OnShoot
+    nameWithType: Controlls.IBullet_hellActions.OnShoot
+    fullName: Controlls.IBullet_hellActions.OnShoot
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+    name: OnShoot
+    nameWithType: Controlls.IBullet_hellActions.OnShoot
+    fullName: Controlls.IBullet_hellActions.OnShoot
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Player.OnPause_menu*
+  commentId: Overload:Global.Player.OnPause_menu
+  name: OnPause_menu
+  nameWithType: Player.OnPause_menu
+  fullName: Player.OnPause_menu
+- uid: Global.Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnPause_menu(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+    name: OnPause_menu
+    nameWithType: Controlls.IBullet_hellActions.OnPause_menu
+    fullName: Controlls.IBullet_hellActions.OnPause_menu
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+    name: OnPause_menu
+    nameWithType: Controlls.IBullet_hellActions.OnPause_menu
+    fullName: Controlls.IBullet_hellActions.OnPause_menu
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Player.smoothHealthDrop*
+  commentId: Overload:Global.Player.smoothHealthDrop
+  name: smoothHealthDrop
+  nameWithType: Player.smoothHealthDrop
+  fullName: Player.smoothHealthDrop
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: Global.Player.smoothSchieldDrop*
+  commentId: Overload:Global.Player.smoothSchieldDrop
+  name: smoothSchieldDrop
+  nameWithType: Player.smoothSchieldDrop
+  fullName: Player.smoothSchieldDrop
+- uid: Global.Player.schieldRefresh*
+  commentId: Overload:Global.Player.schieldRefresh
+  name: schieldRefresh
+  nameWithType: Player.schieldRefresh
+  fullName: Player.schieldRefresh
+- uid: Global.Player.takeDmg*
+  commentId: Overload:Global.Player.takeDmg
+  name: takeDmg
+  nameWithType: Player.takeDmg
+  fullName: Player.takeDmg
+- uid: Global.Player.clearControlls*
+  commentId: Overload:Global.Player.clearControlls
+  name: clearControlls
+  nameWithType: Player.clearControlls
+  fullName: Player.clearControlls

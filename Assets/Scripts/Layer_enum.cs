@@ -21,5 +21,6 @@ public enum Layer_enum
     player_border = 11,
     enemy_border = 12,
     player_immunity = 13,
-
+    bullet_border = 14,
+    camera = 15,
 }

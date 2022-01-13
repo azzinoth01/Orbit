@@ -1,0 +1,192 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Skillsequenze
+  commentId: T:Global.Skillsequenze
+  id: Skillsequenze
+  parent: Global
+  children:
+  - Global.Skillsequenze.#ctor(System.Single,GameObject)
+  - Global.Skillsequenze.Delay
+  - Global.Skillsequenze.Skill
+  langs:
+  - csharp
+  - vb
+  name: Skillsequenze
+  nameWithType: Skillsequenze
+  fullName: Skillsequenze
+  type: Class
+  source:
+    id: Skillsequenze
+    path: ''
+    startLine: 3843
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontainer classe um skills zu beschreiben\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Skillsequenze
+    content.vb: >-
+      <Serializable>
+
+      Public Class Skillsequenze
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Skillsequenze.#ctor(System.Single,GameObject)
+  commentId: M:Global.Skillsequenze.#ctor(System.Single,GameObject)
+  id: '#ctor(System.Single,GameObject)'
+  parent: Global.Skillsequenze
+  langs:
+  - csharp
+  - vb
+  name: Skillsequenze(Single, GameObject)
+  nameWithType: Skillsequenze.Skillsequenze(Single, GameObject)
+  fullName: Skillsequenze.Skillsequenze(System.Single, GameObject)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 3854
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nconstruktor classe\n"
+  example: []
+  syntax:
+    content: public Skillsequenze(float delay, GameObject skill)
+    parameters:
+    - id: delay
+      type: System.Single
+      description: delay zwischen den skills
+    - id: skill
+      type: Global.GameObject
+      description: den skill der benutzt wird
+    content.vb: Public Sub New(delay As Single, skill As GameObject)
+  overload: Global.Skillsequenze.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Skillsequenze.Skill
+  commentId: P:Global.Skillsequenze.Skill
+  id: Skill
+  parent: Global.Skillsequenze
+  langs:
+  - csharp
+  - vb
+  name: Skill
+  nameWithType: Skillsequenze.Skill
+  fullName: Skillsequenze.Skill
+  type: Property
+  source:
+    id: Skill
+    path: ''
+    startLine: 3859
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject Skill { get; }
+    parameters: []
+    return:
+      type: Global.GameObject
+    content.vb: Public ReadOnly Property Skill As GameObject
+  overload: Global.Skillsequenze.Skill*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Skillsequenze.Delay
+  commentId: P:Global.Skillsequenze.Delay
+  id: Delay
+  parent: Global.Skillsequenze
+  langs:
+  - csharp
+  - vb
+  name: Delay
+  nameWithType: Skillsequenze.Delay
+  fullName: Skillsequenze.Delay
+  type: Property
+  source:
+    id: Delay
+    path: ''
+    startLine: 3867
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float Delay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Delay As Single
+  overload: Global.Skillsequenze.Delay*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Skillsequenze.#ctor*
+  commentId: Overload:Global.Skillsequenze.#ctor
+  name: Skillsequenze
+  nameWithType: Skillsequenze.Skillsequenze
+  fullName: Skillsequenze.Skillsequenze
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.Skillsequenze.Skill*
+  commentId: Overload:Global.Skillsequenze.Skill
+  name: Skill
+  nameWithType: Skillsequenze.Skill
+  fullName: Skillsequenze.Skill
+- uid: Global.Skillsequenze.Delay*
+  commentId: Overload:Global.Skillsequenze.Delay
+  name: Delay
+  nameWithType: Skillsequenze.Delay
+  fullName: Skillsequenze.Delay

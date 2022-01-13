@@ -1,0 +1,604 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.BulletInfo
+  commentId: T:Global.BulletInfo
+  id: BulletInfo
+  parent: Global
+  children:
+  - Global.BulletInfo.#ctor
+  - Global.BulletInfo.#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)
+  - Global.BulletInfo.AddBaseDmg
+  - Global.BulletInfo.Bullet
+  - Global.BulletInfo.BulletScript
+  - Global.BulletInfo.DmgModifier
+  - Global.BulletInfo.enableEffects
+  - Global.BulletInfo.InstantStartEffect
+  - Global.BulletInfo.resetModifiers
+  - Global.BulletInfo.setBulletDmg
+  - Global.BulletInfo.setLayer(System.Int32)
+  - Global.BulletInfo.SfxSound
+  - Global.BulletInfo.StartEffect
+  - Global.BulletInfo.StartRotation
+  langs:
+  - csharp
+  - vb
+  name: BulletInfo
+  nameWithType: BulletInfo
+  fullName: BulletInfo
+  type: Class
+  source:
+    id: BulletInfo
+    path: ''
+    startLine: 712
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontainer classe die Bullets beschreibt\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class BulletInfo
+    content.vb: >-
+      <Serializable>
+
+      Public Class BulletInfo
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.BulletInfo.#ctor
+  commentId: M:Global.BulletInfo.#ctor
+  id: '#ctor'
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: BulletInfo()
+  nameWithType: BulletInfo.BulletInfo()
+  fullName: BulletInfo.BulletInfo()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 732
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nstandardconstruktor setzt basiswerte\n"
+  example: []
+  syntax:
+    content: public BulletInfo()
+    content.vb: Public Sub New
+  overload: Global.BulletInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.BulletInfo.#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)
+  commentId: M:Global.BulletInfo.#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)
+  id: '#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)'
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: BulletInfo(Single, Int32, GameObject, GameObject, GameObject)
+  nameWithType: BulletInfo.BulletInfo(Single, Int32, GameObject, GameObject, GameObject)
+  fullName: BulletInfo.BulletInfo(System.Single, System.Int32, GameObject, GameObject, GameObject)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 748
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nconstruktor um werte zu setzten\n"
+  example: []
+  syntax:
+    content: public BulletInfo(float startRotation, int bulletBaseDmg, GameObject bullet, GameObject startEffect, GameObject sfxSound)
+    parameters:
+    - id: startRotation
+      type: System.Single
+      description: bestimmt die flugrichtung vom basisobject
+    - id: bulletBaseDmg
+      type: System.Int32
+      description: bestimmt bullet base dmg
+    - id: bullet
+      type: Global.GameObject
+      description: bestimmt bullet prefab
+    - id: startEffect
+      type: Global.GameObject
+      description: bestimmt particel system start prefab
+    - id: sfxSound
+      type: Global.GameObject
+      description: bestimmt Sound Effect prefab
+    content.vb: Public Sub New(startRotation As Single, bulletBaseDmg As Integer, bullet As GameObject, startEffect As GameObject, sfxSound As GameObject)
+  overload: Global.BulletInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.BulletInfo.StartRotation
+  commentId: P:Global.BulletInfo.StartRotation
+  id: StartRotation
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: StartRotation
+  nameWithType: BulletInfo.StartRotation
+  fullName: BulletInfo.StartRotation
+  type: Property
+  source:
+    id: StartRotation
+    path: ''
+    startLine: 761
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float StartRotation { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property StartRotation As Single
+  overload: Global.BulletInfo.StartRotation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.BulletInfo.resetModifiers
+  commentId: M:Global.BulletInfo.resetModifiers
+  id: resetModifiers
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: resetModifiers()
+  nameWithType: BulletInfo.resetModifiers()
+  fullName: BulletInfo.resetModifiers()
+  type: Method
+  source:
+    id: resetModifiers
+    path: ''
+    startLine: 774
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nresetet die Dmg modifier\n"
+  example: []
+  syntax:
+    content: public void resetModifiers()
+    content.vb: Public Sub resetModifiers
+  overload: Global.BulletInfo.resetModifiers*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.BulletInfo.Bullet
+  commentId: P:Global.BulletInfo.Bullet
+  id: Bullet
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: Bullet
+  nameWithType: BulletInfo.Bullet
+  fullName: BulletInfo.Bullet
+  type: Property
+  source:
+    id: Bullet
+    path: ''
+    startLine: 781
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject Bullet { get; set; }
+    parameters: []
+    return:
+      type: Global.GameObject
+    content.vb: Public Property Bullet As GameObject
+  overload: Global.BulletInfo.Bullet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.BulletInfo.BulletScript
+  commentId: P:Global.BulletInfo.BulletScript
+  id: BulletScript
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: BulletScript
+  nameWithType: BulletInfo.BulletScript
+  fullName: BulletInfo.BulletScript
+  type: Property
+  source:
+    id: BulletScript
+    path: ''
+    startLine: 791
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Bullet BulletScript { set; }
+    parameters: []
+    return:
+      type: Global.Bullet
+    content.vb: Public WriteOnly Property BulletScript As Bullet
+  overload: Global.BulletInfo.BulletScript*
+  modifiers.csharp:
+  - public
+  - set
+  modifiers.vb:
+  - Public
+  - WriteOnly
+- uid: Global.BulletInfo.AddBaseDmg
+  commentId: P:Global.BulletInfo.AddBaseDmg
+  id: AddBaseDmg
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: AddBaseDmg
+  nameWithType: BulletInfo.AddBaseDmg
+  fullName: BulletInfo.AddBaseDmg
+  type: Property
+  source:
+    id: AddBaseDmg
+    path: ''
+    startLine: 800
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int AddBaseDmg { set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public WriteOnly Property AddBaseDmg As Integer
+  overload: Global.BulletInfo.AddBaseDmg*
+  modifiers.csharp:
+  - public
+  - set
+  modifiers.vb:
+  - Public
+  - WriteOnly
+- uid: Global.BulletInfo.DmgModifier
+  commentId: P:Global.BulletInfo.DmgModifier
+  id: DmgModifier
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: DmgModifier
+  nameWithType: BulletInfo.DmgModifier
+  fullName: BulletInfo.DmgModifier
+  type: Property
+  source:
+    id: DmgModifier
+    path: ''
+    startLine: 809
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float DmgModifier { set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public WriteOnly Property DmgModifier As Single
+  overload: Global.BulletInfo.DmgModifier*
+  modifiers.csharp:
+  - public
+  - set
+  modifiers.vb:
+  - Public
+  - WriteOnly
+- uid: Global.BulletInfo.StartEffect
+  commentId: P:Global.BulletInfo.StartEffect
+  id: StartEffect
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: StartEffect
+  nameWithType: BulletInfo.StartEffect
+  fullName: BulletInfo.StartEffect
+  type: Property
+  source:
+    id: StartEffect
+    path: ''
+    startLine: 818
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject StartEffect { get; set; }
+    parameters: []
+    return:
+      type: Global.GameObject
+    content.vb: Public Property StartEffect As GameObject
+  overload: Global.BulletInfo.StartEffect*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.BulletInfo.InstantStartEffect
+  commentId: P:Global.BulletInfo.InstantStartEffect
+  id: InstantStartEffect
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: InstantStartEffect
+  nameWithType: BulletInfo.InstantStartEffect
+  fullName: BulletInfo.InstantStartEffect
+  type: Property
+  source:
+    id: InstantStartEffect
+    path: ''
+    startLine: 828
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject InstantStartEffect { get; set; }
+    parameters: []
+    return:
+      type: Global.GameObject
+    content.vb: Public Property InstantStartEffect As GameObject
+  overload: Global.BulletInfo.InstantStartEffect*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.BulletInfo.SfxSound
+  commentId: P:Global.BulletInfo.SfxSound
+  id: SfxSound
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: SfxSound
+  nameWithType: BulletInfo.SfxSound
+  fullName: BulletInfo.SfxSound
+  type: Property
+  source:
+    id: SfxSound
+    path: ''
+    startLine: 838
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject SfxSound { get; set; }
+    parameters: []
+    return:
+      type: Global.GameObject
+    content.vb: Public Property SfxSound As GameObject
+  overload: Global.BulletInfo.SfxSound*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.BulletInfo.setBulletDmg
+  commentId: M:Global.BulletInfo.setBulletDmg
+  id: setBulletDmg
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: setBulletDmg()
+  nameWithType: BulletInfo.setBulletDmg()
+  fullName: BulletInfo.setBulletDmg()
+  type: Method
+  source:
+    id: setBulletDmg
+    path: ''
+    startLine: 851
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsets den bullet dmg auf der Bullet\n"
+  example: []
+  syntax:
+    content: public void setBulletDmg()
+    content.vb: Public Sub setBulletDmg
+  overload: Global.BulletInfo.setBulletDmg*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.BulletInfo.setLayer(System.Int32)
+  commentId: M:Global.BulletInfo.setLayer(System.Int32)
+  id: setLayer(System.Int32)
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: setLayer(Int32)
+  nameWithType: BulletInfo.setLayer(Int32)
+  fullName: BulletInfo.setLayer(System.Int32)
+  type: Method
+  source:
+    id: setLayer
+    path: ''
+    startLine: 862
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsets den layer der Bullet\n"
+  example: []
+  syntax:
+    content: public void setLayer(int layer)
+    parameters:
+    - id: layer
+      type: System.Int32
+      description: layer in integer
+    content.vb: Public Sub setLayer(layer As Integer)
+  overload: Global.BulletInfo.setLayer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.BulletInfo.enableEffects
+  commentId: M:Global.BulletInfo.enableEffects
+  id: enableEffects
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: enableEffects()
+  nameWithType: BulletInfo.enableEffects()
+  fullName: BulletInfo.enableEffects()
+  type: Method
+  source:
+    id: enableEffects
+    path: ''
+    startLine: 870
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nenables the bullet particle effect\n"
+  example: []
+  syntax:
+    content: public void enableEffects()
+    content.vb: Public Sub enableEffects
+  overload: Global.BulletInfo.enableEffects*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.BulletInfo.#ctor*
+  commentId: Overload:Global.BulletInfo.#ctor
+  name: BulletInfo
+  nameWithType: BulletInfo.BulletInfo
+  fullName: BulletInfo.BulletInfo
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.BulletInfo.StartRotation*
+  commentId: Overload:Global.BulletInfo.StartRotation
+  name: StartRotation
+  nameWithType: BulletInfo.StartRotation
+  fullName: BulletInfo.StartRotation
+- uid: Global.BulletInfo.resetModifiers*
+  commentId: Overload:Global.BulletInfo.resetModifiers
+  name: resetModifiers
+  nameWithType: BulletInfo.resetModifiers
+  fullName: BulletInfo.resetModifiers
+- uid: Global.BulletInfo.Bullet*
+  commentId: Overload:Global.BulletInfo.Bullet
+  name: Bullet
+  nameWithType: BulletInfo.Bullet
+  fullName: BulletInfo.Bullet
+- uid: Global.BulletInfo.BulletScript*
+  commentId: Overload:Global.BulletInfo.BulletScript
+  name: BulletScript
+  nameWithType: BulletInfo.BulletScript
+  fullName: BulletInfo.BulletScript
+- uid: Global.Bullet
+  commentId: T:Global.Bullet
+  name: Bullet
+  nameWithType: Bullet
+  fullName: Bullet
+- uid: Global.BulletInfo.AddBaseDmg*
+  commentId: Overload:Global.BulletInfo.AddBaseDmg
+  name: AddBaseDmg
+  nameWithType: BulletInfo.AddBaseDmg
+  fullName: BulletInfo.AddBaseDmg
+- uid: Global.BulletInfo.DmgModifier*
+  commentId: Overload:Global.BulletInfo.DmgModifier
+  name: DmgModifier
+  nameWithType: BulletInfo.DmgModifier
+  fullName: BulletInfo.DmgModifier
+- uid: Global.BulletInfo.StartEffect*
+  commentId: Overload:Global.BulletInfo.StartEffect
+  name: StartEffect
+  nameWithType: BulletInfo.StartEffect
+  fullName: BulletInfo.StartEffect
+- uid: Global.BulletInfo.InstantStartEffect*
+  commentId: Overload:Global.BulletInfo.InstantStartEffect
+  name: InstantStartEffect
+  nameWithType: BulletInfo.InstantStartEffect
+  fullName: BulletInfo.InstantStartEffect
+- uid: Global.BulletInfo.SfxSound*
+  commentId: Overload:Global.BulletInfo.SfxSound
+  name: SfxSound
+  nameWithType: BulletInfo.SfxSound
+  fullName: BulletInfo.SfxSound
+- uid: Global.BulletInfo.setBulletDmg*
+  commentId: Overload:Global.BulletInfo.setBulletDmg
+  name: setBulletDmg
+  nameWithType: BulletInfo.setBulletDmg
+  fullName: BulletInfo.setBulletDmg
+- uid: Global.BulletInfo.setLayer*
+  commentId: Overload:Global.BulletInfo.setLayer
+  name: setLayer
+  nameWithType: BulletInfo.setLayer
+  fullName: BulletInfo.setLayer
+- uid: Global.BulletInfo.enableEffects*
+  commentId: Overload:Global.BulletInfo.enableEffects
+  name: enableEffects
+  nameWithType: BulletInfo.enableEffects
+  fullName: BulletInfo.enableEffects

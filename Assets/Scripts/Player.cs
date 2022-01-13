@@ -83,7 +83,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private bool isImmun;
     private SpriteRenderer sp;
 
+    public GameObject deathEffect;
 
+    public AudioSource chargeAudio;
+    public AudioSource hitAudio;
 
 
     public Vector2 Impulse {
@@ -113,6 +116,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (context.started) {
             doge();
+
         }
     }
 
@@ -278,7 +282,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         maxDogeCharges = dogeCharges;
         flickerDirection = -1;
-        sp = GetComponent<SpriteRenderer>();
+        sp = ship.GetComponent<SpriteRenderer>();
 
 
     }
@@ -358,6 +362,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public IEnumerator smoothHealthDrop() {
 
         while (true) {
+            if (Globals.pause == true) {
+                yield return null;
+            }
             float prozentValue = currentHealth / health;
             float currentFillProzent = healthbar.fillAmount;
 
@@ -388,6 +395,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             else {
                 healthbar.color = healthbarBelow30;
             }
+            if (healthbar.fillAmount <= 0) {
+                Destroy(gameObject);
+                Instantiate(deathEffect, transform.position, transform.rotation);
+                Globals.menuHandler.setGameOver();
+            }
+
 
             yield return null;
         }
@@ -401,7 +414,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public IEnumerator smoothSchieldDrop() {
 
         while (true) {
-
+            if (Globals.pause == true) {
+                yield return null;
+            }
             float prozentValue = currentschield / maxschield;
             float currentFillProzent = schieldbar.fillAmount;
 
@@ -456,12 +471,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// take dmg funktion
     /// </summary>
     /// <param name="dmg"> den dmg den der player nehmen soll</param>
-    public void takeDmg(int dmg) {
+    public void takeDmg(float dmg) {
         if (isImmun == true) {
             return;
         }
 
-        StartCoroutine(Globals.currentCamera.GetComponent<CameraScript>().startScreenShake());
+        hitAudio.Play();
 
         if (schieldbar.fillAmount >= 1) {
             currentschield = 0;
@@ -472,12 +487,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         else {
             currentHealth = currentHealth - dmg;
+            if (currentHealth > 0) {
+                StartCoroutine(Globals.currentCamera.GetComponent<CameraScript>().startScreenShake());
+            }
+
         }
 
 
         if (currentHealth <= 0) {
-            Destroy(gameObject);
-            Globals.menuHandler.setGameOver();
+            return;
+            // destroy moved to smooth health drop
             //Globals.gameoverHandler.gameOver();
         }
         isImmun = true;
@@ -491,6 +510,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private void OnDestroy() {
 
         controll.Dispose();
+        body.velocity = Vector2.zero;
 
     }
 
@@ -500,6 +520,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public void clearControlls() {
 
         controll.Dispose();
+        body.velocity = Vector2.zero;
 
     }
 
@@ -662,6 +683,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         else {
             chargeUI.sprite = chargeSprites[dogeCharges];
+            chargeAudio.Play();
             if (dogeCharges == 0) {
                 chargeUI.color = new Color(chargeUI.color.r, chargeUI.color.g, chargeUI.color.b, 0);
             }
@@ -682,6 +704,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// </summary>
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision) {
+
+
 
         if (collision.gameObject == waypoint) {
             //Debug.Log("doge complete");

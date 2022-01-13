@@ -1,0 +1,533 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.SoundControl
+  commentId: T:Global.SoundControl
+  id: SoundControl
+  parent: Global
+  children:
+  - Global.SoundControl.background
+  - Global.SoundControl.backgroundSlider
+  - Global.SoundControl.backgroundSoundChange
+  - Global.SoundControl.masterGroup
+  - Global.SoundControl.mute
+  - Global.SoundControl.muteButton
+  - Global.SoundControl.muteSp
+  - Global.SoundControl.normal
+  - Global.SoundControl.saveSettingChanges
+  - Global.SoundControl.setStartSettings
+  - Global.SoundControl.sfx
+  - Global.SoundControl.sfxChanged
+  - Global.SoundControl.sfxSlider
+  - Global.SoundControl.toggleMute
+  - Global.SoundControl.unMuteSp
+  langs:
+  - csharp
+  - vb
+  name: SoundControl
+  nameWithType: SoundControl
+  fullName: SoundControl
+  type: Class
+  source:
+    id: SoundControl
+    path: ''
+    startLine: 3885
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontrolliert die Soundeffecte\n"
+  example: []
+  syntax:
+    content: 'public class SoundControl : MonoBehaviour'
+    content.vb: >-
+      Public Class SoundControl
+
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.SoundControl.masterGroup
+  commentId: F:Global.SoundControl.masterGroup
+  id: masterGroup
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: masterGroup
+  nameWithType: SoundControl.masterGroup
+  fullName: SoundControl.masterGroup
+  type: Field
+  source:
+    id: masterGroup
+    path: ''
+    startLine: 3887
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioMixerGroup masterGroup
+    return:
+      type: Global.AudioMixerGroup
+    content.vb: Public masterGroup As AudioMixerGroup
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.background
+  commentId: F:Global.SoundControl.background
+  id: background
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: background
+  nameWithType: SoundControl.background
+  fullName: SoundControl.background
+  type: Field
+  source:
+    id: background
+    path: ''
+    startLine: 3888
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioMixerGroup background
+    return:
+      type: Global.AudioMixerGroup
+    content.vb: Public background As AudioMixerGroup
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.sfx
+  commentId: F:Global.SoundControl.sfx
+  id: sfx
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: sfx
+  nameWithType: SoundControl.sfx
+  fullName: SoundControl.sfx
+  type: Field
+  source:
+    id: sfx
+    path: ''
+    startLine: 3889
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioMixerGroup sfx
+    return:
+      type: Global.AudioMixerGroup
+    content.vb: Public sfx As AudioMixerGroup
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.normal
+  commentId: F:Global.SoundControl.normal
+  id: normal
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: normal
+  nameWithType: SoundControl.normal
+  fullName: SoundControl.normal
+  type: Field
+  source:
+    id: normal
+    path: ''
+    startLine: 3890
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioMixerSnapshot normal
+    return:
+      type: Global.AudioMixerSnapshot
+    content.vb: Public normal As AudioMixerSnapshot
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.mute
+  commentId: F:Global.SoundControl.mute
+  id: mute
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: mute
+  nameWithType: SoundControl.mute
+  fullName: SoundControl.mute
+  type: Field
+  source:
+    id: mute
+    path: ''
+    startLine: 3891
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioMixerSnapshot mute
+    return:
+      type: Global.AudioMixerSnapshot
+    content.vb: Public mute As AudioMixerSnapshot
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.muteButton
+  commentId: F:Global.SoundControl.muteButton
+  id: muteButton
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: muteButton
+  nameWithType: SoundControl.muteButton
+  fullName: SoundControl.muteButton
+  type: Field
+  source:
+    id: muteButton
+    path: ''
+    startLine: 3899
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image muteButton
+    return:
+      type: Global.Image
+    content.vb: Public muteButton As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.backgroundSlider
+  commentId: F:Global.SoundControl.backgroundSlider
+  id: backgroundSlider
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: backgroundSlider
+  nameWithType: SoundControl.backgroundSlider
+  fullName: SoundControl.backgroundSlider
+  type: Field
+  source:
+    id: backgroundSlider
+    path: ''
+    startLine: 3900
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Slider backgroundSlider
+    return:
+      type: Global.Slider
+    content.vb: Public backgroundSlider As Slider
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.sfxSlider
+  commentId: F:Global.SoundControl.sfxSlider
+  id: sfxSlider
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: sfxSlider
+  nameWithType: SoundControl.sfxSlider
+  fullName: SoundControl.sfxSlider
+  type: Field
+  source:
+    id: sfxSlider
+    path: ''
+    startLine: 3901
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Slider sfxSlider
+    return:
+      type: Global.Slider
+    content.vb: Public sfxSlider As Slider
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.muteSp
+  commentId: F:Global.SoundControl.muteSp
+  id: muteSp
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: muteSp
+  nameWithType: SoundControl.muteSp
+  fullName: SoundControl.muteSp
+  type: Field
+  source:
+    id: muteSp
+    path: ''
+    startLine: 3903
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Sprite muteSp
+    return:
+      type: Global.Sprite
+    content.vb: Public muteSp As Sprite
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.unMuteSp
+  commentId: F:Global.SoundControl.unMuteSp
+  id: unMuteSp
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: unMuteSp
+  nameWithType: SoundControl.unMuteSp
+  fullName: SoundControl.unMuteSp
+  type: Field
+  source:
+    id: unMuteSp
+    path: ''
+    startLine: 3904
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Sprite unMuteSp
+    return:
+      type: Global.Sprite
+    content.vb: Public unMuteSp As Sprite
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.setStartSettings
+  commentId: M:Global.SoundControl.setStartSettings
+  id: setStartSettings
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: setStartSettings()
+  nameWithType: SoundControl.setStartSettings()
+  fullName: SoundControl.setStartSettings()
+  type: Method
+  source:
+    id: setStartSettings
+    path: ''
+    startLine: 3934
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsetzt die geladen Settings auf die UI und stellt die Soundgroups ein\n"
+  example: []
+  syntax:
+    content: public void setStartSettings()
+    content.vb: Public Sub setStartSettings
+  overload: Global.SoundControl.setStartSettings*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.toggleMute
+  commentId: M:Global.SoundControl.toggleMute
+  id: toggleMute
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: toggleMute()
+  nameWithType: SoundControl.toggleMute()
+  fullName: SoundControl.toggleMute()
+  type: Method
+  source:
+    id: toggleMute
+    path: ''
+    startLine: 3974
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ntoggelt den Mute button\n"
+  example: []
+  syntax:
+    content: public void toggleMute()
+    content.vb: Public Sub toggleMute
+  overload: Global.SoundControl.toggleMute*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.sfxChanged
+  commentId: M:Global.SoundControl.sfxChanged
+  id: sfxChanged
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: sfxChanged()
+  nameWithType: SoundControl.sfxChanged()
+  fullName: SoundControl.sfxChanged()
+  type: Method
+  source:
+    id: sfxChanged
+    path: ''
+    startLine: 3992
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsetzt den sfx Sound nach �ndern des Sliders\n"
+  example: []
+  syntax:
+    content: public void sfxChanged()
+    content.vb: Public Sub sfxChanged
+  overload: Global.SoundControl.sfxChanged*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.backgroundSoundChange
+  commentId: M:Global.SoundControl.backgroundSoundChange
+  id: backgroundSoundChange
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: backgroundSoundChange()
+  nameWithType: SoundControl.backgroundSoundChange()
+  fullName: SoundControl.backgroundSoundChange()
+  type: Method
+  source:
+    id: backgroundSoundChange
+    path: ''
+    startLine: 4010
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsetzt den backgroundsound nach �ndern des Sliders\n"
+  example: []
+  syntax:
+    content: public void backgroundSoundChange()
+    content.vb: Public Sub backgroundSoundChange
+  overload: Global.SoundControl.backgroundSoundChange*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SoundControl.saveSettingChanges
+  commentId: M:Global.SoundControl.saveSettingChanges
+  id: saveSettingChanges
+  parent: Global.SoundControl
+  langs:
+  - csharp
+  - vb
+  name: saveSettingChanges()
+  nameWithType: SoundControl.saveSettingChanges()
+  fullName: SoundControl.saveSettingChanges()
+  type: Method
+  source:
+    id: saveSettingChanges
+    path: ''
+    startLine: 4031
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nspeichert die Soundsettings\n"
+  example: []
+  syntax:
+    content: public void saveSettingChanges()
+    content.vb: Public Sub saveSettingChanges
+  overload: Global.SoundControl.saveSettingChanges*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.AudioMixerGroup
+  isExternal: true
+  name: AudioMixerGroup
+  nameWithType: AudioMixerGroup
+  fullName: AudioMixerGroup
+- uid: Global.AudioMixerSnapshot
+  isExternal: true
+  name: AudioMixerSnapshot
+  nameWithType: AudioMixerSnapshot
+  fullName: AudioMixerSnapshot
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: Global.Slider
+  isExternal: true
+  name: Slider
+  nameWithType: Slider
+  fullName: Slider
+- uid: Global.Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite
+- uid: Global.SoundControl.setStartSettings*
+  commentId: Overload:Global.SoundControl.setStartSettings
+  name: setStartSettings
+  nameWithType: SoundControl.setStartSettings
+  fullName: SoundControl.setStartSettings
+- uid: Global.SoundControl.toggleMute*
+  commentId: Overload:Global.SoundControl.toggleMute
+  name: toggleMute
+  nameWithType: SoundControl.toggleMute
+  fullName: SoundControl.toggleMute
+- uid: Global.SoundControl.sfxChanged*
+  commentId: Overload:Global.SoundControl.sfxChanged
+  name: sfxChanged
+  nameWithType: SoundControl.sfxChanged
+  fullName: SoundControl.sfxChanged
+- uid: Global.SoundControl.backgroundSoundChange*
+  commentId: Overload:Global.SoundControl.backgroundSoundChange
+  name: backgroundSoundChange
+  nameWithType: SoundControl.backgroundSoundChange
+  fullName: SoundControl.backgroundSoundChange
+- uid: Global.SoundControl.saveSettingChanges*
+  commentId: Overload:Global.SoundControl.saveSettingChanges
+  name: saveSettingChanges
+  nameWithType: SoundControl.saveSettingChanges
+  fullName: SoundControl.saveSettingChanges

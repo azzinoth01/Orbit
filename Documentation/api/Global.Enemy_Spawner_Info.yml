@@ -1,0 +1,374 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Enemy_Spawner_Info
+  commentId: T:Global.Enemy_Spawner_Info
+  id: Enemy_Spawner_Info
+  parent: Global
+  children:
+  - Global.Enemy_Spawner_Info.#ctor
+  - Global.Enemy_Spawner_Info.CurrentEnemysSpawned
+  - Global.Enemy_Spawner_Info.delay
+  - Global.Enemy_Spawner_Info.enemyPrefab
+  - Global.Enemy_Spawner_Info.enemysToSpawn
+  - Global.Enemy_Spawner_Info.SpawnConditonFulfilled
+  - Global.Enemy_Spawner_Info.SpawnStartet
+  - Global.Enemy_Spawner_Info.triggerArea
+  - Global.Enemy_Spawner_Info.useTriggerArea
+  langs:
+  - csharp
+  - vb
+  name: Enemy_Spawner_Info
+  nameWithType: Enemy_Spawner_Info
+  fullName: Enemy_Spawner_Info
+  type: Class
+  source:
+    id: Enemy_Spawner_Info
+    path: ''
+    startLine: 1914
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontainer classe f�r Spawner variablen\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Enemy_Spawner_Info
+    content.vb: >-
+      <Serializable>
+
+      Public Class Enemy_Spawner_Info
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Enemy_Spawner_Info.triggerArea
+  commentId: F:Global.Enemy_Spawner_Info.triggerArea
+  id: triggerArea
+  parent: Global.Enemy_Spawner_Info
+  langs:
+  - csharp
+  - vb
+  name: triggerArea
+  nameWithType: Enemy_Spawner_Info.triggerArea
+  fullName: Enemy_Spawner_Info.triggerArea
+  type: Field
+  source:
+    id: triggerArea
+    path: ''
+    startLine: 1918
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject triggerArea
+    return:
+      type: Global.GameObject
+    content.vb: Public triggerArea As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner_Info.useTriggerArea
+  commentId: F:Global.Enemy_Spawner_Info.useTriggerArea
+  id: useTriggerArea
+  parent: Global.Enemy_Spawner_Info
+  langs:
+  - csharp
+  - vb
+  name: useTriggerArea
+  nameWithType: Enemy_Spawner_Info.useTriggerArea
+  fullName: Enemy_Spawner_Info.useTriggerArea
+  type: Field
+  source:
+    id: useTriggerArea
+    path: ''
+    startLine: 1919
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool useTriggerArea
+    return:
+      type: System.Boolean
+    content.vb: Public useTriggerArea As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner_Info.delay
+  commentId: F:Global.Enemy_Spawner_Info.delay
+  id: delay
+  parent: Global.Enemy_Spawner_Info
+  langs:
+  - csharp
+  - vb
+  name: delay
+  nameWithType: Enemy_Spawner_Info.delay
+  fullName: Enemy_Spawner_Info.delay
+  type: Field
+  source:
+    id: delay
+    path: ''
+    startLine: 1920
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float delay
+    return:
+      type: System.Single
+    content.vb: Public delay As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner_Info.enemysToSpawn
+  commentId: F:Global.Enemy_Spawner_Info.enemysToSpawn
+  id: enemysToSpawn
+  parent: Global.Enemy_Spawner_Info
+  langs:
+  - csharp
+  - vb
+  name: enemysToSpawn
+  nameWithType: Enemy_Spawner_Info.enemysToSpawn
+  fullName: Enemy_Spawner_Info.enemysToSpawn
+  type: Field
+  source:
+    id: enemysToSpawn
+    path: ''
+    startLine: 1921
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int enemysToSpawn
+    return:
+      type: System.Int32
+    content.vb: Public enemysToSpawn As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner_Info.enemyPrefab
+  commentId: F:Global.Enemy_Spawner_Info.enemyPrefab
+  id: enemyPrefab
+  parent: Global.Enemy_Spawner_Info
+  langs:
+  - csharp
+  - vb
+  name: enemyPrefab
+  nameWithType: Enemy_Spawner_Info.enemyPrefab
+  fullName: Enemy_Spawner_Info.enemyPrefab
+  type: Field
+  source:
+    id: enemyPrefab
+    path: ''
+    startLine: 1922
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject enemyPrefab
+    return:
+      type: Global.GameObject
+    content.vb: Public enemyPrefab As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner_Info.#ctor
+  commentId: M:Global.Enemy_Spawner_Info.#ctor
+  id: '#ctor'
+  parent: Global.Enemy_Spawner_Info
+  langs:
+  - csharp
+  - vb
+  name: Enemy_Spawner_Info()
+  nameWithType: Enemy_Spawner_Info.Enemy_Spawner_Info()
+  fullName: Enemy_Spawner_Info.Enemy_Spawner_Info()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1928
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Enemy_Spawner_Info()
+    content.vb: Public Sub New
+  overload: Global.Enemy_Spawner_Info.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner_Info.SpawnStartet
+  commentId: P:Global.Enemy_Spawner_Info.SpawnStartet
+  id: SpawnStartet
+  parent: Global.Enemy_Spawner_Info
+  langs:
+  - csharp
+  - vb
+  name: SpawnStartet
+  nameWithType: Enemy_Spawner_Info.SpawnStartet
+  fullName: Enemy_Spawner_Info.SpawnStartet
+  type: Property
+  source:
+    id: SpawnStartet
+    path: ''
+    startLine: 1934
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool SpawnStartet { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property SpawnStartet As Boolean
+  overload: Global.Enemy_Spawner_Info.SpawnStartet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner_Info.CurrentEnemysSpawned
+  commentId: P:Global.Enemy_Spawner_Info.CurrentEnemysSpawned
+  id: CurrentEnemysSpawned
+  parent: Global.Enemy_Spawner_Info
+  langs:
+  - csharp
+  - vb
+  name: CurrentEnemysSpawned
+  nameWithType: Enemy_Spawner_Info.CurrentEnemysSpawned
+  fullName: Enemy_Spawner_Info.CurrentEnemysSpawned
+  type: Property
+  source:
+    id: CurrentEnemysSpawned
+    path: ''
+    startLine: 1947
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int CurrentEnemysSpawned { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CurrentEnemysSpawned As Integer
+  overload: Global.Enemy_Spawner_Info.CurrentEnemysSpawned*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner_Info.SpawnConditonFulfilled
+  commentId: P:Global.Enemy_Spawner_Info.SpawnConditonFulfilled
+  id: SpawnConditonFulfilled
+  parent: Global.Enemy_Spawner_Info
+  langs:
+  - csharp
+  - vb
+  name: SpawnConditonFulfilled
+  nameWithType: Enemy_Spawner_Info.SpawnConditonFulfilled
+  fullName: Enemy_Spawner_Info.SpawnConditonFulfilled
+  type: Property
+  source:
+    id: SpawnConditonFulfilled
+    path: ''
+    startLine: 1957
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool SpawnConditonFulfilled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property SpawnConditonFulfilled As Boolean
+  overload: Global.Enemy_Spawner_Info.SpawnConditonFulfilled*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.Enemy_Spawner_Info.#ctor*
+  commentId: Overload:Global.Enemy_Spawner_Info.#ctor
+  name: Enemy_Spawner_Info
+  nameWithType: Enemy_Spawner_Info.Enemy_Spawner_Info
+  fullName: Enemy_Spawner_Info.Enemy_Spawner_Info
+- uid: Global.Enemy_Spawner_Info.SpawnStartet*
+  commentId: Overload:Global.Enemy_Spawner_Info.SpawnStartet
+  name: SpawnStartet
+  nameWithType: Enemy_Spawner_Info.SpawnStartet
+  fullName: Enemy_Spawner_Info.SpawnStartet
+- uid: Global.Enemy_Spawner_Info.CurrentEnemysSpawned*
+  commentId: Overload:Global.Enemy_Spawner_Info.CurrentEnemysSpawned
+  name: CurrentEnemysSpawned
+  nameWithType: Enemy_Spawner_Info.CurrentEnemysSpawned
+  fullName: Enemy_Spawner_Info.CurrentEnemysSpawned
+- uid: Global.Enemy_Spawner_Info.SpawnConditonFulfilled*
+  commentId: Overload:Global.Enemy_Spawner_Info.SpawnConditonFulfilled
+  name: SpawnConditonFulfilled
+  nameWithType: Enemy_Spawner_Info.SpawnConditonFulfilled
+  fullName: Enemy_Spawner_Info.SpawnConditonFulfilled

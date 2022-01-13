@@ -1,0 +1,366 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Move_in_out_Scene
+  commentId: T:Global.Move_in_out_Scene
+  id: Move_in_out_Scene
+  parent: Global
+  children:
+  - Global.Move_in_out_Scene.body
+  - Global.Move_in_out_Scene.force
+  - Global.Move_in_out_Scene.maxSpeed
+  - Global.Move_in_out_Scene.moveInWaypoints
+  - Global.Move_in_out_Scene.moveOutWaypoints
+  - Global.Move_in_out_Scene.startMoveOut
+  - Global.Move_in_out_Scene.waypointPrefab
+  langs:
+  - csharp
+  - vb
+  name: Move_in_out_Scene
+  nameWithType: Move_in_out_Scene
+  fullName: Move_in_out_Scene
+  type: Class
+  source:
+    id: Move_in_out_Scene
+    path: ''
+    startLine: 2284
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclasse die sich drum k�mmert, dass enemys aus den Spielfeld rein und raus bewegt\n"
+  example: []
+  syntax:
+    content: 'public class Move_in_out_Scene : MonoBehaviour'
+    content.vb: >-
+      Public Class Move_in_out_Scene
+
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Move_in_out_Scene.moveInWaypoints
+  commentId: F:Global.Move_in_out_Scene.moveInWaypoints
+  id: moveInWaypoints
+  parent: Global.Move_in_out_Scene
+  langs:
+  - csharp
+  - vb
+  name: moveInWaypoints
+  nameWithType: Move_in_out_Scene.moveInWaypoints
+  fullName: Move_in_out_Scene.moveInWaypoints
+  type: Field
+  source:
+    id: moveInWaypoints
+    path: ''
+    startLine: 2286
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Vector2> moveInWaypoints
+    return:
+      type: System.Collections.Generic.List{Vector2}
+    content.vb: Public moveInWaypoints As List(Of Vector2)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Move_in_out_Scene.moveOutWaypoints
+  commentId: F:Global.Move_in_out_Scene.moveOutWaypoints
+  id: moveOutWaypoints
+  parent: Global.Move_in_out_Scene
+  langs:
+  - csharp
+  - vb
+  name: moveOutWaypoints
+  nameWithType: Move_in_out_Scene.moveOutWaypoints
+  fullName: Move_in_out_Scene.moveOutWaypoints
+  type: Field
+  source:
+    id: moveOutWaypoints
+    path: ''
+    startLine: 2287
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Vector2> moveOutWaypoints
+    return:
+      type: System.Collections.Generic.List{Vector2}
+    content.vb: Public moveOutWaypoints As List(Of Vector2)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Move_in_out_Scene.waypointPrefab
+  commentId: F:Global.Move_in_out_Scene.waypointPrefab
+  id: waypointPrefab
+  parent: Global.Move_in_out_Scene
+  langs:
+  - csharp
+  - vb
+  name: waypointPrefab
+  nameWithType: Move_in_out_Scene.waypointPrefab
+  fullName: Move_in_out_Scene.waypointPrefab
+  type: Field
+  source:
+    id: waypointPrefab
+    path: ''
+    startLine: 2288
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject waypointPrefab
+    return:
+      type: Global.GameObject
+    content.vb: Public waypointPrefab As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Move_in_out_Scene.force
+  commentId: F:Global.Move_in_out_Scene.force
+  id: force
+  parent: Global.Move_in_out_Scene
+  langs:
+  - csharp
+  - vb
+  name: force
+  nameWithType: Move_in_out_Scene.force
+  fullName: Move_in_out_Scene.force
+  type: Field
+  source:
+    id: force
+    path: ''
+    startLine: 2293
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float force
+    return:
+      type: System.Single
+    content.vb: Public force As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Move_in_out_Scene.maxSpeed
+  commentId: F:Global.Move_in_out_Scene.maxSpeed
+  id: maxSpeed
+  parent: Global.Move_in_out_Scene
+  langs:
+  - csharp
+  - vb
+  name: maxSpeed
+  nameWithType: Move_in_out_Scene.maxSpeed
+  fullName: Move_in_out_Scene.maxSpeed
+  type: Field
+  source:
+    id: maxSpeed
+    path: ''
+    startLine: 2294
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float maxSpeed
+    return:
+      type: System.Single
+    content.vb: Public maxSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Move_in_out_Scene.body
+  commentId: F:Global.Move_in_out_Scene.body
+  id: body
+  parent: Global.Move_in_out_Scene
+  langs:
+  - csharp
+  - vb
+  name: body
+  nameWithType: Move_in_out_Scene.body
+  fullName: Move_in_out_Scene.body
+  type: Field
+  source:
+    id: body
+    path: ''
+    startLine: 2296
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Rigidbody2D body
+    return:
+      type: Global.Rigidbody2D
+    content.vb: Public body As Rigidbody2D
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Move_in_out_Scene.startMoveOut
+  commentId: M:Global.Move_in_out_Scene.startMoveOut
+  id: startMoveOut
+  parent: Global.Move_in_out_Scene
+  langs:
+  - csharp
+  - vb
+  name: startMoveOut()
+  nameWithType: Move_in_out_Scene.startMoveOut()
+  fullName: Move_in_out_Scene.startMoveOut()
+  type: Method
+  source:
+    id: startMoveOut
+    path: ''
+    startLine: 2398
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nstartet das move out\n"
+  example: []
+  syntax:
+    content: public void startMoveOut()
+    content.vb: Public Sub startMoveOut
+  overload: Global.Move_in_out_Scene.startMoveOut*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{Vector2}
+  commentId: T:System.Collections.Generic.List{Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Vector2>
+  nameWithType: List<Vector2>
+  fullName: System.Collections.Generic.List<Vector2>
+  nameWithType.vb: List(Of Vector2)
+  fullName.vb: System.Collections.Generic.List(Of Vector2)
+  name.vb: List(Of Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.Rigidbody2D
+  isExternal: true
+  name: Rigidbody2D
+  nameWithType: Rigidbody2D
+  fullName: Rigidbody2D
+- uid: Global.Move_in_out_Scene.startMoveOut*
+  commentId: Overload:Global.Move_in_out_Scene.startMoveOut
+  name: startMoveOut
+  nameWithType: Move_in_out_Scene.startMoveOut
+  fullName: Move_in_out_Scene.startMoveOut

@@ -1,0 +1,255 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Main_menu
+  commentId: T:Global.Main_menu
+  id: Main_menu
+  parent: Global
+  children:
+  - Global.Main_menu.mainMenu
+  - Global.Main_menu.onClickBackToMainMenu
+  - Global.Main_menu.onClickControls
+  - Global.Main_menu.playGame
+  - Global.Main_menu.quitGame
+  - Global.Main_menu.rebidningMenu
+  langs:
+  - csharp
+  - vb
+  name: Main_menu
+  nameWithType: Main_menu
+  fullName: Main_menu
+  type: Class
+  source:
+    id: Main_menu
+    path: ''
+    startLine: 2069
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclasse um das main menu zu kontrolieren\n"
+  example: []
+  syntax:
+    content: 'public class Main_menu : MonoBehaviour'
+    content.vb: >-
+      Public Class Main_menu
+
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Main_menu.mainMenu
+  commentId: F:Global.Main_menu.mainMenu
+  id: mainMenu
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: mainMenu
+  nameWithType: Main_menu.mainMenu
+  fullName: Main_menu.mainMenu
+  type: Field
+  source:
+    id: mainMenu
+    path: ''
+    startLine: 2071
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject mainMenu
+    return:
+      type: Global.GameObject
+    content.vb: Public mainMenu As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.rebidningMenu
+  commentId: F:Global.Main_menu.rebidningMenu
+  id: rebidningMenu
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: rebidningMenu
+  nameWithType: Main_menu.rebidningMenu
+  fullName: Main_menu.rebidningMenu
+  type: Field
+  source:
+    id: rebidningMenu
+    path: ''
+    startLine: 2072
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject rebidningMenu
+    return:
+      type: Global.GameObject
+    content.vb: Public rebidningMenu As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.playGame
+  commentId: M:Global.Main_menu.playGame
+  id: playGame
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: playGame()
+  nameWithType: Main_menu.playGame()
+  fullName: Main_menu.playGame()
+  type: Method
+  source:
+    id: playGame
+    path: ''
+    startLine: 2077
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nload the first game Scene\n"
+  example: []
+  syntax:
+    content: public void playGame()
+    content.vb: Public Sub playGame
+  overload: Global.Main_menu.playGame*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.quitGame
+  commentId: M:Global.Main_menu.quitGame
+  id: quitGame
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: quitGame()
+  nameWithType: Main_menu.quitGame()
+  fullName: Main_menu.quitGame()
+  type: Method
+  source:
+    id: quitGame
+    path: ''
+    startLine: 2084
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nquit the game\n"
+  example: []
+  syntax:
+    content: public void quitGame()
+    content.vb: Public Sub quitGame
+  overload: Global.Main_menu.quitGame*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.onClickBackToMainMenu
+  commentId: M:Global.Main_menu.onClickBackToMainMenu
+  id: onClickBackToMainMenu
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: onClickBackToMainMenu()
+  nameWithType: Main_menu.onClickBackToMainMenu()
+  fullName: Main_menu.onClickBackToMainMenu()
+  type: Method
+  source:
+    id: onClickBackToMainMenu
+    path: ''
+    startLine: 2091
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nbutton um das Main menu wieder einzublenden vom Rebinding Menu\n"
+  example: []
+  syntax:
+    content: public void onClickBackToMainMenu()
+    content.vb: Public Sub onClickBackToMainMenu
+  overload: Global.Main_menu.onClickBackToMainMenu*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.onClickControls
+  commentId: M:Global.Main_menu.onClickControls
+  id: onClickControls
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: onClickControls()
+  nameWithType: Main_menu.onClickControls()
+  fullName: Main_menu.onClickControls()
+  type: Method
+  source:
+    id: onClickControls
+    path: ''
+    startLine: 2099
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nbuttom um das Rebidning Menu einzublenden und das Main menu auszublenden\n"
+  example: []
+  syntax:
+    content: public void onClickControls()
+    content.vb: Public Sub onClickControls
+  overload: Global.Main_menu.onClickControls*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.Main_menu.playGame*
+  commentId: Overload:Global.Main_menu.playGame
+  name: playGame
+  nameWithType: Main_menu.playGame
+  fullName: Main_menu.playGame
+- uid: Global.Main_menu.quitGame*
+  commentId: Overload:Global.Main_menu.quitGame
+  name: quitGame
+  nameWithType: Main_menu.quitGame
+  fullName: Main_menu.quitGame
+- uid: Global.Main_menu.onClickBackToMainMenu*
+  commentId: Overload:Global.Main_menu.onClickBackToMainMenu
+  name: onClickBackToMainMenu
+  nameWithType: Main_menu.onClickBackToMainMenu
+  fullName: Main_menu.onClickBackToMainMenu
+- uid: Global.Main_menu.onClickControls*
+  commentId: Overload:Global.Main_menu.onClickControls
+  name: onClickControls
+  nameWithType: Main_menu.onClickControls
+  fullName: Main_menu.onClickControls

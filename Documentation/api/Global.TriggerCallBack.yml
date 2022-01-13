@@ -1,0 +1,121 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.TriggerCallBack
+  commentId: T:Global.TriggerCallBack
+  id: TriggerCallBack
+  parent: Global
+  children:
+  - Global.TriggerCallBack.spawnerActivationTrigger
+  - Global.TriggerCallBack.spawnTrigger
+  langs:
+  - csharp
+  - vb
+  name: TriggerCallBack
+  nameWithType: TriggerCallBack
+  fullName: TriggerCallBack
+  type: Class
+  source:
+    id: TriggerCallBack
+    path: ''
+    startLine: 4062
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclasse um Trigger areas zu machen\n"
+  example: []
+  syntax:
+    content: 'public class TriggerCallBack : MonoBehaviour'
+    content.vb: >-
+      Public Class TriggerCallBack
+
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.TriggerCallBack.spawnTrigger
+  commentId: F:Global.TriggerCallBack.spawnTrigger
+  id: spawnTrigger
+  parent: Global.TriggerCallBack
+  langs:
+  - csharp
+  - vb
+  name: spawnTrigger
+  nameWithType: TriggerCallBack.spawnTrigger
+  fullName: TriggerCallBack.spawnTrigger
+  type: Field
+  source:
+    id: spawnTrigger
+    path: ''
+    startLine: 4065
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool spawnTrigger
+    return:
+      type: System.Boolean
+    content.vb: Public spawnTrigger As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TriggerCallBack.spawnerActivationTrigger
+  commentId: F:Global.TriggerCallBack.spawnerActivationTrigger
+  id: spawnerActivationTrigger
+  parent: Global.TriggerCallBack
+  langs:
+  - csharp
+  - vb
+  name: spawnerActivationTrigger
+  nameWithType: TriggerCallBack.spawnerActivationTrigger
+  fullName: TriggerCallBack.spawnerActivationTrigger
+  type: Field
+  source:
+    id: spawnerActivationTrigger
+    path: ''
+    startLine: 4066
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool spawnerActivationTrigger
+    return:
+      type: System.Boolean
+    content.vb: Public spawnerActivationTrigger As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

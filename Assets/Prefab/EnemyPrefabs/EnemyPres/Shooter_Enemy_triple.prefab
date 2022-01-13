@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5317216550984244414}
   - component: {fileID: 772601496807012749}
   - component: {fileID: 2597929510415662938}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shooter_Enemy_triple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017138273, y: -0.12445736}
+  m_Offset: {x: -0.06473184, y: -0.37432164}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -232,7 +232,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.91045004, y: 0.6338978}
+  m_Size: {x: 3.3614993, y: 1.1336263}
   m_EdgeRadius: 0
 --- !u!114 &6863609497082289047
 MonoBehaviour:
@@ -262,6 +262,7 @@ MonoBehaviour:
   delayToNextWaypoint: 2
   collisionDmg: 3
   destoryAfterCollison: 0
+  deathParticelSystem: {fileID: 0}
 --- !u!114 &1532134948940045544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +278,6 @@ MonoBehaviour:
   shootsToCreate: 4
   skillsequenze:
   - delay: 1.5
-    skill: {fileID: 1251532575909873981, guid: fcaefcfb34390a541b9d5732bbfbb336, type: 3}
+    skill: {fileID: 7396633332625948144, guid: 82d2feef455dee742b7cb5dd7cff6005, type: 3}
   additionalDmg: 0
   dmgModifier: 1

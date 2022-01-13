@@ -1,0 +1,361 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Skill
+  commentId: T:Global.Skill
+  id: Skill
+  parent: Global
+  children:
+  - Global.Skill.bulletInfoList
+  - Global.Skill.checkDisabled
+  - Global.Skill.layerChange
+  - Global.Skill.maxDuration
+  - Global.Skill.setDmgModifiers(System.Int32,System.Single)
+  - Global.Skill.Timestamp
+  langs:
+  - csharp
+  - vb
+  name: Skill
+  nameWithType: Skill
+  fullName: Skill
+  type: Class
+  source:
+    id: Skill
+    path: ''
+    startLine: 3659
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nskill class beschreibt wie sich jedes bulletobject auf der classe verh�lt\n"
+  example: []
+  syntax:
+    content: 'public class Skill : MonoBehaviour'
+    content.vb: >-
+      Public Class Skill
+
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Skill.bulletInfoList
+  commentId: F:Global.Skill.bulletInfoList
+  id: bulletInfoList
+  parent: Global.Skill
+  langs:
+  - csharp
+  - vb
+  name: bulletInfoList
+  nameWithType: Skill.bulletInfoList
+  fullName: Skill.bulletInfoList
+  type: Field
+  source:
+    id: bulletInfoList
+    path: ''
+    startLine: 3661
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<BulletInfo> bulletInfoList
+    return:
+      type: System.Collections.Generic.List{BulletInfo}
+    content.vb: Public bulletInfoList As List(Of BulletInfo)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Skill.maxDuration
+  commentId: F:Global.Skill.maxDuration
+  id: maxDuration
+  parent: Global.Skill
+  langs:
+  - csharp
+  - vb
+  name: maxDuration
+  nameWithType: Skill.maxDuration
+  fullName: Skill.maxDuration
+  type: Field
+  source:
+    id: maxDuration
+    path: ''
+    startLine: 3662
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int maxDuration
+    return:
+      type: System.Int32
+    content.vb: Public maxDuration As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Skill.Timestamp
+  commentId: P:Global.Skill.Timestamp
+  id: Timestamp
+  parent: Global.Skill
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: Skill.Timestamp
+  fullName: Skill.Timestamp
+  type: Property
+  source:
+    id: Timestamp
+    path: ''
+    startLine: 3669
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Timestamp As Single
+  overload: Global.Skill.Timestamp*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Skill.layerChange
+  commentId: M:Global.Skill.layerChange
+  id: layerChange
+  parent: Global.Skill
+  langs:
+  - csharp
+  - vb
+  name: layerChange()
+  nameWithType: Skill.layerChange()
+  fullName: Skill.layerChange()
+  type: Method
+  source:
+    id: layerChange
+    path: ''
+    startLine: 3742
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\n�ndern des Layers der Bullets falls sich der Layer des skills �ndern sollte\n"
+  example: []
+  syntax:
+    content: public void layerChange()
+    content.vb: Public Sub layerChange
+  overload: Global.Skill.layerChange*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Skill.setDmgModifiers(System.Int32,System.Single)
+  commentId: M:Global.Skill.setDmgModifiers(System.Int32,System.Single)
+  id: setDmgModifiers(System.Int32,System.Single)
+  parent: Global.Skill
+  langs:
+  - csharp
+  - vb
+  name: setDmgModifiers(Int32, Single)
+  nameWithType: Skill.setDmgModifiers(Int32, Single)
+  fullName: Skill.setDmgModifiers(System.Int32, System.Single)
+  type: Method
+  source:
+    id: setDmgModifiers
+    path: ''
+    startLine: 3804
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsetzt modifiers auf die bullet.\n"
+  example: []
+  syntax:
+    content: public void setDmgModifiers(int additionalDmg, float dmgModifier)
+    parameters:
+    - id: additionalDmg
+      type: System.Int32
+      description: erh�hten den schaden der bullet direkt �ber diesen Wert
+    - id: dmgModifier
+      type: System.Single
+      description: nach hinzuf�gen des additionalDmg modifiers wir der dmg mit diesem Wert multipliziert
+    content.vb: Public Sub setDmgModifiers(additionalDmg As Integer, dmgModifier As Single)
+  overload: Global.Skill.setDmgModifiers*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Skill.checkDisabled
+  commentId: M:Global.Skill.checkDisabled
+  id: checkDisabled
+  parent: Global.Skill
+  langs:
+  - csharp
+  - vb
+  name: checkDisabled()
+  nameWithType: Skill.checkDisabled()
+  fullName: Skill.checkDisabled()
+  type: Method
+  source:
+    id: checkDisabled
+    path: ''
+    startLine: 3816
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncheckt ob alle child objecte inactive sind, um den skill zu deactivieren\nwird aufgerufen, wenn eine bullet sich deactiviert\n"
+  example: []
+  syntax:
+    content: public void checkDisabled()
+    content.vb: Public Sub checkDisabled
+  overload: Global.Skill.checkDisabled*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{BulletInfo}
+  commentId: T:System.Collections.Generic.List{BulletInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<BulletInfo>
+  nameWithType: List<BulletInfo>
+  fullName: System.Collections.Generic.List<BulletInfo>
+  nameWithType.vb: List(Of BulletInfo)
+  fullName.vb: System.Collections.Generic.List(Of BulletInfo)
+  name.vb: List(Of BulletInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.BulletInfo
+    name: BulletInfo
+    nameWithType: BulletInfo
+    fullName: BulletInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.BulletInfo
+    name: BulletInfo
+    nameWithType: BulletInfo
+    fullName: BulletInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.Skill.Timestamp*
+  commentId: Overload:Global.Skill.Timestamp
+  name: Timestamp
+  nameWithType: Skill.Timestamp
+  fullName: Skill.Timestamp
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.Skill.layerChange*
+  commentId: Overload:Global.Skill.layerChange
+  name: layerChange
+  nameWithType: Skill.layerChange
+  fullName: Skill.layerChange
+- uid: Global.Skill.setDmgModifiers*
+  commentId: Overload:Global.Skill.setDmgModifiers
+  name: setDmgModifiers
+  nameWithType: Skill.setDmgModifiers
+  fullName: Skill.setDmgModifiers
+- uid: Global.Skill.checkDisabled*
+  commentId: Overload:Global.Skill.checkDisabled
+  name: checkDisabled
+  nameWithType: Skill.checkDisabled
+  fullName: Skill.checkDisabled

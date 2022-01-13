@@ -22,8 +22,8 @@ TagManager:
   - player_border
   - enemy_border
   - player_immunity
-  - 
-  - 
+  - bullet_border
+  - camera
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Backround
+    uniqueID: 1420286823
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
