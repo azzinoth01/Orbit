@@ -13,8 +13,11 @@ public class Inventory_fill : MonoBehaviour
     public GameObject LockedBox;
     public Image dragAndDrop;
 
+    public ShipEditorStatusDisplay display;
+
     private ItemCatalog catalog;
     private LoadAssets assetLoader;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -22,56 +25,130 @@ public class Inventory_fill : MonoBehaviour
 
         assetLoader = new LoadAssets();
 
+        PlayerSave save = PlayerSave.loadSettings();
+
+        if (save == null) {
+            save = new PlayerSave();
+        }
+
+        //save.Money = 9999999;
+        //save.savingSetting();
+
+        //save.BoughtItems = new List<string>();
+        //save.savingSetting();
+
         foreach (Item i in catalog.ItemList) {
-            if (i is WeaponInfo) {
-                WeaponInfo wap = (WeaponInfo)i;
+            GameObject g;
+            bool locked;
+            if (save.BoughtItems.Contains(i.ID)) {
+                locked = false;
+                if (i is WeaponInfo) {
+                    WeaponInfo wap = (WeaponInfo)i;
 
-                if (wap.mainWeapon == true) {
-                    GameObject g = Instantiate(mainWeaponBox, transform);
-                    Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
-                    img.sprite = assetLoader.loadSprite(wap.Icon);
+                    if (wap.mainWeapon == true) {
+                        g = Instantiate(mainWeaponBox, transform);
+                        Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
+                        img.sprite = assetLoader.loadSprite(wap.Icon);
+                    }
+                    else {
+                        g = Instantiate(secondaryWeaponBox, transform);
+                        Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
+                        img.sprite = assetLoader.loadSprite(wap.Icon);
 
-                    Button b = g.GetComponent<Button>();
-
-                    b.onClick.AddListener(delegate {
-                        inventoryButton(wap);
-                    });
-
-
+                    }
                 }
                 else {
-                    GameObject g = Instantiate(secondaryWeaponBox, transform);
+                    Parts part = (Parts)i;
+                    g = Instantiate(partsBox, transform);
                     Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
-                    img.sprite = assetLoader.loadSprite(wap.Icon);
+                    img.sprite = assetLoader.loadSprite(part.Icon);
 
-                    Button b = g.GetComponent<Button>();
-                    b.onClick.AddListener(delegate {
-                        inventoryButton(wap);
-                    });
                 }
             }
             else {
-                Parts part = (Parts)i;
-                GameObject g = Instantiate(partsBox, transform);
+                locked = true;
+                g = Instantiate(LockedBox, transform);
+                foreach (Transform t in g.transform.GetChild(0).transform) {
+                    if (t.gameObject.name == "money") {
+                        t.gameObject.GetComponent<Text>().text = i.Value.ToString();
+                    }
+                }
 
-                Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
-                img.sprite = assetLoader.loadSprite(part.Icon);
-
-                Button b = g.GetComponent<Button>();
-
-
-                b.onClick.AddListener(delegate {
-                    inventoryButton(part);
-                });
             }
+            Button b = g.GetComponent<Button>();
+            b.onClick.AddListener(delegate {
+                inventoryButton(i, locked, g);
+            });
         }
     }
 
-    private void inventoryButton(Item i) {
-        dragAndDrop.enabled = true;
+    private void replaceLockedItem(GameObject g, Item i) {
+        GameObject newGameObject;
 
-        dragAndDrop.sprite = assetLoader.loadSprite(i.Icon);
-        Globals.currentItem = i;
+        if (i is WeaponInfo) {
+            WeaponInfo wap = (WeaponInfo)i;
+
+            if (wap.mainWeapon == true) {
+                newGameObject = Instantiate(mainWeaponBox, transform);
+                Image img = newGameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
+                img.sprite = assetLoader.loadSprite(wap.Icon);
+
+            }
+            else {
+                newGameObject = Instantiate(secondaryWeaponBox, transform);
+                Image img = newGameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
+                img.sprite = assetLoader.loadSprite(wap.Icon);
+
+            }
+        }
+        else {
+            Parts part = (Parts)i;
+            newGameObject = Instantiate(partsBox, transform);
+            Image img = newGameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
+            img.sprite = assetLoader.loadSprite(part.Icon);
+
+        }
+
+        newGameObject.transform.SetSiblingIndex(g.transform.GetSiblingIndex());
+
+        Button b = newGameObject.GetComponent<Button>();
+        b.onClick.AddListener(delegate {
+            inventoryButton(i, false, newGameObject);
+        });
+
+        Destroy(g);
+
+    }
+
+    private void inventoryButton(Item i, bool locked, GameObject g) {
+
+        if (locked == true) {
+            if (Globals.money >= i.Value) {
+                Globals.money = Globals.money - i.Value;
+                PlayerSave save = PlayerSave.loadSettings();
+
+                if (save == null) {
+                    save = new PlayerSave();
+                }
+
+                save.Money = Globals.money;
+                save.BoughtItems.Add(i.ID);
+                save.savingSetting();
+
+                replaceLockedItem(g, i);
+                display.MoneyChanged();
+                display.changeInfoDispaly(i);
+            }
+        }
+        else {
+            dragAndDrop.enabled = true;
+
+            dragAndDrop.sprite = assetLoader.loadSprite(i.Icon);
+            Globals.currentItem = i;
+            display.changeInfoDispaly(i);
+        }
+
+
     }
 
     public void mainWeaponSlotClicked(Image button) {
@@ -91,6 +168,14 @@ public class Inventory_fill : MonoBehaviour
 
                 save.savingSetting();
             }
+        }
+        if (Globals.currentItem == null) {
+            PlayerSave save = PlayerSave.loadSettings();
+            if (save == null) {
+                save = new PlayerSave();
+            }
+
+            display.changeInfoDispaly(save.MainWeapon);
         }
 
     }
@@ -113,6 +198,14 @@ public class Inventory_fill : MonoBehaviour
                 save.savingSetting();
             }
         }
+        if (Globals.currentItem == null) {
+            PlayerSave save = PlayerSave.loadSettings();
+            if (save == null) {
+                save = new PlayerSave();
+            }
+
+            display.changeInfoDispaly(save.SecondaryWeapon);
+        }
     }
     public void secondaryWeaponSlotTwoClicked(Image button) {
         if (Globals.currentItem is WeaponInfo) {
@@ -132,6 +225,14 @@ public class Inventory_fill : MonoBehaviour
                 save.savingSetting();
             }
         }
+        if (Globals.currentItem == null) {
+            PlayerSave save = PlayerSave.loadSettings();
+            if (save == null) {
+                save = new PlayerSave();
+            }
+
+            display.changeInfoDispaly(save.SecondaryWeapon1);
+        }
     }
     public void shieldSlotClicked(Image button) {
         if (Globals.currentItem is Parts) {
@@ -150,6 +251,14 @@ public class Inventory_fill : MonoBehaviour
 
             save.savingSetting();
 
+        }
+        if (Globals.currentItem == null) {
+            PlayerSave save = PlayerSave.loadSettings();
+            if (save == null) {
+                save = new PlayerSave();
+            }
+
+            display.changeInfoDispaly(save.ShieldPart);
         }
     }
 
