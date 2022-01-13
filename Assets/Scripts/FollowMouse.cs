@@ -15,7 +15,7 @@ public class FollowMouse : MonoBehaviour
 
         Vector3 pos = Globals.virtualMouse.canvas.worldCamera.ScreenToWorldPoint(Globals.virtualMouse.VirtualMouseProperty.position.ReadValue());
 
-        Debug.Log(pos);
+        //Debug.Log(pos);
         transform.position = pos;
         transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0);
     }
