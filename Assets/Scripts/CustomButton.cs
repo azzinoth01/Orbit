@@ -9,7 +9,8 @@ public class CustomButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buttonimage.alphaHitTestMinimumThreshold = 0.2f;
+        buttonimage.alphaHitTestMinimumThreshold = 0.9f;
+        
     }
 
     
