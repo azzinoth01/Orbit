@@ -46,10 +46,16 @@ public class ItemCatalog
     public static ItemCatalog loadSettings() {
 
         ItemCatalog s = new ItemCatalog();
+        //Debug.Log("still loading");
+        LoadAssets load = new LoadAssets();
+        TextAsset text = load.loadText("Assets/Catalog/itemCatalog.json");
+        //Debug.Log("still loading");
 
+        if (text != null) {
+            //string json = File.ReadAllText("Assets/Catalog/itemCatalog.json");
 
-        if (File.Exists("Assets/Catalog/itemCatalog.json")) {
-            string json = File.ReadAllText("Assets/Catalog/itemCatalog.json");
+            string json = text.text;
+
             //Debug.Log(json);
             if (json == null || json == "") {
                 return null;

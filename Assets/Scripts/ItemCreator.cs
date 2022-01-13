@@ -10,6 +10,8 @@ public class ItemCreator : MonoBehaviour
     public List<Button> buttons;
     public GameObject viewObject;
 
+    public Text Info;
+
 
     public string weaponName;
     public int value;
@@ -80,6 +82,7 @@ public class ItemCreator : MonoBehaviour
     }
 
     public void saveWeapon() {
+        AssetDatabase.Refresh();
         ItemCatalog cat = ItemCatalog.loadSettings();
         if (cat == null) {
             cat = new ItemCatalog();
@@ -128,10 +131,16 @@ public class ItemCreator : MonoBehaviour
         }
         //Debug.Log(cat.ItemList);
 
+        Info.text = "saving";
         cat.savingSetting();
+        AssetDatabase.Refresh();
+        Debug.Log("saved");
+
+        Info.text = "saved";
     }
 
     public void deleteWeapon() {
+        AssetDatabase.Refresh();
         ItemCatalog cat = ItemCatalog.loadSettings();
         if (cat == null) {
             cat = new ItemCatalog();
@@ -140,11 +149,17 @@ public class ItemCreator : MonoBehaviour
         Item i = cat.ItemList.Find(x => x.ID == iD);
 
         cat.ItemList.Remove(i);
+        Info.text = "deleting";
         cat.savingSetting();
+        AssetDatabase.Refresh();
+        Info.text = "deleted";
     }
 
     public void loadWeapon() {
+        Info.text = "loading";
+        AssetDatabase.Refresh();
         ItemCatalog cat = ItemCatalog.loadSettings();
+
         if (cat == null) {
             cat = new ItemCatalog();
         }
@@ -165,7 +180,7 @@ public class ItemCreator : MonoBehaviour
             dmgModifier = wap.dmgModifier;
 
         }
-        else {
+        else if (i is Parts) {
             Parts part = (Parts)i;
 
             iD = part.ID;
@@ -176,5 +191,8 @@ public class ItemCreator : MonoBehaviour
             healthBoost = part.HealthBoost;
             shildRefreshBoost = part.ShieldRefreshValueBoost;
         }
+
+        AssetDatabase.Refresh();
+        Info.text = "loaded";
     }
 }

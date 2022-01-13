@@ -33,7 +33,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public float force;
     public float maxSpeed;
 
-    public List<Weapon> weapons;
+    private List<Weapon> weapons;
+    public List<GameObject> WeaponSlots;
 
     public GameObject ship;
 
@@ -91,6 +92,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     private float timestamp;
 
+    private Parts shieldPart;
+
     public Vector2 Impulse {
         get {
             return impulse;
@@ -106,6 +109,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         set {
             timestamp = value;
+        }
+    }
+
+    public Parts ShieldPart {
+        get {
+            return shieldPart;
+        }
+
+        set {
+            shieldPart = value;
         }
     }
 
@@ -283,6 +296,63 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         shooting = false;
         isDoging = false;
         isImmun = false;
+
+        PlayerSave save = PlayerSave.loadSettings();
+        if (save == null) {
+            save = new PlayerSave();
+        }
+        weapons = new List<Weapon>();
+
+        shieldPart = save.ShieldPart;
+
+        LoadAssets loader = new LoadAssets();
+
+        if (save.MainWeapon != null) {
+            WeaponSlots[0].AddComponent<Weapon>();
+            WeaponSlots[0].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.MainWeapon.Sprite);
+            Weapon wep = WeaponSlots[0].GetComponent<Weapon>();
+
+            wep.skill = loader.loadGameObject(save.MainWeapon.skill);
+            wep.reloadTime = save.MainWeapon.reloadTime;
+            wep.shootsToCreate = save.MainWeapon.shootsToCreate;
+            wep.additionalDmg = save.MainWeapon.additionalDmg;
+            wep.dmgModifier = save.MainWeapon.dmgModifier;
+
+            weapons.Add(wep);
+
+        }
+        if (save.SecondaryWeapon != null) {
+            WeaponSlots[1].AddComponent<Weapon>();
+            WeaponSlots[1].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.SecondaryWeapon.Sprite);
+            Weapon wep = WeaponSlots[1].GetComponent<Weapon>();
+
+            wep.skill = loader.loadGameObject(save.SecondaryWeapon.skill);
+            wep.reloadTime = save.SecondaryWeapon.reloadTime;
+            wep.shootsToCreate = save.SecondaryWeapon.shootsToCreate;
+            wep.additionalDmg = save.SecondaryWeapon.additionalDmg;
+            wep.dmgModifier = save.SecondaryWeapon.dmgModifier;
+
+            weapons.Add(wep);
+        }
+        if (save.SecondaryWeapon1 != null) {
+            WeaponSlots[2].AddComponent<Weapon>();
+            WeaponSlots[2].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.SecondaryWeapon1.Sprite);
+            Weapon wep = WeaponSlots[2].GetComponent<Weapon>();
+
+            wep.skill = loader.loadGameObject(save.SecondaryWeapon1.skill);
+            wep.reloadTime = save.SecondaryWeapon1.reloadTime;
+            wep.shootsToCreate = save.SecondaryWeapon1.shootsToCreate;
+            wep.additionalDmg = save.SecondaryWeapon1.additionalDmg;
+            wep.dmgModifier = save.SecondaryWeapon1.dmgModifier;
+
+            weapons.Add(wep);
+        }
+
+
+        if (shieldPart != null) {
+            maxBaseHealth = maxBaseHealth + shieldPart.HealthBoost;
+            schieldRefreshBaseValue = schieldRefreshBaseValue + shieldPart.ShieldRefreshValueBoost;
+        }
 
         currentHealth = maxBaseHealth;
         //currentschield = maxschield;

@@ -22,4 +22,6 @@ public static class Globals
     public static List<Inventar_Object> inventory;
     public static Sprite moneyIcon;
     public static GameObject moneyDrop;
+    public static ItemCatalog catalog;
+    public static Item currentItem;
 }
