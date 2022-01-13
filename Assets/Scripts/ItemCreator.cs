@@ -144,7 +144,9 @@ public class ItemCreator : MonoBehaviour
     }
 
     public void loadWeapon() {
+
         ItemCatalog cat = ItemCatalog.loadSettings();
+
         if (cat == null) {
             cat = new ItemCatalog();
         }

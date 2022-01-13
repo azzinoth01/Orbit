@@ -29,6 +29,10 @@ MonoBehaviour:
     m_Address: Assets/Prefab/Skills
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 80256620a8ffbde40adf7455c2123db0
+    m_Address: Assets/Catalog
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6436f9d8691e47840968eb523d4bb068, type: 2}
   m_SchemaSet:

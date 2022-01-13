@@ -3385,10 +3385,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1428071612, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: chargeUI
       value: 
@@ -3480,14 +3476,6 @@ PrefabInstance:
     - target: {fileID: 813140885334128467, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 813140886303943406, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 813140886303943406, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
-      propertyPath: m_Color.g
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2130335326530031776, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: skill

@@ -10,6 +10,11 @@ using UnityEngine;
 public class PlayerSave
 {
     [SerializeField] private int money;
+    [SerializeField] private WeaponInfo mainWeapon;
+    [SerializeField] private WeaponInfo secondaryWeapon;
+    [SerializeField] private WeaponInfo secondaryWeapon1;
+    [SerializeField] private Parts shieldPart;
+
 
     public int Money {
         get {
@@ -21,8 +26,52 @@ public class PlayerSave
         }
     }
 
+    public WeaponInfo MainWeapon {
+        get {
+            return mainWeapon;
+        }
+
+        set {
+            mainWeapon = value;
+        }
+    }
+
+    public WeaponInfo SecondaryWeapon {
+        get {
+            return secondaryWeapon;
+        }
+
+        set {
+            secondaryWeapon = value;
+        }
+    }
+
+    public WeaponInfo SecondaryWeapon1 {
+        get {
+            return secondaryWeapon1;
+        }
+
+        set {
+            secondaryWeapon1 = value;
+        }
+    }
+
+    public Parts ShieldPart {
+        get {
+            return shieldPart;
+        }
+
+        set {
+            shieldPart = value;
+        }
+    }
+
     public PlayerSave() {
         money = 0;
+        mainWeapon = null;
+        secondaryWeapon = null;
+        secondaryWeapon1 = null;
+        shieldPart = null;
     }
 
 

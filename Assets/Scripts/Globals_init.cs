@@ -33,7 +33,9 @@ public class Globals_init : MonoBehaviour
             save = new PlayerSave();
         }
         Globals.money = save.Money;
-        //  Debug.Log(Globals.money);
+
+        Globals.catalog = ItemCatalog.loadSettings();
+
     }
 
 }

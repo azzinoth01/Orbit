@@ -8,6 +8,7 @@ using UnityEngine;
 /// </summary>
 public class Weapon : MonoBehaviour
 {
+
     public GameObject skill;
     public float reloadTime;
     private bool canShoot;
@@ -37,6 +38,7 @@ public class Weapon : MonoBehaviour
             g.SetActive(false);
             i = i + 1;
         }
+
     }
 
     // Update is called once per frame
