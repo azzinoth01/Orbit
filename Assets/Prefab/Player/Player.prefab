@@ -145,9 +145,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBaseHealth: 5
   healthbar: {fileID: 0}
-  healthbarAbove60: {r: 0.27450982, g: 0.5647059, b: 0.05882353, a: 1}
-  healthbarAbove30: {r: 0.9254902, g: 0.78039217, b: 0.20392157, a: 1}
-  healthbarBelow30: {r: 0.3647059, g: 0.08235294, b: 0, a: 1}
+  healthbarAbove60: {r: 0.37605622, g: 0.7924528, b: 0.0710217, a: 1}
+  healthbarAbove30: {r: 0.9433962, g: 0.85882354, b: 0.12156863, a: 1}
+  healthbarBelow30: {r: 0.7372549, g: 0.03529412, b: 0.043387346, a: 1}
   maxschield: 100
   currentschield: 0
   schieldbar: {fileID: 0}
