@@ -14,7 +14,7 @@ public class PlayerSave
     [SerializeField] private WeaponInfo secondaryWeapon;
     [SerializeField] private WeaponInfo secondaryWeapon1;
     [SerializeField] private Parts shieldPart;
-
+    [SerializeField] private List<string> boughtItems;
 
     public int Money {
         get {
@@ -66,12 +66,23 @@ public class PlayerSave
         }
     }
 
+    public List<string> BoughtItems {
+        get {
+            return boughtItems;
+        }
+
+        set {
+            boughtItems = value;
+        }
+    }
+
     public PlayerSave() {
         money = 0;
         mainWeapon = null;
         secondaryWeapon = null;
         secondaryWeapon1 = null;
         shieldPart = null;
+        boughtItems = new List<string>();
     }
 
 

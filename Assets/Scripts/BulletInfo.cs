@@ -143,6 +143,14 @@ public class BulletInfo
         }
     }
 
+    public int BulletBaseDmg {
+        get {
+            return bulletBaseDmg;
+        }
+
+
+    }
+
     /// <summary>
     /// sets den bullet dmg auf der Bullet
     /// </summary>
