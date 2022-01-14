@@ -61,8 +61,13 @@ public class Menu_handler : MonoBehaviour
     /// <summary>
     /// ship Editor button gelickt
     /// </summary>
-    public void onClickShipEditor() {
-        Debug.Log("Durch klicken dieses Buttons haben Sie sich verpflichtet Markus Dullnig mit Süßigkeiten zu füttern");
+    public void onClickShipEditor(int sceneIndex) {
+        //Debug.Log("Durch klicken dieses Buttons haben Sie sich verpflichtet Markus Dullnig mit Süßigkeiten zu füttern");
+
+        SceneManager.LoadScene(sceneIndex);
+    }
+    public void onClickExitShipEditor(int sceneIndex) {
+        SceneManager.LoadScene(sceneIndex);
     }
 
     /// <summary>
