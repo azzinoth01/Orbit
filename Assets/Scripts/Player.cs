@@ -11,7 +11,7 @@ using UnityEngine.UI;
 /// </summary>
 public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 {
-    public float health;
+    public float maxBaseHealth;
     private float currentHealth;
     public Image healthbar;
 
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public float schieldbarStepValue;
 
     public float schieldRefreshRate;
-    public float schieldRefreshValue;
+    public float schieldRefreshBaseValue;
 
 
     public Rigidbody2D body;
@@ -33,7 +33,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public float force;
     public float maxSpeed;
 
-    public List<Weapon> weapons;
+    private List<Weapon> weapons;
+    public List<GameObject> WeaponSlots;
 
     public GameObject ship;
 
@@ -89,12 +90,36 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public AudioSource hitAudio;
 
 
+    private float timestamp;
+
+    private Parts shieldPart;
+
     public Vector2 Impulse {
         get {
             return impulse;
         }
 
 
+    }
+
+    public float Timestamp {
+        get {
+            return timestamp;
+        }
+
+        set {
+            timestamp = value;
+        }
+    }
+
+    public Parts ShieldPart {
+        get {
+            return shieldPart;
+        }
+
+        set {
+            shieldPart = value;
+        }
     }
 
 
@@ -248,7 +273,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         //  anim = GetComponent<Animator>();
 
-
+        timestamp = Time.time;
 
     }
 
@@ -272,7 +297,64 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         isDoging = false;
         isImmun = false;
 
-        currentHealth = health;
+        PlayerSave save = PlayerSave.loadSettings();
+        if (save == null) {
+            save = new PlayerSave();
+        }
+        weapons = new List<Weapon>();
+
+        shieldPart = save.ShieldPart;
+
+        LoadAssets loader = new LoadAssets();
+
+        if (save.MainWeapon != null) {
+            WeaponSlots[0].AddComponent<Weapon>();
+            WeaponSlots[0].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.MainWeapon.Sprite);
+            Weapon wep = WeaponSlots[0].GetComponent<Weapon>();
+
+            wep.skill = loader.loadGameObject(save.MainWeapon.skill);
+            wep.reloadTime = save.MainWeapon.reloadTime;
+            wep.shootsToCreate = save.MainWeapon.shootsToCreate;
+            wep.additionalDmg = save.MainWeapon.additionalDmg;
+            wep.dmgModifier = save.MainWeapon.dmgModifier;
+
+            weapons.Add(wep);
+
+        }
+        if (save.SecondaryWeapon != null) {
+            WeaponSlots[1].AddComponent<Weapon>();
+            WeaponSlots[1].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.SecondaryWeapon.Sprite);
+            Weapon wep = WeaponSlots[1].GetComponent<Weapon>();
+
+            wep.skill = loader.loadGameObject(save.SecondaryWeapon.skill);
+            wep.reloadTime = save.SecondaryWeapon.reloadTime;
+            wep.shootsToCreate = save.SecondaryWeapon.shootsToCreate;
+            wep.additionalDmg = save.SecondaryWeapon.additionalDmg;
+            wep.dmgModifier = save.SecondaryWeapon.dmgModifier;
+
+            weapons.Add(wep);
+        }
+        if (save.SecondaryWeapon1 != null) {
+            WeaponSlots[2].AddComponent<Weapon>();
+            WeaponSlots[2].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.SecondaryWeapon1.Sprite);
+            Weapon wep = WeaponSlots[2].GetComponent<Weapon>();
+
+            wep.skill = loader.loadGameObject(save.SecondaryWeapon1.skill);
+            wep.reloadTime = save.SecondaryWeapon1.reloadTime;
+            wep.shootsToCreate = save.SecondaryWeapon1.shootsToCreate;
+            wep.additionalDmg = save.SecondaryWeapon1.additionalDmg;
+            wep.dmgModifier = save.SecondaryWeapon1.dmgModifier;
+
+            weapons.Add(wep);
+        }
+
+
+        if (shieldPart != null) {
+            maxBaseHealth = maxBaseHealth + shieldPart.HealthBoost;
+            schieldRefreshBaseValue = schieldRefreshBaseValue + shieldPart.ShieldRefreshValueBoost;
+        }
+
+        currentHealth = maxBaseHealth;
         //currentschield = maxschield;
         StartCoroutine(shootingHandler());
         StartCoroutine(moveHandler());
@@ -365,7 +447,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             if (Globals.pause == true) {
                 yield return null;
             }
-            float prozentValue = currentHealth / health;
+            float prozentValue = currentHealth / maxBaseHealth;
             float currentFillProzent = healthbar.fillAmount;
 
             //Debug.Log("% Value " + prozentValue.ToString());
@@ -398,6 +480,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             if (healthbar.fillAmount <= 0) {
                 Destroy(gameObject);
                 Instantiate(deathEffect, transform.position, transform.rotation);
+                Globals.menuHandler.Playtime = Time.time - timestamp;
+
                 Globals.menuHandler.setGameOver();
             }
 
@@ -455,7 +539,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         yield return new WaitForSeconds(wait);
 
-        currentschield = currentschield + schieldRefreshValue;
+        currentschield = currentschield + schieldRefreshBaseValue;
 
         if (currentschield >= maxschield) {
             currentschield = maxschield;

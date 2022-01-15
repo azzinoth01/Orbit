@@ -18,6 +18,7 @@ public class Win_condition : MonoBehaviour
     public float rotateSpeed;
 
     private bool alreadyActive;
+    private bool alreadyTriggerd;
 
     /// <summary>
     /// setzt die wincondition in den Globalen variablen
@@ -25,6 +26,7 @@ public class Win_condition : MonoBehaviour
     void Start() {
         Globals.currentWinCondition = this;
         alreadyActive = false;
+        alreadyTriggerd = false;
     }
 
     /// <summary>
@@ -75,7 +77,12 @@ public class Win_condition : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (Globals.player == collision.gameObject) {
-            Globals.menuHandler.setLevelFinish();
+            if (alreadyTriggerd == false) {
+                Globals.menuHandler.Playtime = Time.time - Globals.player.GetComponent<Player>().Timestamp;
+                Globals.menuHandler.setLevelFinish();
+                alreadyTriggerd = true;
+            }
+
             // Destroy(gameObject);
             // Globals.player.GetComponent<Player>().disableControlls = true;
         }

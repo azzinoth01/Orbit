@@ -49,4 +49,4 @@ MonoBehaviour:
     bullet: {fileID: 7109026622726797419, guid: 72b1d03baf9d2604bbe70f3ee99cea25, type: 3}
     startEffect: {fileID: 3807424677396864137, guid: 8e1149f79cb29814aa738f0540f5fa62, type: 3}
     sfxSound: {fileID: 2127123000781025630, guid: 21d17dd199158b248b28f8e40d518788, type: 3}
-  maxDuration: 6
+  maxDuration: 3
