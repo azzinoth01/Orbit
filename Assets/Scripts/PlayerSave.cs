@@ -83,6 +83,12 @@ public class PlayerSave
         secondaryWeapon1 = null;
         shieldPart = null;
         boughtItems = new List<string>();
+        boughtItems.Add("1004");
+
+
+
+        ItemCatalog cat = ItemCatalog.loadSettings();
+        mainWeapon = (WeaponInfo)cat.ItemList.Find(x => x.ID == "1004");
     }
 
 
