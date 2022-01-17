@@ -67,6 +67,8 @@ public class Enemy : MonoBehaviour
     public int minMoneyValue;
     public int maxMonyeValue;
 
+    public bool doNotCountAsKill;
+
 
     public Enemy_Spawner SpawnerCallback {
         get {
@@ -548,7 +550,7 @@ public class Enemy : MonoBehaviour
 
         }
 
-        if (Globals.currentWinCondition != null) {
+        if (Globals.currentWinCondition != null && doNotCountAsKill != true) {
             Globals.currentWinCondition.enemyKilled();
         }
 

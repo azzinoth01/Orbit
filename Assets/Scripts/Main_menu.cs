@@ -19,7 +19,21 @@ public class Main_menu : MonoBehaviour
     /// </summary>
     public void playGame() {
 
-        SceneManager.LoadScene(1);
+        PlayerSave s = PlayerSave.loadSettings();
+
+        if (s == null) {
+            s = new PlayerSave();
+        }
+
+        if (s.TutorialPlayed == true) {
+            SceneManager.LoadScene(1);
+        }
+        else {
+            // lade tutorial Scene
+            SceneManager.LoadScene(3);
+        }
+
+
     }
     /// <summary>
     /// quit the game
