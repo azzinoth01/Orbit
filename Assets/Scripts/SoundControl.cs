@@ -18,6 +18,7 @@ public class SoundControl : MonoBehaviour
     private bool isMute;
     private float backgroundVolume;
     private float sfxVolume;
+    private float masterVolume;
 
     private SaveSettings saveSetting;
 
@@ -28,6 +29,7 @@ public class SoundControl : MonoBehaviour
     public Sprite muteSp;
     public Sprite unMuteSp;
 
+    public Slider masterSlider;
 
     /// <summary>
     /// ladet die start Soundsettings, wenn welche vorhanden sind, ansonsten werden die Standardsettings verwendet
@@ -37,7 +39,7 @@ public class SoundControl : MonoBehaviour
         saveSetting = SaveSettings.loadSettings();
         if (saveSetting == null) {
 
-            saveSetting = new SaveSettings(false, 1, 1);
+            saveSetting = new SaveSettings(false, 1, 1, 1);
             saveSetting.savingSetting();
 
         }
@@ -45,6 +47,7 @@ public class SoundControl : MonoBehaviour
         isMute = saveSetting.IsMute;
         backgroundVolume = saveSetting.BackgroundVolume;
         sfxVolume = saveSetting.SfxVolume;
+        masterVolume = saveSetting.MasterVolume;
 
 
         setStartSettings();
@@ -89,6 +92,22 @@ public class SoundControl : MonoBehaviour
         sfx.audioMixer.SetFloat("sfxVolume", volume);
 
         sfxSlider.value = sfxVolume;
+
+
+
+        if (masterVolume == 0 || isMute == true) {
+            volume = -80;
+        }
+        else {
+            volume = Mathf.Log10(masterVolume) * 20;
+        }
+        masterGroup.audioMixer.SetFloat("masterVolume", volume);
+
+        if (masterSlider != null) {
+            masterSlider.value = masterVolume;
+        }
+
+
 
     }
 
@@ -150,6 +169,23 @@ public class SoundControl : MonoBehaviour
         saveSettingChanges();
     }
 
+    public void masterSoundChange() {
+        masterVolume = masterSlider.value;
+
+        //Debug.Log("changed");
+        float volume;
+
+        if (masterVolume == 0) {
+            volume = -80;
+        }
+        else {
+            volume = Mathf.Log10(backgroundVolume) * 20;
+        }
+        masterGroup.audioMixer.SetFloat("masterVolume", volume);
+
+        saveSettingChanges();
+    }
+
     /// <summary>
     /// speichert die Soundsettings
     /// </summary>
@@ -157,7 +193,10 @@ public class SoundControl : MonoBehaviour
         saveSetting.IsMute = isMute;
         saveSetting.BackgroundVolume = backgroundVolume;
         saveSetting.SfxVolume = sfxVolume;
+        saveSetting.MasterVolume = masterVolume;
 
         saveSetting.savingSetting();
+
+        setStartSettings();
     }
 }

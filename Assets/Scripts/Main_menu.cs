@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 public class Main_menu : MonoBehaviour
 {
     public GameObject mainMenu;
+    public GameObject optionsMenu;
+    public GameObject soundMenu;
     public GameObject rebidningMenu;
 
     /// <summary>
@@ -27,18 +29,34 @@ public class Main_menu : MonoBehaviour
     }
 
     /// <summary>
-    /// button um das Main menu wieder einzublenden vom Rebinding Menu
+    /// button um das Main menu wieder einzublenden vom Options Menu
     /// </summary>
     public void onClickBackToMainMenu() {
         mainMenu.SetActive(true);
-        rebidningMenu.SetActive(false);
+        optionsMenu.SetActive(false);
     }
 
     /// <summary>
-    /// buttom um das Rebidning Menu einzublenden und das Main menu auszublenden
+    /// buttom um das Rebidning Menu einzublenden und das Options menu auszublenden
     /// </summary>
     public void onClickControls() {
-        mainMenu.SetActive(false);
+        optionsMenu.SetActive(false);
         rebidningMenu.SetActive(true);
+    }
+
+    public void onClickOptions() {
+        mainMenu.SetActive(false);
+        optionsMenu.SetActive(true);
+    }
+
+    public void onClickSound() {
+        optionsMenu.SetActive(false);
+        soundMenu.SetActive(true);
+    }
+
+    public void onClickBackToOptions() {
+        rebidningMenu.SetActive(false);
+        soundMenu.SetActive(false);
+        optionsMenu.SetActive(true);
     }
 }
