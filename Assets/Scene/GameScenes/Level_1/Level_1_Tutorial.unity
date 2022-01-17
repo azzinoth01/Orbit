@@ -1397,18 +1397,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 21523833e457f2a45bead49351546e5d, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 48cc0bf8b13e968488b576b6b70b7855, type: 3}
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.56
   m_Text: '"That''s in our way! Blow it up so we can hussle out of here."'
 --- !u!222 &123961420
 CanvasRenderer:
@@ -5780,18 +5780,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 21523833e457f2a45bead49351546e5d, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 48cc0bf8b13e968488b576b6b70b7855, type: 3}
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.56
   m_Text: '"Woah... that looks dangerous. We do not want to touch that! Better dash
     through it by pressing the SHIFT Button. Should give the ship invulnerability
     for a little bit."'
@@ -7775,18 +7775,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 21523833e457f2a45bead49351546e5d, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 48cc0bf8b13e968488b576b6b70b7855, type: 3}
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.56
   m_Text: '"Oh? Oh they what to fight? Cornering us like this? Not very polite! Better
     show them what this crew can do!"'
 --- !u!222 &1160406121
@@ -9123,18 +9123,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 21523833e457f2a45bead49351546e5d, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 48cc0bf8b13e968488b576b6b70b7855, type: 3}
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.56
   m_Text: '"We better get out of here... fast! Press WASD to pilot the ship!"'
 --- !u!222 &1370764578
 CanvasRenderer:
