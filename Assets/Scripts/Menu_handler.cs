@@ -228,6 +228,11 @@ public class Menu_handler : MonoBehaviour
             s = new PlayerSave();
         }
 
+        // 3 ist die Tutorial scene
+        if (SceneManager.GetActiveScene().buildIndex == 3) {
+            s.TutorialPlayed = true;
+        }
+
         s.Money = Globals.money;
         //Debug.Log(s.Money);
         s.savingSetting();

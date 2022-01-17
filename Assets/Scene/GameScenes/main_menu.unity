@@ -5473,7 +5473,6 @@ GameObject:
   - component: {fileID: 4433845980196584454}
   - component: {fileID: 4433845980196584449}
   - component: {fileID: 4433845980196584448}
-  - component: {fileID: 6579744811384163603}
   - component: {fileID: 1915954027447418677}
   m_Layer: 10
   m_Name: UI_overlay
@@ -5638,28 +5637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &6579744811384163603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4433845980196584451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eda5f9098184324d8b0a2c93ce19922, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelSelectUI: {fileID: 0}
-  shipMenuUI: {fileID: 0}
-  levelFinishedUI: {fileID: 0}
-  gameOverUI: {fileID: 0}
-  pauseUI: {fileID: 0}
-  bossHpBar: {fileID: 0}
-  bossUI: {fileID: 0}
-  playtimeText: []
-  enemyKilledCounterText: []
-  score: {fileID: 0}
 --- !u!114 &7228004048152673133
 MonoBehaviour:
   m_ObjectHideFlags: 0
