@@ -94,6 +94,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     private Parts shieldPart;
 
+    public TrailRenderer trail;
+
     public Vector2 Impulse {
         get {
             return impulse;
@@ -285,6 +287,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         else {
 
 
+
+
+
+
+
         }
 
     }
@@ -374,8 +381,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// funktion die einen flickering effekt erzeugt
     /// </summary>
     private void flicker() {
+        Material m = trail.material;
+        float deltaTime = Time.deltaTime;
+        sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + (flickerDirection * immunityFlickerRate * deltaTime));
 
-        sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + (flickerDirection * immunityFlickerRate * Time.deltaTime));
+        m.color = new Color(m.color.r, m.color.g, m.color.b, m.color.a + ((flickerDirection * immunityFlickerRate * deltaTime) * 2));
 
         if (sp.color.a <= maxFlickerRange) {
             flickerDirection = 1;
@@ -384,6 +394,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         else if (sp.color.a >= 1) {
             flickerDirection = -1;
         }
+
+
+
 
     }
 
@@ -710,7 +723,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             flicker();
             yield return null;
         }
+        Material m = trail.material;
         sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 1);
+        m.color = new Color(m.color.r, m.color.g, m.color.b, 1);
 
         flickerCo = null;
     }

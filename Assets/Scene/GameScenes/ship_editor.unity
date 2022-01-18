@@ -3329,10 +3329,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 674341845003731369, guid: a2a1d8e93a946064a84714f9f5815763, type: 3}
-      propertyPath: moneyIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: a81aa5d1585ac964aa485ab99c8ad280, type: 3}
     - target: {fileID: 697669519212928474, guid: a2a1d8e93a946064a84714f9f5815763, type: 3}
       propertyPath: m_Name
       value: Only for testing Globals init
@@ -4222,6 +4218,7 @@ MonoBehaviour:
   sfxSlider: {fileID: 1466383434}
   muteSp: {fileID: 21300000, guid: b91d70a9099e7c646a954c72fb648bc2, type: 3}
   unMuteSp: {fileID: 21300000, guid: 4fae9f6bde88915488bfeda12959470e, type: 3}
+  masterSlider: {fileID: 0}
 --- !u!222 &2160258156699823646
 CanvasRenderer:
   m_ObjectHideFlags: 0

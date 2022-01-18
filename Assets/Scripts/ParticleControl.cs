@@ -10,18 +10,27 @@ public class ParticleControl : MonoBehaviour
     public ParticleSystem particle;
     public bool destroyAfterPlay;
     public AudioSource particleAudio;
+    public Animator anim;
 
     /// <summary>
     /// startet das particle system 
     /// </summary>
     private void OnEnable() {
-        particle.Play();
+        if (particle != null) {
+            particle.Play();
+        }
+
         if (particleAudio != null) {
             particleAudio.Play();
         }
+        if (anim != null) {
+            anim.enabled = true;
+        }
+
 
         //Debug.Log("start playing");
     }
+
 
 
 
@@ -66,6 +75,14 @@ public class ParticleControl : MonoBehaviour
         }
         if (particle != null) {
             if (particle.isPlaying == false) {
+                check = false;
+            }
+            else {
+                return true;
+            }
+        }
+        if (anim != null) {
+            if (anim.enabled == false) {
                 check = false;
             }
             else {
