@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 1189074775276665003}
   - component: {fileID: 2685700611303461235}
   m_Layer: 10
-  m_Name: Panel
+  m_Name: money_earned_panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1216,7 +1216,7 @@ GameObject:
   - component: {fileID: 9154306946825977256}
   - component: {fileID: 663693233482599440}
   m_Layer: 10
-  m_Name: Panel
+  m_Name: total_money_panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
