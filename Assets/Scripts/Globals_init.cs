@@ -39,6 +39,11 @@ public class Globals_init : MonoBehaviour
 
         Globals.tempEnemyHit = tempEnemyHit;
 
+        if (Globals.dontDestoryOnLoadObjectID == null) {
+            Globals.dontDestoryOnLoadObjectID = new List<string>();
+        }
+
+
     }
 
 }

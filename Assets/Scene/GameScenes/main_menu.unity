@@ -508,7 +508,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1263360175238652384, guid: 96b3b187a3caff54dacc641aa9468373, type: 2}
   m_audioClip: {fileID: 8300000, guid: 99cb4a1463756d0439599986ad83026e, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
@@ -5656,6 +5656,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5278652918613393840, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5278652918613393841, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
       propertyPath: m_Name
       value: Background Music Menu
@@ -5706,6 +5710,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
+--- !u!1 &5278652919478744656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5278652918613393841, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
+  m_PrefabInstance: {fileID: 5278652919478744655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &5278652919478744657 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5278652918613393840, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
+  m_PrefabInstance: {fileID: 5278652919478744655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5278652919478744658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278652919478744656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27596f49321319b4ab392bbf1ed8d5ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audios: {fileID: 5278652919478744657}
+  playOnSceneIndex: 0000000001000000
+  dontDestroyID: 1
 --- !u!1 &5765586971392143943
 GameObject:
   m_ObjectHideFlags: 0
