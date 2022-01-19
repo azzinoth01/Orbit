@@ -96,6 +96,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     public TrailRenderer trail;
 
+    public AudioSource dashAudio;
+
     public Vector2 Impulse {
         get {
             return impulse;
@@ -654,6 +656,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// </summary>
     private void doge() {
         if (dogeCharges > 0 && onGlobalCooldown == false && isDoging == false && impulse != Vector2.zero) {
+
+            if (dashAudio != null) {
+
+                dashAudio.Play();
+            }
+
             isDoging = true;
             isImmun = true;
             gameObject.layer = (int)Layer_enum.player_immunity; // immunity layer

@@ -71,6 +71,14 @@ PrefabInstance:
       propertyPath: particleAudio
       value: 
       objectReference: {fileID: 6084319095073209682}
+    - target: {fileID: 2649342407816147206, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: particleAudio.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649342407816147206, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: particleAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 6084319095073209682}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
 --- !u!1 &2647696785655316569 stripped

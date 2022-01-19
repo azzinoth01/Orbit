@@ -9,7 +9,7 @@ public class ParticleControl : MonoBehaviour
 {
     public ParticleSystem particle;
     public bool destroyAfterPlay;
-    public AudioSource particleAudio;
+    public List<AudioSource> particleAudio;
     public Animator anim;
 
     /// <summary>
@@ -21,7 +21,11 @@ public class ParticleControl : MonoBehaviour
         }
 
         if (particleAudio != null) {
-            particleAudio.Play();
+
+            foreach (AudioSource audio in particleAudio) {
+                audio.Play();
+            }
+
         }
         if (anim != null) {
             anim.enabled = true;
@@ -66,12 +70,15 @@ public class ParticleControl : MonoBehaviour
 
         bool check = true;
         if (particleAudio != null) {
-            if (particleAudio.isPlaying == false) {
-                check = false;
+            foreach (AudioSource audio in particleAudio) {
+                if (audio.isPlaying == false) {
+                    check = false;
+                }
+                else {
+                    return true;
+                }
             }
-            else {
-                return true;
-            }
+
         }
         if (particle != null) {
             if (particle.isPlaying == false) {

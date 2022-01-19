@@ -69,6 +69,8 @@ public class Enemy : MonoBehaviour
 
     public bool doNotCountAsKill;
 
+    public AudioSource enemyHitSound;
+
 
     public Enemy_Spawner SpawnerCallback {
         get {
@@ -153,6 +155,10 @@ public class Enemy : MonoBehaviour
             maxMonyeValue = 100;
         }
 
+
+        if (enemyHitSound == null) {
+            enemyHitSound = Globals.tempEnemyHit;
+        }
 
     }
     /// <summary>
@@ -446,6 +452,11 @@ public class Enemy : MonoBehaviour
                 //  Globals.gameoverHandler.gameOver();
             }
         }
+
+        if (enemyHitSound != null) {
+            enemyHitSound.Play();
+        }
+
 
     }
 
