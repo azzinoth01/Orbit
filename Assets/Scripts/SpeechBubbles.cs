@@ -7,6 +7,8 @@ public class SpeechBubbles : MonoBehaviour
 {
     public GameObject UiObject;
     public GameObject Trigger;
+    public AudioSource audios;
+
     // Start is called before the first frame update
     void Start() {
         UiObject.SetActive(false);
@@ -15,6 +17,7 @@ public class SpeechBubbles : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
             UiObject.SetActive(true);
+            audios.Play();
         }
     }
 

@@ -12,6 +12,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 712244961376336432, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 712244961376336432, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 712244961376336432, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 712244961376336432, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -57,6 +69,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2649342407816147206, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
       propertyPath: particleAudio
+      value: 
+      objectReference: {fileID: 6084319095073209682}
+    - target: {fileID: 2649342407816147206, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: particleAudio.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649342407816147206, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: particleAudio.Array.data[1]
       value: 
       objectReference: {fileID: 6084319095073209682}
     m_RemovedComponents: []

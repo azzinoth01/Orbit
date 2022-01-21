@@ -15,6 +15,9 @@ public class Inventory_fill : MonoBehaviour
 
     public ShipEditorStatusDisplay display;
 
+
+    public AudioSource audios;
+
     private ItemCatalog catalog;
     private LoadAssets assetLoader;
 
@@ -167,6 +170,8 @@ public class Inventory_fill : MonoBehaviour
                 save.MainWeapon = wep;
 
                 save.savingSetting();
+
+                audios.Play();
             }
         }
         if (Globals.currentItem == null) {
@@ -196,6 +201,7 @@ public class Inventory_fill : MonoBehaviour
                 save.SecondaryWeapon = wep;
 
                 save.savingSetting();
+                audios.Play();
             }
         }
         if (Globals.currentItem == null) {
@@ -223,6 +229,7 @@ public class Inventory_fill : MonoBehaviour
                 save.SecondaryWeapon1 = wep;
 
                 save.savingSetting();
+                audios.Play();
             }
         }
         if (Globals.currentItem == null) {
@@ -250,6 +257,7 @@ public class Inventory_fill : MonoBehaviour
             save.ShieldPart = part;
 
             save.savingSetting();
+            audios.Play();
 
         }
         if (Globals.currentItem == null) {

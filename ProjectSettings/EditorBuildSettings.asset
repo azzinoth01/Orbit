@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scene/GameScenes/ship_editor.unity
     guid: f25367f5415b22647945d9d8db73219a
   - enabled: 1
-    path: Assets/Scene/Markus_working_scene.unity
-    guid: db09f6e9c5507ba4ea4430756893368f
+    path: Assets/Scene/GameScenes/Level_1/Level_1_Tutorial.unity
+    guid: 0d6f9cb22e946da40bd4b985bed617d2
   - enabled: 1
     path: Assets/Scene/GameScenes/Level_1/Level_1_Act_1.unity
     guid: 5f70b46ed15f56e43bf642ba3e878e5e

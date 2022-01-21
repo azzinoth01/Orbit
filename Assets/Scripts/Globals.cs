@@ -24,4 +24,7 @@ public static class Globals
     public static GameObject moneyDrop;
     public static ItemCatalog catalog;
     public static Item currentItem;
+    public static AudioSource tempEnemyHit;
+    public static List<string> dontDestoryOnLoadObjectID;
+
 }

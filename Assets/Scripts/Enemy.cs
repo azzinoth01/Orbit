@@ -67,6 +67,10 @@ public class Enemy : MonoBehaviour
     public int minMoneyValue;
     public int maxMonyeValue;
 
+    public bool doNotCountAsKill;
+
+    public AudioSource enemyHitSound;
+
 
     public Enemy_Spawner SpawnerCallback {
         get {
@@ -151,6 +155,10 @@ public class Enemy : MonoBehaviour
             maxMonyeValue = 100;
         }
 
+
+        if (enemyHitSound == null) {
+            enemyHitSound = Globals.tempEnemyHit;
+        }
 
     }
     /// <summary>
@@ -445,6 +453,11 @@ public class Enemy : MonoBehaviour
             }
         }
 
+        if (enemyHitSound != null) {
+            enemyHitSound.Play();
+        }
+
+
     }
 
 
@@ -548,7 +561,7 @@ public class Enemy : MonoBehaviour
 
         }
 
-        if (Globals.currentWinCondition != null) {
+        if (Globals.currentWinCondition != null && doNotCountAsKill != true) {
             Globals.currentWinCondition.enemyKilled();
         }
 

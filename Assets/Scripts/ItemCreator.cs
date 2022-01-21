@@ -4,6 +4,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+#if UNITY_EDITOR
 public class ItemCreator : MonoBehaviour
 {
     private string iD;
@@ -196,3 +198,4 @@ public class ItemCreator : MonoBehaviour
         Info.text = "loaded";
     }
 }
+#endif

@@ -14,6 +14,8 @@ public class RemoveSlotItem : MonoBehaviour
     public bool isSecondaryWeapon1;
     public bool isShipPart;
 
+    public AudioSource audios;
+
     // Start is called before the first frame update
     void Start() {
         isMouseOver = false;
@@ -66,6 +68,10 @@ public class RemoveSlotItem : MonoBehaviour
                 save.savingSetting();
                 image.sprite = null;
                 image.enabled = false;
+            }
+
+            if (audios != null) {
+                audios.Play();
             }
         }
     }
