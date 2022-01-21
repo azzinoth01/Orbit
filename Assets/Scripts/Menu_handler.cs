@@ -193,7 +193,11 @@ public class Menu_handler : MonoBehaviour
         Time.timeScale = 1;
         gameOverUI.SetActive(true);
 
-        PlayerSave s = new PlayerSave();
+        PlayerSave s = PlayerSave.loadSettings();
+
+        if (s == null) {
+            s = new PlayerSave();
+        }
 
         s.Money = Globals.money;
         //Debug.Log(s.Money);
@@ -218,7 +222,11 @@ public class Menu_handler : MonoBehaviour
         levelChanges();
         levelFinishedUI.SetActive(true);
 
-        PlayerSave s = new PlayerSave();
+        PlayerSave s = PlayerSave.loadSettings();
+
+        if (s == null) {
+            s = new PlayerSave();
+        }
 
         s.Money = Globals.money;
         //Debug.Log(s.Money);
