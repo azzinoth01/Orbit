@@ -2743,6 +2743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UiObject: {fileID: 1651511874}
   Trigger: {fileID: 394141387}
+  audios: {fileID: 0}
 --- !u!61 &394141391
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5618,7 +5619,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5732,7 +5733,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -7856,6 +7857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UiObject: {fileID: 153829292}
   Trigger: {fileID: 1111348447}
+  audios: {fileID: 0}
 --- !u!61 &1111348451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9156,6 +9158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UiObject: {fileID: 1050575284}
   Trigger: {fileID: 1326256011}
+  audios: {fileID: 0}
 --- !u!61 &1326256014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11210,6 +11213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UiObject: {fileID: 786952646}
   Trigger: {fileID: 1789806166}
+  audios: {fileID: 0}
 --- !u!61 &1789806170
 BoxCollider2D:
   m_ObjectHideFlags: 0
