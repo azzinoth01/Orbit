@@ -8,11 +8,11 @@ public class LaserTest : MonoBehaviour
     public bool Trigger;
     public AudioSource startAudio;
     public AudioSource loopAudio;
-
+    private bool started;
 
     // Start is called before the first frame update
     void Start() {
-
+        started = false;
     }
 
     // Update is called once per frame
@@ -23,13 +23,17 @@ public class LaserTest : MonoBehaviour
         if (Trigger == true) {
             foreach (Animator a in Laser) {
                 a.SetBool("LaserON", true);
-                if (startAudio != null) {
+                if (startAudio != null && started == false) {
                     startAudio.Play();
+                    started = true;
                 }
             }
+            //Debug.Log("test");
 
             if (startAudio != null && startAudio.isPlaying == false) {
-                if (loopAudio != null) {
+                //  Debug.Log("test2");
+                if (loopAudio != null && loopAudio.isPlaying == false) {
+                    //Debug.Log("testing");
                     loopAudio.Play();
                 }
             }
@@ -40,6 +44,8 @@ public class LaserTest : MonoBehaviour
 
                 if (loopAudio != null) {
                     loopAudio.Stop();
+                    started = false;
+                    // Debug.Log("sopped");
                 }
             }
         }
