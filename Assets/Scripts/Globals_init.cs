@@ -37,6 +37,8 @@ public class Globals_init : MonoBehaviour
 
         Globals.catalog = ItemCatalog.loadSettings();
 
+        //  Debug.LogError("settings loaded");
+
         Globals.tempEnemyHit = tempEnemyHit;
 
         if (Globals.dontDestoryOnLoadObjectID == null) {
