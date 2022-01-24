@@ -33,8 +33,8 @@ MonoBehaviour:
     m_Address: Assets/Catalog
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 805af3f3d61dfea4a8731b7d5fdba124
-    m_Address: Assets/Sprites/Shader/OutlineMat.mat
+  - m_GUID: 15aa44de7641fe3499f2cfece83fd928
+    m_Address: Assets/Catalog/itemCatalog.json
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
