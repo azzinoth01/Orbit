@@ -71,6 +71,8 @@ public class Enemy : MonoBehaviour
 
     public AudioSource enemyHitSound;
 
+    private EnemyHitFlicker flickering;
+
 
     public Enemy_Spawner SpawnerCallback {
         get {
@@ -89,6 +91,8 @@ public class Enemy : MonoBehaviour
     /// und setzt values anhand des wegpunkt designers, wenn am überobject vorhanden ist ( nur für wegpunkt design zwecken)
     /// </summary>
     void Start() {
+
+
 
         maxHealth = health;
         restartTime = 0;
@@ -159,6 +163,8 @@ public class Enemy : MonoBehaviour
         if (enemyHitSound == null) {
             enemyHitSound = Globals.tempEnemyHit;
         }
+
+
 
     }
     /// <summary>
@@ -457,6 +463,15 @@ public class Enemy : MonoBehaviour
             enemyHitSound.Play();
         }
 
+        if (flickering == null) {
+            gameObject.AddComponent<EnemyHitFlicker>();
+            flickering = gameObject.GetComponent<EnemyHitFlicker>();
+            flickering.HitFlickerInQue = flickering.HitFlickerInQue + 1;
+
+        }
+        else if (flickering.HitFlickerInQue <= 2) {
+            flickering.HitFlickerInQue = flickering.HitFlickerInQue + 1;
+        }
 
     }
 
