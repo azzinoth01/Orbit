@@ -1066,7 +1066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 674389398441108948, guid: 35303cee70d5ece469dfe12609e6d932, type: 3}
       propertyPath: rotateSpeed
-      value: 70
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 674389398441108948, guid: 35303cee70d5ece469dfe12609e6d932, type: 3}
       propertyPath: rotateTowardsPlayer
