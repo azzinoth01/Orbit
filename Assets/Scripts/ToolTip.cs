@@ -10,8 +10,7 @@ public class ToolTip : MonoBehaviour
     private TextMeshProUGUI textMeshPro;
     private RectTransform rectTransform;
 
-    private void Awake()
-    {
+    private void Awake() {
         backgroundRectTransform = transform.Find("tooltipBackground").GetComponent<RectTransform>();
         textMeshPro = transform.Find("tooltipText").GetComponent<TextMeshProUGUI>();
         rectTransform = transform.GetComponent<RectTransform>();
@@ -19,8 +18,7 @@ public class ToolTip : MonoBehaviour
         SetText("Hello World");
     }
 
-    private void SetText(string tooltipText)
-    {
+    private void SetText(string tooltipText) {
         textMeshPro.SetText(tooltipText);
         textMeshPro.ForceMeshUpdate();
 
@@ -31,8 +29,7 @@ public class ToolTip : MonoBehaviour
 
     }
 
-    /* private void Update()
-     {
-         rectTransform.anchoredPosition = Input.get_mousePosition();
-    } */
+    //private void Update() {
+    //    rectTransform.anchoredPosition = Globals.virtualMouse.VirtualMouseProperty.position.ReadValue();
+    //}
 }
