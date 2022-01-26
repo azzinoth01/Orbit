@@ -22,6 +22,8 @@ public class Enemy_skills : MonoBehaviour
     private bool isRunning;
     private bool allwoDisable;
 
+
+
     /// <summary>
     /// skill gameObjecte im voraus erstellen
     /// </summary>
