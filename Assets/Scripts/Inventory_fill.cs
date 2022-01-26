@@ -84,6 +84,9 @@ public class Inventory_fill : MonoBehaviour
             });
         }
     }
+    private void OnDestroy() {
+        assetLoader.releaseAllHandle();
+    }
 
     private void replaceLockedItem(GameObject g, Item i) {
         GameObject newGameObject;

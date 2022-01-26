@@ -89,6 +89,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public AudioSource chargeAudio;
     public AudioSource hitAudio;
 
+    public Image crackedScreenOverlay;
+    public Image crackedScreenOverlay2;
+
+    public Sprite crackedLevel1;
+    public Sprite crackedLevel2;
+
 
     private float timestamp;
 
@@ -97,6 +103,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public TrailRenderer trail;
 
     public AudioSource dashAudio;
+
+    private LoadAssets loader;
 
     public Vector2 Impulse {
         get {
@@ -314,7 +322,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         shieldPart = save.ShieldPart;
 
-        LoadAssets loader = new LoadAssets();
+        loader = new LoadAssets();
 
         if (save.MainWeapon != null) {
             WeaponSlots[0].AddComponent<Weapon>();
@@ -485,12 +493,26 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
             if (healthbar.fillAmount >= 0.6f) {
                 healthbar.color = healthbarAbove60;
+                crackedScreenOverlay.sprite = null;
+                crackedScreenOverlay.enabled = false;
+
+                crackedScreenOverlay2.sprite = null;
+                crackedScreenOverlay2.enabled = false;
             }
             else if (healthbar.fillAmount >= 0.3f) {
                 healthbar.color = healthbarAbove30;
+                crackedScreenOverlay.sprite = crackedLevel1;
+                crackedScreenOverlay.enabled = true;
+
+                crackedScreenOverlay2.sprite = null;
+                crackedScreenOverlay2.enabled = false;
+
             }
             else {
                 healthbar.color = healthbarBelow30;
+                crackedScreenOverlay2.sprite = crackedLevel2;
+                crackedScreenOverlay2.enabled = true;
+
             }
             if (healthbar.fillAmount <= 0) {
                 Destroy(gameObject);
@@ -610,7 +632,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         controll.Dispose();
         body.velocity = Vector2.zero;
-
+        loader.releaseAllHandle();
     }
 
     /// <summary>

@@ -12,15 +12,17 @@ public class Skillsequenze
 {
     [SerializeField] private float delay;
     [SerializeField] private GameObject skill;
+    [SerializeField] private bool shootInRotatedDirection;
 
     /// <summary>
     /// construktor classe
     /// </summary>
     /// <param name="delay"> delay zwischen den skills</param>
     /// <param name="skill"> den skill der benutzt wird</param>
-    public Skillsequenze(float delay, GameObject skill) {
+    public Skillsequenze(float delay, GameObject skill, bool shootInRotatedDirection) {
         this.delay = delay;
         this.skill = skill;
+        this.shootInRotatedDirection = shootInRotatedDirection;
     }
 
     public GameObject Skill {
@@ -37,5 +39,15 @@ public class Skillsequenze
         }
 
 
+    }
+
+    public bool ShootInRotatedDirection {
+        get {
+            return shootInRotatedDirection;
+        }
+
+        set {
+            shootInRotatedDirection = value;
+        }
     }
 }

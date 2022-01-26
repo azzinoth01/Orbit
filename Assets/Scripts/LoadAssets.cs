@@ -7,7 +7,11 @@ using UnityEngine.UI;
 
 public class LoadAssets
 {
+    private List<AsyncOperationHandle> handleList;
 
+    public LoadAssets() {
+        handleList = new List<AsyncOperationHandle>();
+    }
     public Sprite loadSprite(string path) {
         if (path == "" || path == null) {
             //   Debug.LogError(" empty path");
@@ -17,6 +21,7 @@ public class LoadAssets
         Sprite sprite;
 
         AsyncOperationHandle<Sprite> handle = Addressables.LoadAssetAsync<Sprite>(path);
+        handleList.Add(handle);
         handle.WaitForCompletion();
 
 
@@ -41,6 +46,7 @@ public class LoadAssets
         //    Debug.LogError(path);
         GameObject game;
         AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(path);
+        handleList.Add(handle);
         handle.WaitForCompletion();
 
         if (handle.Status == AsyncOperationStatus.Succeeded) {
@@ -64,7 +70,7 @@ public class LoadAssets
         TextAsset text;
 
         AsyncOperationHandle<TextAsset> handle = Addressables.LoadAssetAsync<TextAsset>(path);
-
+        handleList.Add(handle);
         handle.WaitForCompletion();
 
         // Debug.LogError("asst loaded");
@@ -82,6 +88,16 @@ public class LoadAssets
         // Addressables.Release(handle);
 
         return text;
+    }
+
+    public void releaseLastHandle() {
+        Addressables.Release(handleList[(handleList.Count - 1)]);
+        handleList.RemoveAt((handleList.Count - 1));
+    }
+    public void releaseAllHandle() {
+        foreach (AsyncOperationHandle handle in handleList) {
+            Addressables.Release(handle);
+        }
     }
 
 }

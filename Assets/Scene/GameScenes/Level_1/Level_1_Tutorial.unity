@@ -306,9 +306,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
+      propertyPath: crackedScreenOverlay
+      value: 
+      objectReference: {fileID: 451354372}
+    - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: immunityTimeAfterHit
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
+      propertyPath: crackedScreenOverlay2
+      value: 
+      objectReference: {fileID: 451354371}
     - target: {fileID: 621101414313199868, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -3506,6 +3514,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd75cc7fcd6ed12418fa9307db5535a1, type: 3}
+--- !u!114 &451354371 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441450266258371178, guid: cd75cc7fcd6ed12418fa9307db5535a1, type: 3}
+  m_PrefabInstance: {fileID: 451354370}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &451354372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2892831718648739842, guid: cd75cc7fcd6ed12418fa9307db5535a1, type: 3}
+  m_PrefabInstance: {fileID: 451354370}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &480704378
 PrefabInstance:
   m_ObjectHideFlags: 0
