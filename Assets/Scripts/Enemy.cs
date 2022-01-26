@@ -74,6 +74,11 @@ public class Enemy : MonoBehaviour
     private EnemyHitFlicker flickering;
 
 
+    public bool rotateTowardsPlayer;
+    public float rotateSpeed;
+
+
+
     public Enemy_Spawner SpawnerCallback {
         get {
             return spawnerCallback;
@@ -164,7 +169,7 @@ public class Enemy : MonoBehaviour
             enemyHitSound = Globals.tempEnemyHit;
         }
 
-
+        StartCoroutine(rotating());
 
     }
     /// <summary>
@@ -188,6 +193,32 @@ public class Enemy : MonoBehaviour
 
             }
         }
+    }
+
+
+    private IEnumerator rotating() {
+
+
+        while (true) {
+            if (Globals.pause == false && rotateTowardsPlayer == true) {
+                Vector3 pos = Globals.player.transform.position;
+
+
+                pos.z = 0;
+                Vector2 dir = pos - transform.position;
+                float angle = Vector2.SignedAngle(Vector2.right, dir);
+
+                angle = angle + 90;
+
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, angle), rotateSpeed * Time.deltaTime);
+
+
+            }
+
+
+            yield return null;
+        }
+
     }
 
     private IEnumerator smoothHealthDrop() {
