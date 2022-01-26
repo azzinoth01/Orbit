@@ -185,6 +185,9 @@ MonoBehaviour:
   deathEffect: {fileID: 712244961376336435, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
   chargeAudio: {fileID: 4203587065510010880}
   hitAudio: {fileID: 3799132743481729194}
+  crackedScreenOverlay: {fileID: 0}
+  crackedLevel1: {fileID: 21300000, guid: 35abbd19d778ffe419965725db647ef9, type: 3}
+  crackedLevel2: {fileID: 21300000, guid: f280d412813521e45a277c53dc337a06, type: 3}
   trail: {fileID: 4574510739590021644}
   dashAudio: {fileID: 7024288067964473702}
 --- !u!81 &4524067518927202921

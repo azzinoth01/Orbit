@@ -73,6 +73,9 @@ public class ShipEditorStatusDisplay : MonoBehaviour
             }
         }
     }
+    private void OnDestroy() {
+        loader.releaseAllHandle();
+    }
 
     public void MoneyChanged() {
         ownedMoney.text = Globals.money.ToString();

@@ -70,7 +70,7 @@ public class ItemCatalog
             // Debug.LogError("liste for dem deserialiezen");
 
             s = JsonUtility.FromJson<ItemCatalog>(json);
-
+            load.releaseAllHandle();
             // Debug.LogError("liste deseriallised");
             return s;
         }
