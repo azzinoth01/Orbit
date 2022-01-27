@@ -16,6 +16,28 @@ public class RemoveSlotItem : MonoBehaviour
 
     public AudioSource audios;
 
+    public Image Image {
+        get {
+            return image;
+        }
+
+        set {
+            image = value;
+        }
+    }
+
+    public bool IsMouseOver {
+        get {
+            return isMouseOver;
+        }
+
+        set {
+            isMouseOver = value;
+        }
+    }
+
+
+
     // Start is called before the first frame update
     void Start() {
         isMouseOver = false;
@@ -24,7 +46,7 @@ public class RemoveSlotItem : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        if (Mouse.current.rightButton.wasPressedThisFrame && isMouseOver == true && Globals.currentItem == null) {
+        if (Globals.virtualMouse.VirtualMouseProperty.rightButton.wasPressedThisFrame && isMouseOver == true && Globals.currentItem == null) {
             if (isMainWeapon == true) {
                 PlayerSave save = PlayerSave.loadSettings();
                 if (save == null) {
