@@ -162,6 +162,15 @@ MonoBehaviour:
   collisionDmg: 3
   destoryAfterCollison: 0
   deathParticelSystem: {fileID: 712244961376336435, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+  showBossHp: 0
+  bossHp: {fileID: 0}
+  bossUI: {fileID: 0}
+  minMoneyValue: 0
+  maxMonyeValue: 0
+  doNotCountAsKill: 0
+  enemyHitSound: {fileID: 0}
+  rotateTowardsPlayer: 1
+  rotateSpeed: 100
 --- !u!114 &8100045483569748463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,10 +187,13 @@ MonoBehaviour:
   skillsequenze:
   - delay: 1.5
     skill: {fileID: 8983357819854496339, guid: c28783ab10096734d914c2845e37f3fc, type: 3}
+    shootInRotatedDirection: 1
   - delay: 0.25
     skill: {fileID: 8983357819854496339, guid: c28783ab10096734d914c2845e37f3fc, type: 3}
+    shootInRotatedDirection: 1
   - delay: 0.25
     skill: {fileID: 8983357819854496339, guid: c28783ab10096734d914c2845e37f3fc, type: 3}
+    shootInRotatedDirection: 0
   additionalDmg: 0
   dmgModifier: 1
 --- !u!1 &4209291792454983557
