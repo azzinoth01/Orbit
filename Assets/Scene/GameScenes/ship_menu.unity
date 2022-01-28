@@ -1352,7 +1352,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1797823216}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6579744812967420737}
+        m_TargetAssemblyTypeName: Menu_handler, Assembly-CSharp
+        m_MethodName: onClickMainMenu
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1797823216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2878,12 +2890,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6579744812967420737}
         m_TargetAssemblyTypeName: Menu_handler, Assembly-CSharp
-        m_MethodName: onClickMainMenu
+        m_MethodName: onClickOptions
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7091,7 +7103,7 @@ GameObject:
   - component: {fileID: 2440617170548186903}
   - component: {fileID: 459537392814041611}
   m_Layer: 10
-  m_Name: Main_menu_button
+  m_Name: Options_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
