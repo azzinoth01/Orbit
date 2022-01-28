@@ -98,7 +98,7 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Mouse and Keyboard"",
+                    ""groups"": ""mouseAndKeyboard"",
                     ""action"": ""move_rigth"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -120,7 +120,7 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Mouse and Keyboard"",
+                    ""groups"": ""mouseAndKeyboard"",
                     ""action"": ""move_left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -142,7 +142,7 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Mouse and Keyboard"",
+                    ""groups"": ""mouseAndKeyboard"",
                     ""action"": ""move_up"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -164,7 +164,7 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Mouse and Keyboard"",
+                    ""groups"": ""mouseAndKeyboard"",
                     ""action"": ""move_down"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -186,7 +186,7 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Mouse and Keyboard"",
+                    ""groups"": ""mouseAndKeyboard"",
                     ""action"": ""pause_menu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -208,7 +208,7 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Mouse and Keyboard"",
+                    ""groups"": ""mouseAndKeyboard"",
                     ""action"": ""shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -230,7 +230,7 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Mouse and Keyboard"",
+                    ""groups"": ""mouseAndKeyboard"",
                     ""action"": ""doge"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1026,7 +1026,7 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/f1"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Mouse and Keyboard;gamepad"",
+                    ""groups"": ""mouseAndKeyboard;gamepad"",
                     ""action"": ""toogleMouseVisibility"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1047,8 +1047,8 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""Mouse and Keyboard"",
-            ""bindingGroup"": ""Mouse and Keyboard"",
+            ""name"": ""mouseAndKeyboard"",
+            ""bindingGroup"": ""mouseAndKeyboard"",
             ""devices"": [
                 {
                     ""devicePath"": ""<Keyboard>"",
@@ -1425,13 +1425,13 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_gamepadSchemeIndex];
         }
     }
-    private int m_MouseandKeyboardSchemeIndex = -1;
-    public InputControlScheme MouseandKeyboardScheme
+    private int m_mouseAndKeyboardSchemeIndex = -1;
+    public InputControlScheme mouseAndKeyboardScheme
     {
         get
         {
-            if (m_MouseandKeyboardSchemeIndex == -1) m_MouseandKeyboardSchemeIndex = asset.FindControlSchemeIndex("Mouse and Keyboard");
-            return asset.controlSchemes[m_MouseandKeyboardSchemeIndex];
+            if (m_mouseAndKeyboardSchemeIndex == -1) m_mouseAndKeyboardSchemeIndex = asset.FindControlSchemeIndex("mouseAndKeyboard");
+            return asset.controlSchemes[m_mouseAndKeyboardSchemeIndex];
         }
     }
     public interface IBullet_hellActions
