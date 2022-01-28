@@ -33,13 +33,13 @@ public class LoopSoundControl : MonoBehaviour
     // Update is called once per frame
     void Update() {
 
-        if (transitionAudio != null) {
+        if (transitionAudio != null && IsPlaying == true) {
             if (transitionPlayed == false && startAudio.isPlaying == false && transitionAudio.isPlaying == false && loopAudio.isPlaying == false) {
                 transitionAudio.Play();
                 transitionPlayed = true;
                 Debug.Log("transition started");
             }
-            else if (loopAudio != null) {
+            else if (loopAudio != null && IsPlaying == true) {
                 if (transitionPlayed == true && startAudio.isPlaying == false && transitionAudio.isPlaying == false && loopAudio.isPlaying == false) {
                     loopAudio.Play();
                     Debug.Log("loop started");
