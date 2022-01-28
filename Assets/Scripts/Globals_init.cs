@@ -10,6 +10,7 @@ public class Globals_init : MonoBehaviour
 {
     public Sprite moneyIcon;
     public GameObject moneyDropPrefrab;
+    public AudioSource tempEnemyHit;
 
     /// <summary>
     /// initzalisiert die Gloablen variablen
@@ -35,6 +36,15 @@ public class Globals_init : MonoBehaviour
         Globals.money = save.Money;
 
         Globals.catalog = ItemCatalog.loadSettings();
+
+        //  Debug.LogError("settings loaded");
+
+        Globals.tempEnemyHit = tempEnemyHit;
+
+        if (Globals.dontDestoryOnLoadObjectID == null) {
+            Globals.dontDestoryOnLoadObjectID = new List<string>();
+        }
+
 
     }
 

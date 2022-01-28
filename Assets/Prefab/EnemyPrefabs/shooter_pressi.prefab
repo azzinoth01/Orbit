@@ -163,6 +163,13 @@ MonoBehaviour:
   collisionDmg: 0
   destoryAfterCollison: 0
   deathParticelSystem: {fileID: 0}
+  showBossHp: 0
+  bossHp: {fileID: 0}
+  bossUI: {fileID: 0}
+  minMoneyValue: 0
+  maxMonyeValue: 0
+  doNotCountAsKill: 0
+  enemyHitSound: {fileID: 0}
 --- !u!114 &4852810512288785067
 MonoBehaviour:
   m_ObjectHideFlags: 0

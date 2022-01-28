@@ -15,6 +15,7 @@ public class PlayerSave
     [SerializeField] private WeaponInfo secondaryWeapon1;
     [SerializeField] private Parts shieldPart;
     [SerializeField] private List<string> boughtItems;
+    [SerializeField] private bool tutorialPlayed;
 
     public int Money {
         get {
@@ -76,6 +77,16 @@ public class PlayerSave
         }
     }
 
+    public bool TutorialPlayed {
+        get {
+            return tutorialPlayed;
+        }
+
+        set {
+            tutorialPlayed = value;
+        }
+    }
+
     public PlayerSave() {
         money = 0;
         mainWeapon = null;
@@ -83,6 +94,13 @@ public class PlayerSave
         secondaryWeapon1 = null;
         shieldPart = null;
         boughtItems = new List<string>();
+        boughtItems.Add("1004");
+
+        tutorialPlayed = false;
+
+
+        ItemCatalog cat = ItemCatalog.loadSettings();
+        mainWeapon = (WeaponInfo)cat.ItemList.Find(x => x.ID == "1004");
     }
 
 

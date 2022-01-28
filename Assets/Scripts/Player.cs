@@ -89,10 +89,22 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public AudioSource chargeAudio;
     public AudioSource hitAudio;
 
+    public Image crackedScreenOverlay;
+    public Image crackedScreenOverlay2;
+
+    public Sprite crackedLevel1;
+    public Sprite crackedLevel2;
+
 
     private float timestamp;
 
     private Parts shieldPart;
+
+    public TrailRenderer trail;
+
+    public AudioSource dashAudio;
+
+    private LoadAssets loader;
 
     public Vector2 Impulse {
         get {
@@ -285,6 +297,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         else {
 
 
+
+
+
+
+
         }
 
     }
@@ -305,7 +322,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         shieldPart = save.ShieldPart;
 
-        LoadAssets loader = new LoadAssets();
+        loader = new LoadAssets();
 
         if (save.MainWeapon != null) {
             WeaponSlots[0].AddComponent<Weapon>();
@@ -374,8 +391,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// funktion die einen flickering effekt erzeugt
     /// </summary>
     private void flicker() {
+        Material m = trail.material;
+        float deltaTime = Time.deltaTime;
+        sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + (flickerDirection * immunityFlickerRate * deltaTime));
 
-        sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + (flickerDirection * immunityFlickerRate * Time.deltaTime));
+        m.color = new Color(m.color.r, m.color.g, m.color.b, m.color.a + ((flickerDirection * immunityFlickerRate * deltaTime) * 2));
 
         if (sp.color.a <= maxFlickerRange) {
             flickerDirection = 1;
@@ -384,6 +404,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         else if (sp.color.a >= 1) {
             flickerDirection = -1;
         }
+
+
+
 
     }
 
@@ -470,12 +493,26 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
             if (healthbar.fillAmount >= 0.6f) {
                 healthbar.color = healthbarAbove60;
+                crackedScreenOverlay.sprite = null;
+                crackedScreenOverlay.enabled = false;
+
+                crackedScreenOverlay2.sprite = null;
+                crackedScreenOverlay2.enabled = false;
             }
             else if (healthbar.fillAmount >= 0.3f) {
                 healthbar.color = healthbarAbove30;
+                crackedScreenOverlay.sprite = crackedLevel1;
+                crackedScreenOverlay.enabled = true;
+
+                crackedScreenOverlay2.sprite = null;
+                crackedScreenOverlay2.enabled = false;
+
             }
             else {
                 healthbar.color = healthbarBelow30;
+                crackedScreenOverlay2.sprite = crackedLevel2;
+                crackedScreenOverlay2.enabled = true;
+
             }
             if (healthbar.fillAmount <= 0) {
                 Destroy(gameObject);
@@ -595,7 +632,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         controll.Dispose();
         body.velocity = Vector2.zero;
-
+        loader.releaseAllHandle();
     }
 
     /// <summary>
@@ -641,6 +678,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// </summary>
     private void doge() {
         if (dogeCharges > 0 && onGlobalCooldown == false && isDoging == false && impulse != Vector2.zero) {
+
+            if (dashAudio != null) {
+
+                dashAudio.Play();
+            }
+
             isDoging = true;
             isImmun = true;
             gameObject.layer = (int)Layer_enum.player_immunity; // immunity layer
@@ -710,7 +753,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             flicker();
             yield return null;
         }
+        Material m = trail.material;
         sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 1);
+        m.color = new Color(m.color.r, m.color.g, m.color.b, 1);
 
         flickerCo = null;
     }

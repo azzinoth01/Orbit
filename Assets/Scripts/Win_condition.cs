@@ -17,6 +17,10 @@ public class Win_condition : MonoBehaviour
     public bool rotate;
     public float rotateSpeed;
 
+    public AudioSource audios;
+
+    public float spawnDelay;
+
     private bool alreadyActive;
     private bool alreadyTriggerd;
 
@@ -42,7 +46,20 @@ public class Win_condition : MonoBehaviour
             StartCoroutine(startRotating());
         }
 
+        if (audios != null) {
+            audios.Play();
+        }
+
     }
+    private IEnumerator delayPortalSpawning() {
+
+
+
+        yield return new WaitForSeconds(spawnDelay);
+        activateLevelFinishPortal();
+    }
+
+
 
     /// <summary>
     /// erhöht der enemy kill counter um 1
@@ -52,7 +69,11 @@ public class Win_condition : MonoBehaviour
 
         if (enemysToKill <= 0 && alreadyActive == false) {
             //Globals.menuHandler.levelFinishedUI.SetActive(true);
-            activateLevelFinishPortal();
+
+            //moved to spawn delay
+            //activateLevelFinishPortal();
+
+            StartCoroutine(delayPortalSpawning());
         }
     }
 

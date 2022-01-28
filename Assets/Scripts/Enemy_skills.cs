@@ -22,12 +22,17 @@ public class Enemy_skills : MonoBehaviour
     private bool isRunning;
     private bool allwoDisable;
 
+    private bool nextSkillRotate;
+
+
+
     /// <summary>
     /// skill gameObjecte im voraus erstellen
     /// </summary>
     private void Awake() {
         nextSkill = skillsequenze[0].Skill;
         nextSkillDelay = skillsequenze[0].Delay;
+        nextSkillRotate = skillsequenze[0].ShootInRotatedDirection;
         skillIndex = 0;
         preCreateSkill();
     }
@@ -36,6 +41,7 @@ public class Enemy_skills : MonoBehaviour
     void Start() {
         nextSkill = skillsequenze[0].Skill;
         nextSkillDelay = skillsequenze[0].Delay;
+        nextSkillRotate = skillsequenze[0].ShootInRotatedDirection;
         skillIndex = 0;
         isRunning = false;
     }
@@ -109,7 +115,13 @@ public class Enemy_skills : MonoBehaviour
         if (preCreation == false) {
             skill = Globals.bulletPool.Find(x => x.gameObject.name == nextSkill.name && x.gameObject.activeSelf == false);
             if (skill == null) {
-                skillGameObject = Instantiate(nextSkill, transform.position, Quaternion.identity);
+                if (nextSkillRotate == true) {
+                    skillGameObject = Instantiate(nextSkill, transform.position, transform.rotation);
+                }
+                else {
+                    skillGameObject = Instantiate(nextSkill, transform.position, Quaternion.identity);
+                }
+
                 skillGameObject.name = nextSkill.name;
                 skillGameObject.layer = (int)Layer_enum.enemy_bullets; // enemy bullet layer ist immer enemy layer -1
 
@@ -120,7 +132,14 @@ public class Enemy_skills : MonoBehaviour
             else {
                 Globals.bulletPool.Remove(skill);
                 skill.transform.position = transform.position;
-                skill.transform.rotation = Quaternion.identity;
+                if (nextSkillRotate == true) {
+                    skill.transform.rotation = transform.rotation;
+                }
+                else {
+                    skill.transform.rotation = Quaternion.identity;
+                }
+
+
                 skill.gameObject.layer = (int)Layer_enum.enemy_bullets;
                 skill.setDmgModifiers(additionalDmg, dmgModifier);
                 skill.gameObject.SetActive(true);
@@ -143,6 +162,7 @@ public class Enemy_skills : MonoBehaviour
 
         nextSkill = skillsequenze[skillIndex].Skill;
         nextSkillDelay = skillsequenze[skillIndex].Delay;
+        nextSkillRotate = skillsequenze[skillIndex].ShootInRotatedDirection;
 
         return skillGameObject;
     }

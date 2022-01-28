@@ -12,6 +12,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 712244961376336432, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 712244961376336432, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 712244961376336432, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 712244961376336432, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -59,6 +71,18 @@ PrefabInstance:
       propertyPath: particleAudio
       value: 
       objectReference: {fileID: 6084319095073209682}
+    - target: {fileID: 2649342407816147206, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: particleAudio.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649342407816147206, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: particleAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 6084319095073209682}
+    - target: {fileID: 6597775672115615812, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
 --- !u!1 &2647696785655316569 stripped
@@ -78,7 +102,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -1263360175238652384, guid: 96b3b187a3caff54dacc641aa9468373, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0a5cd017077c3e3488cc54efe7c45dae, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -28,6 +28,9 @@ public class Menu_handler : MonoBehaviour
 
     private float playtime;
 
+    public List<Text> moneyEarnedText;
+    public List<Text> toalMoneyText;
+
     public float Playtime {
         get {
             return playtime;
@@ -193,9 +196,27 @@ public class Menu_handler : MonoBehaviour
         Time.timeScale = 1;
         gameOverUI.SetActive(true);
 
-        PlayerSave s = new PlayerSave();
+        PlayerSave s = PlayerSave.loadSettings();
+
+        if (s == null) {
+            s = new PlayerSave();
+        }
+
+        int moneyEarned = 0;
+
+        moneyEarned = Globals.money - s.Money;
 
         s.Money = Globals.money;
+
+        foreach (Text t in moneyEarnedText) {
+            t.text = "Scraps earned " + moneyEarned.ToString();
+        }
+        foreach (Text t in toalMoneyText) {
+            t.text = "Total Scraps " + Globals.money;
+        }
+
+
+
         //Debug.Log(s.Money);
         s.savingSetting();
         //Debug.Log(Globals.money);
@@ -218,9 +239,29 @@ public class Menu_handler : MonoBehaviour
         levelChanges();
         levelFinishedUI.SetActive(true);
 
-        PlayerSave s = new PlayerSave();
+        PlayerSave s = PlayerSave.loadSettings();
+
+        if (s == null) {
+            s = new PlayerSave();
+        }
+
+        // 3 ist die Tutorial scene
+        if (SceneManager.GetActiveScene().buildIndex == 3) {
+            s.TutorialPlayed = true;
+        }
+        int moneyEarned = 0;
+
+        moneyEarned = Globals.money - s.Money;
 
         s.Money = Globals.money;
+
+        foreach (Text t in moneyEarnedText) {
+            t.text = "Scraps earned " + moneyEarned.ToString();
+        }
+        foreach (Text t in toalMoneyText) {
+            t.text = "Total Scraps " + Globals.money;
+        }
+
         //Debug.Log(s.Money);
         s.savingSetting();
 
