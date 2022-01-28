@@ -1045,6 +1045,22 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
                     ""isOR"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Mouse and Keyboard"",
+            ""bindingGroup"": ""Mouse and Keyboard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
@@ -1407,6 +1423,15 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
         {
             if (m_gamepadSchemeIndex == -1) m_gamepadSchemeIndex = asset.FindControlSchemeIndex("gamepad");
             return asset.controlSchemes[m_gamepadSchemeIndex];
+        }
+    }
+    private int m_MouseandKeyboardSchemeIndex = -1;
+    public InputControlScheme MouseandKeyboardScheme
+    {
+        get
+        {
+            if (m_MouseandKeyboardSchemeIndex == -1) m_MouseandKeyboardSchemeIndex = asset.FindControlSchemeIndex("Mouse and Keyboard");
+            return asset.controlSchemes[m_MouseandKeyboardSchemeIndex];
         }
     }
     public interface IBullet_hellActions
