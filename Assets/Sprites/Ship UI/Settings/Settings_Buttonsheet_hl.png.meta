@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: bd72c0a2149458f4ea010a6b91761993
+guid: 5d71aa3a6df70c643870fd87b2dd78e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4275530380220701840
-    second: SettingIcons_0
+      213: 2237204638654063658
+    second: Settings_Buttonsheet_hl_0
   - first:
-      213: 906049013880980355
-    second: SettingIcons_1
+      213: -989352389691865465
+    second: Settings_Buttonsheet_hl_1
   - first:
-      213: 7014394807482952247
-    second: SettingIcons_2
+      213: 8222319584067497626
+    second: Settings_Buttonsheet_hl_2
   - first:
-      213: -4609151228870868176
-    second: SettingIcons_3
+      213: -1551201377693179686
+    second: Settings_Buttonsheet_hl_3
   - first:
-      213: -8993887455231023043
-    second: SettingIcons_4
+      213: 2782589997884609089
+    second: Settings_Buttonsheet_hl_4
   - first:
-      213: 7809352135484790225
-    second: SettingIcons_5
+      213: -2031056054134568483
+    second: Settings_Buttonsheet_hl_5
   - first:
-      213: -1254825345085043979
-    second: SettingIcons_6
+      213: -3378452674121306502
+    second: Settings_Buttonsheet_hl_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +64,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 8
@@ -124,148 +124,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SettingIcons_0
+      name: Settings_Buttonsheet_hl_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 16
-        height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 156
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09c12736a3cb55b30800000000000000
-      internalID: 4275530380220701840
+      spriteID: a24e4d004c52c0f10800000000000000
+      internalID: 2237204638654063658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SettingIcons_1
+      name: Settings_Buttonsheet_hl_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
-        width: 16
-        height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 130
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 383087517cee29c00800000000000000
-      internalID: 906049013880980355
+      spriteID: 7868bbe4e3d1542f0800000000000000
+      internalID: -989352389691865465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SettingIcons_2
+      name: Settings_Buttonsheet_hl_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 16
-        height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 104
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73aad5ed9e2285160800000000000000
-      internalID: 7014394807482952247
+      spriteID: a9ea416191c8b1270800000000000000
+      internalID: 8222319584067497626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SettingIcons_3
+      name: Settings_Buttonsheet_hl_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 16
-        height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 78
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 033c81fa0610900c0800000000000000
-      internalID: -4609151228870868176
+      spriteID: ad0608bc096097ae0800000000000000
+      internalID: -1551201377693179686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SettingIcons_4
+      name: Settings_Buttonsheet_hl_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 16
-        height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 52
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d38ec19d20b4f2380800000000000000
-      internalID: -8993887455231023043
+      spriteID: 142977b3cdebd9620800000000000000
+      internalID: 2782589997884609089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SettingIcons_5
+      name: Settings_Buttonsheet_hl_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 26
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d552893464606c60800000000000000
-      internalID: 7809352135484790225
+      spriteID: dd9076e974d30d3e0800000000000000
+      internalID: -2031056054134568483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SettingIcons_6
+      name: Settings_Buttonsheet_hl_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fa8c0b3ff6f59ee0800000000000000
-      internalID: -1254825345085043979
+      spriteID: a7ee78451335d11d0800000000000000
+      internalID: -3378452674121306502
       vertices: []
       indices: 
       edges: []
