@@ -30,7 +30,7 @@ public class Main_menu : MonoBehaviour
         }
         else {
             // lade tutorial Scene
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
 
 
@@ -81,5 +81,5 @@ public class Main_menu : MonoBehaviour
         optionsMenu.SetActive(true);
     }
 
-   
+
 }

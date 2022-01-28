@@ -246,7 +246,7 @@ public class Menu_handler : MonoBehaviour
         }
 
         // 3 ist die Tutorial scene
-        if (SceneManager.GetActiveScene().buildIndex == 3) {
+        if (SceneManager.GetActiveScene().buildIndex == 4) {
             s.TutorialPlayed = true;
         }
         int moneyEarned = 0;
