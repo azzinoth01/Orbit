@@ -81,5 +81,9 @@ public class Main_menu : MonoBehaviour
         optionsMenu.SetActive(true);
     }
 
+    public void onClickOptions(int index) {
+        Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+        SceneManager.LoadScene(index);
+    }
 }

@@ -275,4 +275,16 @@ public class Menu_handler : MonoBehaviour
         }
 
     }
+
+    public void onClickOptions(int index) {
+        Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(index);
+    }
+
+    public void onClickGoBackToPreviousScene() {
+        int index = Globals.lastSceneIndex;
+        Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index);
+    }
 }
