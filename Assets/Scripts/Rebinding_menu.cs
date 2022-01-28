@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -27,6 +29,7 @@ public class Rebinding_menu : MonoBehaviour
     private InputActionRebindingExtensions.RebindingOperation rebind;
     private List<Text> checkKeybindList;
     private List<Button> buttonList;
+    private List<Text> actionNameList;
 
     private string[] compositNames;
 
@@ -62,7 +65,7 @@ public class Rebinding_menu : MonoBehaviour
         ////int index = action.GetBindingIndex(binding);
         //Debug.Log(index);
 
-        Debug.Log(index);
+        //Debug.Log(index);
 
         rebind = action.PerformInteractiveRebinding(index);
 
@@ -205,6 +208,9 @@ public class Rebinding_menu : MonoBehaviour
         compositNames[3] = "RIGHT";
 
         if (controll == null) {
+
+            actionNameList = new List<Text>();
+
             checkKeybindList = new List<Text>();
             buttonList = new List<Button>();
             controll = new Controlls();
@@ -267,14 +273,17 @@ public class Rebinding_menu : MonoBehaviour
 
                             GameObject obj = Instantiate(actionName, g.transform);
 
+
                             if (b.isPartOfComposite == true) {
                                 obj.GetComponent<Text>().text = (a.name + " " + (i + 1).ToString() + " " + compositNames[comp] + ":").Replace("_", " ");
+
                                 //Debug.Log(compositNames[comp]);
                             }
                             else {
                                 obj.GetComponent<Text>().text = (a.name + " " + (i + 1).ToString() + ":").Replace("_", " ");
                             }
-
+                            obj.GetComponent<Text>().text = obj.GetComponent<Text>().text.TrimEnd();
+                            actionNameList.Add(obj.GetComponent<Text>());
 
                             GameObject actionDisplay = Instantiate(actionKeybind, g.transform);
 
@@ -360,6 +369,10 @@ public class Rebinding_menu : MonoBehaviour
 
                         obj.GetComponent<Text>().text = (a.name + ":").Replace("_", " ");
 
+                        obj.GetComponent<Text>().text = obj.GetComponent<Text>().text.TrimEnd();
+
+                        actionNameList.Add(obj.GetComponent<Text>());
+
                         GameObject actionDisplay = Instantiate(actionKeybind, g.transform);
 
                         a.GetBindingDisplayString(0, out string device, out string path);
@@ -397,7 +410,16 @@ public class Rebinding_menu : MonoBehaviour
                 }
             }
 
+
+
+
         }
+
+
+    }
+
+    private void Start() {
+        renameActionName();
     }
 
     /// <summary>
@@ -411,6 +433,67 @@ public class Rebinding_menu : MonoBehaviour
         controll = null;
         checkKeybindList.Clear();
         buttonList.Clear();
+    }
+
+
+    private void renameActionName() {
+
+        //foreach (Text test in actionNameList) {
+        //    Debug.Log(test.text);
+        //}
+
+        LoadAssets loader = new LoadAssets();
+
+
+        TextAsset text = loader.loadText("Assets/Catalog/rebinding_rennaming.txt");
+
+        //Debug.Log(text.text);
+
+        string[] textArray = Regex.Split(text.text, "\r\n");
+
+        string[] checkNames = new string[textArray.Length];
+        string[] newNames = new string[textArray.Length];
+
+        int counter = 0;
+        foreach (string s in textArray) {
+
+            if (s == "") {
+                continue;
+            }
+            //Debug.Log("next index");
+
+            int pos1 = s.IndexOf("\"") + 1;
+            int pos2 = s.IndexOf("\"", pos1);
+            string name = s.Substring(pos1, pos2 - pos1);
+
+            checkNames[counter] = name;
+
+            Debug.Log(name);
+
+            pos1 = s.IndexOf("\"", pos2 + 1) + 1;
+            pos2 = s.IndexOf("\"", pos1 + 1);
+
+            name = s.Substring(pos1, pos2 - pos1);
+
+            newNames[counter] = name;
+            //Debug.Log(name);
+
+            counter = counter + 1;
+
+        }
+        Debug.Log("test");
+
+        foreach (Text t in actionNameList) {
+
+            int index = Array.FindIndex(checkNames, x => x == t.text);
+            //Debug.Log(index);
+
+            t.text = newNames[index];
+
+
+        }
+
+        loader.releaseAllHandle();
     }
 
 }
