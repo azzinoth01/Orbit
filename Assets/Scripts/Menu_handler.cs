@@ -246,7 +246,7 @@ public class Menu_handler : MonoBehaviour
         }
 
         // 3 ist die Tutorial scene
-        if (SceneManager.GetActiveScene().buildIndex == 3) {
+        if (SceneManager.GetActiveScene().buildIndex == 4) {
             s.TutorialPlayed = true;
         }
         int moneyEarned = 0;
@@ -274,5 +274,17 @@ public class Menu_handler : MonoBehaviour
             t.text = "Enemies killed: " + (i / 100).ToString() + " und Bosse killed: 1";
         }
 
+    }
+
+    public void onClickOptions(int index) {
+        Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(index);
+    }
+
+    public void onClickGoBackToPreviousScene() {
+        int index = Globals.lastSceneIndex;
+        Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index);
     }
 }
