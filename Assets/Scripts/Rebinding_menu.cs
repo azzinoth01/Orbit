@@ -96,6 +96,7 @@ public class Rebinding_menu : MonoBehaviour
                     path = inputDevice[path].displayName;
                     //Debug.Log(path);
                     break;
+
                 }
             }
             displayKeybind.text = device + ": " + path;
@@ -106,7 +107,11 @@ public class Rebinding_menu : MonoBehaviour
         });
         rebind.Start();
 
+
+
     }
+
+
 
 
     /// <summary>
@@ -224,6 +229,12 @@ public class Rebinding_menu : MonoBehaviour
 
 
             foreach (InputActionMap m in map) {
+                Debug.Log(m.bindingMask);
+                //foreach (InputBinding binding in m.bindings) {
+                //    Debug.Log("Paths");
+                //    Debug.Log(binding.path);
+                //    Debug.Log(binding.effectivePath);
+                //}
 
                 if (m.name == "UI") {
                     continue;
@@ -231,7 +242,11 @@ public class Rebinding_menu : MonoBehaviour
                 InputAction[] actions = m.actions.ToArray();
                 foreach (InputAction a in actions) {
 
-
+                    //foreach (InputBinding binding in a.bindings) {
+                    //    Debug.Log("Paths");
+                    //    Debug.Log(binding.path);
+                    //    Debug.Log(binding.effectivePath);
+                    //}
 
                     if (a.bindings.Count > 1) {
                         int i = 0;
@@ -468,7 +483,7 @@ public class Rebinding_menu : MonoBehaviour
 
             checkNames[counter] = name;
 
-            Debug.Log(name);
+            //Debug.Log(name);
 
             pos1 = s.IndexOf("\"", pos2 + 1) + 1;
             pos2 = s.IndexOf("\"", pos1 + 1);
@@ -481,13 +496,16 @@ public class Rebinding_menu : MonoBehaviour
             counter = counter + 1;
 
         }
-        Debug.Log("test");
+        //Debug.Log("test");
 
         foreach (Text t in actionNameList) {
 
             int index = Array.FindIndex(checkNames, x => x == t.text);
             //Debug.Log(index);
-
+            //  Debug.Log(index);
+            if (index == -1) {
+                continue;
+            }
             t.text = newNames[index];
 
 
