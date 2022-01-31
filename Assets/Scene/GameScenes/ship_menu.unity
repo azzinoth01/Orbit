@@ -295,6 +295,7 @@ MonoBehaviour:
   - {fileID: 890547588}
   yPosBorder: -101.25
   speed: 0.04
+  maxXOffset: 60
 --- !u!1001 &508181456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4308,6 +4309,7 @@ GameObject:
   - component: {fileID: 4433845978554470994}
   - component: {fileID: 6579744812967420737}
   - component: {fileID: 1915954025788526951}
+  - component: {fileID: 4433845978554470998}
   m_Layer: 10
   m_Name: UI_overlay
   m_TagString: Untagged
@@ -4402,6 +4404,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &4433845978554470998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4433845978554470993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766b04c1dbe70904ab3c73c0151160a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4433845979110100057
 GameObject:
   m_ObjectHideFlags: 0
@@ -6187,6 +6201,9 @@ MonoBehaviour:
   toalMoneyText:
   - {fileID: 796100625492985816}
   - {fileID: 8890972643206941494}
+  selectedButtonImages: []
+  menuList: []
+  menuName: {fileID: 0}
 --- !u!222 &6581464742673563302
 CanvasRenderer:
   m_ObjectHideFlags: 0

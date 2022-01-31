@@ -35,6 +35,8 @@ public class Menu_handler : MonoBehaviour
 
     public List<GameObject> menuList;
 
+    public Text menuName;
+
     public float Playtime {
         get {
             return playtime;
@@ -307,5 +309,9 @@ public class Menu_handler : MonoBehaviour
             gobj.SetActive(false);
         }
         game.SetActive(true);
+    }
+
+    public void onClickSetMenuName(string name) {
+        menuName.text = name;
     }
 }

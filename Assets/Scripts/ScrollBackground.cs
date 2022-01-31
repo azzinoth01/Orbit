@@ -8,7 +8,23 @@ public class ScrollBackground : MonoBehaviour
     public Image[] images;
     public float yPosBorder;
     public float speed;
+
+    public float maxXOffset;
+
+
     // Start is called before the first frame update
+    private void Start() {
+        float startPosY = Random.Range(0f, yPosBorder);
+
+        float startPosX = Random.Range(-maxXOffset, maxXOffset);
+
+        foreach (Image i in images) {
+            i.transform.position = new Vector3(i.transform.position.x + startPosX, i.transform.position.y + startPosY, transform.position.z);
+        }
+
+        // Debug.Log(startPosX);
+
+    }
 
     // Update is called once per frame
     void Update() {
