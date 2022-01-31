@@ -31,6 +31,16 @@ public class EnemyHitFlicker : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
 
+        try {
+            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        }
+        catch {
+            gameObject.SetActive(false);
+            return;
+        }
+
+
+
         hitColor = new Color(1, 0.25f, 0.25f, 1);
 
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
