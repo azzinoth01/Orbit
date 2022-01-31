@@ -17,6 +17,7 @@ public class Inventory_fill : MonoBehaviour
 
 
     public AudioSource audios;
+    public AudioSource blockAudio;
 
     private ItemCatalog catalog;
     private LoadAssets assetLoader;
@@ -200,6 +201,13 @@ public class Inventory_fill : MonoBehaviour
 
                 audios.Play();
             }
+            else {
+                blockAudio.Play();
+            }
+
+        }
+        else {
+            blockAudio.Play();
         }
         if (Globals.currentItem == null) {
             PlayerSave save = PlayerSave.loadSettings();
@@ -230,6 +238,12 @@ public class Inventory_fill : MonoBehaviour
                 save.savingSetting();
                 audios.Play();
             }
+            else {
+                blockAudio.Play();
+            }
+        }
+        else {
+            blockAudio.Play();
         }
         if (Globals.currentItem == null) {
             PlayerSave save = PlayerSave.loadSettings();
@@ -258,6 +272,12 @@ public class Inventory_fill : MonoBehaviour
                 save.savingSetting();
                 audios.Play();
             }
+            else {
+                blockAudio.Play();
+            }
+        }
+        else {
+            blockAudio.Play();
         }
         if (Globals.currentItem == null) {
             PlayerSave save = PlayerSave.loadSettings();
@@ -286,6 +306,9 @@ public class Inventory_fill : MonoBehaviour
             save.savingSetting();
             audios.Play();
 
+        }
+        else {
+            blockAudio.Play();
         }
         if (Globals.currentItem == null) {
             PlayerSave save = PlayerSave.loadSettings();
