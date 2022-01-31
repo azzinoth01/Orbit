@@ -1,35 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.InputSystem.UI;
 
-public class ToolTip : MonoBehaviour
+
+[ExecuteInEditMode()]
+public class Tooltip : MonoBehaviour
 {
+    public TextMeshProUGUI headerField;
 
-    private RectTransform backgroundRectTransform;
-    private TextMeshProUGUI textMeshPro;
-    private RectTransform rectTransform;
+    public TextMeshProUGUI contentField;
 
-    private void Awake() {
-        backgroundRectTransform = transform.Find("tooltipBackground").GetComponent<RectTransform>();
-        textMeshPro = transform.Find("tooltipText").GetComponent<TextMeshProUGUI>();
-        rectTransform = transform.GetComponent<RectTransform>();
+    public LayoutElement layoutElement;
 
-        SetText("Hello World");
+    public int characterWrapLimit;
+
+    InputSystemUIInputModule inputModule;
+
+
+    public void SetText(string content, string header = "")
+    {
+        if (string.IsNullOrEmpty(header))
+        {
+            headerField.gameObject.SetActive(false);
+        }
+        else
+        {
+            headerField.gameObject.SetActive(true);
+            headerField.text = header;
+        }
+
+        contentField.text = content;
+
+        int headerLength = headerField.text.Length;
+        int contentLength = contentField.text.Length;
+
+        layoutElement.enabled = (headerLength > characterWrapLimit || contentLength > characterWrapLimit) ? true : false;
     }
-
-    private void SetText(string tooltipText) {
-        textMeshPro.SetText(tooltipText);
-        textMeshPro.ForceMeshUpdate();
-
-        Vector2 textSize = textMeshPro.GetRenderedValues(false);
-        Vector2 paddingSize = new Vector2(4, 4);
-
-        backgroundRectTransform.sizeDelta = textSize + paddingSize;
-
-    }
-
-    //private void Update() {
-    //    rectTransform.anchoredPosition = Globals.virtualMouse.VirtualMouseProperty.position.ReadValue();
-    //}
 }
+
+  
