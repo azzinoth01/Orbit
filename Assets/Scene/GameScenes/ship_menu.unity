@@ -220,6 +220,7 @@ MonoBehaviour:
   - {fileID: 890547588}
   yPosBorder: -101.25
   speed: 0.04
+  maxXOffset: 60
 --- !u!1 &488269847
 GameObject:
   m_ObjectHideFlags: 0
@@ -6504,6 +6505,9 @@ MonoBehaviour:
   toalMoneyText:
   - {fileID: 796100625492985816}
   - {fileID: 8890972643206941494}
+  selectedButtonImages: []
+  menuList: []
+  menuName: {fileID: 0}
 --- !u!222 &6581464742673563302
 CanvasRenderer:
   m_ObjectHideFlags: 0
