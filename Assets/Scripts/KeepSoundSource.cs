@@ -7,10 +7,11 @@ public class KeepSoundSource : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public AudioSource audios;
+    //public AudioSource audios;
     public List<int> playOnSceneIndex;
     public string dontDestroyID;
 
+    public LoopSoundControl audios;
 
     void Start() {
 
@@ -24,7 +25,7 @@ public class KeepSoundSource : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             Globals.dontDestoryOnLoadObjectID.Add(dontDestroyID);
 
-            audios.Play();
+            audios.startPlaying();
 
         }
 
@@ -40,12 +41,12 @@ public class KeepSoundSource : MonoBehaviour
 
 
         if (playOnSceneIndex.Contains(level)) {
-            if (audios.isPlaying == false) {
-                audios.Play();
+            if (audios.IsPlaying == false) {
+                audios.startPlaying();
             }
         }
         else {
-            audios.Stop();
+            audios.stopPlaying();
         }
     }
 }

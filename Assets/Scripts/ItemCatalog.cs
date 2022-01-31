@@ -49,23 +49,33 @@ public class ItemCatalog
         //Debug.Log("still loading");
         LoadAssets load = new LoadAssets();
         TextAsset text = load.loadText("Assets/Catalog/itemCatalog.json");
+
+        // Debug.LogError("text loaded");
+
         //Debug.Log("still loading");
+
+        // Debug.LogError(text.text);
 
         if (text != null) {
             //string json = File.ReadAllText("Assets/Catalog/itemCatalog.json");
 
             string json = text.text;
 
+
             //Debug.Log(json);
             if (json == null || json == "") {
+                //  Debug.LogError("text empty");
                 return null;
             }
+            // Debug.LogError("liste for dem deserialiezen");
 
             s = JsonUtility.FromJson<ItemCatalog>(json);
+            load.releaseAllHandle();
+            // Debug.LogError("liste deseriallised");
             return s;
         }
 
-
+        // Debug.LogError("text leer");
         return null;
 
     }

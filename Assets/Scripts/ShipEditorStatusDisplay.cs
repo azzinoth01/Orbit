@@ -60,7 +60,7 @@ public class ShipEditorStatusDisplay : MonoBehaviour
                 Parts part = (Parts)currentItem;
                 patternIcon.enabled = false;
 
-                reloadTimeNameText.text = "Schield Rate";
+                reloadTimeNameText.text = "Shield Rate";
                 reloadTimeText.text = "+" + part.ShieldRefreshValueBoost.ToString();
 
 
@@ -72,6 +72,9 @@ public class ShipEditorStatusDisplay : MonoBehaviour
 
             }
         }
+    }
+    private void OnDestroy() {
+        loader.releaseAllHandle();
     }
 
     public void MoneyChanged() {

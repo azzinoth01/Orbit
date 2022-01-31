@@ -9,10 +9,11 @@ public class LoadEquipmentSlots : MonoBehaviour
     public Image secondaryWeapon;
     public Image secondaryWeapon1;
     public Image shieldPart;
+    private LoadAssets loader;
 
     // Start is called before the first frame update
     void Start() {
-        LoadAssets loader = new LoadAssets();
+        loader = new LoadAssets();
         PlayerSave save = PlayerSave.loadSettings();
         if (save == null) {
             save = new PlayerSave();
@@ -40,5 +41,7 @@ public class LoadEquipmentSlots : MonoBehaviour
 
     }
 
-
+    private void OnDestroy() {
+        loader.releaseAllHandle();
+    }
 }

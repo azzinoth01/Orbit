@@ -8,16 +8,18 @@ public class SpeechBubbles : MonoBehaviour
     public GameObject UiObject;
     public GameObject Trigger;
     public AudioSource audios;
+    private bool isEnterd;
 
     // Start is called before the first frame update
     void Start() {
         UiObject.SetActive(false);
-
+        isEnterd = false;
     }
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
             UiObject.SetActive(true);
             audios.Play();
+            isEnterd = true;
         }
     }
 
@@ -26,7 +28,10 @@ public class SpeechBubbles : MonoBehaviour
 
     }
     void OnTriggerExit2D(Collider2D other) {
-        UiObject.SetActive(false);
-        Destroy(Trigger);
+        if (isEnterd == true) {
+            UiObject.SetActive(false);
+            Destroy(Trigger);
+        }
+
     }
 }

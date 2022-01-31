@@ -78,11 +78,26 @@ public class Inventory_fill : MonoBehaviour
                 }
 
             }
+            //Button b = g.GetComponent<Button>();
+            //b.onClick.AddListener(delegate {
+            //    inventoryButton(i, locked, g);
+            //});
+
+
             Button b = g.GetComponent<Button>();
-            b.onClick.AddListener(delegate {
-                inventoryButton(i, locked, g);
-            });
+            b.gameObject.AddComponent<InventoryButton>();
+
+            InventoryButton listener = b.gameObject.GetComponent<InventoryButton>();
+
+            listener.Inv = this;
+            listener.Item = i;
+            listener.Locked = locked;
+            listener.Obj = g;
+
         }
+    }
+    private void OnDestroy() {
+        assetLoader.releaseAllHandle();
     }
 
     private void replaceLockedItem(GameObject g, Item i) {
@@ -115,15 +130,25 @@ public class Inventory_fill : MonoBehaviour
         newGameObject.transform.SetSiblingIndex(g.transform.GetSiblingIndex());
 
         Button b = newGameObject.GetComponent<Button>();
-        b.onClick.AddListener(delegate {
-            inventoryButton(i, false, newGameObject);
-        });
+        //b.onClick.AddListener(delegate {
+        //    inventoryButton(i, false, newGameObject);
+        //});
+
+
+        b.gameObject.AddComponent<InventoryButton>();
+
+        InventoryButton listener = b.gameObject.GetComponent<InventoryButton>();
+
+        listener.Inv = this;
+        listener.Item = i;
+        listener.Locked = false;
+        listener.Obj = g;
 
         Destroy(g);
 
     }
 
-    private void inventoryButton(Item i, bool locked, GameObject g) {
+    public void inventoryButton(Item i, bool locked, GameObject g) {
 
         if (locked == true) {
             if (Globals.money >= i.Value) {
@@ -149,6 +174,8 @@ public class Inventory_fill : MonoBehaviour
             dragAndDrop.sprite = assetLoader.loadSprite(i.Icon);
             Globals.currentItem = i;
             display.changeInfoDispaly(i);
+
+            dragAndDrop.GetComponent<FollowMouse>().MouseIsPressed = true;
         }
 
 
@@ -273,7 +300,7 @@ public class Inventory_fill : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        if (Mouse.current.rightButton.wasPressedThisFrame) {
+        if (Globals.virtualMouse.VirtualMouseProperty.rightButton.wasPressedThisFrame) {
             dragAndDrop.enabled = false;
             Globals.currentItem = null;
         }

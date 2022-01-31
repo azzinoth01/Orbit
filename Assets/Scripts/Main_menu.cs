@@ -30,7 +30,7 @@ public class Main_menu : MonoBehaviour
         }
         else {
             // lade tutorial Scene
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
 
 
@@ -45,16 +45,22 @@ public class Main_menu : MonoBehaviour
     /// <summary>
     /// button um das Main menu wieder einzublenden vom Options Menu
     /// </summary>
+
+    //Benni hat hier sound und Rebind hinzugefügt
     public void onClickBackToMainMenu() {
         mainMenu.SetActive(true);
         optionsMenu.SetActive(false);
+        soundMenu.SetActive(false);
+        rebidningMenu.SetActive(false);
     }
 
     /// <summary>
     /// buttom um das Rebidning Menu einzublenden und das Options menu auszublenden
     /// </summary>
+
+    //Bennie: geändert Options to Main
     public void onClickControls() {
-        optionsMenu.SetActive(false);
+        mainMenu.SetActive(false);
         rebidningMenu.SetActive(true);
     }
 
@@ -63,14 +69,21 @@ public class Main_menu : MonoBehaviour
         optionsMenu.SetActive(true);
     }
 
+    //Bennie: geändert Options to Main
     public void onClickSound() {
-        optionsMenu.SetActive(false);
+        mainMenu.SetActive(false);
         soundMenu.SetActive(true);
     }
-
+    //momentan nicht in Benutzung
     public void onClickBackToOptions() {
         rebidningMenu.SetActive(false);
         soundMenu.SetActive(false);
         optionsMenu.SetActive(true);
+    }
+
+    public void onClickOptions(int index) {
+        Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(index);
     }
 }

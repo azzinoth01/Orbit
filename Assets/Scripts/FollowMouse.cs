@@ -5,9 +5,24 @@ using UnityEngine;
 public class FollowMouse : MonoBehaviour
 {
 
+    private bool mouseIsPressed;
+
+    public List<RemoveSlotItem> slotMouseoverCheck;
+    public Inventory_fill inv;
+
+    public bool MouseIsPressed {
+        get {
+            return mouseIsPressed;
+        }
+
+        set {
+            mouseIsPressed = value;
+        }
+    }
+
     // Start is called before the first frame update
     void Start() {
-
+        mouseIsPressed = false;
     }
 
     // Update is called once per frame
@@ -18,5 +33,27 @@ public class FollowMouse : MonoBehaviour
         //Debug.Log(pos);
         transform.position = pos;
         transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0);
+
+
+        if (Globals.virtualMouse.VirtualMouseProperty.leftButton.wasReleasedThisFrame && mouseIsPressed == true) {
+            mouseIsPressed = false;
+            foreach (RemoveSlotItem slot in slotMouseoverCheck) {
+                if (slot.IsMouseOver == true) {
+                    if (slot.isMainWeapon == true) {
+                        inv.mainWeaponSlotClicked(slot.Image);
+                    }
+                    if (slot.isSecondaryWeapon == true) {
+                        inv.secondaryWeaponSlotClicked(slot.Image);
+                    }
+                    if (slot.isSecondaryWeapon1 == true) {
+                        inv.secondaryWeaponSlotTwoClicked(slot.Image);
+                    }
+                    if (slot.isShipPart == true) {
+                        inv.shieldSlotClicked(slot.Image);
+                    }
+
+                }
+            }
+        }
     }
 }

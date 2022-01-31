@@ -71,6 +71,13 @@ public class Enemy : MonoBehaviour
 
     public AudioSource enemyHitSound;
 
+    private EnemyHitFlicker flickering;
+
+
+    public bool rotateTowardsPlayer;
+    public float rotateSpeed;
+
+
 
     public Enemy_Spawner SpawnerCallback {
         get {
@@ -89,6 +96,8 @@ public class Enemy : MonoBehaviour
     /// und setzt values anhand des wegpunkt designers, wenn am überobject vorhanden ist ( nur für wegpunkt design zwecken)
     /// </summary>
     void Start() {
+
+
 
         maxHealth = health;
         restartTime = 0;
@@ -160,6 +169,8 @@ public class Enemy : MonoBehaviour
             enemyHitSound = Globals.tempEnemyHit;
         }
 
+        StartCoroutine(rotating());
+
     }
     /// <summary>
     /// movement control
@@ -182,6 +193,32 @@ public class Enemy : MonoBehaviour
 
             }
         }
+    }
+
+
+    private IEnumerator rotating() {
+
+
+        while (true) {
+            if (Globals.pause == false && rotateTowardsPlayer == true) {
+                Vector3 pos = Globals.player.transform.position;
+
+
+                pos.z = 0;
+                Vector2 dir = pos - transform.position;
+                float angle = Vector2.SignedAngle(Vector2.right, dir);
+
+                angle = angle + 90;
+
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, angle), rotateSpeed * Time.deltaTime);
+
+
+            }
+
+
+            yield return null;
+        }
+
     }
 
     private IEnumerator smoothHealthDrop() {
@@ -457,6 +494,15 @@ public class Enemy : MonoBehaviour
             enemyHitSound.Play();
         }
 
+        if (flickering == null) {
+            gameObject.AddComponent<EnemyHitFlicker>();
+            flickering = gameObject.GetComponent<EnemyHitFlicker>();
+            flickering.HitFlickerInQue = flickering.HitFlickerInQue + 1;
+
+        }
+        else if (flickering.HitFlickerInQue <= 2) {
+            flickering.HitFlickerInQue = flickering.HitFlickerInQue + 1;
+        }
 
     }
 

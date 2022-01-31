@@ -227,7 +227,7 @@ public partial class @Controlls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f9b42444-200d-413e-8c62-d8d2374f5cac"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
