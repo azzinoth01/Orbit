@@ -31,6 +31,12 @@ public class Menu_handler : MonoBehaviour
     public List<Text> moneyEarnedText;
     public List<Text> toalMoneyText;
 
+    public List<Image> selectedButtonImages;
+
+    public List<GameObject> menuList;
+
+    public Text menuName;
+
     public float Playtime {
         get {
             return playtime;
@@ -286,5 +292,26 @@ public class Menu_handler : MonoBehaviour
         int index = Globals.lastSceneIndex;
         Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(index);
+    }
+
+
+    public void onSelectButton(Image button) {
+        foreach (Image img in selectedButtonImages) {
+            img.enabled = false;
+
+        }
+
+        button.enabled = true;
+    }
+
+    public void onClickMenuItem(GameObject game) {
+        foreach (GameObject gobj in menuList) {
+            gobj.SetActive(false);
+        }
+        game.SetActive(true);
+    }
+
+    public void onClickSetMenuName(string name) {
+        menuName.text = name;
     }
 }
