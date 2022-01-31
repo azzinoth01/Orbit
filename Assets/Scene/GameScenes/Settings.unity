@@ -638,7 +638,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sound
+  m_Text: Music
 --- !u!222 &156484423
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1518,8 +1518,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: 0}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: 81.3, y: -7.3}
+  m_SizeDelta: {x: 23, y: 15}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &587337124
 MonoBehaviour:
@@ -1605,7 +1605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4fae9f6bde88915488bfeda12959470e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b634c32e04c0e64296bf03880085a2a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1755,7 +1755,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b76ca35c5e891840adec2899dd64713, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f76030a0905bd5143a4f7990afe10e13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3536,7 +3536,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_SizeDelta: {x: 8, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1473166779
 MonoBehaviour:
@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ba8e382af35864b49adfd3493e43db3c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 247707d110bd60d4681532918f454262, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4413,7 +4413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b76ca35c5e891840adec2899dd64713, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 247707d110bd60d4681532918f454262, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4850,6 +4850,7 @@ MonoBehaviour:
   menuList:
   - {fileID: 520742846}
   - {fileID: 759863756}
+  menuName: {fileID: 0}
 --- !u!224 &1062609938617454791
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5309,8 +5310,8 @@ MonoBehaviour:
   muteButton: {fileID: 587337126}
   backgroundSlider: {fileID: 172328901}
   sfxSlider: {fileID: 45618906}
-  muteSp: {fileID: 21300000, guid: b91d70a9099e7c646a954c72fb648bc2, type: 3}
-  unMuteSp: {fileID: 21300000, guid: 4fae9f6bde88915488bfeda12959470e, type: 3}
+  muteSp: {fileID: 21300000, guid: 354e244141d763c42909294f8d1a15df, type: 3}
+  unMuteSp: {fileID: 21300000, guid: 1b634c32e04c0e64296bf03880085a2a, type: 3}
   masterSlider: {fileID: 1144676465}
 --- !u!224 &5796283014416034085
 RectTransform:
