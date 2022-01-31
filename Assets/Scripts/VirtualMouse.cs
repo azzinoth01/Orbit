@@ -140,11 +140,11 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 
 
 
-        Vector2 delta = (direction * speed * Time.deltaTime) * canvas.scaleFactor;
+        Vector2 delta = (direction * speed * Time.unscaledDeltaTime) * canvas.scaleFactor;
         Vector2 newPos = virtualMouse.position.ReadValue() + delta + deltaMouse;
 
-        //newPos.x = Mathf.Clamp(newPos.x, 0, Screen.width);
-        //newPos.y = Mathf.Clamp(newPos.y, 0, Screen.height);
+        newPos.x = Mathf.Clamp(newPos.x, 0, Screen.width);
+        newPos.y = Mathf.Clamp(newPos.y, 0, Screen.height);
 
         InputState.Change(virtualMouse.position, newPos);
         InputState.Change(virtualMouse.delta, (delta + deltaMouse));

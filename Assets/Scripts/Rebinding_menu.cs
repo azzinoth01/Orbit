@@ -33,6 +33,9 @@ public class Rebinding_menu : MonoBehaviour
 
     private string[] compositNames;
 
+    private List<GameObject> gamepadControls;
+    private List<GameObject> mouseAndKeyControls;
+
 
     /// <summary>
     /// setzt das Rebinding auf den Default Wert zurück
@@ -47,9 +50,11 @@ public class Rebinding_menu : MonoBehaviour
         if (device == "Keyboard") {
 
             path = Keyboard.current[path].displayName;
-            ;
+
         }
-        displayKeybind.text = device + ": " + path;
+        //displayKeybind.text = device + ": " + path;
+
+        displayKeybind.text = path;
         checkKeybinds();
     }
 
@@ -83,7 +88,8 @@ public class Rebinding_menu : MonoBehaviour
                 }
             }
 
-            displayKeybind.text = device + ": " + path;
+            // displayKeybind.text = device + ": " + path;
+            displayKeybind.text = path;
             rebind.Dispose();
             rebind = null;
             checkKeybinds();
@@ -96,9 +102,11 @@ public class Rebinding_menu : MonoBehaviour
                     path = inputDevice[path].displayName;
                     //Debug.Log(path);
                     break;
+
                 }
             }
-            displayKeybind.text = device + ": " + path;
+            // displayKeybind.text = device + ": " + path;
+            displayKeybind.text = path;
             rebind.Dispose();
             rebind = null;
             checkKeybinds();
@@ -106,7 +114,11 @@ public class Rebinding_menu : MonoBehaviour
         });
         rebind.Start();
 
+
+
     }
+
+
 
 
     /// <summary>
@@ -186,9 +198,12 @@ public class Rebinding_menu : MonoBehaviour
         foreach (Text t1 in checkKeybindList) {
             t1.color = Color.black;
             foreach (Text t2 in checkKeybindList.FindAll(x => x.text == t1.text && x != t1).ToArray()) {
-                t2.color = Color.red;
-                t1.color = Color.red;
-                check = false;
+                if (t2.gameObject.activeInHierarchy == true && t1.gameObject.activeInHierarchy == true) {
+                    t2.color = Color.red;
+                    t1.color = Color.red;
+                    check = false;
+                }
+
             }
         }
         return check;
@@ -215,7 +230,12 @@ public class Rebinding_menu : MonoBehaviour
             buttonList = new List<Button>();
             controll = new Controlls();
 
+            mouseAndKeyControls = new List<GameObject>();
+            gamepadControls = new List<GameObject>();
+
             controll = loadRebinding(controll);
+
+
 
 
             InputActionMap[] map = controll.asset.actionMaps.ToArray();
@@ -224,6 +244,8 @@ public class Rebinding_menu : MonoBehaviour
 
 
             foreach (InputActionMap m in map) {
+
+
 
                 if (m.name == "UI") {
                     continue;
@@ -238,6 +260,8 @@ public class Rebinding_menu : MonoBehaviour
                         int comp = 0;
                         int index = 0;
                         foreach (InputBinding b in a.bindings) {
+
+                            //Debug.Log(b.groups);
 
                             if (b.isComposite == true) {
                                 comp = 0;
@@ -271,6 +295,16 @@ public class Rebinding_menu : MonoBehaviour
 
                             GameObject g = Instantiate(itemHolder, ScrollView.transform);
 
+                            if (b.groups == Control_schemes_enum.gamepad.ToString()) {
+                                gamepadControls.Add(g);
+                            }
+                            else if (b.groups == Control_schemes_enum.mouseAndKeyboard.ToString()) {
+                                mouseAndKeyControls.Add(g);
+                            }
+                            else {
+                                gamepadControls.Add(g);
+                                mouseAndKeyControls.Add(g);
+                            }
                             GameObject obj = Instantiate(actionName, g.transform);
 
 
@@ -303,7 +337,9 @@ public class Rebinding_menu : MonoBehaviour
 
 
 
-                            actionDisplay.GetComponent<Text>().text = device + ": " + path;
+                            // actionDisplay.GetComponent<Text>().text = device + ": " + path;
+
+                            actionDisplay.GetComponent<Text>().text = path;
 
                             checkKeybindList.Add(actionDisplay.GetComponent<Text>());
 
@@ -365,6 +401,17 @@ public class Rebinding_menu : MonoBehaviour
 
                         GameObject g = Instantiate(itemHolder, ScrollView.transform);
 
+                        if (a.bindings[0].groups == Control_schemes_enum.gamepad.ToString()) {
+                            gamepadControls.Add(g);
+                        }
+                        else if (a.bindings[0].groups == Control_schemes_enum.mouseAndKeyboard.ToString()) {
+                            mouseAndKeyControls.Add(g);
+                        }
+                        else {
+                            gamepadControls.Add(g);
+                            mouseAndKeyControls.Add(g);
+                        }
+
                         GameObject obj = Instantiate(actionName, g.transform);
 
                         obj.GetComponent<Text>().text = (a.name + ":").Replace("_", " ");
@@ -385,7 +432,9 @@ public class Rebinding_menu : MonoBehaviour
                             }
                         }
 
-                        actionDisplay.GetComponent<Text>().text = device + ": " + path;
+                        // actionDisplay.GetComponent<Text>().text = device + ": " + path;
+
+                        actionDisplay.GetComponent<Text>().text = path;
                         checkKeybindList.Add(actionDisplay.GetComponent<Text>());
                         obj = Instantiate(buttonRebind, g.transform);
 
@@ -411,7 +460,12 @@ public class Rebinding_menu : MonoBehaviour
             }
 
 
-
+            foreach (GameObject g in gamepadControls) {
+                g.SetActive(false);
+            }
+            foreach (GameObject g in mouseAndKeyControls) {
+                g.SetActive(false);
+            }
 
         }
 
@@ -422,17 +476,42 @@ public class Rebinding_menu : MonoBehaviour
         renameActionName();
     }
 
-    /// <summary>
-    /// cleart die rebindingliste aus dem Scrollview
-    /// </summary>
-    private void OnDisable() {
-        foreach (Transform t in transform) {
-            Destroy(t.gameObject);
-        }
+    ///// <summary>
+    ///// cleart die rebindingliste aus dem Scrollview
+    ///// </summary>
+    //private void OnDisable() {
+    //    //foreach (Transform t in transform) {
+    //    //    Destroy(t.gameObject);
+    //    //}
+    //    //controll.Dispose();
+    //    //controll = null;
+    //    //checkKeybindList.Clear();
+    //    //buttonList.Clear();
+    //}
+
+    private void OnDestroy() {
         controll.Dispose();
         controll = null;
-        checkKeybindList.Clear();
-        buttonList.Clear();
+    }
+    public void onClickGamepad() {
+        gameObject.SetActive(true);
+
+        foreach (GameObject g in mouseAndKeyControls) {
+            g.SetActive(false);
+        }
+        foreach (GameObject g in gamepadControls) {
+            g.SetActive(true);
+        }
+    }
+
+    public void onClickMouseAndKey() {
+        gameObject.SetActive(true);
+        foreach (GameObject g in gamepadControls) {
+            g.SetActive(false);
+        }
+        foreach (GameObject g in mouseAndKeyControls) {
+            g.SetActive(true);
+        }
     }
 
 
@@ -468,7 +547,7 @@ public class Rebinding_menu : MonoBehaviour
 
             checkNames[counter] = name;
 
-            Debug.Log(name);
+            //Debug.Log(name);
 
             pos1 = s.IndexOf("\"", pos2 + 1) + 1;
             pos2 = s.IndexOf("\"", pos1 + 1);
@@ -481,13 +560,16 @@ public class Rebinding_menu : MonoBehaviour
             counter = counter + 1;
 
         }
-        Debug.Log("test");
+        //Debug.Log("test");
 
         foreach (Text t in actionNameList) {
 
             int index = Array.FindIndex(checkNames, x => x == t.text);
             //Debug.Log(index);
-
+            //  Debug.Log(index);
+            if (index == -1) {
+                continue;
+            }
             t.text = newNames[index];
 
 
