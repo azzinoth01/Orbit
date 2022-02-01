@@ -139,6 +139,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
 
+    public float CurrentHealth {
+        get {
+            return currentHealth;
+        }
+
+        set {
+            currentHealth = value;
+        }
+    }
+
 
     /// <summary>
     /// setzt den Player in die Globalen variablen

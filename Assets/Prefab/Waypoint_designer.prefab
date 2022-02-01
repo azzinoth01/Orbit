@@ -98,14 +98,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {x: 0.15517235, y: 3.2364533}
-  - {x: -7.825122, y: 1.8177329}
-  - {x: -6.288177, y: -6.280787}
-  - {x: 1.2783272, y: -6.162561}
-  - {x: 13.337437, y: 0.45812842}
+  - {x: -70, y: -70}
+  - {x: -70, y: 0}
+  - {x: 70, y: 0}
+  - {x: 70, y: -70}
   speed: 10
+  force: 0
   restartAfter: 0
   loop: 1
+  enemyDelayToNextWaypoint: 0
   line: {fileID: 3626241967483245415}
   waypointPrefab: {fileID: 259123342564615513, guid: 98e4f9b33c4943a4e8a7d57a1714f751, type: 3}
   waypointList: []
