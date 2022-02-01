@@ -8,6 +8,8 @@ public class TooltipSystem : MonoBehaviour
 
     public Tooltip tooltip;
 
+
+
     public void Awake()
     {
         current = this;
