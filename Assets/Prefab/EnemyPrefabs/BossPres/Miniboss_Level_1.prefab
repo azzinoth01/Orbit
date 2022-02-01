@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4337925370077210922}
   - component: {fileID: 4337925370077210933}
   - component: {fileID: 8516347313760071242}
+  - component: {fileID: 608933245443827462}
   m_Layer: 9
   m_Name: Enemy_body
   m_TagString: Untagged
@@ -174,8 +175,7 @@ MonoBehaviour:
   maxMonyeValue: 0
   doNotCountAsKill: 0
   enemyHitSound: {fileID: 0}
-  rotateTowardsPlayer: 0
-  rotateSpeed: 0
+  doNotUseForceToMove: 0
 --- !u!114 &8516347313760071242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,51 +192,66 @@ MonoBehaviour:
   skillsequenze:
   - delay: 1
     skill: {fileID: 8520757074126108566, guid: 19d3e3761619b044b8fa70b22e573c58, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 0.2
     skill: {fileID: 4018425927129919239, guid: 339e56fbc45d99b49b0fb77d88b7d5bf, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 0.2
     skill: {fileID: 8520757074126108566, guid: 19d3e3761619b044b8fa70b22e573c58, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 0.2
     skill: {fileID: 4018425927129919239, guid: 339e56fbc45d99b49b0fb77d88b7d5bf, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 2
     skill: {fileID: 2134181894965331776, guid: 2409523a14b93454bb7bf098ca679ee7, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 0.5
     skill: {fileID: 5526921905857379342, guid: dae081eeda5a71c40b59f72765c6f294, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 0.5
     skill: {fileID: 2134181894965331776, guid: 2409523a14b93454bb7bf098ca679ee7, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 0.5
     skill: {fileID: 5526921905857379342, guid: dae081eeda5a71c40b59f72765c6f294, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 2
     skill: {fileID: 8520757074126108566, guid: 19d3e3761619b044b8fa70b22e573c58, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 0.2
     skill: {fileID: 4018425927129919239, guid: 339e56fbc45d99b49b0fb77d88b7d5bf, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 0.2
     skill: {fileID: 8520757074126108566, guid: 19d3e3761619b044b8fa70b22e573c58, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 0.2
     skill: {fileID: 4018425927129919239, guid: 339e56fbc45d99b49b0fb77d88b7d5bf, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 3
     skill: {fileID: 7092385119582226550, guid: 930c3bf1b20ca344ea28567a3f095bd5, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 1
     skill: {fileID: 7092385119582226550, guid: 930c3bf1b20ca344ea28567a3f095bd5, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   - delay: 1
     skill: {fileID: 7092385119582226550, guid: 930c3bf1b20ca344ea28567a3f095bd5, type: 3}
-    shootInRotatedDirection: 0
+    shootInRotatedDirection: 1
   additionalDmg: 0
   dmgModifier: 1
+--- !u!114 &608933245443827462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4337925370077210932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1155d395ce07942bf3fe293e3a4cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateTowardsPlayer: 1
+  rotateSpeed: 100
+  activatedAfterMoveIn: 1
 --- !u!1 &4337925371679008800
 GameObject:
   m_ObjectHideFlags: 0
