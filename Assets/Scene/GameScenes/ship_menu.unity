@@ -1208,6 +1208,7 @@ MonoBehaviour:
   contentField: {fileID: 488269849}
   layoutElement: {fileID: 1630397997}
   characterWrapLimit: 30
+  tooltipToogled: 0
 --- !u!114 &1630397997
 MonoBehaviour:
   m_ObjectHideFlags: 0
