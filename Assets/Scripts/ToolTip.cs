@@ -7,7 +7,7 @@ using UnityEngine.InputSystem.UI;
 
 
 [ExecuteInEditMode()]
-public class Tooltip : MonoBehaviour
+public class ToolTip : MonoBehaviour
 {
     public TextMeshProUGUI headerField;
 
@@ -21,16 +21,12 @@ public class Tooltip : MonoBehaviour
 
     public bool tooltipToogled = false;
 
-    public void SetText(string content, string header = "")
-    {
-        if (tooltipToogled == true)
-        {
-            if (string.IsNullOrEmpty(header))
-            {
+    public void SetText(string content, string header = "") {
+        if (tooltipToogled == true) {
+            if (string.IsNullOrEmpty(header)) {
                 headerField.gameObject.SetActive(false);
             }
-            else
-            {
+            else {
                 headerField.gameObject.SetActive(true);
                 headerField.text = header;
             }

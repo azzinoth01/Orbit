@@ -4139,6 +4139,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e07ca9699a4a449bd0e8c31b38e936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  headerField: {fileID: 2118689256}
+  contentField: {fileID: 734411464}
+  layoutElement: {fileID: 1472450096}
+  characterWrapLimit: 30
+  tooltipToogled: 1
 --- !u!114 &1472450096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4421,7 +4426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -33.91, y: -1.4999981}
+  m_AnchoredPosition: {x: -33.910004, y: -1.4999981}
   m_SizeDelta: {x: 67.82, y: -5.000004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496420813
