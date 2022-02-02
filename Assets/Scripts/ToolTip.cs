@@ -23,10 +23,16 @@ public class ToolTip : MonoBehaviour
 
     private void Start() {
         Globals.tooltip = this;
+        SetText("", "");
     }
 
     public void SetText(string content, string header = "") {
         if (tooltipToogled == true) {
+
+            if (header == "" && content == "") {
+                gameObject.SetActive(false);
+            }
+
             if (string.IsNullOrEmpty(header)) {
                 headerField.gameObject.SetActive(false);
             }
@@ -35,10 +41,17 @@ public class ToolTip : MonoBehaviour
                 headerField.text = header;
             }
 
-            contentField.text = content;
+            if (contentField != null) {
+                contentField.text = content;
+            }
+
 
             int headerLength = headerField.text.Length;
-            int contentLength = contentField.text.Length;
+            int contentLength = 0;
+            if (contentField != null) {
+                contentLength = contentField.text.Length;
+            }
+
 
             layoutElement.enabled = (headerLength > characterWrapLimit || contentLength > characterWrapLimit) ? true : false;
         }

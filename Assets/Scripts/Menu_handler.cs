@@ -342,17 +342,23 @@ public class Menu_handler : MonoBehaviour
         menuName.text = name;
     }
 
-    public void onclickSetToogle() {
+    public void onclickSetToogle(GameObject game) {
         SaveSettings s = SaveSettings.loadSettings();
 
         if (s.IsToogleOn == true) {
             Globals.tooltip.tooltipToogled = false;
             s.IsToogleOn = false;
+            TooltipSystem.Hide();
 
         }
         else {
             s.IsToogleOn = true;
             Globals.tooltip.tooltipToogled = true;
+
+            TooltipTrigger triger = game.GetComponent<TooltipTrigger>();
+
+
+            TooltipSystem.Show(triger.content, triger.content);
         }
         s.savingSetting();
     }
