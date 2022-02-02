@@ -324,6 +324,10 @@ public class Menu_handler : MonoBehaviour
         game.SetActive(true);
     }
 
+    public void onClickActivateGameobnect(GameObject game) {
+        game.SetActive(false);
+    }
+
     public void onClickSetMenuName(string name) {
         menuName.text = name;
     }
