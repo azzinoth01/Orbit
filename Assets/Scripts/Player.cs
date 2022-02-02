@@ -47,7 +47,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     // private Animator anim;
     //   public Animator antrieb;
 
-    public int additionalDmg;
+    public float additionalDmg;
     public float dmgModifier;
 
     public float immunityFlickerRate;
@@ -106,6 +106,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     private LoadAssets loader;
 
+    public AudioSource crackedSound;
+
+    private bool firstCrackedSoundPlayed;
+    private bool secondCrackedSoundPlayed;
+
     public Vector2 Impulse {
         get {
             return impulse;
@@ -131,6 +136,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         set {
             shieldPart = value;
+        }
+    }
+
+    public float CurrentHealth {
+        get {
+            return currentHealth;
+        }
+
+        set {
+            currentHealth = value;
         }
     }
 
@@ -498,6 +513,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
                 crackedScreenOverlay2.sprite = null;
                 crackedScreenOverlay2.enabled = false;
+
+                firstCrackedSoundPlayed = false;
+                secondCrackedSoundPlayed = false;
             }
             else if (healthbar.fillAmount >= 0.3f) {
                 healthbar.color = healthbarAbove30;
@@ -507,11 +525,31 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 crackedScreenOverlay2.sprite = null;
                 crackedScreenOverlay2.enabled = false;
 
+                if (crackedSound != null && firstCrackedSoundPlayed == false) {
+                    crackedSound.Play();
+                }
+
+
+                firstCrackedSoundPlayed = true;
+                secondCrackedSoundPlayed = false;
+
+
+
             }
             else {
                 healthbar.color = healthbarBelow30;
                 crackedScreenOverlay2.sprite = crackedLevel2;
                 crackedScreenOverlay2.enabled = true;
+
+                if (crackedSound != null && secondCrackedSoundPlayed == false) {
+                    crackedSound.Play();
+                }
+
+
+
+                firstCrackedSoundPlayed = true;
+
+                secondCrackedSoundPlayed = true;
 
             }
             if (healthbar.fillAmount <= 0) {

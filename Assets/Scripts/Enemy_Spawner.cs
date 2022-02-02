@@ -19,12 +19,22 @@ public class Enemy_Spawner : MonoBehaviour
     private bool isActive;
 
 
-    /// <summary>
-    /// inizalisiert den spawn counter
-    /// </summary>
-    void Start() {
-        currentSpawnCount = 0;
-    }
+    public bool useRandomSpawnInfo;
+
+    public bool waveSpawner;
+
+    public bool useModification;
+
+    public List<Vector2> modifyMoveIn;
+    public List<Vector2> modifyMoveOut;
+    public List<Vector2> modifyWaypoints;
+
+    //public float modifyHealth;
+    public float modifyAddHealth;
+    public float modifyAddDmg;
+    public bool modifyDoNotUseForce;
+
+
 
     /// <summary>
     /// startet alle gestoppten spawner neu,wenn diese neugestartet werden können
@@ -34,13 +44,18 @@ public class Enemy_Spawner : MonoBehaviour
             return;
         }
         else if (isActive == true) {
+            if (useRandomSpawnInfo == true) {
 
-            // spawnen neustartet nachdem sie gestopped sind, wenn das spawnlimit erreicht wurde
-            if (spawnLimit > currentSpawnCount || spawnLimit == 0) {
-                foreach (Enemy_Spawner_Info e in enemysToSpawn) {
-                    if (e.SpawnConditonFulfilled == true && e.SpawnStartet == false) {
-                        StartCoroutine(startSpawntimer(e.delay, e));
-                        e.SpawnStartet = true;
+            }
+            else {
+
+                // spawnen neustartet nachdem sie gestopped sind, wenn das spawnlimit erreicht wurde
+                if (spawnLimit > currentSpawnCount || spawnLimit == 0) {
+                    foreach (Enemy_Spawner_Info e in enemysToSpawn) {
+                        if (e.SpawnConditonFulfilled == true && e.SpawnStartet == false) {
+                            StartCoroutine(startSpawntimer(e.delay, e));
+                            e.SpawnStartet = true;
+                        }
                     }
                 }
             }
@@ -52,7 +67,11 @@ public class Enemy_Spawner : MonoBehaviour
     /// </summary>
     private void OnEnable() {
         isActive = false;
+        currentSpawnCount = 0;
+
         Globals.spawnerListe.Add(this);
+
+
         if (useTriggerArea == true) {
             return;
         }
@@ -69,12 +88,24 @@ public class Enemy_Spawner : MonoBehaviour
     private void activateSpawning() {
 
         isActive = true;
-        foreach (Enemy_Spawner_Info e in enemysToSpawn) {
-            if (e.useTriggerArea == false && e.SpawnStartet == false && e.SpawnConditonFulfilled == false) {
-                StartCoroutine(startSpawntimer(e.delay, e));
-                e.SpawnStartet = true;
+
+        if (useRandomSpawnInfo == true) {
+            if (enemysToSpawn.Count != 0) {
+                int i = Random.Range(0, enemysToSpawn.Count);
+
+                StartCoroutine(startSpawntimer(enemysToSpawn[i].delay, enemysToSpawn[i]));
+
             }
 
+        }
+        else {
+            foreach (Enemy_Spawner_Info e in enemysToSpawn) {
+                if (e.useTriggerArea == false && e.SpawnStartet == false && e.SpawnConditonFulfilled == false) {
+                    StartCoroutine(startSpawntimer(e.delay, e));
+                    e.SpawnStartet = true;
+                }
+
+            }
         }
     }
 
@@ -85,6 +116,7 @@ public class Enemy_Spawner : MonoBehaviour
     private void OnDisable() {
         Globals.spawnerListe.Remove(this);
         isActive = false;
+        currentSpawnCount = 0;
     }
 
     /// <summary>
@@ -103,9 +135,28 @@ public class Enemy_Spawner : MonoBehaviour
 
             currentSpawnCount = currentSpawnCount + 1;
             GameObject g = Instantiate(enemySpawnInfo.enemyPrefab, transform);
+
+            if (useModification == true) {
+                try {
+                    g.GetComponent<Move_in_out_Scene>().moveInWaypoints = modifyMoveIn;
+                    g.GetComponent<Move_in_out_Scene>().moveOutWaypoints = modifyMoveOut;
+                }
+                catch {
+
+                }
+                g.transform.GetChild(0).gameObject.GetComponent<Enemy>().waypoints = modifyWaypoints;
+                //g.transform.GetChild(0).gameObject.GetComponent<Enemy>().health = modifyHealth;
+                g.transform.GetChild(0).gameObject.GetComponent<Enemy>().health = g.transform.GetChild(0).gameObject.GetComponent<Enemy>().health + modifyAddHealth;
+                g.transform.GetChild(0).gameObject.GetComponent<Enemy_skills>().additionalDmg = g.transform.GetChild(0).gameObject.GetComponent<Enemy_skills>().additionalDmg + modifyAddDmg;
+                g.transform.GetChild(0).gameObject.GetComponent<Enemy>().doNotUseForceToMove = modifyDoNotUseForce;
+            }
+
             g.layer = (int)Layer_enum.enemy;
             // callback setzten, um spawncounter zu verringern
             g.GetComponentInChildren<Enemy>(true).SpawnerCallback = this;
+
+
+
             if (enemySpawnInfo.enemysToSpawn == 0 || enemySpawnInfo.enemysToSpawn > enemySpawnInfo.CurrentEnemysSpawned + 1) {
                 enemySpawnInfo.CurrentEnemysSpawned = enemySpawnInfo.CurrentEnemysSpawned + 1;
                 StartCoroutine(startSpawntimer(wait, enemySpawnInfo));
@@ -181,5 +232,9 @@ public class Enemy_Spawner : MonoBehaviour
     /// </summary>
     public void spawnKilled() {
         currentSpawnCount = currentSpawnCount - 1;
+
+        if (waveSpawner == true) {
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -45,6 +45,9 @@ public class Globals_init : MonoBehaviour
             Globals.dontDestoryOnLoadObjectID = new List<string>();
         }
 
+        if (Globals.infityWaveSpawner == null) {
+            Globals.infityWaveSpawner = new List<Enemy_Spawner>();
+        }
 
     }
 

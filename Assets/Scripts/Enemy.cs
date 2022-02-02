@@ -74,9 +74,10 @@ public class Enemy : MonoBehaviour
     private EnemyHitFlicker flickering;
 
 
-    public bool rotateTowardsPlayer;
-    public float rotateSpeed;
+    //public bool rotateTowardsPlayer;
+    //public float rotateSpeed;
 
+    public bool doNotUseForceToMove;
 
 
     public Enemy_Spawner SpawnerCallback {
@@ -86,6 +87,16 @@ public class Enemy : MonoBehaviour
 
         set {
             spawnerCallback = value;
+        }
+    }
+
+    public float MaxHealth {
+        get {
+            return maxHealth;
+        }
+
+        set {
+            maxHealth = value;
         }
     }
 
@@ -169,7 +180,7 @@ public class Enemy : MonoBehaviour
             enemyHitSound = Globals.tempEnemyHit;
         }
 
-        StartCoroutine(rotating());
+        //StartCoroutine(rotating());
 
     }
     /// <summary>
@@ -196,30 +207,30 @@ public class Enemy : MonoBehaviour
     }
 
 
-    private IEnumerator rotating() {
+    //private IEnumerator rotating() {
 
 
-        while (true) {
-            if (Globals.pause == false && rotateTowardsPlayer == true) {
-                Vector3 pos = Globals.player.transform.position;
+    //    while (true) {
+    //        if (Globals.pause == false && rotateTowardsPlayer == true) {
+    //            Vector3 pos = Globals.player.transform.position;
 
 
-                pos.z = 0;
-                Vector2 dir = pos - transform.position;
-                float angle = Vector2.SignedAngle(Vector2.right, dir);
+    //            pos.z = 0;
+    //            Vector2 dir = pos - transform.position;
+    //            float angle = Vector2.SignedAngle(Vector2.right, dir);
 
-                angle = angle + 90;
+    //            angle = angle + 90;
 
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, angle), rotateSpeed * Time.deltaTime);
-
-
-            }
+    //            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, angle), rotateSpeed * Time.deltaTime);
 
 
-            yield return null;
-        }
+    //        }
 
-    }
+
+    //        yield return null;
+    //    }
+
+    //}
 
     private IEnumerator smoothHealthDrop() {
         while (true) {
@@ -368,8 +379,13 @@ public class Enemy : MonoBehaviour
                     direction = new Vector2(direction.x, Globals.player.transform.position.y - transform.position.y);
                 }
             }
+            if (doNotUseForceToMove == true) {
+                body.velocity = direction.normalized * maxSpeed;
+            }
+            else {
+                body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+            }
 
-            body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
 
             Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
@@ -386,8 +402,12 @@ public class Enemy : MonoBehaviour
             else {
                 direction = new Vector2(Globals.player.transform.position.x - transform.position.x, 0);
             }
-            body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
-
+            if (doNotUseForceToMove == true) {
+                body.velocity = direction.normalized * maxSpeed;
+            }
+            else {
+                body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+            }
             Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
@@ -403,8 +423,12 @@ public class Enemy : MonoBehaviour
             else {
                 direction = new Vector2(0, Globals.player.transform.position.y - transform.position.y);
             }
-            body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
-
+            if (doNotUseForceToMove == true) {
+                body.velocity = direction.normalized * maxSpeed;
+            }
+            else {
+                body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+            }
             Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
@@ -415,8 +439,13 @@ public class Enemy : MonoBehaviour
             //createNextWaypoint(waypoints[waypointIndex]);
             //waypointDirectionSet = true;
             Vector2 direction = waypointObject[waypointIndex].transform.position - transform.position;
-            body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
 
+            if (doNotUseForceToMove == true) {
+                body.velocity = direction.normalized * maxSpeed;
+            }
+            else {
+                body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+            }
             Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
@@ -429,9 +458,12 @@ public class Enemy : MonoBehaviour
             //waypointDirectionSet = true;
             waypointIndex = 0;
             Vector2 direction = waypointObject[waypointIndex].transform.position - transform.position;
-
-            body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
-
+            if (doNotUseForceToMove == true) {
+                body.velocity = direction.normalized * maxSpeed;
+            }
+            else {
+                body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
+            }
             Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);

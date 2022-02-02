@@ -67,14 +67,20 @@ public class Win_condition : MonoBehaviour
     public void enemyKilled() {
         enemysToKill = enemysToKill - 1;
 
-        if (enemysToKill <= 0 && alreadyActive == false) {
-            //Globals.menuHandler.levelFinishedUI.SetActive(true);
-
-            //moved to spawn delay
-            //activateLevelFinishPortal();
-
-            StartCoroutine(delayPortalSpawning());
+        if (enemysToKill <= 0 && Globals.waveControler != null) {
+            Globals.waveControler.waveFinished();
         }
+        else {
+            if (enemysToKill <= 0 && alreadyActive == false) {
+                //Globals.menuHandler.levelFinishedUI.SetActive(true);
+
+                //moved to spawn delay
+                //activateLevelFinishPortal();
+
+                StartCoroutine(delayPortalSpawning());
+            }
+        }
+
     }
 
     private IEnumerator startRotating() {

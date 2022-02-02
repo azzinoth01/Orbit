@@ -48,12 +48,25 @@ public class Menu_handler : MonoBehaviour
     }
 
     public void addScore(int points) {
-        currentScore = currentScore + points;
-        onChangedScore();
+
+        if (Globals.waveControler != null) {
+
+        }
+        else {
+            currentScore = currentScore + points;
+            onChangedScore();
+        }
+
     }
 
-    private void onChangedScore() {
-        score.text = "Score: " + currentScore.ToString();
+    public void onChangedScore() {
+        if (Globals.waveControler != null) {
+            score.text = "Wave: " + Globals.waveControler.CurrentWave;
+        }
+        else {
+            score.text = "Score: " + currentScore.ToString();
+        }
+
     }
 
 
@@ -308,6 +321,10 @@ public class Menu_handler : MonoBehaviour
         foreach (GameObject gobj in menuList) {
             gobj.SetActive(false);
         }
+        game.SetActive(true);
+    }
+
+    public void onClickActivateGameobnect(GameObject game) {
         game.SetActive(true);
     }
 

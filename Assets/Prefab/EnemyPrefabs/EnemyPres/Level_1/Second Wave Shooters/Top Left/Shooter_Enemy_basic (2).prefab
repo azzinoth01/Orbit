@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 202428460233275492}
   - component: {fileID: 202428460233275515}
   - component: {fileID: 5245681440162332420}
+  - component: {fileID: 5154746244028231705}
   m_Layer: 9
   m_Name: Enemy_body
   m_TagString: Untagged
@@ -162,6 +163,14 @@ MonoBehaviour:
   collisionDmg: 3
   destoryAfterCollison: 0
   deathParticelSystem: {fileID: 712244961376336435, guid: 7b09455b48a82734a8ee2e671af21f53, type: 3}
+  showBossHp: 0
+  bossHp: {fileID: 0}
+  bossUI: {fileID: 0}
+  minMoneyValue: 0
+  maxMonyeValue: 0
+  doNotCountAsKill: 0
+  enemyHitSound: {fileID: 0}
+  doNotUseForceToMove: 0
 --- !u!114 &5245681440162332420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,12 +187,30 @@ MonoBehaviour:
   skillsequenze:
   - delay: 1.5
     skill: {fileID: 8983357819854496339, guid: c28783ab10096734d914c2845e37f3fc, type: 3}
+    shootInRotatedDirection: 1
   - delay: 0.25
     skill: {fileID: 8983357819854496339, guid: c28783ab10096734d914c2845e37f3fc, type: 3}
+    shootInRotatedDirection: 1
   - delay: 0.25
     skill: {fileID: 8983357819854496339, guid: c28783ab10096734d914c2845e37f3fc, type: 3}
+    shootInRotatedDirection: 1
   additionalDmg: 0
   dmgModifier: 1
+--- !u!114 &5154746244028231705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202428460233275514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1155d395ce07942bf3fe293e3a4cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateTowardsPlayer: 1
+  rotateSpeed: 100
+  activatedAfterMoveIn: 1
 --- !u!1 &202428460762511726
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,5 +27,7 @@ public static class Globals
     public static AudioSource tempEnemyHit;
     public static List<string> dontDestoryOnLoadObjectID;
     public static int lastSceneIndex;
+    public static List<Enemy_Spawner> infityWaveSpawner;
+    public static WaveControler waveControler;
 
 }

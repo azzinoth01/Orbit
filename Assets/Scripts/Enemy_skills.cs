@@ -16,7 +16,7 @@ public class Enemy_skills : MonoBehaviour
     private float nextSkillDelay;
     private int skillIndex;
 
-    public int additionalDmg;
+    public float additionalDmg;
     public float dmgModifier;
 
     private bool isRunning;
