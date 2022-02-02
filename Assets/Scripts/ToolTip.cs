@@ -23,6 +23,7 @@ public class ToolTip : MonoBehaviour
 
     private void Start() {
         Globals.tooltip = this;
+        SetText("", "");
     }
 
     public void SetText(string content, string header = "") {
