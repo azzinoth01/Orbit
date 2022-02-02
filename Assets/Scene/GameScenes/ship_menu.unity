@@ -1008,9 +1008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d750d4d84a854e24e9cc5c8407a5de14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: 'Tooltiptoggler that toggles tooltip which displays toggled tooltips so
-    you can see that tooltips are toggled if toggled on '
-  header: 'Tooltiptoggler '
+  content: click this to toggle your tooltips
+  header: Tooltips
 --- !u!1 &1257072716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,7 +1477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d750d4d84a854e24e9cc5c8407a5de14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: flee your spacecraft you little bitch
+  content: 
   header: Exit
 --- !u!1 &1995036218
 GameObject:

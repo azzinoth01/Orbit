@@ -350,8 +350,8 @@ MonoBehaviour:
   showBossHp: 0
   bossHp: {fileID: 0}
   bossUI: {fileID: 0}
-  minMoneyValue: 0
-  maxMonyeValue: 0
+  minMoneyValue: 50
+  maxMonyeValue: 50
   doNotCountAsKill: 0
   enemyHitSound: {fileID: 0}
   doNotUseForceToMove: 0

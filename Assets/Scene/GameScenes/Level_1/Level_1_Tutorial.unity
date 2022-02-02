@@ -1328,7 +1328,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 48cc0bf8b13e968488b576b6b70b7855, type: 3}
-    m_FontSize: 20
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1338,7 +1338,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0.56
+    m_LineSpacing: 0.5
   m_Text: '"That''s in our way! Blow it up so we can hussle out of here."'
 --- !u!222 &123961420
 CanvasRenderer:
@@ -3847,6 +3847,7 @@ MonoBehaviour:
   maxMonyeValue: 0
   doNotCountAsKill: 0
   enemyHitSound: {fileID: 0}
+  doNotUseForceToMove: 0
 --- !u!4 &532161316
 Transform:
   m_ObjectHideFlags: 0
@@ -6135,7 +6136,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 48cc0bf8b13e968488b576b6b70b7855, type: 3}
-    m_FontSize: 20
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -6145,7 +6146,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0.56
+    m_LineSpacing: 0.5
   m_Text: '"Woah... that looks dangerous. We do not want to touch that! Better dash
     through it by pressing the SHIFT Button. Should give the ship invulnerability
     for a little bit."'
@@ -7940,18 +7941,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 48cc0bf8b13e968488b576b6b70b7855, type: 3}
-    m_FontSize: 20
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0.56
-  m_Text: '"Oh? Oh they what to fight? Cornering us like this? Not very polite! Better
+    m_LineSpacing: 0.5
+  m_Text: '"Oh? Oh they want to fight? Cornering us like this? Not very polite! Better
     show them what this crew can do!"'
 --- !u!222 &1160406121
 CanvasRenderer:
@@ -9290,7 +9291,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 48cc0bf8b13e968488b576b6b70b7855, type: 3}
-    m_FontSize: 20
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

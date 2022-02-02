@@ -251,8 +251,8 @@ MonoBehaviour:
   showBossHp: 0
   bossHp: {fileID: 0}
   bossUI: {fileID: 0}
-  minMoneyValue: 0
-  maxMonyeValue: 0
+  minMoneyValue: 50
+  maxMonyeValue: 50
   doNotCountAsKill: 0
   enemyHitSound: {fileID: 0}
   doNotUseForceToMove: 0
@@ -389,6 +389,6 @@ MonoBehaviour:
   moveOutWaypoints:
   - {x: 0, y: 30}
   waypointPrefab: {fileID: 7435532809163915810, guid: 9ba7c1b837e863c4784ae25b5b61965b, type: 3}
-  force: 9
-  maxSpeed: 10
+  force: 6
+  maxSpeed: 8
   body: {fileID: 7403002623475664581}
