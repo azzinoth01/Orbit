@@ -25,6 +25,8 @@ public class Rebinding_menu : MonoBehaviour
     public GameObject buttonBack;
     public GameObject buttonSave;
 
+    public GameObject viewPanel;
+
 
     private InputActionRebindingExtensions.RebindingOperation rebind;
     private List<Text> checkKeybindList;
@@ -494,6 +496,9 @@ public class Rebinding_menu : MonoBehaviour
         controll = null;
     }
     public void onClickGamepad() {
+        Globals.menuHandler.onClickMenuItem(gameObject);
+
+        Globals.menuHandler.onClickActivateGameobnect(viewPanel);
         gameObject.SetActive(true);
 
         foreach (GameObject g in mouseAndKeyControls) {
@@ -505,6 +510,11 @@ public class Rebinding_menu : MonoBehaviour
     }
 
     public void onClickMouseAndKey() {
+
+        Globals.menuHandler.onClickMenuItem(gameObject);
+
+        Globals.menuHandler.onClickActivateGameobnect(viewPanel);
+
         gameObject.SetActive(true);
         foreach (GameObject g in gamepadControls) {
             g.SetActive(false);

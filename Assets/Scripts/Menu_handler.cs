@@ -325,7 +325,7 @@ public class Menu_handler : MonoBehaviour
     }
 
     public void onClickActivateGameobnect(GameObject game) {
-        game.SetActive(false);
+        game.SetActive(true);
     }
 
     public void onClickSetMenuName(string name) {
