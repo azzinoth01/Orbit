@@ -31,6 +31,7 @@ public class Enemy_Spawner : MonoBehaviour
 
     //public float modifyHealth;
     public float modifyAddHealth;
+    public float modifyAddDmg;
     public bool modifyDoNotUseForce;
 
 
@@ -146,6 +147,7 @@ public class Enemy_Spawner : MonoBehaviour
                 g.transform.GetChild(0).gameObject.GetComponent<Enemy>().waypoints = modifyWaypoints;
                 //g.transform.GetChild(0).gameObject.GetComponent<Enemy>().health = modifyHealth;
                 g.transform.GetChild(0).gameObject.GetComponent<Enemy>().health = g.transform.GetChild(0).gameObject.GetComponent<Enemy>().health + modifyAddHealth;
+                g.transform.GetChild(0).gameObject.GetComponent<Enemy_skills>().additionalDmg = g.transform.GetChild(0).gameObject.GetComponent<Enemy_skills>().additionalDmg + modifyAddDmg;
                 g.transform.GetChild(0).gameObject.GetComponent<Enemy>().doNotUseForceToMove = modifyDoNotUseForce;
             }
 

@@ -12,6 +12,7 @@ public class WaveControler : MonoBehaviour
 
     private float curentHealthUpgrade;
 
+
     private Player player;
 
 
@@ -31,7 +32,8 @@ public class WaveControler : MonoBehaviour
     void Start() {
         player = Globals.player.GetComponent<Player>();
         Globals.waveControler = this;
-        curentHealthUpgrade = 1;
+        curentHealthUpgrade = 0;
+
         StartCoroutine(delayStart(0.5f));
     }
 
@@ -54,14 +56,14 @@ public class WaveControler : MonoBehaviour
 
 
 
-
-
         if (currentWave % 5 == 0) {
-            player.additionalDmg = player.additionalDmg + 1;
+            player.additionalDmg = player.additionalDmg + 0.25f;
 
         }
         if (currentWave % 10 == 0) {
-            player.dmgModifier = player.dmgModifier + 1;
+            player.dmgModifier = player.dmgModifier + 1.1f;
+
+            curentHealthUpgrade = curentHealthUpgrade * 2.8f;
         }
 
         Globals.currentWinCondition.enemysToKill = 0;
@@ -102,7 +104,7 @@ public class WaveControler : MonoBehaviour
 
     public void waveFinished() {
 
-        curentHealthUpgrade = curentHealthUpgrade + 0.5f;
+        curentHealthUpgrade = curentHealthUpgrade + 0.3f;
         minEnemys = minEnemys + 1;
         maxEnemys = maxEnemys + 1;
 
