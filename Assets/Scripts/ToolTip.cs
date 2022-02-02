@@ -35,10 +35,17 @@ public class ToolTip : MonoBehaviour
                 headerField.text = header;
             }
 
-            contentField.text = content;
+            if (contentField != null) {
+                contentField.text = content;
+            }
+
 
             int headerLength = headerField.text.Length;
-            int contentLength = contentField.text.Length;
+            int contentLength = 0;
+            if (contentField != null) {
+                contentLength = contentField.text.Length;
+            }
+
 
             layoutElement.enabled = (headerLength > characterWrapLimit || contentLength > characterWrapLimit) ? true : false;
         }
