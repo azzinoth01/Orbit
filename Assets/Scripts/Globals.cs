@@ -29,5 +29,6 @@ public static class Globals
     public static int lastSceneIndex;
     public static List<Enemy_Spawner> infityWaveSpawner;
     public static WaveControler waveControler;
+    public static ToolTip tooltip;
 
 }

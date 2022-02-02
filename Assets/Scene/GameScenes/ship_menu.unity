@@ -946,10 +946,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: 
-        m_Mode: 6
+      - m_Target: {fileID: 6579744812967420737}
+        m_TargetAssemblyTypeName: Menu_handler, Assembly-CSharp
+        m_MethodName: onclickSetToogle
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6445,6 +6445,7 @@ MonoBehaviour:
   selectedButtonImages: []
   menuList: []
   menuName: {fileID: 0}
+  tooltipToogle: {fileID: 0}
 --- !u!222 &6581464742673563302
 CanvasRenderer:
   m_ObjectHideFlags: 0

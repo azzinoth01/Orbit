@@ -37,6 +37,8 @@ public class Menu_handler : MonoBehaviour
 
     public Text menuName;
 
+    public Toggle tooltipToogle;
+
     public float Playtime {
         get {
             return playtime;
@@ -78,6 +80,14 @@ public class Menu_handler : MonoBehaviour
         Globals.bossHpBar = bossHpBar;
         Globals.bossUI = bossUI;
         currentScore = 0;
+
+
+        SaveSettings s = SaveSettings.loadSettings();
+
+        if (tooltipToogle != null) {
+            tooltipToogle.isOn = s.IsToogleOn;
+        }
+
     }
 
     /// <summary>
@@ -331,4 +341,29 @@ public class Menu_handler : MonoBehaviour
     public void onClickSetMenuName(string name) {
         menuName.text = name;
     }
+
+    public void onclickSetToogle() {
+        SaveSettings s = SaveSettings.loadSettings();
+
+        if (s.IsToogleOn == true) {
+            Globals.tooltip.tooltipToogled = false;
+            s.IsToogleOn = false;
+
+        }
+        else {
+            s.IsToogleOn = true;
+            Globals.tooltip.tooltipToogled = true;
+        }
+        s.savingSetting();
+    }
+    public void onTooltipToogleChanged(Toggle tog) {
+        SaveSettings s = SaveSettings.loadSettings();
+
+        s.IsToogleOn = tog.isOn;
+
+        Globals.tooltip.tooltipToogled = tog.isOn;
+
+        s.savingSetting();
+    }
+
 }

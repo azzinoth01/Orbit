@@ -15,8 +15,14 @@ public class TooltipSystem : MonoBehaviour
     }
 
     public static void Show(string content, string header = "") {
-        current.tooltip.SetText(content, header);
-        current.tooltip.gameObject.SetActive(true);
+        if (current.tooltip.tooltipToogled == true) {
+            current.tooltip.SetText(content, header);
+            current.tooltip.gameObject.SetActive(true);
+        }
+        else {
+            Hide();
+        }
+
     }
 
     public static void Hide() {
