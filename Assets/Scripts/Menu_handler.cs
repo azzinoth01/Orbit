@@ -278,6 +278,10 @@ public class Menu_handler : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 4) {
             s.TutorialPlayed = true;
         }
+
+        if (SceneManager.GetActiveScene().buildIndex == 5) {
+            s.Level1Played = true;
+        }
         int moneyEarned = 0;
 
         moneyEarned = Globals.money - s.Money;
@@ -358,8 +362,10 @@ public class Menu_handler : MonoBehaviour
             TooltipTrigger triger = game.GetComponent<TooltipTrigger>();
 
 
-            TooltipSystem.Show(triger.content, triger.content);
+            TooltipSystem.Show(triger.content, triger.header);
         }
+
+        Debug.Log("tooltip is " + s.IsToogleOn.ToString());
         s.savingSetting();
     }
     public void onTooltipToogleChanged(Toggle tog) {
@@ -367,9 +373,12 @@ public class Menu_handler : MonoBehaviour
 
         s.IsToogleOn = tog.isOn;
 
+
         Globals.tooltip.tooltipToogled = tog.isOn;
 
         s.savingSetting();
+
+        Debug.Log("tooltip is " + tog.isOn.ToString());
     }
 
 }

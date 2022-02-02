@@ -16,6 +16,7 @@ public class PlayerSave
     [SerializeField] private Parts shieldPart;
     [SerializeField] private List<string> boughtItems;
     [SerializeField] private bool tutorialPlayed;
+    [SerializeField] private bool level1Played;
 
     public int Money {
         get {
@@ -87,6 +88,16 @@ public class PlayerSave
         }
     }
 
+    public bool Level1Played {
+        get {
+            return level1Played;
+        }
+
+        set {
+            level1Played = value;
+        }
+    }
+
     public PlayerSave() {
         money = 0;
         mainWeapon = null;
@@ -97,6 +108,7 @@ public class PlayerSave
         boughtItems.Add("1004");
 
         tutorialPlayed = false;
+        level1Played = false;
 
 
         ItemCatalog cat = ItemCatalog.loadSettings();

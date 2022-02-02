@@ -22,9 +22,12 @@ public class ToolTip : MonoBehaviour
     public bool tooltipToogled = false;
 
     private void Start() {
-        Globals.tooltip = this;
-        SetText("", "");
+
+
+
     }
+
+
 
     public void SetText(string content, string header = "") {
         if (tooltipToogled == true) {
