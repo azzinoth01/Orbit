@@ -11,14 +11,14 @@ using UnityEngine;
 public class BulletInfo
 {
     [SerializeField] private float startRotation;
-    [SerializeField] private int bulletBaseDmg;
+    [SerializeField] private float bulletBaseDmg;
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject startEffect;
     [SerializeField] private GameObject sfxSound;
 
     private GameObject instantStartEffect;
 
-    private int addBaseDmg;
+    private float addBaseDmg;
     private float dmgModifier;
 
     private Bullet bulletScript;
@@ -43,7 +43,7 @@ public class BulletInfo
     /// <param name="bullet"> bestimmt bullet prefab</param>
     /// <param name="startEffect"> bestimmt particel system start prefab</param>
     /// <param name="sfxSound"> bestimmt Sound Effect prefab</param>
-    public BulletInfo(float startRotation, int bulletBaseDmg, GameObject bullet, GameObject startEffect, GameObject sfxSound) {
+    public BulletInfo(float startRotation, float bulletBaseDmg, GameObject bullet, GameObject startEffect, GameObject sfxSound) {
         Debug.Log("construktor called");
         this.startRotation = startRotation;
         this.bulletBaseDmg = bulletBaseDmg;
@@ -95,7 +95,7 @@ public class BulletInfo
         }
     }
 
-    public int AddBaseDmg {
+    public float AddBaseDmg {
 
 
         set {
@@ -143,7 +143,7 @@ public class BulletInfo
         }
     }
 
-    public int BulletBaseDmg {
+    public float BulletBaseDmg {
         get {
             return bulletBaseDmg;
         }

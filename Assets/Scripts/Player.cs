@@ -47,7 +47,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     // private Animator anim;
     //   public Animator antrieb;
 
-    public int additionalDmg;
+    public float additionalDmg;
     public float dmgModifier;
 
     public float immunityFlickerRate;

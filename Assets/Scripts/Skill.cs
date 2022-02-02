@@ -150,7 +150,7 @@ public class Skill : MonoBehaviour
     /// </summary>
     /// <param name="additionalDmg"> erhöhten den schaden der bullet direkt über diesen Wert</param>
     /// <param name="dmgModifier"> nach hinzufügen des additionalDmg modifiers wir der dmg mit diesem Wert multipliziert</param>
-    public void setDmgModifiers(int additionalDmg, float dmgModifier) {
+    public void setDmgModifiers(float additionalDmg, float dmgModifier) {
         foreach (BulletInfo b in bulletInfoList) {
             b.AddBaseDmg = additionalDmg;
             b.DmgModifier = dmgModifier;
