@@ -28,6 +28,11 @@ public class ToolTip : MonoBehaviour
 
     public void SetText(string content, string header = "") {
         if (tooltipToogled == true) {
+
+            if (header == "" && content == "") {
+                gameObject.SetActive(false);
+            }
+
             if (string.IsNullOrEmpty(header)) {
                 headerField.gameObject.SetActive(false);
             }
