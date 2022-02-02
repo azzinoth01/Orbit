@@ -9,9 +9,9 @@ using UnityEngine.InputSystem.UI;
 [ExecuteInEditMode()]
 public class ToolTip : MonoBehaviour
 {
-    public TextMeshProUGUI headerField;
+    public Text headerField;
 
-    public TextMeshProUGUI contentField;
+    public Text contentField;
 
     public LayoutElement layoutElement;
 
