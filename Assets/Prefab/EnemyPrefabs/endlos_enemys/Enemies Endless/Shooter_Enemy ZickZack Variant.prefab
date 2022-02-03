@@ -18,7 +18,7 @@ PrefabInstance:
     - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
       propertyPath: skillsequenze.Array.data[0].skill
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8513268908492894280, guid: 54f2bf474122be54aa6b948c2b0643d0, type: 3}
     - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
       propertyPath: skillsequenze.Array.data[1].delay
       value: 0.5
@@ -26,7 +26,7 @@ PrefabInstance:
     - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
       propertyPath: skillsequenze.Array.data[1].skill
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8513268908492894280, guid: 54f2bf474122be54aa6b948c2b0643d0, type: 3}
     - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
       propertyPath: skillsequenze.Array.data[2].delay
       value: 0.5
@@ -34,7 +34,7 @@ PrefabInstance:
     - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
       propertyPath: skillsequenze.Array.data[2].skill
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8513268908492894280, guid: 54f2bf474122be54aa6b948c2b0643d0, type: 3}
     - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
       propertyPath: skillsequenze.Array.data[1].shootInRotatedDirection
       value: 1
@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7211480418015719236, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
       propertyPath: m_Name
-      value: Shooter_Enemy ZickZack
+      value: Shooter_Enemy ZickZack Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
       propertyPath: m_RootOrder
