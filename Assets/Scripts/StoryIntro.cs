@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Utilities;
 
-public class StoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
+public class StoryIntro : MonoBehaviour
 {
 
     private bool skip;
@@ -18,31 +18,15 @@ public class StoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
 
     private IDisposable buttonEvent;
 
-    private Controlls controll;
 
-    public void OnDoge(InputAction.CallbackContext context) {
-        // throw new System.NotImplementedException();
-    }
 
-    public void OnMove_down(InputAction.CallbackContext context) {
-        //throw new System.NotImplementedException();
-    }
+    public bool Skip {
+        get {
+            return skip;
+        }
 
-    public void OnMove_left(InputAction.CallbackContext context) {
-        // throw new System.NotImplementedException();
-    }
-
-    public void OnMove_rigth(InputAction.CallbackContext context) {
-        //throw new System.NotImplementedException();
-    }
-
-    public void OnMove_up(InputAction.CallbackContext context) {
-        // throw new System.NotImplementedException();
-    }
-
-    public void OnPause_menu(InputAction.CallbackContext context) {
-        if (context.started) {
-            skip = true;
+        set {
+            skip = value;
         }
     }
 
@@ -72,18 +56,7 @@ public class StoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
 
         buttonEvent = InputSystem.onAnyButtonPress.Call(nextSlide);
 
-        if (controll == null) {
-            controll = new Controlls();
 
-            Rebinding_menu rebind = new Rebinding_menu();
-            controll = rebind.loadRebinding(controll);
-
-            controll.bullet_hell.Enable();
-            controll.bullet_hell.SetCallbacks(this);
-
-
-
-        }
 
     }
     // Update is called once per frame
@@ -126,8 +99,7 @@ public class StoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
             buttonEvent.Dispose();
             buttonEvent = null;
         }
-        controll.Dispose();
-        controll = null;
+
     }
 
 }
