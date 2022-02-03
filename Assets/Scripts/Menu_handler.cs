@@ -63,7 +63,7 @@ public class Menu_handler : MonoBehaviour
 
     public void onChangedScore() {
         if (Globals.waveControler != null) {
-            score.text = "Wave: " + Globals.waveControler.CurrentWave;
+            score.text = "Wave: " + Globals.waveControler.CurrentWave + "\r\n" + "Enemies: " + Globals.currentWinCondition.enemysToKill.ToString();
         }
         else {
             score.text = "Score: " + currentScore.ToString();

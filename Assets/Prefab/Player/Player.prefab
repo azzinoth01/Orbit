@@ -150,11 +150,11 @@ MonoBehaviour:
   healthbarAbove60: {r: 0.37605622, g: 0.7924528, b: 0.0710217, a: 1}
   healthbarAbove30: {r: 0.9433962, g: 0.85882354, b: 0.12156863, a: 1}
   healthbarBelow30: {r: 0.7372549, g: 0.03529412, b: 0.043387346, a: 1}
-  maxschield: 100
+  maxschield: 200
   currentschield: 0
   schieldbar: {fileID: 0}
-  schieldbarStepValue: 1
-  schieldRefreshRate: 3
+  schieldbarStepValue: 0.01
+  schieldRefreshRate: 0.0625
   schieldRefreshBaseValue: 0
   body: {fileID: 1580844076}
   force: 30

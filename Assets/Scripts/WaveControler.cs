@@ -51,7 +51,7 @@ public class WaveControler : MonoBehaviour
     public void startNextWave() {
         currentWave = currentWave + 1;
 
-        Globals.menuHandler.onChangedScore();
+
 
 
 
@@ -97,7 +97,7 @@ public class WaveControler : MonoBehaviour
             enemysToSpawn = enemysToSpawn - 1;
 
             Globals.currentWinCondition.enemysToKill = Globals.currentWinCondition.enemysToKill + 1;
-
+            Globals.menuHandler.onChangedScore();
         }
     }
 

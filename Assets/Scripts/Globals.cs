@@ -30,5 +30,6 @@ public static class Globals
     public static List<Enemy_Spawner> infityWaveSpawner;
     public static WaveControler waveControler;
     public static ToolTip tooltip;
+    public static bool skipStartCutscene;
 
 }
