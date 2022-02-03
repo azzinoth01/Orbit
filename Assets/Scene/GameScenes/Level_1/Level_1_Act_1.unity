@@ -4515,10 +4515,6 @@ PrefabInstance:
       propertyPath: crackedScreenOverlay2
       value: 
       objectReference: {fileID: 125226145}
-    - target: {fileID: 1580844077, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
-      propertyPath: schieldRefreshBaseValue
-      value: 2.125
-      objectReference: {fileID: 0}
     - target: {fileID: 621101414313199868, guid: 4d15ff141ef1b9941836921d70faf0ad, type: 3}
       propertyPath: m_SortingOrder
       value: 1
