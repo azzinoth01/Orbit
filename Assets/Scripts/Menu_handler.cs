@@ -122,6 +122,11 @@ public class Menu_handler : MonoBehaviour
     /// </summary>
     /// <param name="sceneIndex"> main menu scene index</param>
     public void onClickMainMenu(int sceneIndex) {
+
+        if (Globals.pause == true) {
+            setResume();
+        }
+
         SceneManager.LoadScene(sceneIndex);
 
     }
@@ -214,7 +219,10 @@ public class Menu_handler : MonoBehaviour
     public void setResume() {
         Globals.pause = false;
         Time.timeScale = 1;
-        pauseUI.SetActive(false);
+        if (pauseUI != null) {
+            pauseUI.SetActive(false);
+        }
+
     }
 
     /// <summary>
