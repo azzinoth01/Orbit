@@ -193,6 +193,7 @@ MonoBehaviour:
   trail: {fileID: 4574510739590021644}
   dashAudio: {fileID: 7024288067964473702}
   crackedSound: {fileID: 6093656726636465561}
+  playerBulletSoundPrefab: {fileID: 2127123000781025630, guid: 21d17dd199158b248b28f8e40d518788, type: 3}
 --- !u!81 &4524067518927202921
 AudioListener:
   m_ObjectHideFlags: 0

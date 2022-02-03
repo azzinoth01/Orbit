@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class Weapon : MonoBehaviour
 {
-
+    public GameObject sound;
     public GameObject skill;
     public float reloadTime;
     private bool canShoot;
@@ -33,6 +33,9 @@ public class Weapon : MonoBehaviour
     /// erzeugt im voraus Skill Objecte damit diese nicht zur laufzeit erzeugt werden müssen
     /// </summary>
     private void Awake() {
+
+
+
         for (int i = 0; i < shootsToCreate;) {
             GameObject g = activateSkill(true);
             g.SetActive(false);
@@ -77,6 +80,7 @@ public class Weapon : MonoBehaviour
             g.GetComponent<Skill>().setDmgModifiers(additionalDmg + this.additionalDmg, dmgModifier * this.dmgModifier);
 
             StartCoroutine(shootTimer(reloadTime));
+
         }
     }
 
@@ -93,6 +97,8 @@ public class Weapon : MonoBehaviour
         if (preCreation == false) {
             skillObject = Globals.bulletPool.Find(x => x.gameObject.name == skill.name && x.gameObject.activeSelf == false);
             if (skillObject == null) {
+                //Debug.Log(sound);
+                skill.GetComponent<Skill>().setSfxSoundOnBullets(sound);
                 g = Instantiate(skill, transform.position, transform.rotation);
                 g.name = skill.name;
                 g.layer = (int)Layer_enum.player_bullets;
@@ -110,6 +116,8 @@ public class Weapon : MonoBehaviour
 
         }
         else {
+            Debug.Log(sound);
+            skill.GetComponent<Skill>().setSfxSoundOnBullets(sound);
             g = Instantiate(skill);
             g.name = skill.name;
             g.layer = (int)Layer_enum.player_bullets;

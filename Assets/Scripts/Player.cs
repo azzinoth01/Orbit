@@ -108,9 +108,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     public AudioSource crackedSound;
 
+    public GameObject playerBulletSoundPrefab;
+
     private bool firstCrackedSoundPlayed;
     private bool secondCrackedSoundPlayed;
 
+    private bool schieldRefreshStarted;
     public Vector2 Impulse {
         get {
             return impulse;
@@ -329,6 +332,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         isDoging = false;
         isImmun = false;
 
+
         PlayerSave save = PlayerSave.loadSettings();
         if (save == null) {
             save = new PlayerSave();
@@ -350,6 +354,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             wep.additionalDmg = save.MainWeapon.additionalDmg;
             wep.dmgModifier = save.MainWeapon.dmgModifier;
 
+            wep.sound = playerBulletSoundPrefab;
+
+
             weapons.Add(wep);
 
         }
@@ -364,6 +371,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             wep.additionalDmg = save.SecondaryWeapon.additionalDmg;
             wep.dmgModifier = save.SecondaryWeapon.dmgModifier;
 
+            wep.sound = playerBulletSoundPrefab;
+
+
             weapons.Add(wep);
         }
         if (save.SecondaryWeapon1 != null) {
@@ -376,6 +386,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             wep.shootsToCreate = save.SecondaryWeapon1.shootsToCreate;
             wep.additionalDmg = save.SecondaryWeapon1.additionalDmg;
             wep.dmgModifier = save.SecondaryWeapon1.dmgModifier;
+
+            wep.sound = playerBulletSoundPrefab;
 
             weapons.Add(wep);
         }
@@ -391,8 +403,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         StartCoroutine(shootingHandler());
         StartCoroutine(moveHandler());
         StartCoroutine(smoothHealthDrop());
-        StartCoroutine(smoothSchieldDrop());
+
+        schieldRefreshStarted = true;
         StartCoroutine(schieldRefresh(schieldRefreshRate));
+        StartCoroutine(smoothSchieldDrop());
+
 
         maxDogeCharges = dogeCharges;
         flickerDirection = -1;
@@ -594,8 +609,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 schieldbar.fillAmount = toSet;
             }
 
-            if (schieldbar.fillAmount <= 0) {
+            if (schieldbar.fillAmount <= 0 && schieldRefreshStarted == false) {
                 // startet das Schildauffüllen nur nachdem das schild leer ist
+                schieldRefreshStarted = true;
                 StartCoroutine(schieldRefresh(schieldRefreshRate));
             }
 
@@ -618,8 +634,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         if (currentschield >= maxschield) {
             currentschield = maxschield;
+            schieldRefreshStarted = false;
         }
         else {
+            Debug.Log("schield refreseh");
             StartCoroutine(schieldRefresh(wait));
         }
 

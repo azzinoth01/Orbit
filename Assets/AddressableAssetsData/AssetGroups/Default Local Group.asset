@@ -37,6 +37,10 @@ MonoBehaviour:
     m_Address: Assets/Catalog/itemCatalog.json
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 96b3b187a3caff54dacc641aa9468373
+    m_Address: Assets/Sound/audio_output.mixer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6436f9d8691e47840968eb523d4bb068, type: 2}
   m_SchemaSet:

@@ -15,6 +15,8 @@ public class Skill : MonoBehaviour
 
     private float timestamp;
 
+
+
     public float Timestamp {
         get {
             return timestamp;
@@ -176,6 +178,15 @@ public class Skill : MonoBehaviour
             //gameObject.name = "test deactivation";
             gameObject.SetActive(false);
         }
+    }
+
+
+    public void setSfxSoundOnBullets(GameObject sound) {
+
+        foreach (BulletInfo b in bulletInfoList) {
+            b.SfxSound = sound;
+        }
+
     }
 
 }
