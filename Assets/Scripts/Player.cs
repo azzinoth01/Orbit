@@ -637,7 +637,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             schieldRefreshStarted = false;
         }
         else {
-            Debug.Log("schield refreseh");
+            //Debug.Log("schield refreseh");
             StartCoroutine(schieldRefresh(wait));
         }
 

@@ -18,6 +18,8 @@ public class StoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
 
     private IDisposable buttonEvent;
 
+    private Controlls controll;
+
     public void OnDoge(InputAction.CallbackContext context) {
         // throw new System.NotImplementedException();
     }
@@ -70,6 +72,18 @@ public class StoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
 
         buttonEvent = InputSystem.onAnyButtonPress.Call(nextSlide);
 
+        if (controll == null) {
+            controll = new Controlls();
+
+            Rebinding_menu rebind = new Rebinding_menu();
+            controll = rebind.loadRebinding(controll);
+
+            controll.bullet_hell.Enable();
+            controll.bullet_hell.SetCallbacks(this);
+
+
+
+        }
 
     }
     // Update is called once per frame
@@ -112,6 +126,8 @@ public class StoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
             buttonEvent.Dispose();
             buttonEvent = null;
         }
-
+        controll.Dispose();
+        controll = null;
     }
+
 }
