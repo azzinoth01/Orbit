@@ -2,16 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// controls the audio of the bullets
+/// </summary>
 public class BulletSoundControl : MonoBehaviour
 {
 
     public AudioSource audios;
 
+
+    /// <summary>
+    /// plays the audio once enabled
+    /// </summary>
     private void OnEnable() {
         audios.Play();
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// checks if the audio is still playing and deactivaes itself once it finished playing
+    /// activates the disabled check of parent Skill script if it deactivates
+    /// </summary>
     void Update() {
         if (Globals.pause == true) {
             return;

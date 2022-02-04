@@ -62,7 +62,7 @@ public class SpawnerCreation : MonoBehaviour
             index = index + 1;
         }
 
-        //g.SetActive(true);
+        //  g.SetActive(true);
 
     }
 
