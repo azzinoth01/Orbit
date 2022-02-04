@@ -2293,7 +2293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: '(...)
+  m_Text: '...
 
     Would you just shut it now!'
 --- !u!222 &1012589653

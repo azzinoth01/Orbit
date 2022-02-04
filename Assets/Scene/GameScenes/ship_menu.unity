@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: 
-  header: Survival mode
+  header: Survival Mode
 --- !u!114 &277823883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1473,7 +1473,7 @@ MonoBehaviour:
   headerField: {fileID: 1995036220}
   contentField: {fileID: 0}
   layoutElement: {fileID: 1630397997}
-  characterWrapLimit: 30
+  characterWrapLimit: 40
   tooltipToogled: 1
 --- !u!114 &1630397997
 MonoBehaviour:

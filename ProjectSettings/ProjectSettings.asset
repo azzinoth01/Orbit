@@ -593,7 +593,7 @@ PlayerSettings:
   monoEnv: 
   splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: c1a1b9e14d664b8479eb10a58f1c44d9, type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 21300000, guid: 5cf0f3957ed24f74a82a926bac79a531, type: 3}
-  blurSplashScreenBackground: 1
+  blurSplashScreenBackground: 0
   spritePackerPolicy: 
   webGLMemorySize: 16
   webGLExceptionSupport: 1
