@@ -631,7 +631,7 @@ public class Enemy : MonoBehaviour
 
     /// <summary>
     /// if enemy is destroyed, destory all waypoints
-    /// win condition enemy kill hinzufügen
+    /// wincondition reduce enemy counter
     /// callback towards spawner, so that spawner can spawn new enemy in its place
     /// </summary>
     private void OnDestroy() {
