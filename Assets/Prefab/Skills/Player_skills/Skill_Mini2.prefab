@@ -48,5 +48,5 @@ MonoBehaviour:
     bulletBaseDmg: 1
     bullet: {fileID: 7821882307549690459, guid: 4285f17f58807354ba72b8e393a734e8, type: 3}
     startEffect: {fileID: 3807424677396864137, guid: 8e1149f79cb29814aa738f0540f5fa62, type: 3}
-    sfxSound: {fileID: 2127123000781025630, guid: 21d17dd199158b248b28f8e40d518788, type: 3}
+    sfxSound: {fileID: 0}
   maxDuration: 3

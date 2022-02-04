@@ -237,6 +237,7 @@ MonoBehaviour:
     shootInRotatedDirection: 1
   additionalDmg: 0
   dmgModifier: 1
+  doNotDeactivate: 1
 --- !u!114 &608933245443827462
 MonoBehaviour:
   m_ObjectHideFlags: 0

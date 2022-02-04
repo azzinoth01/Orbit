@@ -12,8 +12,7 @@ public class SoundControl : MonoBehaviour
     public AudioMixerGroup masterGroup;
     public AudioMixerGroup background;
     public AudioMixerGroup sfx;
-    public AudioMixerSnapshot normal;
-    public AudioMixerSnapshot mute;
+
 
     private bool isMute;
     private float backgroundVolume;
@@ -30,6 +29,9 @@ public class SoundControl : MonoBehaviour
     public Sprite unMuteSp;
 
     public Slider masterSlider;
+
+
+
 
     /// <summary>
     /// ladet die start Soundsettings, wenn welche vorhanden sind, ansonsten werden die Standardsettings verwendet
@@ -61,12 +63,12 @@ public class SoundControl : MonoBehaviour
     /// </summary>
     public void setStartSettings() {
         if (isMute == true) {
-            mute.TransitionTo(0);
+
             muteButton.sprite = muteSp;
 
         }
         else {
-            normal.TransitionTo(0);
+
             muteButton.sprite = unMuteSp;
 
         }
@@ -89,6 +91,9 @@ public class SoundControl : MonoBehaviour
         else {
             volume = Mathf.Log10(sfxVolume) * 20;
         }
+
+        //Debug.LogError(volume);
+
         sfx.audioMixer.SetFloat("sfxVolume", volume);
 
         sfxSlider.value = sfxVolume;
@@ -118,12 +123,12 @@ public class SoundControl : MonoBehaviour
     public void toggleMute() {
 
         if (isMute == false) {
-            mute.TransitionTo(0);
+
             muteButton.sprite = muteSp;
             isMute = true;
         }
         else {
-            normal.TransitionTo(0);
+
             muteButton.sprite = unMuteSp;
             isMute = false;
         }
@@ -144,6 +149,8 @@ public class SoundControl : MonoBehaviour
         else {
             volume = Mathf.Log10(sfxVolume) * 20;
         }
+        //Debug.LogError(volume);
+
         sfx.audioMixer.SetFloat("sfxVolume", volume);
         saveSettingChanges();
     }

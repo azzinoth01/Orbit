@@ -13,6 +13,7 @@ public class Main_menu : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject soundMenu;
     public GameObject rebidningMenu;
+    public GameObject credits;
 
     /// <summary>
     /// load the first game Scene
@@ -49,9 +50,20 @@ public class Main_menu : MonoBehaviour
     //Benni hat hier sound und Rebind hinzugefügt
     public void onClickBackToMainMenu() {
         mainMenu.SetActive(true);
-        optionsMenu.SetActive(false);
-        soundMenu.SetActive(false);
-        rebidningMenu.SetActive(false);
+
+        if (optionsMenu != null) {
+            optionsMenu.SetActive(false);
+        }
+        if (soundMenu != null) {
+            soundMenu.SetActive(false);
+        }
+        if (rebidningMenu != null) {
+            rebidningMenu.SetActive(false);
+        }
+        if (credits != null) {
+            credits.SetActive(false);
+        }
+
     }
 
     /// <summary>
@@ -85,5 +97,10 @@ public class Main_menu : MonoBehaviour
         Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         SceneManager.LoadScene(index);
+    }
+
+    public void onClickCredits() {
+        credits.SetActive(true);
+        mainMenu.SetActive(false);
     }
 }

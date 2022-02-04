@@ -48,12 +48,12 @@ MonoBehaviour:
     bulletBaseDmg: 1
     bullet: {fileID: 2919473680561964825, guid: 4a5e2c6bd763863439a4cdfe5e08900e, type: 3}
     startEffect: {fileID: 3807424677396864137, guid: 8e1149f79cb29814aa738f0540f5fa62, type: 3}
-    sfxSound: {fileID: 2127123000781025630, guid: 21d17dd199158b248b28f8e40d518788, type: 3}
+    sfxSound: {fileID: 0}
   - startRotation: -3
     bulletBaseDmg: 1
     bullet: {fileID: 2919473680561964825, guid: 4a5e2c6bd763863439a4cdfe5e08900e, type: 3}
     startEffect: {fileID: 3807424677396864137, guid: 8e1149f79cb29814aa738f0540f5fa62, type: 3}
-    sfxSound: {fileID: 2127123000781025630, guid: 21d17dd199158b248b28f8e40d518788, type: 3}
+    sfxSound: {fileID: 0}
   - startRotation: 6
     bulletBaseDmg: 1
     bullet: {fileID: 2919473680561964825, guid: 4a5e2c6bd763863439a4cdfe5e08900e, type: 3}
@@ -63,10 +63,10 @@ MonoBehaviour:
     bulletBaseDmg: 1
     bullet: {fileID: 2919473680561964825, guid: 4a5e2c6bd763863439a4cdfe5e08900e, type: 3}
     startEffect: {fileID: 3807424677396864137, guid: 8e1149f79cb29814aa738f0540f5fa62, type: 3}
-    sfxSound: {fileID: 2127123000781025630, guid: 21d17dd199158b248b28f8e40d518788, type: 3}
+    sfxSound: {fileID: 0}
   - startRotation: -6
     bulletBaseDmg: 1
     bullet: {fileID: 2919473680561964825, guid: 4a5e2c6bd763863439a4cdfe5e08900e, type: 3}
     startEffect: {fileID: 3807424677396864137, guid: 8e1149f79cb29814aa738f0540f5fa62, type: 3}
-    sfxSound: {fileID: 2127123000781025630, guid: 21d17dd199158b248b28f8e40d518788, type: 3}
+    sfxSound: {fileID: 0}
   maxDuration: 1

@@ -13,8 +13,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4914559466225251947, guid: 20d01275838543f459d15747b77b8728, type: 3}
       propertyPath: m_Volume
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 4914559466225251947, guid: 20d01275838543f459d15747b77b8728, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914559466225251947, guid: 20d01275838543f459d15747b77b8728, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -1263360175238652384, guid: 96b3b187a3caff54dacc641aa9468373, type: 2}
     - target: {fileID: 4914559466225251947, guid: 20d01275838543f459d15747b77b8728, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.size
       value: 6
@@ -151,7 +159,7 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 4914559466225251947, guid: 20d01275838543f459d15747b77b8728, type: 3}
   m_PrefabInstance: {fileID: 6462958840215111476}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5812371996116032167
+--- !u!114 &3461884215200655538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -147,7 +147,13 @@ public class Enemy_Spawner : MonoBehaviour
                 g.transform.GetChild(0).gameObject.GetComponent<Enemy>().waypoints = modifyWaypoints;
                 //g.transform.GetChild(0).gameObject.GetComponent<Enemy>().health = modifyHealth;
                 g.transform.GetChild(0).gameObject.GetComponent<Enemy>().health = g.transform.GetChild(0).gameObject.GetComponent<Enemy>().health + modifyAddHealth;
-                g.transform.GetChild(0).gameObject.GetComponent<Enemy_skills>().additionalDmg = g.transform.GetChild(0).gameObject.GetComponent<Enemy_skills>().additionalDmg + modifyAddDmg;
+                try {
+                    g.transform.GetChild(0).gameObject.GetComponent<Enemy_skills>().additionalDmg = g.transform.GetChild(0).gameObject.GetComponent<Enemy_skills>().additionalDmg + modifyAddDmg;
+                }
+                catch {
+
+                }
+
                 g.transform.GetChild(0).gameObject.GetComponent<Enemy>().doNotUseForceToMove = modifyDoNotUseForce;
             }
 

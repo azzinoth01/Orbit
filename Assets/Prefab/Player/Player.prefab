@@ -131,7 +131,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1580844077
 MonoBehaviour:
@@ -150,11 +150,11 @@ MonoBehaviour:
   healthbarAbove60: {r: 0.37605622, g: 0.7924528, b: 0.0710217, a: 1}
   healthbarAbove30: {r: 0.9433962, g: 0.85882354, b: 0.12156863, a: 1}
   healthbarBelow30: {r: 0.7372549, g: 0.03529412, b: 0.043387346, a: 1}
-  maxschield: 100
+  maxschield: 200
   currentschield: 0
   schieldbar: {fileID: 0}
-  schieldbarStepValue: 1
-  schieldRefreshRate: 3
+  schieldbarStepValue: 0.01
+  schieldRefreshRate: 0.0625
   schieldRefreshBaseValue: 0
   body: {fileID: 1580844076}
   force: 30
@@ -193,6 +193,7 @@ MonoBehaviour:
   trail: {fileID: 4574510739590021644}
   dashAudio: {fileID: 7024288067964473702}
   crackedSound: {fileID: 6093656726636465561}
+  playerBulletSoundPrefab: {fileID: 2127123000781025630, guid: 21d17dd199158b248b28f8e40d518788, type: 3}
 --- !u!81 &4524067518927202921
 AudioListener:
   m_ObjectHideFlags: 0

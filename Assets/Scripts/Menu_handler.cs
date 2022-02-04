@@ -37,6 +37,8 @@ public class Menu_handler : MonoBehaviour
 
     public Text menuName;
 
+    public Toggle tooltipToogle;
+
     public float Playtime {
         get {
             return playtime;
@@ -61,7 +63,7 @@ public class Menu_handler : MonoBehaviour
 
     public void onChangedScore() {
         if (Globals.waveControler != null) {
-            score.text = "Wave: " + Globals.waveControler.CurrentWave;
+            score.text = "Wave: " + Globals.waveControler.CurrentWave + "\r\n" + "Enemies: " + Globals.currentWinCondition.enemysToKill.ToString();
         }
         else {
             score.text = "Score: " + currentScore.ToString();
@@ -78,6 +80,14 @@ public class Menu_handler : MonoBehaviour
         Globals.bossHpBar = bossHpBar;
         Globals.bossUI = bossUI;
         currentScore = 0;
+
+
+        SaveSettings s = SaveSettings.loadSettings();
+
+        if (tooltipToogle != null) {
+            tooltipToogle.isOn = s.IsToogleOn;
+        }
+
     }
 
     /// <summary>
@@ -112,6 +122,11 @@ public class Menu_handler : MonoBehaviour
     /// </summary>
     /// <param name="sceneIndex"> main menu scene index</param>
     public void onClickMainMenu(int sceneIndex) {
+
+        if (Globals.pause == true) {
+            setResume();
+        }
+
         SceneManager.LoadScene(sceneIndex);
 
     }
@@ -204,7 +219,10 @@ public class Menu_handler : MonoBehaviour
     public void setResume() {
         Globals.pause = false;
         Time.timeScale = 1;
-        pauseUI.SetActive(false);
+        if (pauseUI != null) {
+            pauseUI.SetActive(false);
+        }
+
     }
 
     /// <summary>
@@ -267,6 +285,10 @@ public class Menu_handler : MonoBehaviour
         // 3 ist die Tutorial scene
         if (SceneManager.GetActiveScene().buildIndex == 4) {
             s.TutorialPlayed = true;
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 5) {
+            s.Level1Played = true;
         }
         int moneyEarned = 0;
 
@@ -331,4 +353,40 @@ public class Menu_handler : MonoBehaviour
     public void onClickSetMenuName(string name) {
         menuName.text = name;
     }
+
+    public void onclickSetToogle(GameObject game) {
+        SaveSettings s = SaveSettings.loadSettings();
+
+        if (s.IsToogleOn == true) {
+            Globals.tooltip.tooltipToogled = false;
+            s.IsToogleOn = false;
+            TooltipSystem.Hide();
+
+        }
+        else {
+            s.IsToogleOn = true;
+            Globals.tooltip.tooltipToogled = true;
+
+            TooltipTrigger triger = game.GetComponent<TooltipTrigger>();
+
+
+            TooltipSystem.Show(triger.content, triger.header);
+        }
+
+        Debug.Log("tooltip is " + s.IsToogleOn.ToString());
+        s.savingSetting();
+    }
+    public void onTooltipToogleChanged(Toggle tog) {
+        SaveSettings s = SaveSettings.loadSettings();
+
+        s.IsToogleOn = tog.isOn;
+
+
+        Globals.tooltip.tooltipToogled = tog.isOn;
+
+        s.savingSetting();
+
+        Debug.Log("tooltip is " + tog.isOn.ToString());
+    }
+
 }

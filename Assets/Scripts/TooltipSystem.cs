@@ -4,23 +4,37 @@ using UnityEngine;
 
 public class TooltipSystem : MonoBehaviour
 {
-    private static TooltipSystem current;
 
     public ToolTip tooltip;
 
+    public void Start() {
+        Globals.tooltip = tooltip;
+        SaveSettings s = SaveSettings.loadSettings();
 
+        tooltip.tooltipToogled = s.IsToogleOn;
 
-    public void Awake() {
-        current = this;
+        Debug.Log("tooltip is " + tooltip.tooltipToogled.ToString());
     }
 
+
     public static void Show(string content, string header = "") {
-        current.tooltip.SetText(content, header);
-        current.tooltip.gameObject.SetActive(true);
+        if (Globals.tooltip != null) {
+            if (Globals.tooltip.tooltipToogled == true) {
+                Globals.tooltip.SetText(content, header);
+                Globals.tooltip.gameObject.SetActive(true);
+            }
+            else {
+                Hide();
+            }
+        }
+
+
     }
 
     public static void Hide() {
-        current.tooltip.gameObject.SetActive(false);
+        if (Globals.tooltip != null) {
+            Globals.tooltip.gameObject.SetActive(false);
+        }
     }
 
 }

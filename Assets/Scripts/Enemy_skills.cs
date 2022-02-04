@@ -24,7 +24,7 @@ public class Enemy_skills : MonoBehaviour
 
     private bool nextSkillRotate;
 
-
+    public bool doNotDeactivate;
 
     /// <summary>
     /// skill gameObjecte im voraus erstellen
@@ -176,7 +176,14 @@ public class Enemy_skills : MonoBehaviour
         try {
             if (collision.gameObject.tag == Tag_enum.enemy_border.ToString()) {
                 if (allwoDisable == true) {
-                    enabled = false;
+
+                    if (doNotDeactivate == true) {
+
+                    }
+                    else {
+                        enabled = false;
+                    }
+
                 }
 
             }

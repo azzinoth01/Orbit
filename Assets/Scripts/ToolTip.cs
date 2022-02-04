@@ -9,9 +9,9 @@ using UnityEngine.InputSystem.UI;
 [ExecuteInEditMode()]
 public class ToolTip : MonoBehaviour
 {
-    public TextMeshProUGUI headerField;
+    public Text headerField;
 
-    public TextMeshProUGUI contentField;
+    public Text contentField;
 
     public LayoutElement layoutElement;
 
@@ -21,8 +21,21 @@ public class ToolTip : MonoBehaviour
 
     public bool tooltipToogled = false;
 
+    private void Start() {
+
+
+
+    }
+
+
+
     public void SetText(string content, string header = "") {
         if (tooltipToogled == true) {
+
+            if (header == "" && content == "") {
+                gameObject.SetActive(false);
+            }
+
             if (string.IsNullOrEmpty(header)) {
                 headerField.gameObject.SetActive(false);
             }
@@ -31,10 +44,17 @@ public class ToolTip : MonoBehaviour
                 headerField.text = header;
             }
 
-            contentField.text = content;
+            if (contentField != null) {
+                contentField.text = content;
+            }
+
 
             int headerLength = headerField.text.Length;
-            int contentLength = contentField.text.Length;
+            int contentLength = 0;
+            if (contentField != null) {
+                contentLength = contentField.text.Length;
+            }
+
 
             layoutElement.enabled = (headerLength > characterWrapLimit || contentLength > characterWrapLimit) ? true : false;
         }

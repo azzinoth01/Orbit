@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4803410298043641918
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: shootsToCreate
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: skillsequenze.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: skillsequenze.Array.data[0].skill
+      value: 
+      objectReference: {fileID: 8513268908492894280, guid: 54f2bf474122be54aa6b948c2b0643d0, type: 3}
+    - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: skillsequenze.Array.data[1].delay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: skillsequenze.Array.data[1].skill
+      value: 
+      objectReference: {fileID: 8513268908492894280, guid: 54f2bf474122be54aa6b948c2b0643d0, type: 3}
+    - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: skillsequenze.Array.data[2].delay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: skillsequenze.Array.data[2].skill
+      value: 
+      objectReference: {fileID: 8513268908492894280, guid: 54f2bf474122be54aa6b948c2b0643d0, type: 3}
+    - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: skillsequenze.Array.data[1].shootInRotatedDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321158286959618350, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: skillsequenze.Array.data[2].shootInRotatedDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480416397340236, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480416397340236, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480416397340236, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719236, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_Name
+      value: Shooter_Enemy ZickZack Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08211756
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0140357
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211480418015719237, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbf4a4d14e14bd341bc79b15196b161e, type: 3}

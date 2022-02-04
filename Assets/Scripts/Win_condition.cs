@@ -67,6 +67,10 @@ public class Win_condition : MonoBehaviour
     public void enemyKilled() {
         enemysToKill = enemysToKill - 1;
 
+        if (Globals.waveControler != null) {
+            Globals.menuHandler.onChangedScore();
+        }
+
         if (enemysToKill <= 0 && Globals.waveControler != null) {
             Globals.waveControler.waveFinished();
         }
