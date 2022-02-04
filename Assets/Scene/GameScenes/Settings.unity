@@ -2195,18 +2195,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.6
-  m_Text: "Log Entry 0?? - Credits?\nJelena - Producer Captain der Crew\nTobi - Designer
-    Navigator\nMarkus - Programmer Mechaniker\nDomi - Artist Kartograph\nBennie -
-    Artist Kartograph\nFinn - Artist Kartograph\n\nLog Entry 1:\nWe did it! We really
-    did it! Oh my, Oh my! What a surprise... well of course I always believed we
-    could do it! But man, how cool are we? We stole the weapon!!! We are space thieves...
-    spieves!\n\nLog Entry 2:\nOkay and now we have to flee the hunters. Damn if only
-    this broken ship could fly for real. What junk are they building in their labs?
-    And with that\ntrash they wanted to control the whole universe? Bunch o' loser...\n\nLog
-    Entry 3:\nEh... well now they almost got us, shit that was close! Can they PLEASE
-    stop shooting, I am trying to write!?\n Captain says we have to somehow repair
-    this crap ship to escape for realsies. But how? There is nothing here. We're
-    in space!!"
+  m_Text: "Log Entry 1:\nWe did it! We really did it! Oh my, Oh my! What a surprise...
+    well of course I always believed we could do it! But man, how cool are we? We
+    stole the weapon!!! We are space thieves... spieves!\n\nLog Entry 2:\nOkay and
+    now we have to flee the hunters. Damn if only this broken ship could fly for
+    real. What junk are they building in their labs? And with that\ntrash they wanted
+    to control the whole universe? Bunch o' loser...\n\nLog Entry 3:\nEh... well
+    now they almost got us, shit that was close! Can they PLEASE stop shooting, I
+    am trying to write!?\n Captain says we have to somehow repair this crap ship
+    to escape for realsies. But how? There is nothing here. We're in space!!"
 --- !u!222 &682175061
 CanvasRenderer:
   m_ObjectHideFlags: 0
