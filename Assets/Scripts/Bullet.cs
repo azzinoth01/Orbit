@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 
 /// <summary>
-/// classe die beschreibt wie die Bullet fliegt
+/// class that describes how bullets fly
 /// </summary>
 public class Bullet : MonoBehaviour
 {
@@ -38,7 +38,7 @@ public class Bullet : MonoBehaviour
 
 
     /// <summary>
-    /// setzt basiswerte und erzeugt die Wegpunkte an der die Bullet entlanf fliegt
+    /// sets basevalues and creates the waypoints to which the bullets fly
     /// </summary>
     void Start() {
         //Debug.Log("start");
@@ -72,7 +72,7 @@ public class Bullet : MonoBehaviour
     }
 
     /// <summary>
-    /// controlliert das movement der Bullet
+    /// controls the movement of the bullets
     /// </summary>
     void Update() {
         if (Globals.pause == true) {
@@ -84,7 +84,7 @@ public class Bullet : MonoBehaviour
     }
 
     /// <summary>
-    /// beschreibt wie sich die bullet anhand der Wegpunkte bewegen soll
+    /// describes how the bullets move with the waypoints
     /// </summary>
     private void movement() {
         if (waypoints.Count > waypointIndex && waypointDirectionSet == false) {
@@ -122,7 +122,7 @@ public class Bullet : MonoBehaviour
     }
 
     /// <summary>
-    /// activiert den nächsten Wegpunkt zu den die Bullet fliegen soll
+    /// activates the next waypoint the bullet has to fly to
     /// </summary>
     private void activeNextWaypoint() {
         waypointObject[waypointIndex].SetActive(true);
@@ -130,9 +130,9 @@ public class Bullet : MonoBehaviour
 
 
     /// <summary>
-    /// erzeugt die Wegpunkte anhand der übergebenen Vectoren
+    /// creates the waypoints using the given vector
     /// </summary>
-    /// <param name="v2"> position des Wegpunktes</param>
+    /// <param name="v2"> position of the waypoint</param>
     private void createNextWaypoint(Vector2 v2) {
         GameObject g = Instantiate(waypointPrefab, transform.parent);
         g.transform.localPosition = v2;
@@ -143,9 +143,9 @@ public class Bullet : MonoBehaviour
     }
 
     /// <summary>
-    /// bullet hat die Bullet border getroffen und wird deswegen inactiv gesetzt
+    /// bullet has hit the bullet border and will be deactivated
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision"> collision object</param>
     private void OnTriggerExit2D(Collider2D collision) {
 
         if (collision.tag == Tag_enum.bullet_border.ToString()) {
@@ -155,11 +155,11 @@ public class Bullet : MonoBehaviour
     }
 
     /// <summary>
-    /// überprüft ob die Bullet einen Wegpunkt getroggen wurde 
-    /// außerdem wird überprüft ob ein enemy oder player getroffen wurde
-    /// und gibt diesen den Bullet dmg als dmg
+    /// checks if the bullet has hit a waypint
+    /// checks if a player of enemy was hit
+    /// if player of enemy was hit health will be reduced based on bullet dmg
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision"> collision object</param>
     private void OnTriggerEnter2D(Collider2D collision) {
 
 
@@ -236,7 +236,7 @@ public class Bullet : MonoBehaviour
 
 
     /// <summary>
-    /// setzt werte auf basis Werte zurück
+    /// resets the basic values
     /// </summary>
     private void OnEnable() {
         //Debug.Log("bullet got enabled");
@@ -252,7 +252,7 @@ public class Bullet : MonoBehaviour
     }
 
     /// <summary>
-    /// setzt die Bullet inactive und aktiviert den skill inactive check
+    /// sets the bullet inactive and activates the skill inactive check
     /// </summary>
     private void setInactive() {
 

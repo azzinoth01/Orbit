@@ -11,6 +11,7 @@ public class WaveControler : MonoBehaviour
     private int currentWave;
 
     private float curentHealthUpgrade;
+    private float currentEnemyDmgUpgrade;
 
 
     private Player player;
@@ -33,8 +34,8 @@ public class WaveControler : MonoBehaviour
         player = Globals.player.GetComponent<Player>();
         Globals.waveControler = this;
         curentHealthUpgrade = 0;
-
-        StartCoroutine(delayStart(0.5f));
+        currentEnemyDmgUpgrade = 0;
+        StartCoroutine(delayStart(1f));
     }
 
 
@@ -64,6 +65,7 @@ public class WaveControler : MonoBehaviour
             player.dmgModifier = player.dmgModifier + 1.1f;
 
             curentHealthUpgrade = curentHealthUpgrade * 2.8f;
+            currentEnemyDmgUpgrade = currentEnemyDmgUpgrade + 1f;
         }
 
         Globals.currentWinCondition.enemysToKill = 0;
@@ -90,6 +92,7 @@ public class WaveControler : MonoBehaviour
             }
 
             spawner[i].modifyAddHealth = curentHealthUpgrade;
+            spawner[i].modifyAddDmg = currentEnemyDmgUpgrade;
 
             spawner[i].gameObject.SetActive(true);
 
@@ -108,7 +111,7 @@ public class WaveControler : MonoBehaviour
         minEnemys = minEnemys + 1;
         maxEnemys = maxEnemys + 1;
 
-        startNextWave();
+        StartCoroutine(delayStart(1f));
     }
 
     private void OnDestroy() {

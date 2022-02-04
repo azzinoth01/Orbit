@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// camera Movement script
+/// camera movement script
 /// </summary>
 public class CameraScript : MonoBehaviour
 {
@@ -25,13 +25,13 @@ public class CameraScript : MonoBehaviour
     private bool screenShakeRunning;
 
     /// <summary>
-    /// setzt die momentane main camera in den Globalen variablen
+    /// sets the current main camera in the Global variables
     /// </summary>
     private void Awake() {
         Globals.currentCamera = gameObject.GetComponent<Camera>();
     }
     /// <summary>
-    /// setzt basis variablen
+    /// sets the base variables
     /// </summary>
     private void OnEnable() {
         body = GetComponent<Rigidbody2D>();
@@ -43,7 +43,7 @@ public class CameraScript : MonoBehaviour
     }
 
     /// <summary>
-    /// bewegt die camaera in bewegungsrichtung mit kleinem offset, damit man mehr in der Bewegungsrichtung sieht
+    /// moves the camera in movementdirection with a little offset, so one sees more in movementdirection
     /// </summary>
     private void Update() {
         if (Globals.pause == true) {
@@ -82,7 +82,7 @@ public class CameraScript : MonoBehaviour
 
 
     /// <summary>
-    /// startet den screen Shake
+    /// starts the screen shake
     /// </summary>
     /// <returns></returns>
     public IEnumerator startScreenShake() {
@@ -103,7 +103,7 @@ public class CameraScript : MonoBehaviour
 
 
     /// <summary>
-    /// führt den screen Shake durch
+    /// executes the screen shake
     /// </summary>
     /// <returns></returns>
     private IEnumerator screenShake() {

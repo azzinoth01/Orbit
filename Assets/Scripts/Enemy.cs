@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// class die enemys beschreibt und deren movement
+/// class describes enemys and their movement
 /// </summary>
 public class Enemy : MonoBehaviour
 {
@@ -102,9 +102,8 @@ public class Enemy : MonoBehaviour
 
 
     /// <summary>
-    /// erstellt alle gegner wegpunkte aus Vectoren Liste
-    /// startet die max Duration Corutine
-    /// und setzt values anhand des wegpunkt designers, wenn am überobject vorhanden ist ( nur für wegpunkt design zwecken)
+    /// creates all enemy waypoints out of the vector list
+    /// starts the max duration corutine
     /// </summary>
     void Start() {
 
@@ -184,7 +183,7 @@ public class Enemy : MonoBehaviour
 
     }
     /// <summary>
-    /// movement control
+    /// movement control and duration check
     /// </summary>
     void Update() {
         if (Globals.pause == true) {
@@ -232,6 +231,11 @@ public class Enemy : MonoBehaviour
 
     //}
 
+
+    /// <summary>
+    /// lets the boss hp drop smoothly by not removing the value at once but bit for bit each frame
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator smoothHealthDrop() {
         while (true) {
             if (Globals.pause == true) {
@@ -283,9 +287,9 @@ public class Enemy : MonoBehaviour
 
 
     /// <summary>
-    /// timer für delay zwischen den einzelen wegpunkt bewegungen
+    /// timer for delays after reaching the waypoint befor the enemy moves to the next waypoint
     /// </summary>
-    /// <param name="wait"> delay zeit in sekunden</param>
+    /// <param name="wait"> delay in seconds</param>
     /// <returns></returns>
     private IEnumerator startMoveDelay(float wait) {
         yield return new WaitForSeconds(wait);
@@ -294,9 +298,9 @@ public class Enemy : MonoBehaviour
 
     }
     /// <summary>
-    /// timer der die maximale duration des gegner beschreibt
+    /// timer which describes the max duration of the enemy
     /// </summary>
-    /// <param name="wait">maximale duration in Sekunden</param>
+    /// <param name="wait"> max duration in seconds</param>
     /// <returns></returns>
     private IEnumerator startMaxDurationTimer(float wait) {
         yield return new WaitForSeconds(wait);
@@ -305,8 +309,8 @@ public class Enemy : MonoBehaviour
     }
 
     /// <summary>
-    /// startet das rausmoven des gegners, wenn der enemy seine max Duration erreicht hat
-    /// deactiviert das enemy script
+    /// starts the move out of this enemy if the enemy has reached its max duration
+    /// deaactivates the enemy script
     /// </summary>
     public void startMovingOut() {
         //Debug.Log(transform.parent.gameObject.name);
@@ -332,12 +336,13 @@ public class Enemy : MonoBehaviour
 
 
     /// <summary>
-    /// führt das bewegungsverhalten des enemys durch anhand der gesetzten Variablen
-    /// Priorität der Variablen
+
+    /// executes the movementbehavior of the enemy depending on the set variables
+    /// priority of variables
     /// moveToPlayer
-    /// followPlayerMovementX und followPlayerMovementY
-    /// Waypoint Liste
-    /// moveToRandom Waypoint
+    /// followPlayerMovementX and followPlayerMovementY
+    /// waypoints
+    /// moveToRandomWaypoint
     /// </summary>
     private void movement() {
 
@@ -495,9 +500,9 @@ public class Enemy : MonoBehaviour
     }
 
     /// <summary>
-    /// take dmg funktion
+    /// take dmg function
     /// </summary>
-    /// <param name="dmg"> den dmg den der enemy nehmen soll</param>
+    /// <param name="dmg"> dmg the enemy takes</param>
     public void takeDmg(float dmg) {
         //Debug.Log(dmg);
         //  Debug.Log(health);
@@ -542,9 +547,9 @@ public class Enemy : MonoBehaviour
 
 
     /// <summary>
-    /// erzeugt wegpunkte anhand der übergebenen Vectoren
+    /// creates the waypoints using the given vector
     /// </summary>
-    /// <param name="v2"> position für den zu erstellenden Wegpunkt </param>
+    /// <param name="v2">  position of the waypoint</param>
     private void createNextWaypoint(Vector2 v2) {
         GameObject g = Instantiate(waypointPrefab, transform.parent);
         g.transform.localPosition = v2;
@@ -555,9 +560,9 @@ public class Enemy : MonoBehaviour
     }
 
     /// <summary>
-    /// check ob ein wegpunkt erreicht wurde und starte bewegung zum nächsten wegpunkt mit delay, wenn vorhanden
+    /// checks if a waypoint was reached and starts movement towards nextwaypoint with delay if delay exists
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision"> collision object</param>
     private void OnTriggerEnter2D(Collider2D collision) {
         try {
 
@@ -601,9 +606,9 @@ public class Enemy : MonoBehaviour
     }
 
     /// <summary>
-    /// bei collison dmg den player geben
+    /// if collision with player give player collision dmg and destroy enemys if it is destroyed by collision
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision"> collsion object</param>
     private void OnCollisionEnter2D(Collision2D collision) {
         try {
             if (collision.gameObject == Globals.player) {
@@ -625,9 +630,9 @@ public class Enemy : MonoBehaviour
 
 
     /// <summary>
-    /// beim zerstören wegpunkte zerstören
+    /// if enemy is destroyed, destory all waypoints
     /// win condition enemy kill hinzufügen
-    /// callback zum spawner machen, damit dieser neue gegner spawner können
+    /// callback towards spawner, so that spawner can spawn new enemy in its place
     /// </summary>
     private void OnDestroy() {
         try {

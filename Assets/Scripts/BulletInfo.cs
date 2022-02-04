@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// container classe die Bullets beschreibt
+/// container class to describe the bullets
 /// </summary>
 [Serializable]
 public class BulletInfo
@@ -22,10 +22,10 @@ public class BulletInfo
     private float dmgModifier;
 
     private Bullet bulletScript;
-    // Start is called before the first frame update
+
 
     /// <summary>
-    /// standardconstruktor setzt basiswerte
+    /// standardconstuctor sets the basevalues
     /// </summary>
     public BulletInfo() {
         //  Debug.Log("construktor called1");
@@ -36,13 +36,13 @@ public class BulletInfo
 
     }
     /// <summary>
-    /// construktor um werte zu setzten
+    /// constructor to set values
     /// </summary>
-    /// <param name="startRotation"> bestimmt die flugrichtung vom basisobject</param>
-    /// <param name="bulletBaseDmg"> bestimmt bullet base dmg</param>
-    /// <param name="bullet"> bestimmt bullet prefab</param>
-    /// <param name="startEffect"> bestimmt particel system start prefab</param>
-    /// <param name="sfxSound"> bestimmt Sound Effect prefab</param>
+    /// <param name="startRotation"> describes the flying direction of the baseobject</param>
+    /// <param name="bulletBaseDmg"> describes the base dmg of the bullet</param>
+    /// <param name="bullet"> bullet prefab</param>
+    /// <param name="startEffect"> particel system effect prefab</param>
+    /// <param name="sfxSound"> sound effect prefab</param>
     public BulletInfo(float startRotation, float bulletBaseDmg, GameObject bullet, GameObject startEffect, GameObject sfxSound) {
         Debug.Log("construktor called");
         this.startRotation = startRotation;
@@ -67,7 +67,7 @@ public class BulletInfo
     }
 
     /// <summary>
-    /// resetet die Dmg modifier
+    /// resets the dmg modifiers
     /// </summary>
     public void resetModifiers() {
         addBaseDmg = 0;
@@ -152,7 +152,7 @@ public class BulletInfo
     }
 
     /// <summary>
-    /// sets den bullet dmg auf der Bullet
+    /// sets the bullet dmg on the bullet
     /// </summary>
     public void setBulletDmg() {
         if (bulletScript != null) {
@@ -163,10 +163,13 @@ public class BulletInfo
 
     /// <summary>
     /// sets den layer der Bullet
+    /// sets the layer of the bullet (Layer_enum.player_bullets or Layer_enum.enemy_bullets)
     /// </summary>
-    /// <param name="layer"> layer in integer</param>
+    /// <param name="layer"> layer in integer (use Layer_enum)</param>
     public void setLayer(int layer) {
         bulletScript.gameObject.layer = layer;
+
+
     }
 
 
