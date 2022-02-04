@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// container classe für Spawner variablen
+/// container classe for spawner variablen
 /// </summary>
 [Serializable]
 public class Enemy_Spawner_Info
@@ -21,6 +21,9 @@ public class Enemy_Spawner_Info
     private bool spawnConditonFulfilled;
 
 
+    /// <summary>
+    /// base constructor sets standard values
+    /// </summary>
     public Enemy_Spawner_Info() {
         spawnStartet = false;
         currentEnemysSpawned = 0;

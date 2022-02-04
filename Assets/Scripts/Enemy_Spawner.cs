@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// classe die das Spawnen von Enemys controlliert
+/// class to control the spawning of enemys
 /// </summary>
 public class Enemy_Spawner : MonoBehaviour
 {
@@ -37,7 +37,7 @@ public class Enemy_Spawner : MonoBehaviour
 
 
     /// <summary>
-    /// startet alle gestoppten spawner neu,wenn diese neugestartet werden können
+    /// startet all stopped spawner anew if they can be started again
     /// </summary>
     void Update() {
         if (Globals.pause == true) {
@@ -63,7 +63,7 @@ public class Enemy_Spawner : MonoBehaviour
     }
 
     /// <summary>
-    /// startet den Timer für den Spawner selbst
+    /// starts the activation time of the spawner itself
     /// </summary>
     private void OnEnable() {
         isActive = false;
@@ -83,7 +83,7 @@ public class Enemy_Spawner : MonoBehaviour
 
 
     /// <summary>
-    /// startet alle spawn timer die nicht auf trigger areas angewiesen sind
+    /// starts  all spawn timer, who do not need a trigger area
     /// </summary>
     private void activateSpawning() {
 
@@ -111,7 +111,7 @@ public class Enemy_Spawner : MonoBehaviour
 
 
     /// <summary>
-    /// entfernt den spawner aus der Globalen Spawner liste
+    /// removes the spawner from the Global spawner list
     /// </summary>
     private void OnDisable() {
         Globals.spawnerListe.Remove(this);
@@ -120,11 +120,11 @@ public class Enemy_Spawner : MonoBehaviour
     }
 
     /// <summary>
-    /// Spawner Timer der enemys spawnt
+    /// spawn timer who spawns enemies
     /// </summary>
-    /// <param name="wait"> zeit in Sekunden um den enemy zu spawnen</param>
-    /// <param name="enemySpawnInfo"> information welchen enemy und wie viel davon zu spawnen sind</param>
-    /// <returns> corutine</returns>
+    /// <param name="wait"> time in seconds for enemy spawn</param>
+    /// <param name="enemySpawnInfo"> information which enemy and how many are to be spawned</param>
+    /// <returns></returns>
     private IEnumerator startSpawntimer(float wait, Enemy_Spawner_Info enemySpawnInfo) {
 
 
@@ -193,9 +193,9 @@ public class Enemy_Spawner : MonoBehaviour
     }
 
     /// <summary>
-    /// timer um den Spawner an sich zu starten
+    /// timer to start the spawner itself
     /// </summary>
-    /// <param name="wait">zeit um den Spawner zu starten in sekunden</param>
+    /// <param name="wait"> delay in seconds</param>
     /// <returns></returns>
     private IEnumerator spawnerActivationTimer(float wait) {
 
@@ -210,10 +210,10 @@ public class Enemy_Spawner : MonoBehaviour
 
 
     /// <summary>
-    /// check Spawntimer die auf trigger areas reagiert
+    /// check spawntimer who react to trigger areas
     /// </summary>
-    /// <param name="trigger"> trigger area die ausgelöst worden ist </param>
-    /// <returns> true, wenn der spawner active ist und der check entgegengenommen wurde</returns>
+    /// <param name="trigger"> trigger area who got triggerd</param>
+    /// <returns> true if the spawner is active and the check was accepted</returns>
     public bool checkSpawnTrigger(GameObject trigger) {
         if (isActive == false) {
 
@@ -231,10 +231,10 @@ public class Enemy_Spawner : MonoBehaviour
     }
 
     /// <summary>
-    /// checkt ob der Spawner activiert worden ist und activiert ihn
+    /// starts the activation of the spawner
     /// </summary>
-    /// <param name="trigger"> trigger area die ausgelöst worden ist</param>
-    /// <returns> true, wenn der spawner activiert worden ist</returns>
+    /// <param name="trigger"> trigger area who got triggerd</param>
+    /// <returns> true if spawner activation was started. false if the spawner is already active</returns>
     public bool checkSpawnerActivationTrigger(GameObject trigger) {
         if (isActive == false) {
             if (useTriggerArea == true && triggerArea == trigger) {
@@ -246,7 +246,7 @@ public class Enemy_Spawner : MonoBehaviour
     }
 
     /// <summary>
-    /// veringert den spawn count nachdem ein enemy zerstört worden ist
+    /// reduce the spawn count after a enemy was killed
     /// </summary>
     public void spawnKilled() {
         currentSpawnCount = currentSpawnCount - 1;
