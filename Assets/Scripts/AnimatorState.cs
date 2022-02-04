@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// animator state control
+/// </summary>
 public class AnimatorState : StateMachineBehaviour
 {
     // OnStateEnter is called before OnStateEnter is called on any state inside this state machine
@@ -40,7 +44,11 @@ public class AnimatorState : StateMachineBehaviour
     //    
     //}
 
-    // OnStateMachineExit is called when exiting a state machine via its Exit Node
+    /// <summary>
+    /// disables the animator when the exit node is entered
+    /// </summary>
+    /// <param name="animator"> the animator of the animation</param>
+    /// <param name="stateMachinePathHash"> not used</param>
     override public void OnStateMachineExit(Animator animator, int stateMachinePathHash) {
         animator.enabled = false;
     }

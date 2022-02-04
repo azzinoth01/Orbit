@@ -3805,9 +3805,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3790221305372445777, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790221305372445777, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 05aa5faf920c8ae4bb0e6938fb446245, type: 3}
+    - target: {fileID: 5278652918613393840, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5278652918613393840, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3867,6 +3875,10 @@ PrefabInstance:
     - target: {fileID: 6872552857980917036, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821898118279541318, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7821898118279541318, guid: 17213186f2eacfd4bb681d492226053a, type: 3}
       propertyPath: m_audioClip
@@ -4482,8 +4494,6 @@ MonoBehaviour:
   masterGroup: {fileID: 24300002, guid: 96b3b187a3caff54dacc641aa9468373, type: 2}
   background: {fileID: 1878232393816429957, guid: 96b3b187a3caff54dacc641aa9468373, type: 2}
   sfx: {fileID: -1263360175238652384, guid: 96b3b187a3caff54dacc641aa9468373, type: 2}
-  normal: {fileID: 24500006, guid: 96b3b187a3caff54dacc641aa9468373, type: 2}
-  mute: {fileID: -7075750568699150080, guid: 96b3b187a3caff54dacc641aa9468373, type: 2}
   muteButton: {fileID: 1466383438}
   backgroundSlider: {fileID: 1466383437}
   sfxSlider: {fileID: 1466383434}
