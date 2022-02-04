@@ -63,7 +63,10 @@ public class Menu_handler : MonoBehaviour
 
     public void onChangedScore() {
         if (Globals.waveControler != null) {
-            score.text = "Wave: " + Globals.waveControler.CurrentWave + "\r\n" + "Enemies: " + Globals.currentWinCondition.enemysToKill.ToString();
+            if (Globals.currentWinCondition != null && score != null) {
+                score.text = "Wave: " + Globals.waveControler.CurrentWave + "\r\n" + "Enemies: " + Globals.currentWinCondition.enemysToKill.ToString();
+            }
+
         }
         else {
             score.text = "Score: " + currentScore.ToString();
@@ -75,7 +78,22 @@ public class Menu_handler : MonoBehaviour
     /// <summary>
     /// setzt den menuHandler in den Globalen variablen
     /// </summary>
-    private void Awake() {
+    //private void Awake() {
+    //    Globals.menuHandler = this;
+    //    Globals.bossHpBar = bossHpBar;
+    //    Globals.bossUI = bossUI;
+    //    currentScore = 0;
+
+
+    //    SaveSettings s = SaveSettings.loadSettings();
+
+    //    if (tooltipToogle != null) {
+    //        tooltipToogle.isOn = s.IsToogleOn;
+    //    }
+
+    //}
+
+    private void OnEnable() {
         Globals.menuHandler = this;
         Globals.bossHpBar = bossHpBar;
         Globals.bossUI = bossUI;
@@ -87,7 +105,6 @@ public class Menu_handler : MonoBehaviour
         if (tooltipToogle != null) {
             tooltipToogle.isOn = s.IsToogleOn;
         }
-
     }
 
     /// <summary>
@@ -202,6 +219,8 @@ public class Menu_handler : MonoBehaviour
         catch {
 
         }
+
+        Globals.infityWaveSpawner.Clear();
 
     }
 

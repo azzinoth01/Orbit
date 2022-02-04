@@ -22,7 +22,9 @@ public class Enemy_rotation : MonoBehaviour
 
 
         while (true) {
-            if (Globals.pause == false && rotateTowardsPlayer == true && (activatedAfterMoveIn == false || (activatedAfterMoveIn == true && enemy.enabled == true))) {
+
+
+            if (Globals.player != null && Globals.pause == false && rotateTowardsPlayer == true && (activatedAfterMoveIn == false || (activatedAfterMoveIn == true && enemy.enabled == true))) {
 
 
                 Vector3 pos = Globals.player.transform.position;
