@@ -30,7 +30,7 @@ items:
   source:
     id: SoundControl
     path: ''
-    startLine: 9343
+    startLine: 10117
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -63,10 +63,12 @@ items:
   source:
     id: masterGroup
     path: ''
-    startLine: 9345
+    startLine: 10122
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmaster sound group\n"
+  example: []
   syntax:
     content: public AudioMixerGroup masterGroup
     return:
@@ -90,10 +92,12 @@ items:
   source:
     id: background
     path: ''
-    startLine: 9346
+    startLine: 10126
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbackground sound group\n"
+  example: []
   syntax:
     content: public AudioMixerGroup background
     return:
@@ -117,10 +121,12 @@ items:
   source:
     id: sfx
     path: ''
-    startLine: 9347
+    startLine: 10130
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsfx sound group\n"
+  example: []
   syntax:
     content: public AudioMixerGroup sfx
     return:
@@ -144,10 +150,12 @@ items:
   source:
     id: muteButton
     path: ''
-    startLine: 9357
+    startLine: 10143
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmute button image\n"
+  example: []
   syntax:
     content: public Image muteButton
     return:
@@ -171,10 +179,12 @@ items:
   source:
     id: backgroundSlider
     path: ''
-    startLine: 9358
+    startLine: 10147
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbackground sound volume slider\n"
+  example: []
   syntax:
     content: public Slider backgroundSlider
     return:
@@ -198,10 +208,12 @@ items:
   source:
     id: sfxSlider
     path: ''
-    startLine: 9359
+    startLine: 10151
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsfx sound volume slider\n"
+  example: []
   syntax:
     content: public Slider sfxSlider
     return:
@@ -225,10 +237,12 @@ items:
   source:
     id: muteSp
     path: ''
-    startLine: 9361
+    startLine: 10155
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmute sprite\n"
+  example: []
   syntax:
     content: public Sprite muteSp
     return:
@@ -252,10 +266,12 @@ items:
   source:
     id: unMuteSp
     path: ''
-    startLine: 9362
+    startLine: 10159
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nunmute sprite\n"
+  example: []
   syntax:
     content: public Sprite unMuteSp
     return:
@@ -279,10 +295,12 @@ items:
   source:
     id: masterSlider
     path: ''
-    startLine: 9364
+    startLine: 10163
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmaster sound volume slider\n"
+  example: []
   syntax:
     content: public Slider masterSlider
     return:
@@ -306,7 +324,7 @@ items:
   source:
     id: setStartSettings
     path: ''
-    startLine: 9397
+    startLine: 10196
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -334,7 +352,7 @@ items:
   source:
     id: toggleMute
     path: ''
-    startLine: 9456
+    startLine: 10255
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -362,7 +380,7 @@ items:
   source:
     id: sfxChanged
     path: ''
-    startLine: 9474
+    startLine: 10273
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -390,7 +408,7 @@ items:
   source:
     id: backgroundSoundChange
     path: ''
-    startLine: 9494
+    startLine: 10293
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -418,7 +436,7 @@ items:
   source:
     id: masterSoundChange
     path: ''
-    startLine: 9515
+    startLine: 10314
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -446,7 +464,7 @@ items:
   source:
     id: saveSettingChanges
     path: ''
-    startLine: 9535
+    startLine: 10334
   assemblies:
   - cs.temp.dll
   namespace: Global

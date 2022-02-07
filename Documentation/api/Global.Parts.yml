@@ -17,7 +17,7 @@ items:
   source:
     id: Parts
     path: ''
-    startLine: 6711
+    startLine: 7211
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -69,10 +69,12 @@ items:
   source:
     id: HealthBoost
     path: ''
-    startLine: 6717
+    startLine: 7220
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nboosts the health of the ship\n"
+  example: []
   syntax:
     content: public int HealthBoost { get; set; }
     parameters: []
@@ -100,10 +102,12 @@ items:
   source:
     id: ShieldRefreshValueBoost
     path: ''
-    startLine: 6727
+    startLine: 7232
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nboosts the shield refresh value\n"
+  example: []
   syntax:
     content: public float ShieldRefreshValueBoost { get; set; }
     parameters: []

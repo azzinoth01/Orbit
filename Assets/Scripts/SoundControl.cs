@@ -9,8 +9,17 @@ using UnityEngine.UI;
 /// </summary>
 public class SoundControl : MonoBehaviour
 {
+    /// <summary>
+    /// master sound group
+    /// </summary>
     public AudioMixerGroup masterGroup;
+    /// <summary>
+    /// background sound group
+    /// </summary>
     public AudioMixerGroup background;
+    /// <summary>
+    /// sfx sound group
+    /// </summary>
     public AudioMixerGroup sfx;
 
 
@@ -21,13 +30,29 @@ public class SoundControl : MonoBehaviour
 
     private SaveSettings saveSetting;
 
+    /// <summary>
+    /// mute button image
+    /// </summary>
     public Image muteButton;
+    /// <summary>
+    /// background sound volume slider
+    /// </summary>
     public Slider backgroundSlider;
+    /// <summary>
+    /// sfx sound volume slider
+    /// </summary>
     public Slider sfxSlider;
-
+    /// <summary>
+    /// mute sprite
+    /// </summary>
     public Sprite muteSp;
+    /// <summary>
+    /// unmute sprite
+    /// </summary>
     public Sprite unMuteSp;
-
+    /// <summary>
+    /// master sound volume slider
+    /// </summary>
     public Slider masterSlider;
 
 

@@ -18,7 +18,7 @@ items:
   source:
     id: Tag_enum
     path: ''
-    startLine: 9972
+    startLine: 10801
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -47,7 +47,7 @@ items:
   source:
     id: bullet_border
     path: ''
-    startLine: 9974
+    startLine: 10803
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -75,7 +75,7 @@ items:
   source:
     id: player_border
     path: ''
-    startLine: 9975
+    startLine: 10804
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -103,7 +103,7 @@ items:
   source:
     id: enemy_border
     path: ''
-    startLine: 9976
+    startLine: 10805
   assemblies:
   - cs.temp.dll
   namespace: Global

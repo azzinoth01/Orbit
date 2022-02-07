@@ -8,15 +8,30 @@ using UnityEngine;
 /// </summary>
 public class Weapon : MonoBehaviour
 {
+    /// <summary>
+    /// weapon sound prefab
+    /// </summary>
     public GameObject sound;
+    /// <summary>
+    /// weapon skill prefab
+    /// </summary>
     public GameObject skill;
+    /// <summary>
+    /// weapon reload time
+    /// </summary>
     public float reloadTime;
     private bool canShoot;
 
     [SerializeField] public int shootsToCreate;
     // public Animator anim;
 
+    /// <summary>
+    /// additional weapon dmg
+    /// </summary>
     public int additionalDmg;
+    /// <summary>
+    /// weapon dmg multiplier
+    /// </summary>
     public float dmgModifier;
 
 

@@ -23,7 +23,7 @@ items:
   source:
     id: SaveSettings
     path: ''
-    startLine: 8607
+    startLine: 9316
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -64,10 +64,12 @@ items:
   source:
     id: IsMute
     path: ''
-    startLine: 8616
+    startLine: 9329
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets mute\n"
+  example: []
   syntax:
     content: public bool IsMute { get; set; }
     parameters: []
@@ -95,10 +97,12 @@ items:
   source:
     id: BackgroundVolume
     path: ''
-    startLine: 8626
+    startLine: 9341
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets background volume\n"
+  example: []
   syntax:
     content: public float BackgroundVolume { get; set; }
     parameters: []
@@ -126,10 +130,12 @@ items:
   source:
     id: SfxVolume
     path: ''
-    startLine: 8636
+    startLine: 9353
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets sfx volume\n"
+  example: []
   syntax:
     content: public float SfxVolume { get; set; }
     parameters: []
@@ -157,10 +163,12 @@ items:
   source:
     id: MasterVolume
     path: ''
-    startLine: 8646
+    startLine: 9365
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets master volume\n"
+  example: []
   syntax:
     content: public float MasterVolume { get; set; }
     parameters: []
@@ -188,10 +196,12 @@ items:
   source:
     id: IsToogleOn
     path: ''
-    startLine: 8656
+    startLine: 9377
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nis toogle on\n"
+  example: []
   syntax:
     content: public bool IsToogleOn { get; set; }
     parameters: []
@@ -219,7 +229,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 8672
+    startLine: 9393
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -259,7 +269,7 @@ items:
   source:
     id: savingSetting
     path: ''
-    startLine: 8684
+    startLine: 9405
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -287,7 +297,7 @@ items:
   source:
     id: loadSettings
     path: ''
-    startLine: 8700
+    startLine: 9421
   assemblies:
   - cs.temp.dll
   namespace: Global

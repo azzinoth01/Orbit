@@ -13,6 +13,10 @@ public class ItemCatalog
 {
     [SerializeReference] private List<Item> itemList;
 
+
+    /// <summary>
+    /// list of item
+    /// </summary>
     public List<Item> ItemList {
         get {
             return itemList;

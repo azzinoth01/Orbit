@@ -31,7 +31,7 @@ items:
   source:
     id: Layer_enum
     path: ''
-    startLine: 5410
+    startLine: 5792
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -60,7 +60,7 @@ items:
   source:
     id: default
     path: ''
-    startLine: 5412
+    startLine: 5794
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -88,7 +88,7 @@ items:
   source:
     id: TransparentFX
     path: ''
-    startLine: 5413
+    startLine: 5795
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -116,7 +116,7 @@ items:
   source:
     id: Ignore_Raycast
     path: ''
-    startLine: 5414
+    startLine: 5796
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -144,7 +144,7 @@ items:
   source:
     id: empty
     path: ''
-    startLine: 5415
+    startLine: 5797
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -172,7 +172,7 @@ items:
   source:
     id: water
     path: ''
-    startLine: 5416
+    startLine: 5798
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -200,7 +200,7 @@ items:
   source:
     id: ui
     path: ''
-    startLine: 5417
+    startLine: 5799
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -228,7 +228,7 @@ items:
   source:
     id: player_bullets
     path: ''
-    startLine: 5418
+    startLine: 5800
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -256,7 +256,7 @@ items:
   source:
     id: player
     path: ''
-    startLine: 5419
+    startLine: 5801
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -284,7 +284,7 @@ items:
   source:
     id: enemy_bullets
     path: ''
-    startLine: 5420
+    startLine: 5802
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -312,7 +312,7 @@ items:
   source:
     id: enemy
     path: ''
-    startLine: 5421
+    startLine: 5803
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -340,7 +340,7 @@ items:
   source:
     id: UI_Overlay
     path: ''
-    startLine: 5422
+    startLine: 5804
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -368,7 +368,7 @@ items:
   source:
     id: player_border
     path: ''
-    startLine: 5423
+    startLine: 5805
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -396,7 +396,7 @@ items:
   source:
     id: enemy_border
     path: ''
-    startLine: 5424
+    startLine: 5806
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -424,7 +424,7 @@ items:
   source:
     id: player_immunity
     path: ''
-    startLine: 5425
+    startLine: 5807
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -452,7 +452,7 @@ items:
   source:
     id: bullet_border
     path: ''
-    startLine: 5426
+    startLine: 5808
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -480,7 +480,7 @@ items:
   source:
     id: camera
     path: ''
-    startLine: 5427
+    startLine: 5809
   assemblies:
   - cs.temp.dll
   namespace: Global

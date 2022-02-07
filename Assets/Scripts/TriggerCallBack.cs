@@ -7,14 +7,26 @@ using UnityEngine;
 /// </summary>
 public class TriggerCallBack : MonoBehaviour
 {
-
+    /// <summary>
+    /// makes the trigger a spawn trigger
+    /// </summary>
     public bool spawnTrigger;
+    /// <summary>
+    /// makes the trigger a spawner activation trigger
+    /// </summary>
     public bool spawnerActivationTrigger;
+    /// <summary>
+    /// makes the trigger a money drop
+    /// </summary>
     public bool moneyDrop;
 
     private bool canDestory;
     private int moneyValue;
 
+
+    /// <summary>
+    /// sets the money drop value
+    /// </summary>
     public int MoneyValue {
         set {
             moneyValue = value;

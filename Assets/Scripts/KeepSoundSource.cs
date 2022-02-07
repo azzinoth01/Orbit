@@ -12,9 +12,17 @@ public class KeepSoundSource : MonoBehaviour
 
 
     //public AudioSource audios;
+    /// <summary>
+    /// where the audio should be played
+    /// </summary>
     public List<int> playOnSceneIndex;
+    /// <summary>
+    /// don't destroy ID
+    /// </summary>
     public string dontDestroyID;
-
+    /// <summary>
+    /// audio to be played
+    /// </summary>
     public LoopSoundControl audios;
 
     /// <summary>

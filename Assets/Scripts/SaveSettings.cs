@@ -17,6 +17,10 @@ public class SaveSettings
     [SerializeField] private float masterVolume;
     [SerializeField] private bool isToogleOn;
 
+
+    /// <summary>
+    /// returns and sets mute
+    /// </summary>
     public bool IsMute {
         get {
             return isMute;
@@ -26,7 +30,9 @@ public class SaveSettings
             isMute = value;
         }
     }
-
+    /// <summary>
+    /// returns and sets background volume
+    /// </summary>
     public float BackgroundVolume {
         get {
             return backgroundVolume;
@@ -36,7 +42,9 @@ public class SaveSettings
             backgroundVolume = value;
         }
     }
-
+    /// <summary>
+    /// returns and sets sfx volume
+    /// </summary>
     public float SfxVolume {
         get {
             return sfxVolume;
@@ -46,7 +54,9 @@ public class SaveSettings
             sfxVolume = value;
         }
     }
-
+    /// <summary>
+    /// returns and sets master volume
+    /// </summary>
     public float MasterVolume {
         get {
             return masterVolume;
@@ -56,7 +66,9 @@ public class SaveSettings
             masterVolume = value;
         }
     }
-
+    /// <summary>
+    /// is toogle on
+    /// </summary>
     public bool IsToogleOn {
         get {
             return isToogleOn;

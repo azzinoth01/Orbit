@@ -22,6 +22,10 @@ public class PlayerSave
     [SerializeField] private bool tutorialPlayed;
     [SerializeField] private bool level1Played;
 
+
+    /// <summary>
+    /// player money
+    /// </summary>
     public int Money {
         get {
             return money;
@@ -32,6 +36,9 @@ public class PlayerSave
         }
     }
 
+    /// <summary>
+    /// main weapon of player
+    /// </summary>
     public WeaponInfo MainWeapon {
         get {
             return mainWeapon;
@@ -41,7 +48,9 @@ public class PlayerSave
             mainWeapon = value;
         }
     }
-
+    /// <summary>
+    /// secondary weapon of player
+    /// </summary>
     public WeaponInfo SecondaryWeapon {
         get {
             return secondaryWeapon;
@@ -51,7 +60,9 @@ public class PlayerSave
             secondaryWeapon = value;
         }
     }
-
+    /// <summary>
+    /// second secondary weapon of player
+    /// </summary>
     public WeaponInfo SecondaryWeapon1 {
         get {
             return secondaryWeapon1;
@@ -61,7 +72,9 @@ public class PlayerSave
             secondaryWeapon1 = value;
         }
     }
-
+    /// <summary>
+    /// ship parts of player
+    /// </summary>
     public Parts ShieldPart {
         get {
             return shieldPart;
@@ -71,7 +84,9 @@ public class PlayerSave
             shieldPart = value;
         }
     }
-
+    /// <summary>
+    /// list of bought items in the shop
+    /// </summary>
     public List<string> BoughtItems {
         get {
             return boughtItems;
@@ -81,7 +96,9 @@ public class PlayerSave
             boughtItems = value;
         }
     }
-
+    /// <summary>
+    /// turorial finished save
+    /// </summary>
     public bool TutorialPlayed {
         get {
             return tutorialPlayed;
@@ -91,7 +108,9 @@ public class PlayerSave
             tutorialPlayed = value;
         }
     }
-
+    /// <summary>
+    /// level 1 finished save
+    /// </summary>
     public bool Level1Played {
         get {
             return level1Played;

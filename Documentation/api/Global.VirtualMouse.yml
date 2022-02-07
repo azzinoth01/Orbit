@@ -8,7 +8,6 @@ items:
   - Global.VirtualMouse.canvas
   - Global.VirtualMouse.canvasRect
   - Global.VirtualMouse.cursor
-  - Global.VirtualMouse.hardwareMouseVisible
   - Global.VirtualMouse.loadNewRebinds
   - Global.VirtualMouse.OnLeftMouseButton(InputAction.CallbackContext)
   - Global.VirtualMouse.OnMiddleMouseButton(InputAction.CallbackContext)
@@ -29,7 +28,7 @@ items:
   source:
     id: VirtualMouse
     path: ''
-    startLine: 10211
+    startLine: 11072
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -51,33 +50,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Global.VirtualMouse.hardwareMouseVisible
-  commentId: F:Global.VirtualMouse.hardwareMouseVisible
-  id: hardwareMouseVisible
-  parent: Global.VirtualMouse
-  langs:
-  - csharp
-  - vb
-  name: hardwareMouseVisible
-  nameWithType: VirtualMouse.hardwareMouseVisible
-  fullName: VirtualMouse.hardwareMouseVisible
-  type: Field
-  source:
-    id: hardwareMouseVisible
-    path: ''
-    startLine: 10216
-  assemblies:
-  - cs.temp.dll
-  namespace: Global
-  syntax:
-    content: public bool hardwareMouseVisible
-    return:
-      type: System.Boolean
-    content.vb: Public hardwareMouseVisible As Boolean
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: Global.VirtualMouse.cursor
   commentId: F:Global.VirtualMouse.cursor
   id: cursor
@@ -92,10 +64,12 @@ items:
   source:
     id: cursor
     path: ''
-    startLine: 10218
+    startLine: 11083
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncursor object\n"
+  example: []
   syntax:
     content: public RectTransform cursor
     return:
@@ -119,10 +93,12 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 10219
+    startLine: 11087
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncursor speed\n"
+  example: []
   syntax:
     content: public float speed
     return:
@@ -146,10 +122,12 @@ items:
   source:
     id: canvasRect
     path: ''
-    startLine: 10221
+    startLine: 11093
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nRect transform of the canvas of the cursor\n"
+  example: []
   syntax:
     content: public RectTransform canvasRect
     return:
@@ -173,10 +151,12 @@ items:
   source:
     id: canvas
     path: ''
-    startLine: 10222
+    startLine: 11097
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncanvas of the cursor\n"
+  example: []
   syntax:
     content: public Canvas canvas
     return:
@@ -200,10 +180,12 @@ items:
   source:
     id: VirtualMouseProperty
     path: ''
-    startLine: 10240
+    startLine: 11117
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns the virtual mouse device object\n"
+  example: []
   syntax:
     content: public Mouse VirtualMouseProperty { get; }
     parameters: []
@@ -231,7 +213,7 @@ items:
   source:
     id: loadNewRebinds
     path: ''
-    startLine: 10323
+    startLine: 11200
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -259,7 +241,7 @@ items:
   source:
     id: OnLeftMouseButton
     path: ''
-    startLine: 10411
+    startLine: 11288
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -293,7 +275,7 @@ items:
   source:
     id: OnMiddleMouseButton
     path: ''
-    startLine: 10424
+    startLine: 11301
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -327,7 +309,7 @@ items:
   source:
     id: OnMoveCursor
     path: ''
-    startLine: 10437
+    startLine: 11314
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -361,7 +343,7 @@ items:
   source:
     id: OnPoint
     path: ''
-    startLine: 10445
+    startLine: 11322
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -395,7 +377,7 @@ items:
   source:
     id: OnRightMouseButton
     path: ''
-    startLine: 10461
+    startLine: 11338
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -429,7 +411,7 @@ items:
   source:
     id: OnScroll
     path: ''
-    startLine: 10474
+    startLine: 11351
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -463,7 +445,7 @@ items:
   source:
     id: OnToogleMouseVisibility
     path: ''
-    startLine: 10490
+    startLine: 11367
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -509,13 +491,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: Global.RectTransform
   isExternal: true
   name: RectTransform

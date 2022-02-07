@@ -16,7 +16,7 @@ items:
   source:
     id: BulletSoundControl
     path: ''
-    startLine: 2659
+    startLine: 2702
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -49,10 +49,12 @@ items:
   source:
     id: audios
     path: ''
-    startLine: 2662
+    startLine: 2707
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\naudio to be played\n"
+  example: []
   syntax:
     content: public AudioSource audios
     return:

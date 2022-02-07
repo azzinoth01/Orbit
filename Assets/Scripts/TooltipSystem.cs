@@ -8,7 +8,9 @@ using UnityEngine;
 /// </summary>
 public class TooltipSystem : MonoBehaviour
 {
-
+    /// <summary>
+    /// tooltip object to be used
+    /// </summary>
     public ToolTip tooltip;
 
 

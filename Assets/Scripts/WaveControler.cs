@@ -8,8 +8,13 @@ using UnityEngine;
 /// </summary>
 public class WaveControler : MonoBehaviour
 {
-
+    /// <summary>
+    /// min of enemies to spawn
+    /// </summary>
     public int minEnemys;
+    /// <summary>
+    /// max of enemies to spawn
+    /// </summary>
     public int maxEnemys;
 
     private int currentWave;
@@ -20,7 +25,9 @@ public class WaveControler : MonoBehaviour
 
     private Player player;
 
-
+    /// <summary>
+    /// returns and sets the current wave
+    /// </summary>
     public int CurrentWave {
         get {
             return currentWave;

@@ -15,12 +15,26 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     private Mouse virtualMouse;
     private Mouse hardwareMouse;
 
-    public bool hardwareMouseVisible;
 
+    private bool hardwareMouseVisible;
+
+    /// <summary>
+    /// cursor object
+    /// </summary>
     public RectTransform cursor;
+    /// <summary>
+    /// cursor speed
+    /// </summary>
     public float speed;
     private Vector2 direction;
+
+    /// <summary>
+    /// Rect transform of the canvas of the cursor
+    /// </summary>
     public RectTransform canvasRect;
+    /// <summary>
+    /// canvas of the cursor
+    /// </summary>
     public Canvas canvas;
 
     private Controlls controls;
@@ -38,7 +52,9 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 
 
 
-
+    /// <summary>
+    /// returns the virtual mouse device object
+    /// </summary>
     public Mouse VirtualMouseProperty {
         get {
             return virtualMouse;

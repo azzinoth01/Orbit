@@ -15,8 +15,13 @@ public class StoryIntro : MonoBehaviour
 {
 
     private bool skip;
+    /// <summary>
+    /// main menu panel
+    /// </summary>
     public GameObject mainMenu;
-
+    /// <summary>
+    /// story slide list
+    /// </summary>
     public List<GameObject> slides;
 
     private List<GameObject> privateSlides;
@@ -25,6 +30,9 @@ public class StoryIntro : MonoBehaviour
 
     private List<ButtonControl> pressedButtons;
 
+    /// <summary>
+    /// returns and sets the skip value
+    /// </summary>
     public bool Skip {
         get {
             return skip;

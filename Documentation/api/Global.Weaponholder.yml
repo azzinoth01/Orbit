@@ -16,7 +16,7 @@ items:
   source:
     id: Weaponholder
     path: ''
-    startLine: 10883
+    startLine: 11808
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -49,10 +49,12 @@ items:
   source:
     id: rotationSpeed
     path: ''
-    startLine: 10887
+    startLine: 11815
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nrotation speed of player weao�pons\n"
+  example: []
   syntax:
     content: public float rotationSpeed
     return:

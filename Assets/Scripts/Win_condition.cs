@@ -8,17 +8,39 @@ using UnityEngine.Experimental.Rendering.Universal;
 /// </summary>
 public class Win_condition : MonoBehaviour
 {
-
+    /// <summary>
+    /// enemies to kill
+    /// </summary>
     public int enemysToKill;
+    /// <summary>
+    /// collider to chck portal hit
+    /// </summary>
     public BoxCollider2D boxcollider;
-    public SpriteRenderer sp;
-    public Light2D lighting;
 
+    /// <summary>
+    /// sprite render of portal
+    /// </summary>
+    public SpriteRenderer sp;
+    /// <summary>
+    /// portal light
+    /// </summary>
+    public Light2D lighting;
+    /// <summary>
+    /// rotates the portal
+    /// </summary>
     public bool rotate;
+    /// <summary>
+    /// rotation speed of portal
+    /// </summary>
     public float rotateSpeed;
 
+    /// <summary>
+    /// portal spawn audio
+    /// </summary>
     public AudioSource audios;
-
+    /// <summary>
+    /// spawn delay
+    /// </summary>
     public float spawnDelay;
 
     private bool alreadyActive;

@@ -20,7 +20,7 @@ items:
   source:
     id: InventoryButton
     path: ''
-    startLine: 4532
+    startLine: 4851
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -56,10 +56,12 @@ items:
   source:
     id: Inv
     path: ''
-    startLine: 4539
+    startLine: 4862
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ninventory list\n"
+  example: []
   syntax:
     content: public Inventory_fill Inv { get; set; }
     parameters: []
@@ -87,10 +89,12 @@ items:
   source:
     id: Item
     path: ''
-    startLine: 4549
+    startLine: 4875
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nitem to use\n"
+  example: []
   syntax:
     content: public Item Item { get; set; }
     parameters: []
@@ -118,10 +122,12 @@ items:
   source:
     id: Locked
     path: ''
-    startLine: 4559
+    startLine: 4887
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nif the item is locked\n"
+  example: []
   syntax:
     content: public bool Locked { get; set; }
     parameters: []
@@ -149,10 +155,12 @@ items:
   source:
     id: Obj
     path: ''
-    startLine: 4569
+    startLine: 4900
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe gameobject of the buttons\n"
+  example: []
   syntax:
     content: public GameObject Obj { get; set; }
     parameters: []
@@ -180,7 +188,7 @@ items:
   source:
     id: OnPointerDown
     path: ''
-    startLine: 4583
+    startLine: 4914
   assemblies:
   - cs.temp.dll
   namespace: Global

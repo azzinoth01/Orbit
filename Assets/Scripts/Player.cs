@@ -11,31 +11,77 @@ using UnityEngine.UI;
 /// </summary>
 public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 {
+    /// <summary>
+    /// player max health
+    /// </summary>
     public float maxBaseHealth;
     private float currentHealth;
+    /// <summary>
+    /// health bar
+    /// </summary>
     public Image healthbar;
-
+    /// <summary>
+    /// health bar coloring above 60%
+    /// </summary>
     public Color healthbarAbove60;
+    /// <summary>
+    /// health bar coloring above 30%
+    /// </summary>
     public Color healthbarAbove30;
+    /// <summary>
+    /// health bar coloring below 30%
+    /// </summary>
     public Color healthbarBelow30;
 
+    /// <summary>
+    /// max shield value
+    /// </summary>
     public float maxschield;
+    /// <summary>
+    /// curent shield value
+    /// </summary>
     public float currentschield;
+    /// <summary>
+    /// shield bar
+    /// </summary>
     public Image schieldbar;
+    /// <summary>
+    /// shield bar step value for smooth shield increase
+    /// </summary>
     public float schieldbarStepValue;
 
+    /// <summary>
+    /// shield refresh rate
+    /// </summary>
     public float schieldRefreshRate;
+    /// <summary>
+    /// shield refresh value
+    /// </summary>
     public float schieldRefreshBaseValue;
 
-
+    /// <summary>
+    /// physic object of player
+    /// </summary>
     public Rigidbody2D body;
 
+    /// <summary>
+    /// the used force to move the player
+    /// </summary>
     public float force;
+    /// <summary>
+    /// the maximum speed the player can have
+    /// </summary>
     public float maxSpeed;
 
     private List<Weapon> weapons;
+    /// <summary>
+    /// list of weapon slot objects
+    /// </summary>
     public List<GameObject> WeaponSlots;
 
+    /// <summary>
+    /// ship object
+    /// </summary>
     public GameObject ship;
 
 
@@ -47,21 +93,58 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     // private Animator anim;
     //   public Animator antrieb;
 
+    /// <summary>
+    /// additional player dmg
+    /// </summary>
     public float additionalDmg;
+    /// <summary>
+    /// player dmg multiplier
+    /// </summary>
     public float dmgModifier;
 
+    /// <summary>
+    /// immunity flicker rate
+    /// </summary>
     public float immunityFlickerRate;
+    /// <summary>
+    /// immunity flicker visibility range
+    /// </summary>
     [Range(0, 1)] public float maxFlickerRange;
     private int flickerDirection;
 
+
+    /// <summary>
+    /// immunity time after hit
+    /// </summary>
     public float immunityTimeAfterHit;
+    /// <summary>
+    /// immunity time after doge
+    /// </summary>
     public float immunityTimeAfterDoge;
 
+    /// <summary>
+    /// doge charges
+    /// </summary>
     public int dogeCharges;
+    /// <summary>
+    /// doge range
+    /// </summary>
     public float dogeRange;
+    /// <summary>
+    /// doge speed
+    /// </summary>
     public float dogeSpeed;
+    /// <summary>
+    /// max doge duration
+    /// </summary>
     public float maxDogeDuration;
+    /// <summary>
+    /// doge cooldown
+    /// </summary>
     public float dogeCooldown;
+    /// <summary>
+    /// global cooldown of doge
+    /// </summary>
     public float globalCooldown;
 
     private int maxDogeCharges;
@@ -70,9 +153,18 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private bool isDoging;
 
     // public List<GameObject> chargeBalls;
-    public List<Sprite> chargeSprites;
-    public Image chargeUI;
 
+    /// <summary>
+    /// charge sprites
+    /// </summary>
+    public List<Sprite> chargeSprites;
+    /// <summary>
+    /// charge UI
+    /// </summary>
+    public Image chargeUI;
+    /// <summary>
+    /// waypoint prefab
+    /// </summary>
     public GameObject waypointPrefab;
     private GameObject waypoint;
     private Coroutine timer;
@@ -84,15 +176,35 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private bool isImmun;
     private SpriteRenderer sp;
 
+    /// <summary>
+    /// death effect
+    /// </summary>
     public GameObject deathEffect;
-
+    /// <summary>
+    /// charge audio
+    /// </summary>
     public AudioSource chargeAudio;
+    /// <summary>
+    /// hit audio
+    /// </summary>
     public AudioSource hitAudio;
 
+    /// <summary>
+    /// cracked screen overlay
+    /// </summary>
     public Image crackedScreenOverlay;
+    /// <summary>
+    /// cracked screen overlay
+    /// </summary>
     public Image crackedScreenOverlay2;
 
+    /// <summary>
+    /// cracked sprite
+    /// </summary>
     public Sprite crackedLevel1;
+    /// <summary>
+    /// cracked sprite
+    /// </summary>
     public Sprite crackedLevel2;
 
 
@@ -100,20 +212,34 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     private Parts shieldPart;
 
+    /// <summary>
+    /// trail object
+    /// </summary>
     public TrailRenderer trail;
 
+    /// <summary>
+    /// dash audio
+    /// </summary>
     public AudioSource dashAudio;
 
     private LoadAssets loader;
-
+    /// <summary>
+    /// cracked sound 
+    /// </summary>
     public AudioSource crackedSound;
-
+    /// <summary>
+    /// player bullet sound prefab
+    /// </summary>
     public GameObject playerBulletSoundPrefab;
 
     private bool firstCrackedSoundPlayed;
     private bool secondCrackedSoundPlayed;
 
     private bool schieldRefreshStarted;
+
+    /// <summary>
+    /// returns the impulse direction
+    /// </summary>
     public Vector2 Impulse {
         get {
             return impulse;
@@ -122,6 +248,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
 
+    /// <summary>
+    /// not in use anymore
+    /// </summary>
     public float Timestamp {
         get {
             return timestamp;
@@ -131,7 +260,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             timestamp = value;
         }
     }
-
+    /// <summary>
+    /// returns and sets the shield part
+    /// </summary>
     public Parts ShieldPart {
         get {
             return shieldPart;
@@ -141,7 +272,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             shieldPart = value;
         }
     }
-
+    /// <summary>
+    /// returns and sets the current health
+    /// </summary>
     public float CurrentHealth {
         get {
             return currentHealth;

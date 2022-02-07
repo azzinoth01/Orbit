@@ -9,7 +9,14 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+
+    /// <summary>
+    /// the text for the content text field
+    /// </summary>
     public string content;
+    /// <summary>
+    /// the text for the header text field
+    /// </summary>
     public string header;
 
 

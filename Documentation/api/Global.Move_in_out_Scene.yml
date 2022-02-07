@@ -22,7 +22,7 @@ items:
   source:
     id: Move_in_out_Scene
     path: ''
-    startLine: 6350
+    startLine: 6819
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -55,10 +55,12 @@ items:
   source:
     id: moveInWaypoints
     path: ''
-    startLine: 6352
+    startLine: 6825
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmove in waypoint list\n"
+  example: []
   syntax:
     content: public List<Vector2> moveInWaypoints
     return:
@@ -82,10 +84,12 @@ items:
   source:
     id: moveOutWaypoints
     path: ''
-    startLine: 6353
+    startLine: 6829
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmove out waypoint list\n"
+  example: []
   syntax:
     content: public List<Vector2> moveOutWaypoints
     return:
@@ -109,10 +113,12 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 6354
+    startLine: 6834
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nwaypoint prefab\n"
+  example: []
   syntax:
     content: public GameObject waypointPrefab
     return:
@@ -136,10 +142,12 @@ items:
   source:
     id: force
     path: ''
-    startLine: 6359
+    startLine: 6841
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe used force to move the enemy\n"
+  example: []
   syntax:
     content: public float force
     return:
@@ -163,10 +171,12 @@ items:
   source:
     id: maxSpeed
     path: ''
-    startLine: 6360
+    startLine: 6845
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe maximum speed the enemy can have\n"
+  example: []
   syntax:
     content: public float maxSpeed
     return:
@@ -190,10 +200,12 @@ items:
   source:
     id: body
     path: ''
-    startLine: 6362
+    startLine: 6849
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nphysic object of enemy\n"
+  example: []
   syntax:
     content: public Rigidbody2D body
     return:
@@ -217,7 +229,7 @@ items:
   source:
     id: startMoveOut
     path: ''
-    startLine: 6464
+    startLine: 6951
   assemblies:
   - cs.temp.dll
   namespace: Global

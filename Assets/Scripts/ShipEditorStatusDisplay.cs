@@ -9,15 +9,38 @@ using UnityEngine.UI;
 public class ShipEditorStatusDisplay : MonoBehaviour
 {
 
-
+    /// <summary>
+    /// total dmg display
+    /// </summary>
     public Text dmgText;
+    /// <summary>
+    /// total dmg display field name
+    /// </summary>
     public Text dmgNameText;
+    /// <summary>
+    /// reload time display
+    /// </summary>
     public Text reloadTimeText;
+    /// <summary>
+    /// reload time display field name
+    /// </summary>
     public Text reloadTimeNameText;
+    /// <summary>
+    /// pattern icon display
+    /// </summary>
     public Image patternIcon;
+    /// <summary>
+    /// pattern icon display field name
+    /// </summary>
     public Text parrernIconName;
+    /// <summary>
+    /// item name display
+    /// </summary>
     public Text itemName;
 
+    /// <summary>
+    /// owned money display
+    /// </summary>
     public Text ownedMoney;
 
     private Item currentItem;

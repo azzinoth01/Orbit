@@ -9,10 +9,26 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class Main_menu : MonoBehaviour
 {
+
+    /// <summary>
+    /// main menu panel
+    /// </summary>
     public GameObject mainMenu;
+    /// <summary>
+    /// not in use
+    /// </summary>
     public GameObject optionsMenu;
+    /// <summary>
+    /// not in use
+    /// </summary>
     public GameObject soundMenu;
+    /// <summary>
+    /// not in use
+    /// </summary>
     public GameObject rebidningMenu;
+    /// <summary>
+    /// credits menu panel
+    /// </summary>
     public GameObject credits;
 
     /// <summary>

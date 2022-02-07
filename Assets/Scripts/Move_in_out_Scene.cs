@@ -8,16 +8,34 @@ using UnityEngine;
 /// </summary>
 public class Move_in_out_Scene : MonoBehaviour
 {
+
+    /// <summary>
+    /// move in waypoint list
+    /// </summary>
     public List<Vector2> moveInWaypoints;
+    /// <summary>
+    /// move out waypoint list
+    /// </summary>
     public List<Vector2> moveOutWaypoints;
+
+    /// <summary>
+    /// waypoint prefab
+    /// </summary>
     public GameObject waypointPrefab;
 
 
 
-
+    /// <summary>
+    /// the used force to move the enemy
+    /// </summary>
     public float force;
+    /// <summary>
+    /// the maximum speed the enemy can have
+    /// </summary>
     public float maxSpeed;
-
+    /// <summary>
+    /// physic object of enemy
+    /// </summary>
     public Rigidbody2D body;
     private Rigidbody2D childBody;
 

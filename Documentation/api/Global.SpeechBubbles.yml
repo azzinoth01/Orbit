@@ -18,7 +18,7 @@ items:
   source:
     id: SpeechBubbles
     path: ''
-    startLine: 9636
+    startLine: 10448
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -51,10 +51,12 @@ items:
   source:
     id: UiObject
     path: ''
-    startLine: 9638
+    startLine: 10453
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nspeech bubble object\n"
+  example: []
   syntax:
     content: public GameObject UiObject
     return:
@@ -78,10 +80,12 @@ items:
   source:
     id: Trigger
     path: ''
-    startLine: 9639
+    startLine: 10457
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ntrigger object\n"
+  example: []
   syntax:
     content: public GameObject Trigger
     return:
@@ -105,10 +109,12 @@ items:
   source:
     id: audios
     path: ''
-    startLine: 9640
+    startLine: 10461
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\naudio source\n"
+  example: []
   syntax:
     content: public AudioSource audios
     return:

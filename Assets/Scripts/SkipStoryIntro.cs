@@ -9,7 +9,9 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class SkipStoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
 {
-
+    /// <summary>
+    /// story intro object
+    /// </summary>
     public StoryIntro intro;
     private Controlls controll;
 

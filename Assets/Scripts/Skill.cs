@@ -7,7 +7,14 @@ using UnityEngine;
 /// </summary>
 public class Skill : MonoBehaviour
 {
+
+    /// <summary>
+    /// list of bullet infos
+    /// </summary>
     public List<BulletInfo> bulletInfoList;
+    /// <summary>
+    /// max duration of skill
+    /// </summary>
     public int maxDuration;
     private float time;
     private bool isRunning;
@@ -16,7 +23,9 @@ public class Skill : MonoBehaviour
     private float timestamp;
 
 
-
+    /// <summary>
+    /// timestamp of skill
+    /// </summary>
     public float Timestamp {
         get {
             return timestamp;

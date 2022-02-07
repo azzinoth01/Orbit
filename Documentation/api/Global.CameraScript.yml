@@ -5,8 +5,6 @@ items:
   id: CameraScript
   parent: Global
   children:
-  - Global.CameraScript.offsetSpeed
-  - Global.CameraScript.player
   - Global.CameraScript.screenShakeMaxDuration
   - Global.CameraScript.screenShakeMaxMagnitude
   - Global.CameraScript.screenShakeMinDuration
@@ -21,7 +19,7 @@ items:
   source:
     id: CameraScript
     path: ''
-    startLine: 2749
+    startLine: 2799
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -40,60 +38,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Global.CameraScript.player
-  commentId: F:Global.CameraScript.player
-  id: player
-  parent: Global.CameraScript
-  langs:
-  - csharp
-  - vb
-  name: player
-  nameWithType: CameraScript.player
-  fullName: CameraScript.player
-  type: Field
-  source:
-    id: player
-    path: ''
-    startLine: 2753
-  assemblies:
-  - cs.temp.dll
-  namespace: Global
-  syntax:
-    content: public Player player
-    return:
-      type: Global.Player
-    content.vb: Public player As Player
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Global.CameraScript.offsetSpeed
-  commentId: F:Global.CameraScript.offsetSpeed
-  id: offsetSpeed
-  parent: Global.CameraScript
-  langs:
-  - csharp
-  - vb
-  name: offsetSpeed
-  nameWithType: CameraScript.offsetSpeed
-  fullName: CameraScript.offsetSpeed
-  type: Field
-  source:
-    id: offsetSpeed
-    path: ''
-    startLine: 2756
-  assemblies:
-  - cs.temp.dll
-  namespace: Global
-  syntax:
-    content: public float offsetSpeed
-    return:
-      type: System.Single
-    content.vb: Public offsetSpeed As Single
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: Global.CameraScript.screenShakeMaxDuration
   commentId: F:Global.CameraScript.screenShakeMaxDuration
   id: screenShakeMaxDuration
@@ -108,10 +52,12 @@ items:
   source:
     id: screenShakeMaxDuration
     path: ''
-    startLine: 2760
+    startLine: 2812
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nscreen shake max duration\n"
+  example: []
   syntax:
     content: public float screenShakeMaxDuration
     return:
@@ -135,10 +81,12 @@ items:
   source:
     id: screenShakeMinDuration
     path: ''
-    startLine: 2761
+    startLine: 2816
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nscreen shake min duration\n"
+  example: []
   syntax:
     content: public float screenShakeMinDuration
     return:
@@ -162,10 +110,12 @@ items:
   source:
     id: screenShakeMaxMagnitude
     path: ''
-    startLine: 2763
+    startLine: 2821
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nscreen shake max magnitude\n"
+  example: []
   syntax:
     content: public float screenShakeMaxMagnitude
     return:
@@ -189,7 +139,7 @@ items:
   source:
     id: startScreenShake
     path: ''
-    startLine: 2829
+    startLine: 2887
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -227,11 +177,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Global.Player
-  commentId: T:Global.Player
-  name: Player
-  nameWithType: Player
-  fullName: Player
 - uid: System.Single
   commentId: T:System.Single
   parent: System

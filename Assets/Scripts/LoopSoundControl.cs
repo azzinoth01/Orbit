@@ -8,14 +8,26 @@ using UnityEngine;
 /// </summary>
 public class LoopSoundControl : MonoBehaviour
 {
-
+    /// <summary>
+    /// the start audio
+    /// </summary>
     public AudioSource startAudio;
+    /// <summary>
+    /// the transition audio
+    /// </summary>
     public AudioSource transitionAudio;
+    /// <summary>
+    /// the loop audio
+    /// </summary>
     public AudioSource loopAudio;
 
     private bool transitionPlayed;
     private bool isPlaying;
 
+
+    /// <summary>
+    /// returns the playing state
+    /// </summary>
     public bool IsPlaying {
         get {
             return isPlaying;

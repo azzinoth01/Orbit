@@ -30,7 +30,7 @@ items:
   source:
     id: BulletInfo
     path: ''
-    startLine: 2471
+    startLine: 2488
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -71,7 +71,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2491
+    startLine: 2508
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -99,7 +99,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2507
+    startLine: 2524
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -143,10 +143,12 @@ items:
   source:
     id: StartRotation
     path: ''
-    startLine: 2520
+    startLine: 2540
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nstart rotation\n"
+  example: []
   syntax:
     content: public float StartRotation { get; set; }
     parameters: []
@@ -174,7 +176,7 @@ items:
   source:
     id: resetModifiers
     path: ''
-    startLine: 2533
+    startLine: 2553
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -202,10 +204,12 @@ items:
   source:
     id: Bullet
     path: ''
-    startLine: 2540
+    startLine: 2563
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbullet prefab\n"
+  example: []
   syntax:
     content: public GameObject Bullet { get; set; }
     parameters: []
@@ -233,10 +237,12 @@ items:
   source:
     id: BulletScript
     path: ''
-    startLine: 2550
+    startLine: 2576
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nset bullet script and calc bullet dmg\n"
+  example: []
   syntax:
     content: public Bullet BulletScript { set; }
     parameters: []
@@ -264,10 +270,12 @@ items:
   source:
     id: AddBaseDmg
     path: ''
-    startLine: 2559
+    startLine: 2588
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nset base dmg and calc bullet dmg\n"
+  example: []
   syntax:
     content: public float AddBaseDmg { set; }
     parameters: []
@@ -295,10 +303,12 @@ items:
   source:
     id: DmgModifier
     path: ''
-    startLine: 2568
+    startLine: 2600
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nset dmg modifier and calc bullet dmg\n"
+  example: []
   syntax:
     content: public float DmgModifier { set; }
     parameters: []
@@ -326,10 +336,12 @@ items:
   source:
     id: StartEffect
     path: ''
-    startLine: 2577
+    startLine: 2611
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nset and returns the sart effect of the bullet\n"
+  example: []
   syntax:
     content: public GameObject StartEffect { get; set; }
     parameters: []
@@ -357,10 +369,12 @@ items:
   source:
     id: InstantStartEffect
     path: ''
-    startLine: 2587
+    startLine: 2624
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsets and returns the instanz of the start effect\n"
+  example: []
   syntax:
     content: public GameObject InstantStartEffect { get; set; }
     parameters: []
@@ -388,10 +402,12 @@ items:
   source:
     id: SfxSound
     path: ''
-    startLine: 2597
+    startLine: 2637
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsets and returns the sfx Sound effect\n"
+  example: []
   syntax:
     content: public GameObject SfxSound { get; set; }
     parameters: []
@@ -419,10 +435,12 @@ items:
   source:
     id: BulletBaseDmg
     path: ''
-    startLine: 2607
+    startLine: 2650
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns the bullet base dmg\n"
+  example: []
   syntax:
     content: public float BulletBaseDmg { get; }
     parameters: []
@@ -450,7 +468,7 @@ items:
   source:
     id: setBulletDmg
     path: ''
-    startLine: 2618
+    startLine: 2661
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -478,7 +496,7 @@ items:
   source:
     id: setLayer
     path: ''
-    startLine: 2630
+    startLine: 2673
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -510,7 +528,7 @@ items:
   source:
     id: enableEffects
     path: ''
-    startLine: 2640
+    startLine: 2683
   assemblies:
   - cs.temp.dll
   namespace: Global

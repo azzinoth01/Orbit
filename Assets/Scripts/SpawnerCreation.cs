@@ -8,13 +8,26 @@ using UnityEngine;
 /// </summary>
 public class SpawnerCreation : MonoBehaviour
 {
-
+    /// <summary>
+    /// referenz spawner object
+    /// </summary>
     public GameObject refSpawner;
 
+    /// <summary>
+    /// move in and move out offset
+    /// </summary>
     public Vector2 moveInOutOffset;
+    /// <summary>
+    /// use waypoint X offset
+    /// </summary>
     public bool useWaypointOffsetX;
+    /// <summary>
+    /// use waypoint Y offset
+    /// </summary>
     public bool useWaypointOffsetY;
-
+    /// <summary>
+    /// flip waypoint offset
+    /// </summary>
     public bool flipOffset;
 
 

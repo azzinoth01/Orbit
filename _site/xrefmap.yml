@@ -313,18 +313,6 @@ references:
   commentId: T:Global.CameraScript
   fullName: CameraScript
   nameWithType: CameraScript
-- uid: Global.CameraScript.offsetSpeed
-  name: offsetSpeed
-  href: api/Global.CameraScript.html#Global_CameraScript_offsetSpeed
-  commentId: F:Global.CameraScript.offsetSpeed
-  fullName: CameraScript.offsetSpeed
-  nameWithType: CameraScript.offsetSpeed
-- uid: Global.CameraScript.player
-  name: player
-  href: api/Global.CameraScript.html#Global_CameraScript_player
-  commentId: F:Global.CameraScript.player
-  fullName: CameraScript.player
-  nameWithType: CameraScript.player
 - uid: Global.CameraScript.screenShakeMaxDuration
   name: screenShakeMaxDuration
   href: api/Global.CameraScript.html#Global_CameraScript_screenShakeMaxDuration
@@ -5563,12 +5551,6 @@ references:
   commentId: F:Global.VirtualMouse.cursor
   fullName: VirtualMouse.cursor
   nameWithType: VirtualMouse.cursor
-- uid: Global.VirtualMouse.hardwareMouseVisible
-  name: hardwareMouseVisible
-  href: api/Global.VirtualMouse.html#Global_VirtualMouse_hardwareMouseVisible
-  commentId: F:Global.VirtualMouse.hardwareMouseVisible
-  fullName: VirtualMouse.hardwareMouseVisible
-  nameWithType: VirtualMouse.hardwareMouseVisible
 - uid: Global.VirtualMouse.loadNewRebinds
   name: loadNewRebinds()
   href: api/Global.VirtualMouse.html#Global_VirtualMouse_loadNewRebinds

@@ -12,13 +12,32 @@ public class RemoveSlotItem : MonoBehaviour
     private bool isMouseOver;
     private Image image;
 
+    /// <summary>
+    /// is the button main weapon slot 
+    /// </summary>
     public bool isMainWeapon;
+    /// <summary>
+    /// is the button secondary weapon slot 
+    /// </summary>
     public bool isSecondaryWeapon;
+    /// <summary>
+    /// is the button secondary weapon 2 slot 
+    /// </summary>
     public bool isSecondaryWeapon1;
+    /// <summary>
+    /// is the button ship part slot 
+    /// </summary>
     public bool isShipPart;
 
+    /// <summary>
+    /// remove click audio
+    /// </summary>
     public AudioSource audios;
 
+
+    /// <summary>
+    /// image of the button
+    /// </summary>
     public Image Image {
         get {
             return image;
@@ -29,6 +48,9 @@ public class RemoveSlotItem : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// returns and sets mouseover
+    /// </summary>
     public bool IsMouseOver {
         get {
             return isMouseOver;

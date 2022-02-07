@@ -19,7 +19,7 @@ items:
   source:
     id: Skillsequenze
     path: ''
-    startLine: 9192
+    startLine: 9957
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -60,7 +60,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 9205
+    startLine: 9970
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -98,10 +98,12 @@ items:
   source:
     id: Skill
     path: ''
-    startLine: 9211
+    startLine: 9979
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nretruns skill gameobject\n"
+  example: []
   syntax:
     content: public GameObject Skill { get; }
     parameters: []
@@ -129,10 +131,12 @@ items:
   source:
     id: Delay
     path: ''
-    startLine: 9219
+    startLine: 9989
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns skill delay\n"
+  example: []
   syntax:
     content: public float Delay { get; }
     parameters: []
@@ -160,10 +164,12 @@ items:
   source:
     id: ShootInRotatedDirection
     path: ''
-    startLine: 9227
+    startLine: 9999
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets if the skill shoots in player direction\n"
+  example: []
   syntax:
     content: public bool ShootInRotatedDirection { get; set; }
     parameters: []

@@ -23,7 +23,7 @@ items:
   source:
     id: SkipStoryIntro
     path: ''
-    startLine: 9247
+    startLine: 10019
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -59,10 +59,12 @@ items:
   source:
     id: intro
     path: ''
-    startLine: 9250
+    startLine: 10024
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nstory intro object\n"
+  example: []
   syntax:
     content: public StoryIntro intro
     return:
@@ -86,7 +88,7 @@ items:
   source:
     id: OnDoge
     path: ''
-    startLine: 9257
+    startLine: 10031
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -120,7 +122,7 @@ items:
   source:
     id: OnMove_down
     path: ''
-    startLine: 9264
+    startLine: 10038
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -154,7 +156,7 @@ items:
   source:
     id: OnMove_left
     path: ''
-    startLine: 9271
+    startLine: 10045
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -188,7 +190,7 @@ items:
   source:
     id: OnMove_rigth
     path: ''
-    startLine: 9278
+    startLine: 10052
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -222,7 +224,7 @@ items:
   source:
     id: OnMove_up
     path: ''
-    startLine: 9285
+    startLine: 10059
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -256,7 +258,7 @@ items:
   source:
     id: OnPause_menu
     path: ''
-    startLine: 9292
+    startLine: 10066
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -290,7 +292,7 @@ items:
   source:
     id: OnShoot
     path: ''
-    startLine: 9301
+    startLine: 10075
   assemblies:
   - cs.temp.dll
   namespace: Global

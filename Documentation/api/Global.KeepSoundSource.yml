@@ -18,7 +18,7 @@ items:
   source:
     id: KeepSoundSource
     path: ''
-    startLine: 5344
+    startLine: 5718
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -51,10 +51,12 @@ items:
   source:
     id: playOnSceneIndex
     path: ''
-    startLine: 5350
+    startLine: 5727
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nwhere the audio should be played\n"
+  example: []
   syntax:
     content: public List<int> playOnSceneIndex
     return:
@@ -78,10 +80,12 @@ items:
   source:
     id: dontDestroyID
     path: ''
-    startLine: 5351
+    startLine: 5731
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndon&apos;t destroy ID\n"
+  example: []
   syntax:
     content: public string dontDestroyID
     return:
@@ -105,10 +109,12 @@ items:
   source:
     id: audios
     path: ''
-    startLine: 5353
+    startLine: 5735
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\naudio to be played\n"
+  example: []
   syntax:
     content: public LoopSoundControl audios
     return:

@@ -16,7 +16,7 @@ items:
   source:
     id: CustomButton
     path: ''
-    startLine: 2921
+    startLine: 2979
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -49,10 +49,12 @@ items:
   source:
     id: buttonimage
     path: ''
-    startLine: 2923
+    startLine: 2984
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbutton image which controls the shape\n"
+  example: []
   syntax:
     content: public Image buttonimage
     return:

@@ -9,20 +9,46 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class Waypoint_Designer : MonoBehaviour
 {
-
+    /// <summary>
+    /// waypoint list
+    /// </summary>
     public List<Vector2> waypoints;
+    /// <summary>
+    /// speed of object
+    /// </summary>
     public float speed;
+    /// <summary>
+    /// force of object
+    /// </summary>
     public float force;
+    /// <summary>
+    /// restart time of loop
+    /// </summary>
     public float restartAfter;
+    /// <summary>
+    /// loop waypoints
+    /// </summary>
     public bool loop;
+    /// <summary>
+    /// delay between waypoints
+    /// </summary>
     public float enemyDelayToNextWaypoint;
+    /// <summary>
+    /// line render
+    /// </summary>
     public LineRenderer line;
+    /// <summary>
+    /// waypoint prefab
+    /// </summary>
     public GameObject waypointPrefab;
     // public GameObject movementCheckPrefab;
     private GameObject waypointPlacer;
     private bool placeWaypoint;
     private int lineIndex;
 
+    /// <summary>
+    /// list of waypoint objects
+    /// </summary>
     public List<GameObject> waypointList;
 
 

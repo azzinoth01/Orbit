@@ -28,7 +28,7 @@ items:
   source:
     id: Inventory_fill
     path: ''
-    startLine: 4602
+    startLine: 4933
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -61,10 +61,12 @@ items:
   source:
     id: mainWeaponBox
     path: ''
-    startLine: 4604
+    startLine: 4938
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmain weapon box prefab\n"
+  example: []
   syntax:
     content: public GameObject mainWeaponBox
     return:
@@ -88,10 +90,12 @@ items:
   source:
     id: secondaryWeaponBox
     path: ''
-    startLine: 4605
+    startLine: 4942
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsecondary weapon box prefab\n"
+  example: []
   syntax:
     content: public GameObject secondaryWeaponBox
     return:
@@ -115,10 +119,12 @@ items:
   source:
     id: partsBox
     path: ''
-    startLine: 4606
+    startLine: 4946
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nship parts box prefab\n"
+  example: []
   syntax:
     content: public GameObject partsBox
     return:
@@ -142,10 +148,12 @@ items:
   source:
     id: LockedBox
     path: ''
-    startLine: 4607
+    startLine: 4950
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlocked box prefab\n"
+  example: []
   syntax:
     content: public GameObject LockedBox
     return:
@@ -169,10 +177,12 @@ items:
   source:
     id: dragAndDrop
     path: ''
-    startLine: 4608
+    startLine: 4954
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndrag and drop image which follows the cursor\n"
+  example: []
   syntax:
     content: public Image dragAndDrop
     return:
@@ -196,10 +206,12 @@ items:
   source:
     id: display
     path: ''
-    startLine: 4610
+    startLine: 4960
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nship item display\n"
+  example: []
   syntax:
     content: public ShipEditorStatusDisplay display
     return:
@@ -223,10 +235,12 @@ items:
   source:
     id: audios
     path: ''
-    startLine: 4613
+    startLine: 4965
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nclick audio\n"
+  example: []
   syntax:
     content: public AudioSource audios
     return:
@@ -250,10 +264,12 @@ items:
   source:
     id: blockAudio
     path: ''
-    startLine: 4614
+    startLine: 4969
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nclick not working audio\n"
+  example: []
   syntax:
     content: public AudioSource blockAudio
     return:
@@ -277,7 +293,7 @@ items:
   source:
     id: inventoryButton
     path: ''
-    startLine: 4764
+    startLine: 5119
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -315,7 +331,7 @@ items:
   source:
     id: mainWeaponSlotClicked
     path: ''
-    startLine: 4801
+    startLine: 5156
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -347,7 +363,7 @@ items:
   source:
     id: secondaryWeaponSlotClicked
     path: ''
-    startLine: 4843
+    startLine: 5198
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -379,7 +395,7 @@ items:
   source:
     id: secondaryWeaponSlotTwoClicked
     path: ''
-    startLine: 4881
+    startLine: 5236
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -411,7 +427,7 @@ items:
   source:
     id: shieldSlotClicked
     path: ''
-    startLine: 4920
+    startLine: 5275
   assemblies:
   - cs.temp.dll
   namespace: Global

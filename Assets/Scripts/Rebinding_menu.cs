@@ -15,16 +15,46 @@ public class Rebinding_menu : MonoBehaviour
 {
     private Controlls controll;
 
+    /// <summary>
+    /// scroll view to place rebinding controls
+    /// </summary>
     public GameObject ScrollView;
+    /// <summary>
+    /// object to contain 1 rebind prefab
+    /// </summary>
     public GameObject itemHolder;
+    /// <summary>
+    /// rebind action name prefab
+    /// </summary>
     public GameObject actionName;
+    /// <summary>
+    /// rebind keybind text prefab
+    /// </summary>
     public GameObject actionKeybind;
+    /// <summary>
+    /// button for the rebinding prefab
+    /// </summary>
     public GameObject buttonRebind;
+    /// <summary>
+    /// button for the default rebinding prefab
+    /// </summary>
     public GameObject buttonDefault;
+    /// <summary>
+    /// save alert prefab
+    /// </summary>
     public GameObject saveAlert;
+    /// <summary>
+    /// button back 
+    /// </summary>
     public GameObject buttonBack;
+    /// <summary>
+    /// button to save
+    /// </summary>
     public GameObject buttonSave;
 
+    /// <summary>
+    /// view panel
+    /// </summary>
     public GameObject viewPanel;
 
 

@@ -8,8 +8,17 @@ using UnityEngine.UI;
 /// </summary>
 public class SpeechBubbles : MonoBehaviour
 {
+    /// <summary>
+    /// speech bubble object
+    /// </summary>
     public GameObject UiObject;
+    /// <summary>
+    /// trigger object
+    /// </summary>
     public GameObject Trigger;
+    /// <summary>
+    /// audio source
+    /// </summary>
     public AudioSource audios;
     private bool isEnterd;
 

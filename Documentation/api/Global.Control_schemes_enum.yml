@@ -17,7 +17,7 @@ items:
   source:
     id: Control_schemes_enum
     path: ''
-    startLine: 2906
+    startLine: 2964
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -46,7 +46,7 @@ items:
   source:
     id: mouseAndKeyboard
     path: ''
-    startLine: 2908
+    startLine: 2966
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -74,7 +74,7 @@ items:
   source:
     id: gamepad
     path: ''
-    startLine: 2909
+    startLine: 2967
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -18,7 +18,7 @@ items:
   source:
     id: Globals_init
     path: ''
-    startLine: 4450
+    startLine: 4757
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -51,10 +51,12 @@ items:
   source:
     id: moneyIcon
     path: ''
-    startLine: 4452
+    startLine: 4762
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmoney icon\n"
+  example: []
   syntax:
     content: public Sprite moneyIcon
     return:
@@ -78,10 +80,12 @@ items:
   source:
     id: moneyDropPrefrab
     path: ''
-    startLine: 4453
+    startLine: 4766
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmoney drop prefab\n"
+  example: []
   syntax:
     content: public GameObject moneyDropPrefrab
     return:
@@ -105,10 +109,12 @@ items:
   source:
     id: tempEnemyHit
     path: ''
-    startLine: 4454
+    startLine: 4770
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nenemy hit sound\n"
+  example: []
   syntax:
     content: public AudioSource tempEnemyHit
     return:

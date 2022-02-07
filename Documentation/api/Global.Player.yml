@@ -73,7 +73,7 @@ items:
   source:
     id: Player
     path: ''
-    startLine: 6749
+    startLine: 7254
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -109,10 +109,12 @@ items:
   source:
     id: maxBaseHealth
     path: ''
-    startLine: 6751
+    startLine: 7259
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nplayer max health\n"
+  example: []
   syntax:
     content: public float maxBaseHealth
     return:
@@ -136,10 +138,12 @@ items:
   source:
     id: healthbar
     path: ''
-    startLine: 6753
+    startLine: 7264
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nhealth bar\n"
+  example: []
   syntax:
     content: public Image healthbar
     return:
@@ -163,10 +167,12 @@ items:
   source:
     id: healthbarAbove60
     path: ''
-    startLine: 6755
+    startLine: 7268
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nhealth bar coloring above 60%\n"
+  example: []
   syntax:
     content: public Color healthbarAbove60
     return:
@@ -190,10 +196,12 @@ items:
   source:
     id: healthbarAbove30
     path: ''
-    startLine: 6756
+    startLine: 7272
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nhealth bar coloring above 30%\n"
+  example: []
   syntax:
     content: public Color healthbarAbove30
     return:
@@ -217,10 +225,12 @@ items:
   source:
     id: healthbarBelow30
     path: ''
-    startLine: 6757
+    startLine: 7276
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nhealth bar coloring below 30%\n"
+  example: []
   syntax:
     content: public Color healthbarBelow30
     return:
@@ -244,10 +254,12 @@ items:
   source:
     id: maxschield
     path: ''
-    startLine: 6759
+    startLine: 7281
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmax shield value\n"
+  example: []
   syntax:
     content: public float maxschield
     return:
@@ -271,10 +283,12 @@ items:
   source:
     id: currentschield
     path: ''
-    startLine: 6760
+    startLine: 7285
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncurent shield value\n"
+  example: []
   syntax:
     content: public float currentschield
     return:
@@ -298,10 +312,12 @@ items:
   source:
     id: schieldbar
     path: ''
-    startLine: 6761
+    startLine: 7289
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nshield bar\n"
+  example: []
   syntax:
     content: public Image schieldbar
     return:
@@ -325,10 +341,12 @@ items:
   source:
     id: schieldbarStepValue
     path: ''
-    startLine: 6762
+    startLine: 7293
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nshield bar step value for smooth shield increase\n"
+  example: []
   syntax:
     content: public float schieldbarStepValue
     return:
@@ -352,10 +370,12 @@ items:
   source:
     id: schieldRefreshRate
     path: ''
-    startLine: 6764
+    startLine: 7298
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nshield refresh rate\n"
+  example: []
   syntax:
     content: public float schieldRefreshRate
     return:
@@ -379,10 +399,12 @@ items:
   source:
     id: schieldRefreshBaseValue
     path: ''
-    startLine: 6765
+    startLine: 7302
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nshield refresh value\n"
+  example: []
   syntax:
     content: public float schieldRefreshBaseValue
     return:
@@ -406,10 +428,12 @@ items:
   source:
     id: body
     path: ''
-    startLine: 6768
+    startLine: 7307
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nphysic object of player\n"
+  example: []
   syntax:
     content: public Rigidbody2D body
     return:
@@ -433,10 +457,12 @@ items:
   source:
     id: force
     path: ''
-    startLine: 6770
+    startLine: 7312
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe used force to move the player\n"
+  example: []
   syntax:
     content: public float force
     return:
@@ -460,10 +486,12 @@ items:
   source:
     id: maxSpeed
     path: ''
-    startLine: 6771
+    startLine: 7316
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe maximum speed the player can have\n"
+  example: []
   syntax:
     content: public float maxSpeed
     return:
@@ -487,10 +515,12 @@ items:
   source:
     id: WeaponSlots
     path: ''
-    startLine: 6774
+    startLine: 7322
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlist of weapon slot objects\n"
+  example: []
   syntax:
     content: public List<GameObject> WeaponSlots
     return:
@@ -514,10 +544,12 @@ items:
   source:
     id: ship
     path: ''
-    startLine: 6776
+    startLine: 7327
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nship object\n"
+  example: []
   syntax:
     content: public GameObject ship
     return:
@@ -541,10 +573,12 @@ items:
   source:
     id: additionalDmg
     path: ''
-    startLine: 6787
+    startLine: 7341
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nadditional player dmg\n"
+  example: []
   syntax:
     content: public float additionalDmg
     return:
@@ -568,10 +602,12 @@ items:
   source:
     id: dmgModifier
     path: ''
-    startLine: 6788
+    startLine: 7345
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nplayer dmg multiplier\n"
+  example: []
   syntax:
     content: public float dmgModifier
     return:
@@ -595,10 +631,12 @@ items:
   source:
     id: immunityFlickerRate
     path: ''
-    startLine: 6790
+    startLine: 7350
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nimmunity flicker rate\n"
+  example: []
   syntax:
     content: public float immunityFlickerRate
     return:
@@ -622,10 +660,12 @@ items:
   source:
     id: maxFlickerRange
     path: ''
-    startLine: 6791
+    startLine: 7354
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nimmunity flicker visibility range\n"
+  example: []
   syntax:
     content: public float maxFlickerRange
     return:
@@ -649,10 +689,12 @@ items:
   source:
     id: immunityTimeAfterHit
     path: ''
-    startLine: 6794
+    startLine: 7361
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nimmunity time after hit\n"
+  example: []
   syntax:
     content: public float immunityTimeAfterHit
     return:
@@ -676,10 +718,12 @@ items:
   source:
     id: immunityTimeAfterDoge
     path: ''
-    startLine: 6795
+    startLine: 7365
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nimmunity time after doge\n"
+  example: []
   syntax:
     content: public float immunityTimeAfterDoge
     return:
@@ -703,10 +747,12 @@ items:
   source:
     id: dogeCharges
     path: ''
-    startLine: 6797
+    startLine: 7370
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndoge charges\n"
+  example: []
   syntax:
     content: public int dogeCharges
     return:
@@ -730,10 +776,12 @@ items:
   source:
     id: dogeRange
     path: ''
-    startLine: 6798
+    startLine: 7374
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndoge range\n"
+  example: []
   syntax:
     content: public float dogeRange
     return:
@@ -757,10 +805,12 @@ items:
   source:
     id: dogeSpeed
     path: ''
-    startLine: 6799
+    startLine: 7378
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndoge speed\n"
+  example: []
   syntax:
     content: public float dogeSpeed
     return:
@@ -784,10 +834,12 @@ items:
   source:
     id: maxDogeDuration
     path: ''
-    startLine: 6800
+    startLine: 7382
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmax doge duration\n"
+  example: []
   syntax:
     content: public float maxDogeDuration
     return:
@@ -811,10 +863,12 @@ items:
   source:
     id: dogeCooldown
     path: ''
-    startLine: 6801
+    startLine: 7386
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndoge cooldown\n"
+  example: []
   syntax:
     content: public float dogeCooldown
     return:
@@ -838,10 +892,12 @@ items:
   source:
     id: globalCooldown
     path: ''
-    startLine: 6802
+    startLine: 7390
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nglobal cooldown of doge\n"
+  example: []
   syntax:
     content: public float globalCooldown
     return:
@@ -865,10 +921,12 @@ items:
   source:
     id: chargeSprites
     path: ''
-    startLine: 6810
+    startLine: 7402
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncharge sprites\n"
+  example: []
   syntax:
     content: public List<Sprite> chargeSprites
     return:
@@ -892,10 +950,12 @@ items:
   source:
     id: chargeUI
     path: ''
-    startLine: 6811
+    startLine: 7406
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncharge UI\n"
+  example: []
   syntax:
     content: public Image chargeUI
     return:
@@ -919,10 +979,12 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 6813
+    startLine: 7410
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nwaypoint prefab\n"
+  example: []
   syntax:
     content: public GameObject waypointPrefab
     return:
@@ -946,10 +1008,12 @@ items:
   source:
     id: deathEffect
     path: ''
-    startLine: 6824
+    startLine: 7424
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndeath effect\n"
+  example: []
   syntax:
     content: public GameObject deathEffect
     return:
@@ -973,10 +1037,12 @@ items:
   source:
     id: chargeAudio
     path: ''
-    startLine: 6826
+    startLine: 7428
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncharge audio\n"
+  example: []
   syntax:
     content: public AudioSource chargeAudio
     return:
@@ -1000,10 +1066,12 @@ items:
   source:
     id: hitAudio
     path: ''
-    startLine: 6827
+    startLine: 7432
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nhit audio\n"
+  example: []
   syntax:
     content: public AudioSource hitAudio
     return:
@@ -1027,10 +1095,12 @@ items:
   source:
     id: crackedScreenOverlay
     path: ''
-    startLine: 6829
+    startLine: 7437
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncracked screen overlay\n"
+  example: []
   syntax:
     content: public Image crackedScreenOverlay
     return:
@@ -1054,10 +1124,12 @@ items:
   source:
     id: crackedScreenOverlay2
     path: ''
-    startLine: 6830
+    startLine: 7441
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncracked screen overlay\n"
+  example: []
   syntax:
     content: public Image crackedScreenOverlay2
     return:
@@ -1081,10 +1153,12 @@ items:
   source:
     id: crackedLevel1
     path: ''
-    startLine: 6832
+    startLine: 7446
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncracked sprite\n"
+  example: []
   syntax:
     content: public Sprite crackedLevel1
     return:
@@ -1108,10 +1182,12 @@ items:
   source:
     id: crackedLevel2
     path: ''
-    startLine: 6833
+    startLine: 7450
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncracked sprite\n"
+  example: []
   syntax:
     content: public Sprite crackedLevel2
     return:
@@ -1135,10 +1211,12 @@ items:
   source:
     id: trail
     path: ''
-    startLine: 6840
+    startLine: 7460
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ntrail object\n"
+  example: []
   syntax:
     content: public TrailRenderer trail
     return:
@@ -1162,10 +1240,12 @@ items:
   source:
     id: dashAudio
     path: ''
-    startLine: 6842
+    startLine: 7465
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndash audio\n"
+  example: []
   syntax:
     content: public AudioSource dashAudio
     return:
@@ -1189,10 +1269,12 @@ items:
   source:
     id: crackedSound
     path: ''
-    startLine: 6846
+    startLine: 7471
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncracked sound \n"
+  example: []
   syntax:
     content: public AudioSource crackedSound
     return:
@@ -1216,10 +1298,12 @@ items:
   source:
     id: playerBulletSoundPrefab
     path: ''
-    startLine: 6848
+    startLine: 7475
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nplayer bullet sound prefab\n"
+  example: []
   syntax:
     content: public GameObject playerBulletSoundPrefab
     return:
@@ -1243,10 +1327,12 @@ items:
   source:
     id: Impulse
     path: ''
-    startLine: 6854
+    startLine: 7485
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns the impulse direction\n"
+  example: []
   syntax:
     content: public Vector2 Impulse { get; }
     parameters: []
@@ -1274,10 +1360,12 @@ items:
   source:
     id: Timestamp
     path: ''
-    startLine: 6862
+    startLine: 7496
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nnot in use anymore\n"
+  example: []
   syntax:
     content: public float Timestamp { get; set; }
     parameters: []
@@ -1305,10 +1393,12 @@ items:
   source:
     id: ShieldPart
     path: ''
-    startLine: 6872
+    startLine: 7508
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets the shield part\n"
+  example: []
   syntax:
     content: public Parts ShieldPart { get; set; }
     parameters: []
@@ -1336,10 +1426,12 @@ items:
   source:
     id: CurrentHealth
     path: ''
-    startLine: 6882
+    startLine: 7520
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets the current health\n"
+  example: []
   syntax:
     content: public float CurrentHealth { get; set; }
     parameters: []
@@ -1367,7 +1459,7 @@ items:
   source:
     id: OnDoge
     path: ''
-    startLine: 6906
+    startLine: 7544
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1401,7 +1493,7 @@ items:
   source:
     id: OnMove_down
     path: ''
-    startLine: 6919
+    startLine: 7557
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1435,7 +1527,7 @@ items:
   source:
     id: OnMove_left
     path: ''
-    startLine: 6939
+    startLine: 7577
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1469,7 +1561,7 @@ items:
   source:
     id: OnMove_rigth
     path: ''
-    startLine: 6956
+    startLine: 7594
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1503,7 +1595,7 @@ items:
   source:
     id: OnMove_up
     path: ''
-    startLine: 6975
+    startLine: 7613
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1537,7 +1629,7 @@ items:
   source:
     id: OnShoot
     path: ''
-    startLine: 6994
+    startLine: 7632
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1571,7 +1663,7 @@ items:
   source:
     id: OnPause_menu
     path: ''
-    startLine: 7007
+    startLine: 7645
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1605,7 +1697,7 @@ items:
   source:
     id: smoothHealthDrop
     path: ''
-    startLine: 7237
+    startLine: 7875
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1636,7 +1728,7 @@ items:
   source:
     id: smoothSchieldDrop
     path: ''
-    startLine: 7328
+    startLine: 7966
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1667,7 +1759,7 @@ items:
   source:
     id: schieldRefresh
     path: ''
-    startLine: 7367
+    startLine: 8005
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1702,7 +1794,7 @@ items:
   source:
     id: takeDmg
     path: ''
-    startLine: 7391
+    startLine: 8029
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1734,7 +1826,7 @@ items:
   source:
     id: clearControlls
     path: ''
-    startLine: 7437
+    startLine: 8075
   assemblies:
   - cs.temp.dll
   namespace: Global

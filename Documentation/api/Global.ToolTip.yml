@@ -21,7 +21,7 @@ items:
   source:
     id: ToolTip
     path: ''
-    startLine: 9990
+    startLine: 10819
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -54,10 +54,12 @@ items:
   source:
     id: headerField
     path: ''
-    startLine: 9993
+    startLine: 10825
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nheader textfield\n"
+  example: []
   syntax:
     content: public Text headerField
     return:
@@ -81,10 +83,12 @@ items:
   source:
     id: contentField
     path: ''
-    startLine: 9995
+    startLine: 10830
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncontent textfield\n"
+  example: []
   syntax:
     content: public Text contentField
     return:
@@ -108,10 +112,12 @@ items:
   source:
     id: layoutElement
     path: ''
-    startLine: 9997
+    startLine: 10834
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlayout element\n"
+  example: []
   syntax:
     content: public LayoutElement layoutElement
     return:
@@ -135,10 +141,12 @@ items:
   source:
     id: characterWrapLimit
     path: ''
-    startLine: 9999
+    startLine: 10838
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncharacter wrap limit\n"
+  example: []
   syntax:
     content: public int characterWrapLimit
     return:
@@ -162,10 +170,12 @@ items:
   source:
     id: tooltipToogled
     path: ''
-    startLine: 10003
+    startLine: 10843
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nactivates the tooltips\n"
+  example: []
   syntax:
     content: public bool tooltipToogled
     return:
@@ -189,7 +199,7 @@ items:
   source:
     id: SetText
     path: ''
-    startLine: 10012
+    startLine: 10852
   assemblies:
   - cs.temp.dll
   namespace: Global

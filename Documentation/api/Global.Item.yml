@@ -21,7 +21,7 @@ items:
   source:
     id: Item
     path: ''
-    startLine: 4973
+    startLine: 5328
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -64,10 +64,12 @@ items:
   source:
     id: ID
     path: ''
-    startLine: 4983
+    startLine: 5342
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nunique ID\n"
+  example: []
   syntax:
     content: public string ID { get; set; }
     parameters: []
@@ -95,10 +97,12 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 4993
+    startLine: 5354
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nname\n"
+  example: []
   syntax:
     content: public string Name { get; set; }
     parameters: []
@@ -126,10 +130,12 @@ items:
   source:
     id: Value
     path: ''
-    startLine: 5003
+    startLine: 5366
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbuy price\n"
+  example: []
   syntax:
     content: public int Value { get; set; }
     parameters: []
@@ -157,10 +163,12 @@ items:
   source:
     id: Icon
     path: ''
-    startLine: 5013
+    startLine: 5378
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nicon for inventory\n"
+  example: []
   syntax:
     content: public string Icon { get; set; }
     parameters: []
@@ -188,10 +196,12 @@ items:
   source:
     id: Sprite
     path: ''
-    startLine: 5023
+    startLine: 5391
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ngame sprice for the item\n"
+  example: []
   syntax:
     content: public string Sprite { get; set; }
     parameters: []
@@ -219,10 +229,12 @@ items:
   source:
     id: PatternIcon
     path: ''
-    startLine: 5033
+    startLine: 5403
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\npattern icon for the item\n"
+  example: []
   syntax:
     content: public string PatternIcon { get; set; }
     parameters: []

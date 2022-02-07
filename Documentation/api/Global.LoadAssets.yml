@@ -21,7 +21,7 @@ items:
   source:
     id: LoadAssets
     path: ''
-    startLine: 5460
+    startLine: 5842
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -52,7 +52,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 5468
+    startLine: 5850
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -80,7 +80,7 @@ items:
   source:
     id: loadSprite
     path: ''
-    startLine: 5477
+    startLine: 5859
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -115,7 +115,7 @@ items:
   source:
     id: loadGameObject
     path: ''
-    startLine: 5507
+    startLine: 5889
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -150,7 +150,7 @@ items:
   source:
     id: loadText
     path: ''
-    startLine: 5533
+    startLine: 5915
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -185,7 +185,7 @@ items:
   source:
     id: releaseLastHandle
     path: ''
-    startLine: 5567
+    startLine: 5949
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -213,7 +213,7 @@ items:
   source:
     id: releaseAllHandle
     path: ''
-    startLine: 5575
+    startLine: 5957
   assemblies:
   - cs.temp.dll
   namespace: Global

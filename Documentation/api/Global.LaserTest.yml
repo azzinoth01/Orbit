@@ -19,7 +19,7 @@ items:
   source:
     id: LaserTest
     path: ''
-    startLine: 11090
+    startLine: 12056
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -52,10 +52,12 @@ items:
   source:
     id: Laser
     path: ''
-    startLine: 11092
+    startLine: 12061
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlist of laser animator\n"
+  example: []
   syntax:
     content: public List<Animator> Laser
     return:
@@ -79,10 +81,12 @@ items:
   source:
     id: Trigger
     path: ''
-    startLine: 11093
+    startLine: 12065
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nanimation activation trigger\n"
+  example: []
   syntax:
     content: public bool Trigger
     return:
@@ -106,10 +110,12 @@ items:
   source:
     id: startAudio
     path: ''
-    startLine: 11094
+    startLine: 12069
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nstart audio\n"
+  example: []
   syntax:
     content: public AudioSource startAudio
     return:
@@ -133,10 +139,12 @@ items:
   source:
     id: loopAudio
     path: ''
-    startLine: 11095
+    startLine: 12073
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nloop audio\n"
+  example: []
   syntax:
     content: public AudioSource loopAudio
     return:

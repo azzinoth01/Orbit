@@ -21,7 +21,7 @@ items:
   source:
     id: LoopSoundControl
     path: ''
-    startLine: 5687
+    startLine: 6081
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -54,10 +54,12 @@ items:
   source:
     id: startAudio
     path: ''
-    startLine: 5690
+    startLine: 6086
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe start audio\n"
+  example: []
   syntax:
     content: public AudioSource startAudio
     return:
@@ -81,10 +83,12 @@ items:
   source:
     id: transitionAudio
     path: ''
-    startLine: 5691
+    startLine: 6090
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe transition audio\n"
+  example: []
   syntax:
     content: public AudioSource transitionAudio
     return:
@@ -108,10 +112,12 @@ items:
   source:
     id: loopAudio
     path: ''
-    startLine: 5692
+    startLine: 6094
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe loop audio\n"
+  example: []
   syntax:
     content: public AudioSource loopAudio
     return:
@@ -135,10 +141,12 @@ items:
   source:
     id: IsPlaying
     path: ''
-    startLine: 5697
+    startLine: 6103
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns the playing state\n"
+  example: []
   syntax:
     content: public bool IsPlaying { get; }
     parameters: []
@@ -166,7 +174,7 @@ items:
   source:
     id: startPlaying
     path: ''
-    startLine: 5746
+    startLine: 6152
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -194,7 +202,7 @@ items:
   source:
     id: stopPlaying
     path: ''
-    startLine: 5755
+    startLine: 6161
   assemblies:
   - cs.temp.dll
   namespace: Global

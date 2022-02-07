@@ -38,7 +38,7 @@ items:
   source:
     id: Globals
     path: ''
-    startLine: 4414
+    startLine: 4652
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -70,10 +70,12 @@ items:
   source:
     id: pause
     path: ''
-    startLine: 4416
+    startLine: 4657
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nglobal variable to set pause\n"
+  example: []
   syntax:
     content: public static bool pause
     return:
@@ -99,10 +101,12 @@ items:
   source:
     id: currentCamera
     path: ''
-    startLine: 4417
+    startLine: 4661
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncurrent main camera\n"
+  example: []
   syntax:
     content: public static Camera currentCamera
     return:
@@ -128,10 +132,12 @@ items:
   source:
     id: player
     path: ''
-    startLine: 4418
+    startLine: 4665
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nplayer object\n"
+  example: []
   syntax:
     content: public static GameObject player
     return:
@@ -157,10 +163,12 @@ items:
   source:
     id: bulletPool
     path: ''
-    startLine: 4419
+    startLine: 4669
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbulletpool list\n"
+  example: []
   syntax:
     content: public static List<Skill> bulletPool
     return:
@@ -186,10 +194,12 @@ items:
   source:
     id: menuHandler
     path: ''
-    startLine: 4420
+    startLine: 4673
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nglobale variable to set menuHandler\n"
+  example: []
   syntax:
     content: public static Menu_handler menuHandler
     return:
@@ -215,10 +225,12 @@ items:
   source:
     id: currentWinCondition
     path: ''
-    startLine: 4421
+    startLine: 4677
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncurrent wincondition\n"
+  example: []
   syntax:
     content: public static Win_condition currentWinCondition
     return:
@@ -244,10 +256,12 @@ items:
   source:
     id: spawnerListe
     path: ''
-    startLine: 4422
+    startLine: 4681
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nspawner list\n"
+  example: []
   syntax:
     content: public static List<Enemy_Spawner> spawnerListe
     return:
@@ -273,10 +287,12 @@ items:
   source:
     id: bossUI
     path: ''
-    startLine: 4423
+    startLine: 4685
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nboss UI\n"
+  example: []
   syntax:
     content: public static GameObject bossUI
     return:
@@ -302,10 +318,12 @@ items:
   source:
     id: bossHpBar
     path: ''
-    startLine: 4424
+    startLine: 4689
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nboss hp bar\n"
+  example: []
   syntax:
     content: public static Image bossHpBar
     return:
@@ -331,10 +349,12 @@ items:
   source:
     id: virtualMouse
     path: ''
-    startLine: 4425
+    startLine: 4693
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nvirtual mouse object\n"
+  example: []
   syntax:
     content: public static VirtualMouse virtualMouse
     return:
@@ -360,10 +380,12 @@ items:
   source:
     id: money
     path: ''
-    startLine: 4426
+    startLine: 4697
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncurrent possesed money\n"
+  example: []
   syntax:
     content: public static int money
     return:
@@ -389,10 +411,12 @@ items:
   source:
     id: inventory
     path: ''
-    startLine: 4427
+    startLine: 4701
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlist of inventory objects\n"
+  example: []
   syntax:
     content: public static List<Inventar_Object> inventory
     return:
@@ -418,10 +442,12 @@ items:
   source:
     id: moneyIcon
     path: ''
-    startLine: 4428
+    startLine: 4705
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmoney icon\n"
+  example: []
   syntax:
     content: public static Sprite moneyIcon
     return:
@@ -447,10 +473,12 @@ items:
   source:
     id: moneyDrop
     path: ''
-    startLine: 4429
+    startLine: 4709
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmoney drop prefab\n"
+  example: []
   syntax:
     content: public static GameObject moneyDrop
     return:
@@ -476,10 +504,12 @@ items:
   source:
     id: catalog
     path: ''
-    startLine: 4430
+    startLine: 4713
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nitem catalog\n"
+  example: []
   syntax:
     content: public static ItemCatalog catalog
     return:
@@ -505,10 +535,12 @@ items:
   source:
     id: currentItem
     path: ''
-    startLine: 4431
+    startLine: 4717
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncurent item which the cursor holds\n"
+  example: []
   syntax:
     content: public static Item currentItem
     return:
@@ -534,10 +566,12 @@ items:
   source:
     id: tempEnemyHit
     path: ''
-    startLine: 4432
+    startLine: 4721
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nenemy hit sound\n"
+  example: []
   syntax:
     content: public static AudioSource tempEnemyHit
     return:
@@ -563,10 +597,12 @@ items:
   source:
     id: dontDestoryOnLoadObjectID
     path: ''
-    startLine: 4433
+    startLine: 4725
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlist of objects which are in the don&apos;t destroy on load list\n"
+  example: []
   syntax:
     content: public static List<string> dontDestoryOnLoadObjectID
     return:
@@ -592,10 +628,12 @@ items:
   source:
     id: lastSceneIndex
     path: ''
-    startLine: 4434
+    startLine: 4729
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlast scene index\n"
+  example: []
   syntax:
     content: public static int lastSceneIndex
     return:
@@ -621,10 +659,12 @@ items:
   source:
     id: infityWaveSpawner
     path: ''
-    startLine: 4435
+    startLine: 4733
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlist of spawner for the endless mode\n"
+  example: []
   syntax:
     content: public static List<Enemy_Spawner> infityWaveSpawner
     return:
@@ -650,10 +690,12 @@ items:
   source:
     id: waveControler
     path: ''
-    startLine: 4436
+    startLine: 4737
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nwave controler for the endless mode\n"
+  example: []
   syntax:
     content: public static WaveControler waveControler
     return:
@@ -679,10 +721,12 @@ items:
   source:
     id: tooltip
     path: ''
-    startLine: 4437
+    startLine: 4741
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ntooltips actiated or deactivated\n"
+  example: []
   syntax:
     content: public static ToolTip tooltip
     return:
@@ -708,10 +752,12 @@ items:
   source:
     id: skipStartCutscene
     path: ''
-    startLine: 4438
+    startLine: 4745
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nskips the intro cutscene\n"
+  example: []
   syntax:
     content: public static bool skipStartCutscene
     return:

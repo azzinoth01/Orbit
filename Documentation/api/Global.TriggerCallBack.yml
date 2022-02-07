@@ -19,7 +19,7 @@ items:
   source:
     id: TriggerCallBack
     path: ''
-    startLine: 10140
+    startLine: 10989
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -52,10 +52,12 @@ items:
   source:
     id: spawnTrigger
     path: ''
-    startLine: 10143
+    startLine: 10994
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmakes the trigger a spawn trigger\n"
+  example: []
   syntax:
     content: public bool spawnTrigger
     return:
@@ -79,10 +81,12 @@ items:
   source:
     id: spawnerActivationTrigger
     path: ''
-    startLine: 10144
+    startLine: 10998
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmakes the trigger a spawner activation trigger\n"
+  example: []
   syntax:
     content: public bool spawnerActivationTrigger
     return:
@@ -106,10 +110,12 @@ items:
   source:
     id: moneyDrop
     path: ''
-    startLine: 10145
+    startLine: 11002
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmakes the trigger a money drop\n"
+  example: []
   syntax:
     content: public bool moneyDrop
     return:
@@ -133,10 +139,12 @@ items:
   source:
     id: MoneyValue
     path: ''
-    startLine: 10150
+    startLine: 11011
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsets the money drop value\n"
+  example: []
   syntax:
     content: public int MoneyValue { set; }
     parameters: []

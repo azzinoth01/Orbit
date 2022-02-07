@@ -20,7 +20,7 @@ items:
   source:
     id: SpawnerCreation
     path: ''
-    startLine: 9555
+    startLine: 10354
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -53,10 +53,12 @@ items:
   source:
     id: refSpawner
     path: ''
-    startLine: 9558
+    startLine: 10359
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreferenz spawner object\n"
+  example: []
   syntax:
     content: public GameObject refSpawner
     return:
@@ -80,10 +82,12 @@ items:
   source:
     id: moveInOutOffset
     path: ''
-    startLine: 9560
+    startLine: 10364
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmove in and move out offset\n"
+  example: []
   syntax:
     content: public Vector2 moveInOutOffset
     return:
@@ -107,10 +111,12 @@ items:
   source:
     id: useWaypointOffsetX
     path: ''
-    startLine: 9561
+    startLine: 10368
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nuse waypoint X offset\n"
+  example: []
   syntax:
     content: public bool useWaypointOffsetX
     return:
@@ -134,10 +140,12 @@ items:
   source:
     id: useWaypointOffsetY
     path: ''
-    startLine: 9562
+    startLine: 10372
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nuse waypoint Y offset\n"
+  example: []
   syntax:
     content: public bool useWaypointOffsetY
     return:
@@ -161,10 +169,12 @@ items:
   source:
     id: flipOffset
     path: ''
-    startLine: 9564
+    startLine: 10376
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nflip waypoint offset\n"
+  example: []
   syntax:
     content: public bool flipOffset
     return:

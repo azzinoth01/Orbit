@@ -18,7 +18,7 @@ items:
   source:
     id: GameCursor
     path: ''
-    startLine: 4392
+    startLine: 4630
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -51,7 +51,7 @@ items:
   source:
     id: cursor
     path: ''
-    startLine: 4395
+    startLine: 4633
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -78,7 +78,7 @@ items:
   source:
     id: mode
     path: ''
-    startLine: 4396
+    startLine: 4634
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -105,7 +105,7 @@ items:
   source:
     id: hotSpot
     path: ''
-    startLine: 4397
+    startLine: 4635
   assemblies:
   - cs.temp.dll
   namespace: Global

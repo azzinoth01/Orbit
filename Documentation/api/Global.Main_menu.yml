@@ -29,7 +29,7 @@ items:
   source:
     id: Main_menu
     path: ''
-    startLine: 5772
+    startLine: 6178
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -62,10 +62,12 @@ items:
   source:
     id: mainMenu
     path: ''
-    startLine: 5774
+    startLine: 6184
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmain menu panel\n"
+  example: []
   syntax:
     content: public GameObject mainMenu
     return:
@@ -89,10 +91,12 @@ items:
   source:
     id: optionsMenu
     path: ''
-    startLine: 5775
+    startLine: 6188
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nnot in use\n"
+  example: []
   syntax:
     content: public GameObject optionsMenu
     return:
@@ -116,10 +120,12 @@ items:
   source:
     id: soundMenu
     path: ''
-    startLine: 5776
+    startLine: 6192
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nnot in use\n"
+  example: []
   syntax:
     content: public GameObject soundMenu
     return:
@@ -143,10 +149,12 @@ items:
   source:
     id: rebidningMenu
     path: ''
-    startLine: 5777
+    startLine: 6196
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nnot in use\n"
+  example: []
   syntax:
     content: public GameObject rebidningMenu
     return:
@@ -170,10 +178,12 @@ items:
   source:
     id: credits
     path: ''
-    startLine: 5778
+    startLine: 6200
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncredits menu panel\n"
+  example: []
   syntax:
     content: public GameObject credits
     return:
@@ -197,7 +207,7 @@ items:
   source:
     id: playGame
     path: ''
-    startLine: 5783
+    startLine: 6205
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -225,7 +235,7 @@ items:
   source:
     id: quitGame
     path: ''
-    startLine: 5804
+    startLine: 6226
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -253,7 +263,7 @@ items:
   source:
     id: onClickBackToMainMenu
     path: ''
-    startLine: 5811
+    startLine: 6233
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -281,7 +291,7 @@ items:
   source:
     id: onClickControls
     path: ''
-    startLine: 5832
+    startLine: 6254
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -309,7 +319,7 @@ items:
   source:
     id: onClickOptions
     path: ''
-    startLine: 5839
+    startLine: 6261
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -337,7 +347,7 @@ items:
   source:
     id: onClickSound
     path: ''
-    startLine: 5847
+    startLine: 6269
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -365,7 +375,7 @@ items:
   source:
     id: onClickBackToOptions
     path: ''
-    startLine: 5854
+    startLine: 6276
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -393,7 +403,7 @@ items:
   source:
     id: onClickOptions
     path: ''
-    startLine: 5864
+    startLine: 6286
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -425,7 +435,7 @@ items:
   source:
     id: onClickCredits
     path: ''
-    startLine: 5873
+    startLine: 6295
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -9,10 +9,22 @@ using UnityEngine.UI;
 /// </summary>
 public class ScrollBackground : MonoBehaviour
 {
+    /// <summary>
+    /// images which are to be scrolled
+    /// </summary>
     public Image[] images;
+    /// <summary>
+    /// the y position on which the last image moves 
+    /// </summary>
     public float yPosBorder;
+    /// <summary>
+    /// scrolling speed
+    /// </summary>
     public float speed;
 
+    /// <summary>
+    /// max x Offset for random start position
+    /// </summary>
     public float maxXOffset;
 
 

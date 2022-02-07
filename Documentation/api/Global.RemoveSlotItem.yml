@@ -23,7 +23,7 @@ items:
   source:
     id: RemoveSlotItem
     path: ''
-    startLine: 8488
+    startLine: 9175
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -56,10 +56,12 @@ items:
   source:
     id: isMainWeapon
     path: ''
-    startLine: 8493
+    startLine: 9183
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nis the button main weapon slot \n"
+  example: []
   syntax:
     content: public bool isMainWeapon
     return:
@@ -83,10 +85,12 @@ items:
   source:
     id: isSecondaryWeapon
     path: ''
-    startLine: 8494
+    startLine: 9187
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nis the button secondary weapon slot \n"
+  example: []
   syntax:
     content: public bool isSecondaryWeapon
     return:
@@ -110,10 +114,12 @@ items:
   source:
     id: isSecondaryWeapon1
     path: ''
-    startLine: 8495
+    startLine: 9191
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nis the button secondary weapon 2 slot \n"
+  example: []
   syntax:
     content: public bool isSecondaryWeapon1
     return:
@@ -137,10 +143,12 @@ items:
   source:
     id: isShipPart
     path: ''
-    startLine: 8496
+    startLine: 9195
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nis the button ship part slot \n"
+  example: []
   syntax:
     content: public bool isShipPart
     return:
@@ -164,10 +172,12 @@ items:
   source:
     id: audios
     path: ''
-    startLine: 8498
+    startLine: 9200
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nremove click audio\n"
+  example: []
   syntax:
     content: public AudioSource audios
     return:
@@ -191,10 +201,12 @@ items:
   source:
     id: Image
     path: ''
-    startLine: 8500
+    startLine: 9206
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nimage of the button\n"
+  example: []
   syntax:
     content: public Image Image { get; set; }
     parameters: []
@@ -222,10 +234,12 @@ items:
   source:
     id: IsMouseOver
     path: ''
-    startLine: 8510
+    startLine: 9219
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets mouseover\n"
+  example: []
   syntax:
     content: public bool IsMouseOver { get; set; }
     parameters: []
@@ -253,7 +267,7 @@ items:
   source:
     id: setMouseOver
     path: ''
-    startLine: 8590
+    startLine: 9299
   assemblies:
   - cs.temp.dll
   namespace: Global

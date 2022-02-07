@@ -32,7 +32,7 @@ items:
   source:
     id: Enemy_Spawner
     path: ''
-    startLine: 3997
+    startLine: 4163
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -65,10 +65,12 @@ items:
   source:
     id: enemysToSpawn
     path: ''
-    startLine: 4001
+    startLine: 4169
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlist of enemies to spawn\n"
+  example: []
   syntax:
     content: public List<Enemy_Spawner_Info> enemysToSpawn
     return:
@@ -92,10 +94,12 @@ items:
   source:
     id: spawnLimit
     path: ''
-    startLine: 4002
+    startLine: 4173
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmax amount of enemies to spawn\n"
+  example: []
   syntax:
     content: public int spawnLimit
     return:
@@ -119,10 +123,12 @@ items:
   source:
     id: delay
     path: ''
-    startLine: 4005
+    startLine: 4179
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nstart delay\n"
+  example: []
   syntax:
     content: public float delay
     return:
@@ -146,10 +152,12 @@ items:
   source:
     id: triggerArea
     path: ''
-    startLine: 4006
+    startLine: 4183
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ntrigger area to activate the spawner\n"
+  example: []
   syntax:
     content: public GameObject triggerArea
     return:
@@ -173,10 +181,12 @@ items:
   source:
     id: useTriggerArea
     path: ''
-    startLine: 4007
+    startLine: 4187
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nuses the trigger area to start the spawner\n"
+  example: []
   syntax:
     content: public bool useTriggerArea
     return:
@@ -200,10 +210,12 @@ items:
   source:
     id: useRandomSpawnInfo
     path: ''
-    startLine: 4011
+    startLine: 4194
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nuses a random enemy in the spawner info\n"
+  example: []
   syntax:
     content: public bool useRandomSpawnInfo
     return:
@@ -227,10 +239,12 @@ items:
   source:
     id: waveSpawner
     path: ''
-    startLine: 4013
+    startLine: 4199
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nif it is a wave spawner\n"
+  example: []
   syntax:
     content: public bool waveSpawner
     return:
@@ -254,10 +268,12 @@ items:
   source:
     id: useModification
     path: ''
-    startLine: 4015
+    startLine: 4204
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nif the spawner uses modifications\n"
+  example: []
   syntax:
     content: public bool useModification
     return:
@@ -281,10 +297,12 @@ items:
   source:
     id: modifyMoveIn
     path: ''
-    startLine: 4017
+    startLine: 4209
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmodifies the move in waypoints\n"
+  example: []
   syntax:
     content: public List<Vector2> modifyMoveIn
     return:
@@ -308,10 +326,12 @@ items:
   source:
     id: modifyMoveOut
     path: ''
-    startLine: 4018
+    startLine: 4213
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmodifies the move out waypoints\n"
+  example: []
   syntax:
     content: public List<Vector2> modifyMoveOut
     return:
@@ -335,10 +355,12 @@ items:
   source:
     id: modifyWaypoints
     path: ''
-    startLine: 4019
+    startLine: 4217
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmodifies the waypoints\n"
+  example: []
   syntax:
     content: public List<Vector2> modifyWaypoints
     return:
@@ -362,10 +384,12 @@ items:
   source:
     id: modifyAddHealth
     path: ''
-    startLine: 4022
+    startLine: 4224
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmodifies the health of enemies\n"
+  example: []
   syntax:
     content: public float modifyAddHealth
     return:
@@ -389,10 +413,12 @@ items:
   source:
     id: modifyAddDmg
     path: ''
-    startLine: 4023
+    startLine: 4228
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmodifies the enemy dmg\n"
+  example: []
   syntax:
     content: public float modifyAddDmg
     return:
@@ -416,10 +442,12 @@ items:
   source:
     id: modifyDoNotUseForce
     path: ''
-    startLine: 4024
+    startLine: 4233
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmakes the enemy not use force to move\n"
+  example: []
   syntax:
     content: public bool modifyDoNotUseForce
     return:
@@ -443,7 +471,7 @@ items:
   source:
     id: checkSpawnTrigger
     path: ''
-    startLine: 4206
+    startLine: 4415
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -478,7 +506,7 @@ items:
   source:
     id: checkSpawnerActivationTrigger
     path: ''
-    startLine: 4227
+    startLine: 4436
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -513,7 +541,7 @@ items:
   source:
     id: spawnKilled
     path: ''
-    startLine: 4240
+    startLine: 4449
   assemblies:
   - cs.temp.dll
   namespace: Global

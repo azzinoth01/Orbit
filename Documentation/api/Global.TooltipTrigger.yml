@@ -19,7 +19,7 @@ items:
   source:
     id: TooltipTrigger
     path: ''
-    startLine: 10109
+    startLine: 10951
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -56,10 +56,12 @@ items:
   source:
     id: content
     path: ''
-    startLine: 10111
+    startLine: 10957
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe text for the content text field\n"
+  example: []
   syntax:
     content: public string content
     return:
@@ -83,10 +85,12 @@ items:
   source:
     id: header
     path: ''
-    startLine: 10112
+    startLine: 10961
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe text for the header text field\n"
+  example: []
   syntax:
     content: public string header
     return:
@@ -110,7 +114,7 @@ items:
   source:
     id: OnPointerEnter
     path: ''
-    startLine: 10119
+    startLine: 10968
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -142,7 +146,7 @@ items:
   source:
     id: OnPointerExit
     path: ''
-    startLine: 10127
+    startLine: 10976
   assemblies:
   - cs.temp.dll
   namespace: Global

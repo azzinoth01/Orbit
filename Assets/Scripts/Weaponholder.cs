@@ -11,6 +11,9 @@ public class Weaponholder : MonoBehaviour
 {
     private Camera cam;
     private Mouse mouse;
+    /// <summary>
+    /// rotation speed of player weao´pons
+    /// </summary>
     public float rotationSpeed;
 
 

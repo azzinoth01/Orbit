@@ -13,6 +13,9 @@ public class Parts : Inventar_Object
     [SerializeField] private int healthBoost;
     [SerializeField] private float shieldRefreshValueBoost;
 
+    /// <summary>
+    /// boosts the health of the ship
+    /// </summary>
     public int HealthBoost {
         get {
             return healthBoost;
@@ -22,7 +25,9 @@ public class Parts : Inventar_Object
             healthBoost = value;
         }
     }
-
+    /// <summary>
+    /// boosts the shield refresh value
+    /// </summary>
     public float ShieldRefreshValueBoost {
         get {
             return shieldRefreshValueBoost;

@@ -17,7 +17,7 @@ items:
   source:
     id: Bullet_pooling_watcher
     path: ''
-    startLine: 2704
+    startLine: 2749
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -50,10 +50,12 @@ items:
   source:
     id: cleanUpTime
     path: ''
-    startLine: 2707
+    startLine: 2754
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe time a skillobject can be inactive in the bulletlist\n"
+  example: []
   syntax:
     content: public float cleanUpTime
     return:
@@ -77,10 +79,12 @@ items:
   source:
     id: checkTime
     path: ''
-    startLine: 2708
+    startLine: 2758
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe time between each check\n"
+  example: []
   syntax:
     content: public float checkTime
     return:

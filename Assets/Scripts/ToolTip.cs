@@ -12,16 +12,27 @@ using UnityEngine.InputSystem.UI;
 [ExecuteInEditMode()]
 public class ToolTip : MonoBehaviour
 {
+    /// <summary>
+    /// header textfield
+    /// </summary>
     public Text headerField;
 
+    /// <summary>
+    /// content textfield
+    /// </summary>
     public Text contentField;
-
+    /// <summary>
+    /// layout element
+    /// </summary>
     public LayoutElement layoutElement;
-
+    /// <summary>
+    /// character wrap limit
+    /// </summary>
     public int characterWrapLimit;
 
-    InputSystemUIInputModule inputModule;
-
+    /// <summary>
+    /// activates the tooltips
+    /// </summary>
     public bool tooltipToogled = false;
 
 

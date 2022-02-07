@@ -25,7 +25,7 @@ items:
   source:
     id: Waypoint_Designer
     path: ''
-    startLine: 10657
+    startLine: 11541
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -58,10 +58,12 @@ items:
   source:
     id: waypoints
     path: ''
-    startLine: 10660
+    startLine: 11546
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nwaypoint list\n"
+  example: []
   syntax:
     content: public List<Vector2> waypoints
     return:
@@ -85,10 +87,12 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 10661
+    startLine: 11550
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nspeed of object\n"
+  example: []
   syntax:
     content: public float speed
     return:
@@ -112,10 +116,12 @@ items:
   source:
     id: force
     path: ''
-    startLine: 10662
+    startLine: 11554
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nforce of object\n"
+  example: []
   syntax:
     content: public float force
     return:
@@ -139,10 +145,12 @@ items:
   source:
     id: restartAfter
     path: ''
-    startLine: 10663
+    startLine: 11558
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nrestart time of loop\n"
+  example: []
   syntax:
     content: public float restartAfter
     return:
@@ -166,10 +174,12 @@ items:
   source:
     id: loop
     path: ''
-    startLine: 10664
+    startLine: 11562
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nloop waypoints\n"
+  example: []
   syntax:
     content: public bool loop
     return:
@@ -193,10 +203,12 @@ items:
   source:
     id: enemyDelayToNextWaypoint
     path: ''
-    startLine: 10665
+    startLine: 11566
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndelay between waypoints\n"
+  example: []
   syntax:
     content: public float enemyDelayToNextWaypoint
     return:
@@ -220,10 +232,12 @@ items:
   source:
     id: line
     path: ''
-    startLine: 10666
+    startLine: 11570
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nline render\n"
+  example: []
   syntax:
     content: public LineRenderer line
     return:
@@ -247,10 +261,12 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 10667
+    startLine: 11574
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nwaypoint prefab\n"
+  example: []
   syntax:
     content: public GameObject waypointPrefab
     return:
@@ -274,10 +290,12 @@ items:
   source:
     id: waypointList
     path: ''
-    startLine: 10673
+    startLine: 11583
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlist of waypoint objects\n"
+  example: []
   syntax:
     content: public List<GameObject> waypointList
     return:
@@ -301,7 +319,7 @@ items:
   source:
     id: paintWayoints
     path: ''
-    startLine: 10729
+    startLine: 11639
   assemblies:
   - cs.temp.dll
   namespace: Global

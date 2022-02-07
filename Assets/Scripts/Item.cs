@@ -67,6 +67,9 @@ public class Item
         }
     }
 
+    /// <summary>
+    /// game sprice for the item
+    /// </summary>
     public string Sprite {
         get {
             return sprite;
@@ -76,7 +79,9 @@ public class Item
             sprite = value;
         }
     }
-
+    /// <summary>
+    /// pattern icon for the item
+    /// </summary>
     public string PatternIcon {
         get {
             return patternIcon;

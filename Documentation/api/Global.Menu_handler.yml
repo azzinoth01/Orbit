@@ -55,7 +55,7 @@ items:
   source:
     id: Menu_handler
     path: ''
-    startLine: 5888
+    startLine: 6310
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -88,10 +88,12 @@ items:
   source:
     id: levelSelectUI
     path: ''
-    startLine: 5891
+    startLine: 6315
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlevel select UI panel\n"
+  example: []
   syntax:
     content: public GameObject levelSelectUI
     return:
@@ -115,10 +117,12 @@ items:
   source:
     id: shipMenuUI
     path: ''
-    startLine: 5892
+    startLine: 6319
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nship menu UI panel\n"
+  example: []
   syntax:
     content: public GameObject shipMenuUI
     return:
@@ -142,10 +146,12 @@ items:
   source:
     id: levelFinishedUI
     path: ''
-    startLine: 5893
+    startLine: 6323
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlevel finished UI panel\n"
+  example: []
   syntax:
     content: public GameObject levelFinishedUI
     return:
@@ -169,10 +175,12 @@ items:
   source:
     id: gameOverUI
     path: ''
-    startLine: 5894
+    startLine: 6327
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ngame over UI panel\n"
+  example: []
   syntax:
     content: public GameObject gameOverUI
     return:
@@ -196,10 +204,12 @@ items:
   source:
     id: pauseUI
     path: ''
-    startLine: 5895
+    startLine: 6331
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\npause menu UI panel\n"
+  example: []
   syntax:
     content: public GameObject pauseUI
     return:
@@ -223,10 +233,12 @@ items:
   source:
     id: bossHpBar
     path: ''
-    startLine: 5897
+    startLine: 6336
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nboss hp bar\n"
+  example: []
   syntax:
     content: public Image bossHpBar
     return:
@@ -250,10 +262,12 @@ items:
   source:
     id: bossUI
     path: ''
-    startLine: 5898
+    startLine: 6340
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nboss UI panel\n"
+  example: []
   syntax:
     content: public GameObject bossUI
     return:
@@ -277,10 +291,12 @@ items:
   source:
     id: playtimeText
     path: ''
-    startLine: 5900
+    startLine: 6345
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nnot in use anymore\n"
+  example: []
   syntax:
     content: public List<Text> playtimeText
     return:
@@ -304,10 +320,12 @@ items:
   source:
     id: enemyKilledCounterText
     path: ''
-    startLine: 5901
+    startLine: 6349
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nnot in use anymore\n"
+  example: []
   syntax:
     content: public List<Text> enemyKilledCounterText
     return:
@@ -331,10 +349,12 @@ items:
   source:
     id: score
     path: ''
-    startLine: 5903
+    startLine: 6354
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nshows score or wave information\n"
+  example: []
   syntax:
     content: public Text score
     return:
@@ -358,10 +378,12 @@ items:
   source:
     id: moneyEarnedText
     path: ''
-    startLine: 5909
+    startLine: 6363
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmoney earned info text\n"
+  example: []
   syntax:
     content: public List<Text> moneyEarnedText
     return:
@@ -385,10 +407,12 @@ items:
   source:
     id: toalMoneyText
     path: ''
-    startLine: 5910
+    startLine: 6367
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ntotall money possesed\n"
+  example: []
   syntax:
     content: public List<Text> toalMoneyText
     return:
@@ -412,10 +436,12 @@ items:
   source:
     id: selectedButtonImages
     path: ''
-    startLine: 5912
+    startLine: 6372
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nall selecte able buttons\n"
+  example: []
   syntax:
     content: public List<Image> selectedButtonImages
     return:
@@ -439,10 +465,12 @@ items:
   source:
     id: menuList
     path: ''
-    startLine: 5914
+    startLine: 6377
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nall menu panels\n"
+  example: []
   syntax:
     content: public List<GameObject> menuList
     return:
@@ -466,10 +494,12 @@ items:
   source:
     id: menuName
     path: ''
-    startLine: 5916
+    startLine: 6382
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nnot in use\n"
+  example: []
   syntax:
     content: public Text menuName
     return:
@@ -493,7 +523,7 @@ items:
   source:
     id: tooltipToogle
     path: ''
-    startLine: 5918
+    startLine: 6384
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -520,10 +550,12 @@ items:
   source:
     id: Playtime
     path: ''
-    startLine: 5920
+    startLine: 6389
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nnot in use anymore\n"
+  example: []
   syntax:
     content: public float Playtime { get; set; }
     parameters: []
@@ -551,7 +583,7 @@ items:
   source:
     id: addScore
     path: ''
-    startLine: 5935
+    startLine: 6404
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -583,7 +615,7 @@ items:
   source:
     id: onChangedScore
     path: ''
-    startLine: 5951
+    startLine: 6420
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -611,7 +643,7 @@ items:
   source:
     id: onClickShipEditor
     path: ''
-    startLine: 6003
+    startLine: 6472
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -643,7 +675,7 @@ items:
   source:
     id: onClickExitShipEditor
     path: ''
-    startLine: 6012
+    startLine: 6481
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -675,7 +707,7 @@ items:
   source:
     id: onClickWorldSelect
     path: ''
-    startLine: 6019
+    startLine: 6488
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -703,7 +735,7 @@ items:
   source:
     id: onClickBack
     path: ''
-    startLine: 6026
+    startLine: 6495
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -731,7 +763,7 @@ items:
   source:
     id: onClickMainMenu
     path: ''
-    startLine: 6035
+    startLine: 6504
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -763,7 +795,7 @@ items:
   source:
     id: onClickLevelSelect
     path: ''
-    startLine: 6049
+    startLine: 6518
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -795,7 +827,7 @@ items:
   source:
     id: onClickNextLeve
     path: ''
-    startLine: 6057
+    startLine: 6526
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -827,7 +859,7 @@ items:
   source:
     id: onClickShipMenu
     path: ''
-    startLine: 6079
+    startLine: 6548
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -859,7 +891,7 @@ items:
   source:
     id: onClickTryAgain
     path: ''
-    startLine: 6088
+    startLine: 6557
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -887,7 +919,7 @@ items:
   source:
     id: setPause
     path: ''
-    startLine: 6124
+    startLine: 6593
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -915,7 +947,7 @@ items:
   source:
     id: setResume
     path: ''
-    startLine: 6132
+    startLine: 6601
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -943,7 +975,7 @@ items:
   source:
     id: setGameOver
     path: ''
-    startLine: 6144
+    startLine: 6613
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -971,7 +1003,7 @@ items:
   source:
     id: setLevelFinish
     path: ''
-    startLine: 6186
+    startLine: 6655
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -999,7 +1031,7 @@ items:
   source:
     id: onClickOptions
     path: ''
-    startLine: 6239
+    startLine: 6708
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1031,7 +1063,7 @@ items:
   source:
     id: onClickGoBackToPreviousScene
     path: ''
-    startLine: 6248
+    startLine: 6717
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1059,7 +1091,7 @@ items:
   source:
     id: onSelectButton
     path: ''
-    startLine: 6258
+    startLine: 6727
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1091,7 +1123,7 @@ items:
   source:
     id: onClickMenuItem
     path: ''
-    startLine: 6271
+    startLine: 6740
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1123,7 +1155,7 @@ items:
   source:
     id: onClickActivateGameobnect
     path: ''
-    startLine: 6282
+    startLine: 6751
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1155,7 +1187,7 @@ items:
   source:
     id: onClickSetMenuName
     path: ''
-    startLine: 6290
+    startLine: 6759
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1187,7 +1219,7 @@ items:
   source:
     id: onclickSetToogle
     path: ''
-    startLine: 6299
+    startLine: 6768
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1219,7 +1251,7 @@ items:
   source:
     id: onTooltipToogleChanged
     path: ''
-    startLine: 6327
+    startLine: 6796
   assemblies:
   - cs.temp.dll
   namespace: Global

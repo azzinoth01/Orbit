@@ -18,7 +18,7 @@ items:
   source:
     id: FollowMouse
     path: ''
-    startLine: 4322
+    startLine: 4554
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -51,10 +51,12 @@ items:
   source:
     id: slotMouseoverCheck
     path: ''
-    startLine: 4327
+    startLine: 4562
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nequipment slots\n"
+  example: []
   syntax:
     content: public List<RemoveSlotItem> slotMouseoverCheck
     return:
@@ -78,10 +80,12 @@ items:
   source:
     id: inv
     path: ''
-    startLine: 4328
+    startLine: 4566
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ninventory list\n"
+  example: []
   syntax:
     content: public Inventory_fill inv
     return:
@@ -105,7 +109,7 @@ items:
   source:
     id: MouseIsPressed
     path: ''
-    startLine: 4330
+    startLine: 4568
   assemblies:
   - cs.temp.dll
   namespace: Global

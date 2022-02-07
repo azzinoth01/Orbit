@@ -26,6 +26,9 @@ public class Skillsequenze
         this.shootInRotatedDirection = shootInRotatedDirection;
     }
 
+    /// <summary>
+    /// retruns skill gameobject
+    /// </summary>
     public GameObject Skill {
         get {
             return skill;
@@ -33,7 +36,9 @@ public class Skillsequenze
 
 
     }
-
+    /// <summary>
+    /// returns skill delay
+    /// </summary>
     public float Delay {
         get {
             return delay;
@@ -41,7 +46,9 @@ public class Skillsequenze
 
 
     }
-
+    /// <summary>
+    /// returns and sets if the skill shoots in player direction
+    /// </summary>
     public bool ShootInRotatedDirection {
         get {
             return shootInRotatedDirection;

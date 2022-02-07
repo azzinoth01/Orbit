@@ -16,7 +16,7 @@ items:
   source:
     id: EnemyHitFlicker
     path: ''
-    startLine: 3600
+    startLine: 3740
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -49,10 +49,12 @@ items:
   source:
     id: HitFlickerInQue
     path: ''
-    startLine: 3615
+    startLine: 3759
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe queue for the hit flicker\n"
+  example: []
   syntax:
     content: public int HitFlickerInQue { get; set; }
     parameters: []

@@ -20,7 +20,7 @@ items:
   source:
     id: Enemy_skills
     path: ''
-    startLine: 3772
+    startLine: 3926
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -53,10 +53,12 @@ items:
   source:
     id: shootsToCreate
     path: ''
-    startLine: 3775
+    startLine: 3931
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nhow many skill objects have to be pre created\n"
+  example: []
   syntax:
     content: public int shootsToCreate
     return:
@@ -80,10 +82,12 @@ items:
   source:
     id: skillsequenze
     path: ''
-    startLine: 3777
+    startLine: 3935
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe skillsequenze list\n"
+  example: []
   syntax:
     content: public List<Skillsequenze> skillsequenze
     return:
@@ -107,10 +111,12 @@ items:
   source:
     id: additionalDmg
     path: ''
-    startLine: 3782
+    startLine: 3943
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe addition dmg of the enemy\n"
+  example: []
   syntax:
     content: public float additionalDmg
     return:
@@ -134,10 +140,12 @@ items:
   source:
     id: dmgModifier
     path: ''
-    startLine: 3783
+    startLine: 3947
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe dmg modifier of the enemy\n"
+  example: []
   syntax:
     content: public float dmgModifier
     return:
@@ -161,10 +169,12 @@ items:
   source:
     id: doNotDeactivate
     path: ''
-    startLine: 3790
+    startLine: 3956
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nstops the deactivation of skills if the enemy moves out of the enemy border\n"
+  example: []
   syntax:
     content: public bool doNotDeactivate
     return:

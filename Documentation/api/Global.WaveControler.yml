@@ -20,7 +20,7 @@ items:
   source:
     id: WaveControler
     path: ''
-    startLine: 10514
+    startLine: 11391
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -53,10 +53,12 @@ items:
   source:
     id: minEnemys
     path: ''
-    startLine: 10517
+    startLine: 11396
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmin of enemies to spawn\n"
+  example: []
   syntax:
     content: public int minEnemys
     return:
@@ -80,10 +82,12 @@ items:
   source:
     id: maxEnemys
     path: ''
-    startLine: 10518
+    startLine: 11400
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmax of enemies to spawn\n"
+  example: []
   syntax:
     content: public int maxEnemys
     return:
@@ -107,10 +111,12 @@ items:
   source:
     id: CurrentWave
     path: ''
-    startLine: 10529
+    startLine: 11413
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets the current wave\n"
+  example: []
   syntax:
     content: public int CurrentWave { get; set; }
     parameters: []
@@ -138,7 +144,7 @@ items:
   source:
     id: startNextWave
     path: ''
-    startLine: 10570
+    startLine: 11454
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -166,7 +172,7 @@ items:
   source:
     id: waveFinished
     path: ''
-    startLine: 10630
+    startLine: 11514
   assemblies:
   - cs.temp.dll
   namespace: Global

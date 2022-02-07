@@ -19,7 +19,7 @@ items:
   source:
     id: ScrollBackground
     path: ''
-    startLine: 8730
+    startLine: 9451
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -52,10 +52,12 @@ items:
   source:
     id: images
     path: ''
-    startLine: 8732
+    startLine: 9456
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nimages which are to be scrolled\n"
+  example: []
   syntax:
     content: public Image[] images
     return:
@@ -79,10 +81,12 @@ items:
   source:
     id: yPosBorder
     path: ''
-    startLine: 8733
+    startLine: 9460
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe y position on which the last image moves \n"
+  example: []
   syntax:
     content: public float yPosBorder
     return:
@@ -106,10 +110,12 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 8734
+    startLine: 9464
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nscrolling speed\n"
+  example: []
   syntax:
     content: public float speed
     return:
@@ -133,10 +139,12 @@ items:
   source:
     id: maxXOffset
     path: ''
-    startLine: 8736
+    startLine: 9469
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmax x Offset for random start position\n"
+  example: []
   syntax:
     content: public float maxXOffset
     return:

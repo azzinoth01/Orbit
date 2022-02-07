@@ -9,9 +9,21 @@ using UnityEngine.UI;
 /// </summary>
 public class LoadEquipmentSlots : MonoBehaviour
 {
+    /// <summary>
+    /// main Weapon image
+    /// </summary>
     public Image mainWeapon;
+    /// <summary>
+    /// secondary weapon image
+    /// </summary>
     public Image secondaryWeapon;
+    /// <summary>
+    /// second secondary weapon image
+    /// </summary>
     public Image secondaryWeapon1;
+    /// <summary>
+    /// ship part image
+    /// </summary>
     public Image shieldPart;
     private LoadAssets loader;
 

@@ -21,7 +21,7 @@ items:
   source:
     id: WeaponInfo
     path: ''
-    startLine: 10938
+    startLine: 11866
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -73,10 +73,12 @@ items:
   source:
     id: mainWeapon
     path: ''
-    startLine: 10941
+    startLine: 11872
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmain weapon\n"
+  example: []
   syntax:
     content: public bool mainWeapon
     return:
@@ -100,10 +102,12 @@ items:
   source:
     id: skill
     path: ''
-    startLine: 10942
+    startLine: 11876
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nweapon skill\n"
+  example: []
   syntax:
     content: public string skill
     return:
@@ -127,10 +131,12 @@ items:
   source:
     id: reloadTime
     path: ''
-    startLine: 10943
+    startLine: 11880
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nweapon reload time\n"
+  example: []
   syntax:
     content: public float reloadTime
     return:
@@ -154,10 +160,12 @@ items:
   source:
     id: shootsToCreate
     path: ''
-    startLine: 10945
+    startLine: 11884
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nshoots to pre create\n"
+  example: []
   syntax:
     content: public int shootsToCreate
     return:
@@ -181,10 +189,12 @@ items:
   source:
     id: additionalDmg
     path: ''
-    startLine: 10947
+    startLine: 11888
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nadditional weapon dmg\n"
+  example: []
   syntax:
     content: public int additionalDmg
     return:
@@ -208,10 +218,12 @@ items:
   source:
     id: dmgModifier
     path: ''
-    startLine: 10948
+    startLine: 11892
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nweapon dmg multiplier\n"
+  example: []
   syntax:
     content: public float dmgModifier
     return:

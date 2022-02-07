@@ -17,7 +17,7 @@ items:
   source:
     id: ParallaxBackground
     path: ''
-    startLine: 6575
+    startLine: 7062
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -50,7 +50,7 @@ items:
   source:
     id: Camera
     path: ''
-    startLine: 6577
+    startLine: 7064
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -77,7 +77,7 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 6578
+    startLine: 7065
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -30,7 +30,7 @@ items:
   source:
     id: Rebinding_menu
     path: ''
-    startLine: 7884
+    startLine: 8541
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -63,10 +63,12 @@ items:
   source:
     id: ScrollView
     path: ''
-    startLine: 7888
+    startLine: 8548
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nscroll view to place rebinding controls\n"
+  example: []
   syntax:
     content: public GameObject ScrollView
     return:
@@ -90,10 +92,12 @@ items:
   source:
     id: itemHolder
     path: ''
-    startLine: 7889
+    startLine: 8552
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nobject to contain 1 rebind prefab\n"
+  example: []
   syntax:
     content: public GameObject itemHolder
     return:
@@ -117,10 +121,12 @@ items:
   source:
     id: actionName
     path: ''
-    startLine: 7890
+    startLine: 8556
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nrebind action name prefab\n"
+  example: []
   syntax:
     content: public GameObject actionName
     return:
@@ -144,10 +150,12 @@ items:
   source:
     id: actionKeybind
     path: ''
-    startLine: 7891
+    startLine: 8560
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nrebind keybind text prefab\n"
+  example: []
   syntax:
     content: public GameObject actionKeybind
     return:
@@ -171,10 +179,12 @@ items:
   source:
     id: buttonRebind
     path: ''
-    startLine: 7892
+    startLine: 8564
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbutton for the rebinding prefab\n"
+  example: []
   syntax:
     content: public GameObject buttonRebind
     return:
@@ -198,10 +208,12 @@ items:
   source:
     id: buttonDefault
     path: ''
-    startLine: 7893
+    startLine: 8568
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbutton for the default rebinding prefab\n"
+  example: []
   syntax:
     content: public GameObject buttonDefault
     return:
@@ -225,10 +237,12 @@ items:
   source:
     id: saveAlert
     path: ''
-    startLine: 7894
+    startLine: 8572
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsave alert prefab\n"
+  example: []
   syntax:
     content: public GameObject saveAlert
     return:
@@ -252,10 +266,12 @@ items:
   source:
     id: buttonBack
     path: ''
-    startLine: 7895
+    startLine: 8576
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbutton back \n"
+  example: []
   syntax:
     content: public GameObject buttonBack
     return:
@@ -279,10 +295,12 @@ items:
   source:
     id: buttonSave
     path: ''
-    startLine: 7896
+    startLine: 8580
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbutton to save\n"
+  example: []
   syntax:
     content: public GameObject buttonSave
     return:
@@ -306,10 +324,12 @@ items:
   source:
     id: viewPanel
     path: ''
-    startLine: 7898
+    startLine: 8585
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nview panel\n"
+  example: []
   syntax:
     content: public GameObject viewPanel
     return:
@@ -333,7 +353,7 @@ items:
   source:
     id: saveRebinding
     path: ''
-    startLine: 8000
+    startLine: 8687
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -361,7 +381,7 @@ items:
   source:
     id: loadRebinding
     path: ''
-    startLine: 8036
+    startLine: 8723
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -396,7 +416,7 @@ items:
   source:
     id: onClickAlertButton
     path: ''
-    startLine: 8055
+    startLine: 8742
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -424,7 +444,7 @@ items:
   source:
     id: onClickGamepad
     path: ''
-    startLine: 8379
+    startLine: 9066
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -452,7 +472,7 @@ items:
   source:
     id: onClickMouseAndKey
     path: ''
-    startLine: 8396
+    startLine: 9083
   assemblies:
   - cs.temp.dll
   namespace: Global

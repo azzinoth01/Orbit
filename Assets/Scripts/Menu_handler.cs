@@ -9,36 +9,83 @@ using UnityEngine.UI;
 /// </summary>
 public class Menu_handler : MonoBehaviour
 {
-
+    /// <summary>
+    /// level select UI panel
+    /// </summary>
     public GameObject levelSelectUI;
+    /// <summary>
+    /// ship menu UI panel
+    /// </summary>
     public GameObject shipMenuUI;
+    /// <summary>
+    /// level finished UI panel
+    /// </summary>
     public GameObject levelFinishedUI;
+    /// <summary>
+    /// game over UI panel
+    /// </summary>
     public GameObject gameOverUI;
+    /// <summary>
+    /// pause menu UI panel
+    /// </summary>
     public GameObject pauseUI;
 
+    /// <summary>
+    /// boss hp bar
+    /// </summary>
     public Image bossHpBar;
+    /// <summary>
+    /// boss UI panel
+    /// </summary>
     public GameObject bossUI;
 
+    /// <summary>
+    /// not in use anymore
+    /// </summary>
     public List<Text> playtimeText;
+    /// <summary>
+    /// not in use anymore
+    /// </summary>
     public List<Text> enemyKilledCounterText;
 
+    /// <summary>
+    /// shows score or wave information
+    /// </summary>
     public Text score;
 
     private int currentScore;
 
     private float playtime;
 
+    /// <summary>
+    /// money earned info text
+    /// </summary>
     public List<Text> moneyEarnedText;
+    /// <summary>
+    /// totall money possesed
+    /// </summary>
     public List<Text> toalMoneyText;
 
+    /// <summary>
+    /// all selecte able buttons
+    /// </summary>
     public List<Image> selectedButtonImages;
 
+    /// <summary>
+    /// all menu panels
+    /// </summary>
     public List<GameObject> menuList;
 
+    /// <summary>
+    /// not in use
+    /// </summary>
     public Text menuName;
 
     public Toggle tooltipToogle;
 
+    /// <summary>
+    /// not in use anymore
+    /// </summary>
     public float Playtime {
         get {
             return playtime;

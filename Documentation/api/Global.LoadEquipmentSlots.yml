@@ -19,7 +19,7 @@ items:
   source:
     id: LoadEquipmentSlots
     path: ''
-    startLine: 5592
+    startLine: 5974
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -52,10 +52,12 @@ items:
   source:
     id: mainWeapon
     path: ''
-    startLine: 5594
+    startLine: 5979
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmain Weapon image\n"
+  example: []
   syntax:
     content: public Image mainWeapon
     return:
@@ -79,10 +81,12 @@ items:
   source:
     id: secondaryWeapon
     path: ''
-    startLine: 5595
+    startLine: 5983
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsecondary weapon image\n"
+  example: []
   syntax:
     content: public Image secondaryWeapon
     return:
@@ -106,10 +110,12 @@ items:
   source:
     id: secondaryWeapon1
     path: ''
-    startLine: 5596
+    startLine: 5987
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsecond secondary weapon image\n"
+  example: []
   syntax:
     content: public Image secondaryWeapon1
     return:
@@ -133,10 +139,12 @@ items:
   source:
     id: shieldPart
     path: ''
-    startLine: 5597
+    startLine: 5991
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nship part image\n"
+  example: []
   syntax:
     content: public Image shieldPart
     return:

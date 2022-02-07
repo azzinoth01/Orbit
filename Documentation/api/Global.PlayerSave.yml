@@ -26,7 +26,7 @@ items:
   source:
     id: PlayerSave
     path: ''
-    startLine: 7665
+    startLine: 8303
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -67,10 +67,12 @@ items:
   source:
     id: Money
     path: ''
-    startLine: 7677
+    startLine: 8319
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nplayer money\n"
+  example: []
   syntax:
     content: public int Money { get; set; }
     parameters: []
@@ -98,10 +100,12 @@ items:
   source:
     id: MainWeapon
     path: ''
-    startLine: 7687
+    startLine: 8332
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmain weapon of player\n"
+  example: []
   syntax:
     content: public WeaponInfo MainWeapon { get; set; }
     parameters: []
@@ -129,10 +133,12 @@ items:
   source:
     id: SecondaryWeapon
     path: ''
-    startLine: 7697
+    startLine: 8344
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsecondary weapon of player\n"
+  example: []
   syntax:
     content: public WeaponInfo SecondaryWeapon { get; set; }
     parameters: []
@@ -160,10 +166,12 @@ items:
   source:
     id: SecondaryWeapon1
     path: ''
-    startLine: 7707
+    startLine: 8356
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsecond secondary weapon of player\n"
+  example: []
   syntax:
     content: public WeaponInfo SecondaryWeapon1 { get; set; }
     parameters: []
@@ -191,10 +199,12 @@ items:
   source:
     id: ShieldPart
     path: ''
-    startLine: 7717
+    startLine: 8368
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nship parts of player\n"
+  example: []
   syntax:
     content: public Parts ShieldPart { get; set; }
     parameters: []
@@ -222,10 +232,12 @@ items:
   source:
     id: BoughtItems
     path: ''
-    startLine: 7727
+    startLine: 8380
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlist of bought items in the shop\n"
+  example: []
   syntax:
     content: public List<string> BoughtItems { get; set; }
     parameters: []
@@ -253,10 +265,12 @@ items:
   source:
     id: TutorialPlayed
     path: ''
-    startLine: 7737
+    startLine: 8392
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nturorial finished save\n"
+  example: []
   syntax:
     content: public bool TutorialPlayed { get; set; }
     parameters: []
@@ -284,10 +298,12 @@ items:
   source:
     id: Level1Played
     path: ''
-    startLine: 7747
+    startLine: 8404
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlevel 1 finished save\n"
+  example: []
   syntax:
     content: public bool Level1Played { get; set; }
     parameters: []
@@ -315,7 +331,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 7760
+    startLine: 8417
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -343,7 +359,7 @@ items:
   source:
     id: savingSetting
     path: ''
-    startLine: 7781
+    startLine: 8438
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -371,7 +387,7 @@ items:
   source:
     id: loadSettings
     path: ''
-    startLine: 7795
+    startLine: 8452
   assemblies:
   - cs.temp.dll
   namespace: Global

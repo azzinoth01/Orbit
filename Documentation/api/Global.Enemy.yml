@@ -44,7 +44,7 @@ items:
   source:
     id: Enemy
     path: ''
-    startLine: 2946
+    startLine: 3007
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -77,10 +77,12 @@ items:
   source:
     id: health
     path: ''
-    startLine: 2948
+    startLine: 3013
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nhealth of enemy\n"
+  example: []
   syntax:
     content: public float health
     return:
@@ -104,10 +106,12 @@ items:
   source:
     id: body
     path: ''
-    startLine: 2953
+    startLine: 3020
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nphysic object of enemy\n"
+  example: []
   syntax:
     content: public Rigidbody2D body
     return:
@@ -131,10 +135,12 @@ items:
   source:
     id: waypoints
     path: ''
-    startLine: 2955
+    startLine: 3025
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nwaypoint liste for movement\n"
+  example: []
   syntax:
     content: public List<Vector2> waypoints
     return:
@@ -158,10 +164,12 @@ items:
   source:
     id: moveToRandomWaypoints
     path: ''
-    startLine: 2956
+    startLine: 3029
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmakes the enemy more to a random waypoint\n"
+  example: []
   syntax:
     content: public bool moveToRandomWaypoints
     return:
@@ -185,10 +193,12 @@ items:
   source:
     id: moveToPlayer
     path: ''
-    startLine: 2957
+    startLine: 3033
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nrenembers the current player position and moves towards it \n"
+  example: []
   syntax:
     content: public bool moveToPlayer
     return:
@@ -212,10 +222,12 @@ items:
   source:
     id: followPlayerMovementX
     path: ''
-    startLine: 2958
+    startLine: 3038
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nfollows the player on the x Position\n"
+  example: []
   syntax:
     content: public bool followPlayerMovementX
     return:
@@ -239,10 +251,12 @@ items:
   source:
     id: followPlayerMovementY
     path: ''
-    startLine: 2959
+    startLine: 3042
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nfollows the palyer on the y Position\n"
+  example: []
   syntax:
     content: public bool followPlayerMovementY
     return:
@@ -266,10 +280,12 @@ items:
   source:
     id: playerfollowRange
     path: ''
-    startLine: 2960
+    startLine: 3046
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndescribes how precise the follow movement has to be\n"
+  example: []
   syntax:
     content: public float playerfollowRange
     return:
@@ -293,10 +309,12 @@ items:
   source:
     id: force
     path: ''
-    startLine: 2961
+    startLine: 3050
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe used force to move the enemy\n"
+  example: []
   syntax:
     content: public float force
     return:
@@ -320,10 +338,12 @@ items:
   source:
     id: maxSpeed
     path: ''
-    startLine: 2962
+    startLine: 3054
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe maximum speed the enemy can have\n"
+  example: []
   syntax:
     content: public float maxSpeed
     return:
@@ -347,10 +367,12 @@ items:
   source:
     id: loop
     path: ''
-    startLine: 2964
+    startLine: 3060
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nloops the waypoints if it has more than 1\n"
+  example: []
   syntax:
     content: public bool loop
     return:
@@ -374,10 +396,12 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 2966
+    startLine: 3065
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nwaypoint prefab\n"
+  example: []
   syntax:
     content: public GameObject waypointPrefab
     return:
@@ -401,10 +425,12 @@ items:
   source:
     id: maxDuration
     path: ''
-    startLine: 2972
+    startLine: 3073
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe maximum duration an enemy can stay in the scene. if it is 0 it can stay for an unlimited time\n"
+  example: []
   syntax:
     content: public float maxDuration
     return:
@@ -428,10 +454,12 @@ items:
   source:
     id: delayToNextWaypoint
     path: ''
-    startLine: 2973
+    startLine: 3077
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe delay between waypoint movements\n"
+  example: []
   syntax:
     content: public float delayToNextWaypoint
     return:
@@ -455,10 +483,12 @@ items:
   source:
     id: collisionDmg
     path: ''
-    startLine: 2979
+    startLine: 3085
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncollision dmg the player takes\n"
+  example: []
   syntax:
     content: public int collisionDmg
     return:
@@ -482,10 +512,12 @@ items:
   source:
     id: destoryAfterCollison
     path: ''
-    startLine: 2980
+    startLine: 3089
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nif the enemy destorys itself with a collision\n"
+  example: []
   syntax:
     content: public bool destoryAfterCollison
     return:
@@ -509,10 +541,12 @@ items:
   source:
     id: deathParticelSystem
     path: ''
-    startLine: 2982
+    startLine: 3095
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndeath animation\n"
+  example: []
   syntax:
     content: public GameObject deathParticelSystem
     return:
@@ -536,10 +570,12 @@ items:
   source:
     id: showBossHp
     path: ''
-    startLine: 2992
+    startLine: 3107
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nif the enemy uses the Boss UI\n"
+  example: []
   syntax:
     content: public bool showBossHp
     return:
@@ -563,10 +599,12 @@ items:
   source:
     id: bossHp
     path: ''
-    startLine: 2993
+    startLine: 3111
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe Image of the Boss UI\n"
+  example: []
   syntax:
     content: public Image bossHp
     return:
@@ -590,10 +628,12 @@ items:
   source:
     id: bossUI
     path: ''
-    startLine: 2994
+    startLine: 3115
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe Boss UI\n"
+  example: []
   syntax:
     content: public GameObject bossUI
     return:
@@ -617,10 +657,12 @@ items:
   source:
     id: minMoneyValue
     path: ''
-    startLine: 3003
+    startLine: 3127
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nminimum money drop value\nif minMoneyValue and maxMonyeValue are 0 the values is set to 1-100 \n"
+  example: []
   syntax:
     content: public int minMoneyValue
     return:
@@ -644,10 +686,12 @@ items:
   source:
     id: maxMonyeValue
     path: ''
-    startLine: 3004
+    startLine: 3132
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmaximum money drop value\nif minMoneyValue and maxMonyeValue are 0 the values is set to 1-100 \n"
+  example: []
   syntax:
     content: public int maxMonyeValue
     return:
@@ -671,10 +715,12 @@ items:
   source:
     id: doNotCountAsKill
     path: ''
-    startLine: 3006
+    startLine: 3137
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ndo not count this enemy as a killed enemy\n"
+  example: []
   syntax:
     content: public bool doNotCountAsKill
     return:
@@ -698,10 +744,12 @@ items:
   source:
     id: enemyHitSound
     path: ''
-    startLine: 3008
+    startLine: 3142
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nhit sound for enemies\n"
+  example: []
   syntax:
     content: public AudioSource enemyHitSound
     return:
@@ -725,10 +773,12 @@ items:
   source:
     id: doNotUseForceToMove
     path: ''
-    startLine: 3016
+    startLine: 3152
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nlets the enemy move always at full speed\n"
+  example: []
   syntax:
     content: public bool doNotUseForceToMove
     return:
@@ -752,10 +802,12 @@ items:
   source:
     id: SpawnerCallback
     path: ''
-    startLine: 3019
+    startLine: 3157
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe spawner of the enemy\n"
+  example: []
   syntax:
     content: public Enemy_Spawner SpawnerCallback { get; set; }
     parameters: []
@@ -783,10 +835,12 @@ items:
   source:
     id: MaxHealth
     path: ''
-    startLine: 3029
+    startLine: 3169
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nmaximum health of enemy\n"
+  example: []
   syntax:
     content: public float MaxHealth { get; set; }
     parameters: []
@@ -814,7 +868,7 @@ items:
   source:
     id: startMovingOut
     path: ''
-    startLine: 3251
+    startLine: 3391
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -842,7 +896,7 @@ items:
   source:
     id: takeDmg
     path: ''
-    startLine: 3442
+    startLine: 3582
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -16,7 +16,7 @@ items:
   source:
     id: RaycastMask
     path: ''
-    startLine: 7838
+    startLine: 8495
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -52,7 +52,7 @@ items:
   source:
     id: IsRaycastLocationValid
     path: ''
-    startLine: 7848
+    startLine: 8505
   assemblies:
   - cs.temp.dll
   namespace: Global

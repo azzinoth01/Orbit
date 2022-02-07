@@ -24,7 +24,7 @@ items:
   source:
     id: Enemy_Spawner_Info
     path: ''
-    startLine: 4258
+    startLine: 4467
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -65,10 +65,12 @@ items:
   source:
     id: triggerArea
     path: ''
-    startLine: 4262
+    startLine: 4473
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ntrigger area to activate the spawn\n"
+  example: []
   syntax:
     content: public GameObject triggerArea
     return:
@@ -92,10 +94,12 @@ items:
   source:
     id: useTriggerArea
     path: ''
-    startLine: 4263
+    startLine: 4477
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nuses trigger area to activate the spawn\n"
+  example: []
   syntax:
     content: public bool useTriggerArea
     return:
@@ -119,10 +123,12 @@ items:
   source:
     id: delay
     path: ''
-    startLine: 4264
+    startLine: 4481
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nthe delay between spawn\n"
+  example: []
   syntax:
     content: public float delay
     return:
@@ -146,10 +152,12 @@ items:
   source:
     id: enemysToSpawn
     path: ''
-    startLine: 4265
+    startLine: 4485
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nhow many enemies to spawn \n"
+  example: []
   syntax:
     content: public int enemysToSpawn
     return:
@@ -173,10 +181,12 @@ items:
   source:
     id: enemyPrefab
     path: ''
-    startLine: 4266
+    startLine: 4489
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nenemy to spawn prefab\n"
+  example: []
   syntax:
     content: public GameObject enemyPrefab
     return:
@@ -200,7 +210,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4275
+    startLine: 4498
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -228,10 +238,12 @@ items:
   source:
     id: SpawnStartet
     path: ''
-    startLine: 4281
+    startLine: 4507
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns if the spawner is startet and sets the spawncondition to if the spawner is started\n"
+  example: []
   syntax:
     content: public bool SpawnStartet { get; set; }
     parameters: []
@@ -259,10 +271,12 @@ items:
   source:
     id: CurrentEnemysSpawned
     path: ''
-    startLine: 4294
+    startLine: 4523
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets current enemies spawned\n"
+  example: []
   syntax:
     content: public int CurrentEnemysSpawned { get; set; }
     parameters: []
@@ -290,10 +304,12 @@ items:
   source:
     id: SpawnConditonFulfilled
     path: ''
-    startLine: 4304
+    startLine: 4536
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nretruns and sets the spawncondition\n"
+  example: []
   syntax:
     content: public bool SpawnConditonFulfilled { get; set; }
     parameters: []

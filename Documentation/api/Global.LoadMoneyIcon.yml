@@ -15,7 +15,7 @@ items:
   source:
     id: LoadMoneyIcon
     path: ''
-    startLine: 5648
+    startLine: 6042
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -19,7 +19,7 @@ items:
   source:
     id: TooltipSystem
     path: ''
-    startLine: 10052
+    startLine: 10892
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -52,10 +52,12 @@ items:
   source:
     id: tooltip
     path: ''
-    startLine: 10055
+    startLine: 10897
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ntooltip object to be used\n"
+  example: []
   syntax:
     content: public ToolTip tooltip
     return:
@@ -79,7 +81,7 @@ items:
   source:
     id: Start
     path: ''
-    startLine: 10061
+    startLine: 10903
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -107,7 +109,7 @@ items:
   source:
     id: Show
     path: ''
-    startLine: 10075
+    startLine: 10917
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -144,7 +146,7 @@ items:
   source:
     id: Hide
     path: ''
-    startLine: 10092
+    startLine: 10934
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -16,7 +16,7 @@ items:
   source:
     id: Inventar_Object
     path: ''
-    startLine: 4506
+    startLine: 4822
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -69,10 +69,12 @@ items:
   source:
     id: Amount
     path: ''
-    startLine: 4512
+    startLine: 4831
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreturns and sets the amount\n"
+  example: []
   syntax:
     content: public int Amount { get; set; }
     parameters: []

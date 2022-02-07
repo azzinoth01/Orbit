@@ -25,7 +25,7 @@ items:
   source:
     id: Win_condition
     path: ''
-    startLine: 10959
+    startLine: 11903
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -58,10 +58,12 @@ items:
   source:
     id: enemysToKill
     path: ''
-    startLine: 10962
+    startLine: 11908
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nenemies to kill\n"
+  example: []
   syntax:
     content: public int enemysToKill
     return:
@@ -85,10 +87,12 @@ items:
   source:
     id: boxcollider
     path: ''
-    startLine: 10963
+    startLine: 11912
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ncollider to chck portal hit\n"
+  example: []
   syntax:
     content: public BoxCollider2D boxcollider
     return:
@@ -112,10 +116,12 @@ items:
   source:
     id: sp
     path: ''
-    startLine: 10964
+    startLine: 11917
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nsprite render of portal\n"
+  example: []
   syntax:
     content: public SpriteRenderer sp
     return:
@@ -139,10 +145,12 @@ items:
   source:
     id: lighting
     path: ''
-    startLine: 10965
+    startLine: 11921
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nportal light\n"
+  example: []
   syntax:
     content: public Light2D lighting
     return:
@@ -166,10 +174,12 @@ items:
   source:
     id: rotate
     path: ''
-    startLine: 10967
+    startLine: 11925
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nrotates the portal\n"
+  example: []
   syntax:
     content: public bool rotate
     return:
@@ -193,10 +203,12 @@ items:
   source:
     id: rotateSpeed
     path: ''
-    startLine: 10968
+    startLine: 11929
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nrotation speed of portal\n"
+  example: []
   syntax:
     content: public float rotateSpeed
     return:
@@ -220,10 +232,12 @@ items:
   source:
     id: audios
     path: ''
-    startLine: 10970
+    startLine: 11934
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nportal spawn audio\n"
+  example: []
   syntax:
     content: public AudioSource audios
     return:
@@ -247,10 +261,12 @@ items:
   source:
     id: spawnDelay
     path: ''
-    startLine: 10972
+    startLine: 11938
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nspawn delay\n"
+  example: []
   syntax:
     content: public float spawnDelay
     return:
@@ -274,7 +290,7 @@ items:
   source:
     id: activateLevelFinishPortal
     path: ''
-    startLine: 10989
+    startLine: 11955
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -302,7 +318,7 @@ items:
   source:
     id: enemyKilled
     path: ''
-    startLine: 11022
+    startLine: 11988
   assemblies:
   - cs.temp.dll
   namespace: Global

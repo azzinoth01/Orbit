@@ -25,7 +25,7 @@ items:
   source:
     id: ShipEditorStatusDisplay
     path: ''
-    startLine: 8786
+    startLine: 9519
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -58,10 +58,12 @@ items:
   source:
     id: dmgText
     path: ''
-    startLine: 8790
+    startLine: 9525
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ntotal dmg display\n"
+  example: []
   syntax:
     content: public Text dmgText
     return:
@@ -85,10 +87,12 @@ items:
   source:
     id: dmgNameText
     path: ''
-    startLine: 8791
+    startLine: 9529
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\ntotal dmg display field name\n"
+  example: []
   syntax:
     content: public Text dmgNameText
     return:
@@ -112,10 +116,12 @@ items:
   source:
     id: reloadTimeText
     path: ''
-    startLine: 8792
+    startLine: 9533
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreload time display\n"
+  example: []
   syntax:
     content: public Text reloadTimeText
     return:
@@ -139,10 +145,12 @@ items:
   source:
     id: reloadTimeNameText
     path: ''
-    startLine: 8793
+    startLine: 9537
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nreload time display field name\n"
+  example: []
   syntax:
     content: public Text reloadTimeNameText
     return:
@@ -166,10 +174,12 @@ items:
   source:
     id: patternIcon
     path: ''
-    startLine: 8794
+    startLine: 9541
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\npattern icon display\n"
+  example: []
   syntax:
     content: public Image patternIcon
     return:
@@ -193,10 +203,12 @@ items:
   source:
     id: parrernIconName
     path: ''
-    startLine: 8795
+    startLine: 9545
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\npattern icon display field name\n"
+  example: []
   syntax:
     content: public Text parrernIconName
     return:
@@ -220,10 +232,12 @@ items:
   source:
     id: itemName
     path: ''
-    startLine: 8796
+    startLine: 9549
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nitem name display\n"
+  example: []
   syntax:
     content: public Text itemName
     return:
@@ -247,10 +261,12 @@ items:
   source:
     id: ownedMoney
     path: ''
-    startLine: 8798
+    startLine: 9554
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nowned money display\n"
+  example: []
   syntax:
     content: public Text ownedMoney
     return:
@@ -274,7 +290,7 @@ items:
   source:
     id: MoneyChanged
     path: ''
-    startLine: 8875
+    startLine: 9631
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -302,7 +318,7 @@ items:
   source:
     id: changeInfoDispaly
     path: ''
-    startLine: 8883
+    startLine: 9639
   assemblies:
   - cs.temp.dll
   namespace: Global

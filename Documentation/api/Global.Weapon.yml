@@ -23,7 +23,7 @@ items:
   source:
     id: Weapon
     path: ''
-    startLine: 10747
+    startLine: 11657
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -56,10 +56,12 @@ items:
   source:
     id: sound
     path: ''
-    startLine: 10749
+    startLine: 11662
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nweapon sound prefab\n"
+  example: []
   syntax:
     content: public GameObject sound
     return:
@@ -83,10 +85,12 @@ items:
   source:
     id: skill
     path: ''
-    startLine: 10750
+    startLine: 11666
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nweapon skill prefab\n"
+  example: []
   syntax:
     content: public GameObject skill
     return:
@@ -110,10 +114,12 @@ items:
   source:
     id: reloadTime
     path: ''
-    startLine: 10751
+    startLine: 11670
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nweapon reload time\n"
+  example: []
   syntax:
     content: public float reloadTime
     return:
@@ -137,7 +143,7 @@ items:
   source:
     id: shootsToCreate
     path: ''
-    startLine: 10754
+    startLine: 11673
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -164,10 +170,12 @@ items:
   source:
     id: additionalDmg
     path: ''
-    startLine: 10757
+    startLine: 11679
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nadditional weapon dmg\n"
+  example: []
   syntax:
     content: public int additionalDmg
     return:
@@ -191,10 +199,12 @@ items:
   source:
     id: dmgModifier
     path: ''
-    startLine: 10758
+    startLine: 11683
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nweapon dmg multiplier\n"
+  example: []
   syntax:
     content: public float dmgModifier
     return:
@@ -218,7 +228,7 @@ items:
   source:
     id: shoot
     path: ''
-    startLine: 10814
+    startLine: 11739
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -253,7 +263,7 @@ items:
   source:
     id: activateSkill
     path: ''
-    startLine: 10833
+    startLine: 11758
   assemblies:
   - cs.temp.dll
   namespace: Global

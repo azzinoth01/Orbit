@@ -7,9 +7,22 @@ using UnityEngine;
 /// </summary>
 public class ParticleControl : MonoBehaviour
 {
+    /// <summary>
+    /// the used particle system
+    /// </summary>
     public ParticleSystem particle;
+    /// <summary>
+    /// destorys after playing
+    /// </summary>
     public bool destroyAfterPlay;
+
+    /// <summary>
+    /// particle audio
+    /// </summary>
     public List<AudioSource> particleAudio;
+    /// <summary>
+    /// animation
+    /// </summary>
     public Animator anim;
 
     /// <summary>

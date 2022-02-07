@@ -7,9 +7,21 @@ using UnityEngine;
 /// </summary>
 public class LaserTest : MonoBehaviour
 {
+    /// <summary>
+    /// list of laser animator
+    /// </summary>
     public List<Animator> Laser;
+    /// <summary>
+    /// animation activation trigger
+    /// </summary>
     public bool Trigger;
+    /// <summary>
+    /// start audio
+    /// </summary>
     public AudioSource startAudio;
+    /// <summary>
+    /// loop audio
+    /// </summary>
     public AudioSource loopAudio;
     private bool started;
 
