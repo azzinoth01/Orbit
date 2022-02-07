@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// class to load the money icon from the global variables
+/// </summary>
 public class LoadMoneyIcon : MonoBehaviour
 {
     private Image icon;
     private SpriteRenderer render;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// loads the money icon and sets it to the image or the sprite of the object
+    /// </summary>
     void Start() {
         try {
             icon = gameObject.GetComponent<Image>();

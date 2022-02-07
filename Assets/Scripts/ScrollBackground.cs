@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// class to control a scrolling background
+/// </summary>
 public class ScrollBackground : MonoBehaviour
 {
     public Image[] images;
@@ -12,7 +16,9 @@ public class ScrollBackground : MonoBehaviour
     public float maxXOffset;
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// sets the scrolling background to a random position
+    /// </summary>
     private void Start() {
         float startPosY = Random.Range(0f, yPosBorder);
 
@@ -26,7 +32,9 @@ public class ScrollBackground : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// continuously scrolls the background down
+    /// </summary>
     void Update() {
         foreach (Image i in images) {
             i.transform.position = new Vector3(i.transform.position.x, i.transform.position.y - speed, transform.position.z);

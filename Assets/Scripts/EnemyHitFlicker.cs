@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// controls the enemy hit animation
+/// </summary>
 public class EnemyHitFlicker : MonoBehaviour
 {
 
@@ -28,7 +31,9 @@ public class EnemyHitFlicker : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// sets base values for flickering of enemies and starts flickering corutine
+    /// </summary>
     void Start() {
 
         try {
@@ -61,7 +66,11 @@ public class EnemyHitFlicker : MonoBehaviour
 
 
 
-
+    /// <summary>
+    /// corutine that handels all flickers that are added to the flickering queue
+    /// a maximum of 2 flickers can be in the queue at the same time
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator hitflicker() {
 
 

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+/// <summary>
+/// class to handle the inventory button events
+/// </summary>
 public class InventoryButton : MonoBehaviour, IPointerDownHandler
 {
     private Inventory_fill inv;
@@ -50,6 +54,10 @@ public class InventoryButton : MonoBehaviour, IPointerDownHandler
         }
     }
 
+    /// <summary>
+    /// checks if the button was hold down to allow drag and drop
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnPointerDown(PointerEventData eventData) {
 
         inv.inventoryButton(item, locked, obj);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// classe um Trigger areas zu machen
+/// classe to create trigger areas
 /// </summary>
 public class TriggerCallBack : MonoBehaviour
 {
@@ -22,9 +22,9 @@ public class TriggerCallBack : MonoBehaviour
     }
 
     /// <summary>
-    /// trigger check
+    /// check triggers against player collision only 1 trigger option can be active per trigger gameobject
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision">collision object</param>
     private void OnTriggerEnter2D(Collider2D collision) {
         if (Globals.player == collision.gameObject) {
             canDestory = true;

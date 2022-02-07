@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 
 /// <summary>
-/// classe um die Waffen nach Mouseposition ausrichtet
+/// class to aim the weapons on cursor position
 /// </summary>
 public class Weaponholder : MonoBehaviour
 {
@@ -14,7 +14,9 @@ public class Weaponholder : MonoBehaviour
     public float rotationSpeed;
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// sets base values
+    /// </summary>
     void Start() {
 
         mouse = Globals.virtualMouse.VirtualMouseProperty;
@@ -22,7 +24,7 @@ public class Weaponholder : MonoBehaviour
     }
 
     /// <summary>
-    /// richtet die Waffen nach Mouseposition aus
+    /// calculates the rotation and moves the weapon depending on the rotation
     /// </summary>
     void Update() {
         if (Globals.pause == true) {

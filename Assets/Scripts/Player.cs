@@ -6,8 +6,8 @@ using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 
 /// <summary>
-/// classe des Spielers
-/// implementiert das Controler Interface
+/// class of the player
+/// imports the controler Interface
 /// </summary>
 public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 {
@@ -154,7 +154,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
     /// <summary>
-    /// setzt den Player in die Globalen variablen
+    /// sets the player in the global variables
     /// </summary>
     private void Awake() {
         Globals.player = gameObject;
@@ -163,7 +163,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// controler action für den doge befehl
+    /// controler action of the doge input
     /// </summary>
     /// <param name="context"></param>
     public void OnDoge(InputAction.CallbackContext context) {
@@ -176,7 +176,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// controler action für den move down befehl
+    /// controler action of the move down input
     /// </summary>
     /// <param name="context"></param>
     public void OnMove_down(InputAction.CallbackContext context) {
@@ -196,7 +196,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         //Debug.Log("move down");
     }
     /// <summary>
-    /// controler action für den move left befehl
+    /// controler action of the move left input
     /// </summary>
     /// <param name="context"></param>
     public void OnMove_left(InputAction.CallbackContext context) {
@@ -213,7 +213,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
     /// <summary>
-    /// controler action für den move right befehl
+    /// controler action of the move right input
     /// </summary>
     /// <param name="context"></param>
     public void OnMove_rigth(InputAction.CallbackContext context) {
@@ -232,7 +232,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
     /// <summary>
-    /// controler action für den move up befehl
+    /// controler action of the move up input
     /// </summary>
     /// <param name="context"></param>
     public void OnMove_up(InputAction.CallbackContext context) {
@@ -251,7 +251,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// controler action für den shoot befehl
+    /// controler action of the shoot input
     /// </summary>
     /// <param name="context"></param>
     public void OnShoot(InputAction.CallbackContext context) {
@@ -264,7 +264,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
     /// <summary>
-    /// controler action für das Pause Menu
+    /// controler action of the pause input
     /// </summary>
     /// <param name="context"></param>
     public void OnPause_menu(InputAction.CallbackContext context) {
@@ -283,7 +283,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
     /// <summary>
-    /// erzeugt das Controler Object und lädt alle rebinds
+    /// creates the controler object and loads all rebindings
     /// </summary>
     void Start() {
 
@@ -307,7 +307,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// checks if game is paused
+    /// </summary>
     void Update() {
         if (Globals.pause == true) {
             return;
@@ -324,7 +326,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
     }
     /// <summary>
-    /// startet jegliche benötigte corutine
+    /// sets base values and starts every corutine
+    /// loads equiped weapons and creates weapon objects
     /// </summary>
     private void OnEnable() {
         onGlobalCooldown = false;
@@ -418,7 +421,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
     /// <summary>
-    /// funktion die einen flickering effekt erzeugt
+    /// function to create a flcikering effect
     /// </summary>
     private void flicker() {
         Material m = trail.material;
@@ -442,9 +445,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
     /// <summary>
-    /// corutine die das bewegen handelt
-    /// speed wird normalized damit die maximale geschwindingkeit einen Perfecten Kreis bildet, 
-    /// damit eine schräge bewegung nicht schneller ist als eine hoch/runter/links/rechts bewegung
+    /// corutine to handle movement
+    /// speed is normalized, so the max speed makes a perfect circle, so that a diagonal movement 
+    /// is not faster than other movement directions
     /// </summary>
     /// <returns></returns>
     private IEnumerator moveHandler() {
@@ -474,7 +477,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// corutine die dauerhaft prüft ob der Shoot button gedrückt wird und schüsse der Waffe abfeuert
+    /// corutine which checks if the shoot input is pushed and fires shots of weapons
     /// </summary>
     /// <returns></returns>
     private IEnumerator shootingHandler() {
@@ -491,7 +494,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// corutine die langsam das leben dropt, wenn man schaden genommen hat, damit das leben flüssig nach unten geht
+    /// corutine which makes live drop smoothly and colorizes the health
     /// </summary>
     /// <returns></returns>
     public IEnumerator smoothHealthDrop() {
@@ -582,7 +585,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
     /// <summary>
-    /// gleich wie beim healthdrop nur fürs schild
+    /// corutine which makes the shield bar drop smootly and fill smoothly
     /// </summary>
     /// <returns></returns>
     public IEnumerator smoothSchieldDrop() {
@@ -620,9 +623,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// corutine die das Schild aufläd
+    /// corutine which charges the shield after it was depleted
     /// </summary>
-    /// <param name="wait">Zeit zwischen den Schild wert erhöhungen</param>
+    /// <param name="wait"> delay in seconds</param>
     /// <returns></returns>
     public IEnumerator schieldRefresh(float wait) {
 
@@ -647,7 +650,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// <summary>
     /// take dmg funktion
     /// </summary>
-    /// <param name="dmg"> den dmg den der player nehmen soll</param>
+    /// <param name="dmg"> the dmg the player takes</param>
     public void takeDmg(float dmg) {
         if (isImmun == true) {
             return;
@@ -682,7 +685,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// destroys den controller input, weil sonst würde der bestehen bleiben nachdem der Spieler zerstört wurde
+    /// destorys the controler input because it would continue to exist if it is not disposed
     /// </summary>
     private void OnDestroy() {
 
@@ -704,7 +707,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// <summary>
     /// charge refill timer
     /// </summary>
-    /// <param name="cooldown">cooldwon des charges in sekunden </param>
+    /// <param name="cooldown"> cooldown of charge in seconds </param>
     /// <returns></returns>
     private IEnumerator chargeFill(float cooldown) {
         yield return new WaitForSeconds(cooldown);
@@ -720,9 +723,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// cooldown Timer zwischen spezailfähigkeiten damit diese nicht gespammt werden können
+    /// cooldown timer between charges, so charges can't be spammed
     /// </summary>
-    /// <param name="cooldown"> zeit zwischen spezialfähigkeiten in sekunden</param>
+    /// <param name="cooldown"> cooldwon in seconds</param>
     /// <returns></returns>
     private IEnumerator globalCooldownTimer(float cooldown) {
         yield return new WaitForSeconds(cooldown);
@@ -730,7 +733,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// doge spezialfähigkeit, welche den spieler für kurze zeit in eine gewise richtung beschleunigt
+    /// doge special ability, which speeds up the player for a short duration
     /// </summary>
     private void doge() {
         if (dogeCharges > 0 && onGlobalCooldown == false && isDoging == false && impulse != Vector2.zero) {
@@ -799,7 +802,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
     }
     /// <summary>
-    /// corutine die das flickern vom spieler darstellt wenn er schadens immun ist
+    /// corutine which shows the flickering of the player if he is immmun to dmg
     /// </summary>
     /// <returns></returns>
     private IEnumerator immunityFlickerHandler() {
@@ -817,9 +820,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// timer für das immun sein des Spielers
+    /// immunity timer
     /// </summary>
-    /// <param name="time"> dauer der immunity des spielers in sekunden</param>
+    /// <param name="time"> duration of immunity in seconds</param>
     /// <returns></returns>
     private IEnumerator immunityTime(float time) {
         if (flickerCo == null) {
@@ -832,9 +835,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
     /// <summary>
-    /// timer der das dogen abbricht, wenn der Zielpunkt nicht erreicht wird
+    /// timer which stops the doge, if target point was not reached
     /// </summary>
-    /// <param name="duration">die dauer in sekunden</param>
+    /// <param name="duration"> delay in seconds</param>
     /// <returns></returns>
     private IEnumerator maxDogeTimer(float duration) {
         yield return new WaitForSeconds(duration);
@@ -851,9 +854,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     }
 
     /// <summary>
-    /// visualisiert die charge anzeige für das dogen
+    /// visualize the charge display
     /// </summary>
-    /// <param name="used">variable die beschreibt ob ein charge benutzt wurde oder nicht</param>
+    /// <param name="used"> true if a doge was used, fals if a charge was refilled</param>
     private void dogeVisual(bool used) {
         if (used == true) {
 
@@ -885,9 +888,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
     /// <summary>
-    /// check ob der doge zielpunkt erreich wurde
+    /// checks if the doge target point was reached
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision"> collison object</param>
     private void OnTriggerEnter2D(Collider2D collision) {
 
 

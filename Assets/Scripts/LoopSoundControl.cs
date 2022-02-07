@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// controls audiosources which are split into and intro, transition and a loop
+/// </summary>
 public class LoopSoundControl : MonoBehaviour
 {
 
@@ -21,7 +25,9 @@ public class LoopSoundControl : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// starts the audio
+    /// </summary>
     void Start() {
 
         startPlaying();
@@ -30,7 +36,10 @@ public class LoopSoundControl : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// handels the transition from start to transition
+    /// and transition to loop
+    /// </summary>
     void Update() {
 
         if (transitionAudio != null && IsPlaying == true) {
@@ -53,12 +62,18 @@ public class LoopSoundControl : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// starts the audio and sets base values
+    /// </summary>
     public void startPlaying() {
         startAudio.Play();
         transitionPlayed = false;
         isPlaying = true;
     }
 
+    /// <summary>
+    /// stops the audio 
+    /// </summary>
     public void stopPlaying() {
         isPlaying = false;
         startAudio.Stop();

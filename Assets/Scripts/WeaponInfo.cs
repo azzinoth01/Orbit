@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// class to store the weapon creation info
+/// </summary>
 [Serializable]
 public class WeaponInfo : Inventar_Object
 {

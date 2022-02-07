@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// sub class of item to manage iventory objects
+/// </summary>
 [Serializable]
 public class Inventar_Object : Item
 {

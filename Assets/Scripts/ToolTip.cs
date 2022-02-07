@@ -6,6 +6,9 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem.UI;
 
 
+/// <summary>
+/// class to show tooltips
+/// </summary>
 [ExecuteInEditMode()]
 public class ToolTip : MonoBehaviour
 {
@@ -21,14 +24,13 @@ public class ToolTip : MonoBehaviour
 
     public bool tooltipToogled = false;
 
-    private void Start() {
 
 
-
-    }
-
-
-
+    /// <summary>
+    /// sets the tootip tiext
+    /// </summary>
+    /// <param name="content"> text to display in the content text field</param>
+    /// <param name="header"> text to display in the header text field</param>
     public void SetText(string content, string header = "") {
         if (tooltipToogled == true) {
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// skill class beschreibt wie sich jedes bulletobject auf der classe verhält
+/// class that controls the bullets
 /// </summary>
 public class Skill : MonoBehaviour
 {
@@ -28,7 +28,7 @@ public class Skill : MonoBehaviour
     }
 
     /// <summary>
-    /// erstelltung der Bulletobjecte aus der bulletInfoList
+    /// creates bulletobjects out of the bulletInfoList
     /// </summary>
     private void Awake() {
         int i = 0;
@@ -59,7 +59,7 @@ public class Skill : MonoBehaviour
     }
 
     /// <summary>
-    /// startet den max Duration Timer
+    /// starts the max duration timer
     /// </summary>
     private void Update() {
 
@@ -76,9 +76,9 @@ public class Skill : MonoBehaviour
     }
 
     /// <summary>
-    /// max Duration Timer
+    /// max duration timer
     /// </summary>
-    /// <param name="wait"> duration time in Seconds</param>
+    /// <param name="wait"> duration time in seconds</param>
     /// <returns></returns>
     private IEnumerator startDurationTimer(float wait) {
         yield return new WaitForSeconds(wait);
@@ -88,7 +88,7 @@ public class Skill : MonoBehaviour
     }
 
     /// <summary>
-    /// ändern des Layers der Bullets falls sich der Layer des skills ändern sollte
+    /// changes the layer of the bullets if the layer of the skill changes
     /// </summary>
     public void layerChange() {
         foreach (BulletInfo b in bulletInfoList) {
@@ -98,10 +98,10 @@ public class Skill : MonoBehaviour
 
 
     /// <summary>
-    /// gibt den skill dem bulletpool zurück 
-    /// resetet alle modifier on den bullets 
-    /// stoped den duration timer
-    /// setzt einen Timestap für bulletpool clean up
+    /// puts the skill back into the bulletpool
+    /// resets all modifier on the bullet
+    /// stops the duration timer
+    /// sets a timestamp for the bulletpool cleaner
     /// </summary>
     private void OnDisable() {
 
@@ -116,7 +116,7 @@ public class Skill : MonoBehaviour
     }
 
     /// <summary>
-    /// beim Destroyen aus dem bullet pool mit entfernen
+    /// remove itself from bulletpool if it is destroyed
     /// </summary>
     private void OnDestroy() {
         Globals.bulletPool.Remove(this);
@@ -124,8 +124,8 @@ public class Skill : MonoBehaviour
 
 
     /// <summary>
-    /// setzt alle child objecte active
-    /// setzt den layer neu
+    /// set all child objecte active
+    /// set the layer new
     /// </summary>
     private void OnEnable() {
         foreach (Transform t in transform) {
@@ -138,7 +138,7 @@ public class Skill : MonoBehaviour
     }
 
     /// <summary>
-    /// enables the particle Effect object
+    /// enables the particle effect object
     /// </summary>
     private void effectEnable() {
         foreach (BulletInfo b in bulletInfoList) {
@@ -148,10 +148,10 @@ public class Skill : MonoBehaviour
 
 
     /// <summary>
-    /// setzt modifiers auf die bullet.
+    /// set modifier on the bullet
     /// </summary>
-    /// <param name="additionalDmg"> erhöhten den schaden der bullet direkt über diesen Wert</param>
-    /// <param name="dmgModifier"> nach hinzufügen des additionalDmg modifiers wir der dmg mit diesem Wert multipliziert</param>
+    /// <param name="additionalDmg"> increases the dmg directly on the bullet by this value</param>
+    /// <param name="dmgModifier"> after adding the additional dmg to the bullet dmg the resulting value is multiplied by this value</param>
     public void setDmgModifiers(float additionalDmg, float dmgModifier) {
         foreach (BulletInfo b in bulletInfoList) {
             b.AddBaseDmg = additionalDmg;
@@ -161,8 +161,8 @@ public class Skill : MonoBehaviour
 
 
     /// <summary>
-    /// checkt ob alle child objecte inactive sind, um den skill zu deactivieren
-    /// wird aufgerufen, wenn eine bullet sich deactiviert
+    /// checks if all child objects are inactive, so the skill can be deactivated
+    /// is called if a bullet is deactivated
     /// </summary>
     public void checkDisabled() {
         int i = transform.childCount;
@@ -181,6 +181,10 @@ public class Skill : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// sets the sfx sound on the bullet
+    /// </summary>
+    /// <param name="sound"> the sfx prefab that is to be played</param>
     public void setSfxSoundOnBullets(GameObject sound) {
 
         foreach (BulletInfo b in bulletInfoList) {

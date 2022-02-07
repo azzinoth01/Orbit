@@ -6,6 +6,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 
+
+/// <summary>
+/// class to save the player progress
+/// </summary>
 [Serializable]
 public class PlayerSave
 {
@@ -98,6 +102,9 @@ public class PlayerSave
         }
     }
 
+    /// <summary>
+    /// base values for a new player
+    /// </summary>
     public PlayerSave() {
         money = 0;
         mainWeapon = null;
@@ -117,7 +124,7 @@ public class PlayerSave
 
 
     /// <summary>
-    /// saves Player information
+    /// saves player information
     /// </summary>
     public void savingSetting() {
 

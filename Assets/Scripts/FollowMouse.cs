@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// script to make an object follow the cursor
+/// </summary>
 public class FollowMouse : MonoBehaviour
 {
 
@@ -20,12 +24,17 @@ public class FollowMouse : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// sets basevalues
+    /// </summary>
     void Start() {
         mouseIsPressed = false;
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// sets the transform of the object to cursor position
+    /// checks if the left mouse button was released and was over a ship slot
+    /// </summary>
     void Update() {
 
         Vector3 pos = Globals.virtualMouse.canvas.worldCamera.ScreenToWorldPoint(Globals.virtualMouse.VirtualMouseProperty.position.ReadValue());

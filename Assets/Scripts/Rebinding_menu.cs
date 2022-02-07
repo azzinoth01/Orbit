@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 
 /// <summary>
-/// classe die das Rebinden von controls verwaltet
+/// class which manages the rebinding of controls
 /// </summary>
 public class Rebinding_menu : MonoBehaviour
 {
@@ -40,11 +40,11 @@ public class Rebinding_menu : MonoBehaviour
 
 
     /// <summary>
-    /// setzt das Rebinding auf den Default Wert zurück
+    /// sets the rebinding to the default value
     /// </summary>
-    /// <param name="action"> die action die gerebindet werden soll </param>
-    /// <param name="index"> der Index des Bindings das gerebindet werden soll</param>
-    /// <param name="displayKeybind"> die Text Anzeige für das Keybind</param>
+    /// <param name="action"> the action which will be rebinded</param>
+    /// <param name="index"> the index of the binding which will be rebinded</param>
+    /// <param name="displayKeybind"> the text display for the keybind</param>
     private void defaultButtonFunction(InputAction action, int index, Text displayKeybind) {
         //int index = action.GetBindingIndex(binding);
         action.RemoveBindingOverride(index);
@@ -61,12 +61,12 @@ public class Rebinding_menu : MonoBehaviour
     }
 
     /// <summary>
-    /// ändert das Rebinding auf den input vom Player nach klicken des Buttons
-    /// mit esc wird das rebidning abgebrochen
+    /// changes the rebind to the input of the player after clicking the button
+    /// esc stops the rebinding
     /// </summary>
-    /// <param name="action">die action die gerebindet werden soll</param>
-    /// <param name="index">der Index des Bindings das gerebindet werden soll</param>
-    /// <param name="displayKeybind">die Text Anzeige für das Keybind</param>
+    /// <param name="action"> the action which will be rebinded</param>
+    /// <param name="index"> the index of the binding which will be rebinded</param>
+    /// <param name="displayKeybind"> the text display for the keybind</param>
     private void remapButtonFunction(InputAction action, int index, Text displayKeybind) {
         //Debug.Log("test");
         ////int index = action.GetBindingIndex(binding);
@@ -124,8 +124,8 @@ public class Rebinding_menu : MonoBehaviour
 
 
     /// <summary>
-    /// speichert das Rebinding in einer json datei Userspezifisch auf dem PC
-    /// es darf auch nur gespeichert werden, wenn alle rebinds eindeutig sind
+    /// saves the rebinding in a json file user specific on the pc
+    /// it can only be saved if all rebinds are unique
     /// </summary>
     public void saveRebinding() {
 
@@ -159,10 +159,10 @@ public class Rebinding_menu : MonoBehaviour
 
     }
     /// <summary>
-    /// ladet die Rebinds in den controller rein
+    /// loads the rebinds into the controler
     /// </summary>
-    /// <param name="cont">der controlls auf den die Rebinds gesetzt werden sollen</param>
-    /// <returns> gibt den controller zurück auf den die Rebinds gesetzt wurden </returns>
+    /// <param name="cont"> the controler on which the rebinds are to be sete</param>
+    /// <returns> returns the controler with the set rebinds</returns>
     public Controlls loadRebinding(Controlls cont) {
 
         if (System.IO.File.Exists(Application.persistentDataPath + "/controllsSave.json")) {
@@ -180,7 +180,7 @@ public class Rebinding_menu : MonoBehaviour
     }
 
     /// <summary>
-    /// schließt das Alert Fenster, wenn das Speichern nicht erfolgreich war
+    /// closes the alert window if the saving was not succesful
     /// </summary>
     public void onClickAlertButton() {
         saveAlert.SetActive(false);
@@ -192,7 +192,7 @@ public class Rebinding_menu : MonoBehaviour
 
     }
     /// <summary>
-    /// überprüft die keybinds und markiert diese Rot, wenn sie doppelt vorkommen
+    /// checks the keybind and markes them red if they are not unique
     /// </summary>
     /// <returns></returns>
     private bool checkKeybinds() {
@@ -212,7 +212,7 @@ public class Rebinding_menu : MonoBehaviour
     }
 
     /// <summary>
-    /// Rebinding liste wird erstellt
+    /// creates the rebinding list
     /// </summary>
     private void OnEnable() {
 
@@ -474,6 +474,9 @@ public class Rebinding_menu : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// starts the renaming action of the actions
+    /// </summary>
     private void Start() {
         renameActionName();
     }
@@ -491,10 +494,18 @@ public class Rebinding_menu : MonoBehaviour
     //    //buttonList.Clear();
     //}
 
+
+    /// <summary>
+    /// disposes the controler 
+    /// </summary>
     private void OnDestroy() {
         controll.Dispose();
         controll = null;
     }
+
+    /// <summary>
+    /// opens the gamepad rebinding menu
+    /// </summary>
     public void onClickGamepad() {
         Globals.menuHandler.onClickMenuItem(gameObject);
 
@@ -509,6 +520,9 @@ public class Rebinding_menu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// opens the mouse and keyboard rebinding menu
+    /// </summary>
     public void onClickMouseAndKey() {
 
         Globals.menuHandler.onClickMenuItem(gameObject);
@@ -524,7 +538,9 @@ public class Rebinding_menu : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// renames the actions
+    /// </summary>
     private void renameActionName() {
 
         //foreach (Text test in actionNameList) {

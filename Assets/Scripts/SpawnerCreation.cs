@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// class to create spawner out of a referenz spawner
+/// </summary>
 public class SpawnerCreation : MonoBehaviour
 {
 
@@ -14,7 +18,9 @@ public class SpawnerCreation : MonoBehaviour
     public bool flipOffset;
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// creates a spawner as a child object of this gameobject and modifies the waypoints of the referenz spawner
+    /// </summary>
     void Start() {
 
         GameObject g = Instantiate(refSpawner, transform);

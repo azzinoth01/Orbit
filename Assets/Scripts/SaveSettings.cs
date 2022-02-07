@@ -6,7 +6,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// container classe zum speichern von Settings
+/// container classe to save settings
 /// </summary>
 [Serializable]
 public class SaveSettings
@@ -83,7 +83,7 @@ public class SaveSettings
     }
 
     /// <summary>
-    /// speichert die Settings
+    /// saves the settings
     /// </summary>
     public void savingSetting() {
 
@@ -98,9 +98,9 @@ public class SaveSettings
     }
 
     /// <summary>
-    /// ladet die Settings aus einer gespeicherten Datei, wenn vorhanden
+    /// loads the setting out of a saved data if it exists
     /// </summary>
-    /// <returns> gibt die gespeicherten Settings zurück</returns>
+    /// <returns> returns the saved settings</returns>
     public static SaveSettings loadSettings() {
 
         SaveSettings s = new SaveSettings(false, 1, 1, 1);

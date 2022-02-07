@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// classe um Globale Variablen zu verwalten
+/// static class to manage global variables
 /// </summary>
 public static class Globals
 {

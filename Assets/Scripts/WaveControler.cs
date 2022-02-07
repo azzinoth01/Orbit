@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// class to control the wave system on the endless level
+/// </summary>
 public class WaveControler : MonoBehaviour
 {
 
@@ -29,7 +33,9 @@ public class WaveControler : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// sets base values for the wavecontroler
+    /// </summary>
     void Start() {
         player = Globals.player.GetComponent<Player>();
         Globals.waveControler = this;
@@ -39,7 +45,11 @@ public class WaveControler : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// delays the start of the next wave
+    /// </summary>
+    /// <param name="delay"> delay in seconds</param>
+    /// <returns></returns>
     private IEnumerator delayStart(float delay) {
 
 
@@ -48,7 +58,10 @@ public class WaveControler : MonoBehaviour
         startNextWave();
     }
 
-
+    /// <summary>
+    /// starts the next wave
+    /// upgrades the enemies and player depending on the wave level
+    /// </summary>
     public void startNextWave() {
         currentWave = currentWave + 1;
 
@@ -104,7 +117,11 @@ public class WaveControler : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// wave was finished
+    /// upgrades wave values
+    /// starts timer for next wave
+    /// </summary>
     public void waveFinished() {
 
         curentHealthUpgrade = curentHealthUpgrade + 0.3f;
@@ -114,6 +131,10 @@ public class WaveControler : MonoBehaviour
         StartCoroutine(delayStart(1f));
     }
 
+
+    /// <summary>
+    /// removes the controler from global variables
+    /// </summary>
     private void OnDestroy() {
         Globals.waveControler = null;
     }

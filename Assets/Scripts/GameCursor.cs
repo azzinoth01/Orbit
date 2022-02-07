@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+/// <summary>
+/// did not work properly and not in use anymore
+/// </summary>
 public class GameCursor : MonoBehaviour
 {
 

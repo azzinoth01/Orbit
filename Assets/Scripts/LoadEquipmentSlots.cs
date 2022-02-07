@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// class to load the sprites of the current equipment of the ship
+/// </summary>
 public class LoadEquipmentSlots : MonoBehaviour
 {
     public Image mainWeapon;
@@ -11,7 +15,9 @@ public class LoadEquipmentSlots : MonoBehaviour
     public Image shieldPart;
     private LoadAssets loader;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// loads the current ship equipment and sets the sprites on the right slot
+    /// </summary>
     void Start() {
         loader = new LoadAssets();
         PlayerSave save = PlayerSave.loadSettings();
@@ -41,6 +47,9 @@ public class LoadEquipmentSlots : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// releases all handels of the loaded sprites
+    /// </summary>
     private void OnDestroy() {
         loader.releaseAllHandle();
     }

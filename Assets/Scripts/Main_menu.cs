@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 
 /// <summary>
-/// classe um das main menu zu kontrolieren
+/// class to handel the main menu
 /// </summary>
 public class Main_menu : MonoBehaviour
 {
@@ -44,10 +44,8 @@ public class Main_menu : MonoBehaviour
     }
 
     /// <summary>
-    /// button um das Main menu wieder einzublenden vom Options Menu
+    /// go to the main menu panel
     /// </summary>
-
-    //Benni hat hier sound und Rebind hinzugefügt
     public void onClickBackToMainMenu() {
         mainMenu.SetActive(true);
 
@@ -67,38 +65,49 @@ public class Main_menu : MonoBehaviour
     }
 
     /// <summary>
-    /// buttom um das Rebidning Menu einzublenden und das Options menu auszublenden
+    /// not in use anymore
     /// </summary>
-
-    //Bennie: geändert Options to Main
     public void onClickControls() {
         mainMenu.SetActive(false);
         rebidningMenu.SetActive(true);
     }
-
+    /// <summary>
+    /// not in use anymore
+    /// </summary>
     public void onClickOptions() {
         mainMenu.SetActive(false);
         optionsMenu.SetActive(true);
     }
 
-    //Bennie: geändert Options to Main
+    /// <summary>
+    /// not in use anymore
+    /// </summary>
     public void onClickSound() {
         mainMenu.SetActive(false);
         soundMenu.SetActive(true);
     }
-    //momentan nicht in Benutzung
+    /// <summary>
+    /// not in use anymore
+    /// </summary>
     public void onClickBackToOptions() {
         rebidningMenu.SetActive(false);
         soundMenu.SetActive(false);
         optionsMenu.SetActive(true);
     }
 
+    /// <summary>
+    /// loads the options sceene and saves the last active scene for going back
+    /// </summary>
+    /// <param name="index"></param>
     public void onClickOptions(int index) {
         Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         SceneManager.LoadScene(index);
     }
 
+    /// <summary>
+    /// go towards the credits
+    /// </summary>
     public void onClickCredits() {
         credits.SetActive(true);
         mainMenu.SetActive(false);

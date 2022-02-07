@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// classe die sich drum kümmert, dass enemys aus den Spielfeld rein und raus bewegt
+/// class handels the moving in to the playing field and out the playing field for enemies 
 /// </summary>
 public class Move_in_out_Scene : MonoBehaviour
 {
@@ -29,7 +29,7 @@ public class Move_in_out_Scene : MonoBehaviour
 
 
     /// <summary>
-    /// erzeugt Wegpunkte um Gegner in die Scene rein und raus moven zu lassen
+    /// creates the waypoints to move enemies in and out of the scene
     /// </summary>
     void Start() {
         waypointInObjects = new List<GameObject>();
@@ -53,7 +53,7 @@ public class Move_in_out_Scene : MonoBehaviour
     }
 
     /// <summary>
-    /// führt das move in und auch das move out aus
+    /// executes the in and out movement
     /// </summary>
     void Update() {
 
@@ -68,8 +68,8 @@ public class Move_in_out_Scene : MonoBehaviour
 
 
     /// <summary>
-    /// beschreibt wie der enemy in die scene sich reinbewegt anhand der Wegpunkten und rausbewegt
-    /// und startet das zersören des enemys, wenn der letzte move out punkt getroffen wurde
+    /// describes the move in and moveout of enemies dependet on the waypoints
+    /// starts the destroying of enemies, who hit the last moveout point
     /// </summary>
     private void move() {
 
@@ -118,7 +118,7 @@ public class Move_in_out_Scene : MonoBehaviour
     }
 
     /// <summary>
-    /// startet das move out
+    /// starts the move out
     /// </summary>
     public void startMoveOut() {
         //Debug.Log("startet Move out");
@@ -148,10 +148,10 @@ public class Move_in_out_Scene : MonoBehaviour
     //}
 
     /// <summary>
-    /// erzeugt die Wegpunkte an der sich der enemy bewegt
+    /// creates the waypoints which the enemy uses to move
     /// </summary>
-    /// <param name="v2"> position der Wegpunkte</param>
-    /// <returns> Wegpunkt der erzeugt wurde</returns>
+    /// <param name="v2"> position of the waypoint</param>
+    /// <returns> waypoint which was created</returns>
     private GameObject createNextWaypoint(Vector2 v2) {
         GameObject g = Instantiate(waypointPrefab, transform.parent);
         g.transform.localPosition = v2;
@@ -163,9 +163,9 @@ public class Move_in_out_Scene : MonoBehaviour
 
 
     /// <summary>
-    /// prüft ob ein Wegpunkt getroffen wurde
+    /// checks if a waypoint was hit
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision"> collison object</param>
     private void OnTriggerEnter2D(Collider2D collision) {
         try {
 
@@ -212,7 +212,7 @@ public class Move_in_out_Scene : MonoBehaviour
         }
     }
     /// <summary>
-    /// zerstört beim zersören des enemys auch die Wegpunkte mit
+    /// destorys the waypoints and the enemy
     /// </summary>
     private void OnDestroy() {
         foreach (GameObject g in waypointInObjects) {

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+/// <summary>
+/// class which controlls the buyable inventory items
+/// </summary>
 public class Inventory_fill : MonoBehaviour
 {
     public GameObject mainWeaponBox;
@@ -23,7 +25,9 @@ public class Inventory_fill : MonoBehaviour
     private LoadAssets assetLoader;
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// loads the itemCatalog and adds each item into the scroll view with a clickable button
+    /// </summary>
     void Start() {
         catalog = ItemCatalog.loadSettings();
 
@@ -97,10 +101,19 @@ public class Inventory_fill : MonoBehaviour
 
         }
     }
+    /// <summary>
+    /// releases all asset wich are loaded at runtime
+    /// </summary>
     private void OnDestroy() {
         assetLoader.releaseAllHandle();
     }
 
+
+    /// <summary>
+    /// replaces the locked item button with the corresponding item
+    /// </summary>
+    /// <param name="g"> the gameobject of the locked item </param>
+    /// <param name="i"> the item with which the lock needs to be replaced</param>
     private void replaceLockedItem(GameObject g, Item i) {
         GameObject newGameObject;
 
@@ -149,6 +162,13 @@ public class Inventory_fill : MonoBehaviour
 
     }
 
+
+    /// <summary>
+    /// button function for every inventory button
+    /// </summary>
+    /// <param name="i"> the item which the button corresponds to</param>
+    /// <param name="locked"> if the current item is locked or not</param>
+    /// <param name="g"> the gameobject of the button</param>
     public void inventoryButton(Item i, bool locked, GameObject g) {
 
         if (locked == true) {
@@ -182,6 +202,10 @@ public class Inventory_fill : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// main weapon equip function
+    /// </summary>
+    /// <param name="button"> Image of the button</param>
     public void mainWeaponSlotClicked(Image button) {
         if (Globals.currentItem is WeaponInfo) {
             WeaponInfo wep = (WeaponInfo)Globals.currentItem;
@@ -220,6 +244,10 @@ public class Inventory_fill : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// secondary weapon equip function 1
+    /// </summary>
+    /// <param name="button"> Image of the button</param>
     public void secondaryWeaponSlotClicked(Image button) {
         if (Globals.currentItem is WeaponInfo) {
             WeaponInfo wep = (WeaponInfo)Globals.currentItem;
@@ -254,6 +282,10 @@ public class Inventory_fill : MonoBehaviour
             display.changeInfoDispaly(save.SecondaryWeapon);
         }
     }
+    /// <summary>
+    /// secondary weapon equip function 2
+    /// </summary>
+    /// <param name="button"> Image of the button</param>
     public void secondaryWeaponSlotTwoClicked(Image button) {
         if (Globals.currentItem is WeaponInfo) {
             WeaponInfo wep = (WeaponInfo)Globals.currentItem;
@@ -288,6 +320,11 @@ public class Inventory_fill : MonoBehaviour
             display.changeInfoDispaly(save.SecondaryWeapon1);
         }
     }
+
+    /// <summary>
+    /// ship parts equip function
+    /// </summary>
+    /// <param name="button"> Image of the button</param>
     public void shieldSlotClicked(Image button) {
         if (Globals.currentItem is Parts) {
             Parts part = (Parts)Globals.currentItem;
@@ -321,7 +358,9 @@ public class Inventory_fill : MonoBehaviour
     }
 
 
-    // Update is called once per frame
+    /// <summary>
+    /// checks if a right click happend and stops drag dan drop and removes the selected item from the cursor
+    /// </summary>
     void Update() {
         if (Globals.virtualMouse.VirtualMouseProperty.rightButton.wasPressedThisFrame) {
             dragAndDrop.enabled = false;

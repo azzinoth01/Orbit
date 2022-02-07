@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// enum für Layer
+/// enum for Layer
 /// </summary>
 public enum Layer_enum
 {

@@ -6,6 +6,10 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Users;
 
+
+/// <summary>
+/// class to createa a virtual mouse
+/// </summary>
 public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 {
     private Mouse virtualMouse;
@@ -42,7 +46,9 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 
 
     }
-
+    /// <summary>
+    /// creates a virtual mouse
+    /// </summary>
     private void OnEnable() {
         hardwareMouse = Mouse.current;
         buttonScroll = Vector2.zero;
@@ -93,6 +99,9 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     }
 
 
+    /// <summary>
+    /// removes the virtual mouse from the input system
+    /// </summary>
     private void OnDisable() {
         // Debug.Log("disabled");
         controls.Dispose();
@@ -110,6 +119,9 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     }
 
 
+    /// <summary>
+    /// load reabindings of the virtuals mouse
+    /// </summary>
     public void loadNewRebinds() {
 
         controls.VirtualMouse.Disable();
@@ -118,6 +130,10 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
         controls.VirtualMouse.Enable();
     }
 
+
+    /// <summary>
+    /// updates the cursor position of the virtual mouse
+    /// </summary>
     private void updateMotion() {
 
 
@@ -178,6 +194,10 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     }
 
 
+    /// <summary>
+    /// moves the virtual mouse gameobject
+    /// </summary>
+    /// <param name="position"> position to move the gameobject to</param>
     private void moveCursor(Vector2 position) {
 
         Vector2 newPos;
@@ -186,6 +206,10 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
         cursor.anchoredPosition = newPos;
     }
 
+    /// <summary>
+    /// input action left mouse button for the virtual mouse
+    /// </summary>
+    /// <param name="context"></param>
     public void OnLeftMouseButton(InputAction.CallbackContext context) {
         if (context.control.device != virtualMouse) {
 
@@ -195,7 +219,10 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 
         }
     }
-
+    /// <summary>
+    /// input action middle mouse button for the virtual mouse
+    /// </summary>
+    /// <param name="context"></param>
     public void OnMiddleMouseButton(InputAction.CallbackContext context) {
         if (context.control.device != virtualMouse) {
 
@@ -205,12 +232,18 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 
         }
     }
-
+    /// <summary>
+    /// input action move cursor for the virtual mouse
+    /// </summary>
+    /// <param name="context"></param>
     public void OnMoveCursor(InputAction.CallbackContext context) {
 
         direction = context.ReadValue<Vector2>();
     }
-
+    /// <summary>
+    /// input action of the system mouse for the virtual mouse
+    /// </summary>
+    /// <param name="context"></param>
     public void OnPoint(InputAction.CallbackContext context) {
         if (controls == null) {
             return;
@@ -223,7 +256,10 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 
         }
     }
-
+    /// <summary>
+    /// input action right mouse button for the virtual mouse
+    /// </summary>
+    /// <param name="context"></param>
     public void OnRightMouseButton(InputAction.CallbackContext context) {
         if (context.control.device != virtualMouse) {
 
@@ -233,7 +269,10 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 
         }
     }
-
+    /// <summary>
+    /// input action scroll for the virtual mouse
+    /// </summary>
+    /// <param name="context"></param>
     public void OnScroll(InputAction.CallbackContext context) {
         if (context.control.device != virtualMouse) {
             if (context.control.device == hardwareMouse) {
@@ -246,6 +285,10 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
         }
     }
 
+    /// <summary>
+    /// input action to toogle the visibility of the system mouse
+    /// </summary>
+    /// <param name="context"></param>
     public void OnToogleMouseVisibility(InputAction.CallbackContext context) {
         if (context.started) {
             if (unlockMouse == true) {
