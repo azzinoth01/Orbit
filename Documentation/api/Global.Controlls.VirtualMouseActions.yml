@@ -1,0 +1,593 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Controlls.VirtualMouseActions
+  commentId: T:Global.Controlls.VirtualMouseActions
+  id: Controlls.VirtualMouseActions
+  parent: Global
+  children:
+  - Global.Controlls.VirtualMouseActions.#ctor(Controlls)
+  - Global.Controlls.VirtualMouseActions.Disable
+  - Global.Controlls.VirtualMouseActions.Enable
+  - Global.Controlls.VirtualMouseActions.enabled
+  - Global.Controlls.VirtualMouseActions.Get
+  - Global.Controlls.VirtualMouseActions.leftMouseButton
+  - Global.Controlls.VirtualMouseActions.middleMouseButton
+  - Global.Controlls.VirtualMouseActions.moveCursor
+  - Global.Controlls.VirtualMouseActions.op_Implicit(Controlls.VirtualMouseActions)~InputActionMap
+  - Global.Controlls.VirtualMouseActions.point
+  - Global.Controlls.VirtualMouseActions.rightMouseButton
+  - Global.Controlls.VirtualMouseActions.scroll
+  - Global.Controlls.VirtualMouseActions.SetCallbacks(Controlls.IVirtualMouseActions)
+  - Global.Controlls.VirtualMouseActions.toogleMouseVisibility
+  langs:
+  - csharp
+  - vb
+  name: Controlls.VirtualMouseActions
+  nameWithType: Controlls.VirtualMouseActions
+  fullName: Controlls.VirtualMouseActions
+  type: Struct
+  source:
+    id: VirtualMouseActions
+    path: ''
+    startLine: 1348
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public struct VirtualMouseActions
+    content.vb: Public Structure VirtualMouseActions
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Global.Controlls.VirtualMouseActions.#ctor(Controlls)
+  commentId: M:Global.Controlls.VirtualMouseActions.#ctor(Controlls)
+  id: '#ctor(Controlls)'
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: VirtualMouseActions(Controlls)
+  nameWithType: Controlls.VirtualMouseActions.VirtualMouseActions(Controlls)
+  fullName: Controlls.VirtualMouseActions.VirtualMouseActions(Controlls)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1351
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public VirtualMouseActions(Controlls wrapper)
+    parameters:
+    - id: wrapper
+      type: Global.Controlls
+    content.vb: Public Sub New(wrapper As Controlls)
+  overload: Global.Controlls.VirtualMouseActions.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.VirtualMouseActions.point
+  commentId: P:Global.Controlls.VirtualMouseActions.point
+  id: point
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: point
+  nameWithType: Controlls.VirtualMouseActions.point
+  fullName: Controlls.VirtualMouseActions.point
+  type: Property
+  source:
+    id: point
+    path: ''
+    startLine: 1352
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction point { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property point As InputAction
+  overload: Global.Controlls.VirtualMouseActions.point*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.VirtualMouseActions.moveCursor
+  commentId: P:Global.Controlls.VirtualMouseActions.moveCursor
+  id: moveCursor
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: moveCursor
+  nameWithType: Controlls.VirtualMouseActions.moveCursor
+  fullName: Controlls.VirtualMouseActions.moveCursor
+  type: Property
+  source:
+    id: moveCursor
+    path: ''
+    startLine: 1353
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction moveCursor { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property moveCursor As InputAction
+  overload: Global.Controlls.VirtualMouseActions.moveCursor*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.VirtualMouseActions.leftMouseButton
+  commentId: P:Global.Controlls.VirtualMouseActions.leftMouseButton
+  id: leftMouseButton
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: leftMouseButton
+  nameWithType: Controlls.VirtualMouseActions.leftMouseButton
+  fullName: Controlls.VirtualMouseActions.leftMouseButton
+  type: Property
+  source:
+    id: leftMouseButton
+    path: ''
+    startLine: 1354
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction leftMouseButton { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property leftMouseButton As InputAction
+  overload: Global.Controlls.VirtualMouseActions.leftMouseButton*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.VirtualMouseActions.rightMouseButton
+  commentId: P:Global.Controlls.VirtualMouseActions.rightMouseButton
+  id: rightMouseButton
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: rightMouseButton
+  nameWithType: Controlls.VirtualMouseActions.rightMouseButton
+  fullName: Controlls.VirtualMouseActions.rightMouseButton
+  type: Property
+  source:
+    id: rightMouseButton
+    path: ''
+    startLine: 1355
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction rightMouseButton { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property rightMouseButton As InputAction
+  overload: Global.Controlls.VirtualMouseActions.rightMouseButton*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.VirtualMouseActions.middleMouseButton
+  commentId: P:Global.Controlls.VirtualMouseActions.middleMouseButton
+  id: middleMouseButton
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: middleMouseButton
+  nameWithType: Controlls.VirtualMouseActions.middleMouseButton
+  fullName: Controlls.VirtualMouseActions.middleMouseButton
+  type: Property
+  source:
+    id: middleMouseButton
+    path: ''
+    startLine: 1356
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction middleMouseButton { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property middleMouseButton As InputAction
+  overload: Global.Controlls.VirtualMouseActions.middleMouseButton*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.VirtualMouseActions.scroll
+  commentId: P:Global.Controlls.VirtualMouseActions.scroll
+  id: scroll
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: scroll
+  nameWithType: Controlls.VirtualMouseActions.scroll
+  fullName: Controlls.VirtualMouseActions.scroll
+  type: Property
+  source:
+    id: scroll
+    path: ''
+    startLine: 1357
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction scroll { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property scroll As InputAction
+  overload: Global.Controlls.VirtualMouseActions.scroll*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.VirtualMouseActions.toogleMouseVisibility
+  commentId: P:Global.Controlls.VirtualMouseActions.toogleMouseVisibility
+  id: toogleMouseVisibility
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: toogleMouseVisibility
+  nameWithType: Controlls.VirtualMouseActions.toogleMouseVisibility
+  fullName: Controlls.VirtualMouseActions.toogleMouseVisibility
+  type: Property
+  source:
+    id: toogleMouseVisibility
+    path: ''
+    startLine: 1358
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly InputAction toogleMouseVisibility { get; }
+    parameters: []
+    return:
+      type: Global.InputAction
+    content.vb: Public ReadOnly Property toogleMouseVisibility As InputAction
+  overload: Global.Controlls.VirtualMouseActions.toogleMouseVisibility*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.VirtualMouseActions.Get
+  commentId: M:Global.Controlls.VirtualMouseActions.Get
+  id: Get
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: Get()
+  nameWithType: Controlls.VirtualMouseActions.Get()
+  fullName: Controlls.VirtualMouseActions.Get()
+  type: Method
+  source:
+    id: Get
+    path: ''
+    startLine: 1359
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public InputActionMap Get()
+    return:
+      type: Global.InputActionMap
+    content.vb: Public Function Get As InputActionMap
+  overload: Global.Controlls.VirtualMouseActions.Get*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.VirtualMouseActions.Enable
+  commentId: M:Global.Controlls.VirtualMouseActions.Enable
+  id: Enable
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: Controlls.VirtualMouseActions.Enable()
+  fullName: Controlls.VirtualMouseActions.Enable()
+  type: Method
+  source:
+    id: Enable
+    path: ''
+    startLine: 1360
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Enable()
+    content.vb: Public Sub Enable
+  overload: Global.Controlls.VirtualMouseActions.Enable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.VirtualMouseActions.Disable
+  commentId: M:Global.Controlls.VirtualMouseActions.Disable
+  id: Disable
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: Disable()
+  nameWithType: Controlls.VirtualMouseActions.Disable()
+  fullName: Controlls.VirtualMouseActions.Disable()
+  type: Method
+  source:
+    id: Disable
+    path: ''
+    startLine: 1361
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Disable()
+    content.vb: Public Sub Disable
+  overload: Global.Controlls.VirtualMouseActions.Disable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Controlls.VirtualMouseActions.enabled
+  commentId: P:Global.Controlls.VirtualMouseActions.enabled
+  id: enabled
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: enabled
+  nameWithType: Controlls.VirtualMouseActions.enabled
+  fullName: Controlls.VirtualMouseActions.enabled
+  type: Property
+  source:
+    id: enabled
+    path: ''
+    startLine: 1362
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public readonly bool enabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property enabled As Boolean
+  overload: Global.Controlls.VirtualMouseActions.enabled*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.VirtualMouseActions.op_Implicit(Controlls.VirtualMouseActions)~InputActionMap
+  commentId: M:Global.Controlls.VirtualMouseActions.op_Implicit(Controlls.VirtualMouseActions)~InputActionMap
+  id: op_Implicit(Controlls.VirtualMouseActions)~InputActionMap
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: Implicit(Controlls.VirtualMouseActions to InputActionMap)
+  nameWithType: Controlls.VirtualMouseActions.Implicit(Controlls.VirtualMouseActions to InputActionMap)
+  fullName: Controlls.VirtualMouseActions.Implicit(Controlls.VirtualMouseActions to InputActionMap)
+  type: Operator
+  source:
+    id: op_Implicit
+    path: ''
+    startLine: 1363
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static implicit operator InputActionMap(Controlls.VirtualMouseActions set)
+    parameters:
+    - id: set
+      type: Global.Controlls.VirtualMouseActions
+    return:
+      type: Global.InputActionMap
+    content.vb: Public Shared Widening Operator CType(set As Controlls.VirtualMouseActions) As InputActionMap
+  overload: Global.Controlls.VirtualMouseActions.op_Implicit*
+  nameWithType.vb: Controlls.VirtualMouseActions.Widening(Controlls.VirtualMouseActions to InputActionMap)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Controlls.VirtualMouseActions.Widening(Controlls.VirtualMouseActions to InputActionMap)
+  name.vb: Widening(Controlls.VirtualMouseActions to InputActionMap)
+- uid: Global.Controlls.VirtualMouseActions.SetCallbacks(Controlls.IVirtualMouseActions)
+  commentId: M:Global.Controlls.VirtualMouseActions.SetCallbacks(Controlls.IVirtualMouseActions)
+  id: SetCallbacks(Controlls.IVirtualMouseActions)
+  parent: Global.Controlls.VirtualMouseActions
+  langs:
+  - csharp
+  - vb
+  name: SetCallbacks(Controlls.IVirtualMouseActions)
+  nameWithType: Controlls.VirtualMouseActions.SetCallbacks(Controlls.IVirtualMouseActions)
+  fullName: Controlls.VirtualMouseActions.SetCallbacks(Controlls.IVirtualMouseActions)
+  type: Method
+  source:
+    id: SetCallbacks
+    path: ''
+    startLine: 1364
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void SetCallbacks(Controlls.IVirtualMouseActions instance)
+    parameters:
+    - id: instance
+      type: Global.Controlls.IVirtualMouseActions
+    content.vb: Public Sub SetCallbacks(instance As Controlls.IVirtualMouseActions)
+  overload: Global.Controlls.VirtualMouseActions.SetCallbacks*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.Controlls.VirtualMouseActions.#ctor*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.#ctor
+  name: VirtualMouseActions
+  nameWithType: Controlls.VirtualMouseActions.VirtualMouseActions
+  fullName: Controlls.VirtualMouseActions.VirtualMouseActions
+- uid: Global.Controlls
+  commentId: T:Global.Controlls
+  name: Controlls
+  nameWithType: Controlls
+  fullName: Controlls
+- uid: Global.Controlls.VirtualMouseActions.point*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.point
+  name: point
+  nameWithType: Controlls.VirtualMouseActions.point
+  fullName: Controlls.VirtualMouseActions.point
+- uid: Global.InputAction
+  isExternal: true
+  name: InputAction
+  nameWithType: InputAction
+  fullName: InputAction
+- uid: Global.Controlls.VirtualMouseActions.moveCursor*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.moveCursor
+  name: moveCursor
+  nameWithType: Controlls.VirtualMouseActions.moveCursor
+  fullName: Controlls.VirtualMouseActions.moveCursor
+- uid: Global.Controlls.VirtualMouseActions.leftMouseButton*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.leftMouseButton
+  name: leftMouseButton
+  nameWithType: Controlls.VirtualMouseActions.leftMouseButton
+  fullName: Controlls.VirtualMouseActions.leftMouseButton
+- uid: Global.Controlls.VirtualMouseActions.rightMouseButton*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.rightMouseButton
+  name: rightMouseButton
+  nameWithType: Controlls.VirtualMouseActions.rightMouseButton
+  fullName: Controlls.VirtualMouseActions.rightMouseButton
+- uid: Global.Controlls.VirtualMouseActions.middleMouseButton*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.middleMouseButton
+  name: middleMouseButton
+  nameWithType: Controlls.VirtualMouseActions.middleMouseButton
+  fullName: Controlls.VirtualMouseActions.middleMouseButton
+- uid: Global.Controlls.VirtualMouseActions.scroll*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.scroll
+  name: scroll
+  nameWithType: Controlls.VirtualMouseActions.scroll
+  fullName: Controlls.VirtualMouseActions.scroll
+- uid: Global.Controlls.VirtualMouseActions.toogleMouseVisibility*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.toogleMouseVisibility
+  name: toogleMouseVisibility
+  nameWithType: Controlls.VirtualMouseActions.toogleMouseVisibility
+  fullName: Controlls.VirtualMouseActions.toogleMouseVisibility
+- uid: Global.Controlls.VirtualMouseActions.Get*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.Get
+  name: Get
+  nameWithType: Controlls.VirtualMouseActions.Get
+  fullName: Controlls.VirtualMouseActions.Get
+- uid: Global.InputActionMap
+  isExternal: true
+  name: InputActionMap
+  nameWithType: InputActionMap
+  fullName: InputActionMap
+- uid: Global.Controlls.VirtualMouseActions.Enable*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.Enable
+  name: Enable
+  nameWithType: Controlls.VirtualMouseActions.Enable
+  fullName: Controlls.VirtualMouseActions.Enable
+- uid: Global.Controlls.VirtualMouseActions.Disable*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.Disable
+  name: Disable
+  nameWithType: Controlls.VirtualMouseActions.Disable
+  fullName: Controlls.VirtualMouseActions.Disable
+- uid: Global.Controlls.VirtualMouseActions.enabled*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.enabled
+  name: enabled
+  nameWithType: Controlls.VirtualMouseActions.enabled
+  fullName: Controlls.VirtualMouseActions.enabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Controlls.VirtualMouseActions.op_Implicit*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.op_Implicit
+  name: Implicit
+  nameWithType: Controlls.VirtualMouseActions.Implicit
+  fullName: Controlls.VirtualMouseActions.Implicit
+  nameWithType.vb: Controlls.VirtualMouseActions.Widening
+  fullName.vb: Controlls.VirtualMouseActions.Widening
+  name.vb: Widening
+- uid: Global.Controlls.VirtualMouseActions
+  commentId: T:Global.Controlls.VirtualMouseActions
+  name: Controlls.VirtualMouseActions
+  nameWithType: Controlls.VirtualMouseActions
+  fullName: Controlls.VirtualMouseActions
+- uid: Global.Controlls.VirtualMouseActions.SetCallbacks*
+  commentId: Overload:Global.Controlls.VirtualMouseActions.SetCallbacks
+  name: SetCallbacks
+  nameWithType: Controlls.VirtualMouseActions.SetCallbacks
+  fullName: Controlls.VirtualMouseActions.SetCallbacks
+- uid: Global.Controlls.IVirtualMouseActions
+  commentId: T:Global.Controlls.IVirtualMouseActions
+  name: Controlls.IVirtualMouseActions
+  nameWithType: Controlls.IVirtualMouseActions
+  fullName: Controlls.IVirtualMouseActions

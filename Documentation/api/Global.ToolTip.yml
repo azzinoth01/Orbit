@@ -1,0 +1,270 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ToolTip
+  commentId: T:Global.ToolTip
+  id: ToolTip
+  parent: Global
+  children:
+  - Global.ToolTip.characterWrapLimit
+  - Global.ToolTip.contentField
+  - Global.ToolTip.headerField
+  - Global.ToolTip.layoutElement
+  - Global.ToolTip.SetText(System.String,System.String)
+  - Global.ToolTip.tooltipToogled
+  langs:
+  - csharp
+  - vb
+  name: ToolTip
+  nameWithType: ToolTip
+  fullName: ToolTip
+  type: Class
+  source:
+    id: ToolTip
+    path: ''
+    startLine: 9990
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to show tooltips\n"
+  example: []
+  syntax:
+    content: 'public class ToolTip : MonoBehaviour'
+    content.vb: >-
+      Public Class ToolTip
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.ToolTip.headerField
+  commentId: F:Global.ToolTip.headerField
+  id: headerField
+  parent: Global.ToolTip
+  langs:
+  - csharp
+  - vb
+  name: headerField
+  nameWithType: ToolTip.headerField
+  fullName: ToolTip.headerField
+  type: Field
+  source:
+    id: headerField
+    path: ''
+    startLine: 9993
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text headerField
+    return:
+      type: Global.Text
+    content.vb: Public headerField As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ToolTip.contentField
+  commentId: F:Global.ToolTip.contentField
+  id: contentField
+  parent: Global.ToolTip
+  langs:
+  - csharp
+  - vb
+  name: contentField
+  nameWithType: ToolTip.contentField
+  fullName: ToolTip.contentField
+  type: Field
+  source:
+    id: contentField
+    path: ''
+    startLine: 9995
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text contentField
+    return:
+      type: Global.Text
+    content.vb: Public contentField As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ToolTip.layoutElement
+  commentId: F:Global.ToolTip.layoutElement
+  id: layoutElement
+  parent: Global.ToolTip
+  langs:
+  - csharp
+  - vb
+  name: layoutElement
+  nameWithType: ToolTip.layoutElement
+  fullName: ToolTip.layoutElement
+  type: Field
+  source:
+    id: layoutElement
+    path: ''
+    startLine: 9997
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public LayoutElement layoutElement
+    return:
+      type: Global.LayoutElement
+    content.vb: Public layoutElement As LayoutElement
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ToolTip.characterWrapLimit
+  commentId: F:Global.ToolTip.characterWrapLimit
+  id: characterWrapLimit
+  parent: Global.ToolTip
+  langs:
+  - csharp
+  - vb
+  name: characterWrapLimit
+  nameWithType: ToolTip.characterWrapLimit
+  fullName: ToolTip.characterWrapLimit
+  type: Field
+  source:
+    id: characterWrapLimit
+    path: ''
+    startLine: 9999
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int characterWrapLimit
+    return:
+      type: System.Int32
+    content.vb: Public characterWrapLimit As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ToolTip.tooltipToogled
+  commentId: F:Global.ToolTip.tooltipToogled
+  id: tooltipToogled
+  parent: Global.ToolTip
+  langs:
+  - csharp
+  - vb
+  name: tooltipToogled
+  nameWithType: ToolTip.tooltipToogled
+  fullName: ToolTip.tooltipToogled
+  type: Field
+  source:
+    id: tooltipToogled
+    path: ''
+    startLine: 10003
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool tooltipToogled
+    return:
+      type: System.Boolean
+    content.vb: Public tooltipToogled As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ToolTip.SetText(System.String,System.String)
+  commentId: M:Global.ToolTip.SetText(System.String,System.String)
+  id: SetText(System.String,System.String)
+  parent: Global.ToolTip
+  langs:
+  - csharp
+  - vb
+  name: SetText(String, String)
+  nameWithType: ToolTip.SetText(String, String)
+  fullName: ToolTip.SetText(System.String, System.String)
+  type: Method
+  source:
+    id: SetText
+    path: ''
+    startLine: 10012
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsets the tootip tiext\n"
+  example: []
+  syntax:
+    content: public void SetText(string content, string header = "")
+    parameters:
+    - id: content
+      type: System.String
+      description: text to display in the content text field
+    - id: header
+      type: System.String
+      description: text to display in the header text field
+    content.vb: Public Sub SetText(content As String, header As String = "")
+  overload: Global.ToolTip.SetText*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Text
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: Text
+- uid: Global.LayoutElement
+  commentId: '!:Global.LayoutElement'
+  isExternal: true
+  name: LayoutElement
+  nameWithType: LayoutElement
+  fullName: LayoutElement
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Global.ToolTip.SetText*
+  commentId: Overload:Global.ToolTip.SetText
+  name: SetText
+  nameWithType: ToolTip.SetText
+  fullName: ToolTip.SetText
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

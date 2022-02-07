@@ -1,0 +1,57 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.CheckLevelUnlock
+  commentId: T:Global.CheckLevelUnlock
+  id: CheckLevelUnlock
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: CheckLevelUnlock
+  nameWithType: CheckLevelUnlock
+  fullName: CheckLevelUnlock
+  type: Class
+  source:
+    id: CheckLevelUnlock
+    path: ''
+    startLine: 2879
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nchecks if certain levels are already unlocked\n"
+  example: []
+  syntax:
+    content: 'public class CheckLevelUnlock : MonoBehaviour'
+    content.vb: >-
+      Public Class CheckLevelUnlock
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

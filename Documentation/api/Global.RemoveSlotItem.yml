@@ -1,0 +1,326 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.RemoveSlotItem
+  commentId: T:Global.RemoveSlotItem
+  id: RemoveSlotItem
+  parent: Global
+  children:
+  - Global.RemoveSlotItem.audios
+  - Global.RemoveSlotItem.Image
+  - Global.RemoveSlotItem.isMainWeapon
+  - Global.RemoveSlotItem.IsMouseOver
+  - Global.RemoveSlotItem.isSecondaryWeapon
+  - Global.RemoveSlotItem.isSecondaryWeapon1
+  - Global.RemoveSlotItem.isShipPart
+  - Global.RemoveSlotItem.setMouseOver(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: RemoveSlotItem
+  nameWithType: RemoveSlotItem
+  fullName: RemoveSlotItem
+  type: Class
+  source:
+    id: RemoveSlotItem
+    path: ''
+    startLine: 8488
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to remove equipt items\n"
+  example: []
+  syntax:
+    content: 'public class RemoveSlotItem : MonoBehaviour'
+    content.vb: >-
+      Public Class RemoveSlotItem
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.RemoveSlotItem.isMainWeapon
+  commentId: F:Global.RemoveSlotItem.isMainWeapon
+  id: isMainWeapon
+  parent: Global.RemoveSlotItem
+  langs:
+  - csharp
+  - vb
+  name: isMainWeapon
+  nameWithType: RemoveSlotItem.isMainWeapon
+  fullName: RemoveSlotItem.isMainWeapon
+  type: Field
+  source:
+    id: isMainWeapon
+    path: ''
+    startLine: 8493
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool isMainWeapon
+    return:
+      type: System.Boolean
+    content.vb: Public isMainWeapon As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.RemoveSlotItem.isSecondaryWeapon
+  commentId: F:Global.RemoveSlotItem.isSecondaryWeapon
+  id: isSecondaryWeapon
+  parent: Global.RemoveSlotItem
+  langs:
+  - csharp
+  - vb
+  name: isSecondaryWeapon
+  nameWithType: RemoveSlotItem.isSecondaryWeapon
+  fullName: RemoveSlotItem.isSecondaryWeapon
+  type: Field
+  source:
+    id: isSecondaryWeapon
+    path: ''
+    startLine: 8494
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool isSecondaryWeapon
+    return:
+      type: System.Boolean
+    content.vb: Public isSecondaryWeapon As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.RemoveSlotItem.isSecondaryWeapon1
+  commentId: F:Global.RemoveSlotItem.isSecondaryWeapon1
+  id: isSecondaryWeapon1
+  parent: Global.RemoveSlotItem
+  langs:
+  - csharp
+  - vb
+  name: isSecondaryWeapon1
+  nameWithType: RemoveSlotItem.isSecondaryWeapon1
+  fullName: RemoveSlotItem.isSecondaryWeapon1
+  type: Field
+  source:
+    id: isSecondaryWeapon1
+    path: ''
+    startLine: 8495
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool isSecondaryWeapon1
+    return:
+      type: System.Boolean
+    content.vb: Public isSecondaryWeapon1 As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.RemoveSlotItem.isShipPart
+  commentId: F:Global.RemoveSlotItem.isShipPart
+  id: isShipPart
+  parent: Global.RemoveSlotItem
+  langs:
+  - csharp
+  - vb
+  name: isShipPart
+  nameWithType: RemoveSlotItem.isShipPart
+  fullName: RemoveSlotItem.isShipPart
+  type: Field
+  source:
+    id: isShipPart
+    path: ''
+    startLine: 8496
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool isShipPart
+    return:
+      type: System.Boolean
+    content.vb: Public isShipPart As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.RemoveSlotItem.audios
+  commentId: F:Global.RemoveSlotItem.audios
+  id: audios
+  parent: Global.RemoveSlotItem
+  langs:
+  - csharp
+  - vb
+  name: audios
+  nameWithType: RemoveSlotItem.audios
+  fullName: RemoveSlotItem.audios
+  type: Field
+  source:
+    id: audios
+    path: ''
+    startLine: 8498
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource audios
+    return:
+      type: Global.AudioSource
+    content.vb: Public audios As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.RemoveSlotItem.Image
+  commentId: P:Global.RemoveSlotItem.Image
+  id: Image
+  parent: Global.RemoveSlotItem
+  langs:
+  - csharp
+  - vb
+  name: Image
+  nameWithType: RemoveSlotItem.Image
+  fullName: RemoveSlotItem.Image
+  type: Property
+  source:
+    id: Image
+    path: ''
+    startLine: 8500
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image Image { get; set; }
+    parameters: []
+    return:
+      type: Global.Image
+    content.vb: Public Property Image As Image
+  overload: Global.RemoveSlotItem.Image*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.RemoveSlotItem.IsMouseOver
+  commentId: P:Global.RemoveSlotItem.IsMouseOver
+  id: IsMouseOver
+  parent: Global.RemoveSlotItem
+  langs:
+  - csharp
+  - vb
+  name: IsMouseOver
+  nameWithType: RemoveSlotItem.IsMouseOver
+  fullName: RemoveSlotItem.IsMouseOver
+  type: Property
+  source:
+    id: IsMouseOver
+    path: ''
+    startLine: 8510
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool IsMouseOver { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsMouseOver As Boolean
+  overload: Global.RemoveSlotItem.IsMouseOver*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.RemoveSlotItem.setMouseOver(System.Boolean)
+  commentId: M:Global.RemoveSlotItem.setMouseOver(System.Boolean)
+  id: setMouseOver(System.Boolean)
+  parent: Global.RemoveSlotItem
+  langs:
+  - csharp
+  - vb
+  name: setMouseOver(Boolean)
+  nameWithType: RemoveSlotItem.setMouseOver(Boolean)
+  fullName: RemoveSlotItem.setMouseOver(System.Boolean)
+  type: Method
+  source:
+    id: setMouseOver
+    path: ''
+    startLine: 8590
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsets true if the cursor is curently over this gameobject\n"
+  example: []
+  syntax:
+    content: public void setMouseOver(bool value)
+    parameters:
+    - id: value
+      type: System.Boolean
+      description: ''
+    content.vb: Public Sub setMouseOver(value As Boolean)
+  overload: Global.RemoveSlotItem.setMouseOver*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: Global.RemoveSlotItem.Image*
+  commentId: Overload:Global.RemoveSlotItem.Image
+  name: Image
+  nameWithType: RemoveSlotItem.Image
+  fullName: RemoveSlotItem.Image
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: Global.RemoveSlotItem.IsMouseOver*
+  commentId: Overload:Global.RemoveSlotItem.IsMouseOver
+  name: IsMouseOver
+  nameWithType: RemoveSlotItem.IsMouseOver
+  fullName: RemoveSlotItem.IsMouseOver
+- uid: Global.RemoveSlotItem.setMouseOver*
+  commentId: Overload:Global.RemoveSlotItem.setMouseOver
+  name: setMouseOver
+  nameWithType: RemoveSlotItem.setMouseOver
+  fullName: RemoveSlotItem.setMouseOver

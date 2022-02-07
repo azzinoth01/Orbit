@@ -1,0 +1,509 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Inventory_fill
+  commentId: T:Global.Inventory_fill
+  id: Inventory_fill
+  parent: Global
+  children:
+  - Global.Inventory_fill.audios
+  - Global.Inventory_fill.blockAudio
+  - Global.Inventory_fill.display
+  - Global.Inventory_fill.dragAndDrop
+  - Global.Inventory_fill.inventoryButton(Item,System.Boolean,GameObject)
+  - Global.Inventory_fill.LockedBox
+  - Global.Inventory_fill.mainWeaponBox
+  - Global.Inventory_fill.mainWeaponSlotClicked(Image)
+  - Global.Inventory_fill.partsBox
+  - Global.Inventory_fill.secondaryWeaponBox
+  - Global.Inventory_fill.secondaryWeaponSlotClicked(Image)
+  - Global.Inventory_fill.secondaryWeaponSlotTwoClicked(Image)
+  - Global.Inventory_fill.shieldSlotClicked(Image)
+  langs:
+  - csharp
+  - vb
+  name: Inventory_fill
+  nameWithType: Inventory_fill
+  fullName: Inventory_fill
+  type: Class
+  source:
+    id: Inventory_fill
+    path: ''
+    startLine: 4602
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass which controlls the buyable inventory items\n"
+  example: []
+  syntax:
+    content: 'public class Inventory_fill : MonoBehaviour'
+    content.vb: >-
+      Public Class Inventory_fill
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Inventory_fill.mainWeaponBox
+  commentId: F:Global.Inventory_fill.mainWeaponBox
+  id: mainWeaponBox
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: mainWeaponBox
+  nameWithType: Inventory_fill.mainWeaponBox
+  fullName: Inventory_fill.mainWeaponBox
+  type: Field
+  source:
+    id: mainWeaponBox
+    path: ''
+    startLine: 4604
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject mainWeaponBox
+    return:
+      type: Global.GameObject
+    content.vb: Public mainWeaponBox As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.secondaryWeaponBox
+  commentId: F:Global.Inventory_fill.secondaryWeaponBox
+  id: secondaryWeaponBox
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: secondaryWeaponBox
+  nameWithType: Inventory_fill.secondaryWeaponBox
+  fullName: Inventory_fill.secondaryWeaponBox
+  type: Field
+  source:
+    id: secondaryWeaponBox
+    path: ''
+    startLine: 4605
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject secondaryWeaponBox
+    return:
+      type: Global.GameObject
+    content.vb: Public secondaryWeaponBox As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.partsBox
+  commentId: F:Global.Inventory_fill.partsBox
+  id: partsBox
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: partsBox
+  nameWithType: Inventory_fill.partsBox
+  fullName: Inventory_fill.partsBox
+  type: Field
+  source:
+    id: partsBox
+    path: ''
+    startLine: 4606
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject partsBox
+    return:
+      type: Global.GameObject
+    content.vb: Public partsBox As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.LockedBox
+  commentId: F:Global.Inventory_fill.LockedBox
+  id: LockedBox
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: LockedBox
+  nameWithType: Inventory_fill.LockedBox
+  fullName: Inventory_fill.LockedBox
+  type: Field
+  source:
+    id: LockedBox
+    path: ''
+    startLine: 4607
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject LockedBox
+    return:
+      type: Global.GameObject
+    content.vb: Public LockedBox As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.dragAndDrop
+  commentId: F:Global.Inventory_fill.dragAndDrop
+  id: dragAndDrop
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: dragAndDrop
+  nameWithType: Inventory_fill.dragAndDrop
+  fullName: Inventory_fill.dragAndDrop
+  type: Field
+  source:
+    id: dragAndDrop
+    path: ''
+    startLine: 4608
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image dragAndDrop
+    return:
+      type: Global.Image
+    content.vb: Public dragAndDrop As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.display
+  commentId: F:Global.Inventory_fill.display
+  id: display
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: display
+  nameWithType: Inventory_fill.display
+  fullName: Inventory_fill.display
+  type: Field
+  source:
+    id: display
+    path: ''
+    startLine: 4610
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public ShipEditorStatusDisplay display
+    return:
+      type: Global.ShipEditorStatusDisplay
+    content.vb: Public display As ShipEditorStatusDisplay
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.audios
+  commentId: F:Global.Inventory_fill.audios
+  id: audios
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: audios
+  nameWithType: Inventory_fill.audios
+  fullName: Inventory_fill.audios
+  type: Field
+  source:
+    id: audios
+    path: ''
+    startLine: 4613
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource audios
+    return:
+      type: Global.AudioSource
+    content.vb: Public audios As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.blockAudio
+  commentId: F:Global.Inventory_fill.blockAudio
+  id: blockAudio
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: blockAudio
+  nameWithType: Inventory_fill.blockAudio
+  fullName: Inventory_fill.blockAudio
+  type: Field
+  source:
+    id: blockAudio
+    path: ''
+    startLine: 4614
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource blockAudio
+    return:
+      type: Global.AudioSource
+    content.vb: Public blockAudio As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.inventoryButton(Item,System.Boolean,GameObject)
+  commentId: M:Global.Inventory_fill.inventoryButton(Item,System.Boolean,GameObject)
+  id: inventoryButton(Item,System.Boolean,GameObject)
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: inventoryButton(Item, Boolean, GameObject)
+  nameWithType: Inventory_fill.inventoryButton(Item, Boolean, GameObject)
+  fullName: Inventory_fill.inventoryButton(Item, System.Boolean, GameObject)
+  type: Method
+  source:
+    id: inventoryButton
+    path: ''
+    startLine: 4764
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nbutton function for every inventory button\n"
+  example: []
+  syntax:
+    content: public void inventoryButton(Item i, bool locked, GameObject g)
+    parameters:
+    - id: i
+      type: Global.Item
+      description: the item which the button corresponds to
+    - id: locked
+      type: System.Boolean
+      description: if the current item is locked or not
+    - id: g
+      type: Global.GameObject
+      description: the gameobject of the button
+    content.vb: Public Sub inventoryButton(i As Item, locked As Boolean, g As GameObject)
+  overload: Global.Inventory_fill.inventoryButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.mainWeaponSlotClicked(Image)
+  commentId: M:Global.Inventory_fill.mainWeaponSlotClicked(Image)
+  id: mainWeaponSlotClicked(Image)
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: mainWeaponSlotClicked(Image)
+  nameWithType: Inventory_fill.mainWeaponSlotClicked(Image)
+  fullName: Inventory_fill.mainWeaponSlotClicked(Image)
+  type: Method
+  source:
+    id: mainWeaponSlotClicked
+    path: ''
+    startLine: 4801
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nmain weapon equip function\n"
+  example: []
+  syntax:
+    content: public void mainWeaponSlotClicked(Image button)
+    parameters:
+    - id: button
+      type: Global.Image
+      description: Image of the button
+    content.vb: Public Sub mainWeaponSlotClicked(button As Image)
+  overload: Global.Inventory_fill.mainWeaponSlotClicked*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.secondaryWeaponSlotClicked(Image)
+  commentId: M:Global.Inventory_fill.secondaryWeaponSlotClicked(Image)
+  id: secondaryWeaponSlotClicked(Image)
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: secondaryWeaponSlotClicked(Image)
+  nameWithType: Inventory_fill.secondaryWeaponSlotClicked(Image)
+  fullName: Inventory_fill.secondaryWeaponSlotClicked(Image)
+  type: Method
+  source:
+    id: secondaryWeaponSlotClicked
+    path: ''
+    startLine: 4843
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsecondary weapon equip function 1\n"
+  example: []
+  syntax:
+    content: public void secondaryWeaponSlotClicked(Image button)
+    parameters:
+    - id: button
+      type: Global.Image
+      description: Image of the button
+    content.vb: Public Sub secondaryWeaponSlotClicked(button As Image)
+  overload: Global.Inventory_fill.secondaryWeaponSlotClicked*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.secondaryWeaponSlotTwoClicked(Image)
+  commentId: M:Global.Inventory_fill.secondaryWeaponSlotTwoClicked(Image)
+  id: secondaryWeaponSlotTwoClicked(Image)
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: secondaryWeaponSlotTwoClicked(Image)
+  nameWithType: Inventory_fill.secondaryWeaponSlotTwoClicked(Image)
+  fullName: Inventory_fill.secondaryWeaponSlotTwoClicked(Image)
+  type: Method
+  source:
+    id: secondaryWeaponSlotTwoClicked
+    path: ''
+    startLine: 4881
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsecondary weapon equip function 2\n"
+  example: []
+  syntax:
+    content: public void secondaryWeaponSlotTwoClicked(Image button)
+    parameters:
+    - id: button
+      type: Global.Image
+      description: Image of the button
+    content.vb: Public Sub secondaryWeaponSlotTwoClicked(button As Image)
+  overload: Global.Inventory_fill.secondaryWeaponSlotTwoClicked*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Inventory_fill.shieldSlotClicked(Image)
+  commentId: M:Global.Inventory_fill.shieldSlotClicked(Image)
+  id: shieldSlotClicked(Image)
+  parent: Global.Inventory_fill
+  langs:
+  - csharp
+  - vb
+  name: shieldSlotClicked(Image)
+  nameWithType: Inventory_fill.shieldSlotClicked(Image)
+  fullName: Inventory_fill.shieldSlotClicked(Image)
+  type: Method
+  source:
+    id: shieldSlotClicked
+    path: ''
+    startLine: 4920
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nship parts equip function\n"
+  example: []
+  syntax:
+    content: public void shieldSlotClicked(Image button)
+    parameters:
+    - id: button
+      type: Global.Image
+      description: Image of the button
+    content.vb: Public Sub shieldSlotClicked(button As Image)
+  overload: Global.Inventory_fill.shieldSlotClicked*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: Global.ShipEditorStatusDisplay
+  commentId: T:Global.ShipEditorStatusDisplay
+  name: ShipEditorStatusDisplay
+  nameWithType: ShipEditorStatusDisplay
+  fullName: ShipEditorStatusDisplay
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: Global.Inventory_fill.inventoryButton*
+  commentId: Overload:Global.Inventory_fill.inventoryButton
+  name: inventoryButton
+  nameWithType: Inventory_fill.inventoryButton
+  fullName: Inventory_fill.inventoryButton
+- uid: Global.Item
+  commentId: T:Global.Item
+  name: Item
+  nameWithType: Item
+  fullName: Item
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Global.Inventory_fill.mainWeaponSlotClicked*
+  commentId: Overload:Global.Inventory_fill.mainWeaponSlotClicked
+  name: mainWeaponSlotClicked
+  nameWithType: Inventory_fill.mainWeaponSlotClicked
+  fullName: Inventory_fill.mainWeaponSlotClicked
+- uid: Global.Inventory_fill.secondaryWeaponSlotClicked*
+  commentId: Overload:Global.Inventory_fill.secondaryWeaponSlotClicked
+  name: secondaryWeaponSlotClicked
+  nameWithType: Inventory_fill.secondaryWeaponSlotClicked
+  fullName: Inventory_fill.secondaryWeaponSlotClicked
+- uid: Global.Inventory_fill.secondaryWeaponSlotTwoClicked*
+  commentId: Overload:Global.Inventory_fill.secondaryWeaponSlotTwoClicked
+  name: secondaryWeaponSlotTwoClicked
+  nameWithType: Inventory_fill.secondaryWeaponSlotTwoClicked
+  fullName: Inventory_fill.secondaryWeaponSlotTwoClicked
+- uid: Global.Inventory_fill.shieldSlotClicked*
+  commentId: Overload:Global.Inventory_fill.shieldSlotClicked
+  name: shieldSlotClicked
+  nameWithType: Inventory_fill.shieldSlotClicked
+  fullName: Inventory_fill.shieldSlotClicked

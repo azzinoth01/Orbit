@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.BulletSoundControl
+  commentId: T:Global.BulletSoundControl
+  id: BulletSoundControl
+  parent: Global
+  children:
+  - Global.BulletSoundControl.audios
+  langs:
+  - csharp
+  - vb
+  name: BulletSoundControl
+  nameWithType: BulletSoundControl
+  fullName: BulletSoundControl
+  type: Class
+  source:
+    id: BulletSoundControl
+    path: ''
+    startLine: 2659
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontrols the audio of the bullets\n"
+  example: []
+  syntax:
+    content: 'public class BulletSoundControl : MonoBehaviour'
+    content.vb: >-
+      Public Class BulletSoundControl
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.BulletSoundControl.audios
+  commentId: F:Global.BulletSoundControl.audios
+  id: audios
+  parent: Global.BulletSoundControl
+  langs:
+  - csharp
+  - vb
+  name: audios
+  nameWithType: BulletSoundControl.audios
+  fullName: BulletSoundControl.audios
+  type: Field
+  source:
+    id: audios
+    path: ''
+    startLine: 2662
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource audios
+    return:
+      type: Global.AudioSource
+    content.vb: Public audios As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource

@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.GameCursor
+  commentId: T:Global.GameCursor
+  id: GameCursor
+  parent: Global
+  children:
+  - Global.GameCursor.cursor
+  - Global.GameCursor.hotSpot
+  - Global.GameCursor.mode
+  langs:
+  - csharp
+  - vb
+  name: GameCursor
+  nameWithType: GameCursor
+  fullName: GameCursor
+  type: Class
+  source:
+    id: GameCursor
+    path: ''
+    startLine: 4392
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ndid not work properly and not in use anymore\n"
+  example: []
+  syntax:
+    content: 'public class GameCursor : MonoBehaviour'
+    content.vb: >-
+      Public Class GameCursor
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.GameCursor.cursor
+  commentId: F:Global.GameCursor.cursor
+  id: cursor
+  parent: Global.GameCursor
+  langs:
+  - csharp
+  - vb
+  name: cursor
+  nameWithType: GameCursor.cursor
+  fullName: GameCursor.cursor
+  type: Field
+  source:
+    id: cursor
+    path: ''
+    startLine: 4395
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Texture2D cursor
+    return:
+      type: Global.Texture2D
+    content.vb: Public cursor As Texture2D
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.GameCursor.mode
+  commentId: F:Global.GameCursor.mode
+  id: mode
+  parent: Global.GameCursor
+  langs:
+  - csharp
+  - vb
+  name: mode
+  nameWithType: GameCursor.mode
+  fullName: GameCursor.mode
+  type: Field
+  source:
+    id: mode
+    path: ''
+    startLine: 4396
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public CursorMode mode
+    return:
+      type: Global.CursorMode
+    content.vb: Public mode As CursorMode
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.GameCursor.hotSpot
+  commentId: F:Global.GameCursor.hotSpot
+  id: hotSpot
+  parent: Global.GameCursor
+  langs:
+  - csharp
+  - vb
+  name: hotSpot
+  nameWithType: GameCursor.hotSpot
+  fullName: GameCursor.hotSpot
+  type: Field
+  source:
+    id: hotSpot
+    path: ''
+    startLine: 4397
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Vector2 hotSpot
+    return:
+      type: Global.Vector2
+    content.vb: Public hotSpot As Vector2
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Texture2D
+  commentId: '!:Global.Texture2D'
+  isExternal: true
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: Texture2D
+- uid: Global.CursorMode
+  commentId: '!:Global.CursorMode'
+  isExternal: true
+  name: CursorMode
+  nameWithType: CursorMode
+  fullName: CursorMode
+- uid: Global.Vector2
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Vector2

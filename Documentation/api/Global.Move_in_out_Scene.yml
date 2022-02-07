@@ -22,17 +22,16 @@ items:
   source:
     id: Move_in_out_Scene
     path: ''
-    startLine: 2284
+    startLine: 6350
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse die sich drum k�mmert, dass enemys aus den Spielfeld rein und raus bewegt\n"
+  summary: "\nclass handels the moving in to the playing field and out the playing field for enemies \n"
   example: []
   syntax:
     content: 'public class Move_in_out_Scene : MonoBehaviour'
     content.vb: >-
       Public Class Move_in_out_Scene
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -56,7 +55,7 @@ items:
   source:
     id: moveInWaypoints
     path: ''
-    startLine: 2286
+    startLine: 6352
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -83,7 +82,7 @@ items:
   source:
     id: moveOutWaypoints
     path: ''
-    startLine: 2287
+    startLine: 6353
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -110,7 +109,7 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 2288
+    startLine: 6354
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -137,7 +136,7 @@ items:
   source:
     id: force
     path: ''
-    startLine: 2293
+    startLine: 6359
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -164,7 +163,7 @@ items:
   source:
     id: maxSpeed
     path: ''
-    startLine: 2294
+    startLine: 6360
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -191,7 +190,7 @@ items:
   source:
     id: body
     path: ''
-    startLine: 2296
+    startLine: 6362
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -218,11 +217,11 @@ items:
   source:
     id: startMoveOut
     path: ''
-    startLine: 2398
+    startLine: 6464
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nstartet das move out\n"
+  summary: "\nstarts the move out\n"
   example: []
   syntax:
     content: public void startMoveOut()

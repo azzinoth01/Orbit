@@ -83,7 +83,7 @@
   
   <h1 id="Global_Skillsequenze" data-uid="Global.Skillsequenze" class="text-break">Class Skillsequenze
   </h1>
-  <div class="markdown level0 summary"><p>container classe um skills zu beschreiben</p>
+  <div class="markdown level0 summary"><p>container classe to describe skills</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -103,13 +103,13 @@ public class Skillsequenze</code></pre>
   
   
   <a id="Global_Skillsequenze__ctor_" data-uid="Global.Skillsequenze.#ctor*"></a>
-  <h4 id="Global_Skillsequenze__ctor_System_Single_GameObject_" data-uid="Global.Skillsequenze.#ctor(System.Single,GameObject)">Skillsequenze(Single, GameObject)</h4>
+  <h4 id="Global_Skillsequenze__ctor_System_Single_GameObject_System_Boolean_" data-uid="Global.Skillsequenze.#ctor(System.Single,GameObject,System.Boolean)">Skillsequenze(Single, GameObject, Boolean)</h4>
   <div class="markdown level1 summary"><p>construktor classe</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Skillsequenze(float delay, GameObject skill)</code></pre>
+    <pre><code class="lang-csharp hljs">public Skillsequenze(float delay, GameObject skill, bool shootInRotatedDirection)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,13 +124,19 @@ public class Skillsequenze</code></pre>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td><span class="parametername">delay</span></td>
-        <td><p>delay zwischen den skills</p>
+        <td><p>delay between skills</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">GameObject</span></td>
         <td><span class="parametername">skill</span></td>
-        <td><p>den skill der benutzt wird</p>
+        <td><p>the skill to be used</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">shootInRotatedDirection</span></td>
+        <td><p>if the skill is to be shoot in the rotated direction</p>
 </td>
       </tr>
     </tbody>
@@ -158,6 +164,31 @@ public class Skillsequenze</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Global_Skillsequenze_ShootInRotatedDirection_" data-uid="Global.Skillsequenze.ShootInRotatedDirection*"></a>
+  <h4 id="Global_Skillsequenze_ShootInRotatedDirection" data-uid="Global.Skillsequenze.ShootInRotatedDirection">ShootInRotatedDirection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShootInRotatedDirection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>

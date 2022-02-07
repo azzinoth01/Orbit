@@ -1,0 +1,210 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.TooltipSystem
+  commentId: T:Global.TooltipSystem
+  id: TooltipSystem
+  parent: Global
+  children:
+  - Global.TooltipSystem.Hide
+  - Global.TooltipSystem.Show(System.String,System.String)
+  - Global.TooltipSystem.Start
+  - Global.TooltipSystem.tooltip
+  langs:
+  - csharp
+  - vb
+  name: TooltipSystem
+  nameWithType: TooltipSystem
+  fullName: TooltipSystem
+  type: Class
+  source:
+    id: TooltipSystem
+    path: ''
+    startLine: 10052
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to control tooltips\n"
+  example: []
+  syntax:
+    content: 'public class TooltipSystem : MonoBehaviour'
+    content.vb: >-
+      Public Class TooltipSystem
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.TooltipSystem.tooltip
+  commentId: F:Global.TooltipSystem.tooltip
+  id: tooltip
+  parent: Global.TooltipSystem
+  langs:
+  - csharp
+  - vb
+  name: tooltip
+  nameWithType: TooltipSystem.tooltip
+  fullName: TooltipSystem.tooltip
+  type: Field
+  source:
+    id: tooltip
+    path: ''
+    startLine: 10055
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public ToolTip tooltip
+    return:
+      type: Global.ToolTip
+    content.vb: Public tooltip As ToolTip
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TooltipSystem.Start
+  commentId: M:Global.TooltipSystem.Start
+  id: Start
+  parent: Global.TooltipSystem
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: TooltipSystem.Start()
+  fullName: TooltipSystem.Start()
+  type: Method
+  source:
+    id: Start
+    path: ''
+    startLine: 10061
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nloads the tooltip settings\n"
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: Global.TooltipSystem.Start*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TooltipSystem.Show(System.String,System.String)
+  commentId: M:Global.TooltipSystem.Show(System.String,System.String)
+  id: Show(System.String,System.String)
+  parent: Global.TooltipSystem
+  langs:
+  - csharp
+  - vb
+  name: Show(String, String)
+  nameWithType: TooltipSystem.Show(String, String)
+  fullName: TooltipSystem.Show(System.String, System.String)
+  type: Method
+  source:
+    id: Show
+    path: ''
+    startLine: 10075
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nshows the tooltip if it is enabled\n"
+  example: []
+  syntax:
+    content: public static void Show(string content, string header = "")
+    parameters:
+    - id: content
+      type: System.String
+      description: text to display in the content text field
+    - id: header
+      type: System.String
+      description: text to display in the header text field
+    content.vb: Public Shared Sub Show(content As String, header As String = "")
+  overload: Global.TooltipSystem.Show*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.TooltipSystem.Hide
+  commentId: M:Global.TooltipSystem.Hide
+  id: Hide
+  parent: Global.TooltipSystem
+  langs:
+  - csharp
+  - vb
+  name: Hide()
+  nameWithType: TooltipSystem.Hide()
+  fullName: TooltipSystem.Hide()
+  type: Method
+  source:
+    id: Hide
+    path: ''
+    startLine: 10092
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nhides the tooltip\n"
+  example: []
+  syntax:
+    content: public static void Hide()
+    content.vb: Public Shared Sub Hide
+  overload: Global.TooltipSystem.Hide*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.ToolTip
+  commentId: T:Global.ToolTip
+  name: ToolTip
+  nameWithType: ToolTip
+  fullName: ToolTip
+- uid: Global.TooltipSystem.Start*
+  commentId: Overload:Global.TooltipSystem.Start
+  name: Start
+  nameWithType: TooltipSystem.Start
+  fullName: TooltipSystem.Start
+- uid: Global.TooltipSystem.Show*
+  commentId: Overload:Global.TooltipSystem.Show
+  name: Show
+  nameWithType: TooltipSystem.Show
+  fullName: TooltipSystem.Show
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.TooltipSystem.Hide*
+  commentId: Overload:Global.TooltipSystem.Hide
+  name: Hide
+  nameWithType: TooltipSystem.Hide
+  fullName: TooltipSystem.Hide

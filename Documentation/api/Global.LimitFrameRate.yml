@@ -15,17 +15,16 @@ items:
   source:
     id: LimitFrameRate
     path: ''
-    startLine: 2048
+    startLine: 5437
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nlimitiert die Framerate auf 0 fps\n"
+  summary: "\nlimits framerate to 60 fps\n"
   example: []
   syntax:
     content: 'public class LimitFrameRate : MonoBehaviour'
     content.vb: >-
       Public Class LimitFrameRate
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object

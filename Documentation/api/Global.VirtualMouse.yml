@@ -1,0 +1,865 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.VirtualMouse
+  commentId: T:Global.VirtualMouse
+  id: VirtualMouse
+  parent: Global
+  children:
+  - Global.VirtualMouse.canvas
+  - Global.VirtualMouse.canvasRect
+  - Global.VirtualMouse.cursor
+  - Global.VirtualMouse.hardwareMouseVisible
+  - Global.VirtualMouse.loadNewRebinds
+  - Global.VirtualMouse.OnLeftMouseButton(InputAction.CallbackContext)
+  - Global.VirtualMouse.OnMiddleMouseButton(InputAction.CallbackContext)
+  - Global.VirtualMouse.OnMoveCursor(InputAction.CallbackContext)
+  - Global.VirtualMouse.OnPoint(InputAction.CallbackContext)
+  - Global.VirtualMouse.OnRightMouseButton(InputAction.CallbackContext)
+  - Global.VirtualMouse.OnScroll(InputAction.CallbackContext)
+  - Global.VirtualMouse.OnToogleMouseVisibility(InputAction.CallbackContext)
+  - Global.VirtualMouse.speed
+  - Global.VirtualMouse.VirtualMouseProperty
+  langs:
+  - csharp
+  - vb
+  name: VirtualMouse
+  nameWithType: VirtualMouse
+  fullName: VirtualMouse
+  type: Class
+  source:
+    id: VirtualMouse
+    path: ''
+    startLine: 10211
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to createa a virtual mouse\n"
+  example: []
+  syntax:
+    content: 'public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions'
+    content.vb: >-
+      Public Class VirtualMouse
+          Inherits MonoBehaviour
+          Implements Controlls.IVirtualMouseActions
+  inheritance:
+  - System.Object
+  implements:
+  - Global.Controlls.IVirtualMouseActions
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.VirtualMouse.hardwareMouseVisible
+  commentId: F:Global.VirtualMouse.hardwareMouseVisible
+  id: hardwareMouseVisible
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: hardwareMouseVisible
+  nameWithType: VirtualMouse.hardwareMouseVisible
+  fullName: VirtualMouse.hardwareMouseVisible
+  type: Field
+  source:
+    id: hardwareMouseVisible
+    path: ''
+    startLine: 10216
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool hardwareMouseVisible
+    return:
+      type: System.Boolean
+    content.vb: Public hardwareMouseVisible As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.cursor
+  commentId: F:Global.VirtualMouse.cursor
+  id: cursor
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: cursor
+  nameWithType: VirtualMouse.cursor
+  fullName: VirtualMouse.cursor
+  type: Field
+  source:
+    id: cursor
+    path: ''
+    startLine: 10218
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public RectTransform cursor
+    return:
+      type: Global.RectTransform
+    content.vb: Public cursor As RectTransform
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.speed
+  commentId: F:Global.VirtualMouse.speed
+  id: speed
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: speed
+  nameWithType: VirtualMouse.speed
+  fullName: VirtualMouse.speed
+  type: Field
+  source:
+    id: speed
+    path: ''
+    startLine: 10219
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float speed
+    return:
+      type: System.Single
+    content.vb: Public speed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.canvasRect
+  commentId: F:Global.VirtualMouse.canvasRect
+  id: canvasRect
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: canvasRect
+  nameWithType: VirtualMouse.canvasRect
+  fullName: VirtualMouse.canvasRect
+  type: Field
+  source:
+    id: canvasRect
+    path: ''
+    startLine: 10221
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public RectTransform canvasRect
+    return:
+      type: Global.RectTransform
+    content.vb: Public canvasRect As RectTransform
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.canvas
+  commentId: F:Global.VirtualMouse.canvas
+  id: canvas
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: canvas
+  nameWithType: VirtualMouse.canvas
+  fullName: VirtualMouse.canvas
+  type: Field
+  source:
+    id: canvas
+    path: ''
+    startLine: 10222
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Canvas canvas
+    return:
+      type: Global.Canvas
+    content.vb: Public canvas As Canvas
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.VirtualMouseProperty
+  commentId: P:Global.VirtualMouse.VirtualMouseProperty
+  id: VirtualMouseProperty
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: VirtualMouseProperty
+  nameWithType: VirtualMouse.VirtualMouseProperty
+  fullName: VirtualMouse.VirtualMouseProperty
+  type: Property
+  source:
+    id: VirtualMouseProperty
+    path: ''
+    startLine: 10240
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Mouse VirtualMouseProperty { get; }
+    parameters: []
+    return:
+      type: Global.Mouse
+    content.vb: Public ReadOnly Property VirtualMouseProperty As Mouse
+  overload: Global.VirtualMouse.VirtualMouseProperty*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.VirtualMouse.loadNewRebinds
+  commentId: M:Global.VirtualMouse.loadNewRebinds
+  id: loadNewRebinds
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: loadNewRebinds()
+  nameWithType: VirtualMouse.loadNewRebinds()
+  fullName: VirtualMouse.loadNewRebinds()
+  type: Method
+  source:
+    id: loadNewRebinds
+    path: ''
+    startLine: 10323
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nload reabindings of the virtuals mouse\n"
+  example: []
+  syntax:
+    content: public void loadNewRebinds()
+    content.vb: Public Sub loadNewRebinds
+  overload: Global.VirtualMouse.loadNewRebinds*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.OnLeftMouseButton(InputAction.CallbackContext)
+  commentId: M:Global.VirtualMouse.OnLeftMouseButton(InputAction.CallbackContext)
+  id: OnLeftMouseButton(InputAction.CallbackContext)
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: OnLeftMouseButton(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnLeftMouseButton(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnLeftMouseButton(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnLeftMouseButton
+    path: ''
+    startLine: 10411
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ninput action left mouse button for the virtual mouse\n"
+  example: []
+  syntax:
+    content: public void OnLeftMouseButton(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnLeftMouseButton(context As InputAction.CallbackContext)
+  overload: Global.VirtualMouse.OnLeftMouseButton*
+  implements:
+  - Global.Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.OnMiddleMouseButton(InputAction.CallbackContext)
+  commentId: M:Global.VirtualMouse.OnMiddleMouseButton(InputAction.CallbackContext)
+  id: OnMiddleMouseButton(InputAction.CallbackContext)
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: OnMiddleMouseButton(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnMiddleMouseButton(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnMiddleMouseButton(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMiddleMouseButton
+    path: ''
+    startLine: 10424
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ninput action middle mouse button for the virtual mouse\n"
+  example: []
+  syntax:
+    content: public void OnMiddleMouseButton(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnMiddleMouseButton(context As InputAction.CallbackContext)
+  overload: Global.VirtualMouse.OnMiddleMouseButton*
+  implements:
+  - Global.Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.OnMoveCursor(InputAction.CallbackContext)
+  commentId: M:Global.VirtualMouse.OnMoveCursor(InputAction.CallbackContext)
+  id: OnMoveCursor(InputAction.CallbackContext)
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: OnMoveCursor(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnMoveCursor(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnMoveCursor(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMoveCursor
+    path: ''
+    startLine: 10437
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ninput action move cursor for the virtual mouse\n"
+  example: []
+  syntax:
+    content: public void OnMoveCursor(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnMoveCursor(context As InputAction.CallbackContext)
+  overload: Global.VirtualMouse.OnMoveCursor*
+  implements:
+  - Global.Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.OnPoint(InputAction.CallbackContext)
+  commentId: M:Global.VirtualMouse.OnPoint(InputAction.CallbackContext)
+  id: OnPoint(InputAction.CallbackContext)
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: OnPoint(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnPoint(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnPoint(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnPoint
+    path: ''
+    startLine: 10445
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ninput action of the system mouse for the virtual mouse\n"
+  example: []
+  syntax:
+    content: public void OnPoint(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnPoint(context As InputAction.CallbackContext)
+  overload: Global.VirtualMouse.OnPoint*
+  implements:
+  - Global.Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.OnRightMouseButton(InputAction.CallbackContext)
+  commentId: M:Global.VirtualMouse.OnRightMouseButton(InputAction.CallbackContext)
+  id: OnRightMouseButton(InputAction.CallbackContext)
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: OnRightMouseButton(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnRightMouseButton(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnRightMouseButton(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnRightMouseButton
+    path: ''
+    startLine: 10461
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ninput action right mouse button for the virtual mouse\n"
+  example: []
+  syntax:
+    content: public void OnRightMouseButton(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnRightMouseButton(context As InputAction.CallbackContext)
+  overload: Global.VirtualMouse.OnRightMouseButton*
+  implements:
+  - Global.Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.OnScroll(InputAction.CallbackContext)
+  commentId: M:Global.VirtualMouse.OnScroll(InputAction.CallbackContext)
+  id: OnScroll(InputAction.CallbackContext)
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: OnScroll(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnScroll(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnScroll(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnScroll
+    path: ''
+    startLine: 10474
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ninput action scroll for the virtual mouse\n"
+  example: []
+  syntax:
+    content: public void OnScroll(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnScroll(context As InputAction.CallbackContext)
+  overload: Global.VirtualMouse.OnScroll*
+  implements:
+  - Global.Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.VirtualMouse.OnToogleMouseVisibility(InputAction.CallbackContext)
+  commentId: M:Global.VirtualMouse.OnToogleMouseVisibility(InputAction.CallbackContext)
+  id: OnToogleMouseVisibility(InputAction.CallbackContext)
+  parent: Global.VirtualMouse
+  langs:
+  - csharp
+  - vb
+  name: OnToogleMouseVisibility(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnToogleMouseVisibility(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnToogleMouseVisibility(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnToogleMouseVisibility
+    path: ''
+    startLine: 10490
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ninput action to toogle the visibility of the system mouse\n"
+  example: []
+  syntax:
+    content: public void OnToogleMouseVisibility(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnToogleMouseVisibility(context As InputAction.CallbackContext)
+  overload: Global.VirtualMouse.OnToogleMouseVisibility*
+  implements:
+  - Global.Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.Controlls.IVirtualMouseActions
+  commentId: T:Global.Controlls.IVirtualMouseActions
+  name: Controlls.IVirtualMouseActions
+  nameWithType: Controlls.IVirtualMouseActions
+  fullName: Controlls.IVirtualMouseActions
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Global.RectTransform
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: RectTransform
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.Canvas
+  commentId: '!:Global.Canvas'
+  isExternal: true
+  name: Canvas
+  nameWithType: Canvas
+  fullName: Canvas
+- uid: Global.VirtualMouse.VirtualMouseProperty*
+  commentId: Overload:Global.VirtualMouse.VirtualMouseProperty
+  name: VirtualMouseProperty
+  nameWithType: VirtualMouse.VirtualMouseProperty
+  fullName: VirtualMouse.VirtualMouseProperty
+- uid: Global.Mouse
+  commentId: '!:Global.Mouse'
+  isExternal: true
+  name: Mouse
+  nameWithType: Mouse
+  fullName: Mouse
+- uid: Global.VirtualMouse.loadNewRebinds*
+  commentId: Overload:Global.VirtualMouse.loadNewRebinds
+  name: loadNewRebinds
+  nameWithType: VirtualMouse.loadNewRebinds
+  fullName: VirtualMouse.loadNewRebinds
+- uid: Global.VirtualMouse.OnLeftMouseButton*
+  commentId: Overload:Global.VirtualMouse.OnLeftMouseButton
+  name: OnLeftMouseButton
+  nameWithType: VirtualMouse.OnLeftMouseButton
+  fullName: VirtualMouse.OnLeftMouseButton
+- uid: Global.Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+  parent: Global.Controlls.IVirtualMouseActions
+  isExternal: true
+  name: OnLeftMouseButton(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+    name: OnLeftMouseButton
+    nameWithType: Controlls.IVirtualMouseActions.OnLeftMouseButton
+    fullName: Controlls.IVirtualMouseActions.OnLeftMouseButton
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+    name: OnLeftMouseButton
+    nameWithType: Controlls.IVirtualMouseActions.OnLeftMouseButton
+    fullName: Controlls.IVirtualMouseActions.OnLeftMouseButton
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.InputAction.CallbackContext
+  isExternal: true
+  name: InputAction.CallbackContext
+  nameWithType: InputAction.CallbackContext
+  fullName: InputAction.CallbackContext
+- uid: Global.VirtualMouse.OnMiddleMouseButton*
+  commentId: Overload:Global.VirtualMouse.OnMiddleMouseButton
+  name: OnMiddleMouseButton
+  nameWithType: VirtualMouse.OnMiddleMouseButton
+  fullName: VirtualMouse.OnMiddleMouseButton
+- uid: Global.Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+  parent: Global.Controlls.IVirtualMouseActions
+  isExternal: true
+  name: OnMiddleMouseButton(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+    name: OnMiddleMouseButton
+    nameWithType: Controlls.IVirtualMouseActions.OnMiddleMouseButton
+    fullName: Controlls.IVirtualMouseActions.OnMiddleMouseButton
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+    name: OnMiddleMouseButton
+    nameWithType: Controlls.IVirtualMouseActions.OnMiddleMouseButton
+    fullName: Controlls.IVirtualMouseActions.OnMiddleMouseButton
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.VirtualMouse.OnMoveCursor*
+  commentId: Overload:Global.VirtualMouse.OnMoveCursor
+  name: OnMoveCursor
+  nameWithType: VirtualMouse.OnMoveCursor
+  fullName: VirtualMouse.OnMoveCursor
+- uid: Global.Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+  parent: Global.Controlls.IVirtualMouseActions
+  isExternal: true
+  name: OnMoveCursor(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+    name: OnMoveCursor
+    nameWithType: Controlls.IVirtualMouseActions.OnMoveCursor
+    fullName: Controlls.IVirtualMouseActions.OnMoveCursor
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+    name: OnMoveCursor
+    nameWithType: Controlls.IVirtualMouseActions.OnMoveCursor
+    fullName: Controlls.IVirtualMouseActions.OnMoveCursor
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.VirtualMouse.OnPoint*
+  commentId: Overload:Global.VirtualMouse.OnPoint
+  name: OnPoint
+  nameWithType: VirtualMouse.OnPoint
+  fullName: VirtualMouse.OnPoint
+- uid: Global.Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+  parent: Global.Controlls.IVirtualMouseActions
+  isExternal: true
+  name: OnPoint(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+    name: OnPoint
+    nameWithType: Controlls.IVirtualMouseActions.OnPoint
+    fullName: Controlls.IVirtualMouseActions.OnPoint
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+    name: OnPoint
+    nameWithType: Controlls.IVirtualMouseActions.OnPoint
+    fullName: Controlls.IVirtualMouseActions.OnPoint
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.VirtualMouse.OnRightMouseButton*
+  commentId: Overload:Global.VirtualMouse.OnRightMouseButton
+  name: OnRightMouseButton
+  nameWithType: VirtualMouse.OnRightMouseButton
+  fullName: VirtualMouse.OnRightMouseButton
+- uid: Global.Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+  parent: Global.Controlls.IVirtualMouseActions
+  isExternal: true
+  name: OnRightMouseButton(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+    name: OnRightMouseButton
+    nameWithType: Controlls.IVirtualMouseActions.OnRightMouseButton
+    fullName: Controlls.IVirtualMouseActions.OnRightMouseButton
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+    name: OnRightMouseButton
+    nameWithType: Controlls.IVirtualMouseActions.OnRightMouseButton
+    fullName: Controlls.IVirtualMouseActions.OnRightMouseButton
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.VirtualMouse.OnScroll*
+  commentId: Overload:Global.VirtualMouse.OnScroll
+  name: OnScroll
+  nameWithType: VirtualMouse.OnScroll
+  fullName: VirtualMouse.OnScroll
+- uid: Global.Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+  parent: Global.Controlls.IVirtualMouseActions
+  isExternal: true
+  name: OnScroll(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+    name: OnScroll
+    nameWithType: Controlls.IVirtualMouseActions.OnScroll
+    fullName: Controlls.IVirtualMouseActions.OnScroll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+    name: OnScroll
+    nameWithType: Controlls.IVirtualMouseActions.OnScroll
+    fullName: Controlls.IVirtualMouseActions.OnScroll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.VirtualMouse.OnToogleMouseVisibility*
+  commentId: Overload:Global.VirtualMouse.OnToogleMouseVisibility
+  name: OnToogleMouseVisibility
+  nameWithType: VirtualMouse.OnToogleMouseVisibility
+  fullName: VirtualMouse.OnToogleMouseVisibility
+- uid: Global.Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+  parent: Global.Controlls.IVirtualMouseActions
+  isExternal: true
+  name: OnToogleMouseVisibility(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+    name: OnToogleMouseVisibility
+    nameWithType: Controlls.IVirtualMouseActions.OnToogleMouseVisibility
+    fullName: Controlls.IVirtualMouseActions.OnToogleMouseVisibility
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+    name: OnToogleMouseVisibility
+    nameWithType: Controlls.IVirtualMouseActions.OnToogleMouseVisibility
+    fullName: Controlls.IVirtualMouseActions.OnToogleMouseVisibility
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

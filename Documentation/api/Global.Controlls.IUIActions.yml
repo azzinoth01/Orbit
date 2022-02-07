@@ -1,0 +1,353 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Controlls.IUIActions
+  commentId: T:Global.Controlls.IUIActions
+  id: Controlls.IUIActions
+  parent: Global
+  children:
+  - Global.Controlls.IUIActions.OnCancel(InputAction.CallbackContext)
+  - Global.Controlls.IUIActions.OnClick(InputAction.CallbackContext)
+  - Global.Controlls.IUIActions.OnMiddleClick(InputAction.CallbackContext)
+  - Global.Controlls.IUIActions.OnNavigate(InputAction.CallbackContext)
+  - Global.Controlls.IUIActions.OnPoint(InputAction.CallbackContext)
+  - Global.Controlls.IUIActions.OnRightClick(InputAction.CallbackContext)
+  - Global.Controlls.IUIActions.OnScrollWheel(InputAction.CallbackContext)
+  - Global.Controlls.IUIActions.OnSubmit(InputAction.CallbackContext)
+  - Global.Controlls.IUIActions.OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  - Global.Controlls.IUIActions.OnTrackedDevicePosition(InputAction.CallbackContext)
+  langs:
+  - csharp
+  - vb
+  name: Controlls.IUIActions
+  nameWithType: Controlls.IUIActions
+  fullName: Controlls.IUIActions
+  type: Interface
+  source:
+    id: IUIActions
+    path: ''
+    startLine: 1446
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public interface IUIActions
+    content.vb: Public Interface IUIActions
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Global.Controlls.IUIActions.OnNavigate(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IUIActions.OnNavigate(InputAction.CallbackContext)
+  id: OnNavigate(InputAction.CallbackContext)
+  parent: Global.Controlls.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnNavigate(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnNavigate(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnNavigate(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnNavigate
+    path: ''
+    startLine: 1448
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void OnNavigate(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+    content.vb: Sub OnNavigate(context As InputAction.CallbackContext)
+  overload: Global.Controlls.IUIActions.OnNavigate*
+- uid: Global.Controlls.IUIActions.OnSubmit(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IUIActions.OnSubmit(InputAction.CallbackContext)
+  id: OnSubmit(InputAction.CallbackContext)
+  parent: Global.Controlls.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnSubmit(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnSubmit(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnSubmit(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnSubmit
+    path: ''
+    startLine: 1449
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void OnSubmit(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+    content.vb: Sub OnSubmit(context As InputAction.CallbackContext)
+  overload: Global.Controlls.IUIActions.OnSubmit*
+- uid: Global.Controlls.IUIActions.OnCancel(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IUIActions.OnCancel(InputAction.CallbackContext)
+  id: OnCancel(InputAction.CallbackContext)
+  parent: Global.Controlls.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnCancel(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnCancel(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnCancel(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnCancel
+    path: ''
+    startLine: 1450
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void OnCancel(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+    content.vb: Sub OnCancel(context As InputAction.CallbackContext)
+  overload: Global.Controlls.IUIActions.OnCancel*
+- uid: Global.Controlls.IUIActions.OnPoint(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IUIActions.OnPoint(InputAction.CallbackContext)
+  id: OnPoint(InputAction.CallbackContext)
+  parent: Global.Controlls.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnPoint(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnPoint(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnPoint(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnPoint
+    path: ''
+    startLine: 1451
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void OnPoint(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+    content.vb: Sub OnPoint(context As InputAction.CallbackContext)
+  overload: Global.Controlls.IUIActions.OnPoint*
+- uid: Global.Controlls.IUIActions.OnClick(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IUIActions.OnClick(InputAction.CallbackContext)
+  id: OnClick(InputAction.CallbackContext)
+  parent: Global.Controlls.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnClick(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnClick(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnClick(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnClick
+    path: ''
+    startLine: 1452
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void OnClick(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+    content.vb: Sub OnClick(context As InputAction.CallbackContext)
+  overload: Global.Controlls.IUIActions.OnClick*
+- uid: Global.Controlls.IUIActions.OnScrollWheel(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IUIActions.OnScrollWheel(InputAction.CallbackContext)
+  id: OnScrollWheel(InputAction.CallbackContext)
+  parent: Global.Controlls.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnScrollWheel(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnScrollWheel(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnScrollWheel(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnScrollWheel
+    path: ''
+    startLine: 1453
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void OnScrollWheel(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+    content.vb: Sub OnScrollWheel(context As InputAction.CallbackContext)
+  overload: Global.Controlls.IUIActions.OnScrollWheel*
+- uid: Global.Controlls.IUIActions.OnMiddleClick(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IUIActions.OnMiddleClick(InputAction.CallbackContext)
+  id: OnMiddleClick(InputAction.CallbackContext)
+  parent: Global.Controlls.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnMiddleClick(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnMiddleClick(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnMiddleClick(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMiddleClick
+    path: ''
+    startLine: 1454
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void OnMiddleClick(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+    content.vb: Sub OnMiddleClick(context As InputAction.CallbackContext)
+  overload: Global.Controlls.IUIActions.OnMiddleClick*
+- uid: Global.Controlls.IUIActions.OnRightClick(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IUIActions.OnRightClick(InputAction.CallbackContext)
+  id: OnRightClick(InputAction.CallbackContext)
+  parent: Global.Controlls.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnRightClick(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnRightClick(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnRightClick(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnRightClick
+    path: ''
+    startLine: 1455
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void OnRightClick(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+    content.vb: Sub OnRightClick(context As InputAction.CallbackContext)
+  overload: Global.Controlls.IUIActions.OnRightClick*
+- uid: Global.Controlls.IUIActions.OnTrackedDevicePosition(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IUIActions.OnTrackedDevicePosition(InputAction.CallbackContext)
+  id: OnTrackedDevicePosition(InputAction.CallbackContext)
+  parent: Global.Controlls.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnTrackedDevicePosition(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnTrackedDevicePosition(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnTrackedDevicePosition(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnTrackedDevicePosition
+    path: ''
+    startLine: 1456
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void OnTrackedDevicePosition(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+    content.vb: Sub OnTrackedDevicePosition(context As InputAction.CallbackContext)
+  overload: Global.Controlls.IUIActions.OnTrackedDevicePosition*
+- uid: Global.Controlls.IUIActions.OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IUIActions.OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  id: OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  parent: Global.Controlls.IUIActions
+  langs:
+  - csharp
+  - vb
+  name: OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnTrackedDeviceOrientation
+    path: ''
+    startLine: 1457
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void OnTrackedDeviceOrientation(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+    content.vb: Sub OnTrackedDeviceOrientation(context As InputAction.CallbackContext)
+  overload: Global.Controlls.IUIActions.OnTrackedDeviceOrientation*
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.Controlls.IUIActions.OnNavigate*
+  commentId: Overload:Global.Controlls.IUIActions.OnNavigate
+  name: OnNavigate
+  nameWithType: Controlls.IUIActions.OnNavigate
+  fullName: Controlls.IUIActions.OnNavigate
+- uid: Global.InputAction.CallbackContext
+  isExternal: true
+  name: InputAction.CallbackContext
+  nameWithType: InputAction.CallbackContext
+  fullName: InputAction.CallbackContext
+- uid: Global.Controlls.IUIActions.OnSubmit*
+  commentId: Overload:Global.Controlls.IUIActions.OnSubmit
+  name: OnSubmit
+  nameWithType: Controlls.IUIActions.OnSubmit
+  fullName: Controlls.IUIActions.OnSubmit
+- uid: Global.Controlls.IUIActions.OnCancel*
+  commentId: Overload:Global.Controlls.IUIActions.OnCancel
+  name: OnCancel
+  nameWithType: Controlls.IUIActions.OnCancel
+  fullName: Controlls.IUIActions.OnCancel
+- uid: Global.Controlls.IUIActions.OnPoint*
+  commentId: Overload:Global.Controlls.IUIActions.OnPoint
+  name: OnPoint
+  nameWithType: Controlls.IUIActions.OnPoint
+  fullName: Controlls.IUIActions.OnPoint
+- uid: Global.Controlls.IUIActions.OnClick*
+  commentId: Overload:Global.Controlls.IUIActions.OnClick
+  name: OnClick
+  nameWithType: Controlls.IUIActions.OnClick
+  fullName: Controlls.IUIActions.OnClick
+- uid: Global.Controlls.IUIActions.OnScrollWheel*
+  commentId: Overload:Global.Controlls.IUIActions.OnScrollWheel
+  name: OnScrollWheel
+  nameWithType: Controlls.IUIActions.OnScrollWheel
+  fullName: Controlls.IUIActions.OnScrollWheel
+- uid: Global.Controlls.IUIActions.OnMiddleClick*
+  commentId: Overload:Global.Controlls.IUIActions.OnMiddleClick
+  name: OnMiddleClick
+  nameWithType: Controlls.IUIActions.OnMiddleClick
+  fullName: Controlls.IUIActions.OnMiddleClick
+- uid: Global.Controlls.IUIActions.OnRightClick*
+  commentId: Overload:Global.Controlls.IUIActions.OnRightClick
+  name: OnRightClick
+  nameWithType: Controlls.IUIActions.OnRightClick
+  fullName: Controlls.IUIActions.OnRightClick
+- uid: Global.Controlls.IUIActions.OnTrackedDevicePosition*
+  commentId: Overload:Global.Controlls.IUIActions.OnTrackedDevicePosition
+  name: OnTrackedDevicePosition
+  nameWithType: Controlls.IUIActions.OnTrackedDevicePosition
+  fullName: Controlls.IUIActions.OnTrackedDevicePosition
+- uid: Global.Controlls.IUIActions.OnTrackedDeviceOrientation*
+  commentId: Overload:Global.Controlls.IUIActions.OnTrackedDeviceOrientation
+  name: OnTrackedDeviceOrientation
+  nameWithType: Controlls.IUIActions.OnTrackedDeviceOrientation
+  fullName: Controlls.IUIActions.OnTrackedDeviceOrientation

@@ -24,11 +24,11 @@ items:
   source:
     id: Enemy_Spawner_Info
     path: ''
-    startLine: 1914
+    startLine: 4258
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontainer classe f�r Spawner variablen\n"
+  summary: "\ncontainer classe for spawner variablen\n"
   example: []
   syntax:
     content: >-
@@ -65,7 +65,7 @@ items:
   source:
     id: triggerArea
     path: ''
-    startLine: 1918
+    startLine: 4262
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -92,7 +92,7 @@ items:
   source:
     id: useTriggerArea
     path: ''
-    startLine: 1919
+    startLine: 4263
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -119,7 +119,7 @@ items:
   source:
     id: delay
     path: ''
-    startLine: 1920
+    startLine: 4264
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -146,7 +146,7 @@ items:
   source:
     id: enemysToSpawn
     path: ''
-    startLine: 1921
+    startLine: 4265
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -173,7 +173,7 @@ items:
   source:
     id: enemyPrefab
     path: ''
-    startLine: 1922
+    startLine: 4266
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -200,10 +200,12 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1928
+    startLine: 4275
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\nbase constructor sets standard values\n"
+  example: []
   syntax:
     content: public Enemy_Spawner_Info()
     content.vb: Public Sub New
@@ -226,7 +228,7 @@ items:
   source:
     id: SpawnStartet
     path: ''
-    startLine: 1934
+    startLine: 4281
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -257,7 +259,7 @@ items:
   source:
     id: CurrentEnemysSpawned
     path: ''
-    startLine: 1947
+    startLine: 4294
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -288,7 +290,7 @@ items:
   source:
     id: SpawnConditonFulfilled
     path: ''
-    startLine: 1957
+    startLine: 4304
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -1,0 +1,368 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ShipEditorStatusDisplay
+  commentId: T:Global.ShipEditorStatusDisplay
+  id: ShipEditorStatusDisplay
+  parent: Global
+  children:
+  - Global.ShipEditorStatusDisplay.changeInfoDispaly(Item)
+  - Global.ShipEditorStatusDisplay.dmgNameText
+  - Global.ShipEditorStatusDisplay.dmgText
+  - Global.ShipEditorStatusDisplay.itemName
+  - Global.ShipEditorStatusDisplay.MoneyChanged
+  - Global.ShipEditorStatusDisplay.ownedMoney
+  - Global.ShipEditorStatusDisplay.parrernIconName
+  - Global.ShipEditorStatusDisplay.patternIcon
+  - Global.ShipEditorStatusDisplay.reloadTimeNameText
+  - Global.ShipEditorStatusDisplay.reloadTimeText
+  langs:
+  - csharp
+  - vb
+  name: ShipEditorStatusDisplay
+  nameWithType: ShipEditorStatusDisplay
+  fullName: ShipEditorStatusDisplay
+  type: Class
+  source:
+    id: ShipEditorStatusDisplay
+    path: ''
+    startLine: 8786
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to control the display of items\n"
+  example: []
+  syntax:
+    content: 'public class ShipEditorStatusDisplay : MonoBehaviour'
+    content.vb: >-
+      Public Class ShipEditorStatusDisplay
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.ShipEditorStatusDisplay.dmgText
+  commentId: F:Global.ShipEditorStatusDisplay.dmgText
+  id: dmgText
+  parent: Global.ShipEditorStatusDisplay
+  langs:
+  - csharp
+  - vb
+  name: dmgText
+  nameWithType: ShipEditorStatusDisplay.dmgText
+  fullName: ShipEditorStatusDisplay.dmgText
+  type: Field
+  source:
+    id: dmgText
+    path: ''
+    startLine: 8790
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text dmgText
+    return:
+      type: Global.Text
+    content.vb: Public dmgText As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipEditorStatusDisplay.dmgNameText
+  commentId: F:Global.ShipEditorStatusDisplay.dmgNameText
+  id: dmgNameText
+  parent: Global.ShipEditorStatusDisplay
+  langs:
+  - csharp
+  - vb
+  name: dmgNameText
+  nameWithType: ShipEditorStatusDisplay.dmgNameText
+  fullName: ShipEditorStatusDisplay.dmgNameText
+  type: Field
+  source:
+    id: dmgNameText
+    path: ''
+    startLine: 8791
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text dmgNameText
+    return:
+      type: Global.Text
+    content.vb: Public dmgNameText As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipEditorStatusDisplay.reloadTimeText
+  commentId: F:Global.ShipEditorStatusDisplay.reloadTimeText
+  id: reloadTimeText
+  parent: Global.ShipEditorStatusDisplay
+  langs:
+  - csharp
+  - vb
+  name: reloadTimeText
+  nameWithType: ShipEditorStatusDisplay.reloadTimeText
+  fullName: ShipEditorStatusDisplay.reloadTimeText
+  type: Field
+  source:
+    id: reloadTimeText
+    path: ''
+    startLine: 8792
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text reloadTimeText
+    return:
+      type: Global.Text
+    content.vb: Public reloadTimeText As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipEditorStatusDisplay.reloadTimeNameText
+  commentId: F:Global.ShipEditorStatusDisplay.reloadTimeNameText
+  id: reloadTimeNameText
+  parent: Global.ShipEditorStatusDisplay
+  langs:
+  - csharp
+  - vb
+  name: reloadTimeNameText
+  nameWithType: ShipEditorStatusDisplay.reloadTimeNameText
+  fullName: ShipEditorStatusDisplay.reloadTimeNameText
+  type: Field
+  source:
+    id: reloadTimeNameText
+    path: ''
+    startLine: 8793
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text reloadTimeNameText
+    return:
+      type: Global.Text
+    content.vb: Public reloadTimeNameText As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipEditorStatusDisplay.patternIcon
+  commentId: F:Global.ShipEditorStatusDisplay.patternIcon
+  id: patternIcon
+  parent: Global.ShipEditorStatusDisplay
+  langs:
+  - csharp
+  - vb
+  name: patternIcon
+  nameWithType: ShipEditorStatusDisplay.patternIcon
+  fullName: ShipEditorStatusDisplay.patternIcon
+  type: Field
+  source:
+    id: patternIcon
+    path: ''
+    startLine: 8794
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image patternIcon
+    return:
+      type: Global.Image
+    content.vb: Public patternIcon As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipEditorStatusDisplay.parrernIconName
+  commentId: F:Global.ShipEditorStatusDisplay.parrernIconName
+  id: parrernIconName
+  parent: Global.ShipEditorStatusDisplay
+  langs:
+  - csharp
+  - vb
+  name: parrernIconName
+  nameWithType: ShipEditorStatusDisplay.parrernIconName
+  fullName: ShipEditorStatusDisplay.parrernIconName
+  type: Field
+  source:
+    id: parrernIconName
+    path: ''
+    startLine: 8795
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text parrernIconName
+    return:
+      type: Global.Text
+    content.vb: Public parrernIconName As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipEditorStatusDisplay.itemName
+  commentId: F:Global.ShipEditorStatusDisplay.itemName
+  id: itemName
+  parent: Global.ShipEditorStatusDisplay
+  langs:
+  - csharp
+  - vb
+  name: itemName
+  nameWithType: ShipEditorStatusDisplay.itemName
+  fullName: ShipEditorStatusDisplay.itemName
+  type: Field
+  source:
+    id: itemName
+    path: ''
+    startLine: 8796
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text itemName
+    return:
+      type: Global.Text
+    content.vb: Public itemName As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipEditorStatusDisplay.ownedMoney
+  commentId: F:Global.ShipEditorStatusDisplay.ownedMoney
+  id: ownedMoney
+  parent: Global.ShipEditorStatusDisplay
+  langs:
+  - csharp
+  - vb
+  name: ownedMoney
+  nameWithType: ShipEditorStatusDisplay.ownedMoney
+  fullName: ShipEditorStatusDisplay.ownedMoney
+  type: Field
+  source:
+    id: ownedMoney
+    path: ''
+    startLine: 8798
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text ownedMoney
+    return:
+      type: Global.Text
+    content.vb: Public ownedMoney As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipEditorStatusDisplay.MoneyChanged
+  commentId: M:Global.ShipEditorStatusDisplay.MoneyChanged
+  id: MoneyChanged
+  parent: Global.ShipEditorStatusDisplay
+  langs:
+  - csharp
+  - vb
+  name: MoneyChanged()
+  nameWithType: ShipEditorStatusDisplay.MoneyChanged()
+  fullName: ShipEditorStatusDisplay.MoneyChanged()
+  type: Method
+  source:
+    id: MoneyChanged
+    path: ''
+    startLine: 8875
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ndisplays new money value\n"
+  example: []
+  syntax:
+    content: public void MoneyChanged()
+    content.vb: Public Sub MoneyChanged
+  overload: Global.ShipEditorStatusDisplay.MoneyChanged*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipEditorStatusDisplay.changeInfoDispaly(Item)
+  commentId: M:Global.ShipEditorStatusDisplay.changeInfoDispaly(Item)
+  id: changeInfoDispaly(Item)
+  parent: Global.ShipEditorStatusDisplay
+  langs:
+  - csharp
+  - vb
+  name: changeInfoDispaly(Item)
+  nameWithType: ShipEditorStatusDisplay.changeInfoDispaly(Item)
+  fullName: ShipEditorStatusDisplay.changeInfoDispaly(Item)
+  type: Method
+  source:
+    id: changeInfoDispaly
+    path: ''
+    startLine: 8883
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nchanges the item to display\n"
+  example: []
+  syntax:
+    content: public void changeInfoDispaly(Item item)
+    parameters:
+    - id: item
+      type: Global.Item
+      description: new item to display
+    content.vb: Public Sub changeInfoDispaly(item As Item)
+  overload: Global.ShipEditorStatusDisplay.changeInfoDispaly*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Text
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: Text
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: Global.ShipEditorStatusDisplay.MoneyChanged*
+  commentId: Overload:Global.ShipEditorStatusDisplay.MoneyChanged
+  name: MoneyChanged
+  nameWithType: ShipEditorStatusDisplay.MoneyChanged
+  fullName: ShipEditorStatusDisplay.MoneyChanged
+- uid: Global.ShipEditorStatusDisplay.changeInfoDispaly*
+  commentId: Overload:Global.ShipEditorStatusDisplay.changeInfoDispaly
+  name: changeInfoDispaly
+  nameWithType: ShipEditorStatusDisplay.changeInfoDispaly
+  fullName: ShipEditorStatusDisplay.changeInfoDispaly
+- uid: Global.Item
+  commentId: T:Global.Item
+  name: Item
+  nameWithType: Item
+  fullName: Item

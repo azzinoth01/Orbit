@@ -1,0 +1,225 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.WaveControler
+  commentId: T:Global.WaveControler
+  id: WaveControler
+  parent: Global
+  children:
+  - Global.WaveControler.CurrentWave
+  - Global.WaveControler.maxEnemys
+  - Global.WaveControler.minEnemys
+  - Global.WaveControler.startNextWave
+  - Global.WaveControler.waveFinished
+  langs:
+  - csharp
+  - vb
+  name: WaveControler
+  nameWithType: WaveControler
+  fullName: WaveControler
+  type: Class
+  source:
+    id: WaveControler
+    path: ''
+    startLine: 10514
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to control the wave system on the endless level\n"
+  example: []
+  syntax:
+    content: 'public class WaveControler : MonoBehaviour'
+    content.vb: >-
+      Public Class WaveControler
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.WaveControler.minEnemys
+  commentId: F:Global.WaveControler.minEnemys
+  id: minEnemys
+  parent: Global.WaveControler
+  langs:
+  - csharp
+  - vb
+  name: minEnemys
+  nameWithType: WaveControler.minEnemys
+  fullName: WaveControler.minEnemys
+  type: Field
+  source:
+    id: minEnemys
+    path: ''
+    startLine: 10517
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int minEnemys
+    return:
+      type: System.Int32
+    content.vb: Public minEnemys As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.WaveControler.maxEnemys
+  commentId: F:Global.WaveControler.maxEnemys
+  id: maxEnemys
+  parent: Global.WaveControler
+  langs:
+  - csharp
+  - vb
+  name: maxEnemys
+  nameWithType: WaveControler.maxEnemys
+  fullName: WaveControler.maxEnemys
+  type: Field
+  source:
+    id: maxEnemys
+    path: ''
+    startLine: 10518
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int maxEnemys
+    return:
+      type: System.Int32
+    content.vb: Public maxEnemys As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.WaveControler.CurrentWave
+  commentId: P:Global.WaveControler.CurrentWave
+  id: CurrentWave
+  parent: Global.WaveControler
+  langs:
+  - csharp
+  - vb
+  name: CurrentWave
+  nameWithType: WaveControler.CurrentWave
+  fullName: WaveControler.CurrentWave
+  type: Property
+  source:
+    id: CurrentWave
+    path: ''
+    startLine: 10529
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int CurrentWave { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CurrentWave As Integer
+  overload: Global.WaveControler.CurrentWave*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.WaveControler.startNextWave
+  commentId: M:Global.WaveControler.startNextWave
+  id: startNextWave
+  parent: Global.WaveControler
+  langs:
+  - csharp
+  - vb
+  name: startNextWave()
+  nameWithType: WaveControler.startNextWave()
+  fullName: WaveControler.startNextWave()
+  type: Method
+  source:
+    id: startNextWave
+    path: ''
+    startLine: 10570
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nstarts the next wave\nupgrades the enemies and player depending on the wave level\n"
+  example: []
+  syntax:
+    content: public void startNextWave()
+    content.vb: Public Sub startNextWave
+  overload: Global.WaveControler.startNextWave*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.WaveControler.waveFinished
+  commentId: M:Global.WaveControler.waveFinished
+  id: waveFinished
+  parent: Global.WaveControler
+  langs:
+  - csharp
+  - vb
+  name: waveFinished()
+  nameWithType: WaveControler.waveFinished()
+  fullName: WaveControler.waveFinished()
+  type: Method
+  source:
+    id: waveFinished
+    path: ''
+    startLine: 10630
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nwave was finished\nupgrades wave values\nstarts timer for next wave\n"
+  example: []
+  syntax:
+    content: public void waveFinished()
+    content.vb: Public Sub waveFinished
+  overload: Global.WaveControler.waveFinished*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.WaveControler.CurrentWave*
+  commentId: Overload:Global.WaveControler.CurrentWave
+  name: CurrentWave
+  nameWithType: WaveControler.CurrentWave
+  fullName: WaveControler.CurrentWave
+- uid: Global.WaveControler.startNextWave*
+  commentId: Overload:Global.WaveControler.startNextWave
+  name: startNextWave
+  nameWithType: WaveControler.startNextWave
+  fullName: WaveControler.startNextWave
+- uid: Global.WaveControler.waveFinished*
+  commentId: Overload:Global.WaveControler.waveFinished
+  name: waveFinished
+  nameWithType: WaveControler.waveFinished
+  fullName: WaveControler.waveFinished

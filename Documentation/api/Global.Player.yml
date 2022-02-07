@@ -11,7 +11,14 @@ items:
   - Global.Player.chargeSprites
   - Global.Player.chargeUI
   - Global.Player.clearControlls
+  - Global.Player.crackedLevel1
+  - Global.Player.crackedLevel2
+  - Global.Player.crackedScreenOverlay
+  - Global.Player.crackedScreenOverlay2
+  - Global.Player.crackedSound
+  - Global.Player.CurrentHealth
   - Global.Player.currentschield
+  - Global.Player.dashAudio
   - Global.Player.deathEffect
   - Global.Player.dmgModifier
   - Global.Player.dogeCharges
@@ -20,15 +27,16 @@ items:
   - Global.Player.dogeSpeed
   - Global.Player.force
   - Global.Player.globalCooldown
-  - Global.Player.health
   - Global.Player.healthbar
   - Global.Player.healthbarAbove30
   - Global.Player.healthbarAbove60
   - Global.Player.healthbarBelow30
+  - Global.Player.hitAudio
   - Global.Player.immunityFlickerRate
   - Global.Player.immunityTimeAfterDoge
   - Global.Player.immunityTimeAfterHit
   - Global.Player.Impulse
+  - Global.Player.maxBaseHealth
   - Global.Player.maxDogeDuration
   - Global.Player.maxFlickerRange
   - Global.Player.maxschield
@@ -40,17 +48,21 @@ items:
   - Global.Player.OnMove_up(InputAction.CallbackContext)
   - Global.Player.OnPause_menu(InputAction.CallbackContext)
   - Global.Player.OnShoot(InputAction.CallbackContext)
+  - Global.Player.playerBulletSoundPrefab
   - Global.Player.schieldbar
   - Global.Player.schieldbarStepValue
   - Global.Player.schieldRefresh(System.Single)
+  - Global.Player.schieldRefreshBaseValue
   - Global.Player.schieldRefreshRate
-  - Global.Player.schieldRefreshValue
+  - Global.Player.ShieldPart
   - Global.Player.ship
   - Global.Player.smoothHealthDrop
   - Global.Player.smoothSchieldDrop
   - Global.Player.takeDmg(System.Single)
+  - Global.Player.Timestamp
+  - Global.Player.trail
   - Global.Player.waypointPrefab
-  - Global.Player.weapons
+  - Global.Player.WeaponSlots
   langs:
   - csharp
   - vb
@@ -61,19 +73,17 @@ items:
   source:
     id: Player
     path: ''
-    startLine: 2558
+    startLine: 6749
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse des Spielers\nimplementiert das Controler Interface\n"
+  summary: "\nclass of the player\nimports the controler Interface\n"
   example: []
   syntax:
     content: 'public class Player : MonoBehaviour, Controlls.IBullet_hellActions'
     content.vb: >-
       Public Class Player
-
           Inherits MonoBehaviour
-
           Implements Controlls.IBullet_hellActions
   inheritance:
   - System.Object
@@ -85,29 +95,29 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Global.Player.health
-  commentId: F:Global.Player.health
-  id: health
+- uid: Global.Player.maxBaseHealth
+  commentId: F:Global.Player.maxBaseHealth
+  id: maxBaseHealth
   parent: Global.Player
   langs:
   - csharp
   - vb
-  name: health
-  nameWithType: Player.health
-  fullName: Player.health
+  name: maxBaseHealth
+  nameWithType: Player.maxBaseHealth
+  fullName: Player.maxBaseHealth
   type: Field
   source:
-    id: health
+    id: maxBaseHealth
     path: ''
-    startLine: 2560
+    startLine: 6751
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public float health
+    content: public float maxBaseHealth
     return:
       type: System.Single
-    content.vb: Public health As Single
+    content.vb: Public maxBaseHealth As Single
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -126,7 +136,7 @@ items:
   source:
     id: healthbar
     path: ''
-    startLine: 2562
+    startLine: 6753
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -153,7 +163,7 @@ items:
   source:
     id: healthbarAbove60
     path: ''
-    startLine: 2564
+    startLine: 6755
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -180,7 +190,7 @@ items:
   source:
     id: healthbarAbove30
     path: ''
-    startLine: 2565
+    startLine: 6756
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -207,7 +217,7 @@ items:
   source:
     id: healthbarBelow30
     path: ''
-    startLine: 2566
+    startLine: 6757
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -234,7 +244,7 @@ items:
   source:
     id: maxschield
     path: ''
-    startLine: 2568
+    startLine: 6759
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -261,7 +271,7 @@ items:
   source:
     id: currentschield
     path: ''
-    startLine: 2569
+    startLine: 6760
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -288,7 +298,7 @@ items:
   source:
     id: schieldbar
     path: ''
-    startLine: 2570
+    startLine: 6761
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -315,7 +325,7 @@ items:
   source:
     id: schieldbarStepValue
     path: ''
-    startLine: 2571
+    startLine: 6762
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -342,7 +352,7 @@ items:
   source:
     id: schieldRefreshRate
     path: ''
-    startLine: 2573
+    startLine: 6764
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -355,29 +365,29 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.Player.schieldRefreshValue
-  commentId: F:Global.Player.schieldRefreshValue
-  id: schieldRefreshValue
+- uid: Global.Player.schieldRefreshBaseValue
+  commentId: F:Global.Player.schieldRefreshBaseValue
+  id: schieldRefreshBaseValue
   parent: Global.Player
   langs:
   - csharp
   - vb
-  name: schieldRefreshValue
-  nameWithType: Player.schieldRefreshValue
-  fullName: Player.schieldRefreshValue
+  name: schieldRefreshBaseValue
+  nameWithType: Player.schieldRefreshBaseValue
+  fullName: Player.schieldRefreshBaseValue
   type: Field
   source:
-    id: schieldRefreshValue
+    id: schieldRefreshBaseValue
     path: ''
-    startLine: 2574
+    startLine: 6765
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public float schieldRefreshValue
+    content: public float schieldRefreshBaseValue
     return:
       type: System.Single
-    content.vb: Public schieldRefreshValue As Single
+    content.vb: Public schieldRefreshBaseValue As Single
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -396,7 +406,7 @@ items:
   source:
     id: body
     path: ''
-    startLine: 2577
+    startLine: 6768
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -423,7 +433,7 @@ items:
   source:
     id: force
     path: ''
-    startLine: 2579
+    startLine: 6770
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -450,7 +460,7 @@ items:
   source:
     id: maxSpeed
     path: ''
-    startLine: 2580
+    startLine: 6771
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -463,29 +473,29 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.Player.weapons
-  commentId: F:Global.Player.weapons
-  id: weapons
+- uid: Global.Player.WeaponSlots
+  commentId: F:Global.Player.WeaponSlots
+  id: WeaponSlots
   parent: Global.Player
   langs:
   - csharp
   - vb
-  name: weapons
-  nameWithType: Player.weapons
-  fullName: Player.weapons
+  name: WeaponSlots
+  nameWithType: Player.WeaponSlots
+  fullName: Player.WeaponSlots
   type: Field
   source:
-    id: weapons
+    id: WeaponSlots
     path: ''
-    startLine: 2582
+    startLine: 6774
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public List<Weapon> weapons
+    content: public List<GameObject> WeaponSlots
     return:
-      type: System.Collections.Generic.List{Weapon}
-    content.vb: Public weapons As List(Of Weapon)
+      type: System.Collections.Generic.List{GameObject}
+    content.vb: Public WeaponSlots As List(Of GameObject)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -504,7 +514,7 @@ items:
   source:
     id: ship
     path: ''
-    startLine: 2584
+    startLine: 6776
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -531,15 +541,15 @@ items:
   source:
     id: additionalDmg
     path: ''
-    startLine: 2595
+    startLine: 6787
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public int additionalDmg
+    content: public float additionalDmg
     return:
-      type: System.Int32
-    content.vb: Public additionalDmg As Integer
+      type: System.Single
+    content.vb: Public additionalDmg As Single
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -558,7 +568,7 @@ items:
   source:
     id: dmgModifier
     path: ''
-    startLine: 2596
+    startLine: 6788
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -585,7 +595,7 @@ items:
   source:
     id: immunityFlickerRate
     path: ''
-    startLine: 2598
+    startLine: 6790
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -612,7 +622,7 @@ items:
   source:
     id: maxFlickerRange
     path: ''
-    startLine: 2599
+    startLine: 6791
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -639,7 +649,7 @@ items:
   source:
     id: immunityTimeAfterHit
     path: ''
-    startLine: 2602
+    startLine: 6794
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -666,7 +676,7 @@ items:
   source:
     id: immunityTimeAfterDoge
     path: ''
-    startLine: 2603
+    startLine: 6795
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -693,7 +703,7 @@ items:
   source:
     id: dogeCharges
     path: ''
-    startLine: 2605
+    startLine: 6797
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -720,7 +730,7 @@ items:
   source:
     id: dogeRange
     path: ''
-    startLine: 2606
+    startLine: 6798
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -747,7 +757,7 @@ items:
   source:
     id: dogeSpeed
     path: ''
-    startLine: 2607
+    startLine: 6799
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -774,7 +784,7 @@ items:
   source:
     id: maxDogeDuration
     path: ''
-    startLine: 2608
+    startLine: 6800
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -801,7 +811,7 @@ items:
   source:
     id: dogeCooldown
     path: ''
-    startLine: 2609
+    startLine: 6801
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -828,7 +838,7 @@ items:
   source:
     id: globalCooldown
     path: ''
-    startLine: 2610
+    startLine: 6802
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -855,7 +865,7 @@ items:
   source:
     id: chargeSprites
     path: ''
-    startLine: 2618
+    startLine: 6810
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -882,7 +892,7 @@ items:
   source:
     id: chargeUI
     path: ''
-    startLine: 2619
+    startLine: 6811
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -909,7 +919,7 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 2621
+    startLine: 6813
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -936,7 +946,7 @@ items:
   source:
     id: deathEffect
     path: ''
-    startLine: 2632
+    startLine: 6824
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -963,7 +973,7 @@ items:
   source:
     id: chargeAudio
     path: ''
-    startLine: 2634
+    startLine: 6826
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -972,6 +982,249 @@ items:
     return:
       type: Global.AudioSource
     content.vb: Public chargeAudio As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.hitAudio
+  commentId: F:Global.Player.hitAudio
+  id: hitAudio
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: hitAudio
+  nameWithType: Player.hitAudio
+  fullName: Player.hitAudio
+  type: Field
+  source:
+    id: hitAudio
+    path: ''
+    startLine: 6827
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource hitAudio
+    return:
+      type: Global.AudioSource
+    content.vb: Public hitAudio As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.crackedScreenOverlay
+  commentId: F:Global.Player.crackedScreenOverlay
+  id: crackedScreenOverlay
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: crackedScreenOverlay
+  nameWithType: Player.crackedScreenOverlay
+  fullName: Player.crackedScreenOverlay
+  type: Field
+  source:
+    id: crackedScreenOverlay
+    path: ''
+    startLine: 6829
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image crackedScreenOverlay
+    return:
+      type: Global.Image
+    content.vb: Public crackedScreenOverlay As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.crackedScreenOverlay2
+  commentId: F:Global.Player.crackedScreenOverlay2
+  id: crackedScreenOverlay2
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: crackedScreenOverlay2
+  nameWithType: Player.crackedScreenOverlay2
+  fullName: Player.crackedScreenOverlay2
+  type: Field
+  source:
+    id: crackedScreenOverlay2
+    path: ''
+    startLine: 6830
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image crackedScreenOverlay2
+    return:
+      type: Global.Image
+    content.vb: Public crackedScreenOverlay2 As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.crackedLevel1
+  commentId: F:Global.Player.crackedLevel1
+  id: crackedLevel1
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: crackedLevel1
+  nameWithType: Player.crackedLevel1
+  fullName: Player.crackedLevel1
+  type: Field
+  source:
+    id: crackedLevel1
+    path: ''
+    startLine: 6832
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Sprite crackedLevel1
+    return:
+      type: Global.Sprite
+    content.vb: Public crackedLevel1 As Sprite
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.crackedLevel2
+  commentId: F:Global.Player.crackedLevel2
+  id: crackedLevel2
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: crackedLevel2
+  nameWithType: Player.crackedLevel2
+  fullName: Player.crackedLevel2
+  type: Field
+  source:
+    id: crackedLevel2
+    path: ''
+    startLine: 6833
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Sprite crackedLevel2
+    return:
+      type: Global.Sprite
+    content.vb: Public crackedLevel2 As Sprite
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.trail
+  commentId: F:Global.Player.trail
+  id: trail
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: trail
+  nameWithType: Player.trail
+  fullName: Player.trail
+  type: Field
+  source:
+    id: trail
+    path: ''
+    startLine: 6840
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public TrailRenderer trail
+    return:
+      type: Global.TrailRenderer
+    content.vb: Public trail As TrailRenderer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.dashAudio
+  commentId: F:Global.Player.dashAudio
+  id: dashAudio
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: dashAudio
+  nameWithType: Player.dashAudio
+  fullName: Player.dashAudio
+  type: Field
+  source:
+    id: dashAudio
+    path: ''
+    startLine: 6842
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource dashAudio
+    return:
+      type: Global.AudioSource
+    content.vb: Public dashAudio As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.crackedSound
+  commentId: F:Global.Player.crackedSound
+  id: crackedSound
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: crackedSound
+  nameWithType: Player.crackedSound
+  fullName: Player.crackedSound
+  type: Field
+  source:
+    id: crackedSound
+    path: ''
+    startLine: 6846
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource crackedSound
+    return:
+      type: Global.AudioSource
+    content.vb: Public crackedSound As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Player.playerBulletSoundPrefab
+  commentId: F:Global.Player.playerBulletSoundPrefab
+  id: playerBulletSoundPrefab
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: playerBulletSoundPrefab
+  nameWithType: Player.playerBulletSoundPrefab
+  fullName: Player.playerBulletSoundPrefab
+  type: Field
+  source:
+    id: playerBulletSoundPrefab
+    path: ''
+    startLine: 6848
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject playerBulletSoundPrefab
+    return:
+      type: Global.GameObject
+    content.vb: Public playerBulletSoundPrefab As GameObject
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -990,7 +1243,7 @@ items:
   source:
     id: Impulse
     path: ''
-    startLine: 2637
+    startLine: 6854
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1007,6 +1260,99 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: Global.Player.Timestamp
+  commentId: P:Global.Player.Timestamp
+  id: Timestamp
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: Player.Timestamp
+  fullName: Player.Timestamp
+  type: Property
+  source:
+    id: Timestamp
+    path: ''
+    startLine: 6862
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Timestamp As Single
+  overload: Global.Player.Timestamp*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Player.ShieldPart
+  commentId: P:Global.Player.ShieldPart
+  id: ShieldPart
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: ShieldPart
+  nameWithType: Player.ShieldPart
+  fullName: Player.ShieldPart
+  type: Property
+  source:
+    id: ShieldPart
+    path: ''
+    startLine: 6872
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Parts ShieldPart { get; set; }
+    parameters: []
+    return:
+      type: Global.Parts
+    content.vb: Public Property ShieldPart As Parts
+  overload: Global.Player.ShieldPart*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Player.CurrentHealth
+  commentId: P:Global.Player.CurrentHealth
+  id: CurrentHealth
+  parent: Global.Player
+  langs:
+  - csharp
+  - vb
+  name: CurrentHealth
+  nameWithType: Player.CurrentHealth
+  fullName: Player.CurrentHealth
+  type: Property
+  source:
+    id: CurrentHealth
+    path: ''
+    startLine: 6882
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float CurrentHealth { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property CurrentHealth As Single
+  overload: Global.Player.CurrentHealth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: Global.Player.OnDoge(InputAction.CallbackContext)
   commentId: M:Global.Player.OnDoge(InputAction.CallbackContext)
   id: OnDoge(InputAction.CallbackContext)
@@ -1021,11 +1367,11 @@ items:
   source:
     id: OnDoge
     path: ''
-    startLine: 2659
+    startLine: 6906
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontroler action f�r den doge befehl\n"
+  summary: "\ncontroler action of the doge input\n"
   example: []
   syntax:
     content: public void OnDoge(InputAction.CallbackContext context)
@@ -1055,11 +1401,11 @@ items:
   source:
     id: OnMove_down
     path: ''
-    startLine: 2672
+    startLine: 6919
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontroler action f�r den move down befehl\n"
+  summary: "\ncontroler action of the move down input\n"
   example: []
   syntax:
     content: public void OnMove_down(InputAction.CallbackContext context)
@@ -1089,11 +1435,11 @@ items:
   source:
     id: OnMove_left
     path: ''
-    startLine: 2692
+    startLine: 6939
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontroler action f�r den move left befehl\n"
+  summary: "\ncontroler action of the move left input\n"
   example: []
   syntax:
     content: public void OnMove_left(InputAction.CallbackContext context)
@@ -1123,11 +1469,11 @@ items:
   source:
     id: OnMove_rigth
     path: ''
-    startLine: 2709
+    startLine: 6956
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontroler action f�r den move right befehl\n"
+  summary: "\ncontroler action of the move right input\n"
   example: []
   syntax:
     content: public void OnMove_rigth(InputAction.CallbackContext context)
@@ -1157,11 +1503,11 @@ items:
   source:
     id: OnMove_up
     path: ''
-    startLine: 2728
+    startLine: 6975
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontroler action f�r den move up befehl\n"
+  summary: "\ncontroler action of the move up input\n"
   example: []
   syntax:
     content: public void OnMove_up(InputAction.CallbackContext context)
@@ -1191,11 +1537,11 @@ items:
   source:
     id: OnShoot
     path: ''
-    startLine: 2747
+    startLine: 6994
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontroler action f�r den shoot befehl\n"
+  summary: "\ncontroler action of the shoot input\n"
   example: []
   syntax:
     content: public void OnShoot(InputAction.CallbackContext context)
@@ -1225,11 +1571,11 @@ items:
   source:
     id: OnPause_menu
     path: ''
-    startLine: 2760
+    startLine: 7007
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontroler action f�r das Pause Menu\n"
+  summary: "\ncontroler action of the pause input\n"
   example: []
   syntax:
     content: public void OnPause_menu(InputAction.CallbackContext context)
@@ -1259,11 +1605,11 @@ items:
   source:
     id: smoothHealthDrop
     path: ''
-    startLine: 2907
+    startLine: 7237
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncorutine die langsam das leben dropt, wenn man schaden genommen hat, damit das leben fl�ssig nach unten geht\n"
+  summary: "\ncorutine which makes live drop smoothly and colorizes the health\n"
   example: []
   syntax:
     content: public IEnumerator smoothHealthDrop()
@@ -1290,11 +1636,11 @@ items:
   source:
     id: smoothSchieldDrop
     path: ''
-    startLine: 2959
+    startLine: 7328
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ngleich wie beim healthdrop nur f�rs schild\n"
+  summary: "\ncorutine which makes the shield bar drop smootly and fill smoothly\n"
   example: []
   syntax:
     content: public IEnumerator smoothSchieldDrop()
@@ -1321,18 +1667,18 @@ items:
   source:
     id: schieldRefresh
     path: ''
-    startLine: 2997
+    startLine: 7367
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncorutine die das Schild aufl�d\n"
+  summary: "\ncorutine which charges the shield after it was depleted\n"
   example: []
   syntax:
     content: public IEnumerator schieldRefresh(float wait)
     parameters:
     - id: wait
       type: System.Single
-      description: Zeit zwischen den Schild wert erh�hungen
+      description: delay in seconds
     return:
       type: System.Collections.IEnumerator
       description: ''
@@ -1356,7 +1702,7 @@ items:
   source:
     id: takeDmg
     path: ''
-    startLine: 3019
+    startLine: 7391
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1367,7 +1713,7 @@ items:
     parameters:
     - id: dmg
       type: System.Single
-      description: den dmg den der player nehmen soll
+      description: the dmg the player takes
     content.vb: Public Sub takeDmg(dmg As Single)
   overload: Global.Player.takeDmg*
   modifiers.csharp:
@@ -1388,7 +1734,7 @@ items:
   source:
     id: clearControlls
     path: ''
-    startLine: 3064
+    startLine: 7437
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -1450,16 +1796,16 @@ references:
   name: Rigidbody2D
   nameWithType: Rigidbody2D
   fullName: Rigidbody2D
-- uid: System.Collections.Generic.List{Weapon}
-  commentId: T:System.Collections.Generic.List{Weapon}
+- uid: System.Collections.Generic.List{GameObject}
+  commentId: T:System.Collections.Generic.List{GameObject}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
-  name: List<Weapon>
-  nameWithType: List<Weapon>
-  fullName: System.Collections.Generic.List<Weapon>
-  nameWithType.vb: List(Of Weapon)
-  fullName.vb: System.Collections.Generic.List(Of Weapon)
-  name.vb: List(Of Weapon)
+  name: List<GameObject>
+  nameWithType: List<GameObject>
+  fullName: System.Collections.Generic.List<GameObject>
+  nameWithType.vb: List(Of GameObject)
+  fullName.vb: System.Collections.Generic.List(Of GameObject)
+  name.vb: List(Of GameObject)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
@@ -1469,10 +1815,11 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Global.Weapon
-    name: Weapon
-    nameWithType: Weapon
-    fullName: Weapon
+  - uid: Global.GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1485,10 +1832,11 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Global.Weapon
-    name: Weapon
-    nameWithType: Weapon
-    fullName: Weapon
+  - uid: Global.GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1594,22 +1942,51 @@ references:
     nameWithType: )
     fullName: )
 - uid: Global.AudioSource
-  commentId: '!:Global.AudioSource'
   isExternal: true
   name: AudioSource
   nameWithType: AudioSource
   fullName: AudioSource
+- uid: Global.Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite
+- uid: Global.TrailRenderer
+  commentId: '!:Global.TrailRenderer'
+  isExternal: true
+  name: TrailRenderer
+  nameWithType: TrailRenderer
+  fullName: TrailRenderer
 - uid: Global.Player.Impulse*
   commentId: Overload:Global.Player.Impulse
   name: Impulse
   nameWithType: Player.Impulse
   fullName: Player.Impulse
 - uid: Global.Vector2
-  commentId: '!:Global.Vector2'
   isExternal: true
   name: Vector2
   nameWithType: Vector2
   fullName: Vector2
+- uid: Global.Player.Timestamp*
+  commentId: Overload:Global.Player.Timestamp
+  name: Timestamp
+  nameWithType: Player.Timestamp
+  fullName: Player.Timestamp
+- uid: Global.Player.ShieldPart*
+  commentId: Overload:Global.Player.ShieldPart
+  name: ShieldPart
+  nameWithType: Player.ShieldPart
+  fullName: Player.ShieldPart
+- uid: Global.Parts
+  commentId: T:Global.Parts
+  name: Parts
+  nameWithType: Parts
+  fullName: Parts
+- uid: Global.Player.CurrentHealth*
+  commentId: Overload:Global.Player.CurrentHealth
+  name: CurrentHealth
+  nameWithType: Player.CurrentHealth
+  fullName: Player.CurrentHealth
 - uid: Global.Player.OnDoge*
   commentId: Overload:Global.Player.OnDoge
   name: OnDoge

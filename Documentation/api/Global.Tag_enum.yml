@@ -18,11 +18,11 @@ items:
   source:
     id: Tag_enum
     path: ''
-    startLine: 4048
+    startLine: 9972
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nenum f�r Tags\n"
+  summary: "\nenum for tags\n"
   example: []
   syntax:
     content: public enum Tag_enum
@@ -47,7 +47,7 @@ items:
   source:
     id: bullet_border
     path: ''
-    startLine: 4050
+    startLine: 9974
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -75,7 +75,7 @@ items:
   source:
     id: player_border
     path: ''
-    startLine: 4051
+    startLine: 9975
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -103,7 +103,7 @@ items:
   source:
     id: enemy_border
     path: ''
-    startLine: 4052
+    startLine: 9976
   assemblies:
   - cs.temp.dll
   namespace: Global

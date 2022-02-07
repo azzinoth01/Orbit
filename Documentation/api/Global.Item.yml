@@ -1,0 +1,303 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Item
+  commentId: T:Global.Item
+  id: Item
+  parent: Global
+  children:
+  - Global.Item.Icon
+  - Global.Item.ID
+  - Global.Item.Name
+  - Global.Item.PatternIcon
+  - Global.Item.Sprite
+  - Global.Item.Value
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: Item
+  fullName: Item
+  type: Class
+  source:
+    id: Item
+    path: ''
+    startLine: 4973
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nbaseclass for all items\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Item
+    content.vb: >-
+      <Serializable>
+
+      Public Class Item
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Global.Inventar_Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Item.ID
+  commentId: P:Global.Item.ID
+  id: ID
+  parent: Global.Item
+  langs:
+  - csharp
+  - vb
+  name: ID
+  nameWithType: Item.ID
+  fullName: Item.ID
+  type: Property
+  source:
+    id: ID
+    path: ''
+    startLine: 4983
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public string ID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ID As String
+  overload: Global.Item.ID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Item.Name
+  commentId: P:Global.Item.Name
+  id: Name
+  parent: Global.Item
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Item.Name
+  fullName: Item.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 4993
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Global.Item.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Item.Value
+  commentId: P:Global.Item.Value
+  id: Value
+  parent: Global.Item
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: Item.Value
+  fullName: Item.Value
+  type: Property
+  source:
+    id: Value
+    path: ''
+    startLine: 5003
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int Value { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Value As Integer
+  overload: Global.Item.Value*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Item.Icon
+  commentId: P:Global.Item.Icon
+  id: Icon
+  parent: Global.Item
+  langs:
+  - csharp
+  - vb
+  name: Icon
+  nameWithType: Item.Icon
+  fullName: Item.Icon
+  type: Property
+  source:
+    id: Icon
+    path: ''
+    startLine: 5013
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public string Icon { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Icon As String
+  overload: Global.Item.Icon*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Item.Sprite
+  commentId: P:Global.Item.Sprite
+  id: Sprite
+  parent: Global.Item
+  langs:
+  - csharp
+  - vb
+  name: Sprite
+  nameWithType: Item.Sprite
+  fullName: Item.Sprite
+  type: Property
+  source:
+    id: Sprite
+    path: ''
+    startLine: 5023
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public string Sprite { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Sprite As String
+  overload: Global.Item.Sprite*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Item.PatternIcon
+  commentId: P:Global.Item.PatternIcon
+  id: PatternIcon
+  parent: Global.Item
+  langs:
+  - csharp
+  - vb
+  name: PatternIcon
+  nameWithType: Item.PatternIcon
+  fullName: Item.PatternIcon
+  type: Property
+  source:
+    id: PatternIcon
+    path: ''
+    startLine: 5033
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public string PatternIcon { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PatternIcon As String
+  overload: Global.Item.PatternIcon*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Item.ID*
+  commentId: Overload:Global.Item.ID
+  name: ID
+  nameWithType: Item.ID
+  fullName: Item.ID
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.Item.Name*
+  commentId: Overload:Global.Item.Name
+  name: Name
+  nameWithType: Item.Name
+  fullName: Item.Name
+- uid: Global.Item.Value*
+  commentId: Overload:Global.Item.Value
+  name: Value
+  nameWithType: Item.Value
+  fullName: Item.Value
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.Item.Icon*
+  commentId: Overload:Global.Item.Icon
+  name: Icon
+  nameWithType: Item.Icon
+  fullName: Item.Icon
+- uid: Global.Item.Sprite*
+  commentId: Overload:Global.Item.Sprite
+  name: Sprite
+  nameWithType: Item.Sprite
+  fullName: Item.Sprite
+- uid: Global.Item.PatternIcon*
+  commentId: Overload:Global.Item.PatternIcon
+  name: PatternIcon
+  nameWithType: Item.PatternIcon
+  fullName: Item.PatternIcon

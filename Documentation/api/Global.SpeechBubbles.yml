@@ -1,0 +1,151 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.SpeechBubbles
+  commentId: T:Global.SpeechBubbles
+  id: SpeechBubbles
+  parent: Global
+  children:
+  - Global.SpeechBubbles.audios
+  - Global.SpeechBubbles.Trigger
+  - Global.SpeechBubbles.UiObject
+  langs:
+  - csharp
+  - vb
+  name: SpeechBubbles
+  nameWithType: SpeechBubbles
+  fullName: SpeechBubbles
+  type: Class
+  source:
+    id: SpeechBubbles
+    path: ''
+    startLine: 9636
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to control the speech bubbles\n"
+  example: []
+  syntax:
+    content: 'public class SpeechBubbles : MonoBehaviour'
+    content.vb: >-
+      Public Class SpeechBubbles
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.SpeechBubbles.UiObject
+  commentId: F:Global.SpeechBubbles.UiObject
+  id: UiObject
+  parent: Global.SpeechBubbles
+  langs:
+  - csharp
+  - vb
+  name: UiObject
+  nameWithType: SpeechBubbles.UiObject
+  fullName: SpeechBubbles.UiObject
+  type: Field
+  source:
+    id: UiObject
+    path: ''
+    startLine: 9638
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject UiObject
+    return:
+      type: Global.GameObject
+    content.vb: Public UiObject As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SpeechBubbles.Trigger
+  commentId: F:Global.SpeechBubbles.Trigger
+  id: Trigger
+  parent: Global.SpeechBubbles
+  langs:
+  - csharp
+  - vb
+  name: Trigger
+  nameWithType: SpeechBubbles.Trigger
+  fullName: SpeechBubbles.Trigger
+  type: Field
+  source:
+    id: Trigger
+    path: ''
+    startLine: 9639
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject Trigger
+    return:
+      type: Global.GameObject
+    content.vb: Public Trigger As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.SpeechBubbles.audios
+  commentId: F:Global.SpeechBubbles.audios
+  id: audios
+  parent: Global.SpeechBubbles
+  langs:
+  - csharp
+  - vb
+  name: audios
+  nameWithType: SpeechBubbles.audios
+  fullName: SpeechBubbles.audios
+  type: Field
+  source:
+    id: audios
+    path: ''
+    startLine: 9640
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource audios
+    return:
+      type: Global.AudioSource
+    content.vb: Public audios As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource

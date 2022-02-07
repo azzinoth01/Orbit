@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.KeepSoundSource
+  commentId: T:Global.KeepSoundSource
+  id: KeepSoundSource
+  parent: Global
+  children:
+  - Global.KeepSoundSource.audios
+  - Global.KeepSoundSource.dontDestroyID
+  - Global.KeepSoundSource.playOnSceneIndex
+  langs:
+  - csharp
+  - vb
+  name: KeepSoundSource
+  nameWithType: KeepSoundSource
+  fullName: KeepSoundSource
+  type: Class
+  source:
+    id: KeepSoundSource
+    path: ''
+    startLine: 5344
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to keep the sound playing while a sceene change happens\n"
+  example: []
+  syntax:
+    content: 'public class KeepSoundSource : MonoBehaviour'
+    content.vb: >-
+      Public Class KeepSoundSource
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.KeepSoundSource.playOnSceneIndex
+  commentId: F:Global.KeepSoundSource.playOnSceneIndex
+  id: playOnSceneIndex
+  parent: Global.KeepSoundSource
+  langs:
+  - csharp
+  - vb
+  name: playOnSceneIndex
+  nameWithType: KeepSoundSource.playOnSceneIndex
+  fullName: KeepSoundSource.playOnSceneIndex
+  type: Field
+  source:
+    id: playOnSceneIndex
+    path: ''
+    startLine: 5350
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<int> playOnSceneIndex
+    return:
+      type: System.Collections.Generic.List{System.Int32}
+    content.vb: Public playOnSceneIndex As List(Of Integer)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.KeepSoundSource.dontDestroyID
+  commentId: F:Global.KeepSoundSource.dontDestroyID
+  id: dontDestroyID
+  parent: Global.KeepSoundSource
+  langs:
+  - csharp
+  - vb
+  name: dontDestroyID
+  nameWithType: KeepSoundSource.dontDestroyID
+  fullName: KeepSoundSource.dontDestroyID
+  type: Field
+  source:
+    id: dontDestroyID
+    path: ''
+    startLine: 5351
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public string dontDestroyID
+    return:
+      type: System.String
+    content.vb: Public dontDestroyID As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.KeepSoundSource.audios
+  commentId: F:Global.KeepSoundSource.audios
+  id: audios
+  parent: Global.KeepSoundSource
+  langs:
+  - csharp
+  - vb
+  name: audios
+  nameWithType: KeepSoundSource.audios
+  fullName: KeepSoundSource.audios
+  type: Field
+  source:
+    id: audios
+    path: ''
+    startLine: 5353
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public LoopSoundControl audios
+    return:
+      type: Global.LoopSoundControl
+    content.vb: Public audios As LoopSoundControl
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Int32>
+  nameWithType: List<Int32>
+  fullName: System.Collections.Generic.List<System.Int32>
+  nameWithType.vb: List(Of Int32)
+  fullName.vb: System.Collections.Generic.List(Of System.Int32)
+  name.vb: List(Of Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.LoopSoundControl
+  commentId: T:Global.LoopSoundControl
+  name: LoopSoundControl
+  nameWithType: LoopSoundControl
+  fullName: LoopSoundControl

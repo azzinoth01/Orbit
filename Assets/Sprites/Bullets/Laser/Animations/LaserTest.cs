@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// laser animaton control
+/// </summary>
 public class LaserTest : MonoBehaviour
 {
     public List<Animator> Laser;
@@ -10,12 +13,16 @@ public class LaserTest : MonoBehaviour
     public AudioSource loopAudio;
     private bool started;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// sets base values
+    /// </summary>
     void Start() {
         started = false;
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// activates the laser animation
+    /// </summary>
     void Update() {
 
 

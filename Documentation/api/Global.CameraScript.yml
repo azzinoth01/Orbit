@@ -21,17 +21,16 @@ items:
   source:
     id: CameraScript
     path: ''
-    startLine: 932
+    startLine: 2749
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncamera Movement script\n"
+  summary: "\ncamera movement script\n"
   example: []
   syntax:
     content: 'public class CameraScript : MonoBehaviour'
     content.vb: >-
       Public Class CameraScript
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -55,7 +54,7 @@ items:
   source:
     id: player
     path: ''
-    startLine: 936
+    startLine: 2753
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -82,7 +81,7 @@ items:
   source:
     id: offsetSpeed
     path: ''
-    startLine: 939
+    startLine: 2756
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -109,7 +108,7 @@ items:
   source:
     id: screenShakeMaxDuration
     path: ''
-    startLine: 943
+    startLine: 2760
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -136,7 +135,7 @@ items:
   source:
     id: screenShakeMinDuration
     path: ''
-    startLine: 944
+    startLine: 2761
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -163,7 +162,7 @@ items:
   source:
     id: screenShakeMaxMagnitude
     path: ''
-    startLine: 946
+    startLine: 2763
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -190,11 +189,11 @@ items:
   source:
     id: startScreenShake
     path: ''
-    startLine: 1012
+    startLine: 2829
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nstartet den screen Shake\n"
+  summary: "\nstarts the screen shake\n"
   example: []
   syntax:
     content: public IEnumerator startScreenShake()

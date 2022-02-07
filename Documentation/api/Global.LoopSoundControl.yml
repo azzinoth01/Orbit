@@ -1,0 +1,258 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.LoopSoundControl
+  commentId: T:Global.LoopSoundControl
+  id: LoopSoundControl
+  parent: Global
+  children:
+  - Global.LoopSoundControl.IsPlaying
+  - Global.LoopSoundControl.loopAudio
+  - Global.LoopSoundControl.startAudio
+  - Global.LoopSoundControl.startPlaying
+  - Global.LoopSoundControl.stopPlaying
+  - Global.LoopSoundControl.transitionAudio
+  langs:
+  - csharp
+  - vb
+  name: LoopSoundControl
+  nameWithType: LoopSoundControl
+  fullName: LoopSoundControl
+  type: Class
+  source:
+    id: LoopSoundControl
+    path: ''
+    startLine: 5687
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncontrols audiosources which are split into and intro, transition and a loop\n"
+  example: []
+  syntax:
+    content: 'public class LoopSoundControl : MonoBehaviour'
+    content.vb: >-
+      Public Class LoopSoundControl
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.LoopSoundControl.startAudio
+  commentId: F:Global.LoopSoundControl.startAudio
+  id: startAudio
+  parent: Global.LoopSoundControl
+  langs:
+  - csharp
+  - vb
+  name: startAudio
+  nameWithType: LoopSoundControl.startAudio
+  fullName: LoopSoundControl.startAudio
+  type: Field
+  source:
+    id: startAudio
+    path: ''
+    startLine: 5690
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource startAudio
+    return:
+      type: Global.AudioSource
+    content.vb: Public startAudio As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoopSoundControl.transitionAudio
+  commentId: F:Global.LoopSoundControl.transitionAudio
+  id: transitionAudio
+  parent: Global.LoopSoundControl
+  langs:
+  - csharp
+  - vb
+  name: transitionAudio
+  nameWithType: LoopSoundControl.transitionAudio
+  fullName: LoopSoundControl.transitionAudio
+  type: Field
+  source:
+    id: transitionAudio
+    path: ''
+    startLine: 5691
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource transitionAudio
+    return:
+      type: Global.AudioSource
+    content.vb: Public transitionAudio As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoopSoundControl.loopAudio
+  commentId: F:Global.LoopSoundControl.loopAudio
+  id: loopAudio
+  parent: Global.LoopSoundControl
+  langs:
+  - csharp
+  - vb
+  name: loopAudio
+  nameWithType: LoopSoundControl.loopAudio
+  fullName: LoopSoundControl.loopAudio
+  type: Field
+  source:
+    id: loopAudio
+    path: ''
+    startLine: 5692
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource loopAudio
+    return:
+      type: Global.AudioSource
+    content.vb: Public loopAudio As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoopSoundControl.IsPlaying
+  commentId: P:Global.LoopSoundControl.IsPlaying
+  id: IsPlaying
+  parent: Global.LoopSoundControl
+  langs:
+  - csharp
+  - vb
+  name: IsPlaying
+  nameWithType: LoopSoundControl.IsPlaying
+  fullName: LoopSoundControl.IsPlaying
+  type: Property
+  source:
+    id: IsPlaying
+    path: ''
+    startLine: 5697
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool IsPlaying { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPlaying As Boolean
+  overload: Global.LoopSoundControl.IsPlaying*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.LoopSoundControl.startPlaying
+  commentId: M:Global.LoopSoundControl.startPlaying
+  id: startPlaying
+  parent: Global.LoopSoundControl
+  langs:
+  - csharp
+  - vb
+  name: startPlaying()
+  nameWithType: LoopSoundControl.startPlaying()
+  fullName: LoopSoundControl.startPlaying()
+  type: Method
+  source:
+    id: startPlaying
+    path: ''
+    startLine: 5746
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nstarts the audio and sets base values\n"
+  example: []
+  syntax:
+    content: public void startPlaying()
+    content.vb: Public Sub startPlaying
+  overload: Global.LoopSoundControl.startPlaying*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoopSoundControl.stopPlaying
+  commentId: M:Global.LoopSoundControl.stopPlaying
+  id: stopPlaying
+  parent: Global.LoopSoundControl
+  langs:
+  - csharp
+  - vb
+  name: stopPlaying()
+  nameWithType: LoopSoundControl.stopPlaying()
+  fullName: LoopSoundControl.stopPlaying()
+  type: Method
+  source:
+    id: stopPlaying
+    path: ''
+    startLine: 5755
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nstops the audio \n"
+  example: []
+  syntax:
+    content: public void stopPlaying()
+    content.vb: Public Sub stopPlaying
+  overload: Global.LoopSoundControl.stopPlaying*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: Global.LoopSoundControl.IsPlaying*
+  commentId: Overload:Global.LoopSoundControl.IsPlaying
+  name: IsPlaying
+  nameWithType: LoopSoundControl.IsPlaying
+  fullName: LoopSoundControl.IsPlaying
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Global.LoopSoundControl.startPlaying*
+  commentId: Overload:Global.LoopSoundControl.startPlaying
+  name: startPlaying
+  nameWithType: LoopSoundControl.startPlaying
+  fullName: LoopSoundControl.startPlaying
+- uid: Global.LoopSoundControl.stopPlaying*
+  commentId: Overload:Global.LoopSoundControl.stopPlaying
+  name: stopPlaying
+  nameWithType: LoopSoundControl.stopPlaying
+  fullName: LoopSoundControl.stopPlaying

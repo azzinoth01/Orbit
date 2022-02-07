@@ -5,6 +5,8 @@ items:
   id: TriggerCallBack
   parent: Global
   children:
+  - Global.TriggerCallBack.moneyDrop
+  - Global.TriggerCallBack.MoneyValue
   - Global.TriggerCallBack.spawnerActivationTrigger
   - Global.TriggerCallBack.spawnTrigger
   langs:
@@ -17,17 +19,16 @@ items:
   source:
     id: TriggerCallBack
     path: ''
-    startLine: 4062
+    startLine: 10140
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse um Trigger areas zu machen\n"
+  summary: "\nclasse to create trigger areas\n"
   example: []
   syntax:
     content: 'public class TriggerCallBack : MonoBehaviour'
     content.vb: >-
       Public Class TriggerCallBack
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -51,7 +52,7 @@ items:
   source:
     id: spawnTrigger
     path: ''
-    startLine: 4065
+    startLine: 10143
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -78,7 +79,7 @@ items:
   source:
     id: spawnerActivationTrigger
     path: ''
-    startLine: 4066
+    startLine: 10144
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -91,6 +92,64 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Global.TriggerCallBack.moneyDrop
+  commentId: F:Global.TriggerCallBack.moneyDrop
+  id: moneyDrop
+  parent: Global.TriggerCallBack
+  langs:
+  - csharp
+  - vb
+  name: moneyDrop
+  nameWithType: TriggerCallBack.moneyDrop
+  fullName: TriggerCallBack.moneyDrop
+  type: Field
+  source:
+    id: moneyDrop
+    path: ''
+    startLine: 10145
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool moneyDrop
+    return:
+      type: System.Boolean
+    content.vb: Public moneyDrop As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TriggerCallBack.MoneyValue
+  commentId: P:Global.TriggerCallBack.MoneyValue
+  id: MoneyValue
+  parent: Global.TriggerCallBack
+  langs:
+  - csharp
+  - vb
+  name: MoneyValue
+  nameWithType: TriggerCallBack.MoneyValue
+  fullName: TriggerCallBack.MoneyValue
+  type: Property
+  source:
+    id: MoneyValue
+    path: ''
+    startLine: 10150
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int MoneyValue { set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public WriteOnly Property MoneyValue As Integer
+  overload: Global.TriggerCallBack.MoneyValue*
+  modifiers.csharp:
+  - public
+  - set
+  modifiers.vb:
+  - Public
+  - WriteOnly
 references:
 - uid: Global
   name: Global
@@ -119,3 +178,15 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: Global.TriggerCallBack.MoneyValue*
+  commentId: Overload:Global.TriggerCallBack.MoneyValue
+  name: MoneyValue
+  nameWithType: TriggerCallBack.MoneyValue
+  fullName: TriggerCallBack.MoneyValue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

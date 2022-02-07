@@ -6,10 +6,15 @@ items:
   parent: Global
   children:
   - Global.Win_condition.activateLevelFinishPortal
+  - Global.Win_condition.audios
   - Global.Win_condition.boxcollider
   - Global.Win_condition.enemyKilled
   - Global.Win_condition.enemysToKill
+  - Global.Win_condition.lighting
+  - Global.Win_condition.rotate
+  - Global.Win_condition.rotateSpeed
   - Global.Win_condition.sp
+  - Global.Win_condition.spawnDelay
   langs:
   - csharp
   - vb
@@ -20,17 +25,16 @@ items:
   source:
     id: Win_condition
     path: ''
-    startLine: 4374
+    startLine: 10959
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nwin condition handler classe\n"
+  summary: "\nwin condition handler class\n"
   example: []
   syntax:
     content: 'public class Win_condition : MonoBehaviour'
     content.vb: >-
       Public Class Win_condition
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -54,7 +58,7 @@ items:
   source:
     id: enemysToKill
     path: ''
-    startLine: 4377
+    startLine: 10962
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -81,7 +85,7 @@ items:
   source:
     id: boxcollider
     path: ''
-    startLine: 4378
+    startLine: 10963
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -108,7 +112,7 @@ items:
   source:
     id: sp
     path: ''
-    startLine: 4379
+    startLine: 10964
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -117,6 +121,141 @@ items:
     return:
       type: Global.SpriteRenderer
     content.vb: Public sp As SpriteRenderer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Win_condition.lighting
+  commentId: F:Global.Win_condition.lighting
+  id: lighting
+  parent: Global.Win_condition
+  langs:
+  - csharp
+  - vb
+  name: lighting
+  nameWithType: Win_condition.lighting
+  fullName: Win_condition.lighting
+  type: Field
+  source:
+    id: lighting
+    path: ''
+    startLine: 10965
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Light2D lighting
+    return:
+      type: Global.Light2D
+    content.vb: Public lighting As Light2D
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Win_condition.rotate
+  commentId: F:Global.Win_condition.rotate
+  id: rotate
+  parent: Global.Win_condition
+  langs:
+  - csharp
+  - vb
+  name: rotate
+  nameWithType: Win_condition.rotate
+  fullName: Win_condition.rotate
+  type: Field
+  source:
+    id: rotate
+    path: ''
+    startLine: 10967
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool rotate
+    return:
+      type: System.Boolean
+    content.vb: Public rotate As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Win_condition.rotateSpeed
+  commentId: F:Global.Win_condition.rotateSpeed
+  id: rotateSpeed
+  parent: Global.Win_condition
+  langs:
+  - csharp
+  - vb
+  name: rotateSpeed
+  nameWithType: Win_condition.rotateSpeed
+  fullName: Win_condition.rotateSpeed
+  type: Field
+  source:
+    id: rotateSpeed
+    path: ''
+    startLine: 10968
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float rotateSpeed
+    return:
+      type: System.Single
+    content.vb: Public rotateSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Win_condition.audios
+  commentId: F:Global.Win_condition.audios
+  id: audios
+  parent: Global.Win_condition
+  langs:
+  - csharp
+  - vb
+  name: audios
+  nameWithType: Win_condition.audios
+  fullName: Win_condition.audios
+  type: Field
+  source:
+    id: audios
+    path: ''
+    startLine: 10970
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource audios
+    return:
+      type: Global.AudioSource
+    content.vb: Public audios As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Win_condition.spawnDelay
+  commentId: F:Global.Win_condition.spawnDelay
+  id: spawnDelay
+  parent: Global.Win_condition
+  langs:
+  - csharp
+  - vb
+  name: spawnDelay
+  nameWithType: Win_condition.spawnDelay
+  fullName: Win_condition.spawnDelay
+  type: Field
+  source:
+    id: spawnDelay
+    path: ''
+    startLine: 10972
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float spawnDelay
+    return:
+      type: System.Single
+    content.vb: Public spawnDelay As Single
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -135,11 +274,11 @@ items:
   source:
     id: activateLevelFinishPortal
     path: ''
-    startLine: 4391
+    startLine: 10989
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nactiviert das level end portal\n"
+  summary: "\nactivates the level end portal\n"
   example: []
   syntax:
     content: public void activateLevelFinishPortal()
@@ -163,11 +302,11 @@ items:
   source:
     id: enemyKilled
     path: ''
-    startLine: 4399
+    startLine: 11022
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nerh�ht der enemy kill counter um 1\n"
+  summary: "\nreduces the enemy kill counter by 1\n"
   example: []
   syntax:
     content: public void enemyKilled()
@@ -217,6 +356,31 @@ references:
   name: SpriteRenderer
   nameWithType: SpriteRenderer
   fullName: SpriteRenderer
+- uid: Global.Light2D
+  commentId: '!:Global.Light2D'
+  isExternal: true
+  name: Light2D
+  nameWithType: Light2D
+  fullName: Light2D
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
 - uid: Global.Win_condition.activateLevelFinishPortal*
   commentId: Overload:Global.Win_condition.activateLevelFinishPortal
   name: activateLevelFinishPortal

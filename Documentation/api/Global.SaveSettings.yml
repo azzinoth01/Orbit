@@ -5,10 +5,12 @@ items:
   id: SaveSettings
   parent: Global
   children:
-  - Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single)
+  - Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single,System.Single)
   - Global.SaveSettings.BackgroundVolume
   - Global.SaveSettings.IsMute
+  - Global.SaveSettings.IsToogleOn
   - Global.SaveSettings.loadSettings
+  - Global.SaveSettings.MasterVolume
   - Global.SaveSettings.savingSetting
   - Global.SaveSettings.SfxVolume
   langs:
@@ -21,11 +23,11 @@ items:
   source:
     id: SaveSettings
     path: ''
-    startLine: 3562
+    startLine: 8607
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontainer classe zum speichern von Settings\n"
+  summary: "\ncontainer classe to save settings\n"
   example: []
   syntax:
     content: >-
@@ -62,7 +64,7 @@ items:
   source:
     id: IsMute
     path: ''
-    startLine: 3569
+    startLine: 8616
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -93,7 +95,7 @@ items:
   source:
     id: BackgroundVolume
     path: ''
-    startLine: 3579
+    startLine: 8626
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -124,7 +126,7 @@ items:
   source:
     id: SfxVolume
     path: ''
-    startLine: 3589
+    startLine: 8636
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -141,28 +143,90 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single)
-  commentId: M:Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single)
-  id: '#ctor(System.Boolean,System.Single,System.Single)'
+- uid: Global.SaveSettings.MasterVolume
+  commentId: P:Global.SaveSettings.MasterVolume
+  id: MasterVolume
   parent: Global.SaveSettings
   langs:
   - csharp
   - vb
-  name: SaveSettings(Boolean, Single, Single)
-  nameWithType: SaveSettings.SaveSettings(Boolean, Single, Single)
-  fullName: SaveSettings.SaveSettings(System.Boolean, System.Single, System.Single)
+  name: MasterVolume
+  nameWithType: SaveSettings.MasterVolume
+  fullName: SaveSettings.MasterVolume
+  type: Property
+  source:
+    id: MasterVolume
+    path: ''
+    startLine: 8646
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float MasterVolume { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property MasterVolume As Single
+  overload: Global.SaveSettings.MasterVolume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.SaveSettings.IsToogleOn
+  commentId: P:Global.SaveSettings.IsToogleOn
+  id: IsToogleOn
+  parent: Global.SaveSettings
+  langs:
+  - csharp
+  - vb
+  name: IsToogleOn
+  nameWithType: SaveSettings.IsToogleOn
+  fullName: SaveSettings.IsToogleOn
+  type: Property
+  source:
+    id: IsToogleOn
+    path: ''
+    startLine: 8656
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool IsToogleOn { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsToogleOn As Boolean
+  overload: Global.SaveSettings.IsToogleOn*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single,System.Single)
+  commentId: M:Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single,System.Single)
+  id: '#ctor(System.Boolean,System.Single,System.Single,System.Single)'
+  parent: Global.SaveSettings
+  langs:
+  - csharp
+  - vb
+  name: SaveSettings(Boolean, Single, Single, Single)
+  nameWithType: SaveSettings.SaveSettings(Boolean, Single, Single, Single)
+  fullName: SaveSettings.SaveSettings(System.Boolean, System.Single, System.Single, System.Single)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 3605
+    startLine: 8672
   assemblies:
   - cs.temp.dll
   namespace: Global
   summary: "\nstandard consturktor\n"
   example: []
   syntax:
-    content: public SaveSettings(bool isMute, float backgroundVolume, float sfxVolume)
+    content: public SaveSettings(bool isMute, float backgroundVolume, float sfxVolume, float masterVolume)
     parameters:
     - id: isMute
       type: System.Boolean
@@ -173,7 +237,9 @@ items:
     - id: sfxVolume
       type: System.Single
       description: setzt sfx Volume 0-1
-    content.vb: Public Sub New(isMute As Boolean, backgroundVolume As Single, sfxVolume As Single)
+    - id: masterVolume
+      type: System.Single
+    content.vb: Public Sub New(isMute As Boolean, backgroundVolume As Single, sfxVolume As Single, masterVolume As Single)
   overload: Global.SaveSettings.#ctor*
   modifiers.csharp:
   - public
@@ -193,11 +259,11 @@ items:
   source:
     id: savingSetting
     path: ''
-    startLine: 3615
+    startLine: 8684
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nspeichert die Settings\n"
+  summary: "\nsaves the settings\n"
   example: []
   syntax:
     content: public void savingSetting()
@@ -221,17 +287,17 @@ items:
   source:
     id: loadSettings
     path: ''
-    startLine: 3631
+    startLine: 8700
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nladet die Settings aus einer gespeicherten Datei, wenn vorhanden\n"
+  summary: "\nloads the setting out of a saved data if it exists\n"
   example: []
   syntax:
     content: public static SaveSettings loadSettings()
     return:
       type: Global.SaveSettings
-      description: gibt die gespeicherten Settings zur�ck
+      description: returns the saved settings
     content.vb: Public Shared Function loadSettings As SaveSettings
   overload: Global.SaveSettings.loadSettings*
   modifiers.csharp:
@@ -290,6 +356,16 @@ references:
   name: SfxVolume
   nameWithType: SaveSettings.SfxVolume
   fullName: SaveSettings.SfxVolume
+- uid: Global.SaveSettings.MasterVolume*
+  commentId: Overload:Global.SaveSettings.MasterVolume
+  name: MasterVolume
+  nameWithType: SaveSettings.MasterVolume
+  fullName: SaveSettings.MasterVolume
+- uid: Global.SaveSettings.IsToogleOn*
+  commentId: Overload:Global.SaveSettings.IsToogleOn
+  name: IsToogleOn
+  nameWithType: SaveSettings.IsToogleOn
+  fullName: SaveSettings.IsToogleOn
 - uid: Global.SaveSettings.#ctor*
   commentId: Overload:Global.SaveSettings.#ctor
   name: SaveSettings

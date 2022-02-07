@@ -83,7 +83,7 @@
   
   <h1 id="Global_Weapon" data-uid="Global.Weapon" class="text-break">Class Weapon
   </h1>
-  <div class="markdown level0 summary"><p>beschreibt die Waffen des Players</p>
+  <div class="markdown level0 summary"><p>describes the weapon of the player</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -219,15 +219,39 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Global_Weapon_sound" data-uid="Global.Weapon.sound">sound</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject sound</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Global_Weapon_activateSkill_" data-uid="Global.Weapon.activateSkill*"></a>
   <h4 id="Global_Weapon_activateSkill_System_Boolean_" data-uid="Global.Weapon.activateSkill(System.Boolean)">activateSkill(Boolean)</h4>
-  <div class="markdown level1 summary"><p>erzeugt Skills und setzt diese auf die Richtige position und activiert diese
-pr�ft vor erzeugung neuer Skills ob diese im bulletpool sind
-kann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt</p>
+  <div class="markdown level1 summary"><p>creates skills and sets them on the right position and activates them
+checks bevor creation new skills if they are in the bulletpool
+can also create skill ahead of time</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -247,7 +271,7 @@ kann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">preCreation</span></td>
-        <td><p>wenn dieser wert True ist, dann werden Skills im voraus erzeugt</p>
+        <td><p>if true then creates bullets ahead of time</p>
 </td>
       </tr>
     </tbody>
@@ -263,7 +287,7 @@ kann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt</p>
     <tbody>
       <tr>
         <td><span class="xref">GameObject</span></td>
-        <td><p>Gameobject vom Skill</p>
+        <td><p>Gameobject of Skill</p>
 </td>
       </tr>
     </tbody>
@@ -271,13 +295,13 @@ kann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt</p>
   
   
   <a id="Global_Weapon_shoot_" data-uid="Global.Weapon.shoot*"></a>
-  <h4 id="Global_Weapon_shoot_System_Int32_System_Single_" data-uid="Global.Weapon.shoot(System.Int32,System.Single)">shoot(Int32, Single)</h4>
-  <div class="markdown level1 summary"><p>Erzeugung der Skill objecten mit dmg Modifiern, wenn die Waffe schie�en kann</p>
+  <h4 id="Global_Weapon_shoot_System_Single_System_Single_" data-uid="Global.Weapon.shoot(System.Single,System.Single)">shoot(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>creates the skill object with dmg modifiers if the weapon can shoot</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void shoot(int additionalDmg, float dmgModifier)</code></pre>
+    <pre><code class="lang-csharp hljs">public void shoot(float additionalDmg, float dmgModifier)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,15 +314,15 @@ kann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td><span class="parametername">additionalDmg</span></td>
-        <td><p>erh�hten den schaden der bullet direkt �ber diesen Wert</p>
+        <td><p>increases the dmg of the bullet directly by this value</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td><span class="parametername">dmgModifier</span></td>
-        <td><p>nach hinzuf�gen des additionalDmg modifiers wir der dmg mit diesem Wert multipliziert</p>
+        <td><p>after adding the additional dmg to the bullet dmg multiply the resulting value by this value</p>
 </td>
       </tr>
     </tbody>

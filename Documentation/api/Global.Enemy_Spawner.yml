@@ -9,10 +9,19 @@ items:
   - Global.Enemy_Spawner.checkSpawnTrigger(GameObject)
   - Global.Enemy_Spawner.delay
   - Global.Enemy_Spawner.enemysToSpawn
+  - Global.Enemy_Spawner.modifyAddDmg
+  - Global.Enemy_Spawner.modifyAddHealth
+  - Global.Enemy_Spawner.modifyDoNotUseForce
+  - Global.Enemy_Spawner.modifyMoveIn
+  - Global.Enemy_Spawner.modifyMoveOut
+  - Global.Enemy_Spawner.modifyWaypoints
   - Global.Enemy_Spawner.spawnKilled
   - Global.Enemy_Spawner.spawnLimit
   - Global.Enemy_Spawner.triggerArea
+  - Global.Enemy_Spawner.useModification
+  - Global.Enemy_Spawner.useRandomSpawnInfo
   - Global.Enemy_Spawner.useTriggerArea
+  - Global.Enemy_Spawner.waveSpawner
   langs:
   - csharp
   - vb
@@ -23,17 +32,16 @@ items:
   source:
     id: Enemy_Spawner
     path: ''
-    startLine: 1726
+    startLine: 3997
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse die das Spawnen von Enemys controlliert\n"
+  summary: "\nclass to control the spawning of enemys\n"
   example: []
   syntax:
     content: 'public class Enemy_Spawner : MonoBehaviour'
     content.vb: >-
       Public Class Enemy_Spawner
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -57,7 +65,7 @@ items:
   source:
     id: enemysToSpawn
     path: ''
-    startLine: 1730
+    startLine: 4001
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -84,7 +92,7 @@ items:
   source:
     id: spawnLimit
     path: ''
-    startLine: 1731
+    startLine: 4002
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -111,7 +119,7 @@ items:
   source:
     id: delay
     path: ''
-    startLine: 1734
+    startLine: 4005
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -138,7 +146,7 @@ items:
   source:
     id: triggerArea
     path: ''
-    startLine: 1735
+    startLine: 4006
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -165,7 +173,7 @@ items:
   source:
     id: useTriggerArea
     path: ''
-    startLine: 1736
+    startLine: 4007
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -174,6 +182,249 @@ items:
     return:
       type: System.Boolean
     content.vb: Public useTriggerArea As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner.useRandomSpawnInfo
+  commentId: F:Global.Enemy_Spawner.useRandomSpawnInfo
+  id: useRandomSpawnInfo
+  parent: Global.Enemy_Spawner
+  langs:
+  - csharp
+  - vb
+  name: useRandomSpawnInfo
+  nameWithType: Enemy_Spawner.useRandomSpawnInfo
+  fullName: Enemy_Spawner.useRandomSpawnInfo
+  type: Field
+  source:
+    id: useRandomSpawnInfo
+    path: ''
+    startLine: 4011
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool useRandomSpawnInfo
+    return:
+      type: System.Boolean
+    content.vb: Public useRandomSpawnInfo As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner.waveSpawner
+  commentId: F:Global.Enemy_Spawner.waveSpawner
+  id: waveSpawner
+  parent: Global.Enemy_Spawner
+  langs:
+  - csharp
+  - vb
+  name: waveSpawner
+  nameWithType: Enemy_Spawner.waveSpawner
+  fullName: Enemy_Spawner.waveSpawner
+  type: Field
+  source:
+    id: waveSpawner
+    path: ''
+    startLine: 4013
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool waveSpawner
+    return:
+      type: System.Boolean
+    content.vb: Public waveSpawner As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner.useModification
+  commentId: F:Global.Enemy_Spawner.useModification
+  id: useModification
+  parent: Global.Enemy_Spawner
+  langs:
+  - csharp
+  - vb
+  name: useModification
+  nameWithType: Enemy_Spawner.useModification
+  fullName: Enemy_Spawner.useModification
+  type: Field
+  source:
+    id: useModification
+    path: ''
+    startLine: 4015
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool useModification
+    return:
+      type: System.Boolean
+    content.vb: Public useModification As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner.modifyMoveIn
+  commentId: F:Global.Enemy_Spawner.modifyMoveIn
+  id: modifyMoveIn
+  parent: Global.Enemy_Spawner
+  langs:
+  - csharp
+  - vb
+  name: modifyMoveIn
+  nameWithType: Enemy_Spawner.modifyMoveIn
+  fullName: Enemy_Spawner.modifyMoveIn
+  type: Field
+  source:
+    id: modifyMoveIn
+    path: ''
+    startLine: 4017
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Vector2> modifyMoveIn
+    return:
+      type: System.Collections.Generic.List{Vector2}
+    content.vb: Public modifyMoveIn As List(Of Vector2)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner.modifyMoveOut
+  commentId: F:Global.Enemy_Spawner.modifyMoveOut
+  id: modifyMoveOut
+  parent: Global.Enemy_Spawner
+  langs:
+  - csharp
+  - vb
+  name: modifyMoveOut
+  nameWithType: Enemy_Spawner.modifyMoveOut
+  fullName: Enemy_Spawner.modifyMoveOut
+  type: Field
+  source:
+    id: modifyMoveOut
+    path: ''
+    startLine: 4018
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Vector2> modifyMoveOut
+    return:
+      type: System.Collections.Generic.List{Vector2}
+    content.vb: Public modifyMoveOut As List(Of Vector2)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner.modifyWaypoints
+  commentId: F:Global.Enemy_Spawner.modifyWaypoints
+  id: modifyWaypoints
+  parent: Global.Enemy_Spawner
+  langs:
+  - csharp
+  - vb
+  name: modifyWaypoints
+  nameWithType: Enemy_Spawner.modifyWaypoints
+  fullName: Enemy_Spawner.modifyWaypoints
+  type: Field
+  source:
+    id: modifyWaypoints
+    path: ''
+    startLine: 4019
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Vector2> modifyWaypoints
+    return:
+      type: System.Collections.Generic.List{Vector2}
+    content.vb: Public modifyWaypoints As List(Of Vector2)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner.modifyAddHealth
+  commentId: F:Global.Enemy_Spawner.modifyAddHealth
+  id: modifyAddHealth
+  parent: Global.Enemy_Spawner
+  langs:
+  - csharp
+  - vb
+  name: modifyAddHealth
+  nameWithType: Enemy_Spawner.modifyAddHealth
+  fullName: Enemy_Spawner.modifyAddHealth
+  type: Field
+  source:
+    id: modifyAddHealth
+    path: ''
+    startLine: 4022
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float modifyAddHealth
+    return:
+      type: System.Single
+    content.vb: Public modifyAddHealth As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner.modifyAddDmg
+  commentId: F:Global.Enemy_Spawner.modifyAddDmg
+  id: modifyAddDmg
+  parent: Global.Enemy_Spawner
+  langs:
+  - csharp
+  - vb
+  name: modifyAddDmg
+  nameWithType: Enemy_Spawner.modifyAddDmg
+  fullName: Enemy_Spawner.modifyAddDmg
+  type: Field
+  source:
+    id: modifyAddDmg
+    path: ''
+    startLine: 4023
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float modifyAddDmg
+    return:
+      type: System.Single
+    content.vb: Public modifyAddDmg As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy_Spawner.modifyDoNotUseForce
+  commentId: F:Global.Enemy_Spawner.modifyDoNotUseForce
+  id: modifyDoNotUseForce
+  parent: Global.Enemy_Spawner
+  langs:
+  - csharp
+  - vb
+  name: modifyDoNotUseForce
+  nameWithType: Enemy_Spawner.modifyDoNotUseForce
+  fullName: Enemy_Spawner.modifyDoNotUseForce
+  type: Field
+  source:
+    id: modifyDoNotUseForce
+    path: ''
+    startLine: 4024
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool modifyDoNotUseForce
+    return:
+      type: System.Boolean
+    content.vb: Public modifyDoNotUseForce As Boolean
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -192,21 +443,21 @@ items:
   source:
     id: checkSpawnTrigger
     path: ''
-    startLine: 1866
+    startLine: 4206
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncheck Spawntimer die auf trigger areas reagiert\n"
+  summary: "\ncheck spawntimer who react to trigger areas\n"
   example: []
   syntax:
     content: public bool checkSpawnTrigger(GameObject trigger)
     parameters:
     - id: trigger
       type: Global.GameObject
-      description: 'trigger area die ausgel�st worden ist '
+      description: trigger area who got triggerd
     return:
       type: System.Boolean
-      description: true, wenn der spawner active ist und der check entgegengenommen wurde
+      description: true if the spawner is active and the check was accepted
     content.vb: Public Function checkSpawnTrigger(trigger As GameObject) As Boolean
   overload: Global.Enemy_Spawner.checkSpawnTrigger*
   modifiers.csharp:
@@ -227,21 +478,21 @@ items:
   source:
     id: checkSpawnerActivationTrigger
     path: ''
-    startLine: 1887
+    startLine: 4227
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncheckt ob der Spawner activiert worden ist und activiert ihn\n"
+  summary: "\nstarts the activation of the spawner\n"
   example: []
   syntax:
     content: public bool checkSpawnerActivationTrigger(GameObject trigger)
     parameters:
     - id: trigger
       type: Global.GameObject
-      description: trigger area die ausgel�st worden ist
+      description: trigger area who got triggerd
     return:
       type: System.Boolean
-      description: true, wenn der spawner activiert worden ist
+      description: true if spawner activation was started. false if the spawner is already active
     content.vb: Public Function checkSpawnerActivationTrigger(trigger As GameObject) As Boolean
   overload: Global.Enemy_Spawner.checkSpawnerActivationTrigger*
   modifiers.csharp:
@@ -262,11 +513,11 @@ items:
   source:
     id: spawnKilled
     path: ''
-    startLine: 1900
+    startLine: 4240
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nveringert den spawn count nachdem ein enemy zerst�rt worden ist\n"
+  summary: "\nreduce the spawn count after a enemy was killed\n"
   example: []
   syntax:
     content: public void spawnKilled()
@@ -410,6 +661,50 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: System.Collections.Generic.List{Vector2}
+  commentId: T:System.Collections.Generic.List{Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Vector2>
+  nameWithType: List<Vector2>
+  fullName: System.Collections.Generic.List<Vector2>
+  nameWithType.vb: List(Of Vector2)
+  fullName.vb: System.Collections.Generic.List(Of Vector2)
+  name.vb: List(Of Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Global.Enemy_Spawner.checkSpawnTrigger*
   commentId: Overload:Global.Enemy_Spawner.checkSpawnTrigger
   name: checkSpawnTrigger

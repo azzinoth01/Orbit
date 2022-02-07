@@ -1,0 +1,57 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.LoadMoneyIcon
+  commentId: T:Global.LoadMoneyIcon
+  id: LoadMoneyIcon
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: LoadMoneyIcon
+  nameWithType: LoadMoneyIcon
+  fullName: LoadMoneyIcon
+  type: Class
+  source:
+    id: LoadMoneyIcon
+    path: ''
+    startLine: 5648
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to load the money icon from the global variables\n"
+  example: []
+  syntax:
+    content: 'public class LoadMoneyIcon : MonoBehaviour'
+    content.vb: >-
+      Public Class LoadMoneyIcon
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,202 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ScrollBackground
+  commentId: T:Global.ScrollBackground
+  id: ScrollBackground
+  parent: Global
+  children:
+  - Global.ScrollBackground.images
+  - Global.ScrollBackground.maxXOffset
+  - Global.ScrollBackground.speed
+  - Global.ScrollBackground.yPosBorder
+  langs:
+  - csharp
+  - vb
+  name: ScrollBackground
+  nameWithType: ScrollBackground
+  fullName: ScrollBackground
+  type: Class
+  source:
+    id: ScrollBackground
+    path: ''
+    startLine: 8730
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to control a scrolling background\n"
+  example: []
+  syntax:
+    content: 'public class ScrollBackground : MonoBehaviour'
+    content.vb: >-
+      Public Class ScrollBackground
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.ScrollBackground.images
+  commentId: F:Global.ScrollBackground.images
+  id: images
+  parent: Global.ScrollBackground
+  langs:
+  - csharp
+  - vb
+  name: images
+  nameWithType: ScrollBackground.images
+  fullName: ScrollBackground.images
+  type: Field
+  source:
+    id: images
+    path: ''
+    startLine: 8732
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image[] images
+    return:
+      type: Global.Image[]
+    content.vb: Public images As Image()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ScrollBackground.yPosBorder
+  commentId: F:Global.ScrollBackground.yPosBorder
+  id: yPosBorder
+  parent: Global.ScrollBackground
+  langs:
+  - csharp
+  - vb
+  name: yPosBorder
+  nameWithType: ScrollBackground.yPosBorder
+  fullName: ScrollBackground.yPosBorder
+  type: Field
+  source:
+    id: yPosBorder
+    path: ''
+    startLine: 8733
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float yPosBorder
+    return:
+      type: System.Single
+    content.vb: Public yPosBorder As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ScrollBackground.speed
+  commentId: F:Global.ScrollBackground.speed
+  id: speed
+  parent: Global.ScrollBackground
+  langs:
+  - csharp
+  - vb
+  name: speed
+  nameWithType: ScrollBackground.speed
+  fullName: ScrollBackground.speed
+  type: Field
+  source:
+    id: speed
+    path: ''
+    startLine: 8734
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float speed
+    return:
+      type: System.Single
+    content.vb: Public speed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ScrollBackground.maxXOffset
+  commentId: F:Global.ScrollBackground.maxXOffset
+  id: maxXOffset
+  parent: Global.ScrollBackground
+  langs:
+  - csharp
+  - vb
+  name: maxXOffset
+  nameWithType: ScrollBackground.maxXOffset
+  fullName: ScrollBackground.maxXOffset
+  type: Field
+  source:
+    id: maxXOffset
+    path: ''
+    startLine: 8736
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float maxXOffset
+    return:
+      type: System.Single
+    content.vb: Public maxXOffset As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Image[]
+  isExternal: true
+  name: Image[]
+  nameWithType: Image[]
+  fullName: Image[]
+  nameWithType.vb: Image()
+  fullName.vb: Image()
+  name.vb: Image()
+  spec.csharp:
+  - uid: Global.Image
+    name: Image
+    nameWithType: Image
+    fullName: Image
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Global.Image
+    name: Image
+    nameWithType: Image
+    fullName: Image
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
