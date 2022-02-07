@@ -9,16 +9,24 @@ public class CameraScript : MonoBehaviour
 {
 
     private Rigidbody2D body;
-    public Player player;
+    private Player player;
     private float playerMaxSpeed;
     private Vector2 offset;
-    public float offsetSpeed;
 
 
 
+    /// <summary>
+    /// screen shake max duration
+    /// </summary>
     public float screenShakeMaxDuration;
+    /// <summary>
+    /// screen shake min duration
+    /// </summary>
     public float screenShakeMinDuration;
 
+    /// <summary>
+    /// screen shake max magnitude
+    /// </summary>
     public float screenShakeMaxMagnitude;
 
     private Vector2 screenShakeOffset;

@@ -8,8 +8,17 @@ using UnityEngine;
 /// </summary>
 public class Globals_init : MonoBehaviour
 {
+    /// <summary>
+    /// money icon
+    /// </summary>
     public Sprite moneyIcon;
+    /// <summary>
+    /// money drop prefab
+    /// </summary>
     public GameObject moneyDropPrefrab;
+    /// <summary>
+    /// enemy hit sound
+    /// </summary>
     public AudioSource tempEnemyHit;
 
     /// <summary>

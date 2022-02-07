@@ -7,7 +7,9 @@ using UnityEngine;
 /// </summary>
 public class BulletSoundControl : MonoBehaviour
 {
-
+    /// <summary>
+    /// audio to be played
+    /// </summary>
     public AudioSource audios;
 
 

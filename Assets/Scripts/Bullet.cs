@@ -41,6 +41,10 @@ public class Bullet : MonoBehaviour
 
     private float bulletDmg;
 
+
+    /// <summary>
+    /// sets the bullet dmg
+    /// </summary>
     public float BulletDmg {
 
         set {

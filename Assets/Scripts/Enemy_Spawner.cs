@@ -8,30 +8,73 @@ using UnityEngine;
 public class Enemy_Spawner : MonoBehaviour
 {
 
-
+    /// <summary>
+    /// list of enemies to spawn
+    /// </summary>
     public List<Enemy_Spawner_Info> enemysToSpawn;
+    /// <summary>
+    /// max amount of enemies to spawn
+    /// </summary>
     public int spawnLimit;
     private int currentSpawnCount;
 
+    /// <summary>
+    /// start delay
+    /// </summary>
     public float delay;
+    /// <summary>
+    /// trigger area to activate the spawner
+    /// </summary>
     public GameObject triggerArea;
+    /// <summary>
+    /// uses the trigger area to start the spawner
+    /// </summary>
     public bool useTriggerArea;
     private bool isActive;
 
 
+    /// <summary>
+    /// uses a random enemy in the spawner info
+    /// </summary>
     public bool useRandomSpawnInfo;
 
+    /// <summary>
+    /// if it is a wave spawner
+    /// </summary>
     public bool waveSpawner;
 
+    /// <summary>
+    /// if the spawner uses modifications
+    /// </summary>
     public bool useModification;
 
+    /// <summary>
+    /// modifies the move in waypoints
+    /// </summary>
     public List<Vector2> modifyMoveIn;
+    /// <summary>
+    /// modifies the move out waypoints
+    /// </summary>
     public List<Vector2> modifyMoveOut;
+    /// <summary>
+    /// modifies the waypoints
+    /// </summary>
     public List<Vector2> modifyWaypoints;
 
     //public float modifyHealth;
+
+    /// <summary>
+    /// modifies the health of enemies
+    /// </summary>
     public float modifyAddHealth;
+    /// <summary>
+    /// modifies the enemy dmg
+    /// </summary>
     public float modifyAddDmg;
+
+    /// <summary>
+    /// makes the enemy not use force to move
+    /// </summary>
     public bool modifyDoNotUseForce;
 
 

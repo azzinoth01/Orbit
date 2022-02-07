@@ -20,6 +20,10 @@ public class EnemyHitFlicker : MonoBehaviour
 
     private int hitFlickerInQue;
 
+
+    /// <summary>
+    /// the queue for the hit flicker
+    /// </summary>
     public int HitFlickerInQue {
         get {
             return hitFlickerInQue;

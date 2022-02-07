@@ -17,6 +17,10 @@ public class Item
     [SerializeField] private string patternIcon;
     [SerializeField] private string sprite;
 
+
+    /// <summary>
+    /// unique ID
+    /// </summary>
     public string ID {
         get {
             return iD;
@@ -26,7 +30,9 @@ public class Item
             iD = value;
         }
     }
-
+    /// <summary>
+    /// name
+    /// </summary>
     public string Name {
         get {
             return ItemName;
@@ -36,7 +42,9 @@ public class Item
             ItemName = value;
         }
     }
-
+    /// <summary>
+    /// buy price
+    /// </summary>
     public int Value {
         get {
             return value;
@@ -46,7 +54,9 @@ public class Item
             this.value = value;
         }
     }
-
+    /// <summary>
+    /// icon for inventory
+    /// </summary>
     public string Icon {
         get {
             return icon;

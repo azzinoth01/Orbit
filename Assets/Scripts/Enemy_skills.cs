@@ -8,22 +8,34 @@ using UnityEngine;
 /// </summary>
 public class Enemy_skills : MonoBehaviour
 {
-
+    /// <summary>
+    /// how many skill objects have to be pre created
+    /// </summary>
     public int shootsToCreate;
-
+    /// <summary>
+    /// the skillsequenze list
+    /// </summary>
     public List<Skillsequenze> skillsequenze;
     private GameObject nextSkill;
     private float nextSkillDelay;
     private int skillIndex;
 
+    /// <summary>
+    /// the addition dmg of the enemy
+    /// </summary>
     public float additionalDmg;
+    /// <summary>
+    /// the dmg modifier of the enemy
+    /// </summary>
     public float dmgModifier;
 
     private bool isRunning;
     private bool allwoDisable;
 
     private bool nextSkillRotate;
-
+    /// <summary>
+    /// stops the deactivation of skills if the enemy moves out of the enemy border
+    /// </summary>
     public bool doNotDeactivate;
 
     /// <summary>

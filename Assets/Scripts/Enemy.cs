@@ -9,40 +9,92 @@ using UnityEngine.UI;
 /// </summary>
 public class Enemy : MonoBehaviour
 {
+
+    /// <summary>
+    /// health of enemy
+    /// </summary>
     public float health;
     private float maxHealth;
 
 
-
+    /// <summary>
+    /// physic object of enemy
+    /// </summary>
     public Rigidbody2D body;
     private Waypoint_Designer designer;
+    /// <summary>
+    /// waypoint liste for movement
+    /// </summary>
     public List<Vector2> waypoints;
+    /// <summary>
+    /// makes the enemy more to a random waypoint
+    /// </summary>
     public bool moveToRandomWaypoints;
+    /// <summary>
+    /// renembers the current player position and moves towards it 
+    /// </summary>
     public bool moveToPlayer;
+
+    /// <summary>
+    /// follows the player on the x Position
+    /// </summary>
     public bool followPlayerMovementX;
+    /// <summary>
+    /// follows the palyer on the y Position
+    /// </summary>
     public bool followPlayerMovementY;
+    /// <summary>
+    /// describes how precise the follow movement has to be
+    /// </summary>
     public float playerfollowRange;
+    /// <summary>
+    /// the used force to move the enemy
+    /// </summary>
     public float force;
+    /// <summary>
+    /// the maximum speed the enemy can have
+    /// </summary>
     public float maxSpeed;
 
+
+    /// <summary>
+    /// loops the waypoints if it has more than 1
+    /// </summary>
     public bool loop;
     private float restartAfter;
+    /// <summary>
+    /// waypoint prefab
+    /// </summary>
     public GameObject waypointPrefab;
     private float restartTime;
     private List<GameObject> waypointObject;
     private int waypointIndex;
 
-
+    /// <summary>
+    /// the maximum duration an enemy can stay in the scene. if it is 0 it can stay for an unlimited time
+    /// </summary>
     public float maxDuration;
+    /// <summary>
+    /// the delay between waypoint movements
+    /// </summary>
     public float delayToNextWaypoint;
 
 
 
 
-
+    /// <summary>
+    /// collision dmg the player takes
+    /// </summary>
     public int collisionDmg;
+    /// <summary>
+    /// if the enemy destorys itself with a collision
+    /// </summary>
     public bool destoryAfterCollison;
 
+
+    /// <summary>
+    /// death animation
+    /// </summary>
     public GameObject deathParticelSystem;
 
 
@@ -52,9 +104,17 @@ public class Enemy : MonoBehaviour
 
 
     private Enemy_Spawner spawnerCallback;
-
+    /// <summary>
+    /// if the enemy uses the Boss UI
+    /// </summary>
     public bool showBossHp;
+    /// <summary>
+    /// the Image of the Boss UI
+    /// </summary>
     public Image bossHp;
+    /// <summary>
+    /// the Boss UI
+    /// </summary>
     public GameObject bossUI;
 
     private int points;
@@ -63,12 +123,25 @@ public class Enemy : MonoBehaviour
     //public bool rotateSpeed;
 
 
-
+    /// <summary>
+    /// minimum money drop value
+    /// if minMoneyValue and maxMonyeValue are 0 the values is set to 1-100 
+    /// </summary>
     public int minMoneyValue;
+    /// <summary>
+    /// maximum money drop value
+    /// if minMoneyValue and maxMonyeValue are 0 the values is set to 1-100 
+    /// </summary>
     public int maxMonyeValue;
 
+    /// <summary>
+    /// do not count this enemy as a killed enemy
+    /// </summary>
     public bool doNotCountAsKill;
 
+    /// <summary>
+    /// hit sound for enemies
+    /// </summary>
     public AudioSource enemyHitSound;
 
     private EnemyHitFlicker flickering;
@@ -76,10 +149,14 @@ public class Enemy : MonoBehaviour
 
     //public bool rotateTowardsPlayer;
     //public float rotateSpeed;
-
+    /// <summary>
+    /// lets the enemy move always at full speed
+    /// </summary>
     public bool doNotUseForceToMove;
 
-
+    /// <summary>
+    /// the spawner of the enemy
+    /// </summary>
     public Enemy_Spawner SpawnerCallback {
         get {
             return spawnerCallback;
@@ -89,7 +166,9 @@ public class Enemy : MonoBehaviour
             spawnerCallback = value;
         }
     }
-
+    /// <summary>
+    /// maximum health of enemy
+    /// </summary>
     public float MaxHealth {
         get {
             return maxHealth;

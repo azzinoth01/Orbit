@@ -8,9 +8,19 @@ using UnityEngine;
 /// </summary>
 public class Enemy_rotation : MonoBehaviour
 {
+    /// <summary>
+    /// if true rotates the enemy towards the player
+    /// </summary>
     public bool rotateTowardsPlayer;
+    /// <summary>
+    /// the rotation speed
+    /// </summary>
     public float rotateSpeed;
 
+
+    /// <summary>
+    /// activates the rotation after hiting the first waypoint
+    /// </summary>
     public bool activatedAfterMoveIn;
 
     private Enemy enemy;

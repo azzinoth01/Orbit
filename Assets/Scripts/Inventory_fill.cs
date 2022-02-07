@@ -9,16 +9,40 @@ using UnityEngine.UI;
 /// </summary>
 public class Inventory_fill : MonoBehaviour
 {
+    /// <summary>
+    /// main weapon box prefab
+    /// </summary>
     public GameObject mainWeaponBox;
+    /// <summary>
+    /// secondary weapon box prefab
+    /// </summary>
     public GameObject secondaryWeaponBox;
+    /// <summary>
+    /// ship parts box prefab
+    /// </summary>
     public GameObject partsBox;
+    /// <summary>
+    /// locked box prefab
+    /// </summary>
     public GameObject LockedBox;
+    /// <summary>
+    /// drag and drop image which follows the cursor
+    /// </summary>
     public Image dragAndDrop;
 
+
+    /// <summary>
+    /// ship item display
+    /// </summary>
     public ShipEditorStatusDisplay display;
 
-
+    /// <summary>
+    /// click audio
+    /// </summary>
     public AudioSource audios;
+    /// <summary>
+    /// click not working audio
+    /// </summary>
     public AudioSource blockAudio;
 
     private ItemCatalog catalog;

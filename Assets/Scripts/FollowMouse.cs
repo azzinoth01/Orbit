@@ -11,7 +11,13 @@ public class FollowMouse : MonoBehaviour
 
     private bool mouseIsPressed;
 
+    /// <summary>
+    /// equipment slots
+    /// </summary>
     public List<RemoveSlotItem> slotMouseoverCheck;
+    /// <summary>
+    /// inventory list
+    /// </summary>
     public Inventory_fill inv;
 
     public bool MouseIsPressed {

@@ -56,6 +56,9 @@ public class BulletInfo
 
     }
 
+    /// <summary>
+    /// start rotation
+    /// </summary>
     public float StartRotation {
         get {
             return startRotation;
@@ -76,6 +79,9 @@ public class BulletInfo
     }
 
 
+    /// <summary>
+    /// bullet prefab
+    /// </summary>
     public GameObject Bullet {
         get {
             return bullet;
@@ -86,6 +92,9 @@ public class BulletInfo
         }
     }
 
+    /// <summary>
+    /// set bullet script and calc bullet dmg
+    /// </summary>
     public Bullet BulletScript {
 
         set {
@@ -95,6 +104,9 @@ public class BulletInfo
         }
     }
 
+    /// <summary>
+    /// set base dmg and calc bullet dmg
+    /// </summary>
     public float AddBaseDmg {
 
 
@@ -104,6 +116,9 @@ public class BulletInfo
         }
     }
 
+    /// <summary>
+    /// set dmg modifier and calc bullet dmg
+    /// </summary>
     public float DmgModifier {
 
 
@@ -112,7 +127,9 @@ public class BulletInfo
             setBulletDmg();
         }
     }
-
+    /// <summary>
+    /// set and returns the sart effect of the bullet
+    /// </summary>
     public GameObject StartEffect {
         get {
             return startEffect;
@@ -123,6 +140,9 @@ public class BulletInfo
         }
     }
 
+    /// <summary>
+    /// sets and returns the instanz of the start effect
+    /// </summary>
     public GameObject InstantStartEffect {
         get {
             return instantStartEffect;
@@ -133,6 +153,9 @@ public class BulletInfo
         }
     }
 
+    /// <summary>
+    /// sets and returns the sfx Sound effect
+    /// </summary>
     public GameObject SfxSound {
         get {
             return sfxSound;
@@ -143,6 +166,9 @@ public class BulletInfo
         }
     }
 
+    /// <summary>
+    /// returns the bullet base dmg
+    /// </summary>
     public float BulletBaseDmg {
         get {
             return bulletBaseDmg;

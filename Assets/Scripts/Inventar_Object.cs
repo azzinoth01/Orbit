@@ -13,6 +13,9 @@ public class Inventar_Object : Item
 
     [SerializeField] private int amount;
 
+    /// <summary>
+    /// returns and sets the amount
+    /// </summary>
     public int Amount {
         get {
             return amount;

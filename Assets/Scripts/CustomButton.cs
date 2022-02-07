@@ -9,6 +9,9 @@ using UnityEngine.UI;
 /// </summary>
 public class CustomButton : MonoBehaviour
 {
+    /// <summary>
+    /// button image which controls the shape
+    /// </summary>
     public Image buttonimage;
 
 

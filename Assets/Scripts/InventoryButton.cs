@@ -9,11 +9,15 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class InventoryButton : MonoBehaviour, IPointerDownHandler
 {
+
     private Inventory_fill inv;
     private Item item;
     private bool locked;
     private GameObject obj;
 
+    /// <summary>
+    /// inventory list
+    /// </summary>
     public Inventory_fill Inv {
         get {
             return inv;
@@ -24,6 +28,9 @@ public class InventoryButton : MonoBehaviour, IPointerDownHandler
         }
     }
 
+    /// <summary>
+    /// item to use
+    /// </summary>
     public Item Item {
         get {
             return item;
@@ -33,7 +40,9 @@ public class InventoryButton : MonoBehaviour, IPointerDownHandler
             item = value;
         }
     }
-
+    /// <summary>
+    /// if the item is locked
+    /// </summary>
     public bool Locked {
         get {
             return locked;
@@ -44,6 +53,9 @@ public class InventoryButton : MonoBehaviour, IPointerDownHandler
         }
     }
 
+    /// <summary>
+    /// the gameobject of the buttons
+    /// </summary>
     public GameObject Obj {
         get {
             return obj;
