@@ -9,6 +9,25 @@ references:
   fullName.vb: ''
   nameWithType: Global
   nameWithType.vb: ''
+- uid: Global.AnimatorState
+  name: AnimatorState
+  href: api/Global.AnimatorState.html
+  commentId: T:Global.AnimatorState
+  fullName: AnimatorState
+  nameWithType: AnimatorState
+- uid: Global.AnimatorState.OnStateMachineExit(Animator,System.Int32)
+  name: OnStateMachineExit(Animator, Int32)
+  href: api/Global.AnimatorState.html#Global_AnimatorState_OnStateMachineExit_Animator_System_Int32_
+  commentId: M:Global.AnimatorState.OnStateMachineExit(Animator,System.Int32)
+  fullName: AnimatorState.OnStateMachineExit(Animator, System.Int32)
+  nameWithType: AnimatorState.OnStateMachineExit(Animator, Int32)
+- uid: Global.AnimatorState.OnStateMachineExit*
+  name: OnStateMachineExit
+  href: api/Global.AnimatorState.html#Global_AnimatorState_OnStateMachineExit_
+  commentId: Overload:Global.AnimatorState.OnStateMachineExit
+  isSpec: "True"
+  fullName: AnimatorState.OnStateMachineExit
+  nameWithType: AnimatorState.OnStateMachineExit
 - uid: Global.AttachGameObjectsToParticles
   name: AttachGameObjectsToParticles
   href: api/Global.AttachGameObjectsToParticles.html
@@ -94,12 +113,12 @@ references:
   commentId: M:Global.BulletInfo.#ctor
   fullName: BulletInfo.BulletInfo()
   nameWithType: BulletInfo.BulletInfo()
-- uid: Global.BulletInfo.#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)
-  name: BulletInfo(Single, Int32, GameObject, GameObject, GameObject)
-  href: api/Global.BulletInfo.html#Global_BulletInfo__ctor_System_Single_System_Int32_GameObject_GameObject_GameObject_
-  commentId: M:Global.BulletInfo.#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)
-  fullName: BulletInfo.BulletInfo(System.Single, System.Int32, GameObject, GameObject, GameObject)
-  nameWithType: BulletInfo.BulletInfo(Single, Int32, GameObject, GameObject, GameObject)
+- uid: Global.BulletInfo.#ctor(System.Single,System.Single,GameObject,GameObject,GameObject)
+  name: BulletInfo(Single, Single, GameObject, GameObject, GameObject)
+  href: api/Global.BulletInfo.html#Global_BulletInfo__ctor_System_Single_System_Single_GameObject_GameObject_GameObject_
+  commentId: M:Global.BulletInfo.#ctor(System.Single,System.Single,GameObject,GameObject,GameObject)
+  fullName: BulletInfo.BulletInfo(System.Single, System.Single, GameObject, GameObject, GameObject)
+  nameWithType: BulletInfo.BulletInfo(Single, Single, GameObject, GameObject, GameObject)
 - uid: Global.BulletInfo.#ctor*
   name: BulletInfo
   href: api/Global.BulletInfo.html#Global_BulletInfo__ctor_
@@ -133,6 +152,19 @@ references:
   isSpec: "True"
   fullName: BulletInfo.Bullet
   nameWithType: BulletInfo.Bullet
+- uid: Global.BulletInfo.BulletBaseDmg
+  name: BulletBaseDmg
+  href: api/Global.BulletInfo.html#Global_BulletInfo_BulletBaseDmg
+  commentId: P:Global.BulletInfo.BulletBaseDmg
+  fullName: BulletInfo.BulletBaseDmg
+  nameWithType: BulletInfo.BulletBaseDmg
+- uid: Global.BulletInfo.BulletBaseDmg*
+  name: BulletBaseDmg
+  href: api/Global.BulletInfo.html#Global_BulletInfo_BulletBaseDmg_
+  commentId: Overload:Global.BulletInfo.BulletBaseDmg
+  isSpec: "True"
+  fullName: BulletInfo.BulletBaseDmg
+  nameWithType: BulletInfo.BulletBaseDmg
 - uid: Global.BulletInfo.BulletScript
   name: BulletScript
   href: api/Global.BulletInfo.html#Global_BulletInfo_BulletScript
@@ -263,6 +295,18 @@ references:
   isSpec: "True"
   fullName: BulletInfo.StartRotation
   nameWithType: BulletInfo.StartRotation
+- uid: Global.BulletSoundControl
+  name: BulletSoundControl
+  href: api/Global.BulletSoundControl.html
+  commentId: T:Global.BulletSoundControl
+  fullName: BulletSoundControl
+  nameWithType: BulletSoundControl
+- uid: Global.BulletSoundControl.audios
+  name: audios
+  href: api/Global.BulletSoundControl.html#Global_BulletSoundControl_audios
+  commentId: F:Global.BulletSoundControl.audios
+  fullName: BulletSoundControl.audios
+  nameWithType: BulletSoundControl.audios
 - uid: Global.CameraScript
   name: CameraScript
   href: api/Global.CameraScript.html
@@ -312,6 +356,30 @@ references:
   isSpec: "True"
   fullName: CameraScript.startScreenShake
   nameWithType: CameraScript.startScreenShake
+- uid: Global.CheckLevelUnlock
+  name: CheckLevelUnlock
+  href: api/Global.CheckLevelUnlock.html
+  commentId: T:Global.CheckLevelUnlock
+  fullName: CheckLevelUnlock
+  nameWithType: CheckLevelUnlock
+- uid: Global.Control_schemes_enum
+  name: Control_schemes_enum
+  href: api/Global.Control_schemes_enum.html
+  commentId: T:Global.Control_schemes_enum
+  fullName: Control_schemes_enum
+  nameWithType: Control_schemes_enum
+- uid: Global.Control_schemes_enum.gamepad
+  name: gamepad
+  href: api/Global.Control_schemes_enum.html#Global_Control_schemes_enum_gamepad
+  commentId: F:Global.Control_schemes_enum.gamepad
+  fullName: Control_schemes_enum.gamepad
+  nameWithType: Control_schemes_enum.gamepad
+- uid: Global.Control_schemes_enum.mouseAndKeyboard
+  name: mouseAndKeyboard
+  href: api/Global.Control_schemes_enum.html#Global_Control_schemes_enum_mouseAndKeyboard
+  commentId: F:Global.Control_schemes_enum.mouseAndKeyboard
+  fullName: Control_schemes_enum.mouseAndKeyboard
+  nameWithType: Control_schemes_enum.mouseAndKeyboard
 - uid: Global.Controlls
   name: Controlls
   href: api/Global.Controlls.html
@@ -684,6 +752,19 @@ references:
   isSpec: "True"
   fullName: Controlls.FindBinding
   nameWithType: Controlls.FindBinding
+- uid: Global.Controlls.gamepadScheme
+  name: gamepadScheme
+  href: api/Global.Controlls.html#Global_Controlls_gamepadScheme
+  commentId: P:Global.Controlls.gamepadScheme
+  fullName: Controlls.gamepadScheme
+  nameWithType: Controlls.gamepadScheme
+- uid: Global.Controlls.gamepadScheme*
+  name: gamepadScheme
+  href: api/Global.Controlls.html#Global_Controlls_gamepadScheme_
+  commentId: Overload:Global.Controlls.gamepadScheme
+  isSpec: "True"
+  fullName: Controlls.gamepadScheme
+  nameWithType: Controlls.gamepadScheme
 - uid: Global.Controlls.GetEnumerator
   name: GetEnumerator()
   href: api/Global.Controlls.html#Global_Controlls_GetEnumerator
@@ -794,6 +875,717 @@ references:
   isSpec: "True"
   fullName: Controlls.IBullet_hellActions.OnShoot
   nameWithType: Controlls.IBullet_hellActions.OnShoot
+- uid: Global.Controlls.IUIActions
+  name: Controlls.IUIActions
+  href: api/Global.Controlls.IUIActions.html
+  commentId: T:Global.Controlls.IUIActions
+  fullName: Controlls.IUIActions
+  nameWithType: Controlls.IUIActions
+- uid: Global.Controlls.IUIActions.OnCancel(InputAction.CallbackContext)
+  name: OnCancel(InputAction.CallbackContext)
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnCancel_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IUIActions.OnCancel(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnCancel(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnCancel(InputAction.CallbackContext)
+- uid: Global.Controlls.IUIActions.OnCancel*
+  name: OnCancel
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnCancel_
+  commentId: Overload:Global.Controlls.IUIActions.OnCancel
+  isSpec: "True"
+  fullName: Controlls.IUIActions.OnCancel
+  nameWithType: Controlls.IUIActions.OnCancel
+- uid: Global.Controlls.IUIActions.OnClick(InputAction.CallbackContext)
+  name: OnClick(InputAction.CallbackContext)
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnClick_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IUIActions.OnClick(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnClick(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnClick(InputAction.CallbackContext)
+- uid: Global.Controlls.IUIActions.OnClick*
+  name: OnClick
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnClick_
+  commentId: Overload:Global.Controlls.IUIActions.OnClick
+  isSpec: "True"
+  fullName: Controlls.IUIActions.OnClick
+  nameWithType: Controlls.IUIActions.OnClick
+- uid: Global.Controlls.IUIActions.OnMiddleClick(InputAction.CallbackContext)
+  name: OnMiddleClick(InputAction.CallbackContext)
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnMiddleClick_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IUIActions.OnMiddleClick(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnMiddleClick(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnMiddleClick(InputAction.CallbackContext)
+- uid: Global.Controlls.IUIActions.OnMiddleClick*
+  name: OnMiddleClick
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnMiddleClick_
+  commentId: Overload:Global.Controlls.IUIActions.OnMiddleClick
+  isSpec: "True"
+  fullName: Controlls.IUIActions.OnMiddleClick
+  nameWithType: Controlls.IUIActions.OnMiddleClick
+- uid: Global.Controlls.IUIActions.OnNavigate(InputAction.CallbackContext)
+  name: OnNavigate(InputAction.CallbackContext)
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnNavigate_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IUIActions.OnNavigate(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnNavigate(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnNavigate(InputAction.CallbackContext)
+- uid: Global.Controlls.IUIActions.OnNavigate*
+  name: OnNavigate
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnNavigate_
+  commentId: Overload:Global.Controlls.IUIActions.OnNavigate
+  isSpec: "True"
+  fullName: Controlls.IUIActions.OnNavigate
+  nameWithType: Controlls.IUIActions.OnNavigate
+- uid: Global.Controlls.IUIActions.OnPoint(InputAction.CallbackContext)
+  name: OnPoint(InputAction.CallbackContext)
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnPoint_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IUIActions.OnPoint(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnPoint(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnPoint(InputAction.CallbackContext)
+- uid: Global.Controlls.IUIActions.OnPoint*
+  name: OnPoint
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnPoint_
+  commentId: Overload:Global.Controlls.IUIActions.OnPoint
+  isSpec: "True"
+  fullName: Controlls.IUIActions.OnPoint
+  nameWithType: Controlls.IUIActions.OnPoint
+- uid: Global.Controlls.IUIActions.OnRightClick(InputAction.CallbackContext)
+  name: OnRightClick(InputAction.CallbackContext)
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnRightClick_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IUIActions.OnRightClick(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnRightClick(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnRightClick(InputAction.CallbackContext)
+- uid: Global.Controlls.IUIActions.OnRightClick*
+  name: OnRightClick
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnRightClick_
+  commentId: Overload:Global.Controlls.IUIActions.OnRightClick
+  isSpec: "True"
+  fullName: Controlls.IUIActions.OnRightClick
+  nameWithType: Controlls.IUIActions.OnRightClick
+- uid: Global.Controlls.IUIActions.OnScrollWheel(InputAction.CallbackContext)
+  name: OnScrollWheel(InputAction.CallbackContext)
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnScrollWheel_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IUIActions.OnScrollWheel(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnScrollWheel(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnScrollWheel(InputAction.CallbackContext)
+- uid: Global.Controlls.IUIActions.OnScrollWheel*
+  name: OnScrollWheel
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnScrollWheel_
+  commentId: Overload:Global.Controlls.IUIActions.OnScrollWheel
+  isSpec: "True"
+  fullName: Controlls.IUIActions.OnScrollWheel
+  nameWithType: Controlls.IUIActions.OnScrollWheel
+- uid: Global.Controlls.IUIActions.OnSubmit(InputAction.CallbackContext)
+  name: OnSubmit(InputAction.CallbackContext)
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnSubmit_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IUIActions.OnSubmit(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnSubmit(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnSubmit(InputAction.CallbackContext)
+- uid: Global.Controlls.IUIActions.OnSubmit*
+  name: OnSubmit
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnSubmit_
+  commentId: Overload:Global.Controlls.IUIActions.OnSubmit
+  isSpec: "True"
+  fullName: Controlls.IUIActions.OnSubmit
+  nameWithType: Controlls.IUIActions.OnSubmit
+- uid: Global.Controlls.IUIActions.OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  name: OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnTrackedDeviceOrientation_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IUIActions.OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnTrackedDeviceOrientation(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnTrackedDeviceOrientation(InputAction.CallbackContext)
+- uid: Global.Controlls.IUIActions.OnTrackedDeviceOrientation*
+  name: OnTrackedDeviceOrientation
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnTrackedDeviceOrientation_
+  commentId: Overload:Global.Controlls.IUIActions.OnTrackedDeviceOrientation
+  isSpec: "True"
+  fullName: Controlls.IUIActions.OnTrackedDeviceOrientation
+  nameWithType: Controlls.IUIActions.OnTrackedDeviceOrientation
+- uid: Global.Controlls.IUIActions.OnTrackedDevicePosition(InputAction.CallbackContext)
+  name: OnTrackedDevicePosition(InputAction.CallbackContext)
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnTrackedDevicePosition_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IUIActions.OnTrackedDevicePosition(InputAction.CallbackContext)
+  fullName: Controlls.IUIActions.OnTrackedDevicePosition(InputAction.CallbackContext)
+  nameWithType: Controlls.IUIActions.OnTrackedDevicePosition(InputAction.CallbackContext)
+- uid: Global.Controlls.IUIActions.OnTrackedDevicePosition*
+  name: OnTrackedDevicePosition
+  href: api/Global.Controlls.IUIActions.html#Global_Controlls_IUIActions_OnTrackedDevicePosition_
+  commentId: Overload:Global.Controlls.IUIActions.OnTrackedDevicePosition
+  isSpec: "True"
+  fullName: Controlls.IUIActions.OnTrackedDevicePosition
+  nameWithType: Controlls.IUIActions.OnTrackedDevicePosition
+- uid: Global.Controlls.IVirtualMouseActions
+  name: Controlls.IVirtualMouseActions
+  href: api/Global.Controlls.IVirtualMouseActions.html
+  commentId: T:Global.Controlls.IVirtualMouseActions
+  fullName: Controlls.IVirtualMouseActions
+  nameWithType: Controlls.IVirtualMouseActions
+- uid: Global.Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+  name: OnLeftMouseButton(InputAction.CallbackContext)
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnLeftMouseButton_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnLeftMouseButton(InputAction.CallbackContext)
+- uid: Global.Controlls.IVirtualMouseActions.OnLeftMouseButton*
+  name: OnLeftMouseButton
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnLeftMouseButton_
+  commentId: Overload:Global.Controlls.IVirtualMouseActions.OnLeftMouseButton
+  isSpec: "True"
+  fullName: Controlls.IVirtualMouseActions.OnLeftMouseButton
+  nameWithType: Controlls.IVirtualMouseActions.OnLeftMouseButton
+- uid: Global.Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+  name: OnMiddleMouseButton(InputAction.CallbackContext)
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnMiddleMouseButton_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnMiddleMouseButton(InputAction.CallbackContext)
+- uid: Global.Controlls.IVirtualMouseActions.OnMiddleMouseButton*
+  name: OnMiddleMouseButton
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnMiddleMouseButton_
+  commentId: Overload:Global.Controlls.IVirtualMouseActions.OnMiddleMouseButton
+  isSpec: "True"
+  fullName: Controlls.IVirtualMouseActions.OnMiddleMouseButton
+  nameWithType: Controlls.IVirtualMouseActions.OnMiddleMouseButton
+- uid: Global.Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+  name: OnMoveCursor(InputAction.CallbackContext)
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnMoveCursor_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnMoveCursor(InputAction.CallbackContext)
+- uid: Global.Controlls.IVirtualMouseActions.OnMoveCursor*
+  name: OnMoveCursor
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnMoveCursor_
+  commentId: Overload:Global.Controlls.IVirtualMouseActions.OnMoveCursor
+  isSpec: "True"
+  fullName: Controlls.IVirtualMouseActions.OnMoveCursor
+  nameWithType: Controlls.IVirtualMouseActions.OnMoveCursor
+- uid: Global.Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+  name: OnPoint(InputAction.CallbackContext)
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnPoint_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnPoint(InputAction.CallbackContext)
+- uid: Global.Controlls.IVirtualMouseActions.OnPoint*
+  name: OnPoint
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnPoint_
+  commentId: Overload:Global.Controlls.IVirtualMouseActions.OnPoint
+  isSpec: "True"
+  fullName: Controlls.IVirtualMouseActions.OnPoint
+  nameWithType: Controlls.IVirtualMouseActions.OnPoint
+- uid: Global.Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+  name: OnRightMouseButton(InputAction.CallbackContext)
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnRightMouseButton_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnRightMouseButton(InputAction.CallbackContext)
+- uid: Global.Controlls.IVirtualMouseActions.OnRightMouseButton*
+  name: OnRightMouseButton
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnRightMouseButton_
+  commentId: Overload:Global.Controlls.IVirtualMouseActions.OnRightMouseButton
+  isSpec: "True"
+  fullName: Controlls.IVirtualMouseActions.OnRightMouseButton
+  nameWithType: Controlls.IVirtualMouseActions.OnRightMouseButton
+- uid: Global.Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+  name: OnScroll(InputAction.CallbackContext)
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnScroll_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnScroll(InputAction.CallbackContext)
+- uid: Global.Controlls.IVirtualMouseActions.OnScroll*
+  name: OnScroll
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnScroll_
+  commentId: Overload:Global.Controlls.IVirtualMouseActions.OnScroll
+  isSpec: "True"
+  fullName: Controlls.IVirtualMouseActions.OnScroll
+  nameWithType: Controlls.IVirtualMouseActions.OnScroll
+- uid: Global.Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+  name: OnToogleMouseVisibility(InputAction.CallbackContext)
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnToogleMouseVisibility_InputAction_CallbackContext_
+  commentId: M:Global.Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+  fullName: Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+  nameWithType: Controlls.IVirtualMouseActions.OnToogleMouseVisibility(InputAction.CallbackContext)
+- uid: Global.Controlls.IVirtualMouseActions.OnToogleMouseVisibility*
+  name: OnToogleMouseVisibility
+  href: api/Global.Controlls.IVirtualMouseActions.html#Global_Controlls_IVirtualMouseActions_OnToogleMouseVisibility_
+  commentId: Overload:Global.Controlls.IVirtualMouseActions.OnToogleMouseVisibility
+  isSpec: "True"
+  fullName: Controlls.IVirtualMouseActions.OnToogleMouseVisibility
+  nameWithType: Controlls.IVirtualMouseActions.OnToogleMouseVisibility
+- uid: Global.Controlls.mouseAndKeyboardScheme
+  name: mouseAndKeyboardScheme
+  href: api/Global.Controlls.html#Global_Controlls_mouseAndKeyboardScheme
+  commentId: P:Global.Controlls.mouseAndKeyboardScheme
+  fullName: Controlls.mouseAndKeyboardScheme
+  nameWithType: Controlls.mouseAndKeyboardScheme
+- uid: Global.Controlls.mouseAndKeyboardScheme*
+  name: mouseAndKeyboardScheme
+  href: api/Global.Controlls.html#Global_Controlls_mouseAndKeyboardScheme_
+  commentId: Overload:Global.Controlls.mouseAndKeyboardScheme
+  isSpec: "True"
+  fullName: Controlls.mouseAndKeyboardScheme
+  nameWithType: Controlls.mouseAndKeyboardScheme
+- uid: Global.Controlls.UI
+  name: UI
+  href: api/Global.Controlls.html#Global_Controlls_UI
+  commentId: P:Global.Controlls.UI
+  fullName: Controlls.UI
+  nameWithType: Controlls.UI
+- uid: Global.Controlls.UI*
+  name: UI
+  href: api/Global.Controlls.html#Global_Controlls_UI_
+  commentId: Overload:Global.Controlls.UI
+  isSpec: "True"
+  fullName: Controlls.UI
+  nameWithType: Controlls.UI
+- uid: Global.Controlls.UIActions
+  name: Controlls.UIActions
+  href: api/Global.Controlls.UIActions.html
+  commentId: T:Global.Controlls.UIActions
+  fullName: Controlls.UIActions
+  nameWithType: Controlls.UIActions
+- uid: Global.Controlls.UIActions.#ctor(Controlls)
+  name: UIActions(Controlls)
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions__ctor_Controlls_
+  commentId: M:Global.Controlls.UIActions.#ctor(Controlls)
+  fullName: Controlls.UIActions.UIActions(Controlls)
+  nameWithType: Controlls.UIActions.UIActions(Controlls)
+- uid: Global.Controlls.UIActions.#ctor*
+  name: UIActions
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions__ctor_
+  commentId: Overload:Global.Controlls.UIActions.#ctor
+  isSpec: "True"
+  fullName: Controlls.UIActions.UIActions
+  nameWithType: Controlls.UIActions.UIActions
+- uid: Global.Controlls.UIActions.Cancel
+  name: Cancel
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Cancel
+  commentId: P:Global.Controlls.UIActions.Cancel
+  fullName: Controlls.UIActions.Cancel
+  nameWithType: Controlls.UIActions.Cancel
+- uid: Global.Controlls.UIActions.Cancel*
+  name: Cancel
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Cancel_
+  commentId: Overload:Global.Controlls.UIActions.Cancel
+  isSpec: "True"
+  fullName: Controlls.UIActions.Cancel
+  nameWithType: Controlls.UIActions.Cancel
+- uid: Global.Controlls.UIActions.Click
+  name: Click
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Click
+  commentId: P:Global.Controlls.UIActions.Click
+  fullName: Controlls.UIActions.Click
+  nameWithType: Controlls.UIActions.Click
+- uid: Global.Controlls.UIActions.Click*
+  name: Click
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Click_
+  commentId: Overload:Global.Controlls.UIActions.Click
+  isSpec: "True"
+  fullName: Controlls.UIActions.Click
+  nameWithType: Controlls.UIActions.Click
+- uid: Global.Controlls.UIActions.Disable
+  name: Disable()
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Disable
+  commentId: M:Global.Controlls.UIActions.Disable
+  fullName: Controlls.UIActions.Disable()
+  nameWithType: Controlls.UIActions.Disable()
+- uid: Global.Controlls.UIActions.Disable*
+  name: Disable
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Disable_
+  commentId: Overload:Global.Controlls.UIActions.Disable
+  isSpec: "True"
+  fullName: Controlls.UIActions.Disable
+  nameWithType: Controlls.UIActions.Disable
+- uid: Global.Controlls.UIActions.Enable
+  name: Enable()
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Enable
+  commentId: M:Global.Controlls.UIActions.Enable
+  fullName: Controlls.UIActions.Enable()
+  nameWithType: Controlls.UIActions.Enable()
+- uid: Global.Controlls.UIActions.Enable*
+  name: Enable
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Enable_
+  commentId: Overload:Global.Controlls.UIActions.Enable
+  isSpec: "True"
+  fullName: Controlls.UIActions.Enable
+  nameWithType: Controlls.UIActions.Enable
+- uid: Global.Controlls.UIActions.enabled
+  name: enabled
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_enabled
+  commentId: P:Global.Controlls.UIActions.enabled
+  fullName: Controlls.UIActions.enabled
+  nameWithType: Controlls.UIActions.enabled
+- uid: Global.Controlls.UIActions.enabled*
+  name: enabled
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_enabled_
+  commentId: Overload:Global.Controlls.UIActions.enabled
+  isSpec: "True"
+  fullName: Controlls.UIActions.enabled
+  nameWithType: Controlls.UIActions.enabled
+- uid: Global.Controlls.UIActions.Get
+  name: Get()
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Get
+  commentId: M:Global.Controlls.UIActions.Get
+  fullName: Controlls.UIActions.Get()
+  nameWithType: Controlls.UIActions.Get()
+- uid: Global.Controlls.UIActions.Get*
+  name: Get
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Get_
+  commentId: Overload:Global.Controlls.UIActions.Get
+  isSpec: "True"
+  fullName: Controlls.UIActions.Get
+  nameWithType: Controlls.UIActions.Get
+- uid: Global.Controlls.UIActions.MiddleClick
+  name: MiddleClick
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_MiddleClick
+  commentId: P:Global.Controlls.UIActions.MiddleClick
+  fullName: Controlls.UIActions.MiddleClick
+  nameWithType: Controlls.UIActions.MiddleClick
+- uid: Global.Controlls.UIActions.MiddleClick*
+  name: MiddleClick
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_MiddleClick_
+  commentId: Overload:Global.Controlls.UIActions.MiddleClick
+  isSpec: "True"
+  fullName: Controlls.UIActions.MiddleClick
+  nameWithType: Controlls.UIActions.MiddleClick
+- uid: Global.Controlls.UIActions.Navigate
+  name: Navigate
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Navigate
+  commentId: P:Global.Controlls.UIActions.Navigate
+  fullName: Controlls.UIActions.Navigate
+  nameWithType: Controlls.UIActions.Navigate
+- uid: Global.Controlls.UIActions.Navigate*
+  name: Navigate
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Navigate_
+  commentId: Overload:Global.Controlls.UIActions.Navigate
+  isSpec: "True"
+  fullName: Controlls.UIActions.Navigate
+  nameWithType: Controlls.UIActions.Navigate
+- uid: Global.Controlls.UIActions.op_Implicit(Controlls.UIActions)~InputActionMap
+  name: Implicit(Controlls.UIActions to InputActionMap)
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_op_Implicit_Controlls_UIActions__InputActionMap
+  commentId: M:Global.Controlls.UIActions.op_Implicit(Controlls.UIActions)~InputActionMap
+  name.vb: Widening(Controlls.UIActions to InputActionMap)
+  fullName: Controlls.UIActions.Implicit(Controlls.UIActions to InputActionMap)
+  fullName.vb: Controlls.UIActions.Widening(Controlls.UIActions to InputActionMap)
+  nameWithType: Controlls.UIActions.Implicit(Controlls.UIActions to InputActionMap)
+  nameWithType.vb: Controlls.UIActions.Widening(Controlls.UIActions to InputActionMap)
+- uid: Global.Controlls.UIActions.op_Implicit*
+  name: Implicit
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_op_Implicit_
+  commentId: Overload:Global.Controlls.UIActions.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Controlls.UIActions.Implicit
+  fullName.vb: Controlls.UIActions.Widening
+  nameWithType: Controlls.UIActions.Implicit
+  nameWithType.vb: Controlls.UIActions.Widening
+- uid: Global.Controlls.UIActions.Point
+  name: Point
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Point
+  commentId: P:Global.Controlls.UIActions.Point
+  fullName: Controlls.UIActions.Point
+  nameWithType: Controlls.UIActions.Point
+- uid: Global.Controlls.UIActions.Point*
+  name: Point
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Point_
+  commentId: Overload:Global.Controlls.UIActions.Point
+  isSpec: "True"
+  fullName: Controlls.UIActions.Point
+  nameWithType: Controlls.UIActions.Point
+- uid: Global.Controlls.UIActions.RightClick
+  name: RightClick
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_RightClick
+  commentId: P:Global.Controlls.UIActions.RightClick
+  fullName: Controlls.UIActions.RightClick
+  nameWithType: Controlls.UIActions.RightClick
+- uid: Global.Controlls.UIActions.RightClick*
+  name: RightClick
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_RightClick_
+  commentId: Overload:Global.Controlls.UIActions.RightClick
+  isSpec: "True"
+  fullName: Controlls.UIActions.RightClick
+  nameWithType: Controlls.UIActions.RightClick
+- uid: Global.Controlls.UIActions.ScrollWheel
+  name: ScrollWheel
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_ScrollWheel
+  commentId: P:Global.Controlls.UIActions.ScrollWheel
+  fullName: Controlls.UIActions.ScrollWheel
+  nameWithType: Controlls.UIActions.ScrollWheel
+- uid: Global.Controlls.UIActions.ScrollWheel*
+  name: ScrollWheel
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_ScrollWheel_
+  commentId: Overload:Global.Controlls.UIActions.ScrollWheel
+  isSpec: "True"
+  fullName: Controlls.UIActions.ScrollWheel
+  nameWithType: Controlls.UIActions.ScrollWheel
+- uid: Global.Controlls.UIActions.SetCallbacks(Controlls.IUIActions)
+  name: SetCallbacks(Controlls.IUIActions)
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_SetCallbacks_Controlls_IUIActions_
+  commentId: M:Global.Controlls.UIActions.SetCallbacks(Controlls.IUIActions)
+  fullName: Controlls.UIActions.SetCallbacks(Controlls.IUIActions)
+  nameWithType: Controlls.UIActions.SetCallbacks(Controlls.IUIActions)
+- uid: Global.Controlls.UIActions.SetCallbacks*
+  name: SetCallbacks
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_SetCallbacks_
+  commentId: Overload:Global.Controlls.UIActions.SetCallbacks
+  isSpec: "True"
+  fullName: Controlls.UIActions.SetCallbacks
+  nameWithType: Controlls.UIActions.SetCallbacks
+- uid: Global.Controlls.UIActions.Submit
+  name: Submit
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Submit
+  commentId: P:Global.Controlls.UIActions.Submit
+  fullName: Controlls.UIActions.Submit
+  nameWithType: Controlls.UIActions.Submit
+- uid: Global.Controlls.UIActions.Submit*
+  name: Submit
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_Submit_
+  commentId: Overload:Global.Controlls.UIActions.Submit
+  isSpec: "True"
+  fullName: Controlls.UIActions.Submit
+  nameWithType: Controlls.UIActions.Submit
+- uid: Global.Controlls.UIActions.TrackedDeviceOrientation
+  name: TrackedDeviceOrientation
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_TrackedDeviceOrientation
+  commentId: P:Global.Controlls.UIActions.TrackedDeviceOrientation
+  fullName: Controlls.UIActions.TrackedDeviceOrientation
+  nameWithType: Controlls.UIActions.TrackedDeviceOrientation
+- uid: Global.Controlls.UIActions.TrackedDeviceOrientation*
+  name: TrackedDeviceOrientation
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_TrackedDeviceOrientation_
+  commentId: Overload:Global.Controlls.UIActions.TrackedDeviceOrientation
+  isSpec: "True"
+  fullName: Controlls.UIActions.TrackedDeviceOrientation
+  nameWithType: Controlls.UIActions.TrackedDeviceOrientation
+- uid: Global.Controlls.UIActions.TrackedDevicePosition
+  name: TrackedDevicePosition
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_TrackedDevicePosition
+  commentId: P:Global.Controlls.UIActions.TrackedDevicePosition
+  fullName: Controlls.UIActions.TrackedDevicePosition
+  nameWithType: Controlls.UIActions.TrackedDevicePosition
+- uid: Global.Controlls.UIActions.TrackedDevicePosition*
+  name: TrackedDevicePosition
+  href: api/Global.Controlls.UIActions.html#Global_Controlls_UIActions_TrackedDevicePosition_
+  commentId: Overload:Global.Controlls.UIActions.TrackedDevicePosition
+  isSpec: "True"
+  fullName: Controlls.UIActions.TrackedDevicePosition
+  nameWithType: Controlls.UIActions.TrackedDevicePosition
+- uid: Global.Controlls.VirtualMouse
+  name: VirtualMouse
+  href: api/Global.Controlls.html#Global_Controlls_VirtualMouse
+  commentId: P:Global.Controlls.VirtualMouse
+  fullName: Controlls.VirtualMouse
+  nameWithType: Controlls.VirtualMouse
+- uid: Global.Controlls.VirtualMouse*
+  name: VirtualMouse
+  href: api/Global.Controlls.html#Global_Controlls_VirtualMouse_
+  commentId: Overload:Global.Controlls.VirtualMouse
+  isSpec: "True"
+  fullName: Controlls.VirtualMouse
+  nameWithType: Controlls.VirtualMouse
+- uid: Global.Controlls.VirtualMouseActions
+  name: Controlls.VirtualMouseActions
+  href: api/Global.Controlls.VirtualMouseActions.html
+  commentId: T:Global.Controlls.VirtualMouseActions
+  fullName: Controlls.VirtualMouseActions
+  nameWithType: Controlls.VirtualMouseActions
+- uid: Global.Controlls.VirtualMouseActions.#ctor(Controlls)
+  name: VirtualMouseActions(Controlls)
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions__ctor_Controlls_
+  commentId: M:Global.Controlls.VirtualMouseActions.#ctor(Controlls)
+  fullName: Controlls.VirtualMouseActions.VirtualMouseActions(Controlls)
+  nameWithType: Controlls.VirtualMouseActions.VirtualMouseActions(Controlls)
+- uid: Global.Controlls.VirtualMouseActions.#ctor*
+  name: VirtualMouseActions
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions__ctor_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.#ctor
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.VirtualMouseActions
+  nameWithType: Controlls.VirtualMouseActions.VirtualMouseActions
+- uid: Global.Controlls.VirtualMouseActions.Disable
+  name: Disable()
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_Disable
+  commentId: M:Global.Controlls.VirtualMouseActions.Disable
+  fullName: Controlls.VirtualMouseActions.Disable()
+  nameWithType: Controlls.VirtualMouseActions.Disable()
+- uid: Global.Controlls.VirtualMouseActions.Disable*
+  name: Disable
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_Disable_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.Disable
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.Disable
+  nameWithType: Controlls.VirtualMouseActions.Disable
+- uid: Global.Controlls.VirtualMouseActions.Enable
+  name: Enable()
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_Enable
+  commentId: M:Global.Controlls.VirtualMouseActions.Enable
+  fullName: Controlls.VirtualMouseActions.Enable()
+  nameWithType: Controlls.VirtualMouseActions.Enable()
+- uid: Global.Controlls.VirtualMouseActions.Enable*
+  name: Enable
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_Enable_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.Enable
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.Enable
+  nameWithType: Controlls.VirtualMouseActions.Enable
+- uid: Global.Controlls.VirtualMouseActions.enabled
+  name: enabled
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_enabled
+  commentId: P:Global.Controlls.VirtualMouseActions.enabled
+  fullName: Controlls.VirtualMouseActions.enabled
+  nameWithType: Controlls.VirtualMouseActions.enabled
+- uid: Global.Controlls.VirtualMouseActions.enabled*
+  name: enabled
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_enabled_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.enabled
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.enabled
+  nameWithType: Controlls.VirtualMouseActions.enabled
+- uid: Global.Controlls.VirtualMouseActions.Get
+  name: Get()
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_Get
+  commentId: M:Global.Controlls.VirtualMouseActions.Get
+  fullName: Controlls.VirtualMouseActions.Get()
+  nameWithType: Controlls.VirtualMouseActions.Get()
+- uid: Global.Controlls.VirtualMouseActions.Get*
+  name: Get
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_Get_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.Get
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.Get
+  nameWithType: Controlls.VirtualMouseActions.Get
+- uid: Global.Controlls.VirtualMouseActions.leftMouseButton
+  name: leftMouseButton
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_leftMouseButton
+  commentId: P:Global.Controlls.VirtualMouseActions.leftMouseButton
+  fullName: Controlls.VirtualMouseActions.leftMouseButton
+  nameWithType: Controlls.VirtualMouseActions.leftMouseButton
+- uid: Global.Controlls.VirtualMouseActions.leftMouseButton*
+  name: leftMouseButton
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_leftMouseButton_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.leftMouseButton
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.leftMouseButton
+  nameWithType: Controlls.VirtualMouseActions.leftMouseButton
+- uid: Global.Controlls.VirtualMouseActions.middleMouseButton
+  name: middleMouseButton
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_middleMouseButton
+  commentId: P:Global.Controlls.VirtualMouseActions.middleMouseButton
+  fullName: Controlls.VirtualMouseActions.middleMouseButton
+  nameWithType: Controlls.VirtualMouseActions.middleMouseButton
+- uid: Global.Controlls.VirtualMouseActions.middleMouseButton*
+  name: middleMouseButton
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_middleMouseButton_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.middleMouseButton
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.middleMouseButton
+  nameWithType: Controlls.VirtualMouseActions.middleMouseButton
+- uid: Global.Controlls.VirtualMouseActions.moveCursor
+  name: moveCursor
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_moveCursor
+  commentId: P:Global.Controlls.VirtualMouseActions.moveCursor
+  fullName: Controlls.VirtualMouseActions.moveCursor
+  nameWithType: Controlls.VirtualMouseActions.moveCursor
+- uid: Global.Controlls.VirtualMouseActions.moveCursor*
+  name: moveCursor
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_moveCursor_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.moveCursor
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.moveCursor
+  nameWithType: Controlls.VirtualMouseActions.moveCursor
+- uid: Global.Controlls.VirtualMouseActions.op_Implicit(Controlls.VirtualMouseActions)~InputActionMap
+  name: Implicit(Controlls.VirtualMouseActions to InputActionMap)
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_op_Implicit_Controlls_VirtualMouseActions__InputActionMap
+  commentId: M:Global.Controlls.VirtualMouseActions.op_Implicit(Controlls.VirtualMouseActions)~InputActionMap
+  name.vb: Widening(Controlls.VirtualMouseActions to InputActionMap)
+  fullName: Controlls.VirtualMouseActions.Implicit(Controlls.VirtualMouseActions to InputActionMap)
+  fullName.vb: Controlls.VirtualMouseActions.Widening(Controlls.VirtualMouseActions to InputActionMap)
+  nameWithType: Controlls.VirtualMouseActions.Implicit(Controlls.VirtualMouseActions to InputActionMap)
+  nameWithType.vb: Controlls.VirtualMouseActions.Widening(Controlls.VirtualMouseActions to InputActionMap)
+- uid: Global.Controlls.VirtualMouseActions.op_Implicit*
+  name: Implicit
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_op_Implicit_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Controlls.VirtualMouseActions.Implicit
+  fullName.vb: Controlls.VirtualMouseActions.Widening
+  nameWithType: Controlls.VirtualMouseActions.Implicit
+  nameWithType.vb: Controlls.VirtualMouseActions.Widening
+- uid: Global.Controlls.VirtualMouseActions.point
+  name: point
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_point
+  commentId: P:Global.Controlls.VirtualMouseActions.point
+  fullName: Controlls.VirtualMouseActions.point
+  nameWithType: Controlls.VirtualMouseActions.point
+- uid: Global.Controlls.VirtualMouseActions.point*
+  name: point
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_point_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.point
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.point
+  nameWithType: Controlls.VirtualMouseActions.point
+- uid: Global.Controlls.VirtualMouseActions.rightMouseButton
+  name: rightMouseButton
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_rightMouseButton
+  commentId: P:Global.Controlls.VirtualMouseActions.rightMouseButton
+  fullName: Controlls.VirtualMouseActions.rightMouseButton
+  nameWithType: Controlls.VirtualMouseActions.rightMouseButton
+- uid: Global.Controlls.VirtualMouseActions.rightMouseButton*
+  name: rightMouseButton
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_rightMouseButton_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.rightMouseButton
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.rightMouseButton
+  nameWithType: Controlls.VirtualMouseActions.rightMouseButton
+- uid: Global.Controlls.VirtualMouseActions.scroll
+  name: scroll
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_scroll
+  commentId: P:Global.Controlls.VirtualMouseActions.scroll
+  fullName: Controlls.VirtualMouseActions.scroll
+  nameWithType: Controlls.VirtualMouseActions.scroll
+- uid: Global.Controlls.VirtualMouseActions.scroll*
+  name: scroll
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_scroll_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.scroll
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.scroll
+  nameWithType: Controlls.VirtualMouseActions.scroll
+- uid: Global.Controlls.VirtualMouseActions.SetCallbacks(Controlls.IVirtualMouseActions)
+  name: SetCallbacks(Controlls.IVirtualMouseActions)
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_SetCallbacks_Controlls_IVirtualMouseActions_
+  commentId: M:Global.Controlls.VirtualMouseActions.SetCallbacks(Controlls.IVirtualMouseActions)
+  fullName: Controlls.VirtualMouseActions.SetCallbacks(Controlls.IVirtualMouseActions)
+  nameWithType: Controlls.VirtualMouseActions.SetCallbacks(Controlls.IVirtualMouseActions)
+- uid: Global.Controlls.VirtualMouseActions.SetCallbacks*
+  name: SetCallbacks
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_SetCallbacks_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.SetCallbacks
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.SetCallbacks
+  nameWithType: Controlls.VirtualMouseActions.SetCallbacks
+- uid: Global.Controlls.VirtualMouseActions.toogleMouseVisibility
+  name: toogleMouseVisibility
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_toogleMouseVisibility
+  commentId: P:Global.Controlls.VirtualMouseActions.toogleMouseVisibility
+  fullName: Controlls.VirtualMouseActions.toogleMouseVisibility
+  nameWithType: Controlls.VirtualMouseActions.toogleMouseVisibility
+- uid: Global.Controlls.VirtualMouseActions.toogleMouseVisibility*
+  name: toogleMouseVisibility
+  href: api/Global.Controlls.VirtualMouseActions.html#Global_Controlls_VirtualMouseActions_toogleMouseVisibility_
+  commentId: Overload:Global.Controlls.VirtualMouseActions.toogleMouseVisibility
+  isSpec: "True"
+  fullName: Controlls.VirtualMouseActions.toogleMouseVisibility
+  nameWithType: Controlls.VirtualMouseActions.toogleMouseVisibility
+- uid: Global.CustomButton
+  name: CustomButton
+  href: api/Global.CustomButton.html
+  commentId: T:Global.CustomButton
+  fullName: CustomButton
+  nameWithType: CustomButton
+- uid: Global.CustomButton.buttonimage
+  name: buttonimage
+  href: api/Global.CustomButton.html#Global_CustomButton_buttonimage
+  commentId: F:Global.CustomButton.buttonimage
+  fullName: CustomButton.buttonimage
+  nameWithType: CustomButton.buttonimage
 - uid: Global.Enemy
   name: Enemy
   href: api/Global.Enemy.html
@@ -806,6 +1598,18 @@ references:
   commentId: F:Global.Enemy.body
   fullName: Enemy.body
   nameWithType: Enemy.body
+- uid: Global.Enemy.bossHp
+  name: bossHp
+  href: api/Global.Enemy.html#Global_Enemy_bossHp
+  commentId: F:Global.Enemy.bossHp
+  fullName: Enemy.bossHp
+  nameWithType: Enemy.bossHp
+- uid: Global.Enemy.bossUI
+  name: bossUI
+  href: api/Global.Enemy.html#Global_Enemy_bossUI
+  commentId: F:Global.Enemy.bossUI
+  fullName: Enemy.bossUI
+  nameWithType: Enemy.bossUI
 - uid: Global.Enemy.collisionDmg
   name: collisionDmg
   href: api/Global.Enemy.html#Global_Enemy_collisionDmg
@@ -830,6 +1634,24 @@ references:
   commentId: F:Global.Enemy.destoryAfterCollison
   fullName: Enemy.destoryAfterCollison
   nameWithType: Enemy.destoryAfterCollison
+- uid: Global.Enemy.doNotCountAsKill
+  name: doNotCountAsKill
+  href: api/Global.Enemy.html#Global_Enemy_doNotCountAsKill
+  commentId: F:Global.Enemy.doNotCountAsKill
+  fullName: Enemy.doNotCountAsKill
+  nameWithType: Enemy.doNotCountAsKill
+- uid: Global.Enemy.doNotUseForceToMove
+  name: doNotUseForceToMove
+  href: api/Global.Enemy.html#Global_Enemy_doNotUseForceToMove
+  commentId: F:Global.Enemy.doNotUseForceToMove
+  fullName: Enemy.doNotUseForceToMove
+  nameWithType: Enemy.doNotUseForceToMove
+- uid: Global.Enemy.enemyHitSound
+  name: enemyHitSound
+  href: api/Global.Enemy.html#Global_Enemy_enemyHitSound
+  commentId: F:Global.Enemy.enemyHitSound
+  fullName: Enemy.enemyHitSound
+  nameWithType: Enemy.enemyHitSound
 - uid: Global.Enemy.followPlayerMovementX
   name: followPlayerMovementX
   href: api/Global.Enemy.html#Global_Enemy_followPlayerMovementX
@@ -866,12 +1688,37 @@ references:
   commentId: F:Global.Enemy.maxDuration
   fullName: Enemy.maxDuration
   nameWithType: Enemy.maxDuration
+- uid: Global.Enemy.MaxHealth
+  name: MaxHealth
+  href: api/Global.Enemy.html#Global_Enemy_MaxHealth
+  commentId: P:Global.Enemy.MaxHealth
+  fullName: Enemy.MaxHealth
+  nameWithType: Enemy.MaxHealth
+- uid: Global.Enemy.MaxHealth*
+  name: MaxHealth
+  href: api/Global.Enemy.html#Global_Enemy_MaxHealth_
+  commentId: Overload:Global.Enemy.MaxHealth
+  isSpec: "True"
+  fullName: Enemy.MaxHealth
+  nameWithType: Enemy.MaxHealth
+- uid: Global.Enemy.maxMonyeValue
+  name: maxMonyeValue
+  href: api/Global.Enemy.html#Global_Enemy_maxMonyeValue
+  commentId: F:Global.Enemy.maxMonyeValue
+  fullName: Enemy.maxMonyeValue
+  nameWithType: Enemy.maxMonyeValue
 - uid: Global.Enemy.maxSpeed
   name: maxSpeed
   href: api/Global.Enemy.html#Global_Enemy_maxSpeed
   commentId: F:Global.Enemy.maxSpeed
   fullName: Enemy.maxSpeed
   nameWithType: Enemy.maxSpeed
+- uid: Global.Enemy.minMoneyValue
+  name: minMoneyValue
+  href: api/Global.Enemy.html#Global_Enemy_minMoneyValue
+  commentId: F:Global.Enemy.minMoneyValue
+  fullName: Enemy.minMoneyValue
+  nameWithType: Enemy.minMoneyValue
 - uid: Global.Enemy.moveToPlayer
   name: moveToPlayer
   href: api/Global.Enemy.html#Global_Enemy_moveToPlayer
@@ -890,6 +1737,12 @@ references:
   commentId: F:Global.Enemy.playerfollowRange
   fullName: Enemy.playerfollowRange
   nameWithType: Enemy.playerfollowRange
+- uid: Global.Enemy.showBossHp
+  name: showBossHp
+  href: api/Global.Enemy.html#Global_Enemy_showBossHp
+  commentId: F:Global.Enemy.showBossHp
+  fullName: Enemy.showBossHp
+  nameWithType: Enemy.showBossHp
 - uid: Global.Enemy.SpawnerCallback
   name: SpawnerCallback
   href: api/Global.Enemy.html#Global_Enemy_SpawnerCallback
@@ -941,6 +1794,30 @@ references:
   commentId: F:Global.Enemy.waypoints
   fullName: Enemy.waypoints
   nameWithType: Enemy.waypoints
+- uid: Global.Enemy_rotation
+  name: Enemy_rotation
+  href: api/Global.Enemy_rotation.html
+  commentId: T:Global.Enemy_rotation
+  fullName: Enemy_rotation
+  nameWithType: Enemy_rotation
+- uid: Global.Enemy_rotation.activatedAfterMoveIn
+  name: activatedAfterMoveIn
+  href: api/Global.Enemy_rotation.html#Global_Enemy_rotation_activatedAfterMoveIn
+  commentId: F:Global.Enemy_rotation.activatedAfterMoveIn
+  fullName: Enemy_rotation.activatedAfterMoveIn
+  nameWithType: Enemy_rotation.activatedAfterMoveIn
+- uid: Global.Enemy_rotation.rotateSpeed
+  name: rotateSpeed
+  href: api/Global.Enemy_rotation.html#Global_Enemy_rotation_rotateSpeed
+  commentId: F:Global.Enemy_rotation.rotateSpeed
+  fullName: Enemy_rotation.rotateSpeed
+  nameWithType: Enemy_rotation.rotateSpeed
+- uid: Global.Enemy_rotation.rotateTowardsPlayer
+  name: rotateTowardsPlayer
+  href: api/Global.Enemy_rotation.html#Global_Enemy_rotation_rotateTowardsPlayer
+  commentId: F:Global.Enemy_rotation.rotateTowardsPlayer
+  fullName: Enemy_rotation.rotateTowardsPlayer
+  nameWithType: Enemy_rotation.rotateTowardsPlayer
 - uid: Global.Enemy_skills
   name: Enemy_skills
   href: api/Global.Enemy_skills.html
@@ -959,6 +1836,12 @@ references:
   commentId: F:Global.Enemy_skills.dmgModifier
   fullName: Enemy_skills.dmgModifier
   nameWithType: Enemy_skills.dmgModifier
+- uid: Global.Enemy_skills.doNotDeactivate
+  name: doNotDeactivate
+  href: api/Global.Enemy_skills.html#Global_Enemy_skills_doNotDeactivate
+  commentId: F:Global.Enemy_skills.doNotDeactivate
+  fullName: Enemy_skills.doNotDeactivate
+  nameWithType: Enemy_skills.doNotDeactivate
 - uid: Global.Enemy_skills.shootsToCreate
   name: shootsToCreate
   href: api/Global.Enemy_skills.html#Global_Enemy_skills_shootsToCreate
@@ -1015,6 +1898,42 @@ references:
   commentId: F:Global.Enemy_Spawner.enemysToSpawn
   fullName: Enemy_Spawner.enemysToSpawn
   nameWithType: Enemy_Spawner.enemysToSpawn
+- uid: Global.Enemy_Spawner.modifyAddDmg
+  name: modifyAddDmg
+  href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_modifyAddDmg
+  commentId: F:Global.Enemy_Spawner.modifyAddDmg
+  fullName: Enemy_Spawner.modifyAddDmg
+  nameWithType: Enemy_Spawner.modifyAddDmg
+- uid: Global.Enemy_Spawner.modifyAddHealth
+  name: modifyAddHealth
+  href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_modifyAddHealth
+  commentId: F:Global.Enemy_Spawner.modifyAddHealth
+  fullName: Enemy_Spawner.modifyAddHealth
+  nameWithType: Enemy_Spawner.modifyAddHealth
+- uid: Global.Enemy_Spawner.modifyDoNotUseForce
+  name: modifyDoNotUseForce
+  href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_modifyDoNotUseForce
+  commentId: F:Global.Enemy_Spawner.modifyDoNotUseForce
+  fullName: Enemy_Spawner.modifyDoNotUseForce
+  nameWithType: Enemy_Spawner.modifyDoNotUseForce
+- uid: Global.Enemy_Spawner.modifyMoveIn
+  name: modifyMoveIn
+  href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_modifyMoveIn
+  commentId: F:Global.Enemy_Spawner.modifyMoveIn
+  fullName: Enemy_Spawner.modifyMoveIn
+  nameWithType: Enemy_Spawner.modifyMoveIn
+- uid: Global.Enemy_Spawner.modifyMoveOut
+  name: modifyMoveOut
+  href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_modifyMoveOut
+  commentId: F:Global.Enemy_Spawner.modifyMoveOut
+  fullName: Enemy_Spawner.modifyMoveOut
+  nameWithType: Enemy_Spawner.modifyMoveOut
+- uid: Global.Enemy_Spawner.modifyWaypoints
+  name: modifyWaypoints
+  href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_modifyWaypoints
+  commentId: F:Global.Enemy_Spawner.modifyWaypoints
+  fullName: Enemy_Spawner.modifyWaypoints
+  nameWithType: Enemy_Spawner.modifyWaypoints
 - uid: Global.Enemy_Spawner.spawnKilled
   name: spawnKilled()
   href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_spawnKilled
@@ -1040,12 +1959,30 @@ references:
   commentId: F:Global.Enemy_Spawner.triggerArea
   fullName: Enemy_Spawner.triggerArea
   nameWithType: Enemy_Spawner.triggerArea
+- uid: Global.Enemy_Spawner.useModification
+  name: useModification
+  href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_useModification
+  commentId: F:Global.Enemy_Spawner.useModification
+  fullName: Enemy_Spawner.useModification
+  nameWithType: Enemy_Spawner.useModification
+- uid: Global.Enemy_Spawner.useRandomSpawnInfo
+  name: useRandomSpawnInfo
+  href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_useRandomSpawnInfo
+  commentId: F:Global.Enemy_Spawner.useRandomSpawnInfo
+  fullName: Enemy_Spawner.useRandomSpawnInfo
+  nameWithType: Enemy_Spawner.useRandomSpawnInfo
 - uid: Global.Enemy_Spawner.useTriggerArea
   name: useTriggerArea
   href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_useTriggerArea
   commentId: F:Global.Enemy_Spawner.useTriggerArea
   fullName: Enemy_Spawner.useTriggerArea
   nameWithType: Enemy_Spawner.useTriggerArea
+- uid: Global.Enemy_Spawner.waveSpawner
+  name: waveSpawner
+  href: api/Global.Enemy_Spawner.html#Global_Enemy_Spawner_waveSpawner
+  commentId: F:Global.Enemy_Spawner.waveSpawner
+  fullName: Enemy_Spawner.waveSpawner
+  nameWithType: Enemy_Spawner.waveSpawner
 - uid: Global.Enemy_Spawner_Info
   name: Enemy_Spawner_Info
   href: api/Global.Enemy_Spawner_Info.html
@@ -1134,36 +2071,176 @@ references:
   commentId: F:Global.Enemy_Spawner_Info.useTriggerArea
   fullName: Enemy_Spawner_Info.useTriggerArea
   nameWithType: Enemy_Spawner_Info.useTriggerArea
+- uid: Global.EnemyHitFlicker
+  name: EnemyHitFlicker
+  href: api/Global.EnemyHitFlicker.html
+  commentId: T:Global.EnemyHitFlicker
+  fullName: EnemyHitFlicker
+  nameWithType: EnemyHitFlicker
+- uid: Global.EnemyHitFlicker.HitFlickerInQue
+  name: HitFlickerInQue
+  href: api/Global.EnemyHitFlicker.html#Global_EnemyHitFlicker_HitFlickerInQue
+  commentId: P:Global.EnemyHitFlicker.HitFlickerInQue
+  fullName: EnemyHitFlicker.HitFlickerInQue
+  nameWithType: EnemyHitFlicker.HitFlickerInQue
+- uid: Global.EnemyHitFlicker.HitFlickerInQue*
+  name: HitFlickerInQue
+  href: api/Global.EnemyHitFlicker.html#Global_EnemyHitFlicker_HitFlickerInQue_
+  commentId: Overload:Global.EnemyHitFlicker.HitFlickerInQue
+  isSpec: "True"
+  fullName: EnemyHitFlicker.HitFlickerInQue
+  nameWithType: EnemyHitFlicker.HitFlickerInQue
+- uid: Global.FollowMouse
+  name: FollowMouse
+  href: api/Global.FollowMouse.html
+  commentId: T:Global.FollowMouse
+  fullName: FollowMouse
+  nameWithType: FollowMouse
+- uid: Global.FollowMouse.inv
+  name: inv
+  href: api/Global.FollowMouse.html#Global_FollowMouse_inv
+  commentId: F:Global.FollowMouse.inv
+  fullName: FollowMouse.inv
+  nameWithType: FollowMouse.inv
+- uid: Global.FollowMouse.MouseIsPressed
+  name: MouseIsPressed
+  href: api/Global.FollowMouse.html#Global_FollowMouse_MouseIsPressed
+  commentId: P:Global.FollowMouse.MouseIsPressed
+  fullName: FollowMouse.MouseIsPressed
+  nameWithType: FollowMouse.MouseIsPressed
+- uid: Global.FollowMouse.MouseIsPressed*
+  name: MouseIsPressed
+  href: api/Global.FollowMouse.html#Global_FollowMouse_MouseIsPressed_
+  commentId: Overload:Global.FollowMouse.MouseIsPressed
+  isSpec: "True"
+  fullName: FollowMouse.MouseIsPressed
+  nameWithType: FollowMouse.MouseIsPressed
+- uid: Global.FollowMouse.slotMouseoverCheck
+  name: slotMouseoverCheck
+  href: api/Global.FollowMouse.html#Global_FollowMouse_slotMouseoverCheck
+  commentId: F:Global.FollowMouse.slotMouseoverCheck
+  fullName: FollowMouse.slotMouseoverCheck
+  nameWithType: FollowMouse.slotMouseoverCheck
+- uid: Global.GameCursor
+  name: GameCursor
+  href: api/Global.GameCursor.html
+  commentId: T:Global.GameCursor
+  fullName: GameCursor
+  nameWithType: GameCursor
+- uid: Global.GameCursor.cursor
+  name: cursor
+  href: api/Global.GameCursor.html#Global_GameCursor_cursor
+  commentId: F:Global.GameCursor.cursor
+  fullName: GameCursor.cursor
+  nameWithType: GameCursor.cursor
+- uid: Global.GameCursor.hotSpot
+  name: hotSpot
+  href: api/Global.GameCursor.html#Global_GameCursor_hotSpot
+  commentId: F:Global.GameCursor.hotSpot
+  fullName: GameCursor.hotSpot
+  nameWithType: GameCursor.hotSpot
+- uid: Global.GameCursor.mode
+  name: mode
+  href: api/Global.GameCursor.html#Global_GameCursor_mode
+  commentId: F:Global.GameCursor.mode
+  fullName: GameCursor.mode
+  nameWithType: GameCursor.mode
 - uid: Global.Globals
   name: Globals
   href: api/Global.Globals.html
   commentId: T:Global.Globals
   fullName: Globals
   nameWithType: Globals
+- uid: Global.Globals.bossHpBar
+  name: bossHpBar
+  href: api/Global.Globals.html#Global_Globals_bossHpBar
+  commentId: F:Global.Globals.bossHpBar
+  fullName: Globals.bossHpBar
+  nameWithType: Globals.bossHpBar
+- uid: Global.Globals.bossUI
+  name: bossUI
+  href: api/Global.Globals.html#Global_Globals_bossUI
+  commentId: F:Global.Globals.bossUI
+  fullName: Globals.bossUI
+  nameWithType: Globals.bossUI
 - uid: Global.Globals.bulletPool
   name: bulletPool
   href: api/Global.Globals.html#Global_Globals_bulletPool
   commentId: F:Global.Globals.bulletPool
   fullName: Globals.bulletPool
   nameWithType: Globals.bulletPool
+- uid: Global.Globals.catalog
+  name: catalog
+  href: api/Global.Globals.html#Global_Globals_catalog
+  commentId: F:Global.Globals.catalog
+  fullName: Globals.catalog
+  nameWithType: Globals.catalog
 - uid: Global.Globals.currentCamera
   name: currentCamera
   href: api/Global.Globals.html#Global_Globals_currentCamera
   commentId: F:Global.Globals.currentCamera
   fullName: Globals.currentCamera
   nameWithType: Globals.currentCamera
+- uid: Global.Globals.currentItem
+  name: currentItem
+  href: api/Global.Globals.html#Global_Globals_currentItem
+  commentId: F:Global.Globals.currentItem
+  fullName: Globals.currentItem
+  nameWithType: Globals.currentItem
 - uid: Global.Globals.currentWinCondition
   name: currentWinCondition
   href: api/Global.Globals.html#Global_Globals_currentWinCondition
   commentId: F:Global.Globals.currentWinCondition
   fullName: Globals.currentWinCondition
   nameWithType: Globals.currentWinCondition
+- uid: Global.Globals.dontDestoryOnLoadObjectID
+  name: dontDestoryOnLoadObjectID
+  href: api/Global.Globals.html#Global_Globals_dontDestoryOnLoadObjectID
+  commentId: F:Global.Globals.dontDestoryOnLoadObjectID
+  fullName: Globals.dontDestoryOnLoadObjectID
+  nameWithType: Globals.dontDestoryOnLoadObjectID
+- uid: Global.Globals.infityWaveSpawner
+  name: infityWaveSpawner
+  href: api/Global.Globals.html#Global_Globals_infityWaveSpawner
+  commentId: F:Global.Globals.infityWaveSpawner
+  fullName: Globals.infityWaveSpawner
+  nameWithType: Globals.infityWaveSpawner
+- uid: Global.Globals.inventory
+  name: inventory
+  href: api/Global.Globals.html#Global_Globals_inventory
+  commentId: F:Global.Globals.inventory
+  fullName: Globals.inventory
+  nameWithType: Globals.inventory
+- uid: Global.Globals.lastSceneIndex
+  name: lastSceneIndex
+  href: api/Global.Globals.html#Global_Globals_lastSceneIndex
+  commentId: F:Global.Globals.lastSceneIndex
+  fullName: Globals.lastSceneIndex
+  nameWithType: Globals.lastSceneIndex
 - uid: Global.Globals.menuHandler
   name: menuHandler
   href: api/Global.Globals.html#Global_Globals_menuHandler
   commentId: F:Global.Globals.menuHandler
   fullName: Globals.menuHandler
   nameWithType: Globals.menuHandler
+- uid: Global.Globals.money
+  name: money
+  href: api/Global.Globals.html#Global_Globals_money
+  commentId: F:Global.Globals.money
+  fullName: Globals.money
+  nameWithType: Globals.money
+- uid: Global.Globals.moneyDrop
+  name: moneyDrop
+  href: api/Global.Globals.html#Global_Globals_moneyDrop
+  commentId: F:Global.Globals.moneyDrop
+  fullName: Globals.moneyDrop
+  nameWithType: Globals.moneyDrop
+- uid: Global.Globals.moneyIcon
+  name: moneyIcon
+  href: api/Global.Globals.html#Global_Globals_moneyIcon
+  commentId: F:Global.Globals.moneyIcon
+  fullName: Globals.moneyIcon
+  nameWithType: Globals.moneyIcon
 - uid: Global.Globals.pause
   name: pause
   href: api/Global.Globals.html#Global_Globals_pause
@@ -1176,24 +2253,489 @@ references:
   commentId: F:Global.Globals.player
   fullName: Globals.player
   nameWithType: Globals.player
+- uid: Global.Globals.skipStartCutscene
+  name: skipStartCutscene
+  href: api/Global.Globals.html#Global_Globals_skipStartCutscene
+  commentId: F:Global.Globals.skipStartCutscene
+  fullName: Globals.skipStartCutscene
+  nameWithType: Globals.skipStartCutscene
 - uid: Global.Globals.spawnerListe
   name: spawnerListe
   href: api/Global.Globals.html#Global_Globals_spawnerListe
   commentId: F:Global.Globals.spawnerListe
   fullName: Globals.spawnerListe
   nameWithType: Globals.spawnerListe
+- uid: Global.Globals.tempEnemyHit
+  name: tempEnemyHit
+  href: api/Global.Globals.html#Global_Globals_tempEnemyHit
+  commentId: F:Global.Globals.tempEnemyHit
+  fullName: Globals.tempEnemyHit
+  nameWithType: Globals.tempEnemyHit
+- uid: Global.Globals.tooltip
+  name: tooltip
+  href: api/Global.Globals.html#Global_Globals_tooltip
+  commentId: F:Global.Globals.tooltip
+  fullName: Globals.tooltip
+  nameWithType: Globals.tooltip
+- uid: Global.Globals.virtualMouse
+  name: virtualMouse
+  href: api/Global.Globals.html#Global_Globals_virtualMouse
+  commentId: F:Global.Globals.virtualMouse
+  fullName: Globals.virtualMouse
+  nameWithType: Globals.virtualMouse
+- uid: Global.Globals.waveControler
+  name: waveControler
+  href: api/Global.Globals.html#Global_Globals_waveControler
+  commentId: F:Global.Globals.waveControler
+  fullName: Globals.waveControler
+  nameWithType: Globals.waveControler
 - uid: Global.Globals_init
   name: Globals_init
   href: api/Global.Globals_init.html
   commentId: T:Global.Globals_init
   fullName: Globals_init
   nameWithType: Globals_init
+- uid: Global.Globals_init.moneyDropPrefrab
+  name: moneyDropPrefrab
+  href: api/Global.Globals_init.html#Global_Globals_init_moneyDropPrefrab
+  commentId: F:Global.Globals_init.moneyDropPrefrab
+  fullName: Globals_init.moneyDropPrefrab
+  nameWithType: Globals_init.moneyDropPrefrab
+- uid: Global.Globals_init.moneyIcon
+  name: moneyIcon
+  href: api/Global.Globals_init.html#Global_Globals_init_moneyIcon
+  commentId: F:Global.Globals_init.moneyIcon
+  fullName: Globals_init.moneyIcon
+  nameWithType: Globals_init.moneyIcon
+- uid: Global.Globals_init.tempEnemyHit
+  name: tempEnemyHit
+  href: api/Global.Globals_init.html#Global_Globals_init_tempEnemyHit
+  commentId: F:Global.Globals_init.tempEnemyHit
+  fullName: Globals_init.tempEnemyHit
+  nameWithType: Globals_init.tempEnemyHit
+- uid: Global.Inventar_Object
+  name: Inventar_Object
+  href: api/Global.Inventar_Object.html
+  commentId: T:Global.Inventar_Object
+  fullName: Inventar_Object
+  nameWithType: Inventar_Object
+- uid: Global.Inventar_Object.Amount
+  name: Amount
+  href: api/Global.Inventar_Object.html#Global_Inventar_Object_Amount
+  commentId: P:Global.Inventar_Object.Amount
+  fullName: Inventar_Object.Amount
+  nameWithType: Inventar_Object.Amount
+- uid: Global.Inventar_Object.Amount*
+  name: Amount
+  href: api/Global.Inventar_Object.html#Global_Inventar_Object_Amount_
+  commentId: Overload:Global.Inventar_Object.Amount
+  isSpec: "True"
+  fullName: Inventar_Object.Amount
+  nameWithType: Inventar_Object.Amount
+- uid: Global.Inventory_fill
+  name: Inventory_fill
+  href: api/Global.Inventory_fill.html
+  commentId: T:Global.Inventory_fill
+  fullName: Inventory_fill
+  nameWithType: Inventory_fill
+- uid: Global.Inventory_fill.audios
+  name: audios
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_audios
+  commentId: F:Global.Inventory_fill.audios
+  fullName: Inventory_fill.audios
+  nameWithType: Inventory_fill.audios
+- uid: Global.Inventory_fill.blockAudio
+  name: blockAudio
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_blockAudio
+  commentId: F:Global.Inventory_fill.blockAudio
+  fullName: Inventory_fill.blockAudio
+  nameWithType: Inventory_fill.blockAudio
+- uid: Global.Inventory_fill.display
+  name: display
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_display
+  commentId: F:Global.Inventory_fill.display
+  fullName: Inventory_fill.display
+  nameWithType: Inventory_fill.display
+- uid: Global.Inventory_fill.dragAndDrop
+  name: dragAndDrop
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_dragAndDrop
+  commentId: F:Global.Inventory_fill.dragAndDrop
+  fullName: Inventory_fill.dragAndDrop
+  nameWithType: Inventory_fill.dragAndDrop
+- uid: Global.Inventory_fill.inventoryButton(Item,System.Boolean,GameObject)
+  name: inventoryButton(Item, Boolean, GameObject)
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_inventoryButton_Item_System_Boolean_GameObject_
+  commentId: M:Global.Inventory_fill.inventoryButton(Item,System.Boolean,GameObject)
+  fullName: Inventory_fill.inventoryButton(Item, System.Boolean, GameObject)
+  nameWithType: Inventory_fill.inventoryButton(Item, Boolean, GameObject)
+- uid: Global.Inventory_fill.inventoryButton*
+  name: inventoryButton
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_inventoryButton_
+  commentId: Overload:Global.Inventory_fill.inventoryButton
+  isSpec: "True"
+  fullName: Inventory_fill.inventoryButton
+  nameWithType: Inventory_fill.inventoryButton
+- uid: Global.Inventory_fill.LockedBox
+  name: LockedBox
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_LockedBox
+  commentId: F:Global.Inventory_fill.LockedBox
+  fullName: Inventory_fill.LockedBox
+  nameWithType: Inventory_fill.LockedBox
+- uid: Global.Inventory_fill.mainWeaponBox
+  name: mainWeaponBox
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_mainWeaponBox
+  commentId: F:Global.Inventory_fill.mainWeaponBox
+  fullName: Inventory_fill.mainWeaponBox
+  nameWithType: Inventory_fill.mainWeaponBox
+- uid: Global.Inventory_fill.mainWeaponSlotClicked(Image)
+  name: mainWeaponSlotClicked(Image)
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_mainWeaponSlotClicked_Image_
+  commentId: M:Global.Inventory_fill.mainWeaponSlotClicked(Image)
+  fullName: Inventory_fill.mainWeaponSlotClicked(Image)
+  nameWithType: Inventory_fill.mainWeaponSlotClicked(Image)
+- uid: Global.Inventory_fill.mainWeaponSlotClicked*
+  name: mainWeaponSlotClicked
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_mainWeaponSlotClicked_
+  commentId: Overload:Global.Inventory_fill.mainWeaponSlotClicked
+  isSpec: "True"
+  fullName: Inventory_fill.mainWeaponSlotClicked
+  nameWithType: Inventory_fill.mainWeaponSlotClicked
+- uid: Global.Inventory_fill.partsBox
+  name: partsBox
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_partsBox
+  commentId: F:Global.Inventory_fill.partsBox
+  fullName: Inventory_fill.partsBox
+  nameWithType: Inventory_fill.partsBox
+- uid: Global.Inventory_fill.secondaryWeaponBox
+  name: secondaryWeaponBox
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_secondaryWeaponBox
+  commentId: F:Global.Inventory_fill.secondaryWeaponBox
+  fullName: Inventory_fill.secondaryWeaponBox
+  nameWithType: Inventory_fill.secondaryWeaponBox
+- uid: Global.Inventory_fill.secondaryWeaponSlotClicked(Image)
+  name: secondaryWeaponSlotClicked(Image)
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_secondaryWeaponSlotClicked_Image_
+  commentId: M:Global.Inventory_fill.secondaryWeaponSlotClicked(Image)
+  fullName: Inventory_fill.secondaryWeaponSlotClicked(Image)
+  nameWithType: Inventory_fill.secondaryWeaponSlotClicked(Image)
+- uid: Global.Inventory_fill.secondaryWeaponSlotClicked*
+  name: secondaryWeaponSlotClicked
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_secondaryWeaponSlotClicked_
+  commentId: Overload:Global.Inventory_fill.secondaryWeaponSlotClicked
+  isSpec: "True"
+  fullName: Inventory_fill.secondaryWeaponSlotClicked
+  nameWithType: Inventory_fill.secondaryWeaponSlotClicked
+- uid: Global.Inventory_fill.secondaryWeaponSlotTwoClicked(Image)
+  name: secondaryWeaponSlotTwoClicked(Image)
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_secondaryWeaponSlotTwoClicked_Image_
+  commentId: M:Global.Inventory_fill.secondaryWeaponSlotTwoClicked(Image)
+  fullName: Inventory_fill.secondaryWeaponSlotTwoClicked(Image)
+  nameWithType: Inventory_fill.secondaryWeaponSlotTwoClicked(Image)
+- uid: Global.Inventory_fill.secondaryWeaponSlotTwoClicked*
+  name: secondaryWeaponSlotTwoClicked
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_secondaryWeaponSlotTwoClicked_
+  commentId: Overload:Global.Inventory_fill.secondaryWeaponSlotTwoClicked
+  isSpec: "True"
+  fullName: Inventory_fill.secondaryWeaponSlotTwoClicked
+  nameWithType: Inventory_fill.secondaryWeaponSlotTwoClicked
+- uid: Global.Inventory_fill.shieldSlotClicked(Image)
+  name: shieldSlotClicked(Image)
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_shieldSlotClicked_Image_
+  commentId: M:Global.Inventory_fill.shieldSlotClicked(Image)
+  fullName: Inventory_fill.shieldSlotClicked(Image)
+  nameWithType: Inventory_fill.shieldSlotClicked(Image)
+- uid: Global.Inventory_fill.shieldSlotClicked*
+  name: shieldSlotClicked
+  href: api/Global.Inventory_fill.html#Global_Inventory_fill_shieldSlotClicked_
+  commentId: Overload:Global.Inventory_fill.shieldSlotClicked
+  isSpec: "True"
+  fullName: Inventory_fill.shieldSlotClicked
+  nameWithType: Inventory_fill.shieldSlotClicked
+- uid: Global.InventoryButton
+  name: InventoryButton
+  href: api/Global.InventoryButton.html
+  commentId: T:Global.InventoryButton
+  fullName: InventoryButton
+  nameWithType: InventoryButton
+- uid: Global.InventoryButton.Inv
+  name: Inv
+  href: api/Global.InventoryButton.html#Global_InventoryButton_Inv
+  commentId: P:Global.InventoryButton.Inv
+  fullName: InventoryButton.Inv
+  nameWithType: InventoryButton.Inv
+- uid: Global.InventoryButton.Inv*
+  name: Inv
+  href: api/Global.InventoryButton.html#Global_InventoryButton_Inv_
+  commentId: Overload:Global.InventoryButton.Inv
+  isSpec: "True"
+  fullName: InventoryButton.Inv
+  nameWithType: InventoryButton.Inv
+- uid: Global.InventoryButton.Item
+  name: Item
+  href: api/Global.InventoryButton.html#Global_InventoryButton_Item
+  commentId: P:Global.InventoryButton.Item
+  fullName: InventoryButton.Item
+  nameWithType: InventoryButton.Item
+- uid: Global.InventoryButton.Item*
+  name: Item
+  href: api/Global.InventoryButton.html#Global_InventoryButton_Item_
+  commentId: Overload:Global.InventoryButton.Item
+  isSpec: "True"
+  fullName: InventoryButton.Item
+  nameWithType: InventoryButton.Item
+- uid: Global.InventoryButton.Locked
+  name: Locked
+  href: api/Global.InventoryButton.html#Global_InventoryButton_Locked
+  commentId: P:Global.InventoryButton.Locked
+  fullName: InventoryButton.Locked
+  nameWithType: InventoryButton.Locked
+- uid: Global.InventoryButton.Locked*
+  name: Locked
+  href: api/Global.InventoryButton.html#Global_InventoryButton_Locked_
+  commentId: Overload:Global.InventoryButton.Locked
+  isSpec: "True"
+  fullName: InventoryButton.Locked
+  nameWithType: InventoryButton.Locked
+- uid: Global.InventoryButton.Obj
+  name: Obj
+  href: api/Global.InventoryButton.html#Global_InventoryButton_Obj
+  commentId: P:Global.InventoryButton.Obj
+  fullName: InventoryButton.Obj
+  nameWithType: InventoryButton.Obj
+- uid: Global.InventoryButton.Obj*
+  name: Obj
+  href: api/Global.InventoryButton.html#Global_InventoryButton_Obj_
+  commentId: Overload:Global.InventoryButton.Obj
+  isSpec: "True"
+  fullName: InventoryButton.Obj
+  nameWithType: InventoryButton.Obj
+- uid: Global.InventoryButton.OnPointerDown(PointerEventData)
+  name: OnPointerDown(PointerEventData)
+  href: api/Global.InventoryButton.html#Global_InventoryButton_OnPointerDown_PointerEventData_
+  commentId: M:Global.InventoryButton.OnPointerDown(PointerEventData)
+  fullName: InventoryButton.OnPointerDown(PointerEventData)
+  nameWithType: InventoryButton.OnPointerDown(PointerEventData)
+- uid: Global.InventoryButton.OnPointerDown*
+  name: OnPointerDown
+  href: api/Global.InventoryButton.html#Global_InventoryButton_OnPointerDown_
+  commentId: Overload:Global.InventoryButton.OnPointerDown
+  isSpec: "True"
+  fullName: InventoryButton.OnPointerDown
+  nameWithType: InventoryButton.OnPointerDown
+- uid: Global.Item
+  name: Item
+  href: api/Global.Item.html
+  commentId: T:Global.Item
+  fullName: Item
+  nameWithType: Item
+- uid: Global.Item.Icon
+  name: Icon
+  href: api/Global.Item.html#Global_Item_Icon
+  commentId: P:Global.Item.Icon
+  fullName: Item.Icon
+  nameWithType: Item.Icon
+- uid: Global.Item.Icon*
+  name: Icon
+  href: api/Global.Item.html#Global_Item_Icon_
+  commentId: Overload:Global.Item.Icon
+  isSpec: "True"
+  fullName: Item.Icon
+  nameWithType: Item.Icon
+- uid: Global.Item.ID
+  name: ID
+  href: api/Global.Item.html#Global_Item_ID
+  commentId: P:Global.Item.ID
+  fullName: Item.ID
+  nameWithType: Item.ID
+- uid: Global.Item.ID*
+  name: ID
+  href: api/Global.Item.html#Global_Item_ID_
+  commentId: Overload:Global.Item.ID
+  isSpec: "True"
+  fullName: Item.ID
+  nameWithType: Item.ID
+- uid: Global.Item.Name
+  name: Name
+  href: api/Global.Item.html#Global_Item_Name
+  commentId: P:Global.Item.Name
+  fullName: Item.Name
+  nameWithType: Item.Name
+- uid: Global.Item.Name*
+  name: Name
+  href: api/Global.Item.html#Global_Item_Name_
+  commentId: Overload:Global.Item.Name
+  isSpec: "True"
+  fullName: Item.Name
+  nameWithType: Item.Name
+- uid: Global.Item.PatternIcon
+  name: PatternIcon
+  href: api/Global.Item.html#Global_Item_PatternIcon
+  commentId: P:Global.Item.PatternIcon
+  fullName: Item.PatternIcon
+  nameWithType: Item.PatternIcon
+- uid: Global.Item.PatternIcon*
+  name: PatternIcon
+  href: api/Global.Item.html#Global_Item_PatternIcon_
+  commentId: Overload:Global.Item.PatternIcon
+  isSpec: "True"
+  fullName: Item.PatternIcon
+  nameWithType: Item.PatternIcon
+- uid: Global.Item.Sprite
+  name: Sprite
+  href: api/Global.Item.html#Global_Item_Sprite
+  commentId: P:Global.Item.Sprite
+  fullName: Item.Sprite
+  nameWithType: Item.Sprite
+- uid: Global.Item.Sprite*
+  name: Sprite
+  href: api/Global.Item.html#Global_Item_Sprite_
+  commentId: Overload:Global.Item.Sprite
+  isSpec: "True"
+  fullName: Item.Sprite
+  nameWithType: Item.Sprite
+- uid: Global.Item.Value
+  name: Value
+  href: api/Global.Item.html#Global_Item_Value
+  commentId: P:Global.Item.Value
+  fullName: Item.Value
+  nameWithType: Item.Value
+- uid: Global.Item.Value*
+  name: Value
+  href: api/Global.Item.html#Global_Item_Value_
+  commentId: Overload:Global.Item.Value
+  isSpec: "True"
+  fullName: Item.Value
+  nameWithType: Item.Value
+- uid: Global.ItemCatalog
+  name: ItemCatalog
+  href: api/Global.ItemCatalog.html
+  commentId: T:Global.ItemCatalog
+  fullName: ItemCatalog
+  nameWithType: ItemCatalog
+- uid: Global.ItemCatalog.#ctor
+  name: ItemCatalog()
+  href: api/Global.ItemCatalog.html#Global_ItemCatalog__ctor
+  commentId: M:Global.ItemCatalog.#ctor
+  fullName: ItemCatalog.ItemCatalog()
+  nameWithType: ItemCatalog.ItemCatalog()
+- uid: Global.ItemCatalog.#ctor*
+  name: ItemCatalog
+  href: api/Global.ItemCatalog.html#Global_ItemCatalog__ctor_
+  commentId: Overload:Global.ItemCatalog.#ctor
+  isSpec: "True"
+  fullName: ItemCatalog.ItemCatalog
+  nameWithType: ItemCatalog.ItemCatalog
+- uid: Global.ItemCatalog.ItemList
+  name: ItemList
+  href: api/Global.ItemCatalog.html#Global_ItemCatalog_ItemList
+  commentId: P:Global.ItemCatalog.ItemList
+  fullName: ItemCatalog.ItemList
+  nameWithType: ItemCatalog.ItemList
+- uid: Global.ItemCatalog.ItemList*
+  name: ItemList
+  href: api/Global.ItemCatalog.html#Global_ItemCatalog_ItemList_
+  commentId: Overload:Global.ItemCatalog.ItemList
+  isSpec: "True"
+  fullName: ItemCatalog.ItemList
+  nameWithType: ItemCatalog.ItemList
+- uid: Global.ItemCatalog.loadSettings
+  name: loadSettings()
+  href: api/Global.ItemCatalog.html#Global_ItemCatalog_loadSettings
+  commentId: M:Global.ItemCatalog.loadSettings
+  fullName: ItemCatalog.loadSettings()
+  nameWithType: ItemCatalog.loadSettings()
+- uid: Global.ItemCatalog.loadSettings*
+  name: loadSettings
+  href: api/Global.ItemCatalog.html#Global_ItemCatalog_loadSettings_
+  commentId: Overload:Global.ItemCatalog.loadSettings
+  isSpec: "True"
+  fullName: ItemCatalog.loadSettings
+  nameWithType: ItemCatalog.loadSettings
+- uid: Global.ItemCatalog.savingSetting
+  name: savingSetting()
+  href: api/Global.ItemCatalog.html#Global_ItemCatalog_savingSetting
+  commentId: M:Global.ItemCatalog.savingSetting
+  fullName: ItemCatalog.savingSetting()
+  nameWithType: ItemCatalog.savingSetting()
+- uid: Global.ItemCatalog.savingSetting*
+  name: savingSetting
+  href: api/Global.ItemCatalog.html#Global_ItemCatalog_savingSetting_
+  commentId: Overload:Global.ItemCatalog.savingSetting
+  isSpec: "True"
+  fullName: ItemCatalog.savingSetting
+  nameWithType: ItemCatalog.savingSetting
+- uid: Global.KeepSoundSource
+  name: KeepSoundSource
+  href: api/Global.KeepSoundSource.html
+  commentId: T:Global.KeepSoundSource
+  fullName: KeepSoundSource
+  nameWithType: KeepSoundSource
+- uid: Global.KeepSoundSource.audios
+  name: audios
+  href: api/Global.KeepSoundSource.html#Global_KeepSoundSource_audios
+  commentId: F:Global.KeepSoundSource.audios
+  fullName: KeepSoundSource.audios
+  nameWithType: KeepSoundSource.audios
+- uid: Global.KeepSoundSource.dontDestroyID
+  name: dontDestroyID
+  href: api/Global.KeepSoundSource.html#Global_KeepSoundSource_dontDestroyID
+  commentId: F:Global.KeepSoundSource.dontDestroyID
+  fullName: KeepSoundSource.dontDestroyID
+  nameWithType: KeepSoundSource.dontDestroyID
+- uid: Global.KeepSoundSource.playOnSceneIndex
+  name: playOnSceneIndex
+  href: api/Global.KeepSoundSource.html#Global_KeepSoundSource_playOnSceneIndex
+  commentId: F:Global.KeepSoundSource.playOnSceneIndex
+  fullName: KeepSoundSource.playOnSceneIndex
+  nameWithType: KeepSoundSource.playOnSceneIndex
+- uid: Global.LaserTest
+  name: LaserTest
+  href: api/Global.LaserTest.html
+  commentId: T:Global.LaserTest
+  fullName: LaserTest
+  nameWithType: LaserTest
+- uid: Global.LaserTest.Laser
+  name: Laser
+  href: api/Global.LaserTest.html#Global_LaserTest_Laser
+  commentId: F:Global.LaserTest.Laser
+  fullName: LaserTest.Laser
+  nameWithType: LaserTest.Laser
+- uid: Global.LaserTest.loopAudio
+  name: loopAudio
+  href: api/Global.LaserTest.html#Global_LaserTest_loopAudio
+  commentId: F:Global.LaserTest.loopAudio
+  fullName: LaserTest.loopAudio
+  nameWithType: LaserTest.loopAudio
+- uid: Global.LaserTest.startAudio
+  name: startAudio
+  href: api/Global.LaserTest.html#Global_LaserTest_startAudio
+  commentId: F:Global.LaserTest.startAudio
+  fullName: LaserTest.startAudio
+  nameWithType: LaserTest.startAudio
+- uid: Global.LaserTest.Trigger
+  name: Trigger
+  href: api/Global.LaserTest.html#Global_LaserTest_Trigger
+  commentId: F:Global.LaserTest.Trigger
+  fullName: LaserTest.Trigger
+  nameWithType: LaserTest.Trigger
 - uid: Global.Layer_enum
   name: Layer_enum
   href: api/Global.Layer_enum.html
   commentId: T:Global.Layer_enum
   fullName: Layer_enum
   nameWithType: Layer_enum
+- uid: Global.Layer_enum.bullet_border
+  name: bullet_border
+  href: api/Global.Layer_enum.html#Global_Layer_enum_bullet_border
+  commentId: F:Global.Layer_enum.bullet_border
+  fullName: Layer_enum.bullet_border
+  nameWithType: Layer_enum.bullet_border
+- uid: Global.Layer_enum.camera
+  name: camera
+  href: api/Global.Layer_enum.html#Global_Layer_enum_camera
+  commentId: F:Global.Layer_enum.camera
+  fullName: Layer_enum.camera
+  nameWithType: Layer_enum.camera
 - uid: Global.Layer_enum.default
   name: default
   href: api/Global.Layer_enum.html#Global_Layer_enum_default
@@ -1284,12 +2826,201 @@ references:
   commentId: T:Global.LimitFrameRate
   fullName: LimitFrameRate
   nameWithType: LimitFrameRate
+- uid: Global.LoadAssets
+  name: LoadAssets
+  href: api/Global.LoadAssets.html
+  commentId: T:Global.LoadAssets
+  fullName: LoadAssets
+  nameWithType: LoadAssets
+- uid: Global.LoadAssets.#ctor
+  name: LoadAssets()
+  href: api/Global.LoadAssets.html#Global_LoadAssets__ctor
+  commentId: M:Global.LoadAssets.#ctor
+  fullName: LoadAssets.LoadAssets()
+  nameWithType: LoadAssets.LoadAssets()
+- uid: Global.LoadAssets.#ctor*
+  name: LoadAssets
+  href: api/Global.LoadAssets.html#Global_LoadAssets__ctor_
+  commentId: Overload:Global.LoadAssets.#ctor
+  isSpec: "True"
+  fullName: LoadAssets.LoadAssets
+  nameWithType: LoadAssets.LoadAssets
+- uid: Global.LoadAssets.loadGameObject(System.String)
+  name: loadGameObject(String)
+  href: api/Global.LoadAssets.html#Global_LoadAssets_loadGameObject_System_String_
+  commentId: M:Global.LoadAssets.loadGameObject(System.String)
+  fullName: LoadAssets.loadGameObject(System.String)
+  nameWithType: LoadAssets.loadGameObject(String)
+- uid: Global.LoadAssets.loadGameObject*
+  name: loadGameObject
+  href: api/Global.LoadAssets.html#Global_LoadAssets_loadGameObject_
+  commentId: Overload:Global.LoadAssets.loadGameObject
+  isSpec: "True"
+  fullName: LoadAssets.loadGameObject
+  nameWithType: LoadAssets.loadGameObject
+- uid: Global.LoadAssets.loadSprite(System.String)
+  name: loadSprite(String)
+  href: api/Global.LoadAssets.html#Global_LoadAssets_loadSprite_System_String_
+  commentId: M:Global.LoadAssets.loadSprite(System.String)
+  fullName: LoadAssets.loadSprite(System.String)
+  nameWithType: LoadAssets.loadSprite(String)
+- uid: Global.LoadAssets.loadSprite*
+  name: loadSprite
+  href: api/Global.LoadAssets.html#Global_LoadAssets_loadSprite_
+  commentId: Overload:Global.LoadAssets.loadSprite
+  isSpec: "True"
+  fullName: LoadAssets.loadSprite
+  nameWithType: LoadAssets.loadSprite
+- uid: Global.LoadAssets.loadText(System.String)
+  name: loadText(String)
+  href: api/Global.LoadAssets.html#Global_LoadAssets_loadText_System_String_
+  commentId: M:Global.LoadAssets.loadText(System.String)
+  fullName: LoadAssets.loadText(System.String)
+  nameWithType: LoadAssets.loadText(String)
+- uid: Global.LoadAssets.loadText*
+  name: loadText
+  href: api/Global.LoadAssets.html#Global_LoadAssets_loadText_
+  commentId: Overload:Global.LoadAssets.loadText
+  isSpec: "True"
+  fullName: LoadAssets.loadText
+  nameWithType: LoadAssets.loadText
+- uid: Global.LoadAssets.releaseAllHandle
+  name: releaseAllHandle()
+  href: api/Global.LoadAssets.html#Global_LoadAssets_releaseAllHandle
+  commentId: M:Global.LoadAssets.releaseAllHandle
+  fullName: LoadAssets.releaseAllHandle()
+  nameWithType: LoadAssets.releaseAllHandle()
+- uid: Global.LoadAssets.releaseAllHandle*
+  name: releaseAllHandle
+  href: api/Global.LoadAssets.html#Global_LoadAssets_releaseAllHandle_
+  commentId: Overload:Global.LoadAssets.releaseAllHandle
+  isSpec: "True"
+  fullName: LoadAssets.releaseAllHandle
+  nameWithType: LoadAssets.releaseAllHandle
+- uid: Global.LoadAssets.releaseLastHandle
+  name: releaseLastHandle()
+  href: api/Global.LoadAssets.html#Global_LoadAssets_releaseLastHandle
+  commentId: M:Global.LoadAssets.releaseLastHandle
+  fullName: LoadAssets.releaseLastHandle()
+  nameWithType: LoadAssets.releaseLastHandle()
+- uid: Global.LoadAssets.releaseLastHandle*
+  name: releaseLastHandle
+  href: api/Global.LoadAssets.html#Global_LoadAssets_releaseLastHandle_
+  commentId: Overload:Global.LoadAssets.releaseLastHandle
+  isSpec: "True"
+  fullName: LoadAssets.releaseLastHandle
+  nameWithType: LoadAssets.releaseLastHandle
+- uid: Global.LoadEquipmentSlots
+  name: LoadEquipmentSlots
+  href: api/Global.LoadEquipmentSlots.html
+  commentId: T:Global.LoadEquipmentSlots
+  fullName: LoadEquipmentSlots
+  nameWithType: LoadEquipmentSlots
+- uid: Global.LoadEquipmentSlots.mainWeapon
+  name: mainWeapon
+  href: api/Global.LoadEquipmentSlots.html#Global_LoadEquipmentSlots_mainWeapon
+  commentId: F:Global.LoadEquipmentSlots.mainWeapon
+  fullName: LoadEquipmentSlots.mainWeapon
+  nameWithType: LoadEquipmentSlots.mainWeapon
+- uid: Global.LoadEquipmentSlots.secondaryWeapon
+  name: secondaryWeapon
+  href: api/Global.LoadEquipmentSlots.html#Global_LoadEquipmentSlots_secondaryWeapon
+  commentId: F:Global.LoadEquipmentSlots.secondaryWeapon
+  fullName: LoadEquipmentSlots.secondaryWeapon
+  nameWithType: LoadEquipmentSlots.secondaryWeapon
+- uid: Global.LoadEquipmentSlots.secondaryWeapon1
+  name: secondaryWeapon1
+  href: api/Global.LoadEquipmentSlots.html#Global_LoadEquipmentSlots_secondaryWeapon1
+  commentId: F:Global.LoadEquipmentSlots.secondaryWeapon1
+  fullName: LoadEquipmentSlots.secondaryWeapon1
+  nameWithType: LoadEquipmentSlots.secondaryWeapon1
+- uid: Global.LoadEquipmentSlots.shieldPart
+  name: shieldPart
+  href: api/Global.LoadEquipmentSlots.html#Global_LoadEquipmentSlots_shieldPart
+  commentId: F:Global.LoadEquipmentSlots.shieldPart
+  fullName: LoadEquipmentSlots.shieldPart
+  nameWithType: LoadEquipmentSlots.shieldPart
+- uid: Global.LoadMoneyIcon
+  name: LoadMoneyIcon
+  href: api/Global.LoadMoneyIcon.html
+  commentId: T:Global.LoadMoneyIcon
+  fullName: LoadMoneyIcon
+  nameWithType: LoadMoneyIcon
+- uid: Global.LoopSoundControl
+  name: LoopSoundControl
+  href: api/Global.LoopSoundControl.html
+  commentId: T:Global.LoopSoundControl
+  fullName: LoopSoundControl
+  nameWithType: LoopSoundControl
+- uid: Global.LoopSoundControl.IsPlaying
+  name: IsPlaying
+  href: api/Global.LoopSoundControl.html#Global_LoopSoundControl_IsPlaying
+  commentId: P:Global.LoopSoundControl.IsPlaying
+  fullName: LoopSoundControl.IsPlaying
+  nameWithType: LoopSoundControl.IsPlaying
+- uid: Global.LoopSoundControl.IsPlaying*
+  name: IsPlaying
+  href: api/Global.LoopSoundControl.html#Global_LoopSoundControl_IsPlaying_
+  commentId: Overload:Global.LoopSoundControl.IsPlaying
+  isSpec: "True"
+  fullName: LoopSoundControl.IsPlaying
+  nameWithType: LoopSoundControl.IsPlaying
+- uid: Global.LoopSoundControl.loopAudio
+  name: loopAudio
+  href: api/Global.LoopSoundControl.html#Global_LoopSoundControl_loopAudio
+  commentId: F:Global.LoopSoundControl.loopAudio
+  fullName: LoopSoundControl.loopAudio
+  nameWithType: LoopSoundControl.loopAudio
+- uid: Global.LoopSoundControl.startAudio
+  name: startAudio
+  href: api/Global.LoopSoundControl.html#Global_LoopSoundControl_startAudio
+  commentId: F:Global.LoopSoundControl.startAudio
+  fullName: LoopSoundControl.startAudio
+  nameWithType: LoopSoundControl.startAudio
+- uid: Global.LoopSoundControl.startPlaying
+  name: startPlaying()
+  href: api/Global.LoopSoundControl.html#Global_LoopSoundControl_startPlaying
+  commentId: M:Global.LoopSoundControl.startPlaying
+  fullName: LoopSoundControl.startPlaying()
+  nameWithType: LoopSoundControl.startPlaying()
+- uid: Global.LoopSoundControl.startPlaying*
+  name: startPlaying
+  href: api/Global.LoopSoundControl.html#Global_LoopSoundControl_startPlaying_
+  commentId: Overload:Global.LoopSoundControl.startPlaying
+  isSpec: "True"
+  fullName: LoopSoundControl.startPlaying
+  nameWithType: LoopSoundControl.startPlaying
+- uid: Global.LoopSoundControl.stopPlaying
+  name: stopPlaying()
+  href: api/Global.LoopSoundControl.html#Global_LoopSoundControl_stopPlaying
+  commentId: M:Global.LoopSoundControl.stopPlaying
+  fullName: LoopSoundControl.stopPlaying()
+  nameWithType: LoopSoundControl.stopPlaying()
+- uid: Global.LoopSoundControl.stopPlaying*
+  name: stopPlaying
+  href: api/Global.LoopSoundControl.html#Global_LoopSoundControl_stopPlaying_
+  commentId: Overload:Global.LoopSoundControl.stopPlaying
+  isSpec: "True"
+  fullName: LoopSoundControl.stopPlaying
+  nameWithType: LoopSoundControl.stopPlaying
+- uid: Global.LoopSoundControl.transitionAudio
+  name: transitionAudio
+  href: api/Global.LoopSoundControl.html#Global_LoopSoundControl_transitionAudio
+  commentId: F:Global.LoopSoundControl.transitionAudio
+  fullName: LoopSoundControl.transitionAudio
+  nameWithType: LoopSoundControl.transitionAudio
 - uid: Global.Main_menu
   name: Main_menu
   href: api/Global.Main_menu.html
   commentId: T:Global.Main_menu
   fullName: Main_menu
   nameWithType: Main_menu
+- uid: Global.Main_menu.credits
+  name: credits
+  href: api/Global.Main_menu.html#Global_Main_menu_credits
+  commentId: F:Global.Main_menu.credits
+  fullName: Main_menu.credits
+  nameWithType: Main_menu.credits
 - uid: Global.Main_menu.mainMenu
   name: mainMenu
   href: api/Global.Main_menu.html#Global_Main_menu_mainMenu
@@ -1309,6 +3040,19 @@ references:
   isSpec: "True"
   fullName: Main_menu.onClickBackToMainMenu
   nameWithType: Main_menu.onClickBackToMainMenu
+- uid: Global.Main_menu.onClickBackToOptions
+  name: onClickBackToOptions()
+  href: api/Global.Main_menu.html#Global_Main_menu_onClickBackToOptions
+  commentId: M:Global.Main_menu.onClickBackToOptions
+  fullName: Main_menu.onClickBackToOptions()
+  nameWithType: Main_menu.onClickBackToOptions()
+- uid: Global.Main_menu.onClickBackToOptions*
+  name: onClickBackToOptions
+  href: api/Global.Main_menu.html#Global_Main_menu_onClickBackToOptions_
+  commentId: Overload:Global.Main_menu.onClickBackToOptions
+  isSpec: "True"
+  fullName: Main_menu.onClickBackToOptions
+  nameWithType: Main_menu.onClickBackToOptions
 - uid: Global.Main_menu.onClickControls
   name: onClickControls()
   href: api/Global.Main_menu.html#Global_Main_menu_onClickControls
@@ -1322,6 +3066,57 @@ references:
   isSpec: "True"
   fullName: Main_menu.onClickControls
   nameWithType: Main_menu.onClickControls
+- uid: Global.Main_menu.onClickCredits
+  name: onClickCredits()
+  href: api/Global.Main_menu.html#Global_Main_menu_onClickCredits
+  commentId: M:Global.Main_menu.onClickCredits
+  fullName: Main_menu.onClickCredits()
+  nameWithType: Main_menu.onClickCredits()
+- uid: Global.Main_menu.onClickCredits*
+  name: onClickCredits
+  href: api/Global.Main_menu.html#Global_Main_menu_onClickCredits_
+  commentId: Overload:Global.Main_menu.onClickCredits
+  isSpec: "True"
+  fullName: Main_menu.onClickCredits
+  nameWithType: Main_menu.onClickCredits
+- uid: Global.Main_menu.onClickOptions
+  name: onClickOptions()
+  href: api/Global.Main_menu.html#Global_Main_menu_onClickOptions
+  commentId: M:Global.Main_menu.onClickOptions
+  fullName: Main_menu.onClickOptions()
+  nameWithType: Main_menu.onClickOptions()
+- uid: Global.Main_menu.onClickOptions(System.Int32)
+  name: onClickOptions(Int32)
+  href: api/Global.Main_menu.html#Global_Main_menu_onClickOptions_System_Int32_
+  commentId: M:Global.Main_menu.onClickOptions(System.Int32)
+  fullName: Main_menu.onClickOptions(System.Int32)
+  nameWithType: Main_menu.onClickOptions(Int32)
+- uid: Global.Main_menu.onClickOptions*
+  name: onClickOptions
+  href: api/Global.Main_menu.html#Global_Main_menu_onClickOptions_
+  commentId: Overload:Global.Main_menu.onClickOptions
+  isSpec: "True"
+  fullName: Main_menu.onClickOptions
+  nameWithType: Main_menu.onClickOptions
+- uid: Global.Main_menu.onClickSound
+  name: onClickSound()
+  href: api/Global.Main_menu.html#Global_Main_menu_onClickSound
+  commentId: M:Global.Main_menu.onClickSound
+  fullName: Main_menu.onClickSound()
+  nameWithType: Main_menu.onClickSound()
+- uid: Global.Main_menu.onClickSound*
+  name: onClickSound
+  href: api/Global.Main_menu.html#Global_Main_menu_onClickSound_
+  commentId: Overload:Global.Main_menu.onClickSound
+  isSpec: "True"
+  fullName: Main_menu.onClickSound
+  nameWithType: Main_menu.onClickSound
+- uid: Global.Main_menu.optionsMenu
+  name: optionsMenu
+  href: api/Global.Main_menu.html#Global_Main_menu_optionsMenu
+  commentId: F:Global.Main_menu.optionsMenu
+  fullName: Main_menu.optionsMenu
+  nameWithType: Main_menu.optionsMenu
 - uid: Global.Main_menu.playGame
   name: playGame()
   href: api/Global.Main_menu.html#Global_Main_menu_playGame
@@ -1354,12 +3149,49 @@ references:
   commentId: F:Global.Main_menu.rebidningMenu
   fullName: Main_menu.rebidningMenu
   nameWithType: Main_menu.rebidningMenu
+- uid: Global.Main_menu.soundMenu
+  name: soundMenu
+  href: api/Global.Main_menu.html#Global_Main_menu_soundMenu
+  commentId: F:Global.Main_menu.soundMenu
+  fullName: Main_menu.soundMenu
+  nameWithType: Main_menu.soundMenu
 - uid: Global.Menu_handler
   name: Menu_handler
   href: api/Global.Menu_handler.html
   commentId: T:Global.Menu_handler
   fullName: Menu_handler
   nameWithType: Menu_handler
+- uid: Global.Menu_handler.addScore(System.Int32)
+  name: addScore(Int32)
+  href: api/Global.Menu_handler.html#Global_Menu_handler_addScore_System_Int32_
+  commentId: M:Global.Menu_handler.addScore(System.Int32)
+  fullName: Menu_handler.addScore(System.Int32)
+  nameWithType: Menu_handler.addScore(Int32)
+- uid: Global.Menu_handler.addScore*
+  name: addScore
+  href: api/Global.Menu_handler.html#Global_Menu_handler_addScore_
+  commentId: Overload:Global.Menu_handler.addScore
+  isSpec: "True"
+  fullName: Menu_handler.addScore
+  nameWithType: Menu_handler.addScore
+- uid: Global.Menu_handler.bossHpBar
+  name: bossHpBar
+  href: api/Global.Menu_handler.html#Global_Menu_handler_bossHpBar
+  commentId: F:Global.Menu_handler.bossHpBar
+  fullName: Menu_handler.bossHpBar
+  nameWithType: Menu_handler.bossHpBar
+- uid: Global.Menu_handler.bossUI
+  name: bossUI
+  href: api/Global.Menu_handler.html#Global_Menu_handler_bossUI
+  commentId: F:Global.Menu_handler.bossUI
+  fullName: Menu_handler.bossUI
+  nameWithType: Menu_handler.bossUI
+- uid: Global.Menu_handler.enemyKilledCounterText
+  name: enemyKilledCounterText
+  href: api/Global.Menu_handler.html#Global_Menu_handler_enemyKilledCounterText
+  commentId: F:Global.Menu_handler.enemyKilledCounterText
+  fullName: Menu_handler.enemyKilledCounterText
+  nameWithType: Menu_handler.enemyKilledCounterText
 - uid: Global.Menu_handler.gameOverUI
   name: gameOverUI
   href: api/Global.Menu_handler.html#Global_Menu_handler_gameOverUI
@@ -1378,6 +3210,50 @@ references:
   commentId: F:Global.Menu_handler.levelSelectUI
   fullName: Menu_handler.levelSelectUI
   nameWithType: Menu_handler.levelSelectUI
+- uid: Global.Menu_handler.menuList
+  name: menuList
+  href: api/Global.Menu_handler.html#Global_Menu_handler_menuList
+  commentId: F:Global.Menu_handler.menuList
+  fullName: Menu_handler.menuList
+  nameWithType: Menu_handler.menuList
+- uid: Global.Menu_handler.menuName
+  name: menuName
+  href: api/Global.Menu_handler.html#Global_Menu_handler_menuName
+  commentId: F:Global.Menu_handler.menuName
+  fullName: Menu_handler.menuName
+  nameWithType: Menu_handler.menuName
+- uid: Global.Menu_handler.moneyEarnedText
+  name: moneyEarnedText
+  href: api/Global.Menu_handler.html#Global_Menu_handler_moneyEarnedText
+  commentId: F:Global.Menu_handler.moneyEarnedText
+  fullName: Menu_handler.moneyEarnedText
+  nameWithType: Menu_handler.moneyEarnedText
+- uid: Global.Menu_handler.onChangedScore
+  name: onChangedScore()
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onChangedScore
+  commentId: M:Global.Menu_handler.onChangedScore
+  fullName: Menu_handler.onChangedScore()
+  nameWithType: Menu_handler.onChangedScore()
+- uid: Global.Menu_handler.onChangedScore*
+  name: onChangedScore
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onChangedScore_
+  commentId: Overload:Global.Menu_handler.onChangedScore
+  isSpec: "True"
+  fullName: Menu_handler.onChangedScore
+  nameWithType: Menu_handler.onChangedScore
+- uid: Global.Menu_handler.onClickActivateGameobnect(GameObject)
+  name: onClickActivateGameobnect(GameObject)
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickActivateGameobnect_GameObject_
+  commentId: M:Global.Menu_handler.onClickActivateGameobnect(GameObject)
+  fullName: Menu_handler.onClickActivateGameobnect(GameObject)
+  nameWithType: Menu_handler.onClickActivateGameobnect(GameObject)
+- uid: Global.Menu_handler.onClickActivateGameobnect*
+  name: onClickActivateGameobnect
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickActivateGameobnect_
+  commentId: Overload:Global.Menu_handler.onClickActivateGameobnect
+  isSpec: "True"
+  fullName: Menu_handler.onClickActivateGameobnect
+  nameWithType: Menu_handler.onClickActivateGameobnect
 - uid: Global.Menu_handler.onClickBack
   name: onClickBack()
   href: api/Global.Menu_handler.html#Global_Menu_handler_onClickBack
@@ -1391,6 +3267,32 @@ references:
   isSpec: "True"
   fullName: Menu_handler.onClickBack
   nameWithType: Menu_handler.onClickBack
+- uid: Global.Menu_handler.onClickExitShipEditor(System.Int32)
+  name: onClickExitShipEditor(Int32)
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickExitShipEditor_System_Int32_
+  commentId: M:Global.Menu_handler.onClickExitShipEditor(System.Int32)
+  fullName: Menu_handler.onClickExitShipEditor(System.Int32)
+  nameWithType: Menu_handler.onClickExitShipEditor(Int32)
+- uid: Global.Menu_handler.onClickExitShipEditor*
+  name: onClickExitShipEditor
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickExitShipEditor_
+  commentId: Overload:Global.Menu_handler.onClickExitShipEditor
+  isSpec: "True"
+  fullName: Menu_handler.onClickExitShipEditor
+  nameWithType: Menu_handler.onClickExitShipEditor
+- uid: Global.Menu_handler.onClickGoBackToPreviousScene
+  name: onClickGoBackToPreviousScene()
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickGoBackToPreviousScene
+  commentId: M:Global.Menu_handler.onClickGoBackToPreviousScene
+  fullName: Menu_handler.onClickGoBackToPreviousScene()
+  nameWithType: Menu_handler.onClickGoBackToPreviousScene()
+- uid: Global.Menu_handler.onClickGoBackToPreviousScene*
+  name: onClickGoBackToPreviousScene
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickGoBackToPreviousScene_
+  commentId: Overload:Global.Menu_handler.onClickGoBackToPreviousScene
+  isSpec: "True"
+  fullName: Menu_handler.onClickGoBackToPreviousScene
+  nameWithType: Menu_handler.onClickGoBackToPreviousScene
 - uid: Global.Menu_handler.onClickLevelSelect(System.Int32)
   name: onClickLevelSelect(Int32)
   href: api/Global.Menu_handler.html#Global_Menu_handler_onClickLevelSelect_System_Int32_
@@ -1417,6 +3319,19 @@ references:
   isSpec: "True"
   fullName: Menu_handler.onClickMainMenu
   nameWithType: Menu_handler.onClickMainMenu
+- uid: Global.Menu_handler.onClickMenuItem(GameObject)
+  name: onClickMenuItem(GameObject)
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickMenuItem_GameObject_
+  commentId: M:Global.Menu_handler.onClickMenuItem(GameObject)
+  fullName: Menu_handler.onClickMenuItem(GameObject)
+  nameWithType: Menu_handler.onClickMenuItem(GameObject)
+- uid: Global.Menu_handler.onClickMenuItem*
+  name: onClickMenuItem
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickMenuItem_
+  commentId: Overload:Global.Menu_handler.onClickMenuItem
+  isSpec: "True"
+  fullName: Menu_handler.onClickMenuItem
+  nameWithType: Menu_handler.onClickMenuItem
 - uid: Global.Menu_handler.onClickNextLeve(System.Int32)
   name: onClickNextLeve(Int32)
   href: api/Global.Menu_handler.html#Global_Menu_handler_onClickNextLeve_System_Int32_
@@ -1430,12 +3345,51 @@ references:
   isSpec: "True"
   fullName: Menu_handler.onClickNextLeve
   nameWithType: Menu_handler.onClickNextLeve
-- uid: Global.Menu_handler.onClickShipEditor
-  name: onClickShipEditor()
-  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickShipEditor
-  commentId: M:Global.Menu_handler.onClickShipEditor
-  fullName: Menu_handler.onClickShipEditor()
-  nameWithType: Menu_handler.onClickShipEditor()
+- uid: Global.Menu_handler.onClickOptions(System.Int32)
+  name: onClickOptions(Int32)
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickOptions_System_Int32_
+  commentId: M:Global.Menu_handler.onClickOptions(System.Int32)
+  fullName: Menu_handler.onClickOptions(System.Int32)
+  nameWithType: Menu_handler.onClickOptions(Int32)
+- uid: Global.Menu_handler.onClickOptions*
+  name: onClickOptions
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickOptions_
+  commentId: Overload:Global.Menu_handler.onClickOptions
+  isSpec: "True"
+  fullName: Menu_handler.onClickOptions
+  nameWithType: Menu_handler.onClickOptions
+- uid: Global.Menu_handler.onClickSetMenuName(System.String)
+  name: onClickSetMenuName(String)
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickSetMenuName_System_String_
+  commentId: M:Global.Menu_handler.onClickSetMenuName(System.String)
+  fullName: Menu_handler.onClickSetMenuName(System.String)
+  nameWithType: Menu_handler.onClickSetMenuName(String)
+- uid: Global.Menu_handler.onClickSetMenuName*
+  name: onClickSetMenuName
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickSetMenuName_
+  commentId: Overload:Global.Menu_handler.onClickSetMenuName
+  isSpec: "True"
+  fullName: Menu_handler.onClickSetMenuName
+  nameWithType: Menu_handler.onClickSetMenuName
+- uid: Global.Menu_handler.onclickSetToogle(GameObject)
+  name: onclickSetToogle(GameObject)
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onclickSetToogle_GameObject_
+  commentId: M:Global.Menu_handler.onclickSetToogle(GameObject)
+  fullName: Menu_handler.onclickSetToogle(GameObject)
+  nameWithType: Menu_handler.onclickSetToogle(GameObject)
+- uid: Global.Menu_handler.onclickSetToogle*
+  name: onclickSetToogle
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onclickSetToogle_
+  commentId: Overload:Global.Menu_handler.onclickSetToogle
+  isSpec: "True"
+  fullName: Menu_handler.onclickSetToogle
+  nameWithType: Menu_handler.onclickSetToogle
+- uid: Global.Menu_handler.onClickShipEditor(System.Int32)
+  name: onClickShipEditor(Int32)
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onClickShipEditor_System_Int32_
+  commentId: M:Global.Menu_handler.onClickShipEditor(System.Int32)
+  fullName: Menu_handler.onClickShipEditor(System.Int32)
+  nameWithType: Menu_handler.onClickShipEditor(Int32)
 - uid: Global.Menu_handler.onClickShipEditor*
   name: onClickShipEditor
   href: api/Global.Menu_handler.html#Global_Menu_handler_onClickShipEditor_
@@ -1482,12 +3436,69 @@ references:
   isSpec: "True"
   fullName: Menu_handler.onClickWorldSelect
   nameWithType: Menu_handler.onClickWorldSelect
+- uid: Global.Menu_handler.onSelectButton(Image)
+  name: onSelectButton(Image)
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onSelectButton_Image_
+  commentId: M:Global.Menu_handler.onSelectButton(Image)
+  fullName: Menu_handler.onSelectButton(Image)
+  nameWithType: Menu_handler.onSelectButton(Image)
+- uid: Global.Menu_handler.onSelectButton*
+  name: onSelectButton
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onSelectButton_
+  commentId: Overload:Global.Menu_handler.onSelectButton
+  isSpec: "True"
+  fullName: Menu_handler.onSelectButton
+  nameWithType: Menu_handler.onSelectButton
+- uid: Global.Menu_handler.onTooltipToogleChanged(Toggle)
+  name: onTooltipToogleChanged(Toggle)
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onTooltipToogleChanged_Toggle_
+  commentId: M:Global.Menu_handler.onTooltipToogleChanged(Toggle)
+  fullName: Menu_handler.onTooltipToogleChanged(Toggle)
+  nameWithType: Menu_handler.onTooltipToogleChanged(Toggle)
+- uid: Global.Menu_handler.onTooltipToogleChanged*
+  name: onTooltipToogleChanged
+  href: api/Global.Menu_handler.html#Global_Menu_handler_onTooltipToogleChanged_
+  commentId: Overload:Global.Menu_handler.onTooltipToogleChanged
+  isSpec: "True"
+  fullName: Menu_handler.onTooltipToogleChanged
+  nameWithType: Menu_handler.onTooltipToogleChanged
 - uid: Global.Menu_handler.pauseUI
   name: pauseUI
   href: api/Global.Menu_handler.html#Global_Menu_handler_pauseUI
   commentId: F:Global.Menu_handler.pauseUI
   fullName: Menu_handler.pauseUI
   nameWithType: Menu_handler.pauseUI
+- uid: Global.Menu_handler.Playtime
+  name: Playtime
+  href: api/Global.Menu_handler.html#Global_Menu_handler_Playtime
+  commentId: P:Global.Menu_handler.Playtime
+  fullName: Menu_handler.Playtime
+  nameWithType: Menu_handler.Playtime
+- uid: Global.Menu_handler.Playtime*
+  name: Playtime
+  href: api/Global.Menu_handler.html#Global_Menu_handler_Playtime_
+  commentId: Overload:Global.Menu_handler.Playtime
+  isSpec: "True"
+  fullName: Menu_handler.Playtime
+  nameWithType: Menu_handler.Playtime
+- uid: Global.Menu_handler.playtimeText
+  name: playtimeText
+  href: api/Global.Menu_handler.html#Global_Menu_handler_playtimeText
+  commentId: F:Global.Menu_handler.playtimeText
+  fullName: Menu_handler.playtimeText
+  nameWithType: Menu_handler.playtimeText
+- uid: Global.Menu_handler.score
+  name: score
+  href: api/Global.Menu_handler.html#Global_Menu_handler_score
+  commentId: F:Global.Menu_handler.score
+  fullName: Menu_handler.score
+  nameWithType: Menu_handler.score
+- uid: Global.Menu_handler.selectedButtonImages
+  name: selectedButtonImages
+  href: api/Global.Menu_handler.html#Global_Menu_handler_selectedButtonImages
+  commentId: F:Global.Menu_handler.selectedButtonImages
+  fullName: Menu_handler.selectedButtonImages
+  nameWithType: Menu_handler.selectedButtonImages
 - uid: Global.Menu_handler.setGameOver
   name: setGameOver()
   href: api/Global.Menu_handler.html#Global_Menu_handler_setGameOver
@@ -1546,6 +3557,18 @@ references:
   commentId: F:Global.Menu_handler.shipMenuUI
   fullName: Menu_handler.shipMenuUI
   nameWithType: Menu_handler.shipMenuUI
+- uid: Global.Menu_handler.toalMoneyText
+  name: toalMoneyText
+  href: api/Global.Menu_handler.html#Global_Menu_handler_toalMoneyText
+  commentId: F:Global.Menu_handler.toalMoneyText
+  fullName: Menu_handler.toalMoneyText
+  nameWithType: Menu_handler.toalMoneyText
+- uid: Global.Menu_handler.tooltipToogle
+  name: tooltipToogle
+  href: api/Global.Menu_handler.html#Global_Menu_handler_tooltipToogle
+  commentId: F:Global.Menu_handler.tooltipToogle
+  fullName: Menu_handler.tooltipToogle
+  nameWithType: Menu_handler.tooltipToogle
 - uid: Global.Move_in_out_Scene
   name: Move_in_out_Scene
   href: api/Global.Move_in_out_Scene.html
@@ -1601,12 +3624,36 @@ references:
   commentId: F:Global.Move_in_out_Scene.waypointPrefab
   fullName: Move_in_out_Scene.waypointPrefab
   nameWithType: Move_in_out_Scene.waypointPrefab
+- uid: Global.ParallaxBackground
+  name: ParallaxBackground
+  href: api/Global.ParallaxBackground.html
+  commentId: T:Global.ParallaxBackground
+  fullName: ParallaxBackground
+  nameWithType: ParallaxBackground
+- uid: Global.ParallaxBackground.Camera
+  name: Camera
+  href: api/Global.ParallaxBackground.html#Global_ParallaxBackground_Camera
+  commentId: F:Global.ParallaxBackground.Camera
+  fullName: ParallaxBackground.Camera
+  nameWithType: ParallaxBackground.Camera
+- uid: Global.ParallaxBackground.speed
+  name: speed
+  href: api/Global.ParallaxBackground.html#Global_ParallaxBackground_speed
+  commentId: F:Global.ParallaxBackground.speed
+  fullName: ParallaxBackground.speed
+  nameWithType: ParallaxBackground.speed
 - uid: Global.ParticleControl
   name: ParticleControl
   href: api/Global.ParticleControl.html
   commentId: T:Global.ParticleControl
   fullName: ParticleControl
   nameWithType: ParticleControl
+- uid: Global.ParticleControl.anim
+  name: anim
+  href: api/Global.ParticleControl.html#Global_ParticleControl_anim
+  commentId: F:Global.ParticleControl.anim
+  fullName: ParticleControl.anim
+  nameWithType: ParticleControl.anim
 - uid: Global.ParticleControl.destroyAfterPlay
   name: destroyAfterPlay
   href: api/Global.ParticleControl.html#Global_ParticleControl_destroyAfterPlay
@@ -1619,6 +3666,44 @@ references:
   commentId: F:Global.ParticleControl.particle
   fullName: ParticleControl.particle
   nameWithType: ParticleControl.particle
+- uid: Global.ParticleControl.particleAudio
+  name: particleAudio
+  href: api/Global.ParticleControl.html#Global_ParticleControl_particleAudio
+  commentId: F:Global.ParticleControl.particleAudio
+  fullName: ParticleControl.particleAudio
+  nameWithType: ParticleControl.particleAudio
+- uid: Global.Parts
+  name: Parts
+  href: api/Global.Parts.html
+  commentId: T:Global.Parts
+  fullName: Parts
+  nameWithType: Parts
+- uid: Global.Parts.HealthBoost
+  name: HealthBoost
+  href: api/Global.Parts.html#Global_Parts_HealthBoost
+  commentId: P:Global.Parts.HealthBoost
+  fullName: Parts.HealthBoost
+  nameWithType: Parts.HealthBoost
+- uid: Global.Parts.HealthBoost*
+  name: HealthBoost
+  href: api/Global.Parts.html#Global_Parts_HealthBoost_
+  commentId: Overload:Global.Parts.HealthBoost
+  isSpec: "True"
+  fullName: Parts.HealthBoost
+  nameWithType: Parts.HealthBoost
+- uid: Global.Parts.ShieldRefreshValueBoost
+  name: ShieldRefreshValueBoost
+  href: api/Global.Parts.html#Global_Parts_ShieldRefreshValueBoost
+  commentId: P:Global.Parts.ShieldRefreshValueBoost
+  fullName: Parts.ShieldRefreshValueBoost
+  nameWithType: Parts.ShieldRefreshValueBoost
+- uid: Global.Parts.ShieldRefreshValueBoost*
+  name: ShieldRefreshValueBoost
+  href: api/Global.Parts.html#Global_Parts_ShieldRefreshValueBoost_
+  commentId: Overload:Global.Parts.ShieldRefreshValueBoost
+  isSpec: "True"
+  fullName: Parts.ShieldRefreshValueBoost
+  nameWithType: Parts.ShieldRefreshValueBoost
 - uid: Global.Player
   name: Player
   href: api/Global.Player.html
@@ -1668,12 +3753,61 @@ references:
   isSpec: "True"
   fullName: Player.clearControlls
   nameWithType: Player.clearControlls
+- uid: Global.Player.crackedLevel1
+  name: crackedLevel1
+  href: api/Global.Player.html#Global_Player_crackedLevel1
+  commentId: F:Global.Player.crackedLevel1
+  fullName: Player.crackedLevel1
+  nameWithType: Player.crackedLevel1
+- uid: Global.Player.crackedLevel2
+  name: crackedLevel2
+  href: api/Global.Player.html#Global_Player_crackedLevel2
+  commentId: F:Global.Player.crackedLevel2
+  fullName: Player.crackedLevel2
+  nameWithType: Player.crackedLevel2
+- uid: Global.Player.crackedScreenOverlay
+  name: crackedScreenOverlay
+  href: api/Global.Player.html#Global_Player_crackedScreenOverlay
+  commentId: F:Global.Player.crackedScreenOverlay
+  fullName: Player.crackedScreenOverlay
+  nameWithType: Player.crackedScreenOverlay
+- uid: Global.Player.crackedScreenOverlay2
+  name: crackedScreenOverlay2
+  href: api/Global.Player.html#Global_Player_crackedScreenOverlay2
+  commentId: F:Global.Player.crackedScreenOverlay2
+  fullName: Player.crackedScreenOverlay2
+  nameWithType: Player.crackedScreenOverlay2
+- uid: Global.Player.crackedSound
+  name: crackedSound
+  href: api/Global.Player.html#Global_Player_crackedSound
+  commentId: F:Global.Player.crackedSound
+  fullName: Player.crackedSound
+  nameWithType: Player.crackedSound
+- uid: Global.Player.CurrentHealth
+  name: CurrentHealth
+  href: api/Global.Player.html#Global_Player_CurrentHealth
+  commentId: P:Global.Player.CurrentHealth
+  fullName: Player.CurrentHealth
+  nameWithType: Player.CurrentHealth
+- uid: Global.Player.CurrentHealth*
+  name: CurrentHealth
+  href: api/Global.Player.html#Global_Player_CurrentHealth_
+  commentId: Overload:Global.Player.CurrentHealth
+  isSpec: "True"
+  fullName: Player.CurrentHealth
+  nameWithType: Player.CurrentHealth
 - uid: Global.Player.currentschield
   name: currentschield
   href: api/Global.Player.html#Global_Player_currentschield
   commentId: F:Global.Player.currentschield
   fullName: Player.currentschield
   nameWithType: Player.currentschield
+- uid: Global.Player.dashAudio
+  name: dashAudio
+  href: api/Global.Player.html#Global_Player_dashAudio
+  commentId: F:Global.Player.dashAudio
+  fullName: Player.dashAudio
+  nameWithType: Player.dashAudio
 - uid: Global.Player.deathEffect
   name: deathEffect
   href: api/Global.Player.html#Global_Player_deathEffect
@@ -1722,12 +3856,6 @@ references:
   commentId: F:Global.Player.globalCooldown
   fullName: Player.globalCooldown
   nameWithType: Player.globalCooldown
-- uid: Global.Player.health
-  name: health
-  href: api/Global.Player.html#Global_Player_health
-  commentId: F:Global.Player.health
-  fullName: Player.health
-  nameWithType: Player.health
 - uid: Global.Player.healthbar
   name: healthbar
   href: api/Global.Player.html#Global_Player_healthbar
@@ -1752,6 +3880,12 @@ references:
   commentId: F:Global.Player.healthbarBelow30
   fullName: Player.healthbarBelow30
   nameWithType: Player.healthbarBelow30
+- uid: Global.Player.hitAudio
+  name: hitAudio
+  href: api/Global.Player.html#Global_Player_hitAudio
+  commentId: F:Global.Player.hitAudio
+  fullName: Player.hitAudio
+  nameWithType: Player.hitAudio
 - uid: Global.Player.immunityFlickerRate
   name: immunityFlickerRate
   href: api/Global.Player.html#Global_Player_immunityFlickerRate
@@ -1783,6 +3917,12 @@ references:
   isSpec: "True"
   fullName: Player.Impulse
   nameWithType: Player.Impulse
+- uid: Global.Player.maxBaseHealth
+  name: maxBaseHealth
+  href: api/Global.Player.html#Global_Player_maxBaseHealth
+  commentId: F:Global.Player.maxBaseHealth
+  fullName: Player.maxBaseHealth
+  nameWithType: Player.maxBaseHealth
 - uid: Global.Player.maxDogeDuration
   name: maxDogeDuration
   href: api/Global.Player.html#Global_Player_maxDogeDuration
@@ -1898,6 +4038,12 @@ references:
   isSpec: "True"
   fullName: Player.OnShoot
   nameWithType: Player.OnShoot
+- uid: Global.Player.playerBulletSoundPrefab
+  name: playerBulletSoundPrefab
+  href: api/Global.Player.html#Global_Player_playerBulletSoundPrefab
+  commentId: F:Global.Player.playerBulletSoundPrefab
+  fullName: Player.playerBulletSoundPrefab
+  nameWithType: Player.playerBulletSoundPrefab
 - uid: Global.Player.schieldbar
   name: schieldbar
   href: api/Global.Player.html#Global_Player_schieldbar
@@ -1923,18 +4069,31 @@ references:
   isSpec: "True"
   fullName: Player.schieldRefresh
   nameWithType: Player.schieldRefresh
+- uid: Global.Player.schieldRefreshBaseValue
+  name: schieldRefreshBaseValue
+  href: api/Global.Player.html#Global_Player_schieldRefreshBaseValue
+  commentId: F:Global.Player.schieldRefreshBaseValue
+  fullName: Player.schieldRefreshBaseValue
+  nameWithType: Player.schieldRefreshBaseValue
 - uid: Global.Player.schieldRefreshRate
   name: schieldRefreshRate
   href: api/Global.Player.html#Global_Player_schieldRefreshRate
   commentId: F:Global.Player.schieldRefreshRate
   fullName: Player.schieldRefreshRate
   nameWithType: Player.schieldRefreshRate
-- uid: Global.Player.schieldRefreshValue
-  name: schieldRefreshValue
-  href: api/Global.Player.html#Global_Player_schieldRefreshValue
-  commentId: F:Global.Player.schieldRefreshValue
-  fullName: Player.schieldRefreshValue
-  nameWithType: Player.schieldRefreshValue
+- uid: Global.Player.ShieldPart
+  name: ShieldPart
+  href: api/Global.Player.html#Global_Player_ShieldPart
+  commentId: P:Global.Player.ShieldPart
+  fullName: Player.ShieldPart
+  nameWithType: Player.ShieldPart
+- uid: Global.Player.ShieldPart*
+  name: ShieldPart
+  href: api/Global.Player.html#Global_Player_ShieldPart_
+  commentId: Overload:Global.Player.ShieldPart
+  isSpec: "True"
+  fullName: Player.ShieldPart
+  nameWithType: Player.ShieldPart
 - uid: Global.Player.ship
   name: ship
   href: api/Global.Player.html#Global_Player_ship
@@ -1980,18 +4139,205 @@ references:
   isSpec: "True"
   fullName: Player.takeDmg
   nameWithType: Player.takeDmg
+- uid: Global.Player.Timestamp
+  name: Timestamp
+  href: api/Global.Player.html#Global_Player_Timestamp
+  commentId: P:Global.Player.Timestamp
+  fullName: Player.Timestamp
+  nameWithType: Player.Timestamp
+- uid: Global.Player.Timestamp*
+  name: Timestamp
+  href: api/Global.Player.html#Global_Player_Timestamp_
+  commentId: Overload:Global.Player.Timestamp
+  isSpec: "True"
+  fullName: Player.Timestamp
+  nameWithType: Player.Timestamp
+- uid: Global.Player.trail
+  name: trail
+  href: api/Global.Player.html#Global_Player_trail
+  commentId: F:Global.Player.trail
+  fullName: Player.trail
+  nameWithType: Player.trail
 - uid: Global.Player.waypointPrefab
   name: waypointPrefab
   href: api/Global.Player.html#Global_Player_waypointPrefab
   commentId: F:Global.Player.waypointPrefab
   fullName: Player.waypointPrefab
   nameWithType: Player.waypointPrefab
-- uid: Global.Player.weapons
-  name: weapons
-  href: api/Global.Player.html#Global_Player_weapons
-  commentId: F:Global.Player.weapons
-  fullName: Player.weapons
-  nameWithType: Player.weapons
+- uid: Global.Player.WeaponSlots
+  name: WeaponSlots
+  href: api/Global.Player.html#Global_Player_WeaponSlots
+  commentId: F:Global.Player.WeaponSlots
+  fullName: Player.WeaponSlots
+  nameWithType: Player.WeaponSlots
+- uid: Global.PlayerSave
+  name: PlayerSave
+  href: api/Global.PlayerSave.html
+  commentId: T:Global.PlayerSave
+  fullName: PlayerSave
+  nameWithType: PlayerSave
+- uid: Global.PlayerSave.#ctor
+  name: PlayerSave()
+  href: api/Global.PlayerSave.html#Global_PlayerSave__ctor
+  commentId: M:Global.PlayerSave.#ctor
+  fullName: PlayerSave.PlayerSave()
+  nameWithType: PlayerSave.PlayerSave()
+- uid: Global.PlayerSave.#ctor*
+  name: PlayerSave
+  href: api/Global.PlayerSave.html#Global_PlayerSave__ctor_
+  commentId: Overload:Global.PlayerSave.#ctor
+  isSpec: "True"
+  fullName: PlayerSave.PlayerSave
+  nameWithType: PlayerSave.PlayerSave
+- uid: Global.PlayerSave.BoughtItems
+  name: BoughtItems
+  href: api/Global.PlayerSave.html#Global_PlayerSave_BoughtItems
+  commentId: P:Global.PlayerSave.BoughtItems
+  fullName: PlayerSave.BoughtItems
+  nameWithType: PlayerSave.BoughtItems
+- uid: Global.PlayerSave.BoughtItems*
+  name: BoughtItems
+  href: api/Global.PlayerSave.html#Global_PlayerSave_BoughtItems_
+  commentId: Overload:Global.PlayerSave.BoughtItems
+  isSpec: "True"
+  fullName: PlayerSave.BoughtItems
+  nameWithType: PlayerSave.BoughtItems
+- uid: Global.PlayerSave.Level1Played
+  name: Level1Played
+  href: api/Global.PlayerSave.html#Global_PlayerSave_Level1Played
+  commentId: P:Global.PlayerSave.Level1Played
+  fullName: PlayerSave.Level1Played
+  nameWithType: PlayerSave.Level1Played
+- uid: Global.PlayerSave.Level1Played*
+  name: Level1Played
+  href: api/Global.PlayerSave.html#Global_PlayerSave_Level1Played_
+  commentId: Overload:Global.PlayerSave.Level1Played
+  isSpec: "True"
+  fullName: PlayerSave.Level1Played
+  nameWithType: PlayerSave.Level1Played
+- uid: Global.PlayerSave.loadSettings
+  name: loadSettings()
+  href: api/Global.PlayerSave.html#Global_PlayerSave_loadSettings
+  commentId: M:Global.PlayerSave.loadSettings
+  fullName: PlayerSave.loadSettings()
+  nameWithType: PlayerSave.loadSettings()
+- uid: Global.PlayerSave.loadSettings*
+  name: loadSettings
+  href: api/Global.PlayerSave.html#Global_PlayerSave_loadSettings_
+  commentId: Overload:Global.PlayerSave.loadSettings
+  isSpec: "True"
+  fullName: PlayerSave.loadSettings
+  nameWithType: PlayerSave.loadSettings
+- uid: Global.PlayerSave.MainWeapon
+  name: MainWeapon
+  href: api/Global.PlayerSave.html#Global_PlayerSave_MainWeapon
+  commentId: P:Global.PlayerSave.MainWeapon
+  fullName: PlayerSave.MainWeapon
+  nameWithType: PlayerSave.MainWeapon
+- uid: Global.PlayerSave.MainWeapon*
+  name: MainWeapon
+  href: api/Global.PlayerSave.html#Global_PlayerSave_MainWeapon_
+  commentId: Overload:Global.PlayerSave.MainWeapon
+  isSpec: "True"
+  fullName: PlayerSave.MainWeapon
+  nameWithType: PlayerSave.MainWeapon
+- uid: Global.PlayerSave.Money
+  name: Money
+  href: api/Global.PlayerSave.html#Global_PlayerSave_Money
+  commentId: P:Global.PlayerSave.Money
+  fullName: PlayerSave.Money
+  nameWithType: PlayerSave.Money
+- uid: Global.PlayerSave.Money*
+  name: Money
+  href: api/Global.PlayerSave.html#Global_PlayerSave_Money_
+  commentId: Overload:Global.PlayerSave.Money
+  isSpec: "True"
+  fullName: PlayerSave.Money
+  nameWithType: PlayerSave.Money
+- uid: Global.PlayerSave.savingSetting
+  name: savingSetting()
+  href: api/Global.PlayerSave.html#Global_PlayerSave_savingSetting
+  commentId: M:Global.PlayerSave.savingSetting
+  fullName: PlayerSave.savingSetting()
+  nameWithType: PlayerSave.savingSetting()
+- uid: Global.PlayerSave.savingSetting*
+  name: savingSetting
+  href: api/Global.PlayerSave.html#Global_PlayerSave_savingSetting_
+  commentId: Overload:Global.PlayerSave.savingSetting
+  isSpec: "True"
+  fullName: PlayerSave.savingSetting
+  nameWithType: PlayerSave.savingSetting
+- uid: Global.PlayerSave.SecondaryWeapon
+  name: SecondaryWeapon
+  href: api/Global.PlayerSave.html#Global_PlayerSave_SecondaryWeapon
+  commentId: P:Global.PlayerSave.SecondaryWeapon
+  fullName: PlayerSave.SecondaryWeapon
+  nameWithType: PlayerSave.SecondaryWeapon
+- uid: Global.PlayerSave.SecondaryWeapon*
+  name: SecondaryWeapon
+  href: api/Global.PlayerSave.html#Global_PlayerSave_SecondaryWeapon_
+  commentId: Overload:Global.PlayerSave.SecondaryWeapon
+  isSpec: "True"
+  fullName: PlayerSave.SecondaryWeapon
+  nameWithType: PlayerSave.SecondaryWeapon
+- uid: Global.PlayerSave.SecondaryWeapon1
+  name: SecondaryWeapon1
+  href: api/Global.PlayerSave.html#Global_PlayerSave_SecondaryWeapon1
+  commentId: P:Global.PlayerSave.SecondaryWeapon1
+  fullName: PlayerSave.SecondaryWeapon1
+  nameWithType: PlayerSave.SecondaryWeapon1
+- uid: Global.PlayerSave.SecondaryWeapon1*
+  name: SecondaryWeapon1
+  href: api/Global.PlayerSave.html#Global_PlayerSave_SecondaryWeapon1_
+  commentId: Overload:Global.PlayerSave.SecondaryWeapon1
+  isSpec: "True"
+  fullName: PlayerSave.SecondaryWeapon1
+  nameWithType: PlayerSave.SecondaryWeapon1
+- uid: Global.PlayerSave.ShieldPart
+  name: ShieldPart
+  href: api/Global.PlayerSave.html#Global_PlayerSave_ShieldPart
+  commentId: P:Global.PlayerSave.ShieldPart
+  fullName: PlayerSave.ShieldPart
+  nameWithType: PlayerSave.ShieldPart
+- uid: Global.PlayerSave.ShieldPart*
+  name: ShieldPart
+  href: api/Global.PlayerSave.html#Global_PlayerSave_ShieldPart_
+  commentId: Overload:Global.PlayerSave.ShieldPart
+  isSpec: "True"
+  fullName: PlayerSave.ShieldPart
+  nameWithType: PlayerSave.ShieldPart
+- uid: Global.PlayerSave.TutorialPlayed
+  name: TutorialPlayed
+  href: api/Global.PlayerSave.html#Global_PlayerSave_TutorialPlayed
+  commentId: P:Global.PlayerSave.TutorialPlayed
+  fullName: PlayerSave.TutorialPlayed
+  nameWithType: PlayerSave.TutorialPlayed
+- uid: Global.PlayerSave.TutorialPlayed*
+  name: TutorialPlayed
+  href: api/Global.PlayerSave.html#Global_PlayerSave_TutorialPlayed_
+  commentId: Overload:Global.PlayerSave.TutorialPlayed
+  isSpec: "True"
+  fullName: PlayerSave.TutorialPlayed
+  nameWithType: PlayerSave.TutorialPlayed
+- uid: Global.RaycastMask
+  name: RaycastMask
+  href: api/Global.RaycastMask.html
+  commentId: T:Global.RaycastMask
+  fullName: RaycastMask
+  nameWithType: RaycastMask
+- uid: Global.RaycastMask.IsRaycastLocationValid(Vector2,Camera)
+  name: IsRaycastLocationValid(Vector2, Camera)
+  href: api/Global.RaycastMask.html#Global_RaycastMask_IsRaycastLocationValid_Vector2_Camera_
+  commentId: M:Global.RaycastMask.IsRaycastLocationValid(Vector2,Camera)
+  fullName: RaycastMask.IsRaycastLocationValid(Vector2, Camera)
+  nameWithType: RaycastMask.IsRaycastLocationValid(Vector2, Camera)
+- uid: Global.RaycastMask.IsRaycastLocationValid*
+  name: IsRaycastLocationValid
+  href: api/Global.RaycastMask.html#Global_RaycastMask_IsRaycastLocationValid_
+  commentId: Overload:Global.RaycastMask.IsRaycastLocationValid
+  isSpec: "True"
+  fullName: RaycastMask.IsRaycastLocationValid
+  nameWithType: RaycastMask.IsRaycastLocationValid
 - uid: Global.Rebinding_menu
   name: Rebinding_menu
   href: api/Global.Rebinding_menu.html
@@ -2066,6 +4412,32 @@ references:
   isSpec: "True"
   fullName: Rebinding_menu.onClickAlertButton
   nameWithType: Rebinding_menu.onClickAlertButton
+- uid: Global.Rebinding_menu.onClickGamepad
+  name: onClickGamepad()
+  href: api/Global.Rebinding_menu.html#Global_Rebinding_menu_onClickGamepad
+  commentId: M:Global.Rebinding_menu.onClickGamepad
+  fullName: Rebinding_menu.onClickGamepad()
+  nameWithType: Rebinding_menu.onClickGamepad()
+- uid: Global.Rebinding_menu.onClickGamepad*
+  name: onClickGamepad
+  href: api/Global.Rebinding_menu.html#Global_Rebinding_menu_onClickGamepad_
+  commentId: Overload:Global.Rebinding_menu.onClickGamepad
+  isSpec: "True"
+  fullName: Rebinding_menu.onClickGamepad
+  nameWithType: Rebinding_menu.onClickGamepad
+- uid: Global.Rebinding_menu.onClickMouseAndKey
+  name: onClickMouseAndKey()
+  href: api/Global.Rebinding_menu.html#Global_Rebinding_menu_onClickMouseAndKey
+  commentId: M:Global.Rebinding_menu.onClickMouseAndKey
+  fullName: Rebinding_menu.onClickMouseAndKey()
+  nameWithType: Rebinding_menu.onClickMouseAndKey()
+- uid: Global.Rebinding_menu.onClickMouseAndKey*
+  name: onClickMouseAndKey
+  href: api/Global.Rebinding_menu.html#Global_Rebinding_menu_onClickMouseAndKey_
+  commentId: Overload:Global.Rebinding_menu.onClickMouseAndKey
+  isSpec: "True"
+  fullName: Rebinding_menu.onClickMouseAndKey
+  nameWithType: Rebinding_menu.onClickMouseAndKey
 - uid: Global.Rebinding_menu.saveAlert
   name: saveAlert
   href: api/Global.Rebinding_menu.html#Global_Rebinding_menu_saveAlert
@@ -2091,18 +4463,99 @@ references:
   commentId: F:Global.Rebinding_menu.ScrollView
   fullName: Rebinding_menu.ScrollView
   nameWithType: Rebinding_menu.ScrollView
+- uid: Global.Rebinding_menu.viewPanel
+  name: viewPanel
+  href: api/Global.Rebinding_menu.html#Global_Rebinding_menu_viewPanel
+  commentId: F:Global.Rebinding_menu.viewPanel
+  fullName: Rebinding_menu.viewPanel
+  nameWithType: Rebinding_menu.viewPanel
+- uid: Global.RemoveSlotItem
+  name: RemoveSlotItem
+  href: api/Global.RemoveSlotItem.html
+  commentId: T:Global.RemoveSlotItem
+  fullName: RemoveSlotItem
+  nameWithType: RemoveSlotItem
+- uid: Global.RemoveSlotItem.audios
+  name: audios
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_audios
+  commentId: F:Global.RemoveSlotItem.audios
+  fullName: RemoveSlotItem.audios
+  nameWithType: RemoveSlotItem.audios
+- uid: Global.RemoveSlotItem.Image
+  name: Image
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_Image
+  commentId: P:Global.RemoveSlotItem.Image
+  fullName: RemoveSlotItem.Image
+  nameWithType: RemoveSlotItem.Image
+- uid: Global.RemoveSlotItem.Image*
+  name: Image
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_Image_
+  commentId: Overload:Global.RemoveSlotItem.Image
+  isSpec: "True"
+  fullName: RemoveSlotItem.Image
+  nameWithType: RemoveSlotItem.Image
+- uid: Global.RemoveSlotItem.isMainWeapon
+  name: isMainWeapon
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_isMainWeapon
+  commentId: F:Global.RemoveSlotItem.isMainWeapon
+  fullName: RemoveSlotItem.isMainWeapon
+  nameWithType: RemoveSlotItem.isMainWeapon
+- uid: Global.RemoveSlotItem.IsMouseOver
+  name: IsMouseOver
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_IsMouseOver
+  commentId: P:Global.RemoveSlotItem.IsMouseOver
+  fullName: RemoveSlotItem.IsMouseOver
+  nameWithType: RemoveSlotItem.IsMouseOver
+- uid: Global.RemoveSlotItem.IsMouseOver*
+  name: IsMouseOver
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_IsMouseOver_
+  commentId: Overload:Global.RemoveSlotItem.IsMouseOver
+  isSpec: "True"
+  fullName: RemoveSlotItem.IsMouseOver
+  nameWithType: RemoveSlotItem.IsMouseOver
+- uid: Global.RemoveSlotItem.isSecondaryWeapon
+  name: isSecondaryWeapon
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_isSecondaryWeapon
+  commentId: F:Global.RemoveSlotItem.isSecondaryWeapon
+  fullName: RemoveSlotItem.isSecondaryWeapon
+  nameWithType: RemoveSlotItem.isSecondaryWeapon
+- uid: Global.RemoveSlotItem.isSecondaryWeapon1
+  name: isSecondaryWeapon1
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_isSecondaryWeapon1
+  commentId: F:Global.RemoveSlotItem.isSecondaryWeapon1
+  fullName: RemoveSlotItem.isSecondaryWeapon1
+  nameWithType: RemoveSlotItem.isSecondaryWeapon1
+- uid: Global.RemoveSlotItem.isShipPart
+  name: isShipPart
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_isShipPart
+  commentId: F:Global.RemoveSlotItem.isShipPart
+  fullName: RemoveSlotItem.isShipPart
+  nameWithType: RemoveSlotItem.isShipPart
+- uid: Global.RemoveSlotItem.setMouseOver(System.Boolean)
+  name: setMouseOver(Boolean)
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_setMouseOver_System_Boolean_
+  commentId: M:Global.RemoveSlotItem.setMouseOver(System.Boolean)
+  fullName: RemoveSlotItem.setMouseOver(System.Boolean)
+  nameWithType: RemoveSlotItem.setMouseOver(Boolean)
+- uid: Global.RemoveSlotItem.setMouseOver*
+  name: setMouseOver
+  href: api/Global.RemoveSlotItem.html#Global_RemoveSlotItem_setMouseOver_
+  commentId: Overload:Global.RemoveSlotItem.setMouseOver
+  isSpec: "True"
+  fullName: RemoveSlotItem.setMouseOver
+  nameWithType: RemoveSlotItem.setMouseOver
 - uid: Global.SaveSettings
   name: SaveSettings
   href: api/Global.SaveSettings.html
   commentId: T:Global.SaveSettings
   fullName: SaveSettings
   nameWithType: SaveSettings
-- uid: Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single)
-  name: SaveSettings(Boolean, Single, Single)
-  href: api/Global.SaveSettings.html#Global_SaveSettings__ctor_System_Boolean_System_Single_System_Single_
-  commentId: M:Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single)
-  fullName: SaveSettings.SaveSettings(System.Boolean, System.Single, System.Single)
-  nameWithType: SaveSettings.SaveSettings(Boolean, Single, Single)
+- uid: Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single,System.Single)
+  name: SaveSettings(Boolean, Single, Single, Single)
+  href: api/Global.SaveSettings.html#Global_SaveSettings__ctor_System_Boolean_System_Single_System_Single_System_Single_
+  commentId: M:Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single,System.Single)
+  fullName: SaveSettings.SaveSettings(System.Boolean, System.Single, System.Single, System.Single)
+  nameWithType: SaveSettings.SaveSettings(Boolean, Single, Single, Single)
 - uid: Global.SaveSettings.#ctor*
   name: SaveSettings
   href: api/Global.SaveSettings.html#Global_SaveSettings__ctor_
@@ -2136,6 +4589,19 @@ references:
   isSpec: "True"
   fullName: SaveSettings.IsMute
   nameWithType: SaveSettings.IsMute
+- uid: Global.SaveSettings.IsToogleOn
+  name: IsToogleOn
+  href: api/Global.SaveSettings.html#Global_SaveSettings_IsToogleOn
+  commentId: P:Global.SaveSettings.IsToogleOn
+  fullName: SaveSettings.IsToogleOn
+  nameWithType: SaveSettings.IsToogleOn
+- uid: Global.SaveSettings.IsToogleOn*
+  name: IsToogleOn
+  href: api/Global.SaveSettings.html#Global_SaveSettings_IsToogleOn_
+  commentId: Overload:Global.SaveSettings.IsToogleOn
+  isSpec: "True"
+  fullName: SaveSettings.IsToogleOn
+  nameWithType: SaveSettings.IsToogleOn
 - uid: Global.SaveSettings.loadSettings
   name: loadSettings()
   href: api/Global.SaveSettings.html#Global_SaveSettings_loadSettings
@@ -2149,6 +4615,19 @@ references:
   isSpec: "True"
   fullName: SaveSettings.loadSettings
   nameWithType: SaveSettings.loadSettings
+- uid: Global.SaveSettings.MasterVolume
+  name: MasterVolume
+  href: api/Global.SaveSettings.html#Global_SaveSettings_MasterVolume
+  commentId: P:Global.SaveSettings.MasterVolume
+  fullName: SaveSettings.MasterVolume
+  nameWithType: SaveSettings.MasterVolume
+- uid: Global.SaveSettings.MasterVolume*
+  name: MasterVolume
+  href: api/Global.SaveSettings.html#Global_SaveSettings_MasterVolume_
+  commentId: Overload:Global.SaveSettings.MasterVolume
+  isSpec: "True"
+  fullName: SaveSettings.MasterVolume
+  nameWithType: SaveSettings.MasterVolume
 - uid: Global.SaveSettings.savingSetting
   name: savingSetting()
   href: api/Global.SaveSettings.html#Global_SaveSettings_savingSetting
@@ -2175,6 +4654,213 @@ references:
   isSpec: "True"
   fullName: SaveSettings.SfxVolume
   nameWithType: SaveSettings.SfxVolume
+- uid: Global.ScrollBackground
+  name: ScrollBackground
+  href: api/Global.ScrollBackground.html
+  commentId: T:Global.ScrollBackground
+  fullName: ScrollBackground
+  nameWithType: ScrollBackground
+- uid: Global.ScrollBackground.images
+  name: images
+  href: api/Global.ScrollBackground.html#Global_ScrollBackground_images
+  commentId: F:Global.ScrollBackground.images
+  fullName: ScrollBackground.images
+  nameWithType: ScrollBackground.images
+- uid: Global.ScrollBackground.maxXOffset
+  name: maxXOffset
+  href: api/Global.ScrollBackground.html#Global_ScrollBackground_maxXOffset
+  commentId: F:Global.ScrollBackground.maxXOffset
+  fullName: ScrollBackground.maxXOffset
+  nameWithType: ScrollBackground.maxXOffset
+- uid: Global.ScrollBackground.speed
+  name: speed
+  href: api/Global.ScrollBackground.html#Global_ScrollBackground_speed
+  commentId: F:Global.ScrollBackground.speed
+  fullName: ScrollBackground.speed
+  nameWithType: ScrollBackground.speed
+- uid: Global.ScrollBackground.yPosBorder
+  name: yPosBorder
+  href: api/Global.ScrollBackground.html#Global_ScrollBackground_yPosBorder
+  commentId: F:Global.ScrollBackground.yPosBorder
+  fullName: ScrollBackground.yPosBorder
+  nameWithType: ScrollBackground.yPosBorder
+- uid: Global.ShipEditorStatusDisplay
+  name: ShipEditorStatusDisplay
+  href: api/Global.ShipEditorStatusDisplay.html
+  commentId: T:Global.ShipEditorStatusDisplay
+  fullName: ShipEditorStatusDisplay
+  nameWithType: ShipEditorStatusDisplay
+- uid: Global.ShipEditorStatusDisplay.changeInfoDispaly(Item)
+  name: changeInfoDispaly(Item)
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_changeInfoDispaly_Item_
+  commentId: M:Global.ShipEditorStatusDisplay.changeInfoDispaly(Item)
+  fullName: ShipEditorStatusDisplay.changeInfoDispaly(Item)
+  nameWithType: ShipEditorStatusDisplay.changeInfoDispaly(Item)
+- uid: Global.ShipEditorStatusDisplay.changeInfoDispaly*
+  name: changeInfoDispaly
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_changeInfoDispaly_
+  commentId: Overload:Global.ShipEditorStatusDisplay.changeInfoDispaly
+  isSpec: "True"
+  fullName: ShipEditorStatusDisplay.changeInfoDispaly
+  nameWithType: ShipEditorStatusDisplay.changeInfoDispaly
+- uid: Global.ShipEditorStatusDisplay.dmgNameText
+  name: dmgNameText
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_dmgNameText
+  commentId: F:Global.ShipEditorStatusDisplay.dmgNameText
+  fullName: ShipEditorStatusDisplay.dmgNameText
+  nameWithType: ShipEditorStatusDisplay.dmgNameText
+- uid: Global.ShipEditorStatusDisplay.dmgText
+  name: dmgText
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_dmgText
+  commentId: F:Global.ShipEditorStatusDisplay.dmgText
+  fullName: ShipEditorStatusDisplay.dmgText
+  nameWithType: ShipEditorStatusDisplay.dmgText
+- uid: Global.ShipEditorStatusDisplay.itemName
+  name: itemName
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_itemName
+  commentId: F:Global.ShipEditorStatusDisplay.itemName
+  fullName: ShipEditorStatusDisplay.itemName
+  nameWithType: ShipEditorStatusDisplay.itemName
+- uid: Global.ShipEditorStatusDisplay.MoneyChanged
+  name: MoneyChanged()
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_MoneyChanged
+  commentId: M:Global.ShipEditorStatusDisplay.MoneyChanged
+  fullName: ShipEditorStatusDisplay.MoneyChanged()
+  nameWithType: ShipEditorStatusDisplay.MoneyChanged()
+- uid: Global.ShipEditorStatusDisplay.MoneyChanged*
+  name: MoneyChanged
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_MoneyChanged_
+  commentId: Overload:Global.ShipEditorStatusDisplay.MoneyChanged
+  isSpec: "True"
+  fullName: ShipEditorStatusDisplay.MoneyChanged
+  nameWithType: ShipEditorStatusDisplay.MoneyChanged
+- uid: Global.ShipEditorStatusDisplay.ownedMoney
+  name: ownedMoney
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_ownedMoney
+  commentId: F:Global.ShipEditorStatusDisplay.ownedMoney
+  fullName: ShipEditorStatusDisplay.ownedMoney
+  nameWithType: ShipEditorStatusDisplay.ownedMoney
+- uid: Global.ShipEditorStatusDisplay.parrernIconName
+  name: parrernIconName
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_parrernIconName
+  commentId: F:Global.ShipEditorStatusDisplay.parrernIconName
+  fullName: ShipEditorStatusDisplay.parrernIconName
+  nameWithType: ShipEditorStatusDisplay.parrernIconName
+- uid: Global.ShipEditorStatusDisplay.patternIcon
+  name: patternIcon
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_patternIcon
+  commentId: F:Global.ShipEditorStatusDisplay.patternIcon
+  fullName: ShipEditorStatusDisplay.patternIcon
+  nameWithType: ShipEditorStatusDisplay.patternIcon
+- uid: Global.ShipEditorStatusDisplay.reloadTimeNameText
+  name: reloadTimeNameText
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_reloadTimeNameText
+  commentId: F:Global.ShipEditorStatusDisplay.reloadTimeNameText
+  fullName: ShipEditorStatusDisplay.reloadTimeNameText
+  nameWithType: ShipEditorStatusDisplay.reloadTimeNameText
+- uid: Global.ShipEditorStatusDisplay.reloadTimeText
+  name: reloadTimeText
+  href: api/Global.ShipEditorStatusDisplay.html#Global_ShipEditorStatusDisplay_reloadTimeText
+  commentId: F:Global.ShipEditorStatusDisplay.reloadTimeText
+  fullName: ShipEditorStatusDisplay.reloadTimeText
+  nameWithType: ShipEditorStatusDisplay.reloadTimeText
+- uid: Global.ShipMenuControl
+  name: ShipMenuControl
+  href: api/Global.ShipMenuControl.html
+  commentId: T:Global.ShipMenuControl
+  fullName: ShipMenuControl
+  nameWithType: ShipMenuControl
+- uid: Global.ShipMenuControl.OnDoge(InputAction.CallbackContext)
+  name: OnDoge(InputAction.CallbackContext)
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnDoge_InputAction_CallbackContext_
+  commentId: M:Global.ShipMenuControl.OnDoge(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnDoge(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnDoge(InputAction.CallbackContext)
+- uid: Global.ShipMenuControl.OnDoge*
+  name: OnDoge
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnDoge_
+  commentId: Overload:Global.ShipMenuControl.OnDoge
+  isSpec: "True"
+  fullName: ShipMenuControl.OnDoge
+  nameWithType: ShipMenuControl.OnDoge
+- uid: Global.ShipMenuControl.OnMove_down(InputAction.CallbackContext)
+  name: OnMove_down(InputAction.CallbackContext)
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnMove_down_InputAction_CallbackContext_
+  commentId: M:Global.ShipMenuControl.OnMove_down(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnMove_down(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnMove_down(InputAction.CallbackContext)
+- uid: Global.ShipMenuControl.OnMove_down*
+  name: OnMove_down
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnMove_down_
+  commentId: Overload:Global.ShipMenuControl.OnMove_down
+  isSpec: "True"
+  fullName: ShipMenuControl.OnMove_down
+  nameWithType: ShipMenuControl.OnMove_down
+- uid: Global.ShipMenuControl.OnMove_left(InputAction.CallbackContext)
+  name: OnMove_left(InputAction.CallbackContext)
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnMove_left_InputAction_CallbackContext_
+  commentId: M:Global.ShipMenuControl.OnMove_left(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnMove_left(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnMove_left(InputAction.CallbackContext)
+- uid: Global.ShipMenuControl.OnMove_left*
+  name: OnMove_left
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnMove_left_
+  commentId: Overload:Global.ShipMenuControl.OnMove_left
+  isSpec: "True"
+  fullName: ShipMenuControl.OnMove_left
+  nameWithType: ShipMenuControl.OnMove_left
+- uid: Global.ShipMenuControl.OnMove_rigth(InputAction.CallbackContext)
+  name: OnMove_rigth(InputAction.CallbackContext)
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnMove_rigth_InputAction_CallbackContext_
+  commentId: M:Global.ShipMenuControl.OnMove_rigth(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnMove_rigth(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnMove_rigth(InputAction.CallbackContext)
+- uid: Global.ShipMenuControl.OnMove_rigth*
+  name: OnMove_rigth
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnMove_rigth_
+  commentId: Overload:Global.ShipMenuControl.OnMove_rigth
+  isSpec: "True"
+  fullName: ShipMenuControl.OnMove_rigth
+  nameWithType: ShipMenuControl.OnMove_rigth
+- uid: Global.ShipMenuControl.OnMove_up(InputAction.CallbackContext)
+  name: OnMove_up(InputAction.CallbackContext)
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnMove_up_InputAction_CallbackContext_
+  commentId: M:Global.ShipMenuControl.OnMove_up(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnMove_up(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnMove_up(InputAction.CallbackContext)
+- uid: Global.ShipMenuControl.OnMove_up*
+  name: OnMove_up
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnMove_up_
+  commentId: Overload:Global.ShipMenuControl.OnMove_up
+  isSpec: "True"
+  fullName: ShipMenuControl.OnMove_up
+  nameWithType: ShipMenuControl.OnMove_up
+- uid: Global.ShipMenuControl.OnPause_menu(InputAction.CallbackContext)
+  name: OnPause_menu(InputAction.CallbackContext)
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnPause_menu_InputAction_CallbackContext_
+  commentId: M:Global.ShipMenuControl.OnPause_menu(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnPause_menu(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnPause_menu(InputAction.CallbackContext)
+- uid: Global.ShipMenuControl.OnPause_menu*
+  name: OnPause_menu
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnPause_menu_
+  commentId: Overload:Global.ShipMenuControl.OnPause_menu
+  isSpec: "True"
+  fullName: ShipMenuControl.OnPause_menu
+  nameWithType: ShipMenuControl.OnPause_menu
+- uid: Global.ShipMenuControl.OnShoot(InputAction.CallbackContext)
+  name: OnShoot(InputAction.CallbackContext)
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnShoot_InputAction_CallbackContext_
+  commentId: M:Global.ShipMenuControl.OnShoot(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnShoot(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnShoot(InputAction.CallbackContext)
+- uid: Global.ShipMenuControl.OnShoot*
+  name: OnShoot
+  href: api/Global.ShipMenuControl.html#Global_ShipMenuControl_OnShoot_
+  commentId: Overload:Global.ShipMenuControl.OnShoot
+  isSpec: "True"
+  fullName: ShipMenuControl.OnShoot
+  nameWithType: ShipMenuControl.OnShoot
 - uid: Global.Skill
   name: Skill
   href: api/Global.Skill.html
@@ -2219,12 +4905,12 @@ references:
   commentId: F:Global.Skill.maxDuration
   fullName: Skill.maxDuration
   nameWithType: Skill.maxDuration
-- uid: Global.Skill.setDmgModifiers(System.Int32,System.Single)
-  name: setDmgModifiers(Int32, Single)
-  href: api/Global.Skill.html#Global_Skill_setDmgModifiers_System_Int32_System_Single_
-  commentId: M:Global.Skill.setDmgModifiers(System.Int32,System.Single)
-  fullName: Skill.setDmgModifiers(System.Int32, System.Single)
-  nameWithType: Skill.setDmgModifiers(Int32, Single)
+- uid: Global.Skill.setDmgModifiers(System.Single,System.Single)
+  name: setDmgModifiers(Single, Single)
+  href: api/Global.Skill.html#Global_Skill_setDmgModifiers_System_Single_System_Single_
+  commentId: M:Global.Skill.setDmgModifiers(System.Single,System.Single)
+  fullName: Skill.setDmgModifiers(System.Single, System.Single)
+  nameWithType: Skill.setDmgModifiers(Single, Single)
 - uid: Global.Skill.setDmgModifiers*
   name: setDmgModifiers
   href: api/Global.Skill.html#Global_Skill_setDmgModifiers_
@@ -2232,6 +4918,19 @@ references:
   isSpec: "True"
   fullName: Skill.setDmgModifiers
   nameWithType: Skill.setDmgModifiers
+- uid: Global.Skill.setSfxSoundOnBullets(GameObject)
+  name: setSfxSoundOnBullets(GameObject)
+  href: api/Global.Skill.html#Global_Skill_setSfxSoundOnBullets_GameObject_
+  commentId: M:Global.Skill.setSfxSoundOnBullets(GameObject)
+  fullName: Skill.setSfxSoundOnBullets(GameObject)
+  nameWithType: Skill.setSfxSoundOnBullets(GameObject)
+- uid: Global.Skill.setSfxSoundOnBullets*
+  name: setSfxSoundOnBullets
+  href: api/Global.Skill.html#Global_Skill_setSfxSoundOnBullets_
+  commentId: Overload:Global.Skill.setSfxSoundOnBullets
+  isSpec: "True"
+  fullName: Skill.setSfxSoundOnBullets
+  nameWithType: Skill.setSfxSoundOnBullets
 - uid: Global.Skill.Timestamp
   name: Timestamp
   href: api/Global.Skill.html#Global_Skill_Timestamp
@@ -2251,12 +4950,12 @@ references:
   commentId: T:Global.Skillsequenze
   fullName: Skillsequenze
   nameWithType: Skillsequenze
-- uid: Global.Skillsequenze.#ctor(System.Single,GameObject)
-  name: Skillsequenze(Single, GameObject)
-  href: api/Global.Skillsequenze.html#Global_Skillsequenze__ctor_System_Single_GameObject_
-  commentId: M:Global.Skillsequenze.#ctor(System.Single,GameObject)
-  fullName: Skillsequenze.Skillsequenze(System.Single, GameObject)
-  nameWithType: Skillsequenze.Skillsequenze(Single, GameObject)
+- uid: Global.Skillsequenze.#ctor(System.Single,GameObject,System.Boolean)
+  name: Skillsequenze(Single, GameObject, Boolean)
+  href: api/Global.Skillsequenze.html#Global_Skillsequenze__ctor_System_Single_GameObject_System_Boolean_
+  commentId: M:Global.Skillsequenze.#ctor(System.Single,GameObject,System.Boolean)
+  fullName: Skillsequenze.Skillsequenze(System.Single, GameObject, System.Boolean)
+  nameWithType: Skillsequenze.Skillsequenze(Single, GameObject, Boolean)
 - uid: Global.Skillsequenze.#ctor*
   name: Skillsequenze
   href: api/Global.Skillsequenze.html#Global_Skillsequenze__ctor_
@@ -2277,6 +4976,19 @@ references:
   isSpec: "True"
   fullName: Skillsequenze.Delay
   nameWithType: Skillsequenze.Delay
+- uid: Global.Skillsequenze.ShootInRotatedDirection
+  name: ShootInRotatedDirection
+  href: api/Global.Skillsequenze.html#Global_Skillsequenze_ShootInRotatedDirection
+  commentId: P:Global.Skillsequenze.ShootInRotatedDirection
+  fullName: Skillsequenze.ShootInRotatedDirection
+  nameWithType: Skillsequenze.ShootInRotatedDirection
+- uid: Global.Skillsequenze.ShootInRotatedDirection*
+  name: ShootInRotatedDirection
+  href: api/Global.Skillsequenze.html#Global_Skillsequenze_ShootInRotatedDirection_
+  commentId: Overload:Global.Skillsequenze.ShootInRotatedDirection
+  isSpec: "True"
+  fullName: Skillsequenze.ShootInRotatedDirection
+  nameWithType: Skillsequenze.ShootInRotatedDirection
 - uid: Global.Skillsequenze.Skill
   name: Skill
   href: api/Global.Skillsequenze.html#Global_Skillsequenze_Skill
@@ -2290,6 +5002,109 @@ references:
   isSpec: "True"
   fullName: Skillsequenze.Skill
   nameWithType: Skillsequenze.Skill
+- uid: Global.SkipStoryIntro
+  name: SkipStoryIntro
+  href: api/Global.SkipStoryIntro.html
+  commentId: T:Global.SkipStoryIntro
+  fullName: SkipStoryIntro
+  nameWithType: SkipStoryIntro
+- uid: Global.SkipStoryIntro.intro
+  name: intro
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_intro
+  commentId: F:Global.SkipStoryIntro.intro
+  fullName: SkipStoryIntro.intro
+  nameWithType: SkipStoryIntro.intro
+- uid: Global.SkipStoryIntro.OnDoge(InputAction.CallbackContext)
+  name: OnDoge(InputAction.CallbackContext)
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnDoge_InputAction_CallbackContext_
+  commentId: M:Global.SkipStoryIntro.OnDoge(InputAction.CallbackContext)
+  fullName: SkipStoryIntro.OnDoge(InputAction.CallbackContext)
+  nameWithType: SkipStoryIntro.OnDoge(InputAction.CallbackContext)
+- uid: Global.SkipStoryIntro.OnDoge*
+  name: OnDoge
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnDoge_
+  commentId: Overload:Global.SkipStoryIntro.OnDoge
+  isSpec: "True"
+  fullName: SkipStoryIntro.OnDoge
+  nameWithType: SkipStoryIntro.OnDoge
+- uid: Global.SkipStoryIntro.OnMove_down(InputAction.CallbackContext)
+  name: OnMove_down(InputAction.CallbackContext)
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnMove_down_InputAction_CallbackContext_
+  commentId: M:Global.SkipStoryIntro.OnMove_down(InputAction.CallbackContext)
+  fullName: SkipStoryIntro.OnMove_down(InputAction.CallbackContext)
+  nameWithType: SkipStoryIntro.OnMove_down(InputAction.CallbackContext)
+- uid: Global.SkipStoryIntro.OnMove_down*
+  name: OnMove_down
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnMove_down_
+  commentId: Overload:Global.SkipStoryIntro.OnMove_down
+  isSpec: "True"
+  fullName: SkipStoryIntro.OnMove_down
+  nameWithType: SkipStoryIntro.OnMove_down
+- uid: Global.SkipStoryIntro.OnMove_left(InputAction.CallbackContext)
+  name: OnMove_left(InputAction.CallbackContext)
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnMove_left_InputAction_CallbackContext_
+  commentId: M:Global.SkipStoryIntro.OnMove_left(InputAction.CallbackContext)
+  fullName: SkipStoryIntro.OnMove_left(InputAction.CallbackContext)
+  nameWithType: SkipStoryIntro.OnMove_left(InputAction.CallbackContext)
+- uid: Global.SkipStoryIntro.OnMove_left*
+  name: OnMove_left
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnMove_left_
+  commentId: Overload:Global.SkipStoryIntro.OnMove_left
+  isSpec: "True"
+  fullName: SkipStoryIntro.OnMove_left
+  nameWithType: SkipStoryIntro.OnMove_left
+- uid: Global.SkipStoryIntro.OnMove_rigth(InputAction.CallbackContext)
+  name: OnMove_rigth(InputAction.CallbackContext)
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnMove_rigth_InputAction_CallbackContext_
+  commentId: M:Global.SkipStoryIntro.OnMove_rigth(InputAction.CallbackContext)
+  fullName: SkipStoryIntro.OnMove_rigth(InputAction.CallbackContext)
+  nameWithType: SkipStoryIntro.OnMove_rigth(InputAction.CallbackContext)
+- uid: Global.SkipStoryIntro.OnMove_rigth*
+  name: OnMove_rigth
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnMove_rigth_
+  commentId: Overload:Global.SkipStoryIntro.OnMove_rigth
+  isSpec: "True"
+  fullName: SkipStoryIntro.OnMove_rigth
+  nameWithType: SkipStoryIntro.OnMove_rigth
+- uid: Global.SkipStoryIntro.OnMove_up(InputAction.CallbackContext)
+  name: OnMove_up(InputAction.CallbackContext)
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnMove_up_InputAction_CallbackContext_
+  commentId: M:Global.SkipStoryIntro.OnMove_up(InputAction.CallbackContext)
+  fullName: SkipStoryIntro.OnMove_up(InputAction.CallbackContext)
+  nameWithType: SkipStoryIntro.OnMove_up(InputAction.CallbackContext)
+- uid: Global.SkipStoryIntro.OnMove_up*
+  name: OnMove_up
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnMove_up_
+  commentId: Overload:Global.SkipStoryIntro.OnMove_up
+  isSpec: "True"
+  fullName: SkipStoryIntro.OnMove_up
+  nameWithType: SkipStoryIntro.OnMove_up
+- uid: Global.SkipStoryIntro.OnPause_menu(InputAction.CallbackContext)
+  name: OnPause_menu(InputAction.CallbackContext)
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnPause_menu_InputAction_CallbackContext_
+  commentId: M:Global.SkipStoryIntro.OnPause_menu(InputAction.CallbackContext)
+  fullName: SkipStoryIntro.OnPause_menu(InputAction.CallbackContext)
+  nameWithType: SkipStoryIntro.OnPause_menu(InputAction.CallbackContext)
+- uid: Global.SkipStoryIntro.OnPause_menu*
+  name: OnPause_menu
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnPause_menu_
+  commentId: Overload:Global.SkipStoryIntro.OnPause_menu
+  isSpec: "True"
+  fullName: SkipStoryIntro.OnPause_menu
+  nameWithType: SkipStoryIntro.OnPause_menu
+- uid: Global.SkipStoryIntro.OnShoot(InputAction.CallbackContext)
+  name: OnShoot(InputAction.CallbackContext)
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnShoot_InputAction_CallbackContext_
+  commentId: M:Global.SkipStoryIntro.OnShoot(InputAction.CallbackContext)
+  fullName: SkipStoryIntro.OnShoot(InputAction.CallbackContext)
+  nameWithType: SkipStoryIntro.OnShoot(InputAction.CallbackContext)
+- uid: Global.SkipStoryIntro.OnShoot*
+  name: OnShoot
+  href: api/Global.SkipStoryIntro.html#Global_SkipStoryIntro_OnShoot_
+  commentId: Overload:Global.SkipStoryIntro.OnShoot
+  isSpec: "True"
+  fullName: SkipStoryIntro.OnShoot
+  nameWithType: SkipStoryIntro.OnShoot
 - uid: Global.SoundControl
   name: SoundControl
   href: api/Global.SoundControl.html
@@ -2327,12 +5142,25 @@ references:
   commentId: F:Global.SoundControl.masterGroup
   fullName: SoundControl.masterGroup
   nameWithType: SoundControl.masterGroup
-- uid: Global.SoundControl.mute
-  name: mute
-  href: api/Global.SoundControl.html#Global_SoundControl_mute
-  commentId: F:Global.SoundControl.mute
-  fullName: SoundControl.mute
-  nameWithType: SoundControl.mute
+- uid: Global.SoundControl.masterSlider
+  name: masterSlider
+  href: api/Global.SoundControl.html#Global_SoundControl_masterSlider
+  commentId: F:Global.SoundControl.masterSlider
+  fullName: SoundControl.masterSlider
+  nameWithType: SoundControl.masterSlider
+- uid: Global.SoundControl.masterSoundChange
+  name: masterSoundChange()
+  href: api/Global.SoundControl.html#Global_SoundControl_masterSoundChange
+  commentId: M:Global.SoundControl.masterSoundChange
+  fullName: SoundControl.masterSoundChange()
+  nameWithType: SoundControl.masterSoundChange()
+- uid: Global.SoundControl.masterSoundChange*
+  name: masterSoundChange
+  href: api/Global.SoundControl.html#Global_SoundControl_masterSoundChange_
+  commentId: Overload:Global.SoundControl.masterSoundChange
+  isSpec: "True"
+  fullName: SoundControl.masterSoundChange
+  nameWithType: SoundControl.masterSoundChange
 - uid: Global.SoundControl.muteButton
   name: muteButton
   href: api/Global.SoundControl.html#Global_SoundControl_muteButton
@@ -2345,12 +5173,6 @@ references:
   commentId: F:Global.SoundControl.muteSp
   fullName: SoundControl.muteSp
   nameWithType: SoundControl.muteSp
-- uid: Global.SoundControl.normal
-  name: normal
-  href: api/Global.SoundControl.html#Global_SoundControl_normal
-  commentId: F:Global.SoundControl.normal
-  fullName: SoundControl.normal
-  nameWithType: SoundControl.normal
 - uid: Global.SoundControl.saveSettingChanges
   name: saveSettingChanges()
   href: api/Global.SoundControl.html#Global_SoundControl_saveSettingChanges
@@ -2421,6 +5243,97 @@ references:
   commentId: F:Global.SoundControl.unMuteSp
   fullName: SoundControl.unMuteSp
   nameWithType: SoundControl.unMuteSp
+- uid: Global.SpawnerCreation
+  name: SpawnerCreation
+  href: api/Global.SpawnerCreation.html
+  commentId: T:Global.SpawnerCreation
+  fullName: SpawnerCreation
+  nameWithType: SpawnerCreation
+- uid: Global.SpawnerCreation.flipOffset
+  name: flipOffset
+  href: api/Global.SpawnerCreation.html#Global_SpawnerCreation_flipOffset
+  commentId: F:Global.SpawnerCreation.flipOffset
+  fullName: SpawnerCreation.flipOffset
+  nameWithType: SpawnerCreation.flipOffset
+- uid: Global.SpawnerCreation.moveInOutOffset
+  name: moveInOutOffset
+  href: api/Global.SpawnerCreation.html#Global_SpawnerCreation_moveInOutOffset
+  commentId: F:Global.SpawnerCreation.moveInOutOffset
+  fullName: SpawnerCreation.moveInOutOffset
+  nameWithType: SpawnerCreation.moveInOutOffset
+- uid: Global.SpawnerCreation.refSpawner
+  name: refSpawner
+  href: api/Global.SpawnerCreation.html#Global_SpawnerCreation_refSpawner
+  commentId: F:Global.SpawnerCreation.refSpawner
+  fullName: SpawnerCreation.refSpawner
+  nameWithType: SpawnerCreation.refSpawner
+- uid: Global.SpawnerCreation.useWaypointOffsetX
+  name: useWaypointOffsetX
+  href: api/Global.SpawnerCreation.html#Global_SpawnerCreation_useWaypointOffsetX
+  commentId: F:Global.SpawnerCreation.useWaypointOffsetX
+  fullName: SpawnerCreation.useWaypointOffsetX
+  nameWithType: SpawnerCreation.useWaypointOffsetX
+- uid: Global.SpawnerCreation.useWaypointOffsetY
+  name: useWaypointOffsetY
+  href: api/Global.SpawnerCreation.html#Global_SpawnerCreation_useWaypointOffsetY
+  commentId: F:Global.SpawnerCreation.useWaypointOffsetY
+  fullName: SpawnerCreation.useWaypointOffsetY
+  nameWithType: SpawnerCreation.useWaypointOffsetY
+- uid: Global.SpeechBubbles
+  name: SpeechBubbles
+  href: api/Global.SpeechBubbles.html
+  commentId: T:Global.SpeechBubbles
+  fullName: SpeechBubbles
+  nameWithType: SpeechBubbles
+- uid: Global.SpeechBubbles.audios
+  name: audios
+  href: api/Global.SpeechBubbles.html#Global_SpeechBubbles_audios
+  commentId: F:Global.SpeechBubbles.audios
+  fullName: SpeechBubbles.audios
+  nameWithType: SpeechBubbles.audios
+- uid: Global.SpeechBubbles.Trigger
+  name: Trigger
+  href: api/Global.SpeechBubbles.html#Global_SpeechBubbles_Trigger
+  commentId: F:Global.SpeechBubbles.Trigger
+  fullName: SpeechBubbles.Trigger
+  nameWithType: SpeechBubbles.Trigger
+- uid: Global.SpeechBubbles.UiObject
+  name: UiObject
+  href: api/Global.SpeechBubbles.html#Global_SpeechBubbles_UiObject
+  commentId: F:Global.SpeechBubbles.UiObject
+  fullName: SpeechBubbles.UiObject
+  nameWithType: SpeechBubbles.UiObject
+- uid: Global.StoryIntro
+  name: StoryIntro
+  href: api/Global.StoryIntro.html
+  commentId: T:Global.StoryIntro
+  fullName: StoryIntro
+  nameWithType: StoryIntro
+- uid: Global.StoryIntro.mainMenu
+  name: mainMenu
+  href: api/Global.StoryIntro.html#Global_StoryIntro_mainMenu
+  commentId: F:Global.StoryIntro.mainMenu
+  fullName: StoryIntro.mainMenu
+  nameWithType: StoryIntro.mainMenu
+- uid: Global.StoryIntro.Skip
+  name: Skip
+  href: api/Global.StoryIntro.html#Global_StoryIntro_Skip
+  commentId: P:Global.StoryIntro.Skip
+  fullName: StoryIntro.Skip
+  nameWithType: StoryIntro.Skip
+- uid: Global.StoryIntro.Skip*
+  name: Skip
+  href: api/Global.StoryIntro.html#Global_StoryIntro_Skip_
+  commentId: Overload:Global.StoryIntro.Skip
+  isSpec: "True"
+  fullName: StoryIntro.Skip
+  nameWithType: StoryIntro.Skip
+- uid: Global.StoryIntro.slides
+  name: slides
+  href: api/Global.StoryIntro.html#Global_StoryIntro_slides
+  commentId: F:Global.StoryIntro.slides
+  fullName: StoryIntro.slides
+  nameWithType: StoryIntro.slides
 - uid: Global.Tag_enum
   name: Tag_enum
   href: api/Global.Tag_enum.html
@@ -2445,12 +5358,175 @@ references:
   commentId: F:Global.Tag_enum.player_border
   fullName: Tag_enum.player_border
   nameWithType: Tag_enum.player_border
+- uid: Global.ToolTip
+  name: ToolTip
+  href: api/Global.ToolTip.html
+  commentId: T:Global.ToolTip
+  fullName: ToolTip
+  nameWithType: ToolTip
+- uid: Global.ToolTip.characterWrapLimit
+  name: characterWrapLimit
+  href: api/Global.ToolTip.html#Global_ToolTip_characterWrapLimit
+  commentId: F:Global.ToolTip.characterWrapLimit
+  fullName: ToolTip.characterWrapLimit
+  nameWithType: ToolTip.characterWrapLimit
+- uid: Global.ToolTip.contentField
+  name: contentField
+  href: api/Global.ToolTip.html#Global_ToolTip_contentField
+  commentId: F:Global.ToolTip.contentField
+  fullName: ToolTip.contentField
+  nameWithType: ToolTip.contentField
+- uid: Global.ToolTip.headerField
+  name: headerField
+  href: api/Global.ToolTip.html#Global_ToolTip_headerField
+  commentId: F:Global.ToolTip.headerField
+  fullName: ToolTip.headerField
+  nameWithType: ToolTip.headerField
+- uid: Global.ToolTip.layoutElement
+  name: layoutElement
+  href: api/Global.ToolTip.html#Global_ToolTip_layoutElement
+  commentId: F:Global.ToolTip.layoutElement
+  fullName: ToolTip.layoutElement
+  nameWithType: ToolTip.layoutElement
+- uid: Global.ToolTip.SetText(System.String,System.String)
+  name: SetText(String, String)
+  href: api/Global.ToolTip.html#Global_ToolTip_SetText_System_String_System_String_
+  commentId: M:Global.ToolTip.SetText(System.String,System.String)
+  fullName: ToolTip.SetText(System.String, System.String)
+  nameWithType: ToolTip.SetText(String, String)
+- uid: Global.ToolTip.SetText*
+  name: SetText
+  href: api/Global.ToolTip.html#Global_ToolTip_SetText_
+  commentId: Overload:Global.ToolTip.SetText
+  isSpec: "True"
+  fullName: ToolTip.SetText
+  nameWithType: ToolTip.SetText
+- uid: Global.ToolTip.tooltipToogled
+  name: tooltipToogled
+  href: api/Global.ToolTip.html#Global_ToolTip_tooltipToogled
+  commentId: F:Global.ToolTip.tooltipToogled
+  fullName: ToolTip.tooltipToogled
+  nameWithType: ToolTip.tooltipToogled
+- uid: Global.TooltipSystem
+  name: TooltipSystem
+  href: api/Global.TooltipSystem.html
+  commentId: T:Global.TooltipSystem
+  fullName: TooltipSystem
+  nameWithType: TooltipSystem
+- uid: Global.TooltipSystem.Hide
+  name: Hide()
+  href: api/Global.TooltipSystem.html#Global_TooltipSystem_Hide
+  commentId: M:Global.TooltipSystem.Hide
+  fullName: TooltipSystem.Hide()
+  nameWithType: TooltipSystem.Hide()
+- uid: Global.TooltipSystem.Hide*
+  name: Hide
+  href: api/Global.TooltipSystem.html#Global_TooltipSystem_Hide_
+  commentId: Overload:Global.TooltipSystem.Hide
+  isSpec: "True"
+  fullName: TooltipSystem.Hide
+  nameWithType: TooltipSystem.Hide
+- uid: Global.TooltipSystem.Show(System.String,System.String)
+  name: Show(String, String)
+  href: api/Global.TooltipSystem.html#Global_TooltipSystem_Show_System_String_System_String_
+  commentId: M:Global.TooltipSystem.Show(System.String,System.String)
+  fullName: TooltipSystem.Show(System.String, System.String)
+  nameWithType: TooltipSystem.Show(String, String)
+- uid: Global.TooltipSystem.Show*
+  name: Show
+  href: api/Global.TooltipSystem.html#Global_TooltipSystem_Show_
+  commentId: Overload:Global.TooltipSystem.Show
+  isSpec: "True"
+  fullName: TooltipSystem.Show
+  nameWithType: TooltipSystem.Show
+- uid: Global.TooltipSystem.Start
+  name: Start()
+  href: api/Global.TooltipSystem.html#Global_TooltipSystem_Start
+  commentId: M:Global.TooltipSystem.Start
+  fullName: TooltipSystem.Start()
+  nameWithType: TooltipSystem.Start()
+- uid: Global.TooltipSystem.Start*
+  name: Start
+  href: api/Global.TooltipSystem.html#Global_TooltipSystem_Start_
+  commentId: Overload:Global.TooltipSystem.Start
+  isSpec: "True"
+  fullName: TooltipSystem.Start
+  nameWithType: TooltipSystem.Start
+- uid: Global.TooltipSystem.tooltip
+  name: tooltip
+  href: api/Global.TooltipSystem.html#Global_TooltipSystem_tooltip
+  commentId: F:Global.TooltipSystem.tooltip
+  fullName: TooltipSystem.tooltip
+  nameWithType: TooltipSystem.tooltip
+- uid: Global.TooltipTrigger
+  name: TooltipTrigger
+  href: api/Global.TooltipTrigger.html
+  commentId: T:Global.TooltipTrigger
+  fullName: TooltipTrigger
+  nameWithType: TooltipTrigger
+- uid: Global.TooltipTrigger.content
+  name: content
+  href: api/Global.TooltipTrigger.html#Global_TooltipTrigger_content
+  commentId: F:Global.TooltipTrigger.content
+  fullName: TooltipTrigger.content
+  nameWithType: TooltipTrigger.content
+- uid: Global.TooltipTrigger.header
+  name: header
+  href: api/Global.TooltipTrigger.html#Global_TooltipTrigger_header
+  commentId: F:Global.TooltipTrigger.header
+  fullName: TooltipTrigger.header
+  nameWithType: TooltipTrigger.header
+- uid: Global.TooltipTrigger.OnPointerEnter(PointerEventData)
+  name: OnPointerEnter(PointerEventData)
+  href: api/Global.TooltipTrigger.html#Global_TooltipTrigger_OnPointerEnter_PointerEventData_
+  commentId: M:Global.TooltipTrigger.OnPointerEnter(PointerEventData)
+  fullName: TooltipTrigger.OnPointerEnter(PointerEventData)
+  nameWithType: TooltipTrigger.OnPointerEnter(PointerEventData)
+- uid: Global.TooltipTrigger.OnPointerEnter*
+  name: OnPointerEnter
+  href: api/Global.TooltipTrigger.html#Global_TooltipTrigger_OnPointerEnter_
+  commentId: Overload:Global.TooltipTrigger.OnPointerEnter
+  isSpec: "True"
+  fullName: TooltipTrigger.OnPointerEnter
+  nameWithType: TooltipTrigger.OnPointerEnter
+- uid: Global.TooltipTrigger.OnPointerExit(PointerEventData)
+  name: OnPointerExit(PointerEventData)
+  href: api/Global.TooltipTrigger.html#Global_TooltipTrigger_OnPointerExit_PointerEventData_
+  commentId: M:Global.TooltipTrigger.OnPointerExit(PointerEventData)
+  fullName: TooltipTrigger.OnPointerExit(PointerEventData)
+  nameWithType: TooltipTrigger.OnPointerExit(PointerEventData)
+- uid: Global.TooltipTrigger.OnPointerExit*
+  name: OnPointerExit
+  href: api/Global.TooltipTrigger.html#Global_TooltipTrigger_OnPointerExit_
+  commentId: Overload:Global.TooltipTrigger.OnPointerExit
+  isSpec: "True"
+  fullName: TooltipTrigger.OnPointerExit
+  nameWithType: TooltipTrigger.OnPointerExit
 - uid: Global.TriggerCallBack
   name: TriggerCallBack
   href: api/Global.TriggerCallBack.html
   commentId: T:Global.TriggerCallBack
   fullName: TriggerCallBack
   nameWithType: TriggerCallBack
+- uid: Global.TriggerCallBack.moneyDrop
+  name: moneyDrop
+  href: api/Global.TriggerCallBack.html#Global_TriggerCallBack_moneyDrop
+  commentId: F:Global.TriggerCallBack.moneyDrop
+  fullName: TriggerCallBack.moneyDrop
+  nameWithType: TriggerCallBack.moneyDrop
+- uid: Global.TriggerCallBack.MoneyValue
+  name: MoneyValue
+  href: api/Global.TriggerCallBack.html#Global_TriggerCallBack_MoneyValue
+  commentId: P:Global.TriggerCallBack.MoneyValue
+  fullName: TriggerCallBack.MoneyValue
+  nameWithType: TriggerCallBack.MoneyValue
+- uid: Global.TriggerCallBack.MoneyValue*
+  name: MoneyValue
+  href: api/Global.TriggerCallBack.html#Global_TriggerCallBack_MoneyValue_
+  commentId: Overload:Global.TriggerCallBack.MoneyValue
+  isSpec: "True"
+  fullName: TriggerCallBack.MoneyValue
+  nameWithType: TriggerCallBack.MoneyValue
 - uid: Global.TriggerCallBack.spawnerActivationTrigger
   name: spawnerActivationTrigger
   href: api/Global.TriggerCallBack.html#Global_TriggerCallBack_spawnerActivationTrigger
@@ -2463,6 +5539,216 @@ references:
   commentId: F:Global.TriggerCallBack.spawnTrigger
   fullName: TriggerCallBack.spawnTrigger
   nameWithType: TriggerCallBack.spawnTrigger
+- uid: Global.VirtualMouse
+  name: VirtualMouse
+  href: api/Global.VirtualMouse.html
+  commentId: T:Global.VirtualMouse
+  fullName: VirtualMouse
+  nameWithType: VirtualMouse
+- uid: Global.VirtualMouse.canvas
+  name: canvas
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_canvas
+  commentId: F:Global.VirtualMouse.canvas
+  fullName: VirtualMouse.canvas
+  nameWithType: VirtualMouse.canvas
+- uid: Global.VirtualMouse.canvasRect
+  name: canvasRect
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_canvasRect
+  commentId: F:Global.VirtualMouse.canvasRect
+  fullName: VirtualMouse.canvasRect
+  nameWithType: VirtualMouse.canvasRect
+- uid: Global.VirtualMouse.cursor
+  name: cursor
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_cursor
+  commentId: F:Global.VirtualMouse.cursor
+  fullName: VirtualMouse.cursor
+  nameWithType: VirtualMouse.cursor
+- uid: Global.VirtualMouse.hardwareMouseVisible
+  name: hardwareMouseVisible
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_hardwareMouseVisible
+  commentId: F:Global.VirtualMouse.hardwareMouseVisible
+  fullName: VirtualMouse.hardwareMouseVisible
+  nameWithType: VirtualMouse.hardwareMouseVisible
+- uid: Global.VirtualMouse.loadNewRebinds
+  name: loadNewRebinds()
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_loadNewRebinds
+  commentId: M:Global.VirtualMouse.loadNewRebinds
+  fullName: VirtualMouse.loadNewRebinds()
+  nameWithType: VirtualMouse.loadNewRebinds()
+- uid: Global.VirtualMouse.loadNewRebinds*
+  name: loadNewRebinds
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_loadNewRebinds_
+  commentId: Overload:Global.VirtualMouse.loadNewRebinds
+  isSpec: "True"
+  fullName: VirtualMouse.loadNewRebinds
+  nameWithType: VirtualMouse.loadNewRebinds
+- uid: Global.VirtualMouse.OnLeftMouseButton(InputAction.CallbackContext)
+  name: OnLeftMouseButton(InputAction.CallbackContext)
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnLeftMouseButton_InputAction_CallbackContext_
+  commentId: M:Global.VirtualMouse.OnLeftMouseButton(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnLeftMouseButton(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnLeftMouseButton(InputAction.CallbackContext)
+- uid: Global.VirtualMouse.OnLeftMouseButton*
+  name: OnLeftMouseButton
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnLeftMouseButton_
+  commentId: Overload:Global.VirtualMouse.OnLeftMouseButton
+  isSpec: "True"
+  fullName: VirtualMouse.OnLeftMouseButton
+  nameWithType: VirtualMouse.OnLeftMouseButton
+- uid: Global.VirtualMouse.OnMiddleMouseButton(InputAction.CallbackContext)
+  name: OnMiddleMouseButton(InputAction.CallbackContext)
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnMiddleMouseButton_InputAction_CallbackContext_
+  commentId: M:Global.VirtualMouse.OnMiddleMouseButton(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnMiddleMouseButton(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnMiddleMouseButton(InputAction.CallbackContext)
+- uid: Global.VirtualMouse.OnMiddleMouseButton*
+  name: OnMiddleMouseButton
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnMiddleMouseButton_
+  commentId: Overload:Global.VirtualMouse.OnMiddleMouseButton
+  isSpec: "True"
+  fullName: VirtualMouse.OnMiddleMouseButton
+  nameWithType: VirtualMouse.OnMiddleMouseButton
+- uid: Global.VirtualMouse.OnMoveCursor(InputAction.CallbackContext)
+  name: OnMoveCursor(InputAction.CallbackContext)
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnMoveCursor_InputAction_CallbackContext_
+  commentId: M:Global.VirtualMouse.OnMoveCursor(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnMoveCursor(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnMoveCursor(InputAction.CallbackContext)
+- uid: Global.VirtualMouse.OnMoveCursor*
+  name: OnMoveCursor
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnMoveCursor_
+  commentId: Overload:Global.VirtualMouse.OnMoveCursor
+  isSpec: "True"
+  fullName: VirtualMouse.OnMoveCursor
+  nameWithType: VirtualMouse.OnMoveCursor
+- uid: Global.VirtualMouse.OnPoint(InputAction.CallbackContext)
+  name: OnPoint(InputAction.CallbackContext)
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnPoint_InputAction_CallbackContext_
+  commentId: M:Global.VirtualMouse.OnPoint(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnPoint(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnPoint(InputAction.CallbackContext)
+- uid: Global.VirtualMouse.OnPoint*
+  name: OnPoint
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnPoint_
+  commentId: Overload:Global.VirtualMouse.OnPoint
+  isSpec: "True"
+  fullName: VirtualMouse.OnPoint
+  nameWithType: VirtualMouse.OnPoint
+- uid: Global.VirtualMouse.OnRightMouseButton(InputAction.CallbackContext)
+  name: OnRightMouseButton(InputAction.CallbackContext)
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnRightMouseButton_InputAction_CallbackContext_
+  commentId: M:Global.VirtualMouse.OnRightMouseButton(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnRightMouseButton(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnRightMouseButton(InputAction.CallbackContext)
+- uid: Global.VirtualMouse.OnRightMouseButton*
+  name: OnRightMouseButton
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnRightMouseButton_
+  commentId: Overload:Global.VirtualMouse.OnRightMouseButton
+  isSpec: "True"
+  fullName: VirtualMouse.OnRightMouseButton
+  nameWithType: VirtualMouse.OnRightMouseButton
+- uid: Global.VirtualMouse.OnScroll(InputAction.CallbackContext)
+  name: OnScroll(InputAction.CallbackContext)
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnScroll_InputAction_CallbackContext_
+  commentId: M:Global.VirtualMouse.OnScroll(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnScroll(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnScroll(InputAction.CallbackContext)
+- uid: Global.VirtualMouse.OnScroll*
+  name: OnScroll
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnScroll_
+  commentId: Overload:Global.VirtualMouse.OnScroll
+  isSpec: "True"
+  fullName: VirtualMouse.OnScroll
+  nameWithType: VirtualMouse.OnScroll
+- uid: Global.VirtualMouse.OnToogleMouseVisibility(InputAction.CallbackContext)
+  name: OnToogleMouseVisibility(InputAction.CallbackContext)
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnToogleMouseVisibility_InputAction_CallbackContext_
+  commentId: M:Global.VirtualMouse.OnToogleMouseVisibility(InputAction.CallbackContext)
+  fullName: VirtualMouse.OnToogleMouseVisibility(InputAction.CallbackContext)
+  nameWithType: VirtualMouse.OnToogleMouseVisibility(InputAction.CallbackContext)
+- uid: Global.VirtualMouse.OnToogleMouseVisibility*
+  name: OnToogleMouseVisibility
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_OnToogleMouseVisibility_
+  commentId: Overload:Global.VirtualMouse.OnToogleMouseVisibility
+  isSpec: "True"
+  fullName: VirtualMouse.OnToogleMouseVisibility
+  nameWithType: VirtualMouse.OnToogleMouseVisibility
+- uid: Global.VirtualMouse.speed
+  name: speed
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_speed
+  commentId: F:Global.VirtualMouse.speed
+  fullName: VirtualMouse.speed
+  nameWithType: VirtualMouse.speed
+- uid: Global.VirtualMouse.VirtualMouseProperty
+  name: VirtualMouseProperty
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_VirtualMouseProperty
+  commentId: P:Global.VirtualMouse.VirtualMouseProperty
+  fullName: VirtualMouse.VirtualMouseProperty
+  nameWithType: VirtualMouse.VirtualMouseProperty
+- uid: Global.VirtualMouse.VirtualMouseProperty*
+  name: VirtualMouseProperty
+  href: api/Global.VirtualMouse.html#Global_VirtualMouse_VirtualMouseProperty_
+  commentId: Overload:Global.VirtualMouse.VirtualMouseProperty
+  isSpec: "True"
+  fullName: VirtualMouse.VirtualMouseProperty
+  nameWithType: VirtualMouse.VirtualMouseProperty
+- uid: Global.WaveControler
+  name: WaveControler
+  href: api/Global.WaveControler.html
+  commentId: T:Global.WaveControler
+  fullName: WaveControler
+  nameWithType: WaveControler
+- uid: Global.WaveControler.CurrentWave
+  name: CurrentWave
+  href: api/Global.WaveControler.html#Global_WaveControler_CurrentWave
+  commentId: P:Global.WaveControler.CurrentWave
+  fullName: WaveControler.CurrentWave
+  nameWithType: WaveControler.CurrentWave
+- uid: Global.WaveControler.CurrentWave*
+  name: CurrentWave
+  href: api/Global.WaveControler.html#Global_WaveControler_CurrentWave_
+  commentId: Overload:Global.WaveControler.CurrentWave
+  isSpec: "True"
+  fullName: WaveControler.CurrentWave
+  nameWithType: WaveControler.CurrentWave
+- uid: Global.WaveControler.maxEnemys
+  name: maxEnemys
+  href: api/Global.WaveControler.html#Global_WaveControler_maxEnemys
+  commentId: F:Global.WaveControler.maxEnemys
+  fullName: WaveControler.maxEnemys
+  nameWithType: WaveControler.maxEnemys
+- uid: Global.WaveControler.minEnemys
+  name: minEnemys
+  href: api/Global.WaveControler.html#Global_WaveControler_minEnemys
+  commentId: F:Global.WaveControler.minEnemys
+  fullName: WaveControler.minEnemys
+  nameWithType: WaveControler.minEnemys
+- uid: Global.WaveControler.startNextWave
+  name: startNextWave()
+  href: api/Global.WaveControler.html#Global_WaveControler_startNextWave
+  commentId: M:Global.WaveControler.startNextWave
+  fullName: WaveControler.startNextWave()
+  nameWithType: WaveControler.startNextWave()
+- uid: Global.WaveControler.startNextWave*
+  name: startNextWave
+  href: api/Global.WaveControler.html#Global_WaveControler_startNextWave_
+  commentId: Overload:Global.WaveControler.startNextWave
+  isSpec: "True"
+  fullName: WaveControler.startNextWave
+  nameWithType: WaveControler.startNextWave
+- uid: Global.WaveControler.waveFinished
+  name: waveFinished()
+  href: api/Global.WaveControler.html#Global_WaveControler_waveFinished
+  commentId: M:Global.WaveControler.waveFinished
+  fullName: WaveControler.waveFinished()
+  nameWithType: WaveControler.waveFinished()
+- uid: Global.WaveControler.waveFinished*
+  name: waveFinished
+  href: api/Global.WaveControler.html#Global_WaveControler_waveFinished_
+  commentId: Overload:Global.WaveControler.waveFinished
+  isSpec: "True"
+  fullName: WaveControler.waveFinished
+  nameWithType: WaveControler.waveFinished
 - uid: Global.Waypoint_Designer
   name: Waypoint_Designer
   href: api/Global.Waypoint_Designer.html
@@ -2573,12 +5859,12 @@ references:
   commentId: F:Global.Weapon.reloadTime
   fullName: Weapon.reloadTime
   nameWithType: Weapon.reloadTime
-- uid: Global.Weapon.shoot(System.Int32,System.Single)
-  name: shoot(Int32, Single)
-  href: api/Global.Weapon.html#Global_Weapon_shoot_System_Int32_System_Single_
-  commentId: M:Global.Weapon.shoot(System.Int32,System.Single)
-  fullName: Weapon.shoot(System.Int32, System.Single)
-  nameWithType: Weapon.shoot(Int32, Single)
+- uid: Global.Weapon.shoot(System.Single,System.Single)
+  name: shoot(Single, Single)
+  href: api/Global.Weapon.html#Global_Weapon_shoot_System_Single_System_Single_
+  commentId: M:Global.Weapon.shoot(System.Single,System.Single)
+  fullName: Weapon.shoot(System.Single, System.Single)
+  nameWithType: Weapon.shoot(Single, Single)
 - uid: Global.Weapon.shoot*
   name: shoot
   href: api/Global.Weapon.html#Global_Weapon_shoot_
@@ -2598,6 +5884,12 @@ references:
   commentId: F:Global.Weapon.skill
   fullName: Weapon.skill
   nameWithType: Weapon.skill
+- uid: Global.Weapon.sound
+  name: sound
+  href: api/Global.Weapon.html#Global_Weapon_sound
+  commentId: F:Global.Weapon.sound
+  fullName: Weapon.sound
+  nameWithType: Weapon.sound
 - uid: Global.Weaponholder
   name: Weaponholder
   href: api/Global.Weaponholder.html
@@ -2610,6 +5902,48 @@ references:
   commentId: F:Global.Weaponholder.rotationSpeed
   fullName: Weaponholder.rotationSpeed
   nameWithType: Weaponholder.rotationSpeed
+- uid: Global.WeaponInfo
+  name: WeaponInfo
+  href: api/Global.WeaponInfo.html
+  commentId: T:Global.WeaponInfo
+  fullName: WeaponInfo
+  nameWithType: WeaponInfo
+- uid: Global.WeaponInfo.additionalDmg
+  name: additionalDmg
+  href: api/Global.WeaponInfo.html#Global_WeaponInfo_additionalDmg
+  commentId: F:Global.WeaponInfo.additionalDmg
+  fullName: WeaponInfo.additionalDmg
+  nameWithType: WeaponInfo.additionalDmg
+- uid: Global.WeaponInfo.dmgModifier
+  name: dmgModifier
+  href: api/Global.WeaponInfo.html#Global_WeaponInfo_dmgModifier
+  commentId: F:Global.WeaponInfo.dmgModifier
+  fullName: WeaponInfo.dmgModifier
+  nameWithType: WeaponInfo.dmgModifier
+- uid: Global.WeaponInfo.mainWeapon
+  name: mainWeapon
+  href: api/Global.WeaponInfo.html#Global_WeaponInfo_mainWeapon
+  commentId: F:Global.WeaponInfo.mainWeapon
+  fullName: WeaponInfo.mainWeapon
+  nameWithType: WeaponInfo.mainWeapon
+- uid: Global.WeaponInfo.reloadTime
+  name: reloadTime
+  href: api/Global.WeaponInfo.html#Global_WeaponInfo_reloadTime
+  commentId: F:Global.WeaponInfo.reloadTime
+  fullName: WeaponInfo.reloadTime
+  nameWithType: WeaponInfo.reloadTime
+- uid: Global.WeaponInfo.shootsToCreate
+  name: shootsToCreate
+  href: api/Global.WeaponInfo.html#Global_WeaponInfo_shootsToCreate
+  commentId: F:Global.WeaponInfo.shootsToCreate
+  fullName: WeaponInfo.shootsToCreate
+  nameWithType: WeaponInfo.shootsToCreate
+- uid: Global.WeaponInfo.skill
+  name: skill
+  href: api/Global.WeaponInfo.html#Global_WeaponInfo_skill
+  commentId: F:Global.WeaponInfo.skill
+  fullName: WeaponInfo.skill
+  nameWithType: WeaponInfo.skill
 - uid: Global.Win_condition
   name: Win_condition
   href: api/Global.Win_condition.html
@@ -2629,6 +5963,12 @@ references:
   isSpec: "True"
   fullName: Win_condition.activateLevelFinishPortal
   nameWithType: Win_condition.activateLevelFinishPortal
+- uid: Global.Win_condition.audios
+  name: audios
+  href: api/Global.Win_condition.html#Global_Win_condition_audios
+  commentId: F:Global.Win_condition.audios
+  fullName: Win_condition.audios
+  nameWithType: Win_condition.audios
 - uid: Global.Win_condition.boxcollider
   name: boxcollider
   href: api/Global.Win_condition.html#Global_Win_condition_boxcollider
@@ -2654,9 +5994,33 @@ references:
   commentId: F:Global.Win_condition.enemysToKill
   fullName: Win_condition.enemysToKill
   nameWithType: Win_condition.enemysToKill
+- uid: Global.Win_condition.lighting
+  name: lighting
+  href: api/Global.Win_condition.html#Global_Win_condition_lighting
+  commentId: F:Global.Win_condition.lighting
+  fullName: Win_condition.lighting
+  nameWithType: Win_condition.lighting
+- uid: Global.Win_condition.rotate
+  name: rotate
+  href: api/Global.Win_condition.html#Global_Win_condition_rotate
+  commentId: F:Global.Win_condition.rotate
+  fullName: Win_condition.rotate
+  nameWithType: Win_condition.rotate
+- uid: Global.Win_condition.rotateSpeed
+  name: rotateSpeed
+  href: api/Global.Win_condition.html#Global_Win_condition_rotateSpeed
+  commentId: F:Global.Win_condition.rotateSpeed
+  fullName: Win_condition.rotateSpeed
+  nameWithType: Win_condition.rotateSpeed
 - uid: Global.Win_condition.sp
   name: sp
   href: api/Global.Win_condition.html#Global_Win_condition_sp
   commentId: F:Global.Win_condition.sp
   fullName: Win_condition.sp
   nameWithType: Win_condition.sp
+- uid: Global.Win_condition.spawnDelay
+  name: spawnDelay
+  href: api/Global.Win_condition.html#Global_Win_condition_spawnDelay
+  commentId: F:Global.Win_condition.spawnDelay
+  fullName: Win_condition.spawnDelay
+  nameWithType: Win_condition.spawnDelay

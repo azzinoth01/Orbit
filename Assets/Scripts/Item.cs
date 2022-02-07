@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// baseclass for all items
+/// </summary>
 [Serializable]
 public class Item
 {

@@ -7,8 +7,13 @@ using UnityEngine;
 /// </summary>
 public class Bullet_pooling_watcher : MonoBehaviour
 {
-
+    /// <summary>
+    /// the time a skillobject can be inactive in the bulletlist
+    /// </summary>
     public float cleanUpTime;
+    /// <summary>
+    /// the time between each check
+    /// </summary>
     public float checkTime;
 
     /// <summary>

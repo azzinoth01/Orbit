@@ -5,13 +5,27 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// class to load assets while runtime
+/// </summary>
 public class LoadAssets
 {
     private List<AsyncOperationHandle> handleList;
 
+
+    /// <summary>
+    /// standard constructor
+    /// </summary>
     public LoadAssets() {
         handleList = new List<AsyncOperationHandle>();
     }
+
+    /// <summary>
+    /// loads a sprite out from the addressables path
+    /// </summary>
+    /// <param name="path"> the addressables path</param>
+    /// <returns> the loaded sprite</returns>
     public Sprite loadSprite(string path) {
         if (path == "" || path == null) {
             //   Debug.LogError(" empty path");
@@ -37,7 +51,11 @@ public class LoadAssets
     }
 
 
-
+    /// <summary>
+    /// loads a gameobject out from the addressables path
+    /// </summary>
+    /// <param name="path"> the addressables path</param>
+    /// <returns> the loaded gameobject</returns>
     public GameObject loadGameObject(string path) {
         if (path == "" || path == null) {
             //  Debug.LogError(" empty path");
@@ -59,6 +77,11 @@ public class LoadAssets
         return game;
     }
 
+    /// <summary>
+    /// loads a textAsset out from the addressables path
+    /// </summary>
+    /// <param name="path"> the addressables path</param>
+    /// <returns> the loaded textAsset</returns>
     public TextAsset loadText(string path) {
         if (path == "" || path == null) {
             //  Debug.LogError(" empty path");
@@ -90,10 +113,17 @@ public class LoadAssets
         return text;
     }
 
+    /// <summary>
+    /// releases the last loaded handel to make space in ram
+    /// </summary>
     public void releaseLastHandle() {
         Addressables.Release(handleList[(handleList.Count - 1)]);
         handleList.RemoveAt((handleList.Count - 1));
     }
+
+    /// <summary>
+    /// releases all loaded handels to make space in ram
+    /// </summary>
     public void releaseAllHandle() {
         foreach (AsyncOperationHandle handle in handleList) {
             Addressables.Release(handle);

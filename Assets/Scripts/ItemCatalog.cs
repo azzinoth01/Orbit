@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+
+/// <summary>
+/// class that saves the item Catalog and loads it
+/// </summary>
 [Serializable]
 public class ItemCatalog
 {
@@ -19,6 +23,9 @@ public class ItemCatalog
         }
     }
 
+    /// <summary>
+    /// standard constructor
+    /// </summary>
     public ItemCatalog() {
         itemList = new List<Item>();
     }
@@ -42,7 +49,7 @@ public class ItemCatalog
     /// <summary>
     /// loads the data from the itemCatalog
     /// </summary>
-    /// <returns> gibt die gespeicherten Settings zurück</returns>
+    /// <returns> retruns the saved itemCatalog</returns>
     public static ItemCatalog loadSettings() {
 
         ItemCatalog s = new ItemCatalog();

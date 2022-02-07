@@ -83,7 +83,7 @@
   
   <h1 id="Global_BulletInfo" data-uid="Global.BulletInfo" class="text-break">Class BulletInfo
   </h1>
-  <div class="markdown level0 summary"><p>container classe die Bullets beschreibt</p>
+  <div class="markdown level0 summary"><p>container class to describe the bullets</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -104,7 +104,7 @@ public class BulletInfo</code></pre>
   
   <a id="Global_BulletInfo__ctor_" data-uid="Global.BulletInfo.#ctor*"></a>
   <h4 id="Global_BulletInfo__ctor" data-uid="Global.BulletInfo.#ctor">BulletInfo()</h4>
-  <div class="markdown level1 summary"><p>standardconstruktor setzt basiswerte</p>
+  <div class="markdown level1 summary"><p>standardconstuctor sets the basevalues</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -114,13 +114,13 @@ public class BulletInfo</code></pre>
   
   
   <a id="Global_BulletInfo__ctor_" data-uid="Global.BulletInfo.#ctor*"></a>
-  <h4 id="Global_BulletInfo__ctor_System_Single_System_Int32_GameObject_GameObject_GameObject_" data-uid="Global.BulletInfo.#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)">BulletInfo(Single, Int32, GameObject, GameObject, GameObject)</h4>
-  <div class="markdown level1 summary"><p>construktor um werte zu setzten</p>
+  <h4 id="Global_BulletInfo__ctor_System_Single_System_Single_GameObject_GameObject_GameObject_" data-uid="Global.BulletInfo.#ctor(System.Single,System.Single,GameObject,GameObject,GameObject)">BulletInfo(Single, Single, GameObject, GameObject, GameObject)</h4>
+  <div class="markdown level1 summary"><p>constructor to set values</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BulletInfo(float startRotation, int bulletBaseDmg, GameObject bullet, GameObject startEffect, GameObject sfxSound)</code></pre>
+    <pre><code class="lang-csharp hljs">public BulletInfo(float startRotation, float bulletBaseDmg, GameObject bullet, GameObject startEffect, GameObject sfxSound)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,31 +135,31 @@ public class BulletInfo</code></pre>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td><span class="parametername">startRotation</span></td>
-        <td><p>bestimmt die flugrichtung vom basisobject</p>
+        <td><p>describes the flying direction of the baseobject</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td><span class="parametername">bulletBaseDmg</span></td>
-        <td><p>bestimmt bullet base dmg</p>
+        <td><p>describes the base dmg of the bullet</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">GameObject</span></td>
         <td><span class="parametername">bullet</span></td>
-        <td><p>bestimmt bullet prefab</p>
+        <td><p>bullet prefab</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">GameObject</span></td>
         <td><span class="parametername">startEffect</span></td>
-        <td><p>bestimmt particel system start prefab</p>
+        <td><p>particel system effect prefab</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">GameObject</span></td>
         <td><span class="parametername">sfxSound</span></td>
-        <td><p>bestimmt Sound Effect prefab</p>
+        <td><p>sound effect prefab</p>
 </td>
       </tr>
     </tbody>
@@ -174,7 +174,7 @@ public class BulletInfo</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int AddBaseDmg { set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float AddBaseDmg { set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,7 +186,7 @@ public class BulletInfo</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -212,6 +212,31 @@ public class BulletInfo</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Global_BulletInfo_BulletBaseDmg_" data-uid="Global.BulletInfo.BulletBaseDmg*"></a>
+  <h4 id="Global_BulletInfo_BulletBaseDmg" data-uid="Global.BulletInfo.BulletBaseDmg">BulletBaseDmg</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float BulletBaseDmg { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -383,7 +408,7 @@ public class BulletInfo</code></pre>
   
   <a id="Global_BulletInfo_resetModifiers_" data-uid="Global.BulletInfo.resetModifiers*"></a>
   <h4 id="Global_BulletInfo_resetModifiers" data-uid="Global.BulletInfo.resetModifiers">resetModifiers()</h4>
-  <div class="markdown level1 summary"><p>resetet die Dmg modifier</p>
+  <div class="markdown level1 summary"><p>resets the dmg modifiers</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -394,7 +419,7 @@ public class BulletInfo</code></pre>
   
   <a id="Global_BulletInfo_setBulletDmg_" data-uid="Global.BulletInfo.setBulletDmg*"></a>
   <h4 id="Global_BulletInfo_setBulletDmg" data-uid="Global.BulletInfo.setBulletDmg">setBulletDmg()</h4>
-  <div class="markdown level1 summary"><p>sets den bullet dmg auf der Bullet</p>
+  <div class="markdown level1 summary"><p>sets the bullet dmg on the bullet</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -405,7 +430,8 @@ public class BulletInfo</code></pre>
   
   <a id="Global_BulletInfo_setLayer_" data-uid="Global.BulletInfo.setLayer*"></a>
   <h4 id="Global_BulletInfo_setLayer_System_Int32_" data-uid="Global.BulletInfo.setLayer(System.Int32)">setLayer(Int32)</h4>
-  <div class="markdown level1 summary"><p>sets den layer der Bullet</p>
+  <div class="markdown level1 summary"><p>sets den layer der Bullet
+sets the layer of the bullet (Layer_enum.player_bullets or Layer_enum.enemy_bullets)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -425,7 +451,7 @@ public class BulletInfo</code></pre>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">layer</span></td>
-        <td><p>layer in integer</p>
+        <td><p>layer in integer (use Layer_enum)</p>
 </td>
       </tr>
     </tbody>

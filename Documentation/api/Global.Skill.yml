@@ -9,7 +9,8 @@ items:
   - Global.Skill.checkDisabled
   - Global.Skill.layerChange
   - Global.Skill.maxDuration
-  - Global.Skill.setDmgModifiers(System.Int32,System.Single)
+  - Global.Skill.setDmgModifiers(System.Single,System.Single)
+  - Global.Skill.setSfxSoundOnBullets(GameObject)
   - Global.Skill.Timestamp
   langs:
   - csharp
@@ -21,17 +22,16 @@ items:
   source:
     id: Skill
     path: ''
-    startLine: 3659
+    startLine: 8993
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nskill class beschreibt wie sich jedes bulletobject auf der classe verh�lt\n"
+  summary: "\nclass that controls the bullets\n"
   example: []
   syntax:
     content: 'public class Skill : MonoBehaviour'
     content.vb: >-
       Public Class Skill
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -55,7 +55,7 @@ items:
   source:
     id: bulletInfoList
     path: ''
-    startLine: 3661
+    startLine: 8995
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -82,7 +82,7 @@ items:
   source:
     id: maxDuration
     path: ''
-    startLine: 3662
+    startLine: 8996
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -109,7 +109,7 @@ items:
   source:
     id: Timestamp
     path: ''
-    startLine: 3669
+    startLine: 9005
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -140,11 +140,11 @@ items:
   source:
     id: layerChange
     path: ''
-    startLine: 3742
+    startLine: 9078
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\n�ndern des Layers der Bullets falls sich der Layer des skills �ndern sollte\n"
+  summary: "\nchanges the layer of the bullets if the layer of the skill changes\n"
   example: []
   syntax:
     content: public void layerChange()
@@ -154,36 +154,36 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.Skill.setDmgModifiers(System.Int32,System.Single)
-  commentId: M:Global.Skill.setDmgModifiers(System.Int32,System.Single)
-  id: setDmgModifiers(System.Int32,System.Single)
+- uid: Global.Skill.setDmgModifiers(System.Single,System.Single)
+  commentId: M:Global.Skill.setDmgModifiers(System.Single,System.Single)
+  id: setDmgModifiers(System.Single,System.Single)
   parent: Global.Skill
   langs:
   - csharp
   - vb
-  name: setDmgModifiers(Int32, Single)
-  nameWithType: Skill.setDmgModifiers(Int32, Single)
-  fullName: Skill.setDmgModifiers(System.Int32, System.Single)
+  name: setDmgModifiers(Single, Single)
+  nameWithType: Skill.setDmgModifiers(Single, Single)
+  fullName: Skill.setDmgModifiers(System.Single, System.Single)
   type: Method
   source:
     id: setDmgModifiers
     path: ''
-    startLine: 3804
+    startLine: 9140
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nsetzt modifiers auf die bullet.\n"
+  summary: "\nset modifier on the bullet\n"
   example: []
   syntax:
-    content: public void setDmgModifiers(int additionalDmg, float dmgModifier)
+    content: public void setDmgModifiers(float additionalDmg, float dmgModifier)
     parameters:
     - id: additionalDmg
-      type: System.Int32
-      description: erh�hten den schaden der bullet direkt �ber diesen Wert
+      type: System.Single
+      description: increases the dmg directly on the bullet by this value
     - id: dmgModifier
       type: System.Single
-      description: nach hinzuf�gen des additionalDmg modifiers wir der dmg mit diesem Wert multipliziert
-    content.vb: Public Sub setDmgModifiers(additionalDmg As Integer, dmgModifier As Single)
+      description: after adding the additional dmg to the bullet dmg the resulting value is multiplied by this value
+    content.vb: Public Sub setDmgModifiers(additionalDmg As Single, dmgModifier As Single)
   overload: Global.Skill.setDmgModifiers*
   modifiers.csharp:
   - public
@@ -203,16 +203,48 @@ items:
   source:
     id: checkDisabled
     path: ''
-    startLine: 3816
+    startLine: 9152
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncheckt ob alle child objecte inactive sind, um den skill zu deactivieren\nwird aufgerufen, wenn eine bullet sich deactiviert\n"
+  summary: "\nchecks if all child objects are inactive, so the skill can be deactivated\nis called if a bullet is deactivated\n"
   example: []
   syntax:
     content: public void checkDisabled()
     content.vb: Public Sub checkDisabled
   overload: Global.Skill.checkDisabled*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Skill.setSfxSoundOnBullets(GameObject)
+  commentId: M:Global.Skill.setSfxSoundOnBullets(GameObject)
+  id: setSfxSoundOnBullets(GameObject)
+  parent: Global.Skill
+  langs:
+  - csharp
+  - vb
+  name: setSfxSoundOnBullets(GameObject)
+  nameWithType: Skill.setSfxSoundOnBullets(GameObject)
+  fullName: Skill.setSfxSoundOnBullets(GameObject)
+  type: Method
+  source:
+    id: setSfxSoundOnBullets
+    path: ''
+    startLine: 9173
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsets the sfx sound on the bullet\n"
+  example: []
+  syntax:
+    content: public void setSfxSoundOnBullets(GameObject sound)
+    parameters:
+    - id: sound
+      type: Global.GameObject
+      description: the sfx prefab that is to be played
+    content.vb: Public Sub setSfxSoundOnBullets(sound As GameObject)
+  overload: Global.Skill.setSfxSoundOnBullets*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -359,3 +391,13 @@ references:
   name: checkDisabled
   nameWithType: Skill.checkDisabled
   fullName: Skill.checkDisabled
+- uid: Global.Skill.setSfxSoundOnBullets*
+  commentId: Overload:Global.Skill.setSfxSoundOnBullets
+  name: setSfxSoundOnBullets
+  nameWithType: Skill.setSfxSoundOnBullets
+  fullName: Skill.setSfxSoundOnBullets
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject

@@ -13,7 +13,8 @@ public class ParticleControl : MonoBehaviour
     public Animator anim;
 
     /// <summary>
-    /// startet das particle system 
+    /// starts the particle system 
+    /// starts the audio
     /// </summary>
     private void OnEnable() {
         if (particle != null) {
@@ -39,7 +40,7 @@ public class ParticleControl : MonoBehaviour
 
 
     /// <summary>
-    /// deactivates or destorys the gameobject nach dem spielen
+    /// deactivates or destorys the gameobject after playing
     /// </summary>
     private void Update() {
         if (Globals.pause == true) {
@@ -65,7 +66,7 @@ public class ParticleControl : MonoBehaviour
     /// <summary>
     /// checks if audio or particle system is still playing
     /// </summary>
-    /// <returns>returns true if it is still playing</returns>
+    /// <returns> returns true if it is still playing</returns>
     private bool isPlayingCheck() {
 
         bool check = true;

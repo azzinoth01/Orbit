@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.LoadEquipmentSlots
+  commentId: T:Global.LoadEquipmentSlots
+  id: LoadEquipmentSlots
+  parent: Global
+  children:
+  - Global.LoadEquipmentSlots.mainWeapon
+  - Global.LoadEquipmentSlots.secondaryWeapon
+  - Global.LoadEquipmentSlots.secondaryWeapon1
+  - Global.LoadEquipmentSlots.shieldPart
+  langs:
+  - csharp
+  - vb
+  name: LoadEquipmentSlots
+  nameWithType: LoadEquipmentSlots
+  fullName: LoadEquipmentSlots
+  type: Class
+  source:
+    id: LoadEquipmentSlots
+    path: ''
+    startLine: 5592
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to load the sprites of the current equipment of the ship\n"
+  example: []
+  syntax:
+    content: 'public class LoadEquipmentSlots : MonoBehaviour'
+    content.vb: >-
+      Public Class LoadEquipmentSlots
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.LoadEquipmentSlots.mainWeapon
+  commentId: F:Global.LoadEquipmentSlots.mainWeapon
+  id: mainWeapon
+  parent: Global.LoadEquipmentSlots
+  langs:
+  - csharp
+  - vb
+  name: mainWeapon
+  nameWithType: LoadEquipmentSlots.mainWeapon
+  fullName: LoadEquipmentSlots.mainWeapon
+  type: Field
+  source:
+    id: mainWeapon
+    path: ''
+    startLine: 5594
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image mainWeapon
+    return:
+      type: Global.Image
+    content.vb: Public mainWeapon As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoadEquipmentSlots.secondaryWeapon
+  commentId: F:Global.LoadEquipmentSlots.secondaryWeapon
+  id: secondaryWeapon
+  parent: Global.LoadEquipmentSlots
+  langs:
+  - csharp
+  - vb
+  name: secondaryWeapon
+  nameWithType: LoadEquipmentSlots.secondaryWeapon
+  fullName: LoadEquipmentSlots.secondaryWeapon
+  type: Field
+  source:
+    id: secondaryWeapon
+    path: ''
+    startLine: 5595
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image secondaryWeapon
+    return:
+      type: Global.Image
+    content.vb: Public secondaryWeapon As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoadEquipmentSlots.secondaryWeapon1
+  commentId: F:Global.LoadEquipmentSlots.secondaryWeapon1
+  id: secondaryWeapon1
+  parent: Global.LoadEquipmentSlots
+  langs:
+  - csharp
+  - vb
+  name: secondaryWeapon1
+  nameWithType: LoadEquipmentSlots.secondaryWeapon1
+  fullName: LoadEquipmentSlots.secondaryWeapon1
+  type: Field
+  source:
+    id: secondaryWeapon1
+    path: ''
+    startLine: 5596
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image secondaryWeapon1
+    return:
+      type: Global.Image
+    content.vb: Public secondaryWeapon1 As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoadEquipmentSlots.shieldPart
+  commentId: F:Global.LoadEquipmentSlots.shieldPart
+  id: shieldPart
+  parent: Global.LoadEquipmentSlots
+  langs:
+  - csharp
+  - vb
+  name: shieldPart
+  nameWithType: LoadEquipmentSlots.shieldPart
+  fullName: LoadEquipmentSlots.shieldPart
+  type: Field
+  source:
+    id: shieldPart
+    path: ''
+    startLine: 5597
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image shieldPart
+    return:
+      type: Global.Image
+    content.vb: Public shieldPart As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image

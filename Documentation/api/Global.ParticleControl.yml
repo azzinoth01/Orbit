@@ -5,8 +5,10 @@ items:
   id: ParticleControl
   parent: Global
   children:
+  - Global.ParticleControl.anim
   - Global.ParticleControl.destroyAfterPlay
   - Global.ParticleControl.particle
+  - Global.ParticleControl.particleAudio
   langs:
   - csharp
   - vb
@@ -17,17 +19,16 @@ items:
   source:
     id: ParticleControl
     path: ''
-    startLine: 2509
+    startLine: 6604
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontroliert die Particel system effecte\n"
+  summary: "\ncontroliert die Particle system effecte und Particle Sounds\n"
   example: []
   syntax:
     content: 'public class ParticleControl : MonoBehaviour'
     content.vb: >-
       Public Class ParticleControl
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -51,7 +52,7 @@ items:
   source:
     id: particle
     path: ''
-    startLine: 2511
+    startLine: 6606
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -78,7 +79,7 @@ items:
   source:
     id: destroyAfterPlay
     path: ''
-    startLine: 2512
+    startLine: 6607
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -87,6 +88,60 @@ items:
     return:
       type: System.Boolean
     content.vb: Public destroyAfterPlay As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ParticleControl.particleAudio
+  commentId: F:Global.ParticleControl.particleAudio
+  id: particleAudio
+  parent: Global.ParticleControl
+  langs:
+  - csharp
+  - vb
+  name: particleAudio
+  nameWithType: ParticleControl.particleAudio
+  fullName: ParticleControl.particleAudio
+  type: Field
+  source:
+    id: particleAudio
+    path: ''
+    startLine: 6608
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<AudioSource> particleAudio
+    return:
+      type: System.Collections.Generic.List{AudioSource}
+    content.vb: Public particleAudio As List(Of AudioSource)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ParticleControl.anim
+  commentId: F:Global.ParticleControl.anim
+  id: anim
+  parent: Global.ParticleControl
+  langs:
+  - csharp
+  - vb
+  name: anim
+  nameWithType: ParticleControl.anim
+  fullName: ParticleControl.anim
+  type: Field
+  source:
+    id: anim
+    path: ''
+    startLine: 6609
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Animator anim
+    return:
+      type: Global.Animator
+    content.vb: Public anim As Animator
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -125,3 +180,97 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: System.Collections.Generic.List{AudioSource}
+  commentId: T:System.Collections.Generic.List{AudioSource}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<AudioSource>
+  nameWithType: List<AudioSource>
+  fullName: System.Collections.Generic.List<AudioSource>
+  nameWithType.vb: List(Of AudioSource)
+  fullName.vb: System.Collections.Generic.List(Of AudioSource)
+  name.vb: List(Of AudioSource)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.AudioSource
+    name: AudioSource
+    nameWithType: AudioSource
+    fullName: AudioSource
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.AudioSource
+    name: AudioSource
+    nameWithType: AudioSource
+    fullName: AudioSource
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Global.Animator
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: Animator

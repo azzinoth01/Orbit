@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ShipMenuControl
+  commentId: T:Global.ShipMenuControl
+  id: ShipMenuControl
+  parent: Global
+  children:
+  - Global.ShipMenuControl.OnDoge(InputAction.CallbackContext)
+  - Global.ShipMenuControl.OnMove_down(InputAction.CallbackContext)
+  - Global.ShipMenuControl.OnMove_left(InputAction.CallbackContext)
+  - Global.ShipMenuControl.OnMove_rigth(InputAction.CallbackContext)
+  - Global.ShipMenuControl.OnMove_up(InputAction.CallbackContext)
+  - Global.ShipMenuControl.OnPause_menu(InputAction.CallbackContext)
+  - Global.ShipMenuControl.OnShoot(InputAction.CallbackContext)
+  langs:
+  - csharp
+  - vb
+  name: ShipMenuControl
+  nameWithType: ShipMenuControl
+  fullName: ShipMenuControl
+  type: Class
+  source:
+    id: ShipMenuControl
+    path: ''
+    startLine: 8901
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nhandels the keybind for exit inside the ship menu\n"
+  example: []
+  syntax:
+    content: 'public class ShipMenuControl : MonoBehaviour, Controlls.IBullet_hellActions'
+    content.vb: >-
+      Public Class ShipMenuControl
+          Inherits MonoBehaviour
+          Implements Controlls.IBullet_hellActions
+  inheritance:
+  - System.Object
+  implements:
+  - Global.Controlls.IBullet_hellActions
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.ShipMenuControl.OnDoge(InputAction.CallbackContext)
+  commentId: M:Global.ShipMenuControl.OnDoge(InputAction.CallbackContext)
+  id: OnDoge(InputAction.CallbackContext)
+  parent: Global.ShipMenuControl
+  langs:
+  - csharp
+  - vb
+  name: OnDoge(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnDoge(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnDoge(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnDoge
+    path: ''
+    startLine: 8909
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nhere not in use\n"
+  example: []
+  syntax:
+    content: public void OnDoge(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnDoge(context As InputAction.CallbackContext)
+  overload: Global.ShipMenuControl.OnDoge*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipMenuControl.OnMove_down(InputAction.CallbackContext)
+  commentId: M:Global.ShipMenuControl.OnMove_down(InputAction.CallbackContext)
+  id: OnMove_down(InputAction.CallbackContext)
+  parent: Global.ShipMenuControl
+  langs:
+  - csharp
+  - vb
+  name: OnMove_down(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnMove_down(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnMove_down(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMove_down
+    path: ''
+    startLine: 8916
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nhere not in use\n"
+  example: []
+  syntax:
+    content: public void OnMove_down(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnMove_down(context As InputAction.CallbackContext)
+  overload: Global.ShipMenuControl.OnMove_down*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipMenuControl.OnMove_left(InputAction.CallbackContext)
+  commentId: M:Global.ShipMenuControl.OnMove_left(InputAction.CallbackContext)
+  id: OnMove_left(InputAction.CallbackContext)
+  parent: Global.ShipMenuControl
+  langs:
+  - csharp
+  - vb
+  name: OnMove_left(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnMove_left(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnMove_left(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMove_left
+    path: ''
+    startLine: 8923
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nhere not in use\n"
+  example: []
+  syntax:
+    content: public void OnMove_left(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnMove_left(context As InputAction.CallbackContext)
+  overload: Global.ShipMenuControl.OnMove_left*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipMenuControl.OnMove_rigth(InputAction.CallbackContext)
+  commentId: M:Global.ShipMenuControl.OnMove_rigth(InputAction.CallbackContext)
+  id: OnMove_rigth(InputAction.CallbackContext)
+  parent: Global.ShipMenuControl
+  langs:
+  - csharp
+  - vb
+  name: OnMove_rigth(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnMove_rigth(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnMove_rigth(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMove_rigth
+    path: ''
+    startLine: 8930
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nhere not in use\n"
+  example: []
+  syntax:
+    content: public void OnMove_rigth(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnMove_rigth(context As InputAction.CallbackContext)
+  overload: Global.ShipMenuControl.OnMove_rigth*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipMenuControl.OnMove_up(InputAction.CallbackContext)
+  commentId: M:Global.ShipMenuControl.OnMove_up(InputAction.CallbackContext)
+  id: OnMove_up(InputAction.CallbackContext)
+  parent: Global.ShipMenuControl
+  langs:
+  - csharp
+  - vb
+  name: OnMove_up(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnMove_up(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnMove_up(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnMove_up
+    path: ''
+    startLine: 8937
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nhere not in use\n"
+  example: []
+  syntax:
+    content: public void OnMove_up(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnMove_up(context As InputAction.CallbackContext)
+  overload: Global.ShipMenuControl.OnMove_up*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipMenuControl.OnPause_menu(InputAction.CallbackContext)
+  commentId: M:Global.ShipMenuControl.OnPause_menu(InputAction.CallbackContext)
+  id: OnPause_menu(InputAction.CallbackContext)
+  parent: Global.ShipMenuControl
+  langs:
+  - csharp
+  - vb
+  name: OnPause_menu(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnPause_menu(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnPause_menu(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnPause_menu
+    path: ''
+    startLine: 8944
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nexits to the main menu\n"
+  example: []
+  syntax:
+    content: public void OnPause_menu(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnPause_menu(context As InputAction.CallbackContext)
+  overload: Global.ShipMenuControl.OnPause_menu*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ShipMenuControl.OnShoot(InputAction.CallbackContext)
+  commentId: M:Global.ShipMenuControl.OnShoot(InputAction.CallbackContext)
+  id: OnShoot(InputAction.CallbackContext)
+  parent: Global.ShipMenuControl
+  langs:
+  - csharp
+  - vb
+  name: OnShoot(InputAction.CallbackContext)
+  nameWithType: ShipMenuControl.OnShoot(InputAction.CallbackContext)
+  fullName: ShipMenuControl.OnShoot(InputAction.CallbackContext)
+  type: Method
+  source:
+    id: OnShoot
+    path: ''
+    startLine: 8955
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nhere not in use\n"
+  example: []
+  syntax:
+    content: public void OnShoot(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: Global.InputAction.CallbackContext
+      description: ''
+    content.vb: Public Sub OnShoot(context As InputAction.CallbackContext)
+  overload: Global.ShipMenuControl.OnShoot*
+  implements:
+  - Global.Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.Controlls.IBullet_hellActions
+  commentId: T:Global.Controlls.IBullet_hellActions
+  name: Controlls.IBullet_hellActions
+  nameWithType: Controlls.IBullet_hellActions
+  fullName: Controlls.IBullet_hellActions
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.ShipMenuControl.OnDoge*
+  commentId: Overload:Global.ShipMenuControl.OnDoge
+  name: OnDoge
+  nameWithType: ShipMenuControl.OnDoge
+  fullName: ShipMenuControl.OnDoge
+- uid: Global.Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnDoge(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+    name: OnDoge
+    nameWithType: Controlls.IBullet_hellActions.OnDoge
+    fullName: Controlls.IBullet_hellActions.OnDoge
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnDoge(InputAction.CallbackContext)
+    name: OnDoge
+    nameWithType: Controlls.IBullet_hellActions.OnDoge
+    fullName: Controlls.IBullet_hellActions.OnDoge
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.InputAction.CallbackContext
+  isExternal: true
+  name: InputAction.CallbackContext
+  nameWithType: InputAction.CallbackContext
+  fullName: InputAction.CallbackContext
+- uid: Global.ShipMenuControl.OnMove_down*
+  commentId: Overload:Global.ShipMenuControl.OnMove_down
+  name: OnMove_down
+  nameWithType: ShipMenuControl.OnMove_down
+  fullName: ShipMenuControl.OnMove_down
+- uid: Global.Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnMove_down(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+    name: OnMove_down
+    nameWithType: Controlls.IBullet_hellActions.OnMove_down
+    fullName: Controlls.IBullet_hellActions.OnMove_down
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_down(InputAction.CallbackContext)
+    name: OnMove_down
+    nameWithType: Controlls.IBullet_hellActions.OnMove_down
+    fullName: Controlls.IBullet_hellActions.OnMove_down
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.ShipMenuControl.OnMove_left*
+  commentId: Overload:Global.ShipMenuControl.OnMove_left
+  name: OnMove_left
+  nameWithType: ShipMenuControl.OnMove_left
+  fullName: ShipMenuControl.OnMove_left
+- uid: Global.Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnMove_left(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+    name: OnMove_left
+    nameWithType: Controlls.IBullet_hellActions.OnMove_left
+    fullName: Controlls.IBullet_hellActions.OnMove_left
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_left(InputAction.CallbackContext)
+    name: OnMove_left
+    nameWithType: Controlls.IBullet_hellActions.OnMove_left
+    fullName: Controlls.IBullet_hellActions.OnMove_left
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.ShipMenuControl.OnMove_rigth*
+  commentId: Overload:Global.ShipMenuControl.OnMove_rigth
+  name: OnMove_rigth
+  nameWithType: ShipMenuControl.OnMove_rigth
+  fullName: ShipMenuControl.OnMove_rigth
+- uid: Global.Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnMove_rigth(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+    name: OnMove_rigth
+    nameWithType: Controlls.IBullet_hellActions.OnMove_rigth
+    fullName: Controlls.IBullet_hellActions.OnMove_rigth
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_rigth(InputAction.CallbackContext)
+    name: OnMove_rigth
+    nameWithType: Controlls.IBullet_hellActions.OnMove_rigth
+    fullName: Controlls.IBullet_hellActions.OnMove_rigth
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.ShipMenuControl.OnMove_up*
+  commentId: Overload:Global.ShipMenuControl.OnMove_up
+  name: OnMove_up
+  nameWithType: ShipMenuControl.OnMove_up
+  fullName: ShipMenuControl.OnMove_up
+- uid: Global.Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnMove_up(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+    name: OnMove_up
+    nameWithType: Controlls.IBullet_hellActions.OnMove_up
+    fullName: Controlls.IBullet_hellActions.OnMove_up
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnMove_up(InputAction.CallbackContext)
+    name: OnMove_up
+    nameWithType: Controlls.IBullet_hellActions.OnMove_up
+    fullName: Controlls.IBullet_hellActions.OnMove_up
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.ShipMenuControl.OnPause_menu*
+  commentId: Overload:Global.ShipMenuControl.OnPause_menu
+  name: OnPause_menu
+  nameWithType: ShipMenuControl.OnPause_menu
+  fullName: ShipMenuControl.OnPause_menu
+- uid: Global.Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnPause_menu(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+    name: OnPause_menu
+    nameWithType: Controlls.IBullet_hellActions.OnPause_menu
+    fullName: Controlls.IBullet_hellActions.OnPause_menu
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnPause_menu(InputAction.CallbackContext)
+    name: OnPause_menu
+    nameWithType: Controlls.IBullet_hellActions.OnPause_menu
+    fullName: Controlls.IBullet_hellActions.OnPause_menu
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.ShipMenuControl.OnShoot*
+  commentId: Overload:Global.ShipMenuControl.OnShoot
+  name: OnShoot
+  nameWithType: ShipMenuControl.OnShoot
+  fullName: ShipMenuControl.OnShoot
+- uid: Global.Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+  commentId: M:Global.Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+  parent: Global.Controlls.IBullet_hellActions
+  isExternal: true
+  name: OnShoot(InputAction.CallbackContext)
+  nameWithType: Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+  fullName: Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+  spec.csharp:
+  - uid: Global.Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+    name: OnShoot
+    nameWithType: Controlls.IBullet_hellActions.OnShoot
+    fullName: Controlls.IBullet_hellActions.OnShoot
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.Controlls.IBullet_hellActions.OnShoot(InputAction.CallbackContext)
+    name: OnShoot
+    nameWithType: Controlls.IBullet_hellActions.OnShoot
+    fullName: Controlls.IBullet_hellActions.OnShoot
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.InputAction.CallbackContext
+    name: InputAction.CallbackContext
+    nameWithType: InputAction.CallbackContext
+    fullName: InputAction.CallbackContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

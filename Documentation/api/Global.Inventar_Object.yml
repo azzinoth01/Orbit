@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Inventar_Object
+  commentId: T:Global.Inventar_Object
+  id: Inventar_Object
+  parent: Global
+  children:
+  - Global.Inventar_Object.Amount
+  langs:
+  - csharp
+  - vb
+  name: Inventar_Object
+  nameWithType: Inventar_Object
+  fullName: Inventar_Object
+  type: Class
+  source:
+    id: Inventar_Object
+    path: ''
+    startLine: 4506
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsub class of item to manage iventory objects\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Inventar_Object : Item
+    content.vb: >-
+      <Serializable>
+
+      Public Class Inventar_Object
+          Inherits Item
+  inheritance:
+  - System.Object
+  - Global.Item
+  derivedClasses:
+  - Global.Parts
+  - Global.WeaponInfo
+  inheritedMembers:
+  - Global.Item.ID
+  - Global.Item.Name
+  - Global.Item.Value
+  - Global.Item.Icon
+  - Global.Item.Sprite
+  - Global.Item.PatternIcon
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.Inventar_Object.Amount
+  commentId: P:Global.Inventar_Object.Amount
+  id: Amount
+  parent: Global.Inventar_Object
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: Inventar_Object.Amount
+  fullName: Inventar_Object.Amount
+  type: Property
+  source:
+    id: Amount
+    path: ''
+    startLine: 4512
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int Amount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Amount As Integer
+  overload: Global.Inventar_Object.Amount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.Item
+  commentId: T:Global.Item
+  name: Item
+  nameWithType: Item
+  fullName: Item
+- uid: Global.Item.ID
+  commentId: P:Global.Item.ID
+  parent: Global.Item
+  name: ID
+  nameWithType: Item.ID
+  fullName: Item.ID
+- uid: Global.Item.Name
+  commentId: P:Global.Item.Name
+  parent: Global.Item
+  name: Name
+  nameWithType: Item.Name
+  fullName: Item.Name
+- uid: Global.Item.Value
+  commentId: P:Global.Item.Value
+  parent: Global.Item
+  name: Value
+  nameWithType: Item.Value
+  fullName: Item.Value
+- uid: Global.Item.Icon
+  commentId: P:Global.Item.Icon
+  parent: Global.Item
+  name: Icon
+  nameWithType: Item.Icon
+  fullName: Item.Icon
+- uid: Global.Item.Sprite
+  commentId: P:Global.Item.Sprite
+  parent: Global.Item
+  name: Sprite
+  nameWithType: Item.Sprite
+  fullName: Item.Sprite
+- uid: Global.Item.PatternIcon
+  commentId: P:Global.Item.PatternIcon
+  parent: Global.Item
+  name: PatternIcon
+  nameWithType: Item.PatternIcon
+  fullName: Item.PatternIcon
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Inventar_Object.Amount*
+  commentId: Overload:Global.Inventar_Object.Amount
+  name: Amount
+  nameWithType: Inventar_Object.Amount
+  fullName: Inventar_Object.Amount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

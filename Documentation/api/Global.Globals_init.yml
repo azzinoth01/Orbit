@@ -4,7 +4,10 @@ items:
   commentId: T:Global.Globals_init
   id: Globals_init
   parent: Global
-  children: []
+  children:
+  - Global.Globals_init.moneyDropPrefrab
+  - Global.Globals_init.moneyIcon
+  - Global.Globals_init.tempEnemyHit
   langs:
   - csharp
   - vb
@@ -15,17 +18,16 @@ items:
   source:
     id: Globals_init
     path: ''
-    startLine: 1995
+    startLine: 4450
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse um Globale variablen zu initzalisieren\n"
+  summary: "\nclass to initialise the globale variables\n"
   example: []
   syntax:
     content: 'public class Globals_init : MonoBehaviour'
     content.vb: >-
       Public Class Globals_init
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -35,6 +37,87 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Global.Globals_init.moneyIcon
+  commentId: F:Global.Globals_init.moneyIcon
+  id: moneyIcon
+  parent: Global.Globals_init
+  langs:
+  - csharp
+  - vb
+  name: moneyIcon
+  nameWithType: Globals_init.moneyIcon
+  fullName: Globals_init.moneyIcon
+  type: Field
+  source:
+    id: moneyIcon
+    path: ''
+    startLine: 4452
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Sprite moneyIcon
+    return:
+      type: Global.Sprite
+    content.vb: Public moneyIcon As Sprite
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Globals_init.moneyDropPrefrab
+  commentId: F:Global.Globals_init.moneyDropPrefrab
+  id: moneyDropPrefrab
+  parent: Global.Globals_init
+  langs:
+  - csharp
+  - vb
+  name: moneyDropPrefrab
+  nameWithType: Globals_init.moneyDropPrefrab
+  fullName: Globals_init.moneyDropPrefrab
+  type: Field
+  source:
+    id: moneyDropPrefrab
+    path: ''
+    startLine: 4453
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject moneyDropPrefrab
+    return:
+      type: Global.GameObject
+    content.vb: Public moneyDropPrefrab As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Globals_init.tempEnemyHit
+  commentId: F:Global.Globals_init.tempEnemyHit
+  id: tempEnemyHit
+  parent: Global.Globals_init
+  langs:
+  - csharp
+  - vb
+  name: tempEnemyHit
+  nameWithType: Globals_init.tempEnemyHit
+  fullName: Globals_init.tempEnemyHit
+  type: Field
+  source:
+    id: tempEnemyHit
+    path: ''
+    startLine: 4454
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource tempEnemyHit
+    return:
+      type: Global.AudioSource
+    content.vb: Public tempEnemyHit As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: Global
   name: Global
@@ -56,3 +139,18 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Global.Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource

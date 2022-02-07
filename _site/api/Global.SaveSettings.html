@@ -83,7 +83,7 @@
   
   <h1 id="Global_SaveSettings" data-uid="Global.SaveSettings" class="text-break">Class SaveSettings
   </h1>
-  <div class="markdown level0 summary"><p>container classe zum speichern von Settings</p>
+  <div class="markdown level0 summary"><p>container classe to save settings</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -103,13 +103,13 @@ public class SaveSettings</code></pre>
   
   
   <a id="Global_SaveSettings__ctor_" data-uid="Global.SaveSettings.#ctor*"></a>
-  <h4 id="Global_SaveSettings__ctor_System_Boolean_System_Single_System_Single_" data-uid="Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single)">SaveSettings(Boolean, Single, Single)</h4>
+  <h4 id="Global_SaveSettings__ctor_System_Boolean_System_Single_System_Single_System_Single_" data-uid="Global.SaveSettings.#ctor(System.Boolean,System.Single,System.Single,System.Single)">SaveSettings(Boolean, Single, Single, Single)</h4>
   <div class="markdown level1 summary"><p>standard consturktor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SaveSettings(bool isMute, float backgroundVolume, float sfxVolume)</code></pre>
+    <pre><code class="lang-csharp hljs">public SaveSettings(bool isMute, float backgroundVolume, float sfxVolume, float masterVolume)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,6 +138,11 @@ public class SaveSettings</code></pre>
         <td><span class="parametername">sfxVolume</span></td>
         <td><p>setzt sfx Volume 0-1</p>
 </td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">masterVolume</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -195,6 +200,56 @@ public class SaveSettings</code></pre>
   </table>
   
   
+  <a id="Global_SaveSettings_IsToogleOn_" data-uid="Global.SaveSettings.IsToogleOn*"></a>
+  <h4 id="Global_SaveSettings_IsToogleOn" data-uid="Global.SaveSettings.IsToogleOn">IsToogleOn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsToogleOn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Global_SaveSettings_MasterVolume_" data-uid="Global.SaveSettings.MasterVolume*"></a>
+  <h4 id="Global_SaveSettings_MasterVolume" data-uid="Global.SaveSettings.MasterVolume">MasterVolume</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MasterVolume { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Global_SaveSettings_SfxVolume_" data-uid="Global.SaveSettings.SfxVolume*"></a>
   <h4 id="Global_SaveSettings_SfxVolume" data-uid="Global.SaveSettings.SfxVolume">SfxVolume</h4>
   <div class="markdown level1 summary"></div>
@@ -224,7 +279,7 @@ public class SaveSettings</code></pre>
   
   <a id="Global_SaveSettings_loadSettings_" data-uid="Global.SaveSettings.loadSettings*"></a>
   <h4 id="Global_SaveSettings_loadSettings" data-uid="Global.SaveSettings.loadSettings">loadSettings()</h4>
-  <div class="markdown level1 summary"><p>ladet die Settings aus einer gespeicherten Datei, wenn vorhanden</p>
+  <div class="markdown level1 summary"><p>loads the setting out of a saved data if it exists</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -242,7 +297,7 @@ public class SaveSettings</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Global.SaveSettings.html">SaveSettings</a></td>
-        <td><p>gibt die gespeicherten Settings zur�ck</p>
+        <td><p>returns the saved settings</p>
 </td>
       </tr>
     </tbody>
@@ -251,7 +306,7 @@ public class SaveSettings</code></pre>
   
   <a id="Global_SaveSettings_savingSetting_" data-uid="Global.SaveSettings.savingSetting*"></a>
   <h4 id="Global_SaveSettings_savingSetting" data-uid="Global.SaveSettings.savingSetting">savingSetting()</h4>
-  <div class="markdown level1 summary"><p>speichert die Settings</p>
+  <div class="markdown level1 summary"><p>saves the settings</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

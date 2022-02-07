@@ -5,23 +5,46 @@ items:
   id: Menu_handler
   parent: Global
   children:
+  - Global.Menu_handler.addScore(System.Int32)
+  - Global.Menu_handler.bossHpBar
+  - Global.Menu_handler.bossUI
+  - Global.Menu_handler.enemyKilledCounterText
   - Global.Menu_handler.gameOverUI
   - Global.Menu_handler.levelFinishedUI
   - Global.Menu_handler.levelSelectUI
+  - Global.Menu_handler.menuList
+  - Global.Menu_handler.menuName
+  - Global.Menu_handler.moneyEarnedText
+  - Global.Menu_handler.onChangedScore
+  - Global.Menu_handler.onClickActivateGameobnect(GameObject)
   - Global.Menu_handler.onClickBack
+  - Global.Menu_handler.onClickExitShipEditor(System.Int32)
+  - Global.Menu_handler.onClickGoBackToPreviousScene
   - Global.Menu_handler.onClickLevelSelect(System.Int32)
   - Global.Menu_handler.onClickMainMenu(System.Int32)
+  - Global.Menu_handler.onClickMenuItem(GameObject)
   - Global.Menu_handler.onClickNextLeve(System.Int32)
-  - Global.Menu_handler.onClickShipEditor
+  - Global.Menu_handler.onClickOptions(System.Int32)
+  - Global.Menu_handler.onClickSetMenuName(System.String)
+  - Global.Menu_handler.onclickSetToogle(GameObject)
+  - Global.Menu_handler.onClickShipEditor(System.Int32)
   - Global.Menu_handler.onClickShipMenu(System.Int32)
   - Global.Menu_handler.onClickTryAgain
   - Global.Menu_handler.onClickWorldSelect
+  - Global.Menu_handler.onSelectButton(Image)
+  - Global.Menu_handler.onTooltipToogleChanged(Toggle)
   - Global.Menu_handler.pauseUI
+  - Global.Menu_handler.Playtime
+  - Global.Menu_handler.playtimeText
+  - Global.Menu_handler.score
+  - Global.Menu_handler.selectedButtonImages
   - Global.Menu_handler.setGameOver
   - Global.Menu_handler.setLevelFinish
   - Global.Menu_handler.setPause
   - Global.Menu_handler.setResume
   - Global.Menu_handler.shipMenuUI
+  - Global.Menu_handler.toalMoneyText
+  - Global.Menu_handler.tooltipToogle
   langs:
   - csharp
   - vb
@@ -32,17 +55,16 @@ items:
   source:
     id: Menu_handler
     path: ''
-    startLine: 2114
+    startLine: 5888
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nmenu classe um jegliches menu au�er main menu zu verwalten\n"
+  summary: "\nmenu class to handle all menus except the main menu\n"
   example: []
   syntax:
     content: 'public class Menu_handler : MonoBehaviour'
     content.vb: >-
       Public Class Menu_handler
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -66,7 +88,7 @@ items:
   source:
     id: levelSelectUI
     path: ''
-    startLine: 2117
+    startLine: 5891
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -93,7 +115,7 @@ items:
   source:
     id: shipMenuUI
     path: ''
-    startLine: 2118
+    startLine: 5892
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -120,7 +142,7 @@ items:
   source:
     id: levelFinishedUI
     path: ''
-    startLine: 2119
+    startLine: 5893
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -147,7 +169,7 @@ items:
   source:
     id: gameOverUI
     path: ''
-    startLine: 2120
+    startLine: 5894
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -174,7 +196,7 @@ items:
   source:
     id: pauseUI
     path: ''
-    startLine: 2121
+    startLine: 5895
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -187,30 +209,454 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.Menu_handler.onClickShipEditor
-  commentId: M:Global.Menu_handler.onClickShipEditor
-  id: onClickShipEditor
+- uid: Global.Menu_handler.bossHpBar
+  commentId: F:Global.Menu_handler.bossHpBar
+  id: bossHpBar
   parent: Global.Menu_handler
   langs:
   - csharp
   - vb
-  name: onClickShipEditor()
-  nameWithType: Menu_handler.onClickShipEditor()
-  fullName: Menu_handler.onClickShipEditor()
+  name: bossHpBar
+  nameWithType: Menu_handler.bossHpBar
+  fullName: Menu_handler.bossHpBar
+  type: Field
+  source:
+    id: bossHpBar
+    path: ''
+    startLine: 5897
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image bossHpBar
+    return:
+      type: Global.Image
+    content.vb: Public bossHpBar As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.bossUI
+  commentId: F:Global.Menu_handler.bossUI
+  id: bossUI
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: bossUI
+  nameWithType: Menu_handler.bossUI
+  fullName: Menu_handler.bossUI
+  type: Field
+  source:
+    id: bossUI
+    path: ''
+    startLine: 5898
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject bossUI
+    return:
+      type: Global.GameObject
+    content.vb: Public bossUI As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.playtimeText
+  commentId: F:Global.Menu_handler.playtimeText
+  id: playtimeText
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: playtimeText
+  nameWithType: Menu_handler.playtimeText
+  fullName: Menu_handler.playtimeText
+  type: Field
+  source:
+    id: playtimeText
+    path: ''
+    startLine: 5900
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Text> playtimeText
+    return:
+      type: System.Collections.Generic.List{Text}
+    content.vb: Public playtimeText As List(Of Text)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.enemyKilledCounterText
+  commentId: F:Global.Menu_handler.enemyKilledCounterText
+  id: enemyKilledCounterText
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: enemyKilledCounterText
+  nameWithType: Menu_handler.enemyKilledCounterText
+  fullName: Menu_handler.enemyKilledCounterText
+  type: Field
+  source:
+    id: enemyKilledCounterText
+    path: ''
+    startLine: 5901
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Text> enemyKilledCounterText
+    return:
+      type: System.Collections.Generic.List{Text}
+    content.vb: Public enemyKilledCounterText As List(Of Text)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.score
+  commentId: F:Global.Menu_handler.score
+  id: score
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: score
+  nameWithType: Menu_handler.score
+  fullName: Menu_handler.score
+  type: Field
+  source:
+    id: score
+    path: ''
+    startLine: 5903
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text score
+    return:
+      type: Global.Text
+    content.vb: Public score As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.moneyEarnedText
+  commentId: F:Global.Menu_handler.moneyEarnedText
+  id: moneyEarnedText
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: moneyEarnedText
+  nameWithType: Menu_handler.moneyEarnedText
+  fullName: Menu_handler.moneyEarnedText
+  type: Field
+  source:
+    id: moneyEarnedText
+    path: ''
+    startLine: 5909
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Text> moneyEarnedText
+    return:
+      type: System.Collections.Generic.List{Text}
+    content.vb: Public moneyEarnedText As List(Of Text)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.toalMoneyText
+  commentId: F:Global.Menu_handler.toalMoneyText
+  id: toalMoneyText
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: toalMoneyText
+  nameWithType: Menu_handler.toalMoneyText
+  fullName: Menu_handler.toalMoneyText
+  type: Field
+  source:
+    id: toalMoneyText
+    path: ''
+    startLine: 5910
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Text> toalMoneyText
+    return:
+      type: System.Collections.Generic.List{Text}
+    content.vb: Public toalMoneyText As List(Of Text)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.selectedButtonImages
+  commentId: F:Global.Menu_handler.selectedButtonImages
+  id: selectedButtonImages
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: selectedButtonImages
+  nameWithType: Menu_handler.selectedButtonImages
+  fullName: Menu_handler.selectedButtonImages
+  type: Field
+  source:
+    id: selectedButtonImages
+    path: ''
+    startLine: 5912
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Image> selectedButtonImages
+    return:
+      type: System.Collections.Generic.List{Image}
+    content.vb: Public selectedButtonImages As List(Of Image)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.menuList
+  commentId: F:Global.Menu_handler.menuList
+  id: menuList
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: menuList
+  nameWithType: Menu_handler.menuList
+  fullName: Menu_handler.menuList
+  type: Field
+  source:
+    id: menuList
+    path: ''
+    startLine: 5914
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<GameObject> menuList
+    return:
+      type: System.Collections.Generic.List{GameObject}
+    content.vb: Public menuList As List(Of GameObject)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.menuName
+  commentId: F:Global.Menu_handler.menuName
+  id: menuName
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: menuName
+  nameWithType: Menu_handler.menuName
+  fullName: Menu_handler.menuName
+  type: Field
+  source:
+    id: menuName
+    path: ''
+    startLine: 5916
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Text menuName
+    return:
+      type: Global.Text
+    content.vb: Public menuName As Text
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.tooltipToogle
+  commentId: F:Global.Menu_handler.tooltipToogle
+  id: tooltipToogle
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: tooltipToogle
+  nameWithType: Menu_handler.tooltipToogle
+  fullName: Menu_handler.tooltipToogle
+  type: Field
+  source:
+    id: tooltipToogle
+    path: ''
+    startLine: 5918
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Toggle tooltipToogle
+    return:
+      type: Global.Toggle
+    content.vb: Public tooltipToogle As Toggle
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.Playtime
+  commentId: P:Global.Menu_handler.Playtime
+  id: Playtime
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: Playtime
+  nameWithType: Menu_handler.Playtime
+  fullName: Menu_handler.Playtime
+  type: Property
+  source:
+    id: Playtime
+    path: ''
+    startLine: 5920
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float Playtime { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Playtime As Single
+  overload: Global.Menu_handler.Playtime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.addScore(System.Int32)
+  commentId: M:Global.Menu_handler.addScore(System.Int32)
+  id: addScore(System.Int32)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: addScore(Int32)
+  nameWithType: Menu_handler.addScore(Int32)
+  fullName: Menu_handler.addScore(System.Int32)
+  type: Method
+  source:
+    id: addScore
+    path: ''
+    startLine: 5935
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nnot in use anymore\n"
+  example: []
+  syntax:
+    content: public void addScore(int points)
+    parameters:
+    - id: points
+      type: System.Int32
+      description: points to add to score
+    content.vb: Public Sub addScore(points As Integer)
+  overload: Global.Menu_handler.addScore*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onChangedScore
+  commentId: M:Global.Menu_handler.onChangedScore
+  id: onChangedScore
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onChangedScore()
+  nameWithType: Menu_handler.onChangedScore()
+  fullName: Menu_handler.onChangedScore()
+  type: Method
+  source:
+    id: onChangedScore
+    path: ''
+    startLine: 5951
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nshows the player Score (not in use anymore)\nshows the current wace and enemies to kill in the endless mode\n"
+  example: []
+  syntax:
+    content: public void onChangedScore()
+    content.vb: Public Sub onChangedScore
+  overload: Global.Menu_handler.onChangedScore*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickShipEditor(System.Int32)
+  commentId: M:Global.Menu_handler.onClickShipEditor(System.Int32)
+  id: onClickShipEditor(System.Int32)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickShipEditor(Int32)
+  nameWithType: Menu_handler.onClickShipEditor(Int32)
+  fullName: Menu_handler.onClickShipEditor(System.Int32)
   type: Method
   source:
     id: onClickShipEditor
     path: ''
-    startLine: 2137
+    startLine: 6003
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nship Editor button gelickt\n"
+  summary: "\nship editor button clicked\n"
   example: []
   syntax:
-    content: public void onClickShipEditor()
-    content.vb: Public Sub onClickShipEditor
+    content: public void onClickShipEditor(int sceneIndex)
+    parameters:
+    - id: sceneIndex
+      type: System.Int32
+      description: index of ship editor
+    content.vb: Public Sub onClickShipEditor(sceneIndex As Integer)
   overload: Global.Menu_handler.onClickShipEditor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickExitShipEditor(System.Int32)
+  commentId: M:Global.Menu_handler.onClickExitShipEditor(System.Int32)
+  id: onClickExitShipEditor(System.Int32)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickExitShipEditor(Int32)
+  nameWithType: Menu_handler.onClickExitShipEditor(Int32)
+  fullName: Menu_handler.onClickExitShipEditor(System.Int32)
+  type: Method
+  source:
+    id: onClickExitShipEditor
+    path: ''
+    startLine: 6012
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nship editor exit button clicked\n"
+  example: []
+  syntax:
+    content: public void onClickExitShipEditor(int sceneIndex)
+    parameters:
+    - id: sceneIndex
+      type: System.Int32
+      description: index of the new sceene
+    content.vb: Public Sub onClickExitShipEditor(sceneIndex As Integer)
+  overload: Global.Menu_handler.onClickExitShipEditor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -229,11 +675,11 @@ items:
   source:
     id: onClickWorldSelect
     path: ''
-    startLine: 2144
+    startLine: 6019
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nship menu zu level select\n"
+  summary: "\nnot in use anymore\n"
   example: []
   syntax:
     content: public void onClickWorldSelect()
@@ -257,11 +703,11 @@ items:
   source:
     id: onClickBack
     path: ''
-    startLine: 2151
+    startLine: 6026
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nlevel select zu ship menu\n"
+  summary: "\nnot in use anymore\n"
   example: []
   syntax:
     content: public void onClickBack()
@@ -285,11 +731,11 @@ items:
   source:
     id: onClickMainMenu
     path: ''
-    startLine: 2160
+    startLine: 6035
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nzu main menu scene\n"
+  summary: "\nto main menu scene\n"
   example: []
   syntax:
     content: public void onClickMainMenu(int sceneIndex)
@@ -317,11 +763,11 @@ items:
   source:
     id: onClickLevelSelect
     path: ''
-    startLine: 2169
+    startLine: 6049
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nlevel auswahlt\n"
+  summary: "\nlevel button clicked\n"
   example: []
   syntax:
     content: public void onClickLevelSelect(int levelSceneIndex)
@@ -349,18 +795,18 @@ items:
   source:
     id: onClickNextLeve
     path: ''
-    startLine: 2177
+    startLine: 6057
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nnext level auswahl\n"
+  summary: "\nnext level button clicked\n"
   example: []
   syntax:
     content: public void onClickNextLeve(int backupSeneIndex)
     parameters:
     - id: backupSeneIndex
       type: System.Int32
-      description: backup scene index falls das next level nicht gibt
+      description: backup scene index if no next level exists
     content.vb: Public Sub onClickNextLeve(backupSeneIndex As Integer)
   overload: Global.Menu_handler.onClickNextLeve*
   modifiers.csharp:
@@ -381,11 +827,11 @@ items:
   source:
     id: onClickShipMenu
     path: ''
-    startLine: 2199
+    startLine: 6079
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nzu ship menu\n"
+  summary: "\nship menu button clicked\n"
   example: []
   syntax:
     content: public void onClickShipMenu(int sceneIndex)
@@ -413,11 +859,11 @@ items:
   source:
     id: onClickTryAgain
     path: ''
-    startLine: 2208
+    startLine: 6088
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nscene neu laden\n"
+  summary: "\nload current scene again\n"
   example: []
   syntax:
     content: public void onClickTryAgain()
@@ -441,11 +887,11 @@ items:
   source:
     id: setPause
     path: ''
-    startLine: 2242
+    startLine: 6124
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\naktiviert das Pause Menu\n"
+  summary: "\nactivates the pause menu\n"
   example: []
   syntax:
     content: public void setPause()
@@ -469,11 +915,11 @@ items:
   source:
     id: setResume
     path: ''
-    startLine: 2250
+    startLine: 6132
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ndeaktiviert das Pause Menu\n"
+  summary: "\ndeactivates the pause menu\n"
   example: []
   syntax:
     content: public void setResume()
@@ -497,11 +943,11 @@ items:
   source:
     id: setGameOver
     path: ''
-    startLine: 2259
+    startLine: 6144
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\naktiviert das Game Over Menu\n"
+  summary: "\nactivates the game over menu\n"
   example: []
   syntax:
     content: public void setGameOver()
@@ -525,16 +971,268 @@ items:
   source:
     id: setLevelFinish
     path: ''
-    startLine: 2269
+    startLine: 6186
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\naktiviert das Level Finished Menu\n"
+  summary: "\nactivates the level finish menu\n"
   example: []
   syntax:
     content: public void setLevelFinish()
     content.vb: Public Sub setLevelFinish
   overload: Global.Menu_handler.setLevelFinish*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickOptions(System.Int32)
+  commentId: M:Global.Menu_handler.onClickOptions(System.Int32)
+  id: onClickOptions(System.Int32)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickOptions(Int32)
+  nameWithType: Menu_handler.onClickOptions(Int32)
+  fullName: Menu_handler.onClickOptions(System.Int32)
+  type: Method
+  source:
+    id: onClickOptions
+    path: ''
+    startLine: 6239
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\noptions button clieckd\nsaves the current scene index for going back to this scene\n"
+  example: []
+  syntax:
+    content: public void onClickOptions(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: index of options menu
+    content.vb: Public Sub onClickOptions(index As Integer)
+  overload: Global.Menu_handler.onClickOptions*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickGoBackToPreviousScene
+  commentId: M:Global.Menu_handler.onClickGoBackToPreviousScene
+  id: onClickGoBackToPreviousScene
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickGoBackToPreviousScene()
+  nameWithType: Menu_handler.onClickGoBackToPreviousScene()
+  fullName: Menu_handler.onClickGoBackToPreviousScene()
+  type: Method
+  source:
+    id: onClickGoBackToPreviousScene
+    path: ''
+    startLine: 6248
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ngoes back to the last saved scene index\n"
+  example: []
+  syntax:
+    content: public void onClickGoBackToPreviousScene()
+    content.vb: Public Sub onClickGoBackToPreviousScene
+  overload: Global.Menu_handler.onClickGoBackToPreviousScene*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onSelectButton(Image)
+  commentId: M:Global.Menu_handler.onSelectButton(Image)
+  id: onSelectButton(Image)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onSelectButton(Image)
+  nameWithType: Menu_handler.onSelectButton(Image)
+  fullName: Menu_handler.onSelectButton(Image)
+  type: Method
+  source:
+    id: onSelectButton
+    path: ''
+    startLine: 6258
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nbutton select function\n"
+  example: []
+  syntax:
+    content: public void onSelectButton(Image button)
+    parameters:
+    - id: button
+      type: Global.Image
+      description: image to be enabled when the button is selected
+    content.vb: Public Sub onSelectButton(button As Image)
+  overload: Global.Menu_handler.onSelectButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickMenuItem(GameObject)
+  commentId: M:Global.Menu_handler.onClickMenuItem(GameObject)
+  id: onClickMenuItem(GameObject)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickMenuItem(GameObject)
+  nameWithType: Menu_handler.onClickMenuItem(GameObject)
+  fullName: Menu_handler.onClickMenuItem(GameObject)
+  type: Method
+  source:
+    id: onClickMenuItem
+    path: ''
+    startLine: 6271
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nshows the set menu\n"
+  example: []
+  syntax:
+    content: public void onClickMenuItem(GameObject game)
+    parameters:
+    - id: game
+      type: Global.GameObject
+      description: menu to show
+    content.vb: Public Sub onClickMenuItem(game As GameObject)
+  overload: Global.Menu_handler.onClickMenuItem*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickActivateGameobnect(GameObject)
+  commentId: M:Global.Menu_handler.onClickActivateGameobnect(GameObject)
+  id: onClickActivateGameobnect(GameObject)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickActivateGameobnect(GameObject)
+  nameWithType: Menu_handler.onClickActivateGameobnect(GameObject)
+  fullName: Menu_handler.onClickActivateGameobnect(GameObject)
+  type: Method
+  source:
+    id: onClickActivateGameobnect
+    path: ''
+    startLine: 6282
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nactivates the set gameobject on click\n"
+  example: []
+  syntax:
+    content: public void onClickActivateGameobnect(GameObject game)
+    parameters:
+    - id: game
+      type: Global.GameObject
+      description: the game object to set active
+    content.vb: Public Sub onClickActivateGameobnect(game As GameObject)
+  overload: Global.Menu_handler.onClickActivateGameobnect*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onClickSetMenuName(System.String)
+  commentId: M:Global.Menu_handler.onClickSetMenuName(System.String)
+  id: onClickSetMenuName(System.String)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onClickSetMenuName(String)
+  nameWithType: Menu_handler.onClickSetMenuName(String)
+  fullName: Menu_handler.onClickSetMenuName(System.String)
+  type: Method
+  source:
+    id: onClickSetMenuName
+    path: ''
+    startLine: 6290
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nnot in use anymore\n"
+  example: []
+  syntax:
+    content: public void onClickSetMenuName(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    content.vb: Public Sub onClickSetMenuName(name As String)
+  overload: Global.Menu_handler.onClickSetMenuName*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onclickSetToogle(GameObject)
+  commentId: M:Global.Menu_handler.onclickSetToogle(GameObject)
+  id: onclickSetToogle(GameObject)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onclickSetToogle(GameObject)
+  nameWithType: Menu_handler.onclickSetToogle(GameObject)
+  fullName: Menu_handler.onclickSetToogle(GameObject)
+  type: Method
+  source:
+    id: onclickSetToogle
+    path: ''
+    startLine: 6299
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\non click tooltip button\nsaves the tooltip on/off state\n"
+  example: []
+  syntax:
+    content: public void onclickSetToogle(GameObject game)
+    parameters:
+    - id: game
+      type: Global.GameObject
+      description: the tooltip button
+    content.vb: Public Sub onclickSetToogle(game As GameObject)
+  overload: Global.Menu_handler.onclickSetToogle*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Menu_handler.onTooltipToogleChanged(Toggle)
+  commentId: M:Global.Menu_handler.onTooltipToogleChanged(Toggle)
+  id: onTooltipToogleChanged(Toggle)
+  parent: Global.Menu_handler
+  langs:
+  - csharp
+  - vb
+  name: onTooltipToogleChanged(Toggle)
+  nameWithType: Menu_handler.onTooltipToogleChanged(Toggle)
+  fullName: Menu_handler.onTooltipToogleChanged(Toggle)
+  type: Method
+  source:
+    id: onTooltipToogleChanged
+    path: ''
+    startLine: 6327
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\non changes of the tooltip toogle\nsaves the tooltip on/off state\n"
+  example: []
+  syntax:
+    content: public void onTooltipToogleChanged(Toggle tog)
+    parameters:
+    - id: tog
+      type: Global.Toggle
+      description: the toogle which cause the change
+    content.vb: Public Sub onTooltipToogleChanged(tog As Toggle)
+  overload: Global.Menu_handler.onTooltipToogleChanged*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -565,11 +1263,237 @@ references:
   name: GameObject
   nameWithType: GameObject
   fullName: GameObject
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: System.Collections.Generic.List{Text}
+  commentId: T:System.Collections.Generic.List{Text}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Text>
+  nameWithType: List<Text>
+  fullName: System.Collections.Generic.List<Text>
+  nameWithType.vb: List(Of Text)
+  fullName.vb: System.Collections.Generic.List(Of Text)
+  name.vb: List(Of Text)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Text
+    name: Text
+    nameWithType: Text
+    fullName: Text
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Text
+    name: Text
+    nameWithType: Text
+    fullName: Text
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Global.Text
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: Text
+- uid: System.Collections.Generic.List{Image}
+  commentId: T:System.Collections.Generic.List{Image}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Image>
+  nameWithType: List<Image>
+  fullName: System.Collections.Generic.List<Image>
+  nameWithType.vb: List(Of Image)
+  fullName.vb: System.Collections.Generic.List(Of Image)
+  name.vb: List(Of Image)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Image
+    name: Image
+    nameWithType: Image
+    fullName: Image
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Image
+    name: Image
+    nameWithType: Image
+    fullName: Image
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{GameObject}
+  commentId: T:System.Collections.Generic.List{GameObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<GameObject>
+  nameWithType: List<GameObject>
+  fullName: System.Collections.Generic.List<GameObject>
+  nameWithType.vb: List(Of GameObject)
+  fullName.vb: System.Collections.Generic.List(Of GameObject)
+  name.vb: List(Of GameObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: GameObject
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Toggle
+  isExternal: true
+  name: Toggle
+  nameWithType: Toggle
+  fullName: Toggle
+- uid: Global.Menu_handler.Playtime*
+  commentId: Overload:Global.Menu_handler.Playtime
+  name: Playtime
+  nameWithType: Menu_handler.Playtime
+  fullName: Menu_handler.Playtime
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.Menu_handler.addScore*
+  commentId: Overload:Global.Menu_handler.addScore
+  name: addScore
+  nameWithType: Menu_handler.addScore
+  fullName: Menu_handler.addScore
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.Menu_handler.onChangedScore*
+  commentId: Overload:Global.Menu_handler.onChangedScore
+  name: onChangedScore
+  nameWithType: Menu_handler.onChangedScore
+  fullName: Menu_handler.onChangedScore
 - uid: Global.Menu_handler.onClickShipEditor*
   commentId: Overload:Global.Menu_handler.onClickShipEditor
   name: onClickShipEditor
   nameWithType: Menu_handler.onClickShipEditor
   fullName: Menu_handler.onClickShipEditor
+- uid: Global.Menu_handler.onClickExitShipEditor*
+  commentId: Overload:Global.Menu_handler.onClickExitShipEditor
+  name: onClickExitShipEditor
+  nameWithType: Menu_handler.onClickExitShipEditor
+  fullName: Menu_handler.onClickExitShipEditor
 - uid: Global.Menu_handler.onClickWorldSelect*
   commentId: Overload:Global.Menu_handler.onClickWorldSelect
   name: onClickWorldSelect
@@ -585,13 +1509,6 @@ references:
   name: onClickMainMenu
   nameWithType: Menu_handler.onClickMainMenu
   fullName: Menu_handler.onClickMainMenu
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
 - uid: Global.Menu_handler.onClickLevelSelect*
   commentId: Overload:Global.Menu_handler.onClickLevelSelect
   name: onClickLevelSelect
@@ -632,3 +1549,50 @@ references:
   name: setLevelFinish
   nameWithType: Menu_handler.setLevelFinish
   fullName: Menu_handler.setLevelFinish
+- uid: Global.Menu_handler.onClickOptions*
+  commentId: Overload:Global.Menu_handler.onClickOptions
+  name: onClickOptions
+  nameWithType: Menu_handler.onClickOptions
+  fullName: Menu_handler.onClickOptions
+- uid: Global.Menu_handler.onClickGoBackToPreviousScene*
+  commentId: Overload:Global.Menu_handler.onClickGoBackToPreviousScene
+  name: onClickGoBackToPreviousScene
+  nameWithType: Menu_handler.onClickGoBackToPreviousScene
+  fullName: Menu_handler.onClickGoBackToPreviousScene
+- uid: Global.Menu_handler.onSelectButton*
+  commentId: Overload:Global.Menu_handler.onSelectButton
+  name: onSelectButton
+  nameWithType: Menu_handler.onSelectButton
+  fullName: Menu_handler.onSelectButton
+- uid: Global.Menu_handler.onClickMenuItem*
+  commentId: Overload:Global.Menu_handler.onClickMenuItem
+  name: onClickMenuItem
+  nameWithType: Menu_handler.onClickMenuItem
+  fullName: Menu_handler.onClickMenuItem
+- uid: Global.Menu_handler.onClickActivateGameobnect*
+  commentId: Overload:Global.Menu_handler.onClickActivateGameobnect
+  name: onClickActivateGameobnect
+  nameWithType: Menu_handler.onClickActivateGameobnect
+  fullName: Menu_handler.onClickActivateGameobnect
+- uid: Global.Menu_handler.onClickSetMenuName*
+  commentId: Overload:Global.Menu_handler.onClickSetMenuName
+  name: onClickSetMenuName
+  nameWithType: Menu_handler.onClickSetMenuName
+  fullName: Menu_handler.onClickSetMenuName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.Menu_handler.onclickSetToogle*
+  commentId: Overload:Global.Menu_handler.onclickSetToogle
+  name: onclickSetToogle
+  nameWithType: Menu_handler.onclickSetToogle
+  fullName: Menu_handler.onclickSetToogle
+- uid: Global.Menu_handler.onTooltipToogleChanged*
+  commentId: Overload:Global.Menu_handler.onTooltipToogleChanged
+  name: onTooltipToogleChanged
+  nameWithType: Menu_handler.onTooltipToogleChanged
+  fullName: Menu_handler.onTooltipToogleChanged

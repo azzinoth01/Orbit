@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// class to keep the sound playing while a sceene change happens
+/// </summary>
 public class KeepSoundSource : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -13,6 +17,10 @@ public class KeepSoundSource : MonoBehaviour
 
     public LoopSoundControl audios;
 
+    /// <summary>
+    /// destroys the object if it already exists in the dontDestroyOnLoad list
+    /// else adds it to the list
+    /// </summary>
     void Start() {
 
 
@@ -36,7 +44,13 @@ public class KeepSoundSource : MonoBehaviour
 
     //}
 
-
+    /// <summary>
+    /// sceene change event
+    /// checks if the music is allowed to be played in the new sceene or not
+    /// if not it stops the playing
+    /// else it keeps playing
+    /// </summary>
+    /// <param name="level"></param>
     private void OnLevelWasLoaded(int level) {
 
 

@@ -6,20 +6,29 @@ items:
   parent: Global
   children:
   - Global.Enemy.body
+  - Global.Enemy.bossHp
+  - Global.Enemy.bossUI
   - Global.Enemy.collisionDmg
   - Global.Enemy.deathParticelSystem
   - Global.Enemy.delayToNextWaypoint
   - Global.Enemy.destoryAfterCollison
+  - Global.Enemy.doNotCountAsKill
+  - Global.Enemy.doNotUseForceToMove
+  - Global.Enemy.enemyHitSound
   - Global.Enemy.followPlayerMovementX
   - Global.Enemy.followPlayerMovementY
   - Global.Enemy.force
   - Global.Enemy.health
   - Global.Enemy.loop
   - Global.Enemy.maxDuration
+  - Global.Enemy.MaxHealth
+  - Global.Enemy.maxMonyeValue
   - Global.Enemy.maxSpeed
+  - Global.Enemy.minMoneyValue
   - Global.Enemy.moveToPlayer
   - Global.Enemy.moveToRandomWaypoints
   - Global.Enemy.playerfollowRange
+  - Global.Enemy.showBossHp
   - Global.Enemy.SpawnerCallback
   - Global.Enemy.startMovingOut
   - Global.Enemy.takeDmg(System.Single)
@@ -35,17 +44,16 @@ items:
   source:
     id: Enemy
     path: ''
-    startLine: 1063
+    startLine: 2946
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclass die enemys beschreibt und deren movement\n"
+  summary: "\nclass describes enemys and their movement\n"
   example: []
   syntax:
     content: 'public class Enemy : MonoBehaviour'
     content.vb: >-
       Public Class Enemy
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -69,7 +77,7 @@ items:
   source:
     id: health
     path: ''
-    startLine: 1065
+    startLine: 2948
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -96,7 +104,7 @@ items:
   source:
     id: body
     path: ''
-    startLine: 1069
+    startLine: 2953
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -123,7 +131,7 @@ items:
   source:
     id: waypoints
     path: ''
-    startLine: 1071
+    startLine: 2955
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -150,7 +158,7 @@ items:
   source:
     id: moveToRandomWaypoints
     path: ''
-    startLine: 1072
+    startLine: 2956
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -177,7 +185,7 @@ items:
   source:
     id: moveToPlayer
     path: ''
-    startLine: 1073
+    startLine: 2957
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -204,7 +212,7 @@ items:
   source:
     id: followPlayerMovementX
     path: ''
-    startLine: 1074
+    startLine: 2958
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -231,7 +239,7 @@ items:
   source:
     id: followPlayerMovementY
     path: ''
-    startLine: 1075
+    startLine: 2959
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -258,7 +266,7 @@ items:
   source:
     id: playerfollowRange
     path: ''
-    startLine: 1076
+    startLine: 2960
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -285,7 +293,7 @@ items:
   source:
     id: force
     path: ''
-    startLine: 1077
+    startLine: 2961
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -312,7 +320,7 @@ items:
   source:
     id: maxSpeed
     path: ''
-    startLine: 1078
+    startLine: 2962
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -339,7 +347,7 @@ items:
   source:
     id: loop
     path: ''
-    startLine: 1080
+    startLine: 2964
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -366,7 +374,7 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 1082
+    startLine: 2966
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -393,7 +401,7 @@ items:
   source:
     id: maxDuration
     path: ''
-    startLine: 1088
+    startLine: 2972
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -420,7 +428,7 @@ items:
   source:
     id: delayToNextWaypoint
     path: ''
-    startLine: 1089
+    startLine: 2973
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -447,7 +455,7 @@ items:
   source:
     id: collisionDmg
     path: ''
-    startLine: 1095
+    startLine: 2979
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -474,7 +482,7 @@ items:
   source:
     id: destoryAfterCollison
     path: ''
-    startLine: 1096
+    startLine: 2980
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -501,7 +509,7 @@ items:
   source:
     id: deathParticelSystem
     path: ''
-    startLine: 1098
+    startLine: 2982
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -510,6 +518,222 @@ items:
     return:
       type: Global.GameObject
     content.vb: Public deathParticelSystem As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy.showBossHp
+  commentId: F:Global.Enemy.showBossHp
+  id: showBossHp
+  parent: Global.Enemy
+  langs:
+  - csharp
+  - vb
+  name: showBossHp
+  nameWithType: Enemy.showBossHp
+  fullName: Enemy.showBossHp
+  type: Field
+  source:
+    id: showBossHp
+    path: ''
+    startLine: 2992
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool showBossHp
+    return:
+      type: System.Boolean
+    content.vb: Public showBossHp As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy.bossHp
+  commentId: F:Global.Enemy.bossHp
+  id: bossHp
+  parent: Global.Enemy
+  langs:
+  - csharp
+  - vb
+  name: bossHp
+  nameWithType: Enemy.bossHp
+  fullName: Enemy.bossHp
+  type: Field
+  source:
+    id: bossHp
+    path: ''
+    startLine: 2993
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image bossHp
+    return:
+      type: Global.Image
+    content.vb: Public bossHp As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy.bossUI
+  commentId: F:Global.Enemy.bossUI
+  id: bossUI
+  parent: Global.Enemy
+  langs:
+  - csharp
+  - vb
+  name: bossUI
+  nameWithType: Enemy.bossUI
+  fullName: Enemy.bossUI
+  type: Field
+  source:
+    id: bossUI
+    path: ''
+    startLine: 2994
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject bossUI
+    return:
+      type: Global.GameObject
+    content.vb: Public bossUI As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy.minMoneyValue
+  commentId: F:Global.Enemy.minMoneyValue
+  id: minMoneyValue
+  parent: Global.Enemy
+  langs:
+  - csharp
+  - vb
+  name: minMoneyValue
+  nameWithType: Enemy.minMoneyValue
+  fullName: Enemy.minMoneyValue
+  type: Field
+  source:
+    id: minMoneyValue
+    path: ''
+    startLine: 3003
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int minMoneyValue
+    return:
+      type: System.Int32
+    content.vb: Public minMoneyValue As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy.maxMonyeValue
+  commentId: F:Global.Enemy.maxMonyeValue
+  id: maxMonyeValue
+  parent: Global.Enemy
+  langs:
+  - csharp
+  - vb
+  name: maxMonyeValue
+  nameWithType: Enemy.maxMonyeValue
+  fullName: Enemy.maxMonyeValue
+  type: Field
+  source:
+    id: maxMonyeValue
+    path: ''
+    startLine: 3004
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int maxMonyeValue
+    return:
+      type: System.Int32
+    content.vb: Public maxMonyeValue As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy.doNotCountAsKill
+  commentId: F:Global.Enemy.doNotCountAsKill
+  id: doNotCountAsKill
+  parent: Global.Enemy
+  langs:
+  - csharp
+  - vb
+  name: doNotCountAsKill
+  nameWithType: Enemy.doNotCountAsKill
+  fullName: Enemy.doNotCountAsKill
+  type: Field
+  source:
+    id: doNotCountAsKill
+    path: ''
+    startLine: 3006
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool doNotCountAsKill
+    return:
+      type: System.Boolean
+    content.vb: Public doNotCountAsKill As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy.enemyHitSound
+  commentId: F:Global.Enemy.enemyHitSound
+  id: enemyHitSound
+  parent: Global.Enemy
+  langs:
+  - csharp
+  - vb
+  name: enemyHitSound
+  nameWithType: Enemy.enemyHitSound
+  fullName: Enemy.enemyHitSound
+  type: Field
+  source:
+    id: enemyHitSound
+    path: ''
+    startLine: 3008
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource enemyHitSound
+    return:
+      type: Global.AudioSource
+    content.vb: Public enemyHitSound As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy.doNotUseForceToMove
+  commentId: F:Global.Enemy.doNotUseForceToMove
+  id: doNotUseForceToMove
+  parent: Global.Enemy
+  langs:
+  - csharp
+  - vb
+  name: doNotUseForceToMove
+  nameWithType: Enemy.doNotUseForceToMove
+  fullName: Enemy.doNotUseForceToMove
+  type: Field
+  source:
+    id: doNotUseForceToMove
+    path: ''
+    startLine: 3016
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool doNotUseForceToMove
+    return:
+      type: System.Boolean
+    content.vb: Public doNotUseForceToMove As Boolean
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -528,7 +752,7 @@ items:
   source:
     id: SpawnerCallback
     path: ''
-    startLine: 1111
+    startLine: 3019
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -539,6 +763,37 @@ items:
       type: Global.Enemy_Spawner
     content.vb: Public Property SpawnerCallback As Enemy_Spawner
   overload: Global.Enemy.SpawnerCallback*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.Enemy.MaxHealth
+  commentId: P:Global.Enemy.MaxHealth
+  id: MaxHealth
+  parent: Global.Enemy
+  langs:
+  - csharp
+  - vb
+  name: MaxHealth
+  nameWithType: Enemy.MaxHealth
+  fullName: Enemy.MaxHealth
+  type: Property
+  source:
+    id: MaxHealth
+    path: ''
+    startLine: 3029
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float MaxHealth { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property MaxHealth As Single
+  overload: Global.Enemy.MaxHealth*
   modifiers.csharp:
   - public
   - get
@@ -559,11 +814,11 @@ items:
   source:
     id: startMovingOut
     path: ''
-    startLine: 1231
+    startLine: 3251
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nstartet das rausmoven des gegners, wenn der enemy seine max Duration erreicht hat\ndeactiviert das enemy script\n"
+  summary: "\nstarts the move out of this enemy if the enemy has reached its max duration\ndeaactivates the enemy script\n"
   example: []
   syntax:
     content: public void startMovingOut()
@@ -587,18 +842,18 @@ items:
   source:
     id: takeDmg
     path: ''
-    startLine: 1400
+    startLine: 3442
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ntake dmg funktion\n"
+  summary: "\ntake dmg function\n"
   example: []
   syntax:
     content: public void takeDmg(float dmg)
     parameters:
     - id: dmg
       type: System.Single
-      description: den dmg den der enemy nehmen soll
+      description: dmg the enemy takes
     content.vb: Public Sub takeDmg(dmg As Single)
   overload: Global.Enemy.takeDmg*
   modifiers.csharp:
@@ -746,6 +1001,16 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
 - uid: Global.Enemy.SpawnerCallback*
   commentId: Overload:Global.Enemy.SpawnerCallback
   name: SpawnerCallback
@@ -756,6 +1021,11 @@ references:
   name: Enemy_Spawner
   nameWithType: Enemy_Spawner
   fullName: Enemy_Spawner
+- uid: Global.Enemy.MaxHealth*
+  commentId: Overload:Global.Enemy.MaxHealth
+  name: MaxHealth
+  nameWithType: Enemy.MaxHealth
+  fullName: Enemy.MaxHealth
 - uid: Global.Enemy.startMovingOut*
   commentId: Overload:Global.Enemy.startMovingOut
   name: startMovingOut

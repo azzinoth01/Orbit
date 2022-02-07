@@ -1,0 +1,303 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.LoadAssets
+  commentId: T:Global.LoadAssets
+  id: LoadAssets
+  parent: Global
+  children:
+  - Global.LoadAssets.#ctor
+  - Global.LoadAssets.loadGameObject(System.String)
+  - Global.LoadAssets.loadSprite(System.String)
+  - Global.LoadAssets.loadText(System.String)
+  - Global.LoadAssets.releaseAllHandle
+  - Global.LoadAssets.releaseLastHandle
+  langs:
+  - csharp
+  - vb
+  name: LoadAssets
+  nameWithType: LoadAssets
+  fullName: LoadAssets
+  type: Class
+  source:
+    id: LoadAssets
+    path: ''
+    startLine: 5460
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to load assets while runtime\n"
+  example: []
+  syntax:
+    content: public class LoadAssets
+    content.vb: Public Class LoadAssets
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.LoadAssets.#ctor
+  commentId: M:Global.LoadAssets.#ctor
+  id: '#ctor'
+  parent: Global.LoadAssets
+  langs:
+  - csharp
+  - vb
+  name: LoadAssets()
+  nameWithType: LoadAssets.LoadAssets()
+  fullName: LoadAssets.LoadAssets()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 5468
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nstandard constructor\n"
+  example: []
+  syntax:
+    content: public LoadAssets()
+    content.vb: Public Sub New
+  overload: Global.LoadAssets.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoadAssets.loadSprite(System.String)
+  commentId: M:Global.LoadAssets.loadSprite(System.String)
+  id: loadSprite(System.String)
+  parent: Global.LoadAssets
+  langs:
+  - csharp
+  - vb
+  name: loadSprite(String)
+  nameWithType: LoadAssets.loadSprite(String)
+  fullName: LoadAssets.loadSprite(System.String)
+  type: Method
+  source:
+    id: loadSprite
+    path: ''
+    startLine: 5477
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nloads a sprite out from the addressables path\n"
+  example: []
+  syntax:
+    content: public Sprite loadSprite(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: the addressables path
+    return:
+      type: Global.Sprite
+      description: the loaded sprite
+    content.vb: Public Function loadSprite(path As String) As Sprite
+  overload: Global.LoadAssets.loadSprite*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoadAssets.loadGameObject(System.String)
+  commentId: M:Global.LoadAssets.loadGameObject(System.String)
+  id: loadGameObject(System.String)
+  parent: Global.LoadAssets
+  langs:
+  - csharp
+  - vb
+  name: loadGameObject(String)
+  nameWithType: LoadAssets.loadGameObject(String)
+  fullName: LoadAssets.loadGameObject(System.String)
+  type: Method
+  source:
+    id: loadGameObject
+    path: ''
+    startLine: 5507
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nloads a gameobject out from the addressables path\n"
+  example: []
+  syntax:
+    content: public GameObject loadGameObject(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: the addressables path
+    return:
+      type: Global.GameObject
+      description: the loaded gameobject
+    content.vb: Public Function loadGameObject(path As String) As GameObject
+  overload: Global.LoadAssets.loadGameObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoadAssets.loadText(System.String)
+  commentId: M:Global.LoadAssets.loadText(System.String)
+  id: loadText(System.String)
+  parent: Global.LoadAssets
+  langs:
+  - csharp
+  - vb
+  name: loadText(String)
+  nameWithType: LoadAssets.loadText(String)
+  fullName: LoadAssets.loadText(System.String)
+  type: Method
+  source:
+    id: loadText
+    path: ''
+    startLine: 5533
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nloads a textAsset out from the addressables path\n"
+  example: []
+  syntax:
+    content: public TextAsset loadText(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: the addressables path
+    return:
+      type: Global.TextAsset
+      description: the loaded textAsset
+    content.vb: Public Function loadText(path As String) As TextAsset
+  overload: Global.LoadAssets.loadText*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoadAssets.releaseLastHandle
+  commentId: M:Global.LoadAssets.releaseLastHandle
+  id: releaseLastHandle
+  parent: Global.LoadAssets
+  langs:
+  - csharp
+  - vb
+  name: releaseLastHandle()
+  nameWithType: LoadAssets.releaseLastHandle()
+  fullName: LoadAssets.releaseLastHandle()
+  type: Method
+  source:
+    id: releaseLastHandle
+    path: ''
+    startLine: 5567
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nreleases the last loaded handel to make space in ram\n"
+  example: []
+  syntax:
+    content: public void releaseLastHandle()
+    content.vb: Public Sub releaseLastHandle
+  overload: Global.LoadAssets.releaseLastHandle*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LoadAssets.releaseAllHandle
+  commentId: M:Global.LoadAssets.releaseAllHandle
+  id: releaseAllHandle
+  parent: Global.LoadAssets
+  langs:
+  - csharp
+  - vb
+  name: releaseAllHandle()
+  nameWithType: LoadAssets.releaseAllHandle()
+  fullName: LoadAssets.releaseAllHandle()
+  type: Method
+  source:
+    id: releaseAllHandle
+    path: ''
+    startLine: 5575
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nreleases all loaded handels to make space in ram\n"
+  example: []
+  syntax:
+    content: public void releaseAllHandle()
+    content.vb: Public Sub releaseAllHandle
+  overload: Global.LoadAssets.releaseAllHandle*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.LoadAssets.#ctor*
+  commentId: Overload:Global.LoadAssets.#ctor
+  name: LoadAssets
+  nameWithType: LoadAssets.LoadAssets
+  fullName: LoadAssets.LoadAssets
+- uid: Global.LoadAssets.loadSprite*
+  commentId: Overload:Global.LoadAssets.loadSprite
+  name: loadSprite
+  nameWithType: LoadAssets.loadSprite
+  fullName: LoadAssets.loadSprite
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite
+- uid: Global.LoadAssets.loadGameObject*
+  commentId: Overload:Global.LoadAssets.loadGameObject
+  name: loadGameObject
+  nameWithType: LoadAssets.loadGameObject
+  fullName: LoadAssets.loadGameObject
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.LoadAssets.loadText*
+  commentId: Overload:Global.LoadAssets.loadText
+  name: loadText
+  nameWithType: LoadAssets.loadText
+  fullName: LoadAssets.loadText
+- uid: Global.TextAsset
+  commentId: '!:Global.TextAsset'
+  isExternal: true
+  name: TextAsset
+  nameWithType: TextAsset
+  fullName: TextAsset
+- uid: Global.LoadAssets.releaseLastHandle*
+  commentId: Overload:Global.LoadAssets.releaseLastHandle
+  name: releaseLastHandle
+  nameWithType: LoadAssets.releaseLastHandle
+  fullName: LoadAssets.releaseLastHandle
+- uid: Global.LoadAssets.releaseAllHandle*
+  commentId: Overload:Global.LoadAssets.releaseAllHandle
+  name: releaseAllHandle
+  nameWithType: LoadAssets.releaseAllHandle
+  fullName: LoadAssets.releaseAllHandle

@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.CustomButton
+  commentId: T:Global.CustomButton
+  id: CustomButton
+  parent: Global
+  children:
+  - Global.CustomButton.buttonimage
+  langs:
+  - csharp
+  - vb
+  name: CustomButton
+  nameWithType: CustomButton
+  fullName: CustomButton
+  type: Class
+  source:
+    id: CustomButton
+    path: ''
+    startLine: 2921
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ncreates custom button shapes\n"
+  example: []
+  syntax:
+    content: 'public class CustomButton : MonoBehaviour'
+    content.vb: >-
+      Public Class CustomButton
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.CustomButton.buttonimage
+  commentId: F:Global.CustomButton.buttonimage
+  id: buttonimage
+  parent: Global.CustomButton
+  langs:
+  - csharp
+  - vb
+  name: buttonimage
+  nameWithType: CustomButton.buttonimage
+  fullName: CustomButton.buttonimage
+  type: Field
+  source:
+    id: buttonimage
+    path: ''
+    startLine: 2923
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Image buttonimage
+    return:
+      type: Global.Image
+    content.vb: Public buttonimage As Image
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image

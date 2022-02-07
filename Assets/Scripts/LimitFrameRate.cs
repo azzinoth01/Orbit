@@ -4,12 +4,12 @@ using UnityEngine;
 
 
 /// <summary>
-/// limitiert die Framerate auf 0 fps
+/// limits framerate to 60 fps
 /// </summary>
 public class LimitFrameRate : MonoBehaviour
 {
     /// <summary>
-    /// limitiert die Framerate auf 60 fps
+    /// limits framerate to 60 fps
     /// </summary>
     private void Awake() {
         QualitySettings.vSyncCount = 0;

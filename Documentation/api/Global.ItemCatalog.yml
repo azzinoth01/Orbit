@@ -1,0 +1,301 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ItemCatalog
+  commentId: T:Global.ItemCatalog
+  id: ItemCatalog
+  parent: Global
+  children:
+  - Global.ItemCatalog.#ctor
+  - Global.ItemCatalog.ItemList
+  - Global.ItemCatalog.loadSettings
+  - Global.ItemCatalog.savingSetting
+  langs:
+  - csharp
+  - vb
+  name: ItemCatalog
+  nameWithType: ItemCatalog
+  fullName: ItemCatalog
+  type: Class
+  source:
+    id: ItemCatalog
+    path: ''
+    startLine: 5054
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass that saves the item Catalog and loads it\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class ItemCatalog
+    content.vb: >-
+      <Serializable>
+
+      Public Class ItemCatalog
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.ItemCatalog.ItemList
+  commentId: P:Global.ItemCatalog.ItemList
+  id: ItemList
+  parent: Global.ItemCatalog
+  langs:
+  - csharp
+  - vb
+  name: ItemList
+  nameWithType: ItemCatalog.ItemList
+  fullName: ItemCatalog.ItemList
+  type: Property
+  source:
+    id: ItemList
+    path: ''
+    startLine: 5059
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Item> ItemList { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Item}
+    content.vb: Public Property ItemList As List(Of Item)
+  overload: Global.ItemCatalog.ItemList*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.ItemCatalog.#ctor
+  commentId: M:Global.ItemCatalog.#ctor
+  id: '#ctor'
+  parent: Global.ItemCatalog
+  langs:
+  - csharp
+  - vb
+  name: ItemCatalog()
+  nameWithType: ItemCatalog.ItemCatalog()
+  fullName: ItemCatalog.ItemCatalog()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 5072
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nstandard constructor\n"
+  example: []
+  syntax:
+    content: public ItemCatalog()
+    content.vb: Public Sub New
+  overload: Global.ItemCatalog.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ItemCatalog.savingSetting
+  commentId: M:Global.ItemCatalog.savingSetting
+  id: savingSetting
+  parent: Global.ItemCatalog
+  langs:
+  - csharp
+  - vb
+  name: savingSetting()
+  nameWithType: ItemCatalog.savingSetting()
+  fullName: ItemCatalog.savingSetting()
+  type: Method
+  source:
+    id: savingSetting
+    path: ''
+    startLine: 5080
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nsaves the itemCatalog\n"
+  example: []
+  syntax:
+    content: public void savingSetting()
+    content.vb: Public Sub savingSetting
+  overload: Global.ItemCatalog.savingSetting*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ItemCatalog.loadSettings
+  commentId: M:Global.ItemCatalog.loadSettings
+  id: loadSettings
+  parent: Global.ItemCatalog
+  langs:
+  - csharp
+  - vb
+  name: loadSettings()
+  nameWithType: ItemCatalog.loadSettings()
+  fullName: ItemCatalog.loadSettings()
+  type: Method
+  source:
+    id: loadSettings
+    path: ''
+    startLine: 5096
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nloads the data from the itemCatalog\n"
+  example: []
+  syntax:
+    content: public static ItemCatalog loadSettings()
+    return:
+      type: Global.ItemCatalog
+      description: retruns the saved itemCatalog
+    content.vb: Public Shared Function loadSettings As ItemCatalog
+  overload: Global.ItemCatalog.loadSettings*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.ItemCatalog.ItemList*
+  commentId: Overload:Global.ItemCatalog.ItemList
+  name: ItemList
+  nameWithType: ItemCatalog.ItemList
+  fullName: ItemCatalog.ItemList
+- uid: System.Collections.Generic.List{Item}
+  commentId: T:System.Collections.Generic.List{Item}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Item>
+  nameWithType: List<Item>
+  fullName: System.Collections.Generic.List<Item>
+  nameWithType.vb: List(Of Item)
+  fullName.vb: System.Collections.Generic.List(Of Item)
+  name.vb: List(Of Item)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Item
+    name: Item
+    nameWithType: Item
+    fullName: Item
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Item
+    name: Item
+    nameWithType: Item
+    fullName: Item
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Global.ItemCatalog.#ctor*
+  commentId: Overload:Global.ItemCatalog.#ctor
+  name: ItemCatalog
+  nameWithType: ItemCatalog.ItemCatalog
+  fullName: ItemCatalog.ItemCatalog
+- uid: Global.ItemCatalog.savingSetting*
+  commentId: Overload:Global.ItemCatalog.savingSetting
+  name: savingSetting
+  nameWithType: ItemCatalog.savingSetting
+  fullName: ItemCatalog.savingSetting
+- uid: Global.ItemCatalog.loadSettings*
+  commentId: Overload:Global.ItemCatalog.loadSettings
+  name: loadSettings
+  nameWithType: ItemCatalog.loadSettings
+  fullName: ItemCatalog.loadSettings
+- uid: Global.ItemCatalog
+  commentId: T:Global.ItemCatalog
+  name: ItemCatalog
+  nameWithType: ItemCatalog
+  fullName: ItemCatalog

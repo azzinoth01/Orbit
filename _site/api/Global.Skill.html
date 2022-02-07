@@ -83,7 +83,7 @@
   
   <h1 id="Global_Skill" data-uid="Global.Skill" class="text-break">Class Skill
   </h1>
-  <div class="markdown level0 summary"><p>skill class beschreibt wie sich jedes bulletobject auf der classe verh�lt</p>
+  <div class="markdown level0 summary"><p>class that controls the bullets</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -180,8 +180,8 @@
   
   <a id="Global_Skill_checkDisabled_" data-uid="Global.Skill.checkDisabled*"></a>
   <h4 id="Global_Skill_checkDisabled" data-uid="Global.Skill.checkDisabled">checkDisabled()</h4>
-  <div class="markdown level1 summary"><p>checkt ob alle child objecte inactive sind, um den skill zu deactivieren
-wird aufgerufen, wenn eine bullet sich deactiviert</p>
+  <div class="markdown level1 summary"><p>checks if all child objects are inactive, so the skill can be deactivated
+is called if a bullet is deactivated</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -192,7 +192,7 @@ wird aufgerufen, wenn eine bullet sich deactiviert</p>
   
   <a id="Global_Skill_layerChange_" data-uid="Global.Skill.layerChange*"></a>
   <h4 id="Global_Skill_layerChange" data-uid="Global.Skill.layerChange">layerChange()</h4>
-  <div class="markdown level1 summary"><p>�ndern des Layers der Bullets falls sich der Layer des skills �ndern sollte</p>
+  <div class="markdown level1 summary"><p>changes the layer of the bullets if the layer of the skill changes</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -202,13 +202,13 @@ wird aufgerufen, wenn eine bullet sich deactiviert</p>
   
   
   <a id="Global_Skill_setDmgModifiers_" data-uid="Global.Skill.setDmgModifiers*"></a>
-  <h4 id="Global_Skill_setDmgModifiers_System_Int32_System_Single_" data-uid="Global.Skill.setDmgModifiers(System.Int32,System.Single)">setDmgModifiers(Int32, Single)</h4>
-  <div class="markdown level1 summary"><p>setzt modifiers auf die bullet.</p>
+  <h4 id="Global_Skill_setDmgModifiers_System_Single_System_Single_" data-uid="Global.Skill.setDmgModifiers(System.Single,System.Single)">setDmgModifiers(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>set modifier on the bullet</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void setDmgModifiers(int additionalDmg, float dmgModifier)</code></pre>
+    <pre><code class="lang-csharp hljs">public void setDmgModifiers(float additionalDmg, float dmgModifier)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,15 +221,44 @@ wird aufgerufen, wenn eine bullet sich deactiviert</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td><span class="parametername">additionalDmg</span></td>
-        <td><p>erh�hten den schaden der bullet direkt �ber diesen Wert</p>
+        <td><p>increases the dmg directly on the bullet by this value</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td><span class="parametername">dmgModifier</span></td>
-        <td><p>nach hinzuf�gen des additionalDmg modifiers wir der dmg mit diesem Wert multipliziert</p>
+        <td><p>after adding the additional dmg to the bullet dmg the resulting value is multiplied by this value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Global_Skill_setSfxSoundOnBullets_" data-uid="Global.Skill.setSfxSoundOnBullets*"></a>
+  <h4 id="Global_Skill_setSfxSoundOnBullets_GameObject_" data-uid="Global.Skill.setSfxSoundOnBullets(GameObject)">setSfxSoundOnBullets(GameObject)</h4>
+  <div class="markdown level1 summary"><p>sets the sfx sound on the bullet</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void setSfxSoundOnBullets(GameObject sound)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">sound</span></td>
+        <td><p>the sfx prefab that is to be played</p>
 </td>
       </tr>
     </tbody>

@@ -16,17 +16,16 @@ items:
   source:
     id: Weaponholder
     path: ''
-    startLine: 4331
+    startLine: 10883
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse um die Waffen nach Mouseposition ausrichtet\n"
+  summary: "\nclass to aim the weapons on cursor position\n"
   example: []
   syntax:
     content: 'public class Weaponholder : MonoBehaviour'
     content.vb: >-
       Public Class Weaponholder
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -50,7 +49,7 @@ items:
   source:
     id: rotationSpeed
     path: ''
-    startLine: 4334
+    startLine: 10887
   assemblies:
   - cs.temp.dll
   namespace: Global

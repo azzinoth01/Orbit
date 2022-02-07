@@ -1,0 +1,217 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.TooltipTrigger
+  commentId: T:Global.TooltipTrigger
+  id: TooltipTrigger
+  parent: Global
+  children:
+  - Global.TooltipTrigger.content
+  - Global.TooltipTrigger.header
+  - Global.TooltipTrigger.OnPointerEnter(PointerEventData)
+  - Global.TooltipTrigger.OnPointerExit(PointerEventData)
+  langs:
+  - csharp
+  - vb
+  name: TooltipTrigger
+  nameWithType: TooltipTrigger
+  fullName: TooltipTrigger
+  type: Class
+  source:
+    id: TooltipTrigger
+    path: ''
+    startLine: 10109
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to trigger tooltips\n"
+  example: []
+  syntax:
+    content: 'public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler'
+    content.vb: >-
+      Public Class TooltipTrigger
+          Inherits MonoBehaviour
+          Implements IPointerEnterHandler, IPointerExitHandler
+  inheritance:
+  - System.Object
+  implements:
+  - Global.IPointerEnterHandler
+  - Global.IPointerExitHandler
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.TooltipTrigger.content
+  commentId: F:Global.TooltipTrigger.content
+  id: content
+  parent: Global.TooltipTrigger
+  langs:
+  - csharp
+  - vb
+  name: content
+  nameWithType: TooltipTrigger.content
+  fullName: TooltipTrigger.content
+  type: Field
+  source:
+    id: content
+    path: ''
+    startLine: 10111
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public string content
+    return:
+      type: System.String
+    content.vb: Public content As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TooltipTrigger.header
+  commentId: F:Global.TooltipTrigger.header
+  id: header
+  parent: Global.TooltipTrigger
+  langs:
+  - csharp
+  - vb
+  name: header
+  nameWithType: TooltipTrigger.header
+  fullName: TooltipTrigger.header
+  type: Field
+  source:
+    id: header
+    path: ''
+    startLine: 10112
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public string header
+    return:
+      type: System.String
+    content.vb: Public header As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TooltipTrigger.OnPointerEnter(PointerEventData)
+  commentId: M:Global.TooltipTrigger.OnPointerEnter(PointerEventData)
+  id: OnPointerEnter(PointerEventData)
+  parent: Global.TooltipTrigger
+  langs:
+  - csharp
+  - vb
+  name: OnPointerEnter(PointerEventData)
+  nameWithType: TooltipTrigger.OnPointerEnter(PointerEventData)
+  fullName: TooltipTrigger.OnPointerEnter(PointerEventData)
+  type: Method
+  source:
+    id: OnPointerEnter
+    path: ''
+    startLine: 10119
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nshows the tooltips if the cursor is over a button\n"
+  example: []
+  syntax:
+    content: public void OnPointerEnter(PointerEventData eventData)
+    parameters:
+    - id: eventData
+      type: Global.PointerEventData
+      description: ''
+    content.vb: Public Sub OnPointerEnter(eventData As PointerEventData)
+  overload: Global.TooltipTrigger.OnPointerEnter*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TooltipTrigger.OnPointerExit(PointerEventData)
+  commentId: M:Global.TooltipTrigger.OnPointerExit(PointerEventData)
+  id: OnPointerExit(PointerEventData)
+  parent: Global.TooltipTrigger
+  langs:
+  - csharp
+  - vb
+  name: OnPointerExit(PointerEventData)
+  nameWithType: TooltipTrigger.OnPointerExit(PointerEventData)
+  fullName: TooltipTrigger.OnPointerExit(PointerEventData)
+  type: Method
+  source:
+    id: OnPointerExit
+    path: ''
+    startLine: 10127
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nhides the tooltip if the cursor leaves the button\n"
+  example: []
+  syntax:
+    content: public void OnPointerExit(PointerEventData eventData)
+    parameters:
+    - id: eventData
+      type: Global.PointerEventData
+      description: ''
+    content.vb: Public Sub OnPointerExit(eventData As PointerEventData)
+  overload: Global.TooltipTrigger.OnPointerExit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.IPointerEnterHandler
+  commentId: '!:Global.IPointerEnterHandler'
+  isExternal: true
+  name: IPointerEnterHandler
+  nameWithType: IPointerEnterHandler
+  fullName: IPointerEnterHandler
+- uid: Global.IPointerExitHandler
+  commentId: '!:Global.IPointerExitHandler'
+  isExternal: true
+  name: IPointerExitHandler
+  nameWithType: IPointerExitHandler
+  fullName: IPointerExitHandler
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.TooltipTrigger.OnPointerEnter*
+  commentId: Overload:Global.TooltipTrigger.OnPointerEnter
+  name: OnPointerEnter
+  nameWithType: TooltipTrigger.OnPointerEnter
+  fullName: TooltipTrigger.OnPointerEnter
+- uid: Global.PointerEventData
+  isExternal: true
+  name: PointerEventData
+  nameWithType: PointerEventData
+  fullName: PointerEventData
+- uid: Global.TooltipTrigger.OnPointerExit*
+  commentId: Overload:Global.TooltipTrigger.OnPointerExit
+  name: OnPointerExit
+  nameWithType: TooltipTrigger.OnPointerExit
+  fullName: TooltipTrigger.OnPointerExit

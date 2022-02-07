@@ -14,9 +14,12 @@ items:
   - Global.Rebinding_menu.itemHolder
   - Global.Rebinding_menu.loadRebinding(Controlls)
   - Global.Rebinding_menu.onClickAlertButton
+  - Global.Rebinding_menu.onClickGamepad
+  - Global.Rebinding_menu.onClickMouseAndKey
   - Global.Rebinding_menu.saveAlert
   - Global.Rebinding_menu.saveRebinding
   - Global.Rebinding_menu.ScrollView
+  - Global.Rebinding_menu.viewPanel
   langs:
   - csharp
   - vb
@@ -27,17 +30,16 @@ items:
   source:
     id: Rebinding_menu
     path: ''
-    startLine: 3282
+    startLine: 7884
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse die das Rebinden von controls verwaltet\n"
+  summary: "\nclass which manages the rebinding of controls\n"
   example: []
   syntax:
     content: 'public class Rebinding_menu : MonoBehaviour'
     content.vb: >-
       Public Class Rebinding_menu
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -61,7 +63,7 @@ items:
   source:
     id: ScrollView
     path: ''
-    startLine: 3286
+    startLine: 7888
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -88,7 +90,7 @@ items:
   source:
     id: itemHolder
     path: ''
-    startLine: 3287
+    startLine: 7889
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -115,7 +117,7 @@ items:
   source:
     id: actionName
     path: ''
-    startLine: 3288
+    startLine: 7890
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -142,7 +144,7 @@ items:
   source:
     id: actionKeybind
     path: ''
-    startLine: 3289
+    startLine: 7891
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -169,7 +171,7 @@ items:
   source:
     id: buttonRebind
     path: ''
-    startLine: 3290
+    startLine: 7892
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -196,7 +198,7 @@ items:
   source:
     id: buttonDefault
     path: ''
-    startLine: 3291
+    startLine: 7893
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -223,7 +225,7 @@ items:
   source:
     id: saveAlert
     path: ''
-    startLine: 3292
+    startLine: 7894
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -250,7 +252,7 @@ items:
   source:
     id: buttonBack
     path: ''
-    startLine: 3293
+    startLine: 7895
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -277,7 +279,7 @@ items:
   source:
     id: buttonSave
     path: ''
-    startLine: 3294
+    startLine: 7896
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -286,6 +288,33 @@ items:
     return:
       type: Global.GameObject
     content.vb: Public buttonSave As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.viewPanel
+  commentId: F:Global.Rebinding_menu.viewPanel
+  id: viewPanel
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: viewPanel
+  nameWithType: Rebinding_menu.viewPanel
+  fullName: Rebinding_menu.viewPanel
+  type: Field
+  source:
+    id: viewPanel
+    path: ''
+    startLine: 7898
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject viewPanel
+    return:
+      type: Global.GameObject
+    content.vb: Public viewPanel As GameObject
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -304,11 +333,11 @@ items:
   source:
     id: saveRebinding
     path: ''
-    startLine: 3359
+    startLine: 8000
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nspeichert das Rebinding in einer json datei Userspezifisch auf dem PC\nes darf auch nur gespeichert werden, wenn alle rebinds eindeutig sind\n"
+  summary: "\nsaves the rebinding in a json file user specific on the pc\nit can only be saved if all rebinds are unique\n"
   example: []
   syntax:
     content: public void saveRebinding()
@@ -332,21 +361,21 @@ items:
   source:
     id: loadRebinding
     path: ''
-    startLine: 3391
+    startLine: 8036
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nladet die Rebinds in den controller rein\n"
+  summary: "\nloads the rebinds into the controler\n"
   example: []
   syntax:
     content: public Controlls loadRebinding(Controlls cont)
     parameters:
     - id: cont
       type: Global.Controlls
-      description: der controlls auf den die Rebinds gesetzt werden sollen
+      description: the controler on which the rebinds are to be sete
     return:
       type: Global.Controlls
-      description: 'gibt den controller zur�ck auf den die Rebinds gesetzt wurden '
+      description: returns the controler with the set rebinds
     content.vb: Public Function loadRebinding(cont As Controlls) As Controlls
   overload: Global.Rebinding_menu.loadRebinding*
   modifiers.csharp:
@@ -367,16 +396,72 @@ items:
   source:
     id: onClickAlertButton
     path: ''
-    startLine: 3410
+    startLine: 8055
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nschlie�t das Alert Fenster, wenn das Speichern nicht erfolgreich war\n"
+  summary: "\ncloses the alert window if the saving was not succesful\n"
   example: []
   syntax:
     content: public void onClickAlertButton()
     content.vb: Public Sub onClickAlertButton
   overload: Global.Rebinding_menu.onClickAlertButton*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.onClickGamepad
+  commentId: M:Global.Rebinding_menu.onClickGamepad
+  id: onClickGamepad
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: onClickGamepad()
+  nameWithType: Rebinding_menu.onClickGamepad()
+  fullName: Rebinding_menu.onClickGamepad()
+  type: Method
+  source:
+    id: onClickGamepad
+    path: ''
+    startLine: 8379
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nopens the gamepad rebinding menu\n"
+  example: []
+  syntax:
+    content: public void onClickGamepad()
+    content.vb: Public Sub onClickGamepad
+  overload: Global.Rebinding_menu.onClickGamepad*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Rebinding_menu.onClickMouseAndKey
+  commentId: M:Global.Rebinding_menu.onClickMouseAndKey
+  id: onClickMouseAndKey
+  parent: Global.Rebinding_menu
+  langs:
+  - csharp
+  - vb
+  name: onClickMouseAndKey()
+  nameWithType: Rebinding_menu.onClickMouseAndKey()
+  fullName: Rebinding_menu.onClickMouseAndKey()
+  type: Method
+  source:
+    id: onClickMouseAndKey
+    path: ''
+    startLine: 8396
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nopens the mouse and keyboard rebinding menu\n"
+  example: []
+  syntax:
+    content: public void onClickMouseAndKey()
+    content.vb: Public Sub onClickMouseAndKey
+  overload: Global.Rebinding_menu.onClickMouseAndKey*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -427,3 +512,13 @@ references:
   name: onClickAlertButton
   nameWithType: Rebinding_menu.onClickAlertButton
   fullName: Rebinding_menu.onClickAlertButton
+- uid: Global.Rebinding_menu.onClickGamepad*
+  commentId: Overload:Global.Rebinding_menu.onClickGamepad
+  name: onClickGamepad
+  nameWithType: Rebinding_menu.onClickGamepad
+  fullName: Rebinding_menu.onClickGamepad
+- uid: Global.Rebinding_menu.onClickMouseAndKey*
+  commentId: Overload:Global.Rebinding_menu.onClickMouseAndKey
+  name: onClickMouseAndKey
+  nameWithType: Rebinding_menu.onClickMouseAndKey
+  fullName: Rebinding_menu.onClickMouseAndKey

@@ -1,0 +1,324 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.WeaponInfo
+  commentId: T:Global.WeaponInfo
+  id: WeaponInfo
+  parent: Global
+  children:
+  - Global.WeaponInfo.additionalDmg
+  - Global.WeaponInfo.dmgModifier
+  - Global.WeaponInfo.mainWeapon
+  - Global.WeaponInfo.reloadTime
+  - Global.WeaponInfo.shootsToCreate
+  - Global.WeaponInfo.skill
+  langs:
+  - csharp
+  - vb
+  name: WeaponInfo
+  nameWithType: WeaponInfo
+  fullName: WeaponInfo
+  type: Class
+  source:
+    id: WeaponInfo
+    path: ''
+    startLine: 10938
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to store the weapon creation info\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class WeaponInfo : Inventar_Object
+    content.vb: >-
+      <Serializable>
+
+      Public Class WeaponInfo
+          Inherits Inventar_Object
+  inheritance:
+  - System.Object
+  - Global.Item
+  - Global.Inventar_Object
+  inheritedMembers:
+  - Global.Inventar_Object.Amount
+  - Global.Item.ID
+  - Global.Item.Name
+  - Global.Item.Value
+  - Global.Item.Icon
+  - Global.Item.Sprite
+  - Global.Item.PatternIcon
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.WeaponInfo.mainWeapon
+  commentId: F:Global.WeaponInfo.mainWeapon
+  id: mainWeapon
+  parent: Global.WeaponInfo
+  langs:
+  - csharp
+  - vb
+  name: mainWeapon
+  nameWithType: WeaponInfo.mainWeapon
+  fullName: WeaponInfo.mainWeapon
+  type: Field
+  source:
+    id: mainWeapon
+    path: ''
+    startLine: 10941
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool mainWeapon
+    return:
+      type: System.Boolean
+    content.vb: Public mainWeapon As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.WeaponInfo.skill
+  commentId: F:Global.WeaponInfo.skill
+  id: skill
+  parent: Global.WeaponInfo
+  langs:
+  - csharp
+  - vb
+  name: skill
+  nameWithType: WeaponInfo.skill
+  fullName: WeaponInfo.skill
+  type: Field
+  source:
+    id: skill
+    path: ''
+    startLine: 10942
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public string skill
+    return:
+      type: System.String
+    content.vb: Public skill As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.WeaponInfo.reloadTime
+  commentId: F:Global.WeaponInfo.reloadTime
+  id: reloadTime
+  parent: Global.WeaponInfo
+  langs:
+  - csharp
+  - vb
+  name: reloadTime
+  nameWithType: WeaponInfo.reloadTime
+  fullName: WeaponInfo.reloadTime
+  type: Field
+  source:
+    id: reloadTime
+    path: ''
+    startLine: 10943
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float reloadTime
+    return:
+      type: System.Single
+    content.vb: Public reloadTime As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.WeaponInfo.shootsToCreate
+  commentId: F:Global.WeaponInfo.shootsToCreate
+  id: shootsToCreate
+  parent: Global.WeaponInfo
+  langs:
+  - csharp
+  - vb
+  name: shootsToCreate
+  nameWithType: WeaponInfo.shootsToCreate
+  fullName: WeaponInfo.shootsToCreate
+  type: Field
+  source:
+    id: shootsToCreate
+    path: ''
+    startLine: 10945
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int shootsToCreate
+    return:
+      type: System.Int32
+    content.vb: Public shootsToCreate As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.WeaponInfo.additionalDmg
+  commentId: F:Global.WeaponInfo.additionalDmg
+  id: additionalDmg
+  parent: Global.WeaponInfo
+  langs:
+  - csharp
+  - vb
+  name: additionalDmg
+  nameWithType: WeaponInfo.additionalDmg
+  fullName: WeaponInfo.additionalDmg
+  type: Field
+  source:
+    id: additionalDmg
+    path: ''
+    startLine: 10947
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int additionalDmg
+    return:
+      type: System.Int32
+    content.vb: Public additionalDmg As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.WeaponInfo.dmgModifier
+  commentId: F:Global.WeaponInfo.dmgModifier
+  id: dmgModifier
+  parent: Global.WeaponInfo
+  langs:
+  - csharp
+  - vb
+  name: dmgModifier
+  nameWithType: WeaponInfo.dmgModifier
+  fullName: WeaponInfo.dmgModifier
+  type: Field
+  source:
+    id: dmgModifier
+    path: ''
+    startLine: 10948
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float dmgModifier
+    return:
+      type: System.Single
+    content.vb: Public dmgModifier As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.Item
+  commentId: T:Global.Item
+  name: Item
+  nameWithType: Item
+  fullName: Item
+- uid: Global.Inventar_Object
+  commentId: T:Global.Inventar_Object
+  name: Inventar_Object
+  nameWithType: Inventar_Object
+  fullName: Inventar_Object
+- uid: Global.Inventar_Object.Amount
+  commentId: P:Global.Inventar_Object.Amount
+  parent: Global.Inventar_Object
+  name: Amount
+  nameWithType: Inventar_Object.Amount
+  fullName: Inventar_Object.Amount
+- uid: Global.Item.ID
+  commentId: P:Global.Item.ID
+  parent: Global.Item
+  name: ID
+  nameWithType: Item.ID
+  fullName: Item.ID
+- uid: Global.Item.Name
+  commentId: P:Global.Item.Name
+  parent: Global.Item
+  name: Name
+  nameWithType: Item.Name
+  fullName: Item.Name
+- uid: Global.Item.Value
+  commentId: P:Global.Item.Value
+  parent: Global.Item
+  name: Value
+  nameWithType: Item.Value
+  fullName: Item.Value
+- uid: Global.Item.Icon
+  commentId: P:Global.Item.Icon
+  parent: Global.Item
+  name: Icon
+  nameWithType: Item.Icon
+  fullName: Item.Icon
+- uid: Global.Item.Sprite
+  commentId: P:Global.Item.Sprite
+  parent: Global.Item
+  name: Sprite
+  nameWithType: Item.Sprite
+  fullName: Item.Sprite
+- uid: Global.Item.PatternIcon
+  commentId: P:Global.Item.PatternIcon
+  parent: Global.Item
+  name: PatternIcon
+  nameWithType: Item.PatternIcon
+  fullName: Item.PatternIcon
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

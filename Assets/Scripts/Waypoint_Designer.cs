@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 
 /// <summary>
-/// classe die hilf den Gamedesigner Wegpunktliste zu erzeugen
+/// classe to help gamedesinger make waypoints
 /// </summary>
 public class Waypoint_Designer : MonoBehaviour
 {
@@ -28,7 +28,7 @@ public class Waypoint_Designer : MonoBehaviour
 
 
     /// <summary>
-    /// setzt die Vectoren in den Line Render um die Wegpunkt verbindung visuell anzuzeigen
+    /// set vectors in the line Render visualize the connections of the waypoints
     /// </summary>
     void Start() {
         line.positionCount = waypoints.Count + 1;
@@ -47,8 +47,8 @@ public class Waypoint_Designer : MonoBehaviour
     }
 
     /// <summary>
-    /// plaziert die Wegpunkte auf den Screen, wenn linker Mousebutton gelickt wird
-    /// beim rechten Mousbutton klick wird das setzen der Wegpunkte deaktiviert werden
+    /// places the waypoints on the screen if the left mouse button is pressed
+    /// if the right mousbutton was clicked then the seting of waypoints is deactivated
     /// </summary>
     void Update() {
         if (Globals.pause == true) {
@@ -77,7 +77,7 @@ public class Waypoint_Designer : MonoBehaviour
 
 
     /// <summary>
-    /// aktiviert die Wegpunkt setzung
+    /// activates the seting of waypoints
     /// </summary>
     [ContextMenu("Set Waypoints on Screen")]
     public void paintWayoints() {

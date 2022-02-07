@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// classe um Globale variablen zu initzalisieren
+/// class to initialise the globale variables
 /// </summary>
 public class Globals_init : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class Globals_init : MonoBehaviour
     public AudioSource tempEnemyHit;
 
     /// <summary>
-    /// initzalisiert die Gloablen variablen
+    /// initialise the globale variables with standard values
     /// </summary>
     private void Awake() {
         Globals.pause = false;

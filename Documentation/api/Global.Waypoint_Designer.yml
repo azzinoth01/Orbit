@@ -25,17 +25,16 @@ items:
   source:
     id: Waypoint_Designer
     path: ''
-    startLine: 4117
+    startLine: 10657
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse die hilf den Gamedesigner Wegpunktliste zu erzeugen\n"
+  summary: "\nclasse to help gamedesinger make waypoints\n"
   example: []
   syntax:
     content: 'public class Waypoint_Designer : MonoBehaviour'
     content.vb: >-
       Public Class Waypoint_Designer
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -59,7 +58,7 @@ items:
   source:
     id: waypoints
     path: ''
-    startLine: 4120
+    startLine: 10660
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -86,7 +85,7 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 4121
+    startLine: 10661
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -113,7 +112,7 @@ items:
   source:
     id: force
     path: ''
-    startLine: 4122
+    startLine: 10662
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -140,7 +139,7 @@ items:
   source:
     id: restartAfter
     path: ''
-    startLine: 4123
+    startLine: 10663
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -167,7 +166,7 @@ items:
   source:
     id: loop
     path: ''
-    startLine: 4124
+    startLine: 10664
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -194,7 +193,7 @@ items:
   source:
     id: enemyDelayToNextWaypoint
     path: ''
-    startLine: 4125
+    startLine: 10665
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -221,7 +220,7 @@ items:
   source:
     id: line
     path: ''
-    startLine: 4126
+    startLine: 10666
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -248,7 +247,7 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 4127
+    startLine: 10667
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -275,7 +274,7 @@ items:
   source:
     id: waypointList
     path: ''
-    startLine: 4133
+    startLine: 10673
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -302,11 +301,11 @@ items:
   source:
     id: paintWayoints
     path: ''
-    startLine: 4189
+    startLine: 10729
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\naktiviert die Wegpunkt setzung\n"
+  summary: "\nactivates the seting of waypoints\n"
   example: []
   syntax:
     content: public void paintWayoints()

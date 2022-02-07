@@ -20,17 +20,16 @@ items:
   source:
     id: Bullet
     path: ''
-    startLine: 444
+    startLine: 2203
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse die beschreibt wie die Bullet fliegt\n"
+  summary: "\nclass that describes how bullets fly\n"
   example: []
   syntax:
     content: 'public class Bullet : MonoBehaviour'
     content.vb: >-
       Public Class Bullet
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -54,7 +53,7 @@ items:
   source:
     id: waypoints
     path: ''
-    startLine: 447
+    startLine: 2206
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -81,7 +80,7 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 448
+    startLine: 2207
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -108,7 +107,7 @@ items:
   source:
     id: body
     path: ''
-    startLine: 450
+    startLine: 2209
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -135,7 +134,7 @@ items:
   source:
     id: waypointPrefab
     path: ''
-    startLine: 451
+    startLine: 2210
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -162,7 +161,7 @@ items:
   source:
     id: BulletDmg
     path: ''
-    startLine: 464
+    startLine: 2223
   assemblies:
   - cs.temp.dll
   namespace: Global

@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// controls the enemy rotation
+/// </summary>
 public class Enemy_rotation : MonoBehaviour
 {
     public bool rotateTowardsPlayer;
@@ -11,13 +15,19 @@ public class Enemy_rotation : MonoBehaviour
 
     private Enemy enemy;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// starts the rotating coroutine
+    /// </summary>
     void Start() {
         enemy = gameObject.GetComponent<Enemy>();
         StartCoroutine(rotating());
     }
 
 
+    /// <summary>
+    /// rotates the enemy every frame to face player
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator rotating() {
 
 

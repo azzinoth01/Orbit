@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
 /// <summary>
-/// win condition handler classe
+/// win condition handler class
 /// </summary>
 public class Win_condition : MonoBehaviour
 {
@@ -25,7 +25,7 @@ public class Win_condition : MonoBehaviour
     private bool alreadyTriggerd;
 
     /// <summary>
-    /// setzt die wincondition in den Globalen variablen
+    /// sets the wincondition in the globalen variables
     /// </summary>
     void Start() {
         Globals.currentWinCondition = this;
@@ -34,7 +34,7 @@ public class Win_condition : MonoBehaviour
     }
 
     /// <summary>
-    /// activiert das level end portal
+    /// activates the level end portal
     /// </summary>
     public void activateLevelFinishPortal() {
         alreadyActive = true;
@@ -51,6 +51,11 @@ public class Win_condition : MonoBehaviour
         }
 
     }
+
+    /// <summary>
+    /// delays the spawing of the portal
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator delayPortalSpawning() {
 
 
@@ -62,7 +67,7 @@ public class Win_condition : MonoBehaviour
 
 
     /// <summary>
-    /// erhöht der enemy kill counter um 1
+    /// reduces the enemy kill counter by 1
     /// </summary>
     public void enemyKilled() {
         enemysToKill = enemysToKill - 1;
@@ -87,6 +92,10 @@ public class Win_condition : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// starts the rotating of the portal
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator startRotating() {
 
         while (true) {
@@ -102,9 +111,9 @@ public class Win_condition : MonoBehaviour
     }
 
     /// <summary>
-    /// activiert das level finish UI
+    /// activates the level finish UI
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision"> collision object</param>
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (Globals.player == collision.gameObject) {

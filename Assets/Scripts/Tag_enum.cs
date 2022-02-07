@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// enum für Tags
+/// enum for tags
 /// </summary>
 public enum Tag_enum
 {

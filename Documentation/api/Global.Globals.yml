@@ -5,13 +5,29 @@ items:
   id: Globals
   parent: Global
   children:
+  - Global.Globals.bossHpBar
+  - Global.Globals.bossUI
   - Global.Globals.bulletPool
+  - Global.Globals.catalog
   - Global.Globals.currentCamera
+  - Global.Globals.currentItem
   - Global.Globals.currentWinCondition
+  - Global.Globals.dontDestoryOnLoadObjectID
+  - Global.Globals.infityWaveSpawner
+  - Global.Globals.inventory
+  - Global.Globals.lastSceneIndex
   - Global.Globals.menuHandler
+  - Global.Globals.money
+  - Global.Globals.moneyDrop
+  - Global.Globals.moneyIcon
   - Global.Globals.pause
   - Global.Globals.player
+  - Global.Globals.skipStartCutscene
   - Global.Globals.spawnerListe
+  - Global.Globals.tempEnemyHit
+  - Global.Globals.tooltip
+  - Global.Globals.virtualMouse
+  - Global.Globals.waveControler
   langs:
   - csharp
   - vb
@@ -22,11 +38,11 @@ items:
   source:
     id: Globals
     path: ''
-    startLine: 1974
+    startLine: 4414
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse um Globale Variablen zu verwalten\n"
+  summary: "\nstatic class to manage global variables\n"
   example: []
   syntax:
     content: public static class Globals
@@ -54,7 +70,7 @@ items:
   source:
     id: pause
     path: ''
-    startLine: 1976
+    startLine: 4416
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -83,7 +99,7 @@ items:
   source:
     id: currentCamera
     path: ''
-    startLine: 1977
+    startLine: 4417
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -112,7 +128,7 @@ items:
   source:
     id: player
     path: ''
-    startLine: 1978
+    startLine: 4418
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -141,7 +157,7 @@ items:
   source:
     id: bulletPool
     path: ''
-    startLine: 1979
+    startLine: 4419
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -170,7 +186,7 @@ items:
   source:
     id: menuHandler
     path: ''
-    startLine: 1980
+    startLine: 4420
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -199,7 +215,7 @@ items:
   source:
     id: currentWinCondition
     path: ''
-    startLine: 1981
+    startLine: 4421
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -228,7 +244,7 @@ items:
   source:
     id: spawnerListe
     path: ''
-    startLine: 1982
+    startLine: 4422
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -237,6 +253,470 @@ items:
     return:
       type: System.Collections.Generic.List{Enemy_Spawner}
     content.vb: Public Shared spawnerListe As List(Of Enemy_Spawner)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.bossUI
+  commentId: F:Global.Globals.bossUI
+  id: bossUI
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: bossUI
+  nameWithType: Globals.bossUI
+  fullName: Globals.bossUI
+  type: Field
+  source:
+    id: bossUI
+    path: ''
+    startLine: 4423
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static GameObject bossUI
+    return:
+      type: Global.GameObject
+    content.vb: Public Shared bossUI As GameObject
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.bossHpBar
+  commentId: F:Global.Globals.bossHpBar
+  id: bossHpBar
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: bossHpBar
+  nameWithType: Globals.bossHpBar
+  fullName: Globals.bossHpBar
+  type: Field
+  source:
+    id: bossHpBar
+    path: ''
+    startLine: 4424
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static Image bossHpBar
+    return:
+      type: Global.Image
+    content.vb: Public Shared bossHpBar As Image
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.virtualMouse
+  commentId: F:Global.Globals.virtualMouse
+  id: virtualMouse
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: virtualMouse
+  nameWithType: Globals.virtualMouse
+  fullName: Globals.virtualMouse
+  type: Field
+  source:
+    id: virtualMouse
+    path: ''
+    startLine: 4425
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static VirtualMouse virtualMouse
+    return:
+      type: Global.VirtualMouse
+    content.vb: Public Shared virtualMouse As VirtualMouse
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.money
+  commentId: F:Global.Globals.money
+  id: money
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: money
+  nameWithType: Globals.money
+  fullName: Globals.money
+  type: Field
+  source:
+    id: money
+    path: ''
+    startLine: 4426
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static int money
+    return:
+      type: System.Int32
+    content.vb: Public Shared money As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.inventory
+  commentId: F:Global.Globals.inventory
+  id: inventory
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: inventory
+  nameWithType: Globals.inventory
+  fullName: Globals.inventory
+  type: Field
+  source:
+    id: inventory
+    path: ''
+    startLine: 4427
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static List<Inventar_Object> inventory
+    return:
+      type: System.Collections.Generic.List{Inventar_Object}
+    content.vb: Public Shared inventory As List(Of Inventar_Object)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.moneyIcon
+  commentId: F:Global.Globals.moneyIcon
+  id: moneyIcon
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: moneyIcon
+  nameWithType: Globals.moneyIcon
+  fullName: Globals.moneyIcon
+  type: Field
+  source:
+    id: moneyIcon
+    path: ''
+    startLine: 4428
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static Sprite moneyIcon
+    return:
+      type: Global.Sprite
+    content.vb: Public Shared moneyIcon As Sprite
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.moneyDrop
+  commentId: F:Global.Globals.moneyDrop
+  id: moneyDrop
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: moneyDrop
+  nameWithType: Globals.moneyDrop
+  fullName: Globals.moneyDrop
+  type: Field
+  source:
+    id: moneyDrop
+    path: ''
+    startLine: 4429
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static GameObject moneyDrop
+    return:
+      type: Global.GameObject
+    content.vb: Public Shared moneyDrop As GameObject
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.catalog
+  commentId: F:Global.Globals.catalog
+  id: catalog
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: catalog
+  nameWithType: Globals.catalog
+  fullName: Globals.catalog
+  type: Field
+  source:
+    id: catalog
+    path: ''
+    startLine: 4430
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static ItemCatalog catalog
+    return:
+      type: Global.ItemCatalog
+    content.vb: Public Shared catalog As ItemCatalog
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.currentItem
+  commentId: F:Global.Globals.currentItem
+  id: currentItem
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: currentItem
+  nameWithType: Globals.currentItem
+  fullName: Globals.currentItem
+  type: Field
+  source:
+    id: currentItem
+    path: ''
+    startLine: 4431
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static Item currentItem
+    return:
+      type: Global.Item
+    content.vb: Public Shared currentItem As Item
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.tempEnemyHit
+  commentId: F:Global.Globals.tempEnemyHit
+  id: tempEnemyHit
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: tempEnemyHit
+  nameWithType: Globals.tempEnemyHit
+  fullName: Globals.tempEnemyHit
+  type: Field
+  source:
+    id: tempEnemyHit
+    path: ''
+    startLine: 4432
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static AudioSource tempEnemyHit
+    return:
+      type: Global.AudioSource
+    content.vb: Public Shared tempEnemyHit As AudioSource
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.dontDestoryOnLoadObjectID
+  commentId: F:Global.Globals.dontDestoryOnLoadObjectID
+  id: dontDestoryOnLoadObjectID
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: dontDestoryOnLoadObjectID
+  nameWithType: Globals.dontDestoryOnLoadObjectID
+  fullName: Globals.dontDestoryOnLoadObjectID
+  type: Field
+  source:
+    id: dontDestoryOnLoadObjectID
+    path: ''
+    startLine: 4433
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static List<string> dontDestoryOnLoadObjectID
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Shared dontDestoryOnLoadObjectID As List(Of String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.lastSceneIndex
+  commentId: F:Global.Globals.lastSceneIndex
+  id: lastSceneIndex
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: lastSceneIndex
+  nameWithType: Globals.lastSceneIndex
+  fullName: Globals.lastSceneIndex
+  type: Field
+  source:
+    id: lastSceneIndex
+    path: ''
+    startLine: 4434
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static int lastSceneIndex
+    return:
+      type: System.Int32
+    content.vb: Public Shared lastSceneIndex As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.infityWaveSpawner
+  commentId: F:Global.Globals.infityWaveSpawner
+  id: infityWaveSpawner
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: infityWaveSpawner
+  nameWithType: Globals.infityWaveSpawner
+  fullName: Globals.infityWaveSpawner
+  type: Field
+  source:
+    id: infityWaveSpawner
+    path: ''
+    startLine: 4435
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static List<Enemy_Spawner> infityWaveSpawner
+    return:
+      type: System.Collections.Generic.List{Enemy_Spawner}
+    content.vb: Public Shared infityWaveSpawner As List(Of Enemy_Spawner)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.waveControler
+  commentId: F:Global.Globals.waveControler
+  id: waveControler
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: waveControler
+  nameWithType: Globals.waveControler
+  fullName: Globals.waveControler
+  type: Field
+  source:
+    id: waveControler
+    path: ''
+    startLine: 4436
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static WaveControler waveControler
+    return:
+      type: Global.WaveControler
+    content.vb: Public Shared waveControler As WaveControler
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.tooltip
+  commentId: F:Global.Globals.tooltip
+  id: tooltip
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: tooltip
+  nameWithType: Globals.tooltip
+  fullName: Globals.tooltip
+  type: Field
+  source:
+    id: tooltip
+    path: ''
+    startLine: 4437
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static ToolTip tooltip
+    return:
+      type: Global.ToolTip
+    content.vb: Public Shared tooltip As ToolTip
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.Globals.skipStartCutscene
+  commentId: F:Global.Globals.skipStartCutscene
+  id: skipStartCutscene
+  parent: Global.Globals
+  langs:
+  - csharp
+  - vb
+  name: skipStartCutscene
+  nameWithType: Globals.skipStartCutscene
+  fullName: Globals.skipStartCutscene
+  type: Field
+  source:
+    id: skipStartCutscene
+    path: ''
+    startLine: 4438
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static bool skipStartCutscene
+    return:
+      type: System.Boolean
+    content.vb: Public Shared skipStartCutscene As Boolean
   modifiers.csharp:
   - public
   - static
@@ -272,7 +752,6 @@ references:
   nameWithType: Boolean
   fullName: System.Boolean
 - uid: Global.Camera
-  commentId: '!:Global.Camera'
   isExternal: true
   name: Camera
   nameWithType: Camera
@@ -421,3 +900,136 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Global.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: Image
+- uid: Global.VirtualMouse
+  commentId: T:Global.VirtualMouse
+  name: VirtualMouse
+  nameWithType: VirtualMouse
+  fullName: VirtualMouse
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.List{Inventar_Object}
+  commentId: T:System.Collections.Generic.List{Inventar_Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Inventar_Object>
+  nameWithType: List<Inventar_Object>
+  fullName: System.Collections.Generic.List<Inventar_Object>
+  nameWithType.vb: List(Of Inventar_Object)
+  fullName.vb: System.Collections.Generic.List(Of Inventar_Object)
+  name.vb: List(Of Inventar_Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Inventar_Object
+    name: Inventar_Object
+    nameWithType: Inventar_Object
+    fullName: Inventar_Object
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Inventar_Object
+    name: Inventar_Object
+    nameWithType: Inventar_Object
+    fullName: Inventar_Object
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite
+- uid: Global.ItemCatalog
+  commentId: T:Global.ItemCatalog
+  name: ItemCatalog
+  nameWithType: ItemCatalog
+  fullName: ItemCatalog
+- uid: Global.Item
+  commentId: T:Global.Item
+  name: Item
+  nameWithType: Item
+  fullName: Item
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.WaveControler
+  commentId: T:Global.WaveControler
+  name: WaveControler
+  nameWithType: WaveControler
+  fullName: WaveControler
+- uid: Global.ToolTip
+  commentId: T:Global.ToolTip
+  name: ToolTip
+  nameWithType: ToolTip
+  fullName: ToolTip

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
-/// menu classe um jegliches menu außer main menu zu verwalten
+/// menu class to handle all menus except the main menu
 /// </summary>
 public class Menu_handler : MonoBehaviour
 {
@@ -49,6 +49,11 @@ public class Menu_handler : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// not in use anymore
+    /// </summary>
+    /// <param name="points"> points to add to score</param>
     public void addScore(int points) {
 
         if (Globals.waveControler != null) {
@@ -61,6 +66,10 @@ public class Menu_handler : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// shows the player Score (not in use anymore)
+    /// shows the current wace and enemies to kill in the endless mode
+    /// </summary>
     public void onChangedScore() {
         if (Globals.waveControler != null) {
             if (Globals.currentWinCondition != null && score != null) {
@@ -75,9 +84,7 @@ public class Menu_handler : MonoBehaviour
     }
 
 
-    /// <summary>
-    /// setzt den menuHandler in den Globalen variablen
-    /// </summary>
+
     //private void Awake() {
     //    Globals.menuHandler = this;
     //    Globals.bossHpBar = bossHpBar;
@@ -93,6 +100,10 @@ public class Menu_handler : MonoBehaviour
 
     //}
 
+    /// <summary>
+    /// sets the menuHandler in the global variables
+    /// sets basevalues for the menuHandler
+    /// </summary>
     private void OnEnable() {
         Globals.menuHandler = this;
         Globals.bossHpBar = bossHpBar;
@@ -108,26 +119,31 @@ public class Menu_handler : MonoBehaviour
     }
 
     /// <summary>
-    /// ship Editor button gelickt
+    /// ship editor button clicked
     /// </summary>
+    /// <param name="sceneIndex"> index of ship editor</param>
     public void onClickShipEditor(int sceneIndex) {
         //Debug.Log("Durch klicken dieses Buttons haben Sie sich verpflichtet Markus Dullnig mit Süßigkeiten zu füttern");
 
         SceneManager.LoadScene(sceneIndex);
     }
+    /// <summary>
+    /// ship editor exit button clicked
+    /// </summary>
+    /// <param name="sceneIndex"> index of the new sceene</param>
     public void onClickExitShipEditor(int sceneIndex) {
         SceneManager.LoadScene(sceneIndex);
     }
 
     /// <summary>
-    /// ship menu zu level select
+    /// not in use anymore
     /// </summary>
     public void onClickWorldSelect() {
         shipMenuUI.SetActive(false);
         levelSelectUI.SetActive(true);
     }
     /// <summary>
-    /// level select zu ship menu
+    /// not in use anymore
     /// </summary>
     public void onClickBack() {
         shipMenuUI.SetActive(true);
@@ -135,7 +151,7 @@ public class Menu_handler : MonoBehaviour
     }
 
     /// <summary>
-    /// zu main menu scene
+    /// to main menu scene
     /// </summary>
     /// <param name="sceneIndex"> main menu scene index</param>
     public void onClickMainMenu(int sceneIndex) {
@@ -149,7 +165,7 @@ public class Menu_handler : MonoBehaviour
     }
 
     /// <summary>
-    /// level auswahlt
+    /// level button clicked
     /// </summary>
     /// <param name="levelSceneIndex">level scene index</param>
     public void onClickLevelSelect(int levelSceneIndex) {
@@ -157,9 +173,9 @@ public class Menu_handler : MonoBehaviour
     }
 
     /// <summary>
-    /// next level auswahl
+    /// next level button clicked
     /// </summary>
-    /// <param name="backupSeneIndex"> backup scene index falls das next level nicht gibt</param>
+    /// <param name="backupSeneIndex"> backup scene index if no next level exists</param>
     public void onClickNextLeve(int backupSeneIndex) {
 
         int nextLevelIndex = SceneManager.GetActiveScene().buildIndex + 1;
@@ -179,7 +195,7 @@ public class Menu_handler : MonoBehaviour
     }
 
     /// <summary>
-    /// zu ship menu
+    /// ship menu button clicked
     /// </summary>
     /// <param name="sceneIndex"> ship menu scene index</param>
     public void onClickShipMenu(int sceneIndex) {
@@ -189,7 +205,7 @@ public class Menu_handler : MonoBehaviour
     }
 
     /// <summary>
-    /// scene neu laden
+    /// load current scene again
     /// </summary>
     public void onClickTryAgain() {
 
@@ -200,7 +216,7 @@ public class Menu_handler : MonoBehaviour
 
 
     /// <summary>
-    /// variablene zurücksetzen, wenn level geändert wird
+    /// reset variables on level change
     /// </summary>
     private void levelChanges() {
         if (Globals.pause == true) {
@@ -225,7 +241,7 @@ public class Menu_handler : MonoBehaviour
     }
 
     /// <summary>
-    /// aktiviert das Pause Menu
+    /// activates the pause menu
     /// </summary>
     public void setPause() {
         Globals.pause = true;
@@ -233,7 +249,7 @@ public class Menu_handler : MonoBehaviour
         pauseUI.SetActive(true);
     }
     /// <summary>
-    /// deaktiviert das Pause Menu
+    /// deactivates the pause menu
     /// </summary>
     public void setResume() {
         Globals.pause = false;
@@ -245,7 +261,7 @@ public class Menu_handler : MonoBehaviour
     }
 
     /// <summary>
-    /// aktiviert das Game Over Menu
+    /// activates the game over menu
     /// </summary>
     public void setGameOver() {
         Globals.pause = false;
@@ -287,7 +303,7 @@ public class Menu_handler : MonoBehaviour
     }
 
     /// <summary>
-    /// aktiviert das Level Finished Menu
+    /// activates the level finish menu
     /// </summary>
     public void setLevelFinish() {
 
@@ -336,19 +352,31 @@ public class Menu_handler : MonoBehaviour
 
     }
 
+
+    /// <summary>
+    /// options button clieckd
+    /// saves the current scene index for going back to this scene
+    /// </summary>
+    /// <param name="index"> index of options menu</param>
     public void onClickOptions(int index) {
         Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         SceneManager.LoadScene(index);
     }
 
+    /// <summary>
+    /// goes back to the last saved scene index
+    /// </summary>
     public void onClickGoBackToPreviousScene() {
         int index = Globals.lastSceneIndex;
         Globals.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(index);
     }
 
-
+    /// <summary>
+    /// button select function
+    /// </summary>
+    /// <param name="button"> image to be enabled when the button is selected</param>
     public void onSelectButton(Image button) {
         foreach (Image img in selectedButtonImages) {
             img.enabled = false;
@@ -358,6 +386,10 @@ public class Menu_handler : MonoBehaviour
         button.enabled = true;
     }
 
+    /// <summary>
+    /// shows the set menu
+    /// </summary>
+    /// <param name="game"> menu to show</param>
     public void onClickMenuItem(GameObject game) {
         foreach (GameObject gobj in menuList) {
             gobj.SetActive(false);
@@ -365,14 +397,27 @@ public class Menu_handler : MonoBehaviour
         game.SetActive(true);
     }
 
+    /// <summary>
+    /// activates the set gameobject on click
+    /// </summary>
+    /// <param name="game"> the game object to set active</param>
     public void onClickActivateGameobnect(GameObject game) {
         game.SetActive(true);
     }
 
+    /// <summary>
+    /// not in use anymore
+    /// </summary>
+    /// <param name="name"></param>
     public void onClickSetMenuName(string name) {
         menuName.text = name;
     }
 
+    /// <summary>
+    /// on click tooltip button
+    /// saves the tooltip on/off state
+    /// </summary>
+    /// <param name="game"> the tooltip button</param>
     public void onclickSetToogle(GameObject game) {
         SaveSettings s = SaveSettings.loadSettings();
 
@@ -395,6 +440,12 @@ public class Menu_handler : MonoBehaviour
         Debug.Log("tooltip is " + s.IsToogleOn.ToString());
         s.savingSetting();
     }
+
+    /// <summary>
+    /// on changes of the tooltip toogle
+    /// saves the tooltip on/off state
+    /// </summary>
+    /// <param name="tog"> the toogle which cause the change</param>
     public void onTooltipToogleChanged(Toggle tog) {
         SaveSettings s = SaveSettings.loadSettings();
 

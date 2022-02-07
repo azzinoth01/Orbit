@@ -1,0 +1,270 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.LaserTest
+  commentId: T:Global.LaserTest
+  id: LaserTest
+  parent: Global
+  children:
+  - Global.LaserTest.Laser
+  - Global.LaserTest.loopAudio
+  - Global.LaserTest.startAudio
+  - Global.LaserTest.Trigger
+  langs:
+  - csharp
+  - vb
+  name: LaserTest
+  nameWithType: LaserTest
+  fullName: LaserTest
+  type: Class
+  source:
+    id: LaserTest
+    path: ''
+    startLine: 11090
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nlaser animaton control\n"
+  example: []
+  syntax:
+    content: 'public class LaserTest : MonoBehaviour'
+    content.vb: >-
+      Public Class LaserTest
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.LaserTest.Laser
+  commentId: F:Global.LaserTest.Laser
+  id: Laser
+  parent: Global.LaserTest
+  langs:
+  - csharp
+  - vb
+  name: Laser
+  nameWithType: LaserTest.Laser
+  fullName: LaserTest.Laser
+  type: Field
+  source:
+    id: Laser
+    path: ''
+    startLine: 11092
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Animator> Laser
+    return:
+      type: System.Collections.Generic.List{Animator}
+    content.vb: Public Laser As List(Of Animator)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LaserTest.Trigger
+  commentId: F:Global.LaserTest.Trigger
+  id: Trigger
+  parent: Global.LaserTest
+  langs:
+  - csharp
+  - vb
+  name: Trigger
+  nameWithType: LaserTest.Trigger
+  fullName: LaserTest.Trigger
+  type: Field
+  source:
+    id: Trigger
+    path: ''
+    startLine: 11093
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool Trigger
+    return:
+      type: System.Boolean
+    content.vb: Public Trigger As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LaserTest.startAudio
+  commentId: F:Global.LaserTest.startAudio
+  id: startAudio
+  parent: Global.LaserTest
+  langs:
+  - csharp
+  - vb
+  name: startAudio
+  nameWithType: LaserTest.startAudio
+  fullName: LaserTest.startAudio
+  type: Field
+  source:
+    id: startAudio
+    path: ''
+    startLine: 11094
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource startAudio
+    return:
+      type: Global.AudioSource
+    content.vb: Public startAudio As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.LaserTest.loopAudio
+  commentId: F:Global.LaserTest.loopAudio
+  id: loopAudio
+  parent: Global.LaserTest
+  langs:
+  - csharp
+  - vb
+  name: loopAudio
+  nameWithType: LaserTest.loopAudio
+  fullName: LaserTest.loopAudio
+  type: Field
+  source:
+    id: loopAudio
+    path: ''
+    startLine: 11095
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AudioSource loopAudio
+    return:
+      type: Global.AudioSource
+    content.vb: Public loopAudio As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{Animator}
+  commentId: T:System.Collections.Generic.List{Animator}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Animator>
+  nameWithType: List<Animator>
+  fullName: System.Collections.Generic.List<Animator>
+  nameWithType.vb: List(Of Animator)
+  fullName.vb: System.Collections.Generic.List(Of Animator)
+  name.vb: List(Of Animator)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Animator
+    name: Animator
+    nameWithType: Animator
+    fullName: Animator
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Animator
+    name: Animator
+    nameWithType: Animator
+    fullName: Animator
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource

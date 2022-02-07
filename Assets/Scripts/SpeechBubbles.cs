@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// class to control the speech bubbles
+/// </summary>
 public class SpeechBubbles : MonoBehaviour
 {
     public GameObject UiObject;
@@ -10,11 +13,19 @@ public class SpeechBubbles : MonoBehaviour
     public AudioSource audios;
     private bool isEnterd;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// deactivates every speech bubble so they start in an inactive state
+    /// </summary>
     void Start() {
         UiObject.SetActive(false);
         isEnterd = false;
     }
+
+    /// <summary>
+    /// checks if the player moved onto the trigger area
+    /// and activates the speech bubble
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
             UiObject.SetActive(true);
@@ -23,10 +34,10 @@ public class SpeechBubbles : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update() {
-
-    }
+    /// <summary>
+    /// destroys the trigger area and deactivates the speech bubble
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerExit2D(Collider2D other) {
         if (isEnterd == true) {
             UiObject.SetActive(false);

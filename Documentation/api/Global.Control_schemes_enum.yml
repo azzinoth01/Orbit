@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Control_schemes_enum
+  commentId: T:Global.Control_schemes_enum
+  id: Control_schemes_enum
+  parent: Global
+  children:
+  - Global.Control_schemes_enum.gamepad
+  - Global.Control_schemes_enum.mouseAndKeyboard
+  langs:
+  - csharp
+  - vb
+  name: Control_schemes_enum
+  nameWithType: Control_schemes_enum
+  fullName: Control_schemes_enum
+  type: Enum
+  source:
+    id: Control_schemes_enum
+    path: ''
+    startLine: 2906
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nthe enum names for the supported controls\n"
+  example: []
+  syntax:
+    content: public enum Control_schemes_enum
+    content.vb: Public Enum Control_schemes_enum
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Global.Control_schemes_enum.mouseAndKeyboard
+  commentId: F:Global.Control_schemes_enum.mouseAndKeyboard
+  id: mouseAndKeyboard
+  parent: Global.Control_schemes_enum
+  langs:
+  - csharp
+  - vb
+  name: mouseAndKeyboard
+  nameWithType: Control_schemes_enum.mouseAndKeyboard
+  fullName: Control_schemes_enum.mouseAndKeyboard
+  type: Field
+  source:
+    id: mouseAndKeyboard
+    path: ''
+    startLine: 2908
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: mouseAndKeyboard = 0
+    return:
+      type: Global.Control_schemes_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Global.Control_schemes_enum.gamepad
+  commentId: F:Global.Control_schemes_enum.gamepad
+  id: gamepad
+  parent: Global.Control_schemes_enum
+  langs:
+  - csharp
+  - vb
+  name: gamepad
+  nameWithType: Control_schemes_enum.gamepad
+  fullName: Control_schemes_enum.gamepad
+  type: Field
+  source:
+    id: gamepad
+    path: ''
+    startLine: 2909
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: gamepad = 1
+    return:
+      type: Global.Control_schemes_enum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.Control_schemes_enum
+  commentId: T:Global.Control_schemes_enum
+  name: Control_schemes_enum
+  nameWithType: Control_schemes_enum
+  fullName: Control_schemes_enum

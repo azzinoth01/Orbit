@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// class to control the display of items
+/// </summary>
 public class ShipEditorStatusDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
+
 
     public Text dmgText;
     public Text dmgNameText;
@@ -20,6 +23,11 @@ public class ShipEditorStatusDisplay : MonoBehaviour
     private Item currentItem;
     private LoadAssets loader;
     private bool itemChanged;
+
+
+    /// <summary>
+    /// sets base values
+    /// </summary>
     void Start() {
         MoneyChanged();
         currentItem = Globals.currentItem;
@@ -28,7 +36,10 @@ public class ShipEditorStatusDisplay : MonoBehaviour
         itemChanged = false;
     }
 
-    // Update is called once per frame
+
+    /// <summary>
+    /// checks if the selected item has changed and displays the new values
+    /// </summary>
     void Update() {
         if (itemChanged == true) {
             itemChanged = false;
@@ -73,14 +84,25 @@ public class ShipEditorStatusDisplay : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// releases all loaded handles
+    /// </summary>
     private void OnDestroy() {
         loader.releaseAllHandle();
     }
 
+    /// <summary>
+    /// displays new money value
+    /// </summary>
     public void MoneyChanged() {
         ownedMoney.text = Globals.money.ToString();
     }
 
+    /// <summary>
+    /// changes the item to display
+    /// </summary>
+    /// <param name="item"> new item to display</param>
     public void changeInfoDispaly(Item item) {
 
         if (item != null) {

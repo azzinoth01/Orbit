@@ -6,9 +6,10 @@ items:
   parent: Global
   children:
   - Global.BulletInfo.#ctor
-  - Global.BulletInfo.#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)
+  - Global.BulletInfo.#ctor(System.Single,System.Single,GameObject,GameObject,GameObject)
   - Global.BulletInfo.AddBaseDmg
   - Global.BulletInfo.Bullet
+  - Global.BulletInfo.BulletBaseDmg
   - Global.BulletInfo.BulletScript
   - Global.BulletInfo.DmgModifier
   - Global.BulletInfo.enableEffects
@@ -29,11 +30,11 @@ items:
   source:
     id: BulletInfo
     path: ''
-    startLine: 712
+    startLine: 2471
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ncontainer classe die Bullets beschreibt\n"
+  summary: "\ncontainer class to describe the bullets\n"
   example: []
   syntax:
     content: >-
@@ -70,11 +71,11 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 732
+    startLine: 2491
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nstandardconstruktor setzt basiswerte\n"
+  summary: "\nstandardconstuctor sets the basevalues\n"
   example: []
   syntax:
     content: public BulletInfo()
@@ -84,45 +85,45 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.BulletInfo.#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)
-  commentId: M:Global.BulletInfo.#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)
-  id: '#ctor(System.Single,System.Int32,GameObject,GameObject,GameObject)'
+- uid: Global.BulletInfo.#ctor(System.Single,System.Single,GameObject,GameObject,GameObject)
+  commentId: M:Global.BulletInfo.#ctor(System.Single,System.Single,GameObject,GameObject,GameObject)
+  id: '#ctor(System.Single,System.Single,GameObject,GameObject,GameObject)'
   parent: Global.BulletInfo
   langs:
   - csharp
   - vb
-  name: BulletInfo(Single, Int32, GameObject, GameObject, GameObject)
-  nameWithType: BulletInfo.BulletInfo(Single, Int32, GameObject, GameObject, GameObject)
-  fullName: BulletInfo.BulletInfo(System.Single, System.Int32, GameObject, GameObject, GameObject)
+  name: BulletInfo(Single, Single, GameObject, GameObject, GameObject)
+  nameWithType: BulletInfo.BulletInfo(Single, Single, GameObject, GameObject, GameObject)
+  fullName: BulletInfo.BulletInfo(System.Single, System.Single, GameObject, GameObject, GameObject)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 748
+    startLine: 2507
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nconstruktor um werte zu setzten\n"
+  summary: "\nconstructor to set values\n"
   example: []
   syntax:
-    content: public BulletInfo(float startRotation, int bulletBaseDmg, GameObject bullet, GameObject startEffect, GameObject sfxSound)
+    content: public BulletInfo(float startRotation, float bulletBaseDmg, GameObject bullet, GameObject startEffect, GameObject sfxSound)
     parameters:
     - id: startRotation
       type: System.Single
-      description: bestimmt die flugrichtung vom basisobject
+      description: describes the flying direction of the baseobject
     - id: bulletBaseDmg
-      type: System.Int32
-      description: bestimmt bullet base dmg
+      type: System.Single
+      description: describes the base dmg of the bullet
     - id: bullet
       type: Global.GameObject
-      description: bestimmt bullet prefab
+      description: bullet prefab
     - id: startEffect
       type: Global.GameObject
-      description: bestimmt particel system start prefab
+      description: particel system effect prefab
     - id: sfxSound
       type: Global.GameObject
-      description: bestimmt Sound Effect prefab
-    content.vb: Public Sub New(startRotation As Single, bulletBaseDmg As Integer, bullet As GameObject, startEffect As GameObject, sfxSound As GameObject)
+      description: sound effect prefab
+    content.vb: Public Sub New(startRotation As Single, bulletBaseDmg As Single, bullet As GameObject, startEffect As GameObject, sfxSound As GameObject)
   overload: Global.BulletInfo.#ctor*
   modifiers.csharp:
   - public
@@ -142,7 +143,7 @@ items:
   source:
     id: StartRotation
     path: ''
-    startLine: 761
+    startLine: 2520
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -173,11 +174,11 @@ items:
   source:
     id: resetModifiers
     path: ''
-    startLine: 774
+    startLine: 2533
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nresetet die Dmg modifier\n"
+  summary: "\nresets the dmg modifiers\n"
   example: []
   syntax:
     content: public void resetModifiers()
@@ -201,7 +202,7 @@ items:
   source:
     id: Bullet
     path: ''
-    startLine: 781
+    startLine: 2540
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -232,7 +233,7 @@ items:
   source:
     id: BulletScript
     path: ''
-    startLine: 791
+    startLine: 2550
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -263,16 +264,16 @@ items:
   source:
     id: AddBaseDmg
     path: ''
-    startLine: 800
+    startLine: 2559
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public int AddBaseDmg { set; }
+    content: public float AddBaseDmg { set; }
     parameters: []
     return:
-      type: System.Int32
-    content.vb: Public WriteOnly Property AddBaseDmg As Integer
+      type: System.Single
+    content.vb: Public WriteOnly Property AddBaseDmg As Single
   overload: Global.BulletInfo.AddBaseDmg*
   modifiers.csharp:
   - public
@@ -294,7 +295,7 @@ items:
   source:
     id: DmgModifier
     path: ''
-    startLine: 809
+    startLine: 2568
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -325,7 +326,7 @@ items:
   source:
     id: StartEffect
     path: ''
-    startLine: 818
+    startLine: 2577
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -356,7 +357,7 @@ items:
   source:
     id: InstantStartEffect
     path: ''
-    startLine: 828
+    startLine: 2587
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -387,7 +388,7 @@ items:
   source:
     id: SfxSound
     path: ''
-    startLine: 838
+    startLine: 2597
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -404,6 +405,37 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: Global.BulletInfo.BulletBaseDmg
+  commentId: P:Global.BulletInfo.BulletBaseDmg
+  id: BulletBaseDmg
+  parent: Global.BulletInfo
+  langs:
+  - csharp
+  - vb
+  name: BulletBaseDmg
+  nameWithType: BulletInfo.BulletBaseDmg
+  fullName: BulletInfo.BulletBaseDmg
+  type: Property
+  source:
+    id: BulletBaseDmg
+    path: ''
+    startLine: 2607
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float BulletBaseDmg { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property BulletBaseDmg As Single
+  overload: Global.BulletInfo.BulletBaseDmg*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: Global.BulletInfo.setBulletDmg
   commentId: M:Global.BulletInfo.setBulletDmg
   id: setBulletDmg
@@ -418,11 +450,11 @@ items:
   source:
     id: setBulletDmg
     path: ''
-    startLine: 851
+    startLine: 2618
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nsets den bullet dmg auf der Bullet\n"
+  summary: "\nsets the bullet dmg on the bullet\n"
   example: []
   syntax:
     content: public void setBulletDmg()
@@ -446,18 +478,18 @@ items:
   source:
     id: setLayer
     path: ''
-    startLine: 862
+    startLine: 2630
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nsets den layer der Bullet\n"
+  summary: "\nsets den layer der Bullet\nsets the layer of the bullet (Layer_enum.player_bullets or Layer_enum.enemy_bullets)\n"
   example: []
   syntax:
     content: public void setLayer(int layer)
     parameters:
     - id: layer
       type: System.Int32
-      description: layer in integer
+      description: layer in integer (use Layer_enum)
     content.vb: Public Sub setLayer(layer As Integer)
   overload: Global.BulletInfo.setLayer*
   modifiers.csharp:
@@ -478,7 +510,7 @@ items:
   source:
     id: enableEffects
     path: ''
-    startLine: 870
+    startLine: 2640
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -525,13 +557,6 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
 - uid: Global.GameObject
   isExternal: true
   name: GameObject
@@ -587,6 +612,11 @@ references:
   name: SfxSound
   nameWithType: BulletInfo.SfxSound
   fullName: BulletInfo.SfxSound
+- uid: Global.BulletInfo.BulletBaseDmg*
+  commentId: Overload:Global.BulletInfo.BulletBaseDmg
+  name: BulletBaseDmg
+  nameWithType: BulletInfo.BulletBaseDmg
+  fullName: BulletInfo.BulletBaseDmg
 - uid: Global.BulletInfo.setBulletDmg*
   commentId: Overload:Global.BulletInfo.setBulletDmg
   name: setBulletDmg
@@ -597,6 +627,13 @@ references:
   name: setLayer
   nameWithType: BulletInfo.setLayer
   fullName: BulletInfo.setLayer
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: Global.BulletInfo.enableEffects*
   commentId: Overload:Global.BulletInfo.enableEffects
   name: enableEffects

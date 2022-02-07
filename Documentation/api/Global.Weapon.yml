@@ -9,9 +9,10 @@ items:
   - Global.Weapon.additionalDmg
   - Global.Weapon.dmgModifier
   - Global.Weapon.reloadTime
-  - Global.Weapon.shoot(System.Int32,System.Single)
+  - Global.Weapon.shoot(System.Single,System.Single)
   - Global.Weapon.shootsToCreate
   - Global.Weapon.skill
+  - Global.Weapon.sound
   langs:
   - csharp
   - vb
@@ -22,17 +23,16 @@ items:
   source:
     id: Weapon
     path: ''
-    startLine: 4206
+    startLine: 10747
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nbeschreibt die Waffen des Players\n"
+  summary: "\ndescribes the weapon of the player\n"
   example: []
   syntax:
     content: 'public class Weapon : MonoBehaviour'
     content.vb: >-
       Public Class Weapon
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -42,6 +42,33 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Global.Weapon.sound
+  commentId: F:Global.Weapon.sound
+  id: sound
+  parent: Global.Weapon
+  langs:
+  - csharp
+  - vb
+  name: sound
+  nameWithType: Weapon.sound
+  fullName: Weapon.sound
+  type: Field
+  source:
+    id: sound
+    path: ''
+    startLine: 10749
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject sound
+    return:
+      type: Global.GameObject
+    content.vb: Public sound As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Global.Weapon.skill
   commentId: F:Global.Weapon.skill
   id: skill
@@ -56,7 +83,7 @@ items:
   source:
     id: skill
     path: ''
-    startLine: 4208
+    startLine: 10750
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -83,7 +110,7 @@ items:
   source:
     id: reloadTime
     path: ''
-    startLine: 4209
+    startLine: 10751
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -110,7 +137,7 @@ items:
   source:
     id: shootsToCreate
     path: ''
-    startLine: 4212
+    startLine: 10754
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -137,7 +164,7 @@ items:
   source:
     id: additionalDmg
     path: ''
-    startLine: 4215
+    startLine: 10757
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -164,7 +191,7 @@ items:
   source:
     id: dmgModifier
     path: ''
-    startLine: 4216
+    startLine: 10758
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -177,36 +204,36 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.Weapon.shoot(System.Int32,System.Single)
-  commentId: M:Global.Weapon.shoot(System.Int32,System.Single)
-  id: shoot(System.Int32,System.Single)
+- uid: Global.Weapon.shoot(System.Single,System.Single)
+  commentId: M:Global.Weapon.shoot(System.Single,System.Single)
+  id: shoot(System.Single,System.Single)
   parent: Global.Weapon
   langs:
   - csharp
   - vb
-  name: shoot(Int32, Single)
-  nameWithType: Weapon.shoot(Int32, Single)
-  fullName: Weapon.shoot(System.Int32, System.Single)
+  name: shoot(Single, Single)
+  nameWithType: Weapon.shoot(Single, Single)
+  fullName: Weapon.shoot(System.Single, System.Single)
   type: Method
   source:
     id: shoot
     path: ''
-    startLine: 4267
+    startLine: 10814
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nErzeugung der Skill objecten mit dmg Modifiern, wenn die Waffe schie�en kann\n"
+  summary: "\ncreates the skill object with dmg modifiers if the weapon can shoot\n"
   example: []
   syntax:
-    content: public void shoot(int additionalDmg, float dmgModifier)
+    content: public void shoot(float additionalDmg, float dmgModifier)
     parameters:
     - id: additionalDmg
-      type: System.Int32
-      description: erh�hten den schaden der bullet direkt �ber diesen Wert
+      type: System.Single
+      description: increases the dmg of the bullet directly by this value
     - id: dmgModifier
       type: System.Single
-      description: nach hinzuf�gen des additionalDmg modifiers wir der dmg mit diesem Wert multipliziert
-    content.vb: Public Sub shoot(additionalDmg As Integer, dmgModifier As Single)
+      description: after adding the additional dmg to the bullet dmg multiply the resulting value by this value
+    content.vb: Public Sub shoot(additionalDmg As Single, dmgModifier As Single)
   overload: Global.Weapon.shoot*
   modifiers.csharp:
   - public
@@ -226,21 +253,21 @@ items:
   source:
     id: activateSkill
     path: ''
-    startLine: 4285
+    startLine: 10833
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nerzeugt Skills und setzt diese auf die Richtige position und activiert diese\npr�ft vor erzeugung neuer Skills ob diese im bulletpool sind\nkann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt\n"
+  summary: "\ncreates skills and sets them on the right position and activates them\nchecks bevor creation new skills if they are in the bulletpool\ncan also create skill ahead of time\n"
   example: []
   syntax:
     content: public GameObject activateSkill(bool preCreation)
     parameters:
     - id: preCreation
       type: System.Boolean
-      description: wenn dieser wert True ist, dann werden Skills im voraus erzeugt
+      description: if true then creates bullets ahead of time
     return:
       type: Global.GameObject
-      description: Gameobject vom Skill
+      description: Gameobject of Skill
     content.vb: Public Function activateSkill(preCreation As Boolean) As GameObject
   overload: Global.Weapon.activateSkill*
   modifiers.csharp:

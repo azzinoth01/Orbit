@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// beschreibt die Waffen des Players
+/// describes the weapon of the player
 /// </summary>
 public class Weapon : MonoBehaviour
 {
@@ -18,19 +18,18 @@ public class Weapon : MonoBehaviour
 
     public int additionalDmg;
     public float dmgModifier;
-    // Start is called before the first frame update
-    void Start() {
 
-    }
+
+
     /// <summary>
-    /// waffe kann standardmäßig von anfang an schon schießen
+    /// weapon can shot from frame 1
     /// </summary>
     private void OnEnable() {
         canShoot = true;
     }
 
     /// <summary>
-    /// erzeugt im voraus Skill Objecte damit diese nicht zur laufzeit erzeugt werden müssen
+    /// creates skills ahead of time so they don't need to be created at runtime
     /// </summary>
     private void Awake() {
 
@@ -44,7 +43,9 @@ public class Weapon : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// checks if game is paused
+    /// </summary>
     void Update() {
         if (Globals.pause == true) {
             return;
@@ -57,9 +58,9 @@ public class Weapon : MonoBehaviour
     }
 
     /// <summary>
-    /// delay Timer zwischen den schüssen
+    /// delay timer between shots
     /// </summary>
-    /// <param name="wait"> zeit zwischen den schüssen in sekunden</param>
+    /// <param name="wait"> delay between shots in seconds</param>
     /// <returns></returns>
     private IEnumerator shootTimer(float wait) {
 
@@ -68,10 +69,10 @@ public class Weapon : MonoBehaviour
     }
 
     /// <summary>
-    /// Erzeugung der Skill objecten mit dmg Modifiern, wenn die Waffe schießen kann
+    /// creates the skill object with dmg modifiers if the weapon can shoot
     /// </summary>
-    /// <param name="additionalDmg">erhöhten den schaden der bullet direkt über diesen Wert</param>
-    /// <param name="dmgModifier">nach hinzufügen des additionalDmg modifiers wir der dmg mit diesem Wert multipliziert</param>
+    /// <param name="additionalDmg"> increases the dmg of the bullet directly by this value</param>
+    /// <param name="dmgModifier"> after adding the additional dmg to the bullet dmg multiply the resulting value by this value</param>
     public void shoot(float additionalDmg, float dmgModifier) {
         if (canShoot == true) {
             canShoot = false;
@@ -85,12 +86,12 @@ public class Weapon : MonoBehaviour
     }
 
     /// <summary>
-    ///  erzeugt Skills und setzt diese auf die Richtige position und activiert diese
-    /// prüft vor erzeugung neuer Skills ob diese im bulletpool sind
-    /// kann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt
+    /// creates skills and sets them on the right position and activates them
+    /// checks bevor creation new skills if they are in the bulletpool
+    /// can also create skill ahead of time
     /// </summary>
-    /// <param name="preCreation">wenn dieser wert True ist, dann werden Skills im voraus erzeugt</param>
-    /// <returns>Gameobject vom Skill</returns>
+    /// <param name="preCreation"> if true then creates bullets ahead of time</param>
+    /// <returns>Gameobject of Skill</returns>
     public GameObject activateSkill(bool preCreation) {
         GameObject g;
         Skill skillObject;

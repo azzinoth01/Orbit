@@ -10,11 +10,24 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class Bullet : MonoBehaviour
 {
-
+    /// <summary>
+    /// waypoint list which the bullet follows
+    /// </summary>
     public List<Vector2> waypoints;
+    /// <summary>
+    /// bullet speed
+    /// </summary>
     public float speed;
     private Waypoint_Designer designer;
+
+    /// <summary>
+    /// physic object ob bullet
+    /// </summary>
     public Rigidbody2D body;
+
+    /// <summary>
+    /// waypoint prefab
+    /// </summary>
     public GameObject waypointPrefab;
 
     private List<GameObject> waypointObject;

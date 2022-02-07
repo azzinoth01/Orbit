@@ -18,7 +18,11 @@ items:
   - Global.Controlls.Enable
   - Global.Controlls.FindAction(System.String,System.Boolean)
   - Global.Controlls.FindBinding(InputBinding,InputAction@)
+  - Global.Controlls.gamepadScheme
   - Global.Controlls.GetEnumerator
+  - Global.Controlls.mouseAndKeyboardScheme
+  - Global.Controlls.UI
+  - Global.Controlls.VirtualMouse
   langs:
   - csharp
   - vb
@@ -37,9 +41,7 @@ items:
     content: 'public class Controlls : IInputActionCollection2, IDisposable'
     content.vb: >-
       Public Class Controlls
-
           Inherits IInputActionCollection2
-
           Implements IDisposable
   inheritance:
   - System.Object
@@ -120,7 +122,7 @@ items:
   source:
     id: Dispose
     path: ''
-    startLine: 242
+    startLine: 1098
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -146,7 +148,7 @@ items:
   source:
     id: bindingMask
     path: ''
-    startLine: 247
+    startLine: 1103
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -177,7 +179,7 @@ items:
   source:
     id: devices
     path: ''
-    startLine: 253
+    startLine: 1109
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -208,7 +210,7 @@ items:
   source:
     id: controlSchemes
     path: ''
-    startLine: 259
+    startLine: 1115
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -239,7 +241,7 @@ items:
   source:
     id: Contains
     path: ''
-    startLine: 261
+    startLine: 1117
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -270,7 +272,7 @@ items:
   source:
     id: GetEnumerator
     path: ''
-    startLine: 266
+    startLine: 1122
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -298,7 +300,7 @@ items:
   source:
     id: Enable
     path: ''
-    startLine: 276
+    startLine: 1132
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -324,7 +326,7 @@ items:
   source:
     id: Disable
     path: ''
-    startLine: 281
+    startLine: 1137
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -350,7 +352,7 @@ items:
   source:
     id: bindings
     path: ''
-    startLine: 285
+    startLine: 1141
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -381,7 +383,7 @@ items:
   source:
     id: FindAction
     path: ''
-    startLine: 287
+    startLine: 1143
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -414,7 +416,7 @@ items:
   source:
     id: FindBinding
     path: ''
-    startLine: 291
+    startLine: 1147
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -450,7 +452,7 @@ items:
   source:
     id: bullet_hell
     path: ''
-    startLine: 375
+    startLine: 1231
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -461,6 +463,130 @@ items:
       type: Global.Controlls.Bullet_hellActions
     content.vb: Public ReadOnly Property bullet_hell As Controlls.Bullet_hellActions
   overload: Global.Controlls.bullet_hell*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.UI
+  commentId: P:Global.Controlls.UI
+  id: UI
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: UI
+  nameWithType: Controlls.UI
+  fullName: Controlls.UI
+  type: Property
+  source:
+    id: UI
+    path: ''
+    startLine: 1336
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Controlls.UIActions UI { get; }
+    parameters: []
+    return:
+      type: Global.Controlls.UIActions
+    content.vb: Public ReadOnly Property UI As Controlls.UIActions
+  overload: Global.Controlls.UI*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.VirtualMouse
+  commentId: P:Global.Controlls.VirtualMouse
+  id: VirtualMouse
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: VirtualMouse
+  nameWithType: Controlls.VirtualMouse
+  fullName: Controlls.VirtualMouse
+  type: Property
+  source:
+    id: VirtualMouse
+    path: ''
+    startLine: 1417
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Controlls.VirtualMouseActions VirtualMouse { get; }
+    parameters: []
+    return:
+      type: Global.Controlls.VirtualMouseActions
+    content.vb: Public ReadOnly Property VirtualMouse As Controlls.VirtualMouseActions
+  overload: Global.Controlls.VirtualMouse*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.gamepadScheme
+  commentId: P:Global.Controlls.gamepadScheme
+  id: gamepadScheme
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: gamepadScheme
+  nameWithType: Controlls.gamepadScheme
+  fullName: Controlls.gamepadScheme
+  type: Property
+  source:
+    id: gamepadScheme
+    path: ''
+    startLine: 1419
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public InputControlScheme gamepadScheme { get; }
+    parameters: []
+    return:
+      type: Global.InputControlScheme
+    content.vb: Public ReadOnly Property gamepadScheme As InputControlScheme
+  overload: Global.Controlls.gamepadScheme*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.Controlls.mouseAndKeyboardScheme
+  commentId: P:Global.Controlls.mouseAndKeyboardScheme
+  id: mouseAndKeyboardScheme
+  parent: Global.Controlls
+  langs:
+  - csharp
+  - vb
+  name: mouseAndKeyboardScheme
+  nameWithType: Controlls.mouseAndKeyboardScheme
+  fullName: Controlls.mouseAndKeyboardScheme
+  type: Property
+  source:
+    id: mouseAndKeyboardScheme
+    path: ''
+    startLine: 1428
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public InputControlScheme mouseAndKeyboardScheme { get; }
+    parameters: []
+    return:
+      type: Global.InputControlScheme
+    content.vb: Public ReadOnly Property mouseAndKeyboardScheme As InputControlScheme
+  overload: Global.Controlls.mouseAndKeyboardScheme*
   modifiers.csharp:
   - public
   - get
@@ -1004,3 +1130,38 @@ references:
   name: Controlls.Bullet_hellActions
   nameWithType: Controlls.Bullet_hellActions
   fullName: Controlls.Bullet_hellActions
+- uid: Global.Controlls.UI*
+  commentId: Overload:Global.Controlls.UI
+  name: UI
+  nameWithType: Controlls.UI
+  fullName: Controlls.UI
+- uid: Global.Controlls.UIActions
+  commentId: T:Global.Controlls.UIActions
+  name: Controlls.UIActions
+  nameWithType: Controlls.UIActions
+  fullName: Controlls.UIActions
+- uid: Global.Controlls.VirtualMouse*
+  commentId: Overload:Global.Controlls.VirtualMouse
+  name: VirtualMouse
+  nameWithType: Controlls.VirtualMouse
+  fullName: Controlls.VirtualMouse
+- uid: Global.Controlls.VirtualMouseActions
+  commentId: T:Global.Controlls.VirtualMouseActions
+  name: Controlls.VirtualMouseActions
+  nameWithType: Controlls.VirtualMouseActions
+  fullName: Controlls.VirtualMouseActions
+- uid: Global.Controlls.gamepadScheme*
+  commentId: Overload:Global.Controlls.gamepadScheme
+  name: gamepadScheme
+  nameWithType: Controlls.gamepadScheme
+  fullName: Controlls.gamepadScheme
+- uid: Global.InputControlScheme
+  isExternal: true
+  name: InputControlScheme
+  nameWithType: InputControlScheme
+  fullName: InputControlScheme
+- uid: Global.Controlls.mouseAndKeyboardScheme*
+  commentId: Overload:Global.Controlls.mouseAndKeyboardScheme
+  name: mouseAndKeyboardScheme
+  nameWithType: Controlls.mouseAndKeyboardScheme
+  fullName: Controlls.mouseAndKeyboardScheme

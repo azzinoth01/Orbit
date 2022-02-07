@@ -5,12 +5,20 @@ items:
   id: Main_menu
   parent: Global
   children:
+  - Global.Main_menu.credits
   - Global.Main_menu.mainMenu
   - Global.Main_menu.onClickBackToMainMenu
+  - Global.Main_menu.onClickBackToOptions
   - Global.Main_menu.onClickControls
+  - Global.Main_menu.onClickCredits
+  - Global.Main_menu.onClickOptions
+  - Global.Main_menu.onClickOptions(System.Int32)
+  - Global.Main_menu.onClickSound
+  - Global.Main_menu.optionsMenu
   - Global.Main_menu.playGame
   - Global.Main_menu.quitGame
   - Global.Main_menu.rebidningMenu
+  - Global.Main_menu.soundMenu
   langs:
   - csharp
   - vb
@@ -21,17 +29,16 @@ items:
   source:
     id: Main_menu
     path: ''
-    startLine: 2069
+    startLine: 5772
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nclasse um das main menu zu kontrolieren\n"
+  summary: "\nclass to handel the main menu\n"
   example: []
   syntax:
     content: 'public class Main_menu : MonoBehaviour'
     content.vb: >-
       Public Class Main_menu
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -55,7 +62,7 @@ items:
   source:
     id: mainMenu
     path: ''
-    startLine: 2071
+    startLine: 5774
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -64,6 +71,60 @@ items:
     return:
       type: Global.GameObject
     content.vb: Public mainMenu As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.optionsMenu
+  commentId: F:Global.Main_menu.optionsMenu
+  id: optionsMenu
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: optionsMenu
+  nameWithType: Main_menu.optionsMenu
+  fullName: Main_menu.optionsMenu
+  type: Field
+  source:
+    id: optionsMenu
+    path: ''
+    startLine: 5775
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject optionsMenu
+    return:
+      type: Global.GameObject
+    content.vb: Public optionsMenu As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.soundMenu
+  commentId: F:Global.Main_menu.soundMenu
+  id: soundMenu
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: soundMenu
+  nameWithType: Main_menu.soundMenu
+  fullName: Main_menu.soundMenu
+  type: Field
+  source:
+    id: soundMenu
+    path: ''
+    startLine: 5776
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject soundMenu
+    return:
+      type: Global.GameObject
+    content.vb: Public soundMenu As GameObject
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -82,7 +143,7 @@ items:
   source:
     id: rebidningMenu
     path: ''
-    startLine: 2072
+    startLine: 5777
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -91,6 +152,33 @@ items:
     return:
       type: Global.GameObject
     content.vb: Public rebidningMenu As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.credits
+  commentId: F:Global.Main_menu.credits
+  id: credits
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: credits
+  nameWithType: Main_menu.credits
+  fullName: Main_menu.credits
+  type: Field
+  source:
+    id: credits
+    path: ''
+    startLine: 5778
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject credits
+    return:
+      type: Global.GameObject
+    content.vb: Public credits As GameObject
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -109,7 +197,7 @@ items:
   source:
     id: playGame
     path: ''
-    startLine: 2077
+    startLine: 5783
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -137,7 +225,7 @@ items:
   source:
     id: quitGame
     path: ''
-    startLine: 2084
+    startLine: 5804
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -165,11 +253,11 @@ items:
   source:
     id: onClickBackToMainMenu
     path: ''
-    startLine: 2091
+    startLine: 5811
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nbutton um das Main menu wieder einzublenden vom Rebinding Menu\n"
+  summary: "\ngo to the main menu panel\n"
   example: []
   syntax:
     content: public void onClickBackToMainMenu()
@@ -193,16 +281,160 @@ items:
   source:
     id: onClickControls
     path: ''
-    startLine: 2099
+    startLine: 5832
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\nbuttom um das Rebidning Menu einzublenden und das Main menu auszublenden\n"
+  summary: "\nnot in use anymore\n"
   example: []
   syntax:
     content: public void onClickControls()
     content.vb: Public Sub onClickControls
   overload: Global.Main_menu.onClickControls*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.onClickOptions
+  commentId: M:Global.Main_menu.onClickOptions
+  id: onClickOptions
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: onClickOptions()
+  nameWithType: Main_menu.onClickOptions()
+  fullName: Main_menu.onClickOptions()
+  type: Method
+  source:
+    id: onClickOptions
+    path: ''
+    startLine: 5839
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nnot in use anymore\n"
+  example: []
+  syntax:
+    content: public void onClickOptions()
+    content.vb: Public Sub onClickOptions
+  overload: Global.Main_menu.onClickOptions*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.onClickSound
+  commentId: M:Global.Main_menu.onClickSound
+  id: onClickSound
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: onClickSound()
+  nameWithType: Main_menu.onClickSound()
+  fullName: Main_menu.onClickSound()
+  type: Method
+  source:
+    id: onClickSound
+    path: ''
+    startLine: 5847
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nnot in use anymore\n"
+  example: []
+  syntax:
+    content: public void onClickSound()
+    content.vb: Public Sub onClickSound
+  overload: Global.Main_menu.onClickSound*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.onClickBackToOptions
+  commentId: M:Global.Main_menu.onClickBackToOptions
+  id: onClickBackToOptions
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: onClickBackToOptions()
+  nameWithType: Main_menu.onClickBackToOptions()
+  fullName: Main_menu.onClickBackToOptions()
+  type: Method
+  source:
+    id: onClickBackToOptions
+    path: ''
+    startLine: 5854
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nnot in use anymore\n"
+  example: []
+  syntax:
+    content: public void onClickBackToOptions()
+    content.vb: Public Sub onClickBackToOptions
+  overload: Global.Main_menu.onClickBackToOptions*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.onClickOptions(System.Int32)
+  commentId: M:Global.Main_menu.onClickOptions(System.Int32)
+  id: onClickOptions(System.Int32)
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: onClickOptions(Int32)
+  nameWithType: Main_menu.onClickOptions(Int32)
+  fullName: Main_menu.onClickOptions(System.Int32)
+  type: Method
+  source:
+    id: onClickOptions
+    path: ''
+    startLine: 5864
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nloads the options sceene and saves the last active scene for going back\n"
+  example: []
+  syntax:
+    content: public void onClickOptions(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: ''
+    content.vb: Public Sub onClickOptions(index As Integer)
+  overload: Global.Main_menu.onClickOptions*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.Main_menu.onClickCredits
+  commentId: M:Global.Main_menu.onClickCredits
+  id: onClickCredits
+  parent: Global.Main_menu
+  langs:
+  - csharp
+  - vb
+  name: onClickCredits()
+  nameWithType: Main_menu.onClickCredits()
+  fullName: Main_menu.onClickCredits()
+  type: Method
+  source:
+    id: onClickCredits
+    path: ''
+    startLine: 5873
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\ngo towards the credits\n"
+  example: []
+  syntax:
+    content: public void onClickCredits()
+    content.vb: Public Sub onClickCredits
+  overload: Global.Main_menu.onClickCredits*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -253,3 +485,30 @@ references:
   name: onClickControls
   nameWithType: Main_menu.onClickControls
   fullName: Main_menu.onClickControls
+- uid: Global.Main_menu.onClickOptions*
+  commentId: Overload:Global.Main_menu.onClickOptions
+  name: onClickOptions
+  nameWithType: Main_menu.onClickOptions
+  fullName: Main_menu.onClickOptions
+- uid: Global.Main_menu.onClickSound*
+  commentId: Overload:Global.Main_menu.onClickSound
+  name: onClickSound
+  nameWithType: Main_menu.onClickSound
+  fullName: Main_menu.onClickSound
+- uid: Global.Main_menu.onClickBackToOptions*
+  commentId: Overload:Global.Main_menu.onClickBackToOptions
+  name: onClickBackToOptions
+  nameWithType: Main_menu.onClickBackToOptions
+  fullName: Main_menu.onClickBackToOptions
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.Main_menu.onClickCredits*
+  commentId: Overload:Global.Main_menu.onClickCredits
+  name: onClickCredits
+  nameWithType: Main_menu.onClickCredits
+  fullName: Main_menu.onClickCredits

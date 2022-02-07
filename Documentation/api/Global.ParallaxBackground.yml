@@ -1,0 +1,125 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ParallaxBackground
+  commentId: T:Global.ParallaxBackground
+  id: ParallaxBackground
+  parent: Global
+  children:
+  - Global.ParallaxBackground.Camera
+  - Global.ParallaxBackground.speed
+  langs:
+  - csharp
+  - vb
+  name: ParallaxBackground
+  nameWithType: ParallaxBackground
+  fullName: ParallaxBackground
+  type: Class
+  source:
+    id: ParallaxBackground
+    path: ''
+    startLine: 6575
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nnot in use anymore\n"
+  example: []
+  syntax:
+    content: 'public class ParallaxBackground : MonoBehaviour'
+    content.vb: >-
+      Public Class ParallaxBackground
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.ParallaxBackground.Camera
+  commentId: F:Global.ParallaxBackground.Camera
+  id: Camera
+  parent: Global.ParallaxBackground
+  langs:
+  - csharp
+  - vb
+  name: Camera
+  nameWithType: ParallaxBackground.Camera
+  fullName: ParallaxBackground.Camera
+  type: Field
+  source:
+    id: Camera
+    path: ''
+    startLine: 6577
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject Camera
+    return:
+      type: Global.GameObject
+    content.vb: Public Camera As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ParallaxBackground.speed
+  commentId: F:Global.ParallaxBackground.speed
+  id: speed
+  parent: Global.ParallaxBackground
+  langs:
+  - csharp
+  - vb
+  name: speed
+  nameWithType: ParallaxBackground.speed
+  fullName: ParallaxBackground.speed
+  type: Field
+  source:
+    id: speed
+    path: ''
+    startLine: 6578
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float speed
+    return:
+      type: System.Single
+    content.vb: Public speed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

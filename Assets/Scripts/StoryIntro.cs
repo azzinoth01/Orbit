@@ -7,6 +7,10 @@ using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Utilities;
 using UnityEngine.InputSystem.Controls;
 
+
+/// <summary>
+/// class to control the story intro
+/// </summary>
 public class StoryIntro : MonoBehaviour
 {
 
@@ -33,11 +37,11 @@ public class StoryIntro : MonoBehaviour
 
 
 
-    public void OnShoot(InputAction.CallbackContext context) {
-        // throw new System.NotImplementedException();
-    }
-
-
+    /// <summary>
+    /// checks if the intro was already displayed this session
+    /// and skips it if it was already displayed
+    /// activates the anybutton input check for moving between intro slides
+    /// </summary>
     private void OnEnable() {
         skip = false;
         InputSystem.onEvent += anyButtonWasPressed;
@@ -143,7 +147,10 @@ public class StoryIntro : MonoBehaviour
 
 
     }
-    // Update is called once per frame
+
+    /// <summary>
+    /// if skip is activated the intro is skiped
+    /// </summary>
     void Update() {
 
 
@@ -161,6 +168,11 @@ public class StoryIntro : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// checks if any button was pressed
+    /// </summary>
+    /// <param name="eventPtr"> input event</param>
+    /// <param name="device"> input device</param>
     private void anyButtonWasPressed(InputEventPtr eventPtr, InputDevice device) {
         if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>()) {
             return;
@@ -193,6 +205,11 @@ public class StoryIntro : MonoBehaviour
         return;
     }
 
+    /// <summary>
+    /// checks if any button was released
+    /// </summary>
+    /// <param name="eventPtr"> input event</param>
+    /// <param name="device"> input device</param>
     private void anyButtonWasReleased(InputEventPtr eventPtr, InputDevice device) {
         if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>()) {
             return;
@@ -225,7 +242,10 @@ public class StoryIntro : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// moves the story to the next slide
+    /// if there are no more slides the the story intro is deactivated and the main menu is activated
+    /// </summary>
     private void nextSlide() {
 
 
@@ -245,6 +265,11 @@ public class StoryIntro : MonoBehaviour
         }
 
     }
+
+    /// <summary>
+    /// saves the intro skip
+    /// deactivates the any button input listener
+    /// </summary>
     private void OnDisable() {
         Globals.skipStartCutscene = true;
 

@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 /// <summary>
-/// verwaltet die skills von enemys
+/// manages the skills of the enemy
 /// </summary>
 public class Enemy_skills : MonoBehaviour
 {
@@ -27,7 +27,7 @@ public class Enemy_skills : MonoBehaviour
     public bool doNotDeactivate;
 
     /// <summary>
-    /// skill gameObjecte im voraus erstellen
+    /// precreates skill gameObjects to lessen the burden while the game is running
     /// </summary>
     private void Awake() {
         nextSkill = skillsequenze[0].Skill;
@@ -37,7 +37,9 @@ public class Enemy_skills : MonoBehaviour
         preCreateSkill();
     }
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// sets the base values for the skills to use
+    /// </summary>
     void Start() {
         nextSkill = skillsequenze[0].Skill;
         nextSkillDelay = skillsequenze[0].Delay;
@@ -46,7 +48,9 @@ public class Enemy_skills : MonoBehaviour
         isRunning = false;
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// starts the corutine to start the skill usage
+    /// </summary>
     void Update() {
         if (Globals.pause == true) {
             return;
@@ -63,9 +67,9 @@ public class Enemy_skills : MonoBehaviour
     }
 
     /// <summary>
-    /// Timer für die activierung der Skills
+    /// timer for the activation of skills
     /// </summary>
-    /// <param name="waitSeconds">delay zeit des Skills in sekunden</param>
+    /// <param name="waitSeconds"> delay of the skill in seconds</param>
     /// <returns></returns>
     private IEnumerator startSkillTimer(float waitSeconds) {
 
@@ -76,7 +80,7 @@ public class Enemy_skills : MonoBehaviour
 
 
     /// <summary>
-    /// erzeugt in voraus schon Skill Objecte damit diese nicht zur Laufzeit erstellt werden müssen
+    /// function to precreate Skill objects to lessen the burden while the game is running
     /// </summary>
     private void preCreateSkill() {
         bool needToCreate = false;
@@ -106,9 +110,13 @@ public class Enemy_skills : MonoBehaviour
     /// erzeugt Skills und setzt diese auf die Richtige position und activiert diese
     /// prüft vor erzeugung neuer Skills ob diese im bulletpool sind
     /// kann auch Skills im voraus erzeugen, dort wird die Position nicht gesetzt
+    /// 
+    /// creates skills and places them on the right position and activates them
+    /// checks befor creating new Skill objecte if there is a suitable object in the bulletpool
+    /// can also create skills ahead of time
     /// </summary>
-    /// <param name="preCreation">wenn dieser wert True ist, dann werden Skills im voraus erzeugt</param>
-    /// <returns> Gameobject vom Skill</returns>
+    /// <param name="preCreation"> if this value is true, then skills will be created ahead of time</param>
+    /// <returns> Gameobject of Skill</returns>
     private GameObject activateSkill(bool preCreation) {
         Skill skill;
         GameObject skillGameObject;
@@ -168,9 +176,9 @@ public class Enemy_skills : MonoBehaviour
     }
 
     /// <summary>
-    /// checkt ob der enemy über die enemy line gelaufen ist, um die Skills zu aktivieren
+    /// checks if the enemy move over the enemy border and deactivates the usage of skills
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision"> collision object</param>
     private void OnTriggerEnter2D(Collider2D collision) {
         //Debug.Log(collision);
         try {
@@ -194,7 +202,7 @@ public class Enemy_skills : MonoBehaviour
     }
 
     /// <summary>
-    /// funktion die ein disable lock aktiviert, damit die funktion nicht sofort deactiviert wird
+    /// function to create a disable lock so the the class does not imediatly disable itself after crossing the enemy border
     /// </summary>
     private void OnEnable() {
         //Debug.Log("enable");
@@ -203,14 +211,11 @@ public class Enemy_skills : MonoBehaviour
         StartCoroutine(canDisableTimer(1));
     }
 
-    private void OnDisable() {
-
-    }
 
     /// <summary>
     /// disable allow timer
     /// </summary>
-    /// <param name="wait"> delaytimer in Sekunden</param>
+    /// <param name="wait"> delay in seconds</param>
     /// <returns></returns>
     private IEnumerator canDisableTimer(float wait) {
         yield return new WaitForSeconds(wait);

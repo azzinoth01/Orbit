@@ -83,7 +83,7 @@
   
   <h1 id="Global_Rebinding_menu" data-uid="Global.Rebinding_menu" class="text-break">Class Rebinding_menu
   </h1>
-  <div class="markdown level0 summary"><p>classe die das Rebinden von controls verwaltet</p>
+  <div class="markdown level0 summary"><p>class which manages the rebinding of controls</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -315,13 +315,37 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Global_Rebinding_menu_viewPanel" data-uid="Global.Rebinding_menu.viewPanel">viewPanel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject viewPanel</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Global_Rebinding_menu_loadRebinding_" data-uid="Global.Rebinding_menu.loadRebinding*"></a>
   <h4 id="Global_Rebinding_menu_loadRebinding_Controlls_" data-uid="Global.Rebinding_menu.loadRebinding(Controlls)">loadRebinding(Controlls)</h4>
-  <div class="markdown level1 summary"><p>ladet die Rebinds in den controller rein</p>
+  <div class="markdown level1 summary"><p>loads the rebinds into the controler</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -341,7 +365,7 @@
       <tr>
         <td><a class="xref" href="Global.Controlls.html">Controlls</a></td>
         <td><span class="parametername">cont</span></td>
-        <td><p>der controlls auf den die Rebinds gesetzt werden sollen</p>
+        <td><p>the controler on which the rebinds are to be sete</p>
 </td>
       </tr>
     </tbody>
@@ -357,7 +381,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Global.Controlls.html">Controlls</a></td>
-        <td><p>gibt den controller zur�ck auf den die Rebinds gesetzt wurden </p>
+        <td><p>returns the controler with the set rebinds</p>
 </td>
       </tr>
     </tbody>
@@ -366,7 +390,7 @@
   
   <a id="Global_Rebinding_menu_onClickAlertButton_" data-uid="Global.Rebinding_menu.onClickAlertButton*"></a>
   <h4 id="Global_Rebinding_menu_onClickAlertButton" data-uid="Global.Rebinding_menu.onClickAlertButton">onClickAlertButton()</h4>
-  <div class="markdown level1 summary"><p>schlie�t das Alert Fenster, wenn das Speichern nicht erfolgreich war</p>
+  <div class="markdown level1 summary"><p>closes the alert window if the saving was not succesful</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -375,10 +399,32 @@
   </div>
   
   
+  <a id="Global_Rebinding_menu_onClickGamepad_" data-uid="Global.Rebinding_menu.onClickGamepad*"></a>
+  <h4 id="Global_Rebinding_menu_onClickGamepad" data-uid="Global.Rebinding_menu.onClickGamepad">onClickGamepad()</h4>
+  <div class="markdown level1 summary"><p>opens the gamepad rebinding menu</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void onClickGamepad()</code></pre>
+  </div>
+  
+  
+  <a id="Global_Rebinding_menu_onClickMouseAndKey_" data-uid="Global.Rebinding_menu.onClickMouseAndKey*"></a>
+  <h4 id="Global_Rebinding_menu_onClickMouseAndKey" data-uid="Global.Rebinding_menu.onClickMouseAndKey">onClickMouseAndKey()</h4>
+  <div class="markdown level1 summary"><p>opens the mouse and keyboard rebinding menu</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void onClickMouseAndKey()</code></pre>
+  </div>
+  
+  
   <a id="Global_Rebinding_menu_saveRebinding_" data-uid="Global.Rebinding_menu.saveRebinding*"></a>
   <h4 id="Global_Rebinding_menu_saveRebinding" data-uid="Global.Rebinding_menu.saveRebinding">saveRebinding()</h4>
-  <div class="markdown level1 summary"><p>speichert das Rebinding in einer json datei Userspezifisch auf dem PC
-es darf auch nur gespeichert werden, wenn alle rebinds eindeutig sind</p>
+  <div class="markdown level1 summary"><p>saves the rebinding in a json file user specific on the pc
+it can only be saved if all rebinds are unique</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

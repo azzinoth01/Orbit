@@ -1,0 +1,279 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.InventoryButton
+  commentId: T:Global.InventoryButton
+  id: InventoryButton
+  parent: Global
+  children:
+  - Global.InventoryButton.Inv
+  - Global.InventoryButton.Item
+  - Global.InventoryButton.Locked
+  - Global.InventoryButton.Obj
+  - Global.InventoryButton.OnPointerDown(PointerEventData)
+  langs:
+  - csharp
+  - vb
+  name: InventoryButton
+  nameWithType: InventoryButton
+  fullName: InventoryButton
+  type: Class
+  source:
+    id: InventoryButton
+    path: ''
+    startLine: 4532
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nclass to handle the inventory button events\n"
+  example: []
+  syntax:
+    content: 'public class InventoryButton : MonoBehaviour, IPointerDownHandler'
+    content.vb: >-
+      Public Class InventoryButton
+          Inherits MonoBehaviour
+          Implements IPointerDownHandler
+  inheritance:
+  - System.Object
+  implements:
+  - Global.IPointerDownHandler
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.InventoryButton.Inv
+  commentId: P:Global.InventoryButton.Inv
+  id: Inv
+  parent: Global.InventoryButton
+  langs:
+  - csharp
+  - vb
+  name: Inv
+  nameWithType: InventoryButton.Inv
+  fullName: InventoryButton.Inv
+  type: Property
+  source:
+    id: Inv
+    path: ''
+    startLine: 4539
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Inventory_fill Inv { get; set; }
+    parameters: []
+    return:
+      type: Global.Inventory_fill
+    content.vb: Public Property Inv As Inventory_fill
+  overload: Global.InventoryButton.Inv*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.InventoryButton.Item
+  commentId: P:Global.InventoryButton.Item
+  id: Item
+  parent: Global.InventoryButton
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: InventoryButton.Item
+  fullName: InventoryButton.Item
+  type: Property
+  source:
+    id: Item
+    path: ''
+    startLine: 4549
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Item Item { get; set; }
+    parameters: []
+    return:
+      type: Global.Item
+    content.vb: Public Property Item As Item
+  overload: Global.InventoryButton.Item*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.InventoryButton.Locked
+  commentId: P:Global.InventoryButton.Locked
+  id: Locked
+  parent: Global.InventoryButton
+  langs:
+  - csharp
+  - vb
+  name: Locked
+  nameWithType: InventoryButton.Locked
+  fullName: InventoryButton.Locked
+  type: Property
+  source:
+    id: Locked
+    path: ''
+    startLine: 4559
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool Locked { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Locked As Boolean
+  overload: Global.InventoryButton.Locked*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.InventoryButton.Obj
+  commentId: P:Global.InventoryButton.Obj
+  id: Obj
+  parent: Global.InventoryButton
+  langs:
+  - csharp
+  - vb
+  name: Obj
+  nameWithType: InventoryButton.Obj
+  fullName: InventoryButton.Obj
+  type: Property
+  source:
+    id: Obj
+    path: ''
+    startLine: 4569
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject Obj { get; set; }
+    parameters: []
+    return:
+      type: Global.GameObject
+    content.vb: Public Property Obj As GameObject
+  overload: Global.InventoryButton.Obj*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Global.InventoryButton.OnPointerDown(PointerEventData)
+  commentId: M:Global.InventoryButton.OnPointerDown(PointerEventData)
+  id: OnPointerDown(PointerEventData)
+  parent: Global.InventoryButton
+  langs:
+  - csharp
+  - vb
+  name: OnPointerDown(PointerEventData)
+  nameWithType: InventoryButton.OnPointerDown(PointerEventData)
+  fullName: InventoryButton.OnPointerDown(PointerEventData)
+  type: Method
+  source:
+    id: OnPointerDown
+    path: ''
+    startLine: 4583
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nchecks if the button was hold down to allow drag and drop\n"
+  example: []
+  syntax:
+    content: public void OnPointerDown(PointerEventData eventData)
+    parameters:
+    - id: eventData
+      type: Global.PointerEventData
+      description: ''
+    content.vb: Public Sub OnPointerDown(eventData As PointerEventData)
+  overload: Global.InventoryButton.OnPointerDown*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.IPointerDownHandler
+  commentId: '!:Global.IPointerDownHandler'
+  isExternal: true
+  name: IPointerDownHandler
+  nameWithType: IPointerDownHandler
+  fullName: IPointerDownHandler
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.InventoryButton.Inv*
+  commentId: Overload:Global.InventoryButton.Inv
+  name: Inv
+  nameWithType: InventoryButton.Inv
+  fullName: InventoryButton.Inv
+- uid: Global.Inventory_fill
+  commentId: T:Global.Inventory_fill
+  name: Inventory_fill
+  nameWithType: Inventory_fill
+  fullName: Inventory_fill
+- uid: Global.InventoryButton.Item*
+  commentId: Overload:Global.InventoryButton.Item
+  name: Item
+  nameWithType: InventoryButton.Item
+  fullName: InventoryButton.Item
+- uid: Global.Item
+  commentId: T:Global.Item
+  name: Item
+  nameWithType: Item
+  fullName: Item
+- uid: Global.InventoryButton.Locked*
+  commentId: Overload:Global.InventoryButton.Locked
+  name: Locked
+  nameWithType: InventoryButton.Locked
+  fullName: InventoryButton.Locked
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Global.InventoryButton.Obj*
+  commentId: Overload:Global.InventoryButton.Obj
+  name: Obj
+  nameWithType: InventoryButton.Obj
+  fullName: InventoryButton.Obj
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.InventoryButton.OnPointerDown*
+  commentId: Overload:Global.InventoryButton.OnPointerDown
+  name: OnPointerDown
+  nameWithType: InventoryButton.OnPointerDown
+  fullName: InventoryButton.OnPointerDown
+- uid: Global.PointerEventData
+  isExternal: true
+  name: PointerEventData
+  nameWithType: PointerEventData
+  fullName: PointerEventData
