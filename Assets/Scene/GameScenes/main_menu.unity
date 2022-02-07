@@ -369,7 +369,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
   m_Text: In a galaxy far far away... six mysterious heroes band together to impede
-    the enevetable...
+    the inevitable...
 --- !u!222 &69237635
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -427,6 +427,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5939665872654494973, guid: e4b4861f81a554f4b88687cab967d1d2, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939665872654494973, guid: e4b4861f81a554f4b88687cab967d1d2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939665872654494973, guid: e4b4861f81a554f4b88687cab967d1d2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939665872654494973, guid: e4b4861f81a554f4b88687cab967d1d2, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5939665872654494973, guid: e4b4861f81a554f4b88687cab967d1d2, type: 3}
@@ -705,7 +717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: Under the horendous dictatorship of the Empyreans, the only way to peace
+  m_Text: Under the horrendous dictatorship of the Empyreans, the only way to peace
     was for these heroes to stand up to the pure evil!!
 --- !u!222 &215323533
 CanvasRenderer:
@@ -4831,7 +4843,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: Shh, quite! Let's take this ship, the weapon is already equiped and we
+  m_Text: Shh, quite! Lets take this ship, the weapon is already equipped and we
     NEED to get out of here...
 --- !u!222 &1869511004
 CanvasRenderer:
