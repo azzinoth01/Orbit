@@ -688,7 +688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &78929131
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12653,8 +12653,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 0.56
-  m_Text: Captain endless waves of enemies are approaching
+    m_LineSpacing: 0.35
+  m_Text: They are coming right at us! Let's see how long we can survive this!
 --- !u!222 &974360221
 CanvasRenderer:
   m_ObjectHideFlags: 0
