@@ -49,8 +49,10 @@ public class SpeechBubbles : MonoBehaviour
     /// <param name="other"></param>
     void OnTriggerExit2D(Collider2D other) {
         if (isEnterd == true) {
-            UiObject.SetActive(false);
-            Destroy(Trigger);
+            if (other.tag == "Player") {
+                UiObject.SetActive(false);
+                Destroy(Trigger);
+            }
         }
 
     }
