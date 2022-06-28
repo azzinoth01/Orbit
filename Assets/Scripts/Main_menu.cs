@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,8 +5,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// class to handel the main menu
 /// </summary>
-public class Main_menu : MonoBehaviour
-{
+public class Main_menu : MonoBehaviour {
 
     /// <summary>
     /// main menu panel
@@ -127,5 +124,13 @@ public class Main_menu : MonoBehaviour
     public void onClickCredits() {
         credits.SetActive(true);
         mainMenu.SetActive(false);
+    }
+
+
+    public void onClickResetData() {
+        PlayerSave s = new PlayerSave();
+
+        s.savingSetting();
+
     }
 }
