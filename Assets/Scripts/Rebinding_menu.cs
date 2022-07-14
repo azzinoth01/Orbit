@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -11,8 +10,7 @@ using UnityEngine.UI;
 /// <summary>
 /// class which manages the rebinding of controls
 /// </summary>
-public class Rebinding_menu : MonoBehaviour
-{
+public class Rebinding_menu : MonoBehaviour {
     private Controlls controll;
 
     /// <summary>
@@ -150,6 +148,21 @@ public class Rebinding_menu : MonoBehaviour
 
     }
 
+    public void ResetRebinding() {
+        Controlls resetControls = new Controlls();
+        string json = resetControls.asset.SaveBindingOverridesAsJson();
+        using (FileStream file = File.Create(Application.persistentDataPath + "/controllsSave.json")) {
+            using (StreamWriter writer = new StreamWriter(file)) {
+                writer.Write(json);
+
+            }
+        }
+
+        if (Globals.virtualMouse != null) {
+            Globals.virtualMouse.loadNewRebinds();
+        }
+
+    }
 
 
 

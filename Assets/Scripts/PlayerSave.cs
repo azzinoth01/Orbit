@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -11,8 +10,7 @@ using UnityEngine;
 /// class to save the player progress
 /// </summary>
 [Serializable]
-public class PlayerSave
-{
+public class PlayerSave {
     [SerializeField] private int money;
     [SerializeField] private WeaponInfo mainWeapon;
     [SerializeField] private WeaponInfo secondaryWeapon;
@@ -133,7 +131,7 @@ public class PlayerSave
         boughtItems = new List<string>();
         boughtItems.Add("1004");
 
-        tutorialPlayed = false;
+        tutorialPlayed = true;
         level1Played = false;
 
 

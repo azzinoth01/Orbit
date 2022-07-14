@@ -132,5 +132,9 @@ public class Main_menu : MonoBehaviour {
 
         s.savingSetting();
 
+
+        Rebinding_menu defaultRebinding = new Rebinding_menu();
+
+        defaultRebinding.ResetRebinding();
     }
 }
