@@ -1,3 +1,4 @@
+using nn.account;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,7 @@ using UnityEngine.UI;
 /// <summary>
 /// static class to manage global variables
 /// </summary>
-public static class Globals
-{
+public static class Globals {
     /// <summary>
     /// global variable to set pause
     /// </summary>
@@ -100,5 +100,11 @@ public static class Globals
     /// skips the intro cutscene
     /// </summary>
     public static bool skipStartCutscene;
+
+    public static nn.account.UserHandle userHandle = new nn.account.UserHandle();
+    public static Uid userId = new Uid();
+    public static ItemCatalogSave itemCatalogSave;
+
+
 
 }

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
+using Image = UnityEngine.UI.Image;
 
 /// <summary>
 /// class which controlls the buyable inventory items
 /// </summary>
-public class Inventory_fill : MonoBehaviour
-{
+public class Inventory_fill : MonoBehaviour {
     /// <summary>
     /// main weapon box prefab
     /// </summary>
@@ -46,7 +48,7 @@ public class Inventory_fill : MonoBehaviour
     public AudioSource blockAudio;
 
     private ItemCatalog catalog;
-    private LoadAssets assetLoader;
+    //private LoadAssets assetLoader;
 
 
     /// <summary>
@@ -55,7 +57,7 @@ public class Inventory_fill : MonoBehaviour
     void Start() {
         catalog = ItemCatalog.loadSettings();
 
-        assetLoader = new LoadAssets();
+        //assetLoader = new LoadAssets();
 
         PlayerSave save = PlayerSave.loadSettings();
 
@@ -80,20 +82,21 @@ public class Inventory_fill : MonoBehaviour
                     if (wap.mainWeapon == true) {
                         g = Instantiate(mainWeaponBox, transform);
                         Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
-                        img.sprite = assetLoader.loadSprite(wap.Icon);
+
+                        img.sprite = Resources.Load(wap.Icon) as Sprite;
                     }
                     else {
                         g = Instantiate(secondaryWeaponBox, transform);
                         Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
-                        img.sprite = assetLoader.loadSprite(wap.Icon);
+                        img.sprite = Resources.Load(wap.Icon) as Sprite;
 
                     }
                 }
                 else {
                     Parts part = (Parts)i;
                     g = Instantiate(partsBox, transform);
-                    Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
-                    img.sprite = assetLoader.loadSprite(part.Icon);
+                    UnityEngine.UI.Image img = g.transform.GetChild(0).gameObject.GetComponent<UnityEngine.UI.Image>();
+                    img.sprite = Resources.Load(part.Icon) as Sprite;
 
                 }
             }
@@ -129,7 +132,7 @@ public class Inventory_fill : MonoBehaviour
     /// releases all asset wich are loaded at runtime
     /// </summary>
     private void OnDestroy() {
-        assetLoader.releaseAllHandle();
+        // assetLoader.releaseAllHandle();
     }
 
 
@@ -147,13 +150,13 @@ public class Inventory_fill : MonoBehaviour
             if (wap.mainWeapon == true) {
                 newGameObject = Instantiate(mainWeaponBox, transform);
                 Image img = newGameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
-                img.sprite = assetLoader.loadSprite(wap.Icon);
+                img.sprite = Resources.Load(wap.Icon) as Sprite;
 
             }
             else {
                 newGameObject = Instantiate(secondaryWeaponBox, transform);
                 Image img = newGameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
-                img.sprite = assetLoader.loadSprite(wap.Icon);
+                img.sprite = Resources.Load(wap.Icon) as Sprite;
 
             }
         }
@@ -161,7 +164,7 @@ public class Inventory_fill : MonoBehaviour
             Parts part = (Parts)i;
             newGameObject = Instantiate(partsBox, transform);
             Image img = newGameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
-            img.sprite = assetLoader.loadSprite(part.Icon);
+            img.sprite = Resources.Load(part.Icon) as Sprite;
 
         }
 
@@ -216,7 +219,7 @@ public class Inventory_fill : MonoBehaviour
         else {
             dragAndDrop.enabled = true;
 
-            dragAndDrop.sprite = assetLoader.loadSprite(i.Icon);
+            dragAndDrop.sprite = Resources.Load(i.Icon) as Sprite;
             Globals.currentItem = i;
             display.changeInfoDispaly(i);
 
@@ -234,7 +237,7 @@ public class Inventory_fill : MonoBehaviour
         if (Globals.currentItem is WeaponInfo) {
             WeaponInfo wep = (WeaponInfo)Globals.currentItem;
             if (wep.mainWeapon == true) {
-                button.sprite = assetLoader.loadSprite(wep.Icon);
+                button.sprite = Resources.Load(wep.Icon) as Sprite;
                 button.enabled = true;
                 Globals.currentItem = null;
                 dragAndDrop.enabled = false;
@@ -276,7 +279,7 @@ public class Inventory_fill : MonoBehaviour
         if (Globals.currentItem is WeaponInfo) {
             WeaponInfo wep = (WeaponInfo)Globals.currentItem;
             if (wep.mainWeapon == false) {
-                button.sprite = assetLoader.loadSprite(wep.Icon);
+                button.sprite = Resources.Load(wep.Icon) as Sprite;
                 button.enabled = true;
                 Globals.currentItem = null;
                 dragAndDrop.enabled = false;
@@ -314,7 +317,7 @@ public class Inventory_fill : MonoBehaviour
         if (Globals.currentItem is WeaponInfo) {
             WeaponInfo wep = (WeaponInfo)Globals.currentItem;
             if (wep.mainWeapon == false) {
-                button.sprite = assetLoader.loadSprite(wep.Icon);
+                button.sprite = Resources.Load(wep.Icon) as Sprite;
                 button.enabled = true;
                 Globals.currentItem = null;
                 dragAndDrop.enabled = false;
@@ -353,7 +356,7 @@ public class Inventory_fill : MonoBehaviour
         if (Globals.currentItem is Parts) {
             Parts part = (Parts)Globals.currentItem;
 
-            button.sprite = assetLoader.loadSprite(part.Icon);
+            button.sprite = Resources.Load(part.Icon) as Sprite;
             button.enabled = true;
             Globals.currentItem = null;
             dragAndDrop.enabled = false;

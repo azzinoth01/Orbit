@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfe4f22a895a43443ae71109985254f9, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  weaponInfo:
+  - iD: 1004
+    ItemName: Basic Weapon
+    value: 0
+    icon: basegun.png
+    patternIcon: basegun_patterns.png
+    sprite: basegun_right.png
+    amount: 0
+    mainWeapon: 1
+    skill: 
+    reloadTime: 0.2
+    shootsToCreate: 20
+    additionalDmg: 0
+    dmgModifier: 1
+  - iD: 1005
+    ItemName: Shotgun
+    value: 1500
+    icon: shotgun.png
+    patternIcon: shotgun_patterns.png
+    sprite: shotgun_right.png
+    amount: 0
+    mainWeapon: 1
+    skill: Skill_Shotgun.prefab
+    reloadTime: 0.65
+    shootsToCreate: 20
+    additionalDmg: 0
+    dmgModifier: 1
+  - iD: 1007
+    ItemName: Cannon
+    value: 2500
+    icon: canongun.png
+    patternIcon: canongun_patterns.png
+    sprite: canongun_right.png
+    amount: 0
+    mainWeapon: 1
+    skill: Skill_Cannon.prefab
+    reloadTime: 1
+    shootsToCreate: 20
+    additionalDmg: 0
+    dmgModifier: 1
+  - iD: 1009
+    ItemName: SideWeapon1
+    value: 1000
+    icon: minigun1.png
+    patternIcon: minigun1_pattern.png
+    sprite: minigun1_right.png
+    amount: 0
+    mainWeapon: 0
+    skill: Skill_Mini1.prefab
+    reloadTime: 0.3
+    shootsToCreate: 20
+    additionalDmg: 0
+    dmgModifier: 1
+  - iD: 1010
+    ItemName: SideWeapon2
+    value: 1500
+    icon: minigun2.png
+    patternIcon: basegun_patterns.png
+    sprite: minigun2_right.png
+    amount: 0
+    mainWeapon: 0
+    skill: Skill_Mini2.prefab
+    reloadTime: 0.25
+    shootsToCreate: 20
+    additionalDmg: 0
+    dmgModifier: 1
+  parstInfos:
+  - iD: 1008
+    ItemName: Shield
+    value: 1000
+    icon: shield.png
+    patternIcon: 
+    sprite: shield.png
+    amount: 0
+    healthBoost: 0
+    shieldRefreshValueBoost: 3.125

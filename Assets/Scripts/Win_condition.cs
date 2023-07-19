@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 /// <summary>
 /// win condition handler class
@@ -24,7 +24,7 @@ public class Win_condition : MonoBehaviour
     /// <summary>
     /// portal light
     /// </summary>
-    public Light2D lighting;
+    public UnityEngine.Rendering.Universal.Light2D lighting;
     /// <summary>
     /// rotates the portal
     /// </summary>

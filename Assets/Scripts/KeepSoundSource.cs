@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// class to keep the sound playing while a sceene change happens
 /// </summary>
-public class KeepSoundSource : MonoBehaviour
-{
+public class KeepSoundSource : MonoBehaviour {
     // Start is called before the first frame update
 
 
@@ -38,6 +38,7 @@ public class KeepSoundSource : MonoBehaviour
             Destroy(gameObject);
         }
         else {
+            SceneManager.sceneLoaded += LevelLoaded;
             DontDestroyOnLoad(gameObject);
             Globals.dontDestoryOnLoadObjectID.Add(dontDestroyID);
 
@@ -47,22 +48,34 @@ public class KeepSoundSource : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    //void Update() {
+    //// Update is called once per frame
+    ////void Update() {
 
+    ////}
+
+    ///// <summary>
+    ///// sceene change event
+    ///// checks if the music is allowed to be played in the new sceene or not
+    ///// if not it stops the playing
+    ///// else it keeps playing
+    ///// </summary>
+    ///// <param name="level"></param>
+    //private void OnLevelWasLoaded(int level) {
+
+
+    //    if (playOnSceneIndex.Contains(level)) {
+    //        if (audios.IsPlaying == false) {
+    //            audios.startPlaying();
+    //        }
+    //    }
+    //    else {
+    //        audios.stopPlaying();
+    //    }
     //}
 
-    /// <summary>
-    /// sceene change event
-    /// checks if the music is allowed to be played in the new sceene or not
-    /// if not it stops the playing
-    /// else it keeps playing
-    /// </summary>
-    /// <param name="level"></param>
-    private void OnLevelWasLoaded(int level) {
+    public void LevelLoaded(Scene scene, LoadSceneMode mode) {
 
-
-        if (playOnSceneIndex.Contains(level)) {
+        if (playOnSceneIndex.Contains(scene.buildIndex)) {
             if (audios.IsPlaying == false) {
                 audios.startPlaying();
             }

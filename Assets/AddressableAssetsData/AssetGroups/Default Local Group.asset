@@ -21,26 +21,32 @@ MonoBehaviour:
     m_Address: Assets/Sprites/ShipWeapon
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4e09991272cee1f419b4eddb9136f38a
     m_Address: Assets/Sprites/WeaponIcon
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 59a06e79ae69d07438fbc6030ace3dc9
     m_Address: Assets/Prefab/Skills
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 80256620a8ffbde40adf7455c2123db0
     m_Address: Assets/Catalog
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 15aa44de7641fe3499f2cfece83fd928
     m_Address: Assets/Catalog/itemCatalog.json
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 96b3b187a3caff54dacc641aa9468373
     m_Address: Assets/Sound/audio_output.mixer
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6436f9d8691e47840968eb523d4bb068, type: 2}
   m_SchemaSet:

@@ -6,8 +6,7 @@ using UnityEngine.UI;
 /// <summary>
 /// class to control the display of items
 /// </summary>
-public class ShipEditorStatusDisplay : MonoBehaviour
-{
+public class ShipEditorStatusDisplay : MonoBehaviour {
 
     /// <summary>
     /// total dmg display
@@ -44,7 +43,7 @@ public class ShipEditorStatusDisplay : MonoBehaviour
     public Text ownedMoney;
 
     private Item currentItem;
-    private LoadAssets loader;
+    //private LoadAssets loader;
     private bool itemChanged;
 
 
@@ -55,7 +54,7 @@ public class ShipEditorStatusDisplay : MonoBehaviour
         MoneyChanged();
         currentItem = Globals.currentItem;
         itemName.text = "";
-        loader = new LoadAssets();
+        //loader = new LoadAssets();
         itemChanged = false;
     }
 
@@ -71,7 +70,7 @@ public class ShipEditorStatusDisplay : MonoBehaviour
             if (currentItem is WeaponInfo) {
                 WeaponInfo wep = (WeaponInfo)currentItem;
 
-                GameObject g = loader.loadGameObject(wep.skill);
+                GameObject g = Resources.Load(wep.skill) as GameObject;
                 Skill skill = g.GetComponent<Skill>();
 
                 float totalDmg = 0;
@@ -81,7 +80,11 @@ public class ShipEditorStatusDisplay : MonoBehaviour
                 int totalDmgRound = (int)totalDmg;
                 dmgText.text = totalDmgRound.ToString();
                 reloadTimeText.text = wep.reloadTime.ToString() + "s";
-                patternIcon.sprite = loader.loadSprite(wep.PatternIcon);
+
+
+                patternIcon.sprite = Resources.Load(wep.PatternIcon) as Sprite;
+
+
                 patternIcon.enabled = true;
 
                 dmgNameText.text = "TDMG";
@@ -112,7 +115,7 @@ public class ShipEditorStatusDisplay : MonoBehaviour
     /// releases all loaded handles
     /// </summary>
     private void OnDestroy() {
-        loader.releaseAllHandle();
+        //  loader.releaseAllHandle();
     }
 
     /// <summary>

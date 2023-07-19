@@ -9,8 +9,7 @@ using UnityEngine;
 /// class that saves the item Catalog and loads it
 /// </summary>
 [Serializable]
-public class ItemCatalog
-{
+public class ItemCatalog {
     [SerializeReference] private List<Item> itemList;
 
 
@@ -88,6 +87,32 @@ public class ItemCatalog
 
         // Debug.LogError("text leer");
         return null;
+
+    }
+
+
+    public static ItemCatalog loadSettingsText(string json) {
+
+        ItemCatalog s = new ItemCatalog();
+
+
+
+
+        //Debug.Log(json);
+        if (json == null || json == "") {
+            //  Debug.LogError("text empty");
+            return null;
+        }
+        // Debug.LogError("liste for dem deserialiezen");
+
+        s = JsonUtility.FromJson<ItemCatalog>(json);
+
+        // Debug.LogError("liste deseriallised");
+        return s;
+
+
+        // Debug.LogError("text leer");
+
 
     }
 }
