@@ -1,4 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-_site/** linguist-documentation
-Documentation/** linguist-documentation
+_site/* linguist-vendored
+Documentation/* linguist-vendored
