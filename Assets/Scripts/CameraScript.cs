@@ -59,7 +59,7 @@ public class CameraScript : MonoBehaviour
         }
         else {
             if (player == null) {
-                body.velocity = Vector2.zero;
+                body.linearVelocity = Vector2.zero;
                 return;
             }
             if (screenShakeRunning == true) {
@@ -78,7 +78,7 @@ public class CameraScript : MonoBehaviour
 
             Vector2 direction = ((Vector2)Globals.player.transform.position - ((Vector2)transform.position - offset)) * playerMaxSpeed;
 
-            body.velocity = player.body.velocity + direction;
+            body.linearVelocity = player.body.linearVelocity + direction;
             //direction = direction - offset;
 
             //body.AddForce(direction);

@@ -109,7 +109,7 @@ public class Bullet : MonoBehaviour
             activeNextWaypoint();
             waypointDirectionSet = true;
             Vector2 direction = waypointObject[waypointIndex].transform.position - transform.position;
-            body.velocity = direction.normalized * speed;
+            body.linearVelocity = direction.normalized * speed;
         }
         else if (designer != null && waypoints.Count == waypointIndex) {
 
@@ -119,7 +119,7 @@ public class Bullet : MonoBehaviour
                 activeNextWaypoint();
                 waypointDirectionSet = true;
                 Vector2 direction = waypointObject[waypointIndex].transform.position - transform.position;
-                body.velocity = direction.normalized * speed;
+                body.linearVelocity = direction.normalized * speed;
 
                 return;
             }

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Users;
@@ -74,36 +71,36 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 
         Cursor.visible = hardwareMouseVisible;
         Cursor.lockState = CursorLockMode.Confined;
-        Vector2 start = new Vector2(Screen.width / 2, Screen.height / 2);
+        Vector2 start = new Vector2(Screen.width / 2,Screen.height / 2);
 
-        if (controls == null) {
+        if(controls == null) {
             controls = new Controlls();
 
-            Rebinding_menu rebind = new Rebinding_menu();
-            controls = rebind.loadRebinding(controls);
+
+            controls = Rebinding_menu.loadRebinding(controls);
 
             controls.VirtualMouse.Enable();
             controls.VirtualMouse.SetCallbacks(this);
         }
 
-        if (virtualMouse == null) {
-            virtualMouse = (Mouse)InputSystem.AddDevice("VirtualMouse");
+        if(virtualMouse == null) {
+            virtualMouse = (Mouse) InputSystem.AddDevice("VirtualMouse");
             Globals.virtualMouse = this;
         }
-        else if (virtualMouse.added == false) {
+        else if(virtualMouse.added == false) {
             InputSystem.AddDevice(virtualMouse);
         }
 
-        if (cursor != null) {
+        if(cursor != null) {
 
             hardwareMouse.WarpCursorPosition(start);
 
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, start, canvas.worldCamera, out lastMousePos);
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, start, canvas.worldCamera, out currentMousePos);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect,start,canvas.worldCamera,out lastMousePos);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect,start,canvas.worldCamera,out currentMousePos);
             // Debug.Log(lastMousePos);
-            InputState.Change(hardwareMouse, start);
+            InputState.Change(hardwareMouse,start);
             mousePositionUpdated = true;
-            InputState.Change(virtualMouse.position, start);
+            InputState.Change(virtualMouse.position,start);
 
 
         }
@@ -120,6 +117,7 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     /// </summary>
     private void OnDisable() {
         // Debug.Log("disabled");
+        controls.Disable();
         controls.Dispose();
         controls = null;
         InputSystem.onAfterUpdate -= updateMotion;
@@ -141,8 +139,8 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     public void loadNewRebinds() {
 
         controls.VirtualMouse.Disable();
-        Rebinding_menu rebind = new Rebinding_menu();
-        controls = rebind.loadRebinding(controls);
+
+        controls = Rebinding_menu.loadRebinding(controls);
         controls.VirtualMouse.Enable();
     }
 
@@ -156,7 +154,7 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 
 
 
-        if (lastMousePos != currentMousePos) {
+        if(lastMousePos != currentMousePos) {
             deltaMouse = currentMousePos - lastMousePos;
 
             lastMousePos = currentMousePos;
@@ -175,16 +173,16 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
         Vector2 delta = (direction * speed * Time.unscaledDeltaTime) * canvas.scaleFactor;
         Vector2 newPos = virtualMouse.position.ReadValue() + delta + deltaMouse;
 
-        newPos.x = Mathf.Clamp(newPos.x, 0, Screen.width);
-        newPos.y = Mathf.Clamp(newPos.y, 0, Screen.height);
+        newPos.x = Mathf.Clamp(newPos.x,0,Screen.width);
+        newPos.y = Mathf.Clamp(newPos.y,0,Screen.height);
 
-        InputState.Change(virtualMouse.position, newPos);
-        InputState.Change(virtualMouse.delta, (delta + deltaMouse));
+        InputState.Change(virtualMouse.position,newPos);
+        InputState.Change(virtualMouse.delta,(delta + deltaMouse));
 
         moveCursor(newPos);
 
-        if ((delta + deltaMouse) == Vector2.zero && mousePositionUpdated == false && unlockMouse == false) {
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, newPos, canvas.worldCamera, out lastMousePos);
+        if((delta + deltaMouse) == Vector2.zero && mousePositionUpdated == false && unlockMouse == false) {
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect,newPos,canvas.worldCamera,out lastMousePos);
 
 
 
@@ -192,18 +190,18 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
 
 
             hardwareMouse.WarpCursorPosition(newPos);
-            InputState.Change(hardwareMouse, newPos);
+            InputState.Change(hardwareMouse,newPos);
 
 
 
             mousePositionUpdated = true;
         }
-        else if ((delta + deltaMouse) != Vector2.zero) {
+        else if((delta + deltaMouse) != Vector2.zero) {
             mousePositionUpdated = false;
         }
 
-        if (buttonScroll != Vector2.zero) {
-            InputState.Change(virtualMouse.scroll, buttonScroll);
+        if(buttonScroll != Vector2.zero) {
+            InputState.Change(virtualMouse.scroll,buttonScroll);
         }
 
 
@@ -217,7 +215,7 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     private void moveCursor(Vector2 position) {
 
         Vector2 newPos;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, position, canvas.worldCamera, out newPos);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect,position,canvas.worldCamera,out newPos);
 
         cursor.anchoredPosition = newPos;
     }
@@ -227,11 +225,11 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     /// </summary>
     /// <param name="context"></param>
     public void OnLeftMouseButton(InputAction.CallbackContext context) {
-        if (context.control.device != virtualMouse) {
+        if(context.control.device != virtualMouse) {
 
             virtualMouse.CopyState<MouseState>(out MouseState mouseState);
-            mouseState.WithButton(MouseButton.Left, context.ReadValueAsButton());
-            InputState.Change(virtualMouse, mouseState);
+            mouseState.WithButton(MouseButton.Left,context.ReadValueAsButton());
+            InputState.Change(virtualMouse,mouseState);
 
         }
     }
@@ -240,11 +238,11 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     /// </summary>
     /// <param name="context"></param>
     public void OnMiddleMouseButton(InputAction.CallbackContext context) {
-        if (context.control.device != virtualMouse) {
+        if(context.control.device != virtualMouse) {
 
             virtualMouse.CopyState<MouseState>(out MouseState mouseState);
-            mouseState.WithButton(MouseButton.Middle, context.ReadValueAsButton());
-            InputState.Change(virtualMouse, mouseState);
+            mouseState.WithButton(MouseButton.Middle,context.ReadValueAsButton());
+            InputState.Change(virtualMouse,mouseState);
 
         }
     }
@@ -261,13 +259,13 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     /// </summary>
     /// <param name="context"></param>
     public void OnPoint(InputAction.CallbackContext context) {
-        if (controls == null) {
+        if(controls == null) {
             return;
         }
-        if (context.control.device != virtualMouse) {
+        if(context.control.device != virtualMouse) {
             Vector2 pos = context.ReadValue<Vector2>();
 
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, pos, canvas.worldCamera, out currentMousePos);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect,pos,canvas.worldCamera,out currentMousePos);
 
 
         }
@@ -277,11 +275,11 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     /// </summary>
     /// <param name="context"></param>
     public void OnRightMouseButton(InputAction.CallbackContext context) {
-        if (context.control.device != virtualMouse) {
+        if(context.control.device != virtualMouse) {
 
             virtualMouse.CopyState<MouseState>(out MouseState mouseState);
-            mouseState.WithButton(MouseButton.Right, context.ReadValueAsButton());
-            InputState.Change(virtualMouse, mouseState);
+            mouseState.WithButton(MouseButton.Right,context.ReadValueAsButton());
+            InputState.Change(virtualMouse,mouseState);
 
         }
     }
@@ -290,9 +288,9 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     /// </summary>
     /// <param name="context"></param>
     public void OnScroll(InputAction.CallbackContext context) {
-        if (context.control.device != virtualMouse) {
-            if (context.control.device == hardwareMouse) {
-                InputState.Change(virtualMouse.scroll, context.ReadValue<Vector2>());
+        if(context.control.device != virtualMouse) {
+            if(context.control.device == hardwareMouse) {
+                InputState.Change(virtualMouse.scroll,context.ReadValue<Vector2>());
             }
             else {
                 buttonScroll = context.ReadValue<Vector2>() * 120;
@@ -306,8 +304,8 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     /// </summary>
     /// <param name="context"></param>
     public void OnToogleMouseVisibility(InputAction.CallbackContext context) {
-        if (context.started) {
-            if (unlockMouse == true) {
+        if(context.started) {
+            if(unlockMouse == true) {
                 unlockMouse = false;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Confined;

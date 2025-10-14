@@ -10,7 +10,8 @@ using UnityEngine.UI;
 /// <summary>
 /// class which manages the rebinding of controls
 /// </summary>
-public class Rebinding_menu : MonoBehaviour {
+public class Rebinding_menu : MonoBehaviour
+{
     private Controlls controll;
 
     /// <summary>
@@ -73,11 +74,11 @@ public class Rebinding_menu : MonoBehaviour {
     /// <param name="action"> the action which will be rebinded</param>
     /// <param name="index"> the index of the binding which will be rebinded</param>
     /// <param name="displayKeybind"> the text display for the keybind</param>
-    private void defaultButtonFunction(InputAction action, int index, Text displayKeybind) {
+    private void defaultButtonFunction(InputAction action,int index,Text displayKeybind) {
         //int index = action.GetBindingIndex(binding);
         action.RemoveBindingOverride(index);
-        action.GetBindingDisplayString(index, out string device, out string path);
-        if (device == "Keyboard") {
+        action.GetBindingDisplayString(index,out string device,out string path);
+        if(device == "Keyboard") {
 
             path = Keyboard.current[path].displayName;
 
@@ -95,7 +96,7 @@ public class Rebinding_menu : MonoBehaviour {
     /// <param name="action"> the action which will be rebinded</param>
     /// <param name="index"> the index of the binding which will be rebinded</param>
     /// <param name="displayKeybind"> the text display for the keybind</param>
-    private void remapButtonFunction(InputAction action, int index, Text displayKeybind) {
+    private void remapButtonFunction(InputAction action,int index,Text displayKeybind) {
         //Debug.Log("test");
         ////int index = action.GetBindingIndex(binding);
         //Debug.Log(index);
@@ -109,9 +110,9 @@ public class Rebinding_menu : MonoBehaviour {
         displayKeybind.text = "waiting for input";
 
         rebind.OnComplete(operation => {
-            operation.action.GetBindingDisplayString(index, out string device, out string path);
-            foreach (InputDevice inputDevice in InputSystem.devices) {
-                if (inputDevice.name == device) {
+            operation.action.GetBindingDisplayString(index,out string device,out string path);
+            foreach(InputDevice inputDevice in InputSystem.devices) {
+                if(inputDevice.name == device) {
                     path = inputDevice[path].displayName;
                     //Debug.Log(path);
                     break;
@@ -126,9 +127,9 @@ public class Rebinding_menu : MonoBehaviour {
 
         });
         rebind.OnCancel(operation => {
-            operation.action.GetBindingDisplayString(index, out string device, out string path);
-            foreach (InputDevice inputDevice in InputSystem.devices) {
-                if (inputDevice.name == device) {
+            operation.action.GetBindingDisplayString(index,out string device,out string path);
+            foreach(InputDevice inputDevice in InputSystem.devices) {
+                if(inputDevice.name == device) {
                     path = inputDevice[path].displayName;
                     //Debug.Log(path);
                     break;
@@ -151,14 +152,14 @@ public class Rebinding_menu : MonoBehaviour {
     public void ResetRebinding() {
         Controlls resetControls = new Controlls();
         string json = resetControls.asset.SaveBindingOverridesAsJson();
-        using (FileStream file = File.Create(Application.persistentDataPath + "/controllsSave.json")) {
-            using (StreamWriter writer = new StreamWriter(file)) {
+        using(FileStream file = File.Create(Application.persistentDataPath + "/controllsSave.json")) {
+            using(StreamWriter writer = new StreamWriter(file)) {
                 writer.Write(json);
 
             }
         }
 
-        if (Globals.virtualMouse != null) {
+        if(Globals.virtualMouse != null) {
             Globals.virtualMouse.loadNewRebinds();
         }
 
@@ -172,18 +173,18 @@ public class Rebinding_menu : MonoBehaviour {
     /// </summary>
     public void saveRebinding() {
 
-        if (checkKeybinds() == true) {
+        if(checkKeybinds() == true) {
 
             string json = controll.asset.SaveBindingOverridesAsJson();
 
-            using (FileStream file = File.Create(Application.persistentDataPath + "/controllsSave.json")) {
-                using (StreamWriter writer = new StreamWriter(file)) {
+            using(FileStream file = File.Create(Application.persistentDataPath + "/controllsSave.json")) {
+                using(StreamWriter writer = new StreamWriter(file)) {
                     writer.Write(json);
 
                 }
             }
 
-            if (Globals.virtualMouse != null) {
+            if(Globals.virtualMouse != null) {
                 Globals.virtualMouse.loadNewRebinds();
             }
         }
@@ -195,7 +196,7 @@ public class Rebinding_menu : MonoBehaviour {
             buttonBack.GetComponent<Button>().interactable = false;
             buttonSave.GetComponent<Button>().interactable = false;
 
-            foreach (Button b in buttonList) {
+            foreach(Button b in buttonList) {
                 b.interactable = false;
             }
         }
@@ -206,12 +207,12 @@ public class Rebinding_menu : MonoBehaviour {
     /// </summary>
     /// <param name="cont"> the controler on which the rebinds are to be sete</param>
     /// <returns> returns the controler with the set rebinds</returns>
-    public Controlls loadRebinding(Controlls cont) {
+    public static Controlls loadRebinding(Controlls cont) {
 
-        if (System.IO.File.Exists(Application.persistentDataPath + "/controllsSave.json")) {
+        if(System.IO.File.Exists(Application.persistentDataPath + "/controllsSave.json")) {
             string json = File.ReadAllText(Application.persistentDataPath + "/controllsSave.json");
 
-            if (json == null || json == "") {
+            if(json == null || json == "") {
                 return cont;
             }
 
@@ -229,7 +230,7 @@ public class Rebinding_menu : MonoBehaviour {
         saveAlert.SetActive(false);
         buttonBack.GetComponent<Button>().interactable = true;
         buttonSave.GetComponent<Button>().interactable = true;
-        foreach (Button b in buttonList) {
+        foreach(Button b in buttonList) {
             b.interactable = true;
         }
 
@@ -240,10 +241,10 @@ public class Rebinding_menu : MonoBehaviour {
     /// <returns></returns>
     private bool checkKeybinds() {
         bool check = true;
-        foreach (Text t1 in checkKeybindList) {
+        foreach(Text t1 in checkKeybindList) {
             t1.color = Color.black;
-            foreach (Text t2 in checkKeybindList.FindAll(x => x.text == t1.text && x != t1).ToArray()) {
-                if (t2.gameObject.activeInHierarchy == true && t1.gameObject.activeInHierarchy == true) {
+            foreach(Text t2 in checkKeybindList.FindAll(x => x.text == t1.text && x != t1).ToArray()) {
+                if(t2.gameObject.activeInHierarchy == true && t1.gameObject.activeInHierarchy == true) {
                     t2.color = Color.red;
                     t1.color = Color.red;
                     check = false;
@@ -267,7 +268,7 @@ public class Rebinding_menu : MonoBehaviour {
         compositNames[2] = "LEFT";
         compositNames[3] = "RIGHT";
 
-        if (controll == null) {
+        if(controll == null) {
 
             actionNameList = new List<Text>();
 
@@ -288,41 +289,41 @@ public class Rebinding_menu : MonoBehaviour {
 
 
 
-            foreach (InputActionMap m in map) {
+            foreach(InputActionMap m in map) {
 
 
 
-                if (m.name == "UI") {
+                if(m.name == "UI") {
                     continue;
                 }
                 InputAction[] actions = m.actions.ToArray();
-                foreach (InputAction a in actions) {
+                foreach(InputAction a in actions) {
 
 
 
-                    if (a.bindings.Count > 1) {
+                    if(a.bindings.Count > 1) {
                         int i = 0;
                         int comp = 0;
                         int index = 0;
-                        foreach (InputBinding b in a.bindings) {
+                        foreach(InputBinding b in a.bindings) {
 
                             //Debug.Log(b.groups);
 
-                            if (b.isComposite == true) {
+                            if(b.isComposite == true) {
                                 comp = 0;
                                 index = index + 1;
                                 continue;
                             }
 
-                            if (m.name == "VirtualMouse") {
-                                a.GetBindingDisplayString(index, out string deviceCheck, out string pathCheck);
+                            if(m.name == "VirtualMouse") {
+                                a.GetBindingDisplayString(index,out string deviceCheck,out string pathCheck);
 
 
                                 bool bBreak = false;
-                                foreach (InputDevice inputDevice in InputSystem.devices) {
-                                    if (inputDevice.name == deviceCheck) {
+                                foreach(InputDevice inputDevice in InputSystem.devices) {
+                                    if(inputDevice.name == deviceCheck) {
 
-                                        if (inputDevice is Mouse) {
+                                        if(inputDevice is Mouse) {
                                             index = index + 1;
                                             bBreak = true;
                                             break;
@@ -332,46 +333,46 @@ public class Rebinding_menu : MonoBehaviour {
                                     }
                                 }
 
-                                if (bBreak == true) {
+                                if(bBreak == true) {
                                     continue;
                                 }
 
                             }
 
-                            GameObject g = Instantiate(itemHolder, ScrollView.transform);
+                            GameObject g = Instantiate(itemHolder,ScrollView.transform);
 
-                            if (b.groups == Control_schemes_enum.gamepad.ToString()) {
+                            if(b.groups.Contains(Control_schemes_enum.gamepad.ToString())) {
                                 gamepadControls.Add(g);
                             }
-                            else if (b.groups == Control_schemes_enum.mouseAndKeyboard.ToString()) {
+                            else if(b.groups.Contains(Control_schemes_enum.mouseAndKeyboard.ToString())) {
                                 mouseAndKeyControls.Add(g);
                             }
                             else {
                                 gamepadControls.Add(g);
                                 mouseAndKeyControls.Add(g);
                             }
-                            GameObject obj = Instantiate(actionName, g.transform);
+                            GameObject obj = Instantiate(actionName,g.transform);
 
 
-                            if (b.isPartOfComposite == true) {
-                                obj.GetComponent<Text>().text = (a.name + " " + (i + 1).ToString() + " " + compositNames[comp] + ":").Replace("_", " ");
+                            if(b.isPartOfComposite == true) {
+                                obj.GetComponent<Text>().text = (a.name + " " + (i + 1).ToString() + " " + compositNames[comp] + ":").Replace("_"," ");
 
                                 //Debug.Log(compositNames[comp]);
                             }
                             else {
-                                obj.GetComponent<Text>().text = (a.name + " " + (i + 1).ToString() + ":").Replace("_", " ");
+                                obj.GetComponent<Text>().text = (a.name + " " + (i + 1).ToString() + ":").Replace("_"," ");
                             }
                             obj.GetComponent<Text>().text = obj.GetComponent<Text>().text.TrimEnd();
                             actionNameList.Add(obj.GetComponent<Text>());
 
-                            GameObject actionDisplay = Instantiate(actionKeybind, g.transform);
+                            GameObject actionDisplay = Instantiate(actionKeybind,g.transform);
 
-                            a.GetBindingDisplayString(index, out string device, out string path);
+                            a.GetBindingDisplayString(index,out string device,out string path);
 
 
 
-                            foreach (InputDevice inputDevice in InputSystem.devices) {
-                                if (inputDevice.name == device) {
+                            foreach(InputDevice inputDevice in InputSystem.devices) {
+                                if(inputDevice.name == device) {
                                     path = inputDevice[path].displayName;
 
 
@@ -388,25 +389,25 @@ public class Rebinding_menu : MonoBehaviour {
 
                             checkKeybindList.Add(actionDisplay.GetComponent<Text>());
 
-                            obj = Instantiate(buttonRebind, g.transform);
+                            obj = Instantiate(buttonRebind,g.transform);
 
                             // weil die listener nicht die value storen mit der sie erstellt wurden sondern die Referenz zur value
                             int indexValue = index;
                             InputAction actionForButton = a;
                             obj.GetComponent<Button>().onClick.AddListener(delegate {
-                                remapButtonFunction(actionForButton, indexValue, actionDisplay.GetComponent<Text>());
+                                remapButtonFunction(actionForButton,indexValue,actionDisplay.GetComponent<Text>());
                             });
 
                             buttonList.Add(obj.GetComponent<Button>());
 
 
-                            obj = Instantiate(buttonDefault, g.transform);
+                            obj = Instantiate(buttonDefault,g.transform);
                             obj.GetComponent<Button>().onClick.AddListener(delegate {
-                                defaultButtonFunction(actionForButton, indexValue, actionDisplay.GetComponent<Text>());
+                                defaultButtonFunction(actionForButton,indexValue,actionDisplay.GetComponent<Text>());
                             });
                             buttonList.Add(obj.GetComponent<Button>());
 
-                            if (b.isPartOfComposite == true) {
+                            if(b.isPartOfComposite == true) {
 
                                 comp = comp + 1;
                             }
@@ -420,15 +421,15 @@ public class Rebinding_menu : MonoBehaviour {
                     }
                     else {
 
-                        if (m.name == "VirtualMouse") {
-                            a.GetBindingDisplayString(0, out string deviceCheck, out string pathCheck);
+                        if(m.name == "VirtualMouse") {
+                            a.GetBindingDisplayString(0,out string deviceCheck,out string pathCheck);
 
 
                             bool bBreak = false;
-                            foreach (InputDevice inputDevice in InputSystem.devices) {
-                                if (inputDevice.name == deviceCheck) {
+                            foreach(InputDevice inputDevice in InputSystem.devices) {
+                                if(inputDevice.name == deviceCheck) {
 
-                                    if (inputDevice is Mouse) {
+                                    if(inputDevice is Mouse) {
 
                                         bBreak = true;
                                         break;
@@ -438,18 +439,18 @@ public class Rebinding_menu : MonoBehaviour {
                                 }
                             }
 
-                            if (bBreak == true) {
+                            if(bBreak == true) {
                                 continue;
                             }
 
                         }
 
-                        GameObject g = Instantiate(itemHolder, ScrollView.transform);
+                        GameObject g = Instantiate(itemHolder,ScrollView.transform);
 
-                        if (a.bindings[0].groups == Control_schemes_enum.gamepad.ToString()) {
+                        if(a.bindings[0].groups == Control_schemes_enum.gamepad.ToString()) {
                             gamepadControls.Add(g);
                         }
-                        else if (a.bindings[0].groups == Control_schemes_enum.mouseAndKeyboard.ToString()) {
+                        else if(a.bindings[0].groups == Control_schemes_enum.mouseAndKeyboard.ToString()) {
                             mouseAndKeyControls.Add(g);
                         }
                         else {
@@ -457,20 +458,20 @@ public class Rebinding_menu : MonoBehaviour {
                             mouseAndKeyControls.Add(g);
                         }
 
-                        GameObject obj = Instantiate(actionName, g.transform);
+                        GameObject obj = Instantiate(actionName,g.transform);
 
-                        obj.GetComponent<Text>().text = (a.name + ":").Replace("_", " ");
+                        obj.GetComponent<Text>().text = (a.name + ":").Replace("_"," ");
 
                         obj.GetComponent<Text>().text = obj.GetComponent<Text>().text.TrimEnd();
 
                         actionNameList.Add(obj.GetComponent<Text>());
 
-                        GameObject actionDisplay = Instantiate(actionKeybind, g.transform);
+                        GameObject actionDisplay = Instantiate(actionKeybind,g.transform);
 
-                        a.GetBindingDisplayString(0, out string device, out string path);
+                        a.GetBindingDisplayString(0,out string device,out string path);
 
-                        foreach (InputDevice inputDevice in InputSystem.devices) {
-                            if (inputDevice.name == device) {
+                        foreach(InputDevice inputDevice in InputSystem.devices) {
+                            if(inputDevice.name == device) {
                                 path = inputDevice[path].displayName;
                                 //Debug.Log(path);
                                 break;
@@ -481,19 +482,19 @@ public class Rebinding_menu : MonoBehaviour {
 
                         actionDisplay.GetComponent<Text>().text = path;
                         checkKeybindList.Add(actionDisplay.GetComponent<Text>());
-                        obj = Instantiate(buttonRebind, g.transform);
+                        obj = Instantiate(buttonRebind,g.transform);
 
 
                         // weil die listener nicht die value storen mit der sie erstellt wurden sondern die Referenz zur value 
                         InputAction actionForButton = a;
                         obj.GetComponent<Button>().onClick.AddListener(delegate {
-                            remapButtonFunction(actionForButton, 0, actionDisplay.GetComponent<Text>());
+                            remapButtonFunction(actionForButton,0,actionDisplay.GetComponent<Text>());
                         });
                         buttonList.Add(obj.GetComponent<Button>());
 
-                        obj = Instantiate(buttonDefault, g.transform);
+                        obj = Instantiate(buttonDefault,g.transform);
                         obj.GetComponent<Button>().onClick.AddListener(delegate {
-                            defaultButtonFunction(actionForButton, 0, actionDisplay.GetComponent<Text>());
+                            defaultButtonFunction(actionForButton,0,actionDisplay.GetComponent<Text>());
                         });
                         buttonList.Add(obj.GetComponent<Button>());
 
@@ -505,10 +506,10 @@ public class Rebinding_menu : MonoBehaviour {
             }
 
 
-            foreach (GameObject g in gamepadControls) {
+            foreach(GameObject g in gamepadControls) {
                 g.SetActive(false);
             }
-            foreach (GameObject g in mouseAndKeyControls) {
+            foreach(GameObject g in mouseAndKeyControls) {
                 g.SetActive(false);
             }
 
@@ -542,6 +543,7 @@ public class Rebinding_menu : MonoBehaviour {
     /// disposes the controler 
     /// </summary>
     private void OnDestroy() {
+        controll.Disable();
         controll.Dispose();
         controll = null;
     }
@@ -555,10 +557,10 @@ public class Rebinding_menu : MonoBehaviour {
         Globals.menuHandler.onClickActivateGameobnect(viewPanel);
         gameObject.SetActive(true);
 
-        foreach (GameObject g in mouseAndKeyControls) {
+        foreach(GameObject g in mouseAndKeyControls) {
             g.SetActive(false);
         }
-        foreach (GameObject g in gamepadControls) {
+        foreach(GameObject g in gamepadControls) {
             g.SetActive(true);
         }
     }
@@ -573,10 +575,10 @@ public class Rebinding_menu : MonoBehaviour {
         Globals.menuHandler.onClickActivateGameobnect(viewPanel);
 
         gameObject.SetActive(true);
-        foreach (GameObject g in gamepadControls) {
+        foreach(GameObject g in gamepadControls) {
             g.SetActive(false);
         }
-        foreach (GameObject g in mouseAndKeyControls) {
+        foreach(GameObject g in mouseAndKeyControls) {
             g.SetActive(true);
         }
     }
@@ -597,31 +599,31 @@ public class Rebinding_menu : MonoBehaviour {
 
         //Debug.Log(text.text);
 
-        string[] textArray = Regex.Split(text.text, "\r\n");
+        string[] textArray = Regex.Split(text.text,"\r\n");
 
         string[] checkNames = new string[textArray.Length];
         string[] newNames = new string[textArray.Length];
 
         int counter = 0;
-        foreach (string s in textArray) {
+        foreach(string s in textArray) {
 
-            if (s == "") {
+            if(s == "") {
                 continue;
             }
             //Debug.Log("next index");
 
             int pos1 = s.IndexOf("\"") + 1;
-            int pos2 = s.IndexOf("\"", pos1);
-            string name = s.Substring(pos1, pos2 - pos1);
+            int pos2 = s.IndexOf("\"",pos1);
+            string name = s.Substring(pos1,pos2 - pos1);
 
             checkNames[counter] = name;
 
             //Debug.Log(name);
 
-            pos1 = s.IndexOf("\"", pos2 + 1) + 1;
-            pos2 = s.IndexOf("\"", pos1 + 1);
+            pos1 = s.IndexOf("\"",pos2 + 1) + 1;
+            pos2 = s.IndexOf("\"",pos1 + 1);
 
-            name = s.Substring(pos1, pos2 - pos1);
+            name = s.Substring(pos1,pos2 - pos1);
 
             newNames[counter] = name;
             //Debug.Log(name);
@@ -631,12 +633,12 @@ public class Rebinding_menu : MonoBehaviour {
         }
         //Debug.Log("test");
 
-        foreach (Text t in actionNameList) {
+        foreach(Text t in actionNameList) {
 
-            int index = Array.FindIndex(checkNames, x => x == t.text);
+            int index = Array.FindIndex(checkNames,x => x == t.text);
             //Debug.Log(index);
             //  Debug.Log(index);
-            if (index == -1) {
+            if(index == -1) {
                 continue;
             }
             t.text = newNames[index];

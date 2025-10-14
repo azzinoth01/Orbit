@@ -396,9 +396,9 @@ public class Enemy : MonoBehaviour
 
         try {
             Move_in_out_Scene m = GetComponentInParent<Move_in_out_Scene>();
-            // speed auf anderen rigidbody übergbene 
+            // speed auf anderen rigidbody ï¿½bergbene 
             m.body.bodyType = RigidbodyType2D.Dynamic;
-            m.body.velocity = body.velocity;
+            m.body.linearVelocity = body.linearVelocity;
 
             // weil sich sonst das schiff nicht mitbewegt
             //body.bodyType = RigidbodyType2D.Kinematic;
@@ -407,7 +407,7 @@ public class Enemy : MonoBehaviour
             enabled = false;
         }
         catch {
-            //kein moveout script vorhanden zerstöre enemy an dieser Stelle
+            //kein moveout script vorhanden zerstï¿½re enemy an dieser Stelle
             Destroy(transform.parent.gameObject);
         }
 
@@ -464,18 +464,18 @@ public class Enemy : MonoBehaviour
                 }
             }
             if (doNotUseForceToMove == true) {
-                body.velocity = direction.normalized * maxSpeed;
+                body.linearVelocity = direction.normalized * maxSpeed;
             }
             else {
                 body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
             }
 
 
-            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            Vector2 normalizedSpeed = body.linearVelocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+            body.linearVelocity = new Vector2(Mathf.Clamp(body.linearVelocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.linearVelocity.y, -normalizedSpeed.y, normalizedSpeed.y));
 
         }
         else if (followPlayerMovementX == true && Globals.player != null) {
@@ -487,16 +487,16 @@ public class Enemy : MonoBehaviour
                 direction = new Vector2(Globals.player.transform.position.x - transform.position.x, 0);
             }
             if (doNotUseForceToMove == true) {
-                body.velocity = direction.normalized * maxSpeed;
+                body.linearVelocity = direction.normalized * maxSpeed;
             }
             else {
                 body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
             }
-            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            Vector2 normalizedSpeed = body.linearVelocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+            body.linearVelocity = new Vector2(Mathf.Clamp(body.linearVelocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.linearVelocity.y, -normalizedSpeed.y, normalizedSpeed.y));
         }
         else if (followPlayerMovementY == true && Globals.player != null) {
 
@@ -508,16 +508,16 @@ public class Enemy : MonoBehaviour
                 direction = new Vector2(0, Globals.player.transform.position.y - transform.position.y);
             }
             if (doNotUseForceToMove == true) {
-                body.velocity = direction.normalized * maxSpeed;
+                body.linearVelocity = direction.normalized * maxSpeed;
             }
             else {
                 body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
             }
-            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            Vector2 normalizedSpeed = body.linearVelocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+            body.linearVelocity = new Vector2(Mathf.Clamp(body.linearVelocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.linearVelocity.y, -normalizedSpeed.y, normalizedSpeed.y));
         }
         else if (waypoints.Count > waypointIndex) {
             //createNextWaypoint(waypoints[waypointIndex]);
@@ -525,16 +525,16 @@ public class Enemy : MonoBehaviour
             Vector2 direction = waypointObject[waypointIndex].transform.position - transform.position;
 
             if (doNotUseForceToMove == true) {
-                body.velocity = direction.normalized * maxSpeed;
+                body.linearVelocity = direction.normalized * maxSpeed;
             }
             else {
                 body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
             }
-            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            Vector2 normalizedSpeed = body.linearVelocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+            body.linearVelocity = new Vector2(Mathf.Clamp(body.linearVelocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.linearVelocity.y, -normalizedSpeed.y, normalizedSpeed.y));
             waypointObject[waypointIndex].SetActive(true);
         }
         else if (waypoints.Count == waypointIndex && loop == true && waypoints.Count != 0) {
@@ -543,16 +543,16 @@ public class Enemy : MonoBehaviour
             waypointIndex = 0;
             Vector2 direction = waypointObject[waypointIndex].transform.position - transform.position;
             if (doNotUseForceToMove == true) {
-                body.velocity = direction.normalized * maxSpeed;
+                body.linearVelocity = direction.normalized * maxSpeed;
             }
             else {
                 body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
             }
-            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            Vector2 normalizedSpeed = body.linearVelocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+            body.linearVelocity = new Vector2(Mathf.Clamp(body.linearVelocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.linearVelocity.y, -normalizedSpeed.y, normalizedSpeed.y));
 
             waypointObject[waypointIndex].SetActive(true);
 
@@ -650,8 +650,8 @@ public class Enemy : MonoBehaviour
                     int i = -1;
                     //Debug.Log("random Roll start");
                     while (i == -1 || waypointObject.Count == i || i == waypointIndex) {
-                        // grenzen um 1 Zahl erweiter da eck zaheln nur selten ausgewürfelt werden
-                        // wenn unmögliche Zahl kommt wird zahl neu ermittelt
+                        // grenzen um 1 Zahl erweiter da eck zaheln nur selten ausgewï¿½rfelt werden
+                        // wenn unmï¿½gliche Zahl kommt wird zahl neu ermittelt
                         i = Random.Range(-1, waypointObject.Count + 1);
                         //Debug.Log("random roll");
                     }

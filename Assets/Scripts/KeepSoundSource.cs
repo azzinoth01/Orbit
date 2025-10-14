@@ -1,6 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 /// <summary>
@@ -33,7 +33,7 @@ public class KeepSoundSource : MonoBehaviour
 
 
 
-        if (Globals.dontDestoryOnLoadObjectID.Contains(dontDestroyID)) {
+        if(Globals.dontDestoryOnLoadObjectID.Contains(dontDestroyID)) {
 
             Destroy(gameObject);
         }
@@ -42,9 +42,21 @@ public class KeepSoundSource : MonoBehaviour
             Globals.dontDestoryOnLoadObjectID.Add(dontDestroyID);
 
             audios.startPlaying();
-
+            SceneManager.sceneLoaded += SceneLoaded;
         }
 
+    }
+
+    private void SceneLoaded(Scene scene,LoadSceneMode loadSceneMode) {
+        int level = scene.buildIndex;
+        if(playOnSceneIndex.Contains(level)) {
+            if(audios.IsPlaying == false) {
+                audios.startPlaying();
+            }
+        }
+        else {
+            audios.stopPlaying();
+        }
     }
 
     // Update is called once per frame
@@ -59,16 +71,17 @@ public class KeepSoundSource : MonoBehaviour
     /// else it keeps playing
     /// </summary>
     /// <param name="level"></param>
-    private void OnLevelWasLoaded(int level) {
+    //private void OnLevelWasLoaded(int level) {
 
 
-        if (playOnSceneIndex.Contains(level)) {
-            if (audios.IsPlaying == false) {
-                audios.startPlaying();
-            }
-        }
-        else {
-            audios.stopPlaying();
-        }
-    }
+    //    if (playOnSceneIndex.Contains(level)) {
+    //        if (audios.IsPlaying == false) {
+    //            audios.startPlaying();
+    //        }
+    //    }
+    //    else {
+    //        audios.stopPlaying();
+    //    }
+    //}
+
 }

@@ -96,19 +96,19 @@ public class Move_in_out_Scene : MonoBehaviour
                 Vector2 direction = waypointInObjects[waypointIndex].transform.position - transform.position;
                 body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
 
-                Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+                Vector2 normalizedSpeed = body.linearVelocity.normalized * maxSpeed;
                 normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
                 normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-                body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
-                childBody.velocity = body.velocity;
+                body.linearVelocity = new Vector2(Mathf.Clamp(body.linearVelocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.linearVelocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+                childBody.linearVelocity = body.linearVelocity;
                 waypointInObjects[waypointIndex].SetActive(true);
             }
             else {
                 Enemy e = GetComponentInChildren<Enemy>();
                 e.enabled = true;
 
-                e.body.velocity = body.velocity;
+                e.body.linearVelocity = body.linearVelocity;
                 body.bodyType = RigidbodyType2D.Static;
                 enabled = false;
                 return;
@@ -119,12 +119,12 @@ public class Move_in_out_Scene : MonoBehaviour
                 Vector2 direction = waypointOutObjects[waypointIndex].transform.position - transform.position;
                 body.AddForce(direction.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
 
-                Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+                Vector2 normalizedSpeed = body.linearVelocity.normalized * maxSpeed;
                 normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
                 normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-                body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
-                childBody.velocity = body.velocity;
+                body.linearVelocity = new Vector2(Mathf.Clamp(body.linearVelocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.linearVelocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+                childBody.linearVelocity = body.linearVelocity;
                 waypointOutObjects[waypointIndex].SetActive(true);
             }
             else {
@@ -147,7 +147,7 @@ public class Move_in_out_Scene : MonoBehaviour
 
     }
     ///// <summary>
-    ///// corutine um die enemys zu zerstören
+    ///// corutine um die enemys zu zerstï¿½ren
     ///// destory in corutine um rechenleistung beim destroyen zu sparen
     ///// </summary>
     ///// <returns></returns>

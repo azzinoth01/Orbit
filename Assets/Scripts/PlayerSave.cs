@@ -10,7 +10,8 @@ using UnityEngine;
 /// class to save the player progress
 /// </summary>
 [Serializable]
-public class PlayerSave {
+public class PlayerSave
+{
     [SerializeField] private int money;
     [SerializeField] private WeaponInfo mainWeapon;
     [SerializeField] private WeaponInfo secondaryWeapon;
@@ -136,7 +137,7 @@ public class PlayerSave {
 
 
         ItemCatalog cat = ItemCatalog.loadSettings();
-        mainWeapon = (WeaponInfo)cat.ItemList.Find(x => x.ID == "1004");
+        mainWeapon = (WeaponInfo) cat.ItemList.Find(x => x.ID == "1004");
     }
 
 
@@ -146,9 +147,9 @@ public class PlayerSave {
     public void savingSetting() {
 
         //  string json = JsonUtility.ToJson(this);
-        using (FileStream file = File.Create(Application.persistentDataPath + "/savePlayer.sav")) {
+        using(FileStream file = File.Create(Application.persistentDataPath + "/savePlayer.sav")) {
             BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(file, this);
+            bf.Serialize(file,this);
         }
 
     }
@@ -162,12 +163,12 @@ public class PlayerSave {
         PlayerSave s = new PlayerSave();
 
 
-        if (System.IO.File.Exists(Application.persistentDataPath + "/savePlayer.sav")) {
+        if(System.IO.File.Exists(Application.persistentDataPath + "/savePlayer.sav")) {
 
             BinaryFormatter bf = new BinaryFormatter();
 
-            using (FileStream file = File.Open(Application.persistentDataPath + "/savePlayer.sav", FileMode.Open)) {
-                s = (PlayerSave)bf.Deserialize(file);
+            using(FileStream file = File.Open(Application.persistentDataPath + "/savePlayer.sav",FileMode.Open)) {
+                s = (PlayerSave) bf.Deserialize(file);
             }
 
 
@@ -180,13 +181,13 @@ public class PlayerSave {
 
             //s = JsonUtility.FromJson<PlayerSave>(json);
 
-            if (s == null) {
-                return null;
+            if(s == null) {
+                return new PlayerSave();
             }
             return s;
 
         }
-        return null;
+        return s;
 
     }
 }

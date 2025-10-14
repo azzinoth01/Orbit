@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -55,7 +53,7 @@ public class SkipStoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
     /// </summary>
     /// <param name="context"></param>
     public void OnPause_menu(InputAction.CallbackContext context) {
-        if (context.started) {
+        if(context.started) {
             intro.Skip = true;
         }
     }
@@ -71,11 +69,11 @@ public class SkipStoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
     /// sets the controler 
     /// </summary>
     void Start() {
-        if (controll == null) {
+        if(controll == null) {
             controll = new Controlls();
 
-            Rebinding_menu rebind = new Rebinding_menu();
-            controll = rebind.loadRebinding(controll);
+
+            controll = Rebinding_menu.loadRebinding(controll);
 
             controll.bullet_hell.Enable();
             controll.bullet_hell.SetCallbacks(this);
@@ -89,9 +87,12 @@ public class SkipStoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
     /// disposes the controler
     /// </summary>
     private void OnDestroy() {
+        controll.Disable();
         controll.Dispose();
         controll = null;
     }
 
-
+    public void OnMove(InputAction.CallbackContext context) {
+        //throw new System.NotImplementedException();
+    }
 }

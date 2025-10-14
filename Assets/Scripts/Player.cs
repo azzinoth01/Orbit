@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 
 /// <summary>
@@ -109,7 +108,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// <summary>
     /// immunity flicker visibility range
     /// </summary>
-    [Range(0, 1)] public float maxFlickerRange;
+    [Range(0,1)] public float maxFlickerRange;
     private int flickerDirection;
 
 
@@ -302,7 +301,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public void OnDoge(InputAction.CallbackContext context) {
         //throw new System.NotImplementedException();
 
-        if (context.started) {
+        if(context.started) {
             doge();
 
         }
@@ -316,16 +315,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
 
-        if (context.started) {
-            impulse = impulse + (Vector2.down * force);
-            //    anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
-            // antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
-        }
-        else if (context.canceled) {
-            impulse = impulse - (Vector2.down * force);
-            //  anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
-            //antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
-        }
+        //if(context.started) {
+        //    impulse = impulse + (Vector2.down * force);
+        //    //    anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
+        //    // antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
+        //}
+        //else if(context.canceled) {
+        //    impulse = impulse - (Vector2.down * force);
+        //    //  anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
+        //    //antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
+        //}
         //Debug.Log("move down");
     }
     /// <summary>
@@ -334,16 +333,16 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// <param name="context"></param>
     public void OnMove_left(InputAction.CallbackContext context) {
 
-        if (context.started) {
-            impulse = impulse + (Vector2.left * force);
-            //       anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
-            //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
-        }
-        else if (context.canceled) {
-            impulse = impulse - (Vector2.left * force);
-            //    anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
-            // antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
-        }
+        //if(context.started) {
+        //    impulse = impulse + (Vector2.left * force);
+        //    //       anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
+        //    //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
+        //}
+        //else if(context.canceled) {
+        //    impulse = impulse - (Vector2.left * force);
+        //    //    anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
+        //    // antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
+        //}
     }
     /// <summary>
     /// controler action of the move right input
@@ -351,18 +350,18 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// <param name="context"></param>
     public void OnMove_rigth(InputAction.CallbackContext context) {
 
-        if (context.started) {
-            impulse = impulse + (Vector2.right * force);
-            //      anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
-            //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
-        }
-        else if (context.canceled) {
-            impulse = impulse - (Vector2.right * force);
-            //    anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
-            //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
+        //if(context.started) {
+        //    impulse = impulse + (Vector2.right * force);
+        //    //      anim.SetInteger("IntX", anim.GetInteger("IntX") + 1);
+        //    //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") + 1);
+        //}
+        //else if(context.canceled) {
+        //    impulse = impulse - (Vector2.right * force);
+        //    //    anim.SetInteger("IntX", anim.GetInteger("IntX") - 1);
+        //    //  antrieb.SetInteger("IntX", antrieb.GetInteger("IntX") - 1);
 
 
-        }
+        //}
     }
     /// <summary>
     /// controler action of the move up input
@@ -370,17 +369,17 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// <param name="context"></param>
     public void OnMove_up(InputAction.CallbackContext context) {
 
-        if (context.started) {
-            impulse = impulse + (Vector2.up * force);
-            //     anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
-            //  antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
+        //if(context.started) {
+        //    impulse = impulse + (Vector2.up * force);
+        //    //     anim.SetInteger("IntY", anim.GetInteger("IntY") + 1);
+        //    //  antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") + 1);
 
-        }
-        else if (context.canceled) {
-            impulse = impulse - (Vector2.up * force);
-            //   anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
-            //  antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
-        }
+        //}
+        //else if(context.canceled) {
+        //    impulse = impulse - (Vector2.up * force);
+        //    //   anim.SetInteger("IntY", anim.GetInteger("IntY") - 1);
+        //    //  antrieb.SetInteger("IntY", antrieb.GetInteger("IntY") - 1);
+        //}
     }
 
     /// <summary>
@@ -389,10 +388,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// <param name="context"></param>
     public void OnShoot(InputAction.CallbackContext context) {
 
-        if (context.started) {
+        if(context.started) {
             shooting = true;
         }
-        else if (context.canceled) {
+        else if(context.canceled) {
             shooting = false;
         }
     }
@@ -403,9 +402,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     public void OnPause_menu(InputAction.CallbackContext context) {
         //  Debug.Log("pause called" + context);
 
-        if (context.started) {
+        if(context.started) {
             //    Debug.Log(Globals.pause);
-            if (Globals.pause == true) {
+            if(Globals.pause == true) {
                 Globals.menuHandler.setResume();
             }
             else {
@@ -420,11 +419,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// </summary>
     void Start() {
 
-        if (controll == null) {
+        if(controll == null) {
             controll = new Controlls();
 
-            Rebinding_menu rebind = new Rebinding_menu();
-            controll = rebind.loadRebinding(controll);
+
+            controll = Rebinding_menu.loadRebinding(controll);
 
             controll.bullet_hell.Enable();
             controll.bullet_hell.SetCallbacks(this);
@@ -432,7 +431,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
         }
-        impulse = new Vector2(0, 0);
+        impulse = new Vector2(0,0);
 
         //  anim = GetComponent<Animator>();
 
@@ -444,7 +443,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// checks if game is paused
     /// </summary>
     void Update() {
-        if (Globals.pause == true) {
+        if(Globals.pause == true) {
             return;
         }
         else {
@@ -470,7 +469,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
         PlayerSave save = PlayerSave.loadSettings();
-        if (save == null) {
+        if(save == null) {
             save = new PlayerSave();
         }
         weapons = new List<Weapon>();
@@ -479,7 +478,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         loader = new LoadAssets();
 
-        if (save.MainWeapon != null) {
+        if(save.MainWeapon != null) {
             WeaponSlots[0].AddComponent<Weapon>();
             WeaponSlots[0].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.MainWeapon.Sprite);
             Weapon wep = WeaponSlots[0].GetComponent<Weapon>();
@@ -496,7 +495,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             weapons.Add(wep);
 
         }
-        if (save.SecondaryWeapon != null) {
+        if(save.SecondaryWeapon != null) {
             WeaponSlots[1].AddComponent<Weapon>();
             WeaponSlots[1].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.SecondaryWeapon.Sprite);
             Weapon wep = WeaponSlots[1].GetComponent<Weapon>();
@@ -512,7 +511,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
             weapons.Add(wep);
         }
-        if (save.SecondaryWeapon1 != null) {
+        if(save.SecondaryWeapon1 != null) {
             WeaponSlots[2].AddComponent<Weapon>();
             WeaponSlots[2].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.SecondaryWeapon1.Sprite);
             Weapon wep = WeaponSlots[2].GetComponent<Weapon>();
@@ -529,7 +528,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
 
 
-        if (shieldPart != null) {
+        if(shieldPart != null) {
             maxBaseHealth = maxBaseHealth + shieldPart.HealthBoost;
             schieldRefreshBaseValue = schieldRefreshBaseValue + shieldPart.ShieldRefreshValueBoost;
         }
@@ -559,15 +558,15 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private void flicker() {
         Material m = trail.material;
         float deltaTime = Time.deltaTime;
-        sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + (flickerDirection * immunityFlickerRate * deltaTime));
+        sp.color = new Color(sp.color.r,sp.color.g,sp.color.b,sp.color.a + (flickerDirection * immunityFlickerRate * deltaTime));
 
-        m.color = new Color(m.color.r, m.color.g, m.color.b, m.color.a + ((flickerDirection * immunityFlickerRate * deltaTime) * 2));
+        m.color = new Color(m.color.r,m.color.g,m.color.b,m.color.a + ((flickerDirection * immunityFlickerRate * deltaTime) * 2));
 
-        if (sp.color.a <= maxFlickerRange) {
+        if(sp.color.a <= maxFlickerRange) {
             flickerDirection = 1;
 
         }
-        else if (sp.color.a >= 1) {
+        else if(sp.color.a >= 1) {
             flickerDirection = -1;
         }
 
@@ -584,24 +583,25 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// </summary>
     /// <returns></returns>
     private IEnumerator moveHandler() {
-        while (true) {
-            if (Globals.pause == false && isDoging == false) {
-                body.AddForce(impulse.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
-                Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+        while(true) {
+            if(Globals.pause == false && isDoging == false) {
+
+                body.AddForce(impulse.normalized * force * Time.deltaTime,ForceMode2D.Impulse);
+                Vector2 normalizedSpeed = body.linearVelocity.normalized * maxSpeed;
                 normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
                 normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-                body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+                body.linearVelocity = new Vector2(Mathf.Clamp(body.linearVelocity.x,-normalizedSpeed.x,normalizedSpeed.x),Mathf.Clamp(body.linearVelocity.y,-normalizedSpeed.y,normalizedSpeed.y));
                 float angle;
-                if (body.velocity.magnitude == 0) {
+                if(body.linearVelocity.magnitude == 0) {
                     angle = 90;
                 }
                 else {
-                    angle = Vector2.SignedAngle(Vector2.right, body.velocity);
+                    angle = Vector2.SignedAngle(Vector2.right,body.linearVelocity);
                 }
 
 
-                ship.transform.eulerAngles = new Vector3(0, 0, angle - 90);
+                ship.transform.eulerAngles = new Vector3(0,0,angle - 90);
             }
 
             yield return null;
@@ -616,10 +616,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private IEnumerator shootingHandler() {
 
 
-        while (true) {
-            if (shooting == true && weapons.Count != 0 && Globals.pause == false) {
-                foreach (Weapon w in weapons) {
-                    w.shoot(additionalDmg, dmgModifier);
+        while(true) {
+            if(shooting == true && weapons.Count != 0 && Globals.pause == false) {
+                foreach(Weapon w in weapons) {
+                    w.shoot(additionalDmg,dmgModifier);
                 }
             }
             yield return null;
@@ -632,8 +632,8 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// <returns></returns>
     public IEnumerator smoothHealthDrop() {
 
-        while (true) {
-            if (Globals.pause == true) {
+        while(true) {
+            if(Globals.pause == true) {
                 yield return null;
             }
             float prozentValue = currentHealth / maxBaseHealth;
@@ -641,23 +641,23 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
             //Debug.Log("% Value " + prozentValue.ToString());
             //Debug.Log("Fill Value " + currentFillProzent.ToString());
-            if (prozentValue <= currentFillProzent) {
+            if(prozentValue <= currentFillProzent) {
 
                 float toSet = currentFillProzent - 0.01f;
-                if (toSet < prozentValue) {
+                if(toSet < prozentValue) {
                     toSet = prozentValue;
                 }
                 healthbar.fillAmount = toSet;
             }
-            else if (prozentValue >= currentFillProzent) {
+            else if(prozentValue >= currentFillProzent) {
                 float toSet = currentFillProzent + 0.01f;
-                if (toSet > prozentValue) {
+                if(toSet > prozentValue) {
                     toSet = prozentValue;
                 }
                 healthbar.fillAmount = toSet;
             }
 
-            if (healthbar.fillAmount >= 0.6f) {
+            if(healthbar.fillAmount >= 0.6f) {
                 healthbar.color = healthbarAbove60;
                 crackedScreenOverlay.sprite = null;
                 crackedScreenOverlay.enabled = false;
@@ -668,7 +668,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 firstCrackedSoundPlayed = false;
                 secondCrackedSoundPlayed = false;
             }
-            else if (healthbar.fillAmount >= 0.3f) {
+            else if(healthbar.fillAmount >= 0.3f) {
                 healthbar.color = healthbarAbove30;
                 crackedScreenOverlay.sprite = crackedLevel1;
                 crackedScreenOverlay.enabled = true;
@@ -676,7 +676,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 crackedScreenOverlay2.sprite = null;
                 crackedScreenOverlay2.enabled = false;
 
-                if (crackedSound != null && firstCrackedSoundPlayed == false) {
+                if(crackedSound != null && firstCrackedSoundPlayed == false) {
                     crackedSound.Play();
                 }
 
@@ -692,7 +692,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 crackedScreenOverlay2.sprite = crackedLevel2;
                 crackedScreenOverlay2.enabled = true;
 
-                if (crackedSound != null && secondCrackedSoundPlayed == false) {
+                if(crackedSound != null && secondCrackedSoundPlayed == false) {
                     crackedSound.Play();
                 }
 
@@ -703,9 +703,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
                 secondCrackedSoundPlayed = true;
 
             }
-            if (healthbar.fillAmount <= 0) {
+            if(healthbar.fillAmount <= 0) {
                 Destroy(gameObject);
-                Instantiate(deathEffect, transform.position, transform.rotation);
+                Instantiate(deathEffect,transform.position,transform.rotation);
                 Globals.menuHandler.Playtime = Time.time - timestamp;
 
                 Globals.menuHandler.setGameOver();
@@ -723,30 +723,30 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// <returns></returns>
     public IEnumerator smoothSchieldDrop() {
 
-        while (true) {
-            if (Globals.pause == true) {
+        while(true) {
+            if(Globals.pause == true) {
                 yield return null;
             }
             float prozentValue = currentschield / maxschield;
             float currentFillProzent = schieldbar.fillAmount;
 
-            if (prozentValue <= currentFillProzent) {
+            if(prozentValue <= currentFillProzent) {
                 float toSet = currentFillProzent - schieldbarStepValue;
-                if (toSet < prozentValue) {
+                if(toSet < prozentValue) {
                     toSet = prozentValue;
                 }
                 schieldbar.fillAmount = toSet;
             }
-            else if (prozentValue >= currentFillProzent) {
+            else if(prozentValue >= currentFillProzent) {
                 float toSet = currentFillProzent + schieldbarStepValue;
-                if (toSet > prozentValue) {
+                if(toSet > prozentValue) {
                     toSet = prozentValue;
                 }
                 schieldbar.fillAmount = toSet;
             }
 
-            if (schieldbar.fillAmount <= 0 && schieldRefreshStarted == false) {
-                // startet das Schildauffüllen nur nachdem das schild leer ist
+            if(schieldbar.fillAmount <= 0 && schieldRefreshStarted == false) {
+                // startet das Schildauffï¿½llen nur nachdem das schild leer ist
                 schieldRefreshStarted = true;
                 StartCoroutine(schieldRefresh(schieldRefreshRate));
             }
@@ -768,7 +768,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         currentschield = currentschield + schieldRefreshBaseValue;
 
-        if (currentschield >= maxschield) {
+        if(currentschield >= maxschield) {
             currentschield = maxschield;
             schieldRefreshStarted = false;
         }
@@ -785,13 +785,13 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// </summary>
     /// <param name="dmg"> the dmg the player takes</param>
     public void takeDmg(float dmg) {
-        if (isImmun == true) {
+        if(isImmun == true) {
             return;
         }
 
         hitAudio.Play();
 
-        if (schieldbar.fillAmount >= 1) {
+        if(schieldbar.fillAmount >= 1) {
             currentschield = 0;
 
             // verschoben damit erst startet sobald anzeige wirklich auf 0 gedroped ist
@@ -800,20 +800,20 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         else {
             currentHealth = currentHealth - dmg;
-            if (currentHealth > 0) {
+            if(currentHealth > 0) {
                 StartCoroutine(Globals.currentCamera.GetComponent<CameraScript>().startScreenShake());
             }
 
         }
 
 
-        if (currentHealth <= 0) {
+        if(currentHealth <= 0) {
             return;
             // destroy moved to smooth health drop
             //Globals.gameoverHandler.gameOver();
         }
         isImmun = true;
-        gameObject.layer = (int)Layer_enum.player_immunity; // immunity layer
+        gameObject.layer = (int) Layer_enum.player_immunity; // immunity layer
         immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterHit));
     }
 
@@ -821,9 +821,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// destorys the controler input because it would continue to exist if it is not disposed
     /// </summary>
     private void OnDestroy() {
-
+        controll.Disable();
         controll.Dispose();
-        body.velocity = Vector2.zero;
+        body.linearVelocity = Vector2.zero;
         loader.releaseAllHandle();
     }
 
@@ -831,9 +831,9 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// destroys den controller input
     /// </summary>
     public void clearControlls() {
-
+        controll.Disable();
         controll.Dispose();
-        body.velocity = Vector2.zero;
+        body.linearVelocity = Vector2.zero;
 
     }
 
@@ -847,7 +847,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         dogeCharges = dogeCharges + 1;
         dogeVisual(false);
-        if (dogeCharges != maxDogeCharges) {
+        if(dogeCharges != maxDogeCharges) {
             chargeFillCo = StartCoroutine(chargeFill(cooldown));
         }
         else {
@@ -869,21 +869,21 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// doge special ability, which speeds up the player for a short duration
     /// </summary>
     private void doge() {
-        if (dogeCharges > 0 && onGlobalCooldown == false && isDoging == false && impulse != Vector2.zero) {
+        if(dogeCharges > 0 && onGlobalCooldown == false && isDoging == false && impulse != Vector2.zero) {
 
-            if (dashAudio != null) {
+            if(dashAudio != null) {
 
                 dashAudio.Play();
             }
 
             isDoging = true;
             isImmun = true;
-            gameObject.layer = (int)Layer_enum.player_immunity; // immunity layer
+            gameObject.layer = (int) Layer_enum.player_immunity; // immunity layer
 
 
 
-            // falls immunity durch hit wird diese vom doge überschrieben
-            if (immunityTimer != null) {
+            // falls immunity durch hit wird diese vom doge ï¿½berschrieben
+            if(immunityTimer != null) {
                 StopCoroutine(immunityTimer);
             }
 
@@ -893,31 +893,31 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
             Vector3 point;
 
-            point = transform.position + (Vector3)(impulse.normalized * dogeRange);
+            point = transform.position + (Vector3) (impulse.normalized * dogeRange);
             Vector3 cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
             float fixedDogeRange = dogeRange;
             // check if charge punkt is outside of field
-            while (cameraPoint.x < 0 || cameraPoint.x > 1 || cameraPoint.y < 0 || cameraPoint.y > 1) {
+            while(cameraPoint.x < 0 || cameraPoint.x > 1 || cameraPoint.y < 0 || cameraPoint.y > 1) {
                 //Debug.Log("doge outside view");
 
                 fixedDogeRange = fixedDogeRange - 1;
-                if (fixedDogeRange <= 0) {
-                    //Debug.Log("doge nicht möglich");
+                if(fixedDogeRange <= 0) {
+                    //Debug.Log("doge nicht mï¿½glich");
                     isDoging = false;
                     return;
                 }
-                point = transform.position + (Vector3)(impulse.normalized * fixedDogeRange);
+                point = transform.position + (Vector3) (impulse.normalized * fixedDogeRange);
                 cameraPoint = Globals.currentCamera.WorldToViewportPoint(point);
 
             }
             //Debug.Log("current pos " + transform.position.ToString());
             //Debug.Log("ziel pos " + point.ToString());
-            waypoint = Instantiate(waypointPrefab, point, Quaternion.identity, transform.parent);
+            waypoint = Instantiate(waypointPrefab,point,Quaternion.identity,transform.parent);
 
             Vector3 direction = (waypoint.transform.position - transform.position);
             //Debug.Log(direction);
             //Debug.Log(direction.normalized);
-            body.velocity = direction.normalized * dogeSpeed;
+            body.linearVelocity = direction.normalized * dogeSpeed;
             //Debug.Log(body.velocity);
 
             dogeCharges = dogeCharges - 1;
@@ -925,7 +925,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             onGlobalCooldown = true;
             timer = StartCoroutine(maxDogeTimer(maxDogeDuration));
 
-            if (chargeFillCo == null) {
+            if(chargeFillCo == null) {
                 chargeFillCo = StartCoroutine(chargeFill(dogeCooldown));
             }
 
@@ -941,13 +941,13 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private IEnumerator immunityFlickerHandler() {
 
 
-        while (isImmun == true) {
+        while(isImmun == true) {
             flicker();
             yield return null;
         }
         Material m = trail.material;
-        sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 1);
-        m.color = new Color(m.color.r, m.color.g, m.color.b, 1);
+        sp.color = new Color(sp.color.r,sp.color.g,sp.color.b,1);
+        m.color = new Color(m.color.r,m.color.g,m.color.b,1);
 
         flickerCo = null;
     }
@@ -958,12 +958,12 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// <param name="time"> duration of immunity in seconds</param>
     /// <returns></returns>
     private IEnumerator immunityTime(float time) {
-        if (flickerCo == null) {
+        if(flickerCo == null) {
             flickerCo = StartCoroutine(immunityFlickerHandler());
         }
         yield return new WaitForSeconds(time);
         isImmun = false;
-        gameObject.layer = (int)Layer_enum.player; //player layer
+        gameObject.layer = (int) Layer_enum.player; //player layer
     }
 
 
@@ -975,11 +975,11 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     private IEnumerator maxDogeTimer(float duration) {
         yield return new WaitForSeconds(duration);
         isDoging = false;
-        Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+        Vector2 normalizedSpeed = body.linearVelocity.normalized * maxSpeed;
         normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
         normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-        body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+        body.linearVelocity = new Vector2(Mathf.Clamp(body.linearVelocity.x,-normalizedSpeed.x,normalizedSpeed.x),Mathf.Clamp(body.linearVelocity.y,-normalizedSpeed.y,normalizedSpeed.y));
 
         Destroy(waypoint);
         immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterDoge));
@@ -991,25 +991,25 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// </summary>
     /// <param name="used"> true if a doge was used, fals if a charge was refilled</param>
     private void dogeVisual(bool used) {
-        if (used == true) {
+        if(used == true) {
 
             chargeUI.sprite = chargeSprites[dogeCharges];
-            if (dogeCharges == 0) {
-                chargeUI.color = new Color(chargeUI.color.r, chargeUI.color.g, chargeUI.color.b, 0);
+            if(dogeCharges == 0) {
+                chargeUI.color = new Color(chargeUI.color.r,chargeUI.color.g,chargeUI.color.b,0);
             }
             else {
-                chargeUI.color = new Color(chargeUI.color.r, chargeUI.color.g, chargeUI.color.b, 1);
+                chargeUI.color = new Color(chargeUI.color.r,chargeUI.color.g,chargeUI.color.b,1);
             }
             //chargeBalls[dogeCharges].GetComponent<Image>().color = Color.red;
         }
         else {
             chargeUI.sprite = chargeSprites[dogeCharges];
             chargeAudio.Play();
-            if (dogeCharges == 0) {
-                chargeUI.color = new Color(chargeUI.color.r, chargeUI.color.g, chargeUI.color.b, 0);
+            if(dogeCharges == 0) {
+                chargeUI.color = new Color(chargeUI.color.r,chargeUI.color.g,chargeUI.color.b,0);
             }
             else {
-                chargeUI.color = new Color(chargeUI.color.r, chargeUI.color.g, chargeUI.color.b, 1);
+                chargeUI.color = new Color(chargeUI.color.r,chargeUI.color.g,chargeUI.color.b,1);
             }
             //chargeBalls[dogeCharges].GetComponent<Image>().color = Color.green;
         }
@@ -1028,20 +1028,22 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
 
 
-        if (collision.gameObject == waypoint) {
+        if(collision.gameObject == waypoint) {
             //Debug.Log("doge complete");
             StopCoroutine(timer);
             isDoging = false;
-            Vector2 normalizedSpeed = body.velocity.normalized * maxSpeed;
+            Vector2 normalizedSpeed = body.linearVelocity.normalized * maxSpeed;
             normalizedSpeed.x = Mathf.Abs(normalizedSpeed.x);
             normalizedSpeed.y = Mathf.Abs(normalizedSpeed.y);
 
-            body.velocity = new Vector2(Mathf.Clamp(body.velocity.x, -normalizedSpeed.x, normalizedSpeed.x), Mathf.Clamp(body.velocity.y, -normalizedSpeed.y, normalizedSpeed.y));
+            body.linearVelocity = new Vector2(Mathf.Clamp(body.linearVelocity.x,-normalizedSpeed.x,normalizedSpeed.x),Mathf.Clamp(body.linearVelocity.y,-normalizedSpeed.y,normalizedSpeed.y));
 
             Destroy(waypoint);
             immunityTimer = StartCoroutine(immunityTime(immunityTimeAfterDoge));
         }
     }
 
-
+    public void OnMove(InputAction.CallbackContext context) {
+        impulse = context.ReadValue<Vector2>();
+    }
 }

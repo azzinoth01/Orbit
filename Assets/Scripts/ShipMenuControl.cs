@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -51,7 +49,7 @@ public class ShipMenuControl : MonoBehaviour, Controlls.IBullet_hellActions
     /// <param name="context"></param>
     public void OnPause_menu(InputAction.CallbackContext context) {
 
-        if (context.started) {
+        if(context.started) {
             Globals.menuHandler.onClickMainMenu(0);
         }
 
@@ -68,11 +66,11 @@ public class ShipMenuControl : MonoBehaviour, Controlls.IBullet_hellActions
     /// initialises the controls
     /// </summary>
     void Start() {
-        if (controll == null) {
+        if(controll == null) {
             controll = new Controlls();
 
-            Rebinding_menu rebind = new Rebinding_menu();
-            controll = rebind.loadRebinding(controll);
+
+            controll = Rebinding_menu.loadRebinding(controll);
 
             controll.bullet_hell.Enable();
             controll.bullet_hell.SetCallbacks(this);
@@ -86,7 +84,12 @@ public class ShipMenuControl : MonoBehaviour, Controlls.IBullet_hellActions
     /// disposes the controls
     /// </summary>
     private void OnDestroy() {
+        controll.Disable();
         controll.Dispose();
         controll = null;
+    }
+
+    public void OnMove(InputAction.CallbackContext context) {
+        //throw new System.NotImplementedException();
     }
 }
