@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -41,8 +40,8 @@ public class ItemCatalog
     public void savingSetting() {
 
         string json = JsonUtility.ToJson(this);
-        using (FileStream file = File.Create("Assets/Catalog/itemCatalog.json")) {
-            using (StreamWriter writer = new StreamWriter(file)) {
+        using(FileStream file = File.Create("Assets/Catalog/itemCatalog.json")) {
+            using(StreamWriter writer = new StreamWriter(file)) {
                 writer.Write(json);
 
             }
@@ -58,8 +57,7 @@ public class ItemCatalog
 
         ItemCatalog s = new ItemCatalog();
         //Debug.Log("still loading");
-        LoadAssets load = new LoadAssets();
-        TextAsset text = load.loadText("Assets/Catalog/itemCatalog.json");
+        TextAsset text = LoadAssets.Instance.loadText("Assets/Catalog/itemCatalog.json");
 
         // Debug.LogError("text loaded");
 
@@ -67,21 +65,21 @@ public class ItemCatalog
 
         // Debug.LogError(text.text);
 
-        if (text != null) {
+        if(text != null) {
             //string json = File.ReadAllText("Assets/Catalog/itemCatalog.json");
 
             string json = text.text;
 
 
             //Debug.Log(json);
-            if (json == null || json == "") {
+            if(json == null || json == "") {
                 //  Debug.LogError("text empty");
                 return null;
             }
             // Debug.LogError("liste for dem deserialiezen");
 
             s = JsonUtility.FromJson<ItemCatalog>(json);
-            load.releaseAllHandle();
+            //load.releaseAllHandle();
             // Debug.LogError("liste deseriallised");
             return s;
         }

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,12 +24,13 @@ public class Globals_init : MonoBehaviour
     /// initialise the globale variables with standard values
     /// </summary>
     private void Awake() {
+
         Globals.pause = false;
 
-        if (Globals.bulletPool == null) {
+        if(Globals.bulletPool == null) {
             Globals.bulletPool = new List<Skill>();
         }
-        if (Globals.spawnerListe == null) {
+        if(Globals.spawnerListe == null) {
             Globals.spawnerListe = new List<Enemy_Spawner>();
         }
 
@@ -39,7 +39,8 @@ public class Globals_init : MonoBehaviour
         Globals.moneyDrop = moneyDropPrefrab;
 
         PlayerSave save = PlayerSave.loadSettings();
-        if (save == null) {
+
+        if(save == null) {
             save = new PlayerSave();
         }
         Globals.money = save.Money;
@@ -50,11 +51,11 @@ public class Globals_init : MonoBehaviour
 
         Globals.tempEnemyHit = tempEnemyHit;
 
-        if (Globals.dontDestoryOnLoadObjectID == null) {
+        if(Globals.dontDestoryOnLoadObjectID == null) {
             Globals.dontDestoryOnLoadObjectID = new List<string>();
         }
 
-        if (Globals.infityWaveSpawner == null) {
+        if(Globals.infityWaveSpawner == null) {
             Globals.infityWaveSpawner = new List<Enemy_Spawner>();
         }
 

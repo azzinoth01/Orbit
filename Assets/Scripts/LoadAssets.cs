@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.UI;
 
 
 /// <summary>
@@ -11,14 +9,26 @@ using UnityEngine.UI;
 /// </summary>
 public class LoadAssets
 {
-    private List<AsyncOperationHandle> handleList;
+    private static LoadAssets _instance;
+
+    private Dictionary<string,AsyncOperationHandle> _loadedHandles;
+
+    public static LoadAssets Instance {
+        get {
+            if(_instance == null) {
+                _instance = new LoadAssets();
+            }
+            return _instance;
+        }
+    }
 
 
     /// <summary>
     /// standard constructor
     /// </summary>
-    public LoadAssets() {
-        handleList = new List<AsyncOperationHandle>();
+    private LoadAssets() {
+
+        _loadedHandles = new Dictionary<string,AsyncOperationHandle>();
     }
 
     /// <summary>
@@ -27,27 +37,20 @@ public class LoadAssets
     /// <param name="path"> the addressables path</param>
     /// <returns> the loaded sprite</returns>
     public Sprite loadSprite(string path) {
-        if (path == "" || path == null) {
+        if(path == "" || path == null) {
             //   Debug.LogError(" empty path");
             return null;
         }
         // Debug.LogError(path);
-        Sprite sprite;
 
+        if(_loadedHandles.ContainsKey(path)) {
+            return (Sprite) _loadedHandles[path].Result;
+        }
         AsyncOperationHandle<Sprite> handle = Addressables.LoadAssetAsync<Sprite>(path);
-        handleList.Add(handle);
         handle.WaitForCompletion();
 
-
-        if (handle.Status == AsyncOperationStatus.Succeeded) {
-            sprite = handle.Result;
-        }
-        else {
-            sprite = null;
-        }
-
-        //Addressables.Release(handle);
-        return sprite;
+        _loadedHandles[path] = handle;
+        return (Sprite) _loadedHandles[path].Result;
     }
 
 
@@ -57,24 +60,20 @@ public class LoadAssets
     /// <param name="path"> the addressables path</param>
     /// <returns> the loaded gameobject</returns>
     public GameObject loadGameObject(string path) {
-        if (path == "" || path == null) {
+        if(path == "" || path == null) {
             //  Debug.LogError(" empty path");
             return null;
         }
-        //    Debug.LogError(path);
-        GameObject game;
+
+        if(_loadedHandles.ContainsKey(path)) {
+            return (GameObject) _loadedHandles[path].Result;
+        }
+
         AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(path);
-        handleList.Add(handle);
         handle.WaitForCompletion();
 
-        if (handle.Status == AsyncOperationStatus.Succeeded) {
-            game = handle.Result;
-        }
-        else {
-            game = null;
-        }
-        // Addressables.Release(handle);
-        return game;
+        _loadedHandles[path] = handle;
+        return (GameObject) _loadedHandles[path].Result;
     }
 
     /// <summary>
@@ -83,51 +82,19 @@ public class LoadAssets
     /// <param name="path"> the addressables path</param>
     /// <returns> the loaded textAsset</returns>
     public TextAsset loadText(string path) {
-        if (path == "" || path == null) {
+        if(path == "" || path == null) {
             //  Debug.LogError(" empty path");
             return null;
         }
-        //path = path.Replace("Assets/", "");
 
-        // Debug.LogError(path);
-        TextAsset text;
-
+        if(_loadedHandles.ContainsKey(path)) {
+            return (TextAsset) _loadedHandles[path].Result;
+        }
         AsyncOperationHandle<TextAsset> handle = Addressables.LoadAssetAsync<TextAsset>(path);
-        handleList.Add(handle);
         handle.WaitForCompletion();
 
-        // Debug.LogError("asst loaded");
-
-        if (handle.Status == AsyncOperationStatus.Succeeded) {
-            //   Debug.LogError("funktioniert");
-            text = handle.Result;
-
-            // Debug.LogError(text.text);
-        }
-        else {
-            //Debug.LogError("fehler");
-            text = null;
-        }
-        // Addressables.Release(handle);
-
-        return text;
-    }
-
-    /// <summary>
-    /// releases the last loaded handel to make space in ram
-    /// </summary>
-    public void releaseLastHandle() {
-        Addressables.Release(handleList[(handleList.Count - 1)]);
-        handleList.RemoveAt((handleList.Count - 1));
-    }
-
-    /// <summary>
-    /// releases all loaded handels to make space in ram
-    /// </summary>
-    public void releaseAllHandle() {
-        foreach (AsyncOperationHandle handle in handleList) {
-            Addressables.Release(handle);
-        }
+        _loadedHandles[path] = handle;
+        return (TextAsset) _loadedHandles[path].Result;
     }
 
 }

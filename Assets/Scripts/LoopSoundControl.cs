@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -54,14 +52,14 @@ public class LoopSoundControl : MonoBehaviour
     /// </summary>
     void Update() {
 
-        if (transitionAudio != null && IsPlaying == true) {
-            if (transitionPlayed == false && startAudio.isPlaying == false && transitionAudio.isPlaying == false && loopAudio.isPlaying == false) {
+        if(transitionAudio != null && IsPlaying == true) {
+            if(transitionPlayed == false && startAudio.isPlaying == false && transitionAudio.isPlaying == false && loopAudio.isPlaying == false) {
                 transitionAudio.Play();
                 transitionPlayed = true;
                 Debug.Log("transition started");
             }
-            else if (loopAudio != null && IsPlaying == true) {
-                if (transitionPlayed == true && startAudio.isPlaying == false && transitionAudio.isPlaying == false && loopAudio.isPlaying == false) {
+            else if(loopAudio != null && IsPlaying == true) {
+                if(transitionPlayed == true && startAudio.isPlaying == false && transitionAudio.isPlaying == false && loopAudio.isPlaying == false) {
                     loopAudio.Play();
                     Debug.Log("loop started");
                 }

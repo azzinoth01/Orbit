@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -63,10 +61,11 @@ public class SoundControl : MonoBehaviour
     /// </summary>
     private void Start() {
 
-        saveSetting = SaveSettings.loadSettings();
-        if (saveSetting == null) {
 
-            saveSetting = new SaveSettings(false, 1, 1, 1);
+        saveSetting = SaveSettings.loadSettings();
+        if(saveSetting == null) {
+
+            saveSetting = new SaveSettings(false,1,1,1);
             saveSetting.savingSetting();
 
         }
@@ -87,7 +86,7 @@ public class SoundControl : MonoBehaviour
     /// sets the loaded setting on the UI sets the soundgroups
     /// </summary>
     public void setStartSettings() {
-        if (isMute == true) {
+        if(isMute == true) {
 
             muteButton.sprite = muteSp;
 
@@ -100,17 +99,17 @@ public class SoundControl : MonoBehaviour
 
         float volume;
 
-        if (backgroundVolume == 0) {
+        if(backgroundVolume == 0) {
             volume = -80;
         }
         else {
             volume = Mathf.Log10(backgroundVolume) * 20;
         }
-        background.audioMixer.SetFloat("backgroundVolume", volume);
+        background.audioMixer.SetFloat("backgroundVolume",volume);
 
         backgroundSlider.value = backgroundVolume;
 
-        if (sfxVolume == 0) {
+        if(sfxVolume == 0) {
             volume = -80;
         }
         else {
@@ -119,21 +118,21 @@ public class SoundControl : MonoBehaviour
 
         //Debug.LogError(volume);
 
-        sfx.audioMixer.SetFloat("sfxVolume", volume);
+        sfx.audioMixer.SetFloat("sfxVolume",volume);
 
         sfxSlider.value = sfxVolume;
 
 
 
-        if (masterVolume == 0 || isMute == true) {
+        if(masterVolume == 0 || isMute == true) {
             volume = -80;
         }
         else {
             volume = Mathf.Log10(masterVolume) * 20;
         }
-        masterGroup.audioMixer.SetFloat("masterVolume", volume);
+        masterGroup.audioMixer.SetFloat("masterVolume",volume);
 
-        if (masterSlider != null) {
+        if(masterSlider != null) {
             masterSlider.value = masterVolume;
         }
 
@@ -147,7 +146,7 @@ public class SoundControl : MonoBehaviour
     /// </summary>
     public void toggleMute() {
 
-        if (isMute == false) {
+        if(isMute == false) {
 
             muteButton.sprite = muteSp;
             isMute = true;
@@ -168,7 +167,7 @@ public class SoundControl : MonoBehaviour
 
         float volume;
 
-        if (sfxVolume == 0) {
+        if(sfxVolume == 0) {
             volume = -80;
         }
         else {
@@ -176,7 +175,7 @@ public class SoundControl : MonoBehaviour
         }
         //Debug.LogError(volume);
 
-        sfx.audioMixer.SetFloat("sfxVolume", volume);
+        sfx.audioMixer.SetFloat("sfxVolume",volume);
         saveSettingChanges();
     }
 
@@ -190,13 +189,13 @@ public class SoundControl : MonoBehaviour
         //Debug.Log("changed");
         float volume;
 
-        if (backgroundVolume == 0) {
+        if(backgroundVolume == 0) {
             volume = -80;
         }
         else {
             volume = Mathf.Log10(backgroundVolume) * 20;
         }
-        background.audioMixer.SetFloat("backgroundVolume", volume);
+        background.audioMixer.SetFloat("backgroundVolume",volume);
 
         saveSettingChanges();
     }
@@ -210,13 +209,13 @@ public class SoundControl : MonoBehaviour
         //Debug.Log("changed");
         float volume;
 
-        if (masterVolume == 0) {
+        if(masterVolume == 0) {
             volume = -80;
         }
         else {
             volume = Mathf.Log10(backgroundVolume) * 20;
         }
-        masterGroup.audioMixer.SetFloat("masterVolume", volume);
+        masterGroup.audioMixer.SetFloat("masterVolume",volume);
 
         saveSettingChanges();
     }

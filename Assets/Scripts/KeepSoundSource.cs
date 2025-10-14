@@ -32,7 +32,6 @@ public class KeepSoundSource : MonoBehaviour
     void Start() {
 
 
-
         if(Globals.dontDestoryOnLoadObjectID.Contains(dontDestroyID)) {
 
             Destroy(gameObject);

@@ -592,10 +592,10 @@ public class Rebinding_menu : MonoBehaviour
         //    Debug.Log(test.text);
         //}
 
-        LoadAssets loader = new LoadAssets();
 
 
-        TextAsset text = loader.loadText("Assets/Catalog/rebinding_rennaming.txt");
+
+        TextAsset text = LoadAssets.Instance.loadText("Assets/Catalog/rebinding_rennaming.txt");
 
         //Debug.Log(text.text);
 
@@ -645,8 +645,6 @@ public class Rebinding_menu : MonoBehaviour
 
 
         }
-
-        loader.releaseAllHandle();
     }
 
 }

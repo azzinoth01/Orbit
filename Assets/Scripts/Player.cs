@@ -221,7 +221,7 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
     /// </summary>
     public AudioSource dashAudio;
 
-    private LoadAssets loader;
+
     /// <summary>
     /// cracked sound 
     /// </summary>
@@ -447,13 +447,6 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
             return;
         }
         else {
-
-
-
-
-
-
-
         }
 
     }
@@ -476,14 +469,14 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
 
         shieldPart = save.ShieldPart;
 
-        loader = new LoadAssets();
+
 
         if(save.MainWeapon != null) {
             WeaponSlots[0].AddComponent<Weapon>();
-            WeaponSlots[0].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.MainWeapon.Sprite);
+            WeaponSlots[0].GetComponent<SpriteRenderer>().sprite = LoadAssets.Instance.loadSprite(save.MainWeapon.Sprite);
             Weapon wep = WeaponSlots[0].GetComponent<Weapon>();
 
-            wep.skill = loader.loadGameObject(save.MainWeapon.skill);
+            wep.skill = LoadAssets.Instance.loadGameObject(save.MainWeapon.skill);
             wep.reloadTime = save.MainWeapon.reloadTime;
             wep.shootsToCreate = save.MainWeapon.shootsToCreate;
             wep.additionalDmg = save.MainWeapon.additionalDmg;
@@ -497,10 +490,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         if(save.SecondaryWeapon != null) {
             WeaponSlots[1].AddComponent<Weapon>();
-            WeaponSlots[1].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.SecondaryWeapon.Sprite);
+            WeaponSlots[1].GetComponent<SpriteRenderer>().sprite = LoadAssets.Instance.loadSprite(save.SecondaryWeapon.Sprite);
             Weapon wep = WeaponSlots[1].GetComponent<Weapon>();
 
-            wep.skill = loader.loadGameObject(save.SecondaryWeapon.skill);
+            wep.skill = LoadAssets.Instance.loadGameObject(save.SecondaryWeapon.skill);
             wep.reloadTime = save.SecondaryWeapon.reloadTime;
             wep.shootsToCreate = save.SecondaryWeapon.shootsToCreate;
             wep.additionalDmg = save.SecondaryWeapon.additionalDmg;
@@ -513,10 +506,10 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         }
         if(save.SecondaryWeapon1 != null) {
             WeaponSlots[2].AddComponent<Weapon>();
-            WeaponSlots[2].GetComponent<SpriteRenderer>().sprite = loader.loadSprite(save.SecondaryWeapon1.Sprite);
+            WeaponSlots[2].GetComponent<SpriteRenderer>().sprite = LoadAssets.Instance.loadSprite(save.SecondaryWeapon1.Sprite);
             Weapon wep = WeaponSlots[2].GetComponent<Weapon>();
 
-            wep.skill = loader.loadGameObject(save.SecondaryWeapon1.skill);
+            wep.skill = LoadAssets.Instance.loadGameObject(save.SecondaryWeapon1.skill);
             wep.reloadTime = save.SecondaryWeapon1.reloadTime;
             wep.shootsToCreate = save.SecondaryWeapon1.shootsToCreate;
             wep.additionalDmg = save.SecondaryWeapon1.additionalDmg;
@@ -824,7 +817,6 @@ public class Player : MonoBehaviour, Controlls.IBullet_hellActions
         controll.Disable();
         controll.Dispose();
         body.linearVelocity = Vector2.zero;
-        loader.releaseAllHandle();
     }
 
     /// <summary>

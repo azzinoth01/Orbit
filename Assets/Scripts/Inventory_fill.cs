@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 /// <summary>
@@ -46,7 +43,7 @@ public class Inventory_fill : MonoBehaviour
     public AudioSource blockAudio;
 
     private ItemCatalog catalog;
-    private LoadAssets assetLoader;
+
 
 
     /// <summary>
@@ -55,11 +52,10 @@ public class Inventory_fill : MonoBehaviour
     void Start() {
         catalog = ItemCatalog.loadSettings();
 
-        assetLoader = new LoadAssets();
 
         PlayerSave save = PlayerSave.loadSettings();
 
-        if (save == null) {
+        if(save == null) {
             save = new PlayerSave();
         }
 
@@ -69,39 +65,39 @@ public class Inventory_fill : MonoBehaviour
         //save.BoughtItems = new List<string>();
         //save.savingSetting();
 
-        foreach (Item i in catalog.ItemList) {
+        foreach(Item i in catalog.ItemList) {
             GameObject g;
             bool locked;
-            if (save.BoughtItems.Contains(i.ID)) {
+            if(save.BoughtItems.Contains(i.ID)) {
                 locked = false;
-                if (i is WeaponInfo) {
-                    WeaponInfo wap = (WeaponInfo)i;
+                if(i is WeaponInfo) {
+                    WeaponInfo wap = (WeaponInfo) i;
 
-                    if (wap.mainWeapon == true) {
-                        g = Instantiate(mainWeaponBox, transform);
+                    if(wap.mainWeapon == true) {
+                        g = Instantiate(mainWeaponBox,transform);
                         Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
-                        img.sprite = assetLoader.loadSprite(wap.Icon);
+                        img.sprite = LoadAssets.Instance.loadSprite(wap.Icon);
                     }
                     else {
-                        g = Instantiate(secondaryWeaponBox, transform);
+                        g = Instantiate(secondaryWeaponBox,transform);
                         Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
-                        img.sprite = assetLoader.loadSprite(wap.Icon);
+                        img.sprite = LoadAssets.Instance.loadSprite(wap.Icon);
 
                     }
                 }
                 else {
-                    Parts part = (Parts)i;
-                    g = Instantiate(partsBox, transform);
+                    Parts part = (Parts) i;
+                    g = Instantiate(partsBox,transform);
                     Image img = g.transform.GetChild(0).gameObject.GetComponent<Image>();
-                    img.sprite = assetLoader.loadSprite(part.Icon);
+                    img.sprite = LoadAssets.Instance.loadSprite(part.Icon);
 
                 }
             }
             else {
                 locked = true;
-                g = Instantiate(LockedBox, transform);
-                foreach (Transform t in g.transform.GetChild(0).transform) {
-                    if (t.gameObject.name == "money") {
+                g = Instantiate(LockedBox,transform);
+                foreach(Transform t in g.transform.GetChild(0).transform) {
+                    if(t.gameObject.name == "money") {
                         t.gameObject.GetComponent<Text>().text = i.Value.ToString();
                     }
                 }
@@ -125,12 +121,7 @@ public class Inventory_fill : MonoBehaviour
 
         }
     }
-    /// <summary>
-    /// releases all asset wich are loaded at runtime
-    /// </summary>
-    private void OnDestroy() {
-        assetLoader.releaseAllHandle();
-    }
+
 
 
     /// <summary>
@@ -138,30 +129,30 @@ public class Inventory_fill : MonoBehaviour
     /// </summary>
     /// <param name="g"> the gameobject of the locked item </param>
     /// <param name="i"> the item with which the lock needs to be replaced</param>
-    private void replaceLockedItem(GameObject g, Item i) {
+    private void replaceLockedItem(GameObject g,Item i) {
         GameObject newGameObject;
 
-        if (i is WeaponInfo) {
-            WeaponInfo wap = (WeaponInfo)i;
+        if(i is WeaponInfo) {
+            WeaponInfo wap = (WeaponInfo) i;
 
-            if (wap.mainWeapon == true) {
-                newGameObject = Instantiate(mainWeaponBox, transform);
+            if(wap.mainWeapon == true) {
+                newGameObject = Instantiate(mainWeaponBox,transform);
                 Image img = newGameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
-                img.sprite = assetLoader.loadSprite(wap.Icon);
+                img.sprite = LoadAssets.Instance.loadSprite(wap.Icon);
 
             }
             else {
-                newGameObject = Instantiate(secondaryWeaponBox, transform);
+                newGameObject = Instantiate(secondaryWeaponBox,transform);
                 Image img = newGameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
-                img.sprite = assetLoader.loadSprite(wap.Icon);
+                img.sprite = LoadAssets.Instance.loadSprite(wap.Icon);
 
             }
         }
         else {
-            Parts part = (Parts)i;
-            newGameObject = Instantiate(partsBox, transform);
+            Parts part = (Parts) i;
+            newGameObject = Instantiate(partsBox,transform);
             Image img = newGameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
-            img.sprite = assetLoader.loadSprite(part.Icon);
+            img.sprite = LoadAssets.Instance.loadSprite(part.Icon);
 
         }
 
@@ -193,14 +184,14 @@ public class Inventory_fill : MonoBehaviour
     /// <param name="i"> the item which the button corresponds to</param>
     /// <param name="locked"> if the current item is locked or not</param>
     /// <param name="g"> the gameobject of the button</param>
-    public void inventoryButton(Item i, bool locked, GameObject g) {
+    public void inventoryButton(Item i,bool locked,GameObject g) {
 
-        if (locked == true) {
-            if (Globals.money >= i.Value) {
+        if(locked == true) {
+            if(Globals.money >= i.Value) {
                 Globals.money = Globals.money - i.Value;
                 PlayerSave save = PlayerSave.loadSettings();
 
-                if (save == null) {
+                if(save == null) {
                     save = new PlayerSave();
                 }
 
@@ -208,7 +199,7 @@ public class Inventory_fill : MonoBehaviour
                 save.BoughtItems.Add(i.ID);
                 save.savingSetting();
 
-                replaceLockedItem(g, i);
+                replaceLockedItem(g,i);
                 display.MoneyChanged();
                 display.changeInfoDispaly(i);
             }
@@ -216,7 +207,7 @@ public class Inventory_fill : MonoBehaviour
         else {
             dragAndDrop.enabled = true;
 
-            dragAndDrop.sprite = assetLoader.loadSprite(i.Icon);
+            dragAndDrop.sprite = LoadAssets.Instance.loadSprite(i.Icon);
             Globals.currentItem = i;
             display.changeInfoDispaly(i);
 
@@ -231,16 +222,16 @@ public class Inventory_fill : MonoBehaviour
     /// </summary>
     /// <param name="button"> Image of the button</param>
     public void mainWeaponSlotClicked(Image button) {
-        if (Globals.currentItem is WeaponInfo) {
-            WeaponInfo wep = (WeaponInfo)Globals.currentItem;
-            if (wep.mainWeapon == true) {
-                button.sprite = assetLoader.loadSprite(wep.Icon);
+        if(Globals.currentItem is WeaponInfo) {
+            WeaponInfo wep = (WeaponInfo) Globals.currentItem;
+            if(wep.mainWeapon == true) {
+                button.sprite = LoadAssets.Instance.loadSprite(wep.Icon);
                 button.enabled = true;
                 Globals.currentItem = null;
                 dragAndDrop.enabled = false;
 
                 PlayerSave save = PlayerSave.loadSettings();
-                if (save == null) {
+                if(save == null) {
                     save = new PlayerSave();
                 }
                 save.MainWeapon = wep;
@@ -257,9 +248,9 @@ public class Inventory_fill : MonoBehaviour
         else {
             blockAudio.Play();
         }
-        if (Globals.currentItem == null) {
+        if(Globals.currentItem == null) {
             PlayerSave save = PlayerSave.loadSettings();
-            if (save == null) {
+            if(save == null) {
                 save = new PlayerSave();
             }
 
@@ -273,16 +264,16 @@ public class Inventory_fill : MonoBehaviour
     /// </summary>
     /// <param name="button"> Image of the button</param>
     public void secondaryWeaponSlotClicked(Image button) {
-        if (Globals.currentItem is WeaponInfo) {
-            WeaponInfo wep = (WeaponInfo)Globals.currentItem;
-            if (wep.mainWeapon == false) {
-                button.sprite = assetLoader.loadSprite(wep.Icon);
+        if(Globals.currentItem is WeaponInfo) {
+            WeaponInfo wep = (WeaponInfo) Globals.currentItem;
+            if(wep.mainWeapon == false) {
+                button.sprite = LoadAssets.Instance.loadSprite(wep.Icon);
                 button.enabled = true;
                 Globals.currentItem = null;
                 dragAndDrop.enabled = false;
 
                 PlayerSave save = PlayerSave.loadSettings();
-                if (save == null) {
+                if(save == null) {
                     save = new PlayerSave();
                 }
                 save.SecondaryWeapon = wep;
@@ -297,9 +288,9 @@ public class Inventory_fill : MonoBehaviour
         else {
             blockAudio.Play();
         }
-        if (Globals.currentItem == null) {
+        if(Globals.currentItem == null) {
             PlayerSave save = PlayerSave.loadSettings();
-            if (save == null) {
+            if(save == null) {
                 save = new PlayerSave();
             }
 
@@ -311,16 +302,16 @@ public class Inventory_fill : MonoBehaviour
     /// </summary>
     /// <param name="button"> Image of the button</param>
     public void secondaryWeaponSlotTwoClicked(Image button) {
-        if (Globals.currentItem is WeaponInfo) {
-            WeaponInfo wep = (WeaponInfo)Globals.currentItem;
-            if (wep.mainWeapon == false) {
-                button.sprite = assetLoader.loadSprite(wep.Icon);
+        if(Globals.currentItem is WeaponInfo) {
+            WeaponInfo wep = (WeaponInfo) Globals.currentItem;
+            if(wep.mainWeapon == false) {
+                button.sprite = LoadAssets.Instance.loadSprite(wep.Icon);
                 button.enabled = true;
                 Globals.currentItem = null;
                 dragAndDrop.enabled = false;
 
                 PlayerSave save = PlayerSave.loadSettings();
-                if (save == null) {
+                if(save == null) {
                     save = new PlayerSave();
                 }
                 save.SecondaryWeapon1 = wep;
@@ -335,9 +326,9 @@ public class Inventory_fill : MonoBehaviour
         else {
             blockAudio.Play();
         }
-        if (Globals.currentItem == null) {
+        if(Globals.currentItem == null) {
             PlayerSave save = PlayerSave.loadSettings();
-            if (save == null) {
+            if(save == null) {
                 save = new PlayerSave();
             }
 
@@ -350,16 +341,16 @@ public class Inventory_fill : MonoBehaviour
     /// </summary>
     /// <param name="button"> Image of the button</param>
     public void shieldSlotClicked(Image button) {
-        if (Globals.currentItem is Parts) {
-            Parts part = (Parts)Globals.currentItem;
+        if(Globals.currentItem is Parts) {
+            Parts part = (Parts) Globals.currentItem;
 
-            button.sprite = assetLoader.loadSprite(part.Icon);
+            button.sprite = LoadAssets.Instance.loadSprite(part.Icon);
             button.enabled = true;
             Globals.currentItem = null;
             dragAndDrop.enabled = false;
 
             PlayerSave save = PlayerSave.loadSettings();
-            if (save == null) {
+            if(save == null) {
                 save = new PlayerSave();
             }
             save.ShieldPart = part;
@@ -371,9 +362,9 @@ public class Inventory_fill : MonoBehaviour
         else {
             blockAudio.Play();
         }
-        if (Globals.currentItem == null) {
+        if(Globals.currentItem == null) {
             PlayerSave save = PlayerSave.loadSettings();
-            if (save == null) {
+            if(save == null) {
                 save = new PlayerSave();
             }
 
@@ -386,7 +377,7 @@ public class Inventory_fill : MonoBehaviour
     /// checks if a right click happend and stops drag dan drop and removes the selected item from the cursor
     /// </summary>
     void Update() {
-        if (Globals.virtualMouse.VirtualMouseProperty.rightButton.wasPressedThisFrame) {
+        if(Globals.virtualMouse.VirtualMouseProperty.rightButton.wasPressedThisFrame) {
             dragAndDrop.enabled = false;
             Globals.currentItem = null;
         }

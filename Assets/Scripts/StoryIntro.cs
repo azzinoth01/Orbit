@@ -1,11 +1,9 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Utilities;
-using UnityEngine.InputSystem.Controls;
 
 
 /// <summary>
@@ -51,15 +49,16 @@ public class StoryIntro : MonoBehaviour
     /// activates the anybutton input check for moving between intro slides
     /// </summary>
     private void OnEnable() {
+
         skip = false;
         InputSystem.onEvent += anyButtonWasPressed;
         InputSystem.onEvent += anyButtonWasReleased;
         privateSlides = new List<GameObject>(slides);
 
-        if (Globals.skipStartCutscene == true) {
+        if(Globals.skipStartCutscene == true) {
             skip = true;
-            if (skip == true) {
-                foreach (GameObject g in slides) {
+            if(skip == true) {
+                foreach(GameObject g in slides) {
                     g.SetActive(false);
 
                 }
@@ -163,8 +162,8 @@ public class StoryIntro : MonoBehaviour
 
 
 
-        if (skip == true) {
-            foreach (GameObject g in slides) {
+        if(skip == true) {
+            foreach(GameObject g in slides) {
                 g.SetActive(false);
 
             }
@@ -181,8 +180,8 @@ public class StoryIntro : MonoBehaviour
     /// </summary>
     /// <param name="eventPtr"> input event</param>
     /// <param name="device"> input device</param>
-    private void anyButtonWasPressed(InputEventPtr eventPtr, InputDevice device) {
-        if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>()) {
+    private void anyButtonWasPressed(InputEventPtr eventPtr,InputDevice device) {
+        if(!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>()) {
             return;
         }
         ReadOnlyArray<InputControl> controls = device.allControls;
@@ -190,17 +189,17 @@ public class StoryIntro : MonoBehaviour
 
         //Debug.Log("test1");
 
-        foreach (InputControl inp in controls) {
+        foreach(InputControl inp in controls) {
             ButtonControl but = inp as ButtonControl;
 
-            if (but == null || but.synthetic || but.noisy) {
+            if(but == null || but.synthetic || but.noisy) {
                 continue;
             }
-            but.ReadValueFromEvent(eventPtr, out float value);
+            but.ReadValueFromEvent(eventPtr,out float value);
 
             //Debug.Log(pressedButtons.Contains(but));
 
-            if (value >= presspoint && pressedButtons.Contains(but) == false) {
+            if(value >= presspoint && pressedButtons.Contains(but) == false) {
                 //  Debug.Log("button pressed");
                 nextSlide();
                 pressedButtons.Add(but);
@@ -218,26 +217,26 @@ public class StoryIntro : MonoBehaviour
     /// </summary>
     /// <param name="eventPtr"> input event</param>
     /// <param name="device"> input device</param>
-    private void anyButtonWasReleased(InputEventPtr eventPtr, InputDevice device) {
-        if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>()) {
+    private void anyButtonWasReleased(InputEventPtr eventPtr,InputDevice device) {
+        if(!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>()) {
             return;
         }
         ReadOnlyArray<InputControl> controls = device.allControls;
         float presspoint = InputSystem.settings.defaultButtonPressPoint;
 
         // Debug.Log("test2");
-        foreach (InputControl inp in controls) {
+        foreach(InputControl inp in controls) {
             ButtonControl but = inp as ButtonControl;
 
-            if (but == null || but.synthetic || but.noisy) {
+            if(but == null || but.synthetic || but.noisy) {
                 continue;
             }
-            but.ReadValueFromEvent(eventPtr, out float value);
+            but.ReadValueFromEvent(eventPtr,out float value);
             //  Debug.Log(value);
 
 
 
-            if (pressedButtons.Contains(but) == true && value <= presspoint) {
+            if(pressedButtons.Contains(but) == true && value <= presspoint) {
                 pressedButtons.Remove(but);
                 //  Debug.Log("button released");
                 break;
@@ -259,10 +258,10 @@ public class StoryIntro : MonoBehaviour
 
 
 
-        if (privateSlides.Count != 0) {
+        if(privateSlides.Count != 0) {
             privateSlides[0].SetActive(false);
             privateSlides.RemoveAt(0);
-            if (privateSlides.Count != 0) {
+            if(privateSlides.Count != 0) {
                 privateSlides[0].SetActive(true);
 
             }

@@ -63,6 +63,7 @@ public class VirtualMouse : MonoBehaviour, Controlls.IVirtualMouseActions
     /// creates a virtual mouse
     /// </summary>
     private void OnEnable() {
+
         hardwareMouse = Mouse.current;
         buttonScroll = Vector2.zero;
         unlockMouse = false;

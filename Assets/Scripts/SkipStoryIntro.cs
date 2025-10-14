@@ -69,6 +69,7 @@ public class SkipStoryIntro : MonoBehaviour, Controlls.IBullet_hellActions
     /// sets the controler 
     /// </summary>
     void Start() {
+
         if(controll == null) {
             controll = new Controlls();
 

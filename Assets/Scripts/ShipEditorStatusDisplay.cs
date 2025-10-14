@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,7 +42,7 @@ public class ShipEditorStatusDisplay : MonoBehaviour
     public Text ownedMoney;
 
     private Item currentItem;
-    private LoadAssets loader;
+
     private bool itemChanged;
 
 
@@ -55,7 +53,7 @@ public class ShipEditorStatusDisplay : MonoBehaviour
         MoneyChanged();
         currentItem = Globals.currentItem;
         itemName.text = "";
-        loader = new LoadAssets();
+
         itemChanged = false;
     }
 
@@ -64,24 +62,24 @@ public class ShipEditorStatusDisplay : MonoBehaviour
     /// checks if the selected item has changed and displays the new values
     /// </summary>
     void Update() {
-        if (itemChanged == true) {
+        if(itemChanged == true) {
             itemChanged = false;
 
             itemName.text = currentItem.Name;
-            if (currentItem is WeaponInfo) {
-                WeaponInfo wep = (WeaponInfo)currentItem;
+            if(currentItem is WeaponInfo) {
+                WeaponInfo wep = (WeaponInfo) currentItem;
 
-                GameObject g = loader.loadGameObject(wep.skill);
+                GameObject g = LoadAssets.Instance.loadGameObject(wep.skill);
                 Skill skill = g.GetComponent<Skill>();
 
                 float totalDmg = 0;
-                foreach (BulletInfo b in skill.bulletInfoList) {
+                foreach(BulletInfo b in skill.bulletInfoList) {
                     totalDmg = totalDmg + ((wep.additionalDmg + b.BulletBaseDmg) * wep.dmgModifier);
                 }
-                int totalDmgRound = (int)totalDmg;
+                int totalDmgRound = (int) totalDmg;
                 dmgText.text = totalDmgRound.ToString();
                 reloadTimeText.text = wep.reloadTime.ToString() + "s";
-                patternIcon.sprite = loader.loadSprite(wep.PatternIcon);
+                patternIcon.sprite = LoadAssets.Instance.loadSprite(wep.PatternIcon);
                 patternIcon.enabled = true;
 
                 dmgNameText.text = "TDMG";
@@ -91,7 +89,7 @@ public class ShipEditorStatusDisplay : MonoBehaviour
 
             }
             else {
-                Parts part = (Parts)currentItem;
+                Parts part = (Parts) currentItem;
                 patternIcon.enabled = false;
 
                 reloadTimeNameText.text = "Shield Rate";
@@ -109,13 +107,6 @@ public class ShipEditorStatusDisplay : MonoBehaviour
     }
 
     /// <summary>
-    /// releases all loaded handles
-    /// </summary>
-    private void OnDestroy() {
-        loader.releaseAllHandle();
-    }
-
-    /// <summary>
     /// displays new money value
     /// </summary>
     public void MoneyChanged() {
@@ -128,7 +119,7 @@ public class ShipEditorStatusDisplay : MonoBehaviour
     /// <param name="item"> new item to display</param>
     public void changeInfoDispaly(Item item) {
 
-        if (item != null) {
+        if(item != null) {
             currentItem = item;
             itemChanged = true;
         }

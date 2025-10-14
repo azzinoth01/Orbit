@@ -22,3 +22,7 @@
 "leftMouseButton 1:"="Left Mouse"
 "rightMouseButton 1:"="Right Mouse"
 "middleMouseButton 1:"="Middle Mouse"
+"move 1 UP:"="Move Up"
+"move 1 DOWN:"="Move Down"
+"move 1 LEFT:"="Move Left"
+"move 1 RIGHT:"="Move Right"
